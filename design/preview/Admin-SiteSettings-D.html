@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإدارة · إعدادات الموقع</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5E5A52}
+.f input,.f textarea,.f select{font:inherit;font-size:14px;font-weight:600;color:#141311;border:1.5px solid #141311;background:#FFFFFF;padding:0 12px;height:44px;box-sizing:border-box;width:100%}
+.f textarea{height:auto;min-height:80px;padding:10px 12px;resize:vertical;line-height:1.6}
+.f .ltr{direction:ltr;text-align:right}
+.f .c{border:1px solid #B48F2E;background:#FFFDF6}
+.sec{background:#FFFFFF;border:1.5px solid #141311;display:flex;flex-direction:column}
+.sec>header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1.5px solid #141311;background:#F3F1EB;font-size:14px;font-weight:800}
+.sec>div{display:grid;gap:14px;padding:16px}
+.hint{font-size:11px;font-weight:600;color:#5E5A52}
+.sw{position:relative;width:40px;height:22px;background:#141311;display:inline-block;flex:none}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;background:#B48F2E;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.sw.off{background:#FFFFFF;box-shadow:inset 0 0 0 1.5px #141311}
+.sw.off::after{left:auto;right:3px;background:#141311}
+</style>
+<div dir="rtl" style="box-sizing: border-box; min-height: 100vh; background: #F8F7F4; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; font-feature-settings: 'tnum' 1; display: flex; flex-direction: column; min-width: 0">
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 24px; height: 60px; background: #141311; color: #FFFFFF">
+    <div style="display: flex; align-items: center; gap: 16px"><img src="assets/lockup-goldmark-white.png" alt="إس إم كيو العقارية" style="height: 28px; width: auto; display: block"><span style="font-size: 12px; font-weight: 700; padding: 4px 8px; background: #B48F2E; color: #141311">لوحة الإدارة</span></div>
+    <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700"><span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; font-size: 12px; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)">س</span>سعود · مدير</span>
+  </header>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; flex: 1">
+    <nav aria-label="أقسام الإدارة" style="flex: 0 1 240px; min-width: 0; background: #FFFFFF; border-left: 1.5px solid #141311; display: flex; flex-direction: column; padding: 16px 0; align-self: stretch">
+      <a href="Admin-Overview-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">نظرة عامة</a>
+      <a href="Admin-Approvals-D.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>طلبات الموافقة</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">3</span></a>
+      <a href="Admin-Inventory-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الوحدات</a>
+      <a href="Admin-Projects-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المشاريع</a>
+      <a href="Admin-Leads-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الطلبات الواردة</a>
+      <a href="Admin-Analytics-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">تحليلات البحث</a>
+      <a href="Admin-Visitors-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الزوار</a>
+      <span style="padding: 14px 20px 4px 20px; font-size: 11px; font-weight: 800; color: #5E5A52; border-top: 1px solid #D4CFC4; margin-top: 6px">تعاون معنا</span>
+      <a href="Admin-Marketers-D.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>المسوّقون</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #141311; font-size: 11px; font-weight: 800; padding: 0 6px">2</span></a>
+      <a href="Admin-Alliance-D.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>غرفة التحالف</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">5</span></a>
+      <a href="Admin-Content-D.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 800; color: #141311; text-decoration: none; background: #F3F1EB; border-right: 4px solid #B48F2E">المحتوى والأسئلة</a>
+      <a href="Admin-Users-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none; margin-top: auto; border-top: 1px solid #D4CFC4">الإعدادات والمستخدمون</a>
+    </nav>
+    <main style="flex: 999 1 640px; min-width: 0; padding: 28px 32px 0 32px; display: flex; flex-direction: column; gap: 20px">
+      <nav aria-label="المسار" style="font-size: 12px; font-weight: 700; color: #5E5A52"><a href="Admin-Content-D.html" style="text-decoration: none">المحتوى والأسئلة</a> › إعدادات الموقع</nav>
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; font-weight: 800">إعدادات الموقع</h1><span style="font-size: 13px; color: #5E5A52">بيانات التواصل والتراخيص والعبارات التي تتكرر في الرأس والتذييل وصفحات الوحدات. تُحفظ مرة وتظهر في كل مكان</span></div>
+        <div role="tablist" aria-label="اللغة" style="display: flex; border: 1.5px solid #141311; background: #FFFFFF"><button type="button" role="tab" aria-selected="true" style="height: 40px; padding: 0 18px; border: 0; font: inherit; font-size: 13px; font-weight: 800; background: #141311; color: #FFFFFF; cursor: pointer">العربية</button><button type="button" role="tab" aria-selected="false" style="height: 40px; padding: 0 18px; border: 0; border-right: 1.5px solid #141311; font: inherit; font-size: 13px; font-weight: 700; background: #FFFFFF; color: #141311; cursor: pointer">English</button></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); gap: 16px; align-items: start">
+
+        <section class="sec">
+          <header>التواصل</header>
+          <div style="grid-template-columns: 1fr 1fr">
+            <label class="f">رقم واتساب (الزر الأساسي في كل الصفحات)<input class="ltr" value="+966 55 999 7929"><span class="hint">يُستخدم في wa.me وفي الرسائل المعبّأة</span></label>
+            <label class="f">هاتف الاتصال<input class="ltr" value="+966 55 660 7779"></label>
+            <label class="f">البريد<input class="ltr" value="info@smqre.com"></label>
+            <label class="f">البريد لتنبيهات الطلبات<input class="ltr" value="leads@smqre.com"><span class="hint">يستقبل نسخة من كل طلب وارد</span></label>
+            <label class="f" style="grid-column: 1 / -1">العنوان<input value="حي الروضة، شارع الأمير سلطان، جدة 23433"></label>
+            <label class="f">ساعات العمل<input value="السبت إلى الخميس · 9 ص إلى 6 م"></label>
+            <label class="f">نص خارج ساعات العمل<input value="نرد في أول ساعة عمل"></label>
+          </div>
+        </section>
+
+        <section class="sec">
+          <header>التراخيص والهوية</header>
+          <div style="grid-template-columns: 1fr 1fr">
+            <label class="f">اسم الشركة (كما في التذييل)<input value="شركة إس إم كيو للاستثمار والتسويق العقاري"></label>
+            <label class="f">السجل التجاري<input class="ltr" value="7029797433"></label>
+            <label class="f">ترخيص فال (الهيئة العامة للعقار)<input class="ltr" value="1200040135"><span class="hint">يظهر في التذييل وصفحة الوحدة</span></label>
+            <label class="f">الرقم الضريبي<input class="ltr c" value="[للتأكيد]"></label>
+            <label class="f" style="grid-column: 1 / -1">العبارة التعريفية (الرأس والمعاينات)<input value="شركة استثمار وتسويق عقاري، تبدأ من الأرقام"></label>
+            <label class="f" style="grid-column: 1 / -1">عبارة التذييل<input value="أسعار معلنة، وحدات حقيقية، رد خلال ساعات العمل."></label>
+          </div>
+        </section>
+
+        <section class="sec">
+          <header>الحسابات الاجتماعية <span class="hint">تظهر في التذييل إذا كان الرابط غير فارغ</span></header>
+          <div style="grid-template-columns: 1fr 1fr">
+            <label class="f">إكس<input class="ltr" value="https://x.com/smqre"></label>
+            <label class="f">إنستغرام<input class="ltr" value="https://instagram.com/smqre"></label>
+            <label class="f">سناب شات<input class="ltr" value="" placeholder="فارغ · لا يظهر"></label>
+            <label class="f">تيك توك<input class="ltr" value="" placeholder="فارغ · لا يظهر"></label>
+            <label class="f">لينكدإن<input class="ltr" value="https://linkedin.com/company/smqre"></label>
+            <label class="f">خرائط قوقل (المكتب)<input class="ltr" value="https://maps.app.goo.gl/xxxx"></label>
+          </div>
+        </section>
+
+        <section class="sec">
+          <header>موقع المكتب على الخريطة</header>
+          <div style="grid-template-columns: 1fr 1fr">
+            <label class="f">خط العرض<input class="ltr" value="21.5720"></label>
+            <label class="f">خط الطول<input class="ltr" value="39.1650"></label>
+            <div style="grid-column: 1 / -1; position: relative; height: 150px; background: #E9E5DB; border: 1.5px solid #141311; display: flex; align-items: center; justify-content: center">
+              <span style="position: absolute; inset: 0; background-image: linear-gradient(#D4CFC4 1px, transparent 1px), linear-gradient(90deg, #D4CFC4 1px, transparent 1px); background-size: 30px 30px"></span>
+              <span style="position: relative; width: 26px; height: 30px; background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>
+              <span style="position: absolute; bottom: 8px; right: 8px; font-size: 10px; font-weight: 700; background: #FFFFFF; padding: 2px 6px">اسحب الدبوس أو أدخل الإحداثيات · الخريطة الحقيقية تُحمَّل من المزوّد عند البناء</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" style="grid-column: 1 / -1">
+          <header>قوالب رسائل واتساب <span class="hint">المتغيرات بين أقواس تُستبدل تلقائياً. الرمز {code} يربط الضغطة بالمحادثة في الطلبات الواردة</span></header>
+          <div style="grid-template-columns: 1fr 1fr 1fr">
+            <label class="f">من صفحة وحدة<textarea>مرحباً، أسأل عن الوحدة {unit_code} في {project} بسعر {price} ريال. رمزي: {code}</textarea><span class="hint">مثال: مرحباً، أسأل عن الوحدة RZ-A في جاردن الروضة بسعر 690,000 ريال. رمزي: SMQ-8F3A2</span></label>
+            <label class="f">من النتائج أو دليل الأسعار<textarea>مرحباً، أبحث عن {type} بميزانية {budget} ريال في {district}. رمزي: {code}</textarea></label>
+            <label class="f">من الرأس أو التذييل (عام)<textarea>مرحباً، أريد الاستفسار عن وحداتكم. رمزي: {code}</textarea></label>
+            <label class="f">تأكيد استلام عقار مالك (يُرسل من الفريق)<textarea>وصلنا طلبك رقم {request_no}. سنراجع الصك والصور ونرد خلال يومي عمل.</textarea></label>
+            <label class="f">قبول عقار مالك<textarea>تمت الموافقة على عقارك {request_no}. أصبح معروضاً على {unit_url} بسعر {price} ريال.</textarea></label>
+            <label class="f">رفض عقار مالك<textarea>شكراً لك. لم نتمكن من عرض عقارك {request_no} للسبب: {reason}. يمكنك تعديل الطلب وإعادة إرساله.</textarea></label>
+          </div>
+        </section>
+
+        <section class="sec" style="grid-column: 1 / -1">
+          <header>مفاتيح عامة</header>
+          <div style="grid-template-columns: 1fr 1fr 1fr">
+            <label style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1.5px solid #D4CFC4; font-size: 13px; font-weight: 700"><span>إظهار الوحدات المباعة في النتائج<span class="hint" style="display: block">مطفأ: تظهر في صفحة المشروع فقط</span></span><span class="sw off" role="switch" aria-checked="false"></span></label>
+            <label style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1.5px solid #D4CFC4; font-size: 13px; font-weight: 700"><span>وسم «صورة تعبيرية» على الصور المولّدة<span class="hint" style="display: block">لا يُطفأ إلا بصلاحية مدير</span></span><span class="sw" role="switch" aria-checked="true"></span></label>
+            <label style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1.5px solid #D4CFC4; font-size: 13px; font-weight: 700"><span>استقبال عقارات المُلّاك<span class="hint" style="display: block">مطفأ: صفحة «أضف عقارك» تعرض رسالة إيقاف مؤقت</span></span><span class="sw" role="switch" aria-checked="true"></span></label>
+          </div>
+        </section>
+      </div>
+
+      <div role="region" aria-label="شريط الحفظ" style="position: sticky; bottom: 0; margin: 4px -32px 0 -32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 32px; background: #141311; color: #FFFFFF; border-top: 3px solid #B48F2E">
+        <span style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700"><span style="width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>حقل واحد بوسم [للتأكيد] (الرقم الضريبي) · لا تغييرات غير محفوظة</span>
+        <div style="display: flex; gap: 10px"><a href="HeaderFooter.html" style="height: 42px; padding: 0 16px; display: flex; align-items: center; border: 1.5px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 700">معاينة الرأس والتذييل</a><button type="button" disabled style="height: 42px; padding: 0 18px; border: 0; background: #3A3630; color: #C9C2B3; font: inherit; font-size: 13px; font-weight: 800; cursor: default; clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)">حفظ</button></div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

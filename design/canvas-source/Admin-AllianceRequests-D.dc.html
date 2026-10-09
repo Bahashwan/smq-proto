@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإدارة · غرفة التحالف · الطلبات والمطابقات</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+.sub{display:flex;border-bottom:1.5px solid #141311;overflow-x:auto}
+.sub a{flex:none;padding:10px 14px;font-size:13px;font-weight:700;color:#5E5A52;text-decoration:none;display:flex;align-items:center;gap:6px}
+.sub a[aria-current]{color:#141311;font-weight:800;border-bottom:3px solid #B48F2E;margin-bottom:-1.5px}
+.sub a i{font-style:normal;min-width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;background:#F3F1EB;font-size:10px;font-weight:800;padding:0 5px}
+.sub a[aria-current] i{background:#B48F2E}
+.col{display:flex;flex-direction:column;gap:8px;min-width:0}
+.col>header{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-bottom:2px solid #141311;font-size:12px;font-weight:800}
+.col>header span:last-child{min-width:22px;height:22px;display:flex;align-items:center;justify-content:center;background:#F3F1EB;font-size:11px;padding:0 6px}
+.card{display:flex;flex-direction:column;gap:4px;padding:10px 12px;background:#FFFFFF;border:1.5px solid #141311;text-decoration:none;color:#141311}
+.card b{font-size:13px;font-weight:800}
+.card small{font-size:11px;color:#5E5A52;line-height:1.5}
+.src{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:800;padding:1px 6px;align-self:flex-start}
+.src::before{content:"";width:7px;height:7px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.src.v{background:#F3F1EB}.src.v::before{background:#B48F2E}
+.src.s{background:#141311;color:#FFFFFF}.src.s::before{background:#B48F2E}
+.src.m{border:1.5px solid #141311}.src.m::before{background:#141311}
+.panel{background:#FFFFFF;border:1.5px solid #141311;display:flex;flex-direction:column}
+.panel>header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;border-bottom:1.5px solid #141311;background:#F3F1EB;font-size:14px;font-weight:800}
+.btn{height:34px;padding:0 12px;border:1.5px solid #141311;background:#FFFFFF;color:#141311;font:inherit;font-size:12px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;white-space:nowrap}
+.btn.gold{background:#B48F2E;border:0;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 14px,100% 100%,0 100%)}
+.btn.ink{background:#141311;color:#FFFFFF}
+.off{display:grid;grid-template-columns:36px 1fr 1fr 1.2fr 150px;gap:12px;align-items:center;padding:10px 16px;border-bottom:1px solid #D4CFC4;font-size:12px}
+.pill{font-size:10px;font-weight:800;padding:2px 7px;white-space:nowrap}
+</style>
+</helmet>
+<div dir="rtl" style="box-sizing: border-box; min-height: 100vh; background: #F8F7F4; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; font-feature-settings: 'tnum' 1; display: flex; flex-direction: column; min-width: 0">
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 24px; height: 60px; background: #141311; color: #FFFFFF">
+    <div style="display: flex; align-items: center; gap: 16px"><img src="/_blob/74198517e5ad06a71e300a3da635ec66" alt="إس إم كيو العقارية" style="height: 28px; width: auto; display: block"><span style="font-size: 12px; font-weight: 700; padding: 4px 8px; background: #B48F2E; color: #141311">لوحة الإدارة</span></div>
+    <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700"><span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; font-size: 12px; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)">ن</span>نورة · محررة</span>
+  </header>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; flex: 1">
+    <nav aria-label="أقسام الإدارة" style="flex: 0 1 240px; min-width: 0; background: #FFFFFF; border-left: 1.5px solid #141311; display: flex; flex-direction: column; padding: 16px 0; align-self: stretch">
+      <a href="Admin-Overview-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">نظرة عامة</a>
+      <a href="Admin-Approvals-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>طلبات الموافقة</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">3</span></a>
+      <a href="Admin-Inventory-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الوحدات</a>
+      <a href="Admin-Projects-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المشاريع</a>
+      <a href="Admin-Leads-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الطلبات الواردة</a>
+      <a href="Admin-Analytics-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">تحليلات البحث</a>
+      <a href="Admin-Visitors-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الزوار</a>
+      <span style="padding: 14px 20px 4px 20px; font-size: 11px; font-weight: 800; color: #5E5A52; border-top: 1px solid #D4CFC4; margin-top: 6px">تعاون معنا</span>
+      <a href="Admin-Marketers-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>المسوّقون</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #141311; font-size: 11px; font-weight: 800; padding: 0 6px">2</span></a>
+      <a href="Admin-Alliance-D.dc.html" aria-current="page" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 800; color: #141311; text-decoration: none; background: #F3F1EB; border-right: 4px solid #B48F2E"><span>غرفة التحالف</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">5</span></a>
+      <a href="Admin-Content-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المحتوى والأسئلة</a>
+      <a href="Admin-Users-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none; margin-top: auto; border-top: 1px solid #D4CFC4">الإعدادات والمستخدمون</a>
+    </nav>
+    <main style="flex: 999 1 640px; min-width: 0; padding: 24px 32px 48px 32px; display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; font-weight: 800">غرفة التحالف · الطلبات والمطابقات</h1><span style="font-size: 13px; color: #5E5A52">كل طلب يحمل مصدره. يُرسل لمن يغطي الحي مرتّبين بالميزان، وتصل عروضهم هنا، وSMQ تختار العرض وتنشئ سجل الإحالة</span></div>
+        <div style="display: flex; gap: 8px; align-items: center"><span style="display: flex; gap: 10px; font-size: 11px; font-weight: 700"><span class="src v">زائر بلا نتائج</span><span class="src s">فريق SMQ</span><span class="src m">مكتب عضو</span></span><button type="button" class="btn gold" style="height: 40px">+ طلب من الفريق</button></div>
+      </div>
+      <nav class="sub" aria-label="أقسام غرفة التحالف">
+        <a href="Admin-Alliance-D.dc.html">نظرة عامة</a>
+        <a href="Admin-AllianceApplications-D.dc.html">طلبات الانضمام <i>4</i></a>
+        <a href="Admin-AllianceMembers-D.dc.html">الأعضاء <i>12</i></a>
+        <a href="Admin-AllianceRadar-D.dc.html">الرادار</a>
+        <a href="Admin-AllianceRequests-D.dc.html" aria-current="page">الطلبات والمطابقات <i>5</i></a>
+        <a href="Admin-AllianceReferrals-D.dc.html">الإحالات والصفقات <i>3</i></a>
+        <a href="Admin-AllianceReport-D.dc.html">التقرير الشهري</a>
+        <a href="Admin-AllianceSettings-D.dc.html">الميثاق والإعدادات</a>
+      </nav>
+
+      <!-- Board -->
+      <section style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; align-items: start">
+        <div class="col">
+          <header><span>جديد</span><span>2</span></header>
+          <a href="#r" class="card" style="border-right: 5px solid #B48F2E"><span class="src v">زائر بلا نتائج</span><b>REQ-0418 · النهضة · شقة غرفتين</b><small>حتى 560,000 · قبل 20 د · لا أعضاء يغطون النهضة</small><span class="btn" style="height: 28px; justify-content: center; font-size: 11px">أقرب تغطية: الشاطئ، مكتب ج</span></a>
+          <a href="#r" class="card"><span class="src m">مكتب عضو · مكتب أ</span><b>REQ-0417 · الروضة · أرض مطورة</b><small>حتى 2,500,000 · أمس · يغطيه ب، ي</small></a>
+        </div>
+        <div class="col">
+          <header><span>أُرسل</span><span>2</span></header>
+          <a href="#r" class="card"><span class="src v">زائر بلا نتائج</span><b>REQ-0415 · أبحر الشمالية · فيلا</b><small>حتى 2,200,000 · أُرسل اليوم 09:10 لـ أ، ك · تلقائي · بلا رد بعد</small></a>
+          <a href="#r" class="card" style="border-right: 5px solid #B48F2E"><span class="src s">فريق SMQ</span><b>REQ-0414 · المحمدية · شقة 3 غرف</b><small>700k إلى 1M · أُرسل يدوياً لمكتب د أثناء الانقطاع · 1 لم يُرسل</small><span class="btn" style="height: 28px; justify-content: center; font-size: 11px">أرسل على واتساب · مكتب ل موقوف</span></a>
+        </div>
+        <div class="col">
+          <header><span>وصلت عروض</span><span>2</span></header>
+          <a href="#r" class="card" style="outline: 2px solid #B48F2E; outline-offset: -2px"><span class="src v">زائر بلا نتائج</span><b>REQ-0412 · الفيصلية · شقة 4 غرف</b><small>حتى 450,000 · عرض من مكتب ط 440,000 موثّق · ينتظر قرار</small></a>
+          <a href="#r" class="card"><span class="src m">مكتب عضو · مكتب هـ</span><b>REQ-0403 · أبحر الشمالية · أرض</b><small>حتى 1,500,000 · عرضان من أ وك · ينتظر رد المشتري</small></a>
+        </div>
+        <div class="col">
+          <header><span>تعارف</span><span>1</span></header>
+          <a href="Admin-AllianceReferrals-D.dc.html" class="card"><span class="src s">فريق SMQ</span><b>REQ-0398 · الشاطئ · فيلا</b><small>REF-2026-0098 · أ ومكتب ج · تفاوض</small></a>
+        </div>
+        <div class="col">
+          <header><span>مغلق</span><span>24</span></header>
+          <a href="#r" class="card" style="color: #5E5A52; border-color: #D4CFC4"><span class="src v">زائر بلا نتائج</span><b style="color: #141311">REQ-0401 · الصفا · شقة 4 غرف</b><small>انتهى بلا عروض · 3 أيام · أُخبر الزائر</small></a>
+          <a href="Admin-AllianceReferrals-D.dc.html" class="card" style="color: #5E5A52; border-color: #D4CFC4"><span class="src m">مكتب عضو · مكتب ك</span><b style="color: #141311">REQ-0377 · أبحر الشمالية · فيلا</b><small>REF-0061 · أُفرغت 2026/09/30 · 2,050,000</small></a>
+        </div>
+      </section>
+
+      <!-- Request detail -->
+      <section class="panel" style="border-right: 6px solid #B48F2E">
+        <header><span>REQ-2026-0412 · الفيصلية · شقة 4 غرف · حتى 450,000 <span class="src v" style="margin-right: 8px">زائر بلا نتائج · 2026/10/09 · 21:40</span></span><div style="display: flex; gap: 8px"><button type="button" class="btn">أرسل لمكتب إضافي</button><button type="button" class="btn">أغلق الطلب</button></div></header>
+        <div style="display: grid; grid-template-columns: 1fr 1.6fr; gap: 0">
+          <div style="padding: 14px 16px; border-left: 1px solid #D4CFC4; display: flex; flex-direction: column; gap: 10px; font-size: 12px">
+            <span style="font-weight: 800">الطلب</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px"><span class="pill" style="background: #F3F1EB">الفيصلية</span><span class="pill" style="background: #F3F1EB">شقة</span><span class="pill" style="background: #F3F1EB">4 غرف</span><span class="pill" style="background: #F3F1EB">حتى 450,000</span><span class="pill" style="background: #F3F1EB">خلال 3 أشهر</span></div>
+            <span style="color: #5E5A52; line-height: 1.6">المشتري: زائر ترك اسمه ورقمه في النتائج الفارغة ووافق على التمرير. بياناته في <a href="Admin-Leads-D.dc.html">الطلبات الواردة</a> فقط ولا تُرسل لأي مكتب.</span>
+            <span style="font-weight: 800; margin-top: 4px">أُرسل إلى · مرتّبين بالميزان</span>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border: 1.5px solid #141311"><span><strong>1 · مكتب ط</strong><br><span style="color: #5E5A52">يغطي الفيصلية · ميزان 4/3 · رد 1 س 12 د</span></span><span class="pill" style="background: #B48F2E">ردّ بعرض</span></div>
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 10px; border: 1px solid #D4CFC4; color: #5E5A52"><span><strong style="color: #141311">لا مكتب ثانٍ</strong><br>لا عضو آخر يغطي الفيصلية</span><a href="Admin-AllianceApplications-D.dc.html" style="font-size: 11px; font-weight: 800">ادعُ مكتباً</a></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: #F8F7F4; font-size: 11px; line-height: 1.6">
+              <span style="font-weight: 800">وضع الإرسال</span>
+              <span style="display: flex; align-items: center; gap: 6px"><span style="width: 8px; height: 8px; background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>أُرسل تلقائياً عبر واتساب بزنس · 2026/10/09 21:41</span>
+              <span style="display: flex; align-items: center; gap: 6px; color: #5E5A52"><span style="width: 8px; height: 8px; background: #FFFFFF; box-shadow: inset 0 0 0 1.5px #141311; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>عند الانقطاع يظهر هنا زر «أرسل على واتساب» لكل مكتب بضغطة واحدة، كما في REQ-0414</span>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column">
+            <div style="padding: 12px 16px; font-size: 12px; font-weight: 800; border-bottom: 1px solid #D4CFC4; display: flex; justify-content: space-between"><span>العروض الواردة · 1</span><span style="color: #5E5A52; font-weight: 700">اختر عرضاً لإنشاء سجل الإحالة</span></div>
+            <div class="off" style="font-size: 11px; font-weight: 800; color: #5E5A52; background: #F8F7F4"><span></span><span>المكتب</span><span>العرض</span><span>ملاحظة</span><span></span></div>
+            <div class="off" style="background: #FFFDF6"><input type="radio" name="offer" checked aria-label="اختر عرض مكتب ط" style="width: 18px; height: 18px; accent-color: #141311; margin: 0"><span><strong>مكتب ط</strong><br><span style="color: #5E5A52">ردّ خلال 1 س 12 د</span></span><span><strong>440,000</strong> · 165 م²<br><span class="pill" style="background: #F3F1EB">عقد وساطة موثّق</span></span><span style="color: #3A3630; line-height: 1.5">«الدور الثاني، واجهة شمالية، بناء 2021، جاهزة للسكن»</span><button type="button" class="btn gold" style="height: 36px">أنشئ سجل إحالة</button></div>
+            <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; font-size: 12px; line-height: 1.6; color: #5E5A52">
+              <span><strong style="color: #141311">ما يحدث عند «أنشئ سجل إحالة»:</strong> يُنشأ REF برقم وتاريخ ومرحلة «تعارف»، يُرسل للمكتب وللمشتري عبر SMQ، وتبدأ فترة الحماية. المشتري يُعرض عليه العرض أولاً؛ إن رفض يُسجَّل السبب ويبقى الطلب مفتوحاً.</span>
+              <div style="display: flex; gap: 8px"><button type="button" class="btn">اعرض على المشتري أولاً</button><button type="button" class="btn">ارفض العرض مع سبب</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>عارض المخطط · 390</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+.rm{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:9px;font-weight:700;color:#141311;text-align:center;line-height:1.3}
+.rm small{font-size:8px;font-weight:600;color:#5E5A52}
+.rm.on{outline:2px solid #B48F2E;outline-offset:-2px;background:rgba(180,143,46,.15)}
+</style>
+<div dir="rtl" role="dialog" aria-modal="true" aria-label="مخطط نموذج A" style="width: 390px; height: 844px; box-sizing: border-box; overflow: hidden; background: #FFFFFF; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; display: flex; flex-direction: column; font-feature-settings: 'tnum' 1">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px 10px 16px; border-bottom: 1.5px solid #141311; flex: none">
+    <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 800">مخطط نموذج A · RZ-A</span><span style="font-size: 11px; color: #5E5A52">147 م² · 3 غرف · 3 حمامات · مخطط توضيحي من المطوّر [للتأكيد]</span></div>
+    <button type="button" aria-label="إغلاق" style="width: 44px; height: 44px; border: 1.5px solid #141311; background: #FFFFFF; color: #141311; cursor: pointer; font: inherit; font-size: 18px; font-weight: 800">×</button>
+  </div>
+
+  <!-- Toggle 2D / dimensions -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; flex: none; gap: 8px">
+    <div role="group" aria-label="طريقة العرض" style="display: flex; border: 1.5px solid #141311">
+      <button type="button" aria-pressed="true" style="height: 36px; padding: 0 12px; border: 0; font: inherit; font-size: 12px; font-weight: 800; background: #141311; color: #FFFFFF; cursor: pointer">مع الأبعاد</button>
+      <button type="button" aria-pressed="false" style="height: 36px; padding: 0 12px; border: 0; border-right: 1.5px solid #141311; font: inherit; font-size: 12px; font-weight: 700; background: #FFFFFF; color: #141311; cursor: pointer">بلا أبعاد</button>
+    </div>
+    <span style="font-size: 11px; color: #5E5A52">اضغط غرفة لرؤية مساحتها</span>
+  </div>
+
+  <!-- Plan canvas -->
+  <div style="flex: 1; position: relative; margin: 0 16px; border: 1.5px solid #141311; background: #F8F7F4; overflow: hidden">
+    <span aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(#E9E5DB 1px, transparent 1px), linear-gradient(90deg, #E9E5DB 1px, transparent 1px); background-size: 24px 24px"></span>
+    <!-- Simplified schematic plan -->
+    <svg aria-hidden="true" viewBox="0 0 356 480" style="position: absolute; inset: 0; width: 100%; height: 100%" fill="none" stroke="#141311" stroke-width="3">
+      <rect x="20" y="30" width="316" height="420"/>
+      <path d="M20 200h190M210 30v170M210 200v110M20 310h190M210 310h126M140 310v140M260 310v140M260 380h76"/>
+      <path d="M90 200h40" stroke="#B48F2E" stroke-width="6"/>
+      <path d="M210 90v40" stroke="#B48F2E" stroke-width="6"/>
+      <path d="M200 450h40" stroke="#FFFFFF" stroke-width="6"/>
+      <path d="M336 110v50" stroke="#C9C2B3" stroke-width="6"/>
+    </svg>
+    <div class="rm on" style="right: 6%; top: 8%; width: 50%; height: 33%">الصالة والمجلس<small>42.0 م² [للتأكيد]</small></div>
+    <div class="rm" style="left: 6%; top: 8%; width: 32%; height: 33%">غرفة النوم الرئيسية<small>22.5 م²</small></div>
+    <div class="rm" style="right: 6%; top: 43%; width: 50%; height: 21%">المطبخ<small>مفتوح [للتأكيد]</small></div>
+    <div class="rm" style="left: 6%; top: 43%; width: 32%; height: 21%">حمام رئيسي<small>5.2 م²</small></div>
+    <div class="rm" style="right: 6%; top: 66%; width: 28%; height: 28%">غرفة نوم 2<small>14.8 م²</small></div>
+    <div class="rm" style="right: 36%; top: 66%; width: 32%; height: 28%">غرفة نوم 3<small>13.6 م²</small></div>
+    <div class="rm" style="left: 6%; top: 66%; width: 20%; height: 13%">حمام<small>3.9</small></div>
+    <div class="rm" style="left: 6%; top: 80%; width: 20%; height: 14%">غ. خادمة<small>6.0</small></div>
+    <span style="position: absolute; bottom: 8px; left: 8px; font-size: 9px; font-weight: 700; background: #FFFFFF; padding: 3px 6px">الذهبي: نوافذ · الأبيض: المدخل · الرمادي: الشرفة</span>
+    <span style="position: absolute; top: 8px; left: 8px; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: #FFFFFF; border: 1.5px solid #141311; font-size: 10px; font-weight: 800" aria-label="الشمال">ش</span>
+    <div style="position: absolute; bottom: 8px; right: 8px; display: flex; flex-direction: column">
+      <button type="button" aria-label="تكبير" style="width: 40px; height: 40px; border: 1.5px solid #141311; background: #FFFFFF; font: inherit; font-size: 18px; font-weight: 800; cursor: pointer">+</button>
+      <button type="button" aria-label="تصغير" style="width: 40px; height: 40px; border: 1.5px solid #141311; border-top: 0; background: #FFFFFF; font: inherit; font-size: 18px; font-weight: 800; cursor: pointer">−</button>
+    </div>
+  </div>
+
+  <!-- Selected room + actions -->
+  <div style="flex: none; display: flex; flex-direction: column; gap: 10px; padding: 12px 16px 18px 16px">
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; background: #F3F1EB; font-size: 12px"><span><strong>الصالة والمجلس</strong> · 42.0 م² · نافذتان شماليتان</span><span style="font-size: 11px; color: #8A6C1E; font-weight: 700">[للتأكيد]</span></div>
+    <div style="display: flex; gap: 8px">
+      <a href="#pdf" style="flex: 1; height: 46px; display: flex; align-items: center; justify-content: center; gap: 8px; border: 1.5px solid #141311; color: #141311; text-decoration: none; font-size: 13px; font-weight: 800"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 10l6 6 6-6M4 20h16"/></svg>المخطط PDF</a>
+      <a href="https://wa.me/966559997929?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%AE%D8%B7%D8%B7%20RZ-A%20%D8%A8%D8%A7%D9%84%D8%A3%D8%A8%D8%B9%D8%A7%D8%AF" style="flex: 1; height: 46px; display: flex; align-items: center; justify-content: center; gap: 8px; background: #B48F2E; color: #141311; text-decoration: none; font-size: 13px; font-weight: 800; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)">اطلب المخطط المعماري</a>
+    </div>
+    <span style="font-size: 10px; color: #5E5A52; line-height: 1.6">المساحات تقريبية من مخطط المطوّر، والمساحة الموثّقة في الصك هي المرجع. فيلا الروف تعرض مخططين بتبويب «الدور الأول · السطح».</span>
+  </div>
+</div>
+</body>
+</html>

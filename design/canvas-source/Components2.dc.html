@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>ورقة المكونات 2 · مكونات الإدارة</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+h2{margin:0;font-size:18px;font-weight:800}
+.lbl{font-size:12px;font-weight:700;color:#5E5A52;line-height:1.5}
+.lbl span{font-weight:400;display:block}
+.g{display:grid;grid-template-columns:150px repeat(5,minmax(0,1fr));gap:12px;align-items:center}
+.st{font-size:10px;font-weight:800;color:#5E5A52;display:block;margin-bottom:4px;text-transform:lowercase}
+.sw{position:relative;width:40px;height:22px;background:#141311;display:inline-block;flex:none}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;background:#B48F2E;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.sw.off{background:#FFFFFF;box-shadow:inset 0 0 0 1.5px #141311}
+.sw.off::after{left:auto;right:3px;background:#141311}
+.sw.foc{outline:2px solid #B48F2E;outline-offset:3px}
+.sw.dis{opacity:.4}
+.pill{font-size:11px;font-weight:800;padding:3px 8px;display:inline-block}
+.row{display:grid;grid-template-columns:36px 90px 1fr 110px 90px 80px;gap:12px;align-items:center;padding:10px 14px;background:#FFFFFF;border-bottom:1px solid #D4CFC4;font-size:13px}
+.hx{display:inline-block;width:12px;height:12px;vertical-align:middle;margin-left:4px}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5E5A52}
+.f input{height:44px;padding:0 12px;font:inherit;font-size:14px;font-weight:600;color:#141311;border:1.5px solid #141311;background:#FFFFFF;width:100%;box-sizing:border-box}
+.tab{height:36px;padding:0 14px;border:0;font:inherit;font-size:12px;font-weight:700;background:#FFFFFF;color:#141311;cursor:pointer}
+.tab[aria-selected=true]{background:#141311;color:#FFFFFF;font-weight:800}
+.btn{height:36px;padding:0 12px;border:1.5px solid #141311;background:#FFFFFF;color:#141311;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+</style>
+</helmet>
+<div dir="rtl" style="width: 1440px; box-sizing: border-box; background: #FFFFFF; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; font-feature-settings: 'tnum' 1; padding: 40px; display: flex; flex-direction: column; gap: 32px">
+
+  <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid #141311; padding-bottom: 14px">
+    <h1 style="margin: 0; font-size: 32px; font-weight: 800">ورقة المكونات 2 · مكونات الإدارة</h1>
+    <span style="font-size: 12px; color: #5E5A52">تكمل ورقة المكونات الأولى · نفس الرموز: لا زوايا، لا ظلال، لا تدرّجات، الخطأ بالذهبي، الحالة بالشكل والكلمة</span>
+  </div>
+
+  <!-- 1 Data table row -->
+  <section style="display: flex; flex-direction: column; gap: 12px">
+    <h2>1 · صف جدول البيانات</h2>
+    <div style="border: 1.5px solid #141311">
+      <div class="row" style="background: #F3F1EB; border-bottom: 1.5px solid #141311; font-size: 11px; font-weight: 800; color: #5E5A52"><span><input type="checkbox" aria-label="تحديد الكل" style="accent-color: #141311; width: 16px; height: 16px"></span><span>الرمز ↕</span><span>الوحدة</span><span>السعر ↓</span><span>الحالة</span><span></span></div>
+      <div class="row"><span><input type="checkbox" aria-label="تحديد" style="accent-color: #141311; width: 16px; height: 16px"></span><span style="font-weight: 800; direction: ltr; text-align: right">RZ-A</span><span>روز · شقة · 3 غرف · 147.00 م²</span><span style="font-weight: 800">690,000</span><span><span class="hx" style="background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>متاح</span><a href="Admin-UnitEditor-D.dc.html" style="font-size: 12px; font-weight: 800; text-decoration: none">تحرير</a><span class="st" style="grid-column: 1 / -1; margin: 0">default</span></div>
+      <div class="row" style="background: #F8F7F4"><span><input type="checkbox" aria-label="تحديد" style="accent-color: #141311; width: 16px; height: 16px"></span><span style="font-weight: 800; direction: ltr; text-align: right">RZ-B</span><span>روز · شقة · غرفتان · 116.90 م²</span><span style="font-weight: 800">555,000</span><span><span class="hx" style="background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>متاح</span><a href="Admin-UnitEditor-D.dc.html" style="font-size: 12px; font-weight: 800; text-decoration: none">تحرير</a><span class="st" style="grid-column: 1 / -1; margin: 0">hover · خلفية كريمية</span></div>
+      <div class="row" style="background: #F3F1EB; box-shadow: inset 4px 0 0 #B48F2E"><span><input type="checkbox" checked aria-label="تحديد" style="accent-color: #141311; width: 16px; height: 16px"></span><span style="font-weight: 800; direction: ltr; text-align: right">YS-A</span><span>ياسمين · شقة · غرفتان · 109.35 م²</span><span style="font-weight: 800">555,000</span><span><span class="hx" style="background: #141311; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>مباع</span><a href="Admin-UnitEditor-D.dc.html" style="font-size: 12px; font-weight: 800; text-decoration: none">تحرير</a><span class="st" style="grid-column: 1 / -1; margin: 0">selected · شريط ذهبي يمين</span></div>
+      <div class="row" style="outline: 2px solid #B48F2E; outline-offset: -2px"><span><input type="checkbox" aria-label="تحديد" style="accent-color: #141311; width: 16px; height: 16px"></span><span style="font-weight: 800; direction: ltr; text-align: right">YS-B</span><span>ياسمين · شقة · غرفتان · 106.05 م²</span><span style="font-weight: 800">555,000</span><span><span class="hx" style="background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>متاح</span><a href="Admin-UnitEditor-D.dc.html" style="font-size: 12px; font-weight: 800; text-decoration: none">تحرير</a><span class="st" style="grid-column: 1 / -1; margin: 0">focus (لوحة المفاتيح)</span></div>
+      <div class="row" style="background: #FFFDF6"><span><input type="checkbox" aria-label="تحديد" style="accent-color: #141311; width: 16px; height: 16px"></span><span style="font-weight: 800; direction: ltr; text-align: right">RZ-C</span><span>روز · شقة · غرفتان · 80.35 م²</span><span style="font-weight: 800; color: #8A6C1E">499,000 <span style="font-size: 11px; font-weight: 600">كان 510,000</span></span><span><span class="hx" style="background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>متاح</span><a href="Admin-UnitEditor-D.dc.html" style="font-size: 12px; font-weight: 800; text-decoration: none">تحرير</a><span class="st" style="grid-column: 1 / -1; margin: 0">changed · معاينة الاستيراد</span></div>
+      <div class="row" style="color: #5E5A52; border-bottom: 0"><span><input type="checkbox" disabled aria-label="تحديد" style="accent-color: #141311; width: 16px; height: 16px"></span><span style="font-weight: 800; direction: ltr; text-align: right">RZ-D</span><span>روز · شقة · غرفتان · 82.60 م² · مخفية من الموقع</span><span style="font-weight: 800">459,000</span><span><span class="hx" style="background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>متاح</span><a href="Admin-UnitEditor-D.dc.html" style="font-size: 12px; font-weight: 800; text-decoration: none">تحرير</a><span class="st" style="grid-column: 1 / -1; margin: 0">hidden · نص باهت، الحالة تبقى بالشكل</span></div>
+    </div>
+  </section>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start">
+    <!-- 2 Field group -->
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2>2 · مجموعة حقول</h2>
+      <div style="background: #FFFFFF; border: 1.5px solid #141311">
+        <header style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1.5px solid #141311; background: #F3F1EB; font-size: 14px; font-weight: 800">السعر <span style="font-size: 11px; font-weight: 700; color: #5E5A52">3 حقول · 1 للتأكيد</span></header>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 16px">
+          <label class="f">من Excel<input value="690,000" style="border: 1px solid #B48F2E; background: #F3F1EB; direction: ltr; text-align: right"><span style="font-weight: 600">يُستبدل عند الاستيراد</span></label>
+          <label class="f">إدارة فقط<input value="الثالث" style="border: 1.5px solid #141311"></label>
+          <label class="f">للتأكيد<input value="غير محدد [للتأكيد]" style="border: 1px solid #B48F2E; background: #FFFDF6"><span style="font-weight: 600; color: #8A6C1E">يبقى بالوسم على الموقع</span></label>
+          <label class="f">محسوب<input value="4,694 / م²" readonly style="border: 1.5px solid #D4CFC4; background: #F8F7F4; color: #5E5A52"><span style="font-weight: 600">لا يُحرَّر</span></label>
+          <label class="f" style="grid-column: 1 / -1">خطأ<input value="690.000,00" style="border: 2px solid #B48F2E; background: #FFFDF6; direction: ltr; text-align: right"><span role="alert" style="display: flex; align-items: center; gap: 6px; color: #141311"><span style="width: 8px; height: 8px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>اكتب الرقم بالأرقام الغربية بلا فواصل عشرية: 690000</span></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Switch + 4 drag handle + 5 status pill -->
+    <section style="display: flex; flex-direction: column; gap: 22px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <h2>3 · المفتاح</h2>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; align-items: start">
+          <div><span class="st">on</span><span class="sw" role="switch" aria-checked="true"></span></div>
+          <div><span class="st">off</span><span class="sw off" role="switch" aria-checked="false"></span></div>
+          <div><span class="st">focus</span><span class="sw foc" role="switch" aria-checked="true"></span></div>
+          <div><span class="st">disabled</span><span class="sw off dis" role="switch" aria-checked="false" aria-disabled="true"></span></div>
+          <div><span class="st">with label</span><span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700">ظاهر<span class="sw" role="switch" aria-checked="true"></span></span></div>
+        </div>
+        <span class="lbl">المقبض سداسي: ذهبي يسار = مفعّل، أسود يمين = مطفأ. الكلمة بجانب المفتاح إجبارية إذا لم يكن له عنوان.</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <h2>4 · مقبض السحب</h2>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; align-items: start">
+          <div><span class="st">default</span><span style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: #5E5A52"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.6"/><circle cx="10" cy="3" r="1.6"/><circle cx="4" cy="9" r="1.6"/><circle cx="10" cy="9" r="1.6"/><circle cx="4" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/></svg></span></div>
+          <div><span class="st">hover</span><span style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: #141311; background: #F3F1EB"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.6"/><circle cx="10" cy="3" r="1.6"/><circle cx="4" cy="9" r="1.6"/><circle cx="10" cy="9" r="1.6"/><circle cx="4" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/></svg></span></div>
+          <div><span class="st">dragging</span><span style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: #141311; background: #B48F2E"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.6"/><circle cx="10" cy="3" r="1.6"/><circle cx="4" cy="9" r="1.6"/><circle cx="10" cy="9" r="1.6"/><circle cx="4" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/></svg></span></div>
+          <div style="grid-column: span 2"><span class="st">drop target</span><span style="display: block; height: 36px; border: 1.5px dashed #141311; background: #F3F1EB; position: relative"><span style="position: absolute; top: -2px; right: 0; left: 0; height: 3px; background: #B48F2E"></span></span></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <h2>5 · حبّة الحالة</h2>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center">
+          <span class="pill" style="background: #141311; color: #FFFFFF">منشور</span>
+          <span class="pill" style="border: 1.5px solid #141311">مسودة</span>
+          <span class="pill" style="border: 1.5px solid #B48F2E; background: #FFFDF6; color: #8A6C1E">يحتاج تأكيداً</span>
+          <span class="pill" style="border: 1.5px solid #B48F2E; color: #8A6C1E">بلا رد</span>
+          <span class="pill" style="background: #141311; color: #FFFFFF">تم الرد</span>
+          <span class="pill" style="border: 1.5px solid #5E5A52; color: #5E5A52">مغلق</span>
+          <span class="pill" style="border: 1.5px solid #141311">بانتظار الموافقة</span>
+          <span class="pill" style="background: #B48F2E; color: #141311">3</span>
+          <span class="pill" style="background: #F3F1EB">من Excel</span>
+          <span class="pill" style="border: 1px solid #D4CFC4; font-weight: 600">مخفية</span>
+        </div>
+        <span class="lbl">حالات الوحدة (متاح، محجوز، مباع) لا تُكتب كحبّة؛ تبقى سداسياً مع الكلمة كما في الورقة الأولى.</span>
+      </div>
+    </section>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; align-items: start">
+    <!-- 6 File upload -->
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2>6 · رفع ملف</h2>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div><span class="st">empty</span><div style="height: 96px; border: 1.5px dashed #141311; background: #F8F7F4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; font-weight: 700"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#141311" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg>اسحب صورة أو <span style="color: #8A6C1E">اختر ملفاً</span><span style="font-size: 10px; font-weight: 600; color: #5E5A52">JPG أو PNG · حتى 10 MB · 2400 عرضاً على الأقل</span></div></div>
+        <div><span class="st">drag over</span><div style="height: 60px; border: 2px solid #B48F2E; background: #FFFDF6; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800">أفلت هنا</div></div>
+        <div><span class="st">uploading 64%</span><div style="border: 1.5px solid #141311; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 700"><span style="display: flex; justify-content: space-between"><span>rz-a-living.jpg</span><span>64%</span></span><span style="height: 6px; background: #E9E5DB; position: relative"><span style="position: absolute; top: 0; right: 0; width: 64%; height: 100%; background: #B48F2E"></span></span></div></div>
+        <div><span class="st">done · tier chosen</span><div style="border: 1.5px solid #141311; padding: 10px 12px; display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700"><span style="width: 48px; height: 32px; background: #3A3630; flex: none"></span><span style="flex: 1">rz-a-living.jpg · 2400×1600<span style="display: block; font-size: 10px; font-weight: 600; color: #5E5A52">فعلية · الوسم مطفأ تلقائياً</span></span><button type="button" class="btn" style="height: 30px; font-size: 11px">إزالة</button></div></div>
+        <div><span class="st">error</span><div role="alert" style="border: 2px solid #B48F2E; background: #FFFDF6; padding: 10px 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700"><span style="width: 8px; height: 8px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>الصورة 1200 عرضاً فقط. نحتاج 2400 على الأقل للهيرو.</div></div>
+      </div>
+    </section>
+
+    <!-- 7 AR/EN tabs -->
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2>7 · تبويب العربية / English</h2>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div><span class="st">default · AR active</span><div role="tablist" style="display: inline-flex; border: 1.5px solid #141311"><button type="button" role="tab" aria-selected="true" class="tab">العربية</button><button type="button" role="tab" aria-selected="false" class="tab" style="border-right: 1.5px solid #141311">English</button></div></div>
+        <div><span class="st">EN active · LTR fields below</span><div role="tablist" style="display: inline-flex; border: 1.5px solid #141311"><button type="button" role="tab" aria-selected="false" class="tab">العربية</button><button type="button" role="tab" aria-selected="true" class="tab" style="border-right: 1.5px solid #141311">English</button></div></div>
+        <div><span class="st">EN has empty fields</span><div role="tablist" style="display: inline-flex; border: 1.5px solid #141311"><button type="button" role="tab" aria-selected="true" class="tab">العربية</button><button type="button" role="tab" aria-selected="false" class="tab" style="border-right: 1.5px solid #141311; display: flex; align-items: center; gap: 8px">English <span class="pill" style="font-size: 10px; padding: 1px 6px; border: 1.5px solid #B48F2E; color: #8A6C1E">4 فارغة</span></button></div></div>
+        <div><span class="st">focus</span><div role="tablist" style="display: inline-flex; border: 1.5px solid #141311"><button type="button" role="tab" aria-selected="true" class="tab" style="outline: 2px solid #B48F2E; outline-offset: 2px">العربية</button><button type="button" role="tab" aria-selected="false" class="tab" style="border-right: 1.5px solid #141311">English</button></div></div>
+        <span class="lbl">التبويب يبدّل لغة الحقول في المحرر كله، لا لغة اللوحة. النص الإنجليزي الفارغ يرث العربي على الموقع مع وسم «EN missing» في اللوحة فقط.</span>
+      </div>
+    </section>
+
+    <!-- 8 Save bar -->
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2>8 · شريط الحفظ</h2>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div><span class="st">clean</span><div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; background: #141311; color: #FFFFFF; border-top: 3px solid #B48F2E; font-size: 12px; font-weight: 700"><span style="color: #C9C2B3">لا تغييرات غير محفوظة</span><button type="button" disabled style="height: 34px; padding: 0 14px; border: 0; background: #3A3630; color: #C9C2B3; font: inherit; font-size: 12px; font-weight: 800; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)">حفظ</button></div></div>
+        <div><span class="st">dirty</span><div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; background: #141311; color: #FFFFFF; border-top: 3px solid #B48F2E; font-size: 12px; font-weight: 700"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>3 حقول غير محفوظة</span><span style="display: flex; gap: 6px"><button type="button" style="height: 34px; padding: 0 10px; border: 1.5px solid #C9C2B3; background: transparent; color: #FFFFFF; font: inherit; font-size: 12px; font-weight: 700">تجاهل</button><button type="button" style="height: 34px; padding: 0 10px; border: 1.5px solid #FFFFFF; background: #FFFFFF; color: #141311; font: inherit; font-size: 12px; font-weight: 800">مسودة</button><button type="button" style="height: 34px; padding: 0 12px; border: 0; background: #B48F2E; color: #141311; font: inherit; font-size: 12px; font-weight: 800; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)">نشر</button></span></div></div>
+        <div><span class="st">saving</span><div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; background: #141311; color: #FFFFFF; border-top: 3px solid #B48F2E; font-size: 12px; font-weight: 700"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>يُحفظ…</span><button type="button" disabled style="height: 34px; padding: 0 12px; border: 0; background: #3A3630; color: #C9C2B3; font: inherit; font-size: 12px; font-weight: 800; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)">نشر</button></div></div>
+        <div><span class="st">just published</span><div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; background: #141311; color: #FFFFFF; border-top: 3px solid #B48F2E; font-size: 12px; font-weight: 700"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"><svg aria-hidden="true" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M4 12l5 5L20 7"/></svg></span>نُشر الآن · <a href="#x" style="color: #B48F2E">افتح</a></span><button type="button" style="height: 34px; padding: 0 10px; border: 1.5px solid #C9C2B3; background: transparent; color: #FFFFFF; font: inherit; font-size: 12px; font-weight: 700">تراجع</button></div></div>
+        <div><span class="st">error</span><div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; background: #141311; color: #FFFFFF; border-top: 3px solid #B48F2E; font-size: 12px; font-weight: 700"><span style="display: flex; align-items: center; gap: 8px; color: #B48F2E"><span style="width: 8px; height: 8px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>لم يُحفظ: حقل السعر فارغ</span><button type="button" style="height: 34px; padding: 0 12px; border: 0; background: #B48F2E; color: #141311; font: inherit; font-size: 12px; font-weight: 800; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)">اذهب للحقل</button></div></div>
+      </div>
+    </section>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 32px; align-items: start">
+    <!-- 9 Drawer -->
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2>9 · الدُّرج الجانبي</h2>
+      <div style="position: relative; height: 300px; background: #E9E5DB; overflow: hidden; border: 1.5px solid #D4CFC4">
+        <div style="position: absolute; inset: 0; background: #3A3630; opacity: .5"></div>
+        <aside role="dialog" aria-label="تفاصيل الطلب" style="position: absolute; top: 0; bottom: 0; left: 0; width: 60%; background: #FFFFFF; border-right: 1.5px solid #141311; display: flex; flex-direction: column">
+          <header style="display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1.5px solid #141311; font-size: 13px; font-weight: 800">تفاصيل الطلب SMQ-8F3A2 <button type="button" aria-label="إغلاق" style="width: 32px; height: 32px; border: 1.5px solid #141311; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 800; cursor: pointer">×</button></header>
+          <div style="flex: 1; padding: 14px; font-size: 12px; line-height: 1.7; color: #3A3630">المحتوى يتدرّج من اليمين، يُفتح من صف الجدول، ويُغلق بـ Esc أو بالنقر على التعتيم أو بالزر. العرض 420 إلى 520 على سطح المكتب، وملء الشاشة على الجوال كورقة سفلية.</div>
+          <footer style="display: flex; gap: 8px; padding: 12px 14px; border-top: 1.5px solid #141311"><button type="button" style="flex: 1; height: 38px; border: 0; background: #B48F2E; color: #141311; font: inherit; font-size: 12px; font-weight: 800; cursor: pointer; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)">علّم كمردود</button><button type="button" class="btn" style="height: 38px">إغلاق</button></footer>
+        </aside>
+      </div>
+      <span class="lbl">يفتح من اليسار لأن المحتوى يمتد يميناً في RTL: الصف الذي أتى منه يبقى مرئياً.</span>
+    </section>
+
+    <!-- 10 Dialog -->
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2>10 · الحوار</h2>
+      <div style="position: relative; height: 300px; background: #3A3630; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box">
+        <div role="dialog" aria-modal="true" style="width: 100%; background: #FFFFFF; border: 1.5px solid #141311; border-top: 6px solid #B48F2E; display: flex; flex-direction: column; gap: 10px; padding: 16px">
+          <span style="font-size: 15px; font-weight: 800">تغيير الحالة إلى «مباع»؟</span>
+          <p style="margin: 0; font-size: 12px; line-height: 1.6; color: #3A3630">تختفي YS-B من النتائج ودليل الأسعار فوراً. تبقى في صفحة المشروع بوسم «مباع».</p>
+          <label class="f">تاريخ البيع<input value="2026-10-10" style="height: 40px; direction: ltr; text-align: right"></label>
+          <div style="display: flex; gap: 8px; margin-top: 4px"><button type="button" style="height: 38px; padding: 0 14px; border: 0; background: #141311; color: #FFFFFF; font: inherit; font-size: 12px; font-weight: 800; cursor: pointer; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)">تأكيد البيع</button><button type="button" class="btn" style="height: 38px">إلغاء</button></div>
+        </div>
+      </div>
+      <span class="lbl">حدّ ذهبي علوي 6px يميّزه عن الدُّرج. المدمّر يطلب كتابة الرمز (القطع الصغيرة، 3).</span>
+    </section>
+
+    <!-- 11 Toast -->
+    <section style="display: flex; flex-direction: column; gap: 12px">
+      <h2>11 · التوست</h2>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <div><span class="st">success</span><div role="status" style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #141311; color: #FFFFFF; border-right: 5px solid #B48F2E; font-size: 12px; font-weight: 700"><span style="width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"><svg aria-hidden="true" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M4 12l5 5L20 7"/></svg></span><span style="flex: 1">حُفظت الوحدة</span><span aria-hidden="true">×</span></div></div>
+        <div><span class="st">info + undo</span><div role="status" style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #141311; color: #FFFFFF; border-right: 5px solid #FFFFFF; font-size: 12px; font-weight: 700"><span style="flex: 1">حُذف السؤال · <span style="color: #B48F2E">تراجع</span></span><span aria-hidden="true">×</span></div></div>
+        <div><span class="st">error</span><div role="alert" style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #FFFDF6; border: 2px solid #B48F2E; font-size: 12px; font-weight: 700"><span style="width: 8px; height: 8px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span><span style="flex: 1">لم يُحفظ</span><span style="color: #8A6C1E">أعد</span></div></div>
+        <div><span class="st">loading (persistent)</span><div role="status" aria-busy="true" style="display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #141311; color: #FFFFFF; border-right: 5px solid #B48F2E; font-size: 12px; font-weight: 700"><span style="width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span><span style="flex: 1">يستورد 10 صفوف…</span></div></div>
+      </div>
+      <span class="lbl">يظهر أسفل يسار الشاشة، واحد في كل مرة، 6 ثوانٍ، بلا حركة سوى ظهور واختفاء.</span>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2300}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

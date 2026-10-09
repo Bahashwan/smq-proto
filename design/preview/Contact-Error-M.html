@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>تواصل · أخطاء النموذج · 390</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+.lb{display:flex;flex-direction:column;gap:4px;font-size:11px;font-weight:600;color:#5E5A52}
+.lb input,.lb textarea,.lb select{padding:0 12px;height:48px;font:inherit;font-size:15px;font-weight:600;color:#141311;border:1.5px solid #141311;background:#FFFFFF;width:100%;box-sizing:border-box}
+.lb textarea{height:auto;min-height:96px;padding:10px 12px;resize:vertical;line-height:1.6}
+.err{border:2px solid #B48F2E !important;background:#FFFDF6 !important}
+.msg{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#141311}
+.msg::before{content:"";width:8px;height:8px;background:#B48F2E;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+</style>
+<div dir="rtl" style="width: 390px; box-sizing: border-box; background: #FFFFFF; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; display: flex; flex-direction: column; font-feature-settings: 'tnum' 1">
+
+  <header style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: #141311; color: #FFFFFF">
+    <a href="Home-M.html" aria-label="SMQ العقارية، الصفحة الرئيسية" style="display: flex; align-items: center; text-decoration: none"><img src="assets/lockup-goldmark-white.png" alt="إس إم كيو العقارية" style="height: 26px; width: auto; display: block"></a>
+    <div style="display: flex; align-items: center; gap: 4px">
+      <a href="EN-Home-M.html" aria-label="English" style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-decoration: none; color: #FFFFFF; padding: 12px 8px">EN</a>
+      <a href="https://wa.me/966559997929" aria-label="تواصل عبر واتساب" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: #B48F2E; color: #141311; text-decoration: none; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 7.9 19.4z"/><path d="M9.2 9.1c.2 2.4 2.8 5 5.4 5.6l1.6-1.4-2-1-1 .7c-.9-.4-1.8-1.3-2.2-2.2l.7-1-1-2z"/></svg></a>
+      <button type="button" aria-label="القائمة" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; background: transparent; color: #FFFFFF; cursor: pointer"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    </div>
+  </header>
+
+  <section style="padding: 20px 16px 0 16px; display: flex; flex-direction: column; gap: 6px">
+    <h1 style="margin: 0; font-size: 26px; font-weight: 800">اكتب لنا</h1>
+    <p style="margin: 0; font-size: 13px; color: #5E5A52">نرد خلال ساعات العمل. الحقول بالذهبي تحتاج تصحيحاً.</p>
+  </section>
+
+  <!-- Summary alert at top, focus moves here -->
+  <div role="alert" tabindex="-1" style="margin: 14px 16px 0 16px; display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; border: 2px solid #B48F2E; background: #FFFDF6; font-size: 13px; line-height: 1.6">
+    <span style="display: flex; align-items: center; gap: 8px; font-weight: 800"><span style="width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>لم تُرسل الرسالة. حقلان يحتاجان تصحيحاً:</span>
+    <a href="#phone" style="font-weight: 700">رقم الجوال غير مكتمل</a>
+    <a href="#consent" style="font-weight: 700">الموافقة على التواصل مطلوبة</a>
+  </div>
+
+  <form style="display: flex; flex-direction: column; gap: 14px; padding: 16px 16px 0 16px" novalidate>
+    <label class="lb">الاسم<input type="text" value="خالد باعشن"></label>
+    <label class="lb" for="phone">رقم الجوال<input id="phone" class="err" type="tel" inputmode="tel" value="05512" aria-invalid="true" aria-describedby="phone-msg" style="direction: ltr; text-align: right"><span id="phone-msg" class="msg">10 أرقام تبدأ بـ 05. كتبت 5 أرقام فقط.</span></label>
+    <div class="lb">طريقة الرد<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px"><label style="display: flex; align-items: center; justify-content: center; height: 44px; border: 1.5px solid #141311; background: #141311; color: #FFFFFF; font-size: 13px; font-weight: 800"><input type="radio" name="via" checked style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">واتساب</label><label style="display: flex; align-items: center; justify-content: center; height: 44px; border: 1.5px solid #141311; font-size: 13px; font-weight: 700; color: #141311"><input type="radio" name="via" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">اتصال</label><label style="display: flex; align-items: center; justify-content: center; height: 44px; border: 1.5px solid #141311; font-size: 13px; font-weight: 700; color: #141311"><input type="radio" name="via" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">بريد</label></div></div>
+    <label class="lb">الموضوع<select><option selected>أبحث عن وحدة</option><option>عندي عقار</option><option>تمويل</option><option>تدريب</option><option>شيء آخر</option></select></label>
+    <label class="lb">رسالتك<textarea>أبحث عن شقة 3 غرف بميزانية 700 ألف، هل يمكن زيارة يوم السبت؟</textarea><span style="display: flex; justify-content: space-between; font-weight: 600"><span></span><span>62 / 600</span></span></label>
+    <label id="consent" style="display: flex; align-items: flex-start; gap: 10px; font-size: 12px; line-height: 1.6; color: #141311; padding: 10px 12px; border: 2px solid #B48F2E; background: #FFFDF6"><input type="checkbox" aria-invalid="true" aria-describedby="consent-msg" style="width: 18px; height: 18px; margin: 2px 0 0 0; accent-color: #141311; flex: none">أوافق على أن تتواصل SMQ معي بخصوص رسالتي. <a href="Privacy-M.html">سياسة الخصوصية</a></label>
+    <span id="consent-msg" class="msg" style="margin-top: -8px">علّم الموافقة حتى نستطيع الرد عليك.</span>
+
+    <!-- Network failure state (second error kind) -->
+    <div role="alert" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px; border: 2px solid #B48F2E; background: #FFFDF6; font-size: 12px; line-height: 1.6"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; flex: none; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span><span><strong>تعذّر الإرسال، انقطع الاتصال.</strong> رسالتك محفوظة في هذه الصفحة.</span></span><button type="button" style="flex: none; height: 36px; padding: 0 12px; border: 1.5px solid #141311; background: #FFFFFF; font: inherit; font-size: 12px; font-weight: 800; cursor: pointer">أعد المحاولة</button></div>
+
+    <button type="submit" style="height: 54px; display: flex; align-items: center; justify-content: center; gap: 8px; font: inherit; font-size: 15px; font-weight: 800; border: 0; background: #141311; color: #FFFFFF; cursor: pointer; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)">أرسل الرسالة</button>
+    <a href="https://wa.me/966559997929?text=%D8%A3%D8%A8%D8%AD%D8%AB%20%D8%B9%D9%86%20%D8%B4%D9%82%D8%A9%203%20%D8%BA%D8%B1%D9%81" style="height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px; border: 1.5px solid #141311; color: #141311; font-size: 14px; font-weight: 700; text-decoration: none">أو أرسلها على واتساب مباشرة</a>
+  </form>
+
+  <p style="margin: 16px 16px 24px 16px; font-size: 11px; color: #5E5A52; line-height: 1.6">قواعد الخطأ: ذهبي دائماً لا أحمر، الرسالة تحت الحقل بالكلمات لا بالرمز، ملخص أعلى النموذج يأخذ التركيز، والنص المكتوب لا يُفقد أبداً.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإدارة · غرفة التحالف · طلبات الانضمام</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+.sub{display:flex;border-bottom:1.5px solid #141311;overflow-x:auto}
+.sub a{flex:none;padding:10px 14px;font-size:13px;font-weight:700;color:#5E5A52;text-decoration:none;display:flex;align-items:center;gap:6px}
+.sub a[aria-current]{color:#141311;font-weight:800;border-bottom:3px solid #B48F2E;margin-bottom:-1.5px}
+.sub a i{font-style:normal;min-width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;background:#F3F1EB;font-size:10px;font-weight:800;padding:0 5px}
+.sub a[aria-current] i{background:#B48F2E}
+.panel{background:#FFFFFF;border:1.5px solid #141311;display:flex;flex-direction:column}
+.panel>header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;border-bottom:1.5px solid #141311;background:#F3F1EB;font-size:14px;font-weight:800}
+.app{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid #D4CFC4;text-decoration:none;color:#141311;font-size:13px}
+.app .t{flex:1;display:flex;flex-direction:column;gap:1px;min-width:0}
+.app small{font-size:11px;color:#5E5A52}
+.pill{font-size:11px;font-weight:800;padding:2px 8px;white-space:nowrap}
+.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #D4CFC4;font-size:13px}
+.row span:first-child{color:#5E5A52}
+.row span:last-child{font-weight:700;text-align:left}
+.btn{height:38px;padding:0 14px;border:1.5px solid #141311;background:#FFFFFF;color:#141311;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+.btn.ink{background:#141311;color:#FFFFFF}
+.btn.gold{background:#B48F2E;border:0;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 16px,100% 100%,0 100%)}
+.tag{display:inline-flex;align-items:center;height:26px;padding:0 8px;background:#F3F1EB;font-size:11px;font-weight:700}
+.hx{width:44px;height:44px;display:flex;align-items:center;justify-content:center;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);font-size:8px;font-weight:800;text-align:center;line-height:1.1}
+</style>
+</helmet>
+<div dir="rtl" style="box-sizing: border-box; min-height: 100vh; background: #F8F7F4; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; font-feature-settings: 'tnum' 1; display: flex; flex-direction: column; min-width: 0">
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 24px; height: 60px; background: #141311; color: #FFFFFF">
+    <div style="display: flex; align-items: center; gap: 16px"><img src="/_blob/74198517e5ad06a71e300a3da635ec66" alt="إس إم كيو العقارية" style="height: 28px; width: auto; display: block"><span style="font-size: 12px; font-weight: 700; padding: 4px 8px; background: #B48F2E; color: #141311">لوحة الإدارة</span></div>
+    <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700"><span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; font-size: 12px; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)">ن</span>نورة · محررة</span>
+  </header>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; flex: 1">
+    <nav aria-label="أقسام الإدارة" style="flex: 0 1 240px; min-width: 0; background: #FFFFFF; border-left: 1.5px solid #141311; display: flex; flex-direction: column; padding: 16px 0; align-self: stretch">
+      <a href="Admin-Overview-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">نظرة عامة</a>
+      <a href="Admin-Approvals-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>طلبات الموافقة</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">3</span></a>
+      <a href="Admin-Inventory-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الوحدات</a>
+      <a href="Admin-Projects-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المشاريع</a>
+      <a href="Admin-Leads-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الطلبات الواردة</a>
+      <a href="Admin-Analytics-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">تحليلات البحث</a>
+      <a href="Admin-Visitors-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الزوار</a>
+      <span style="padding: 14px 20px 4px 20px; font-size: 11px; font-weight: 800; color: #5E5A52; border-top: 1px solid #D4CFC4; margin-top: 6px">تعاون معنا</span>
+      <a href="Admin-Marketers-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>المسوّقون</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #141311; font-size: 11px; font-weight: 800; padding: 0 6px">2</span></a>
+      <a href="Admin-Alliance-D.dc.html" aria-current="page" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 800; color: #141311; text-decoration: none; background: #F3F1EB; border-right: 4px solid #B48F2E"><span>غرفة التحالف</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">5</span></a>
+      <a href="Admin-Content-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المحتوى والأسئلة</a>
+      <a href="Admin-Users-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none; margin-top: auto; border-top: 1px solid #D4CFC4">الإعدادات والمستخدمون</a>
+    </nav>
+    <main style="flex: 999 1 640px; min-width: 0; padding: 24px 32px 48px 32px; display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; font-weight: 800">غرفة التحالف · طلبات الانضمام</h1><span style="font-size: 13px; color: #5E5A52">التحقق من رخصة فال يدوي في موقع الهيئة؛ لا موافقة بلا تاريخ تحقق. المحرر يراجع ويطلب نواقص، والمدير يعتمد أو يرفض</span></div>
+      <nav class="sub" aria-label="أقسام غرفة التحالف">
+        <a href="Admin-Alliance-D.dc.html">نظرة عامة</a>
+        <a href="Admin-AllianceApplications-D.dc.html" aria-current="page">طلبات الانضمام <i>4</i></a>
+        <a href="Admin-AllianceMembers-D.dc.html">الأعضاء <i>12</i></a>
+        <a href="Admin-AllianceRadar-D.dc.html">الرادار</a>
+        <a href="Admin-AllianceRequests-D.dc.html">الطلبات والمطابقات <i>5</i></a>
+        <a href="Admin-AllianceReferrals-D.dc.html">الإحالات والصفقات <i>3</i></a>
+        <a href="Admin-AllianceReport-D.dc.html">التقرير الشهري</a>
+        <a href="Admin-AllianceSettings-D.dc.html">الميثاق والإعدادات</a>
+      </nav>
+
+      <!-- One-time import state -->
+      <div style="display: flex; align-items: center; gap: 14px; padding: 12px 16px; border: 2px solid #B48F2E; background: #FFFDF6; font-size: 13px; line-height: 1.6; flex-wrap: wrap">
+        <span style="flex: none; width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>
+        <span style="flex: 1"><strong>استيراد 37 مكتباً من نموذج قوقل، بانتظار التحقق.</strong> أُدرجت كطلبات بحالة «مستورد»، بلا تاريخ تحقق ولا موافقة على الميثاق. تحتاج كل منها تحقق رخصة ورسالة موافقة على الميثاق قبل أن تصبح عضواً.</span>
+        <button type="button" class="btn">اعرض الـ37</button>
+        <button type="button" class="btn ink">أرسل رسالة الميثاق للجميع</button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 16px; align-items: start">
+        <!-- List -->
+        <section class="panel">
+          <header>الطلبات <div style="display: flex; gap: 6px"><span class="pill" style="background: #141311; color: #FFFFFF">جديدة 4</span><span class="pill" style="border: 1.5px solid #141311">نواقص 2</span><span class="pill" style="border: 1.5px solid #D4CFC4; color: #5E5A52">مستوردة 37</span></div></header>
+          <a href="#a1" class="app" style="background: #F3F1EB; box-shadow: inset 4px 0 0 #B48F2E"><span class="hx" style="background: #141311; color: #FFFFFF">أبحر الشمالية</span><span class="t"><strong>مكتب أ للعقارات</strong><small>ALL-2026-0038 · أمس 11:20 · مالك المكتب · 3 أحياء · 10 عروض</small></span><span class="pill" style="border: 1.5px solid #B48F2E; color: #8A6C1E">تحقق الرخصة</span></a>
+          <a href="#a2" class="app"><span class="hx" style="background: #141311; color: #FFFFFF">الصفا</span><span class="t"><strong>مكتب ن للعقارات</strong><small>ALL-2026-0037 · قبل يومين · مدير · 2 أحياء · 4 عروض</small></span><span class="pill" style="border: 1.5px solid #B48F2E; color: #8A6C1E">تحقق الرخصة</span></a>
+          <a href="#a3" class="app"><span class="hx" style="background: #141311; color: #FFFFFF">السامر</span><span class="t"><strong>مكتب ع للعقارات</strong><small>ALL-2026-0036 · قبل 3 أيام · موظف · 4 أحياء · 0 عروض</small></span><span class="pill" style="border: 1.5px solid #141311">نواقص</span></a>
+          <a href="#a4" class="app"><span class="hx" style="background: #141311; color: #FFFFFF">الحمراء</span><span class="t"><strong>مكتب ق للعقارات</strong><small>ALL-2026-0035 · قبل 4 أيام · مالك · 1 حي · 12 عرضاً</small></span><span class="pill" style="border: 1.5px solid #B48F2E; color: #8A6C1E">تحقق الرخصة</span></a>
+          <a href="#a5" class="app" style="color: #5E5A52"><span class="hx" style="background: #FFFFFF; box-shadow: inset 0 0 0 1.5px #D4CFC4">النعيم</span><span class="t"><strong style="color: #141311">مكتب س للعقارات</strong><small>ALL-2026-0031 · مرفوض 2026/10/09 · رقم الرخصة لا يطابق</small></span><span class="pill" style="border: 1.5px solid #5E5A52">مرفوض</span></a>
+          <a href="#a6" class="app" style="color: #5E5A52; border-bottom: 0"><span class="hx" style="background: #FFFFFF; box-shadow: inset 0 0 0 1.5px #D4CFC4">الشاطئ</span><span class="t"><strong style="color: #141311">مكتب 1 (قوقل)</strong><small>مستورد · لا تاريخ تحقق · لا موافقة ميثاق</small></span><span class="pill" style="border: 1.5px solid #D4CFC4">مستورد</span></a>
+        </section>
+
+        <!-- Review page -->
+        <section class="panel" id="a1">
+          <header><span>مراجعة ALL-2026-0038 · مكتب أ للعقارات</span><span class="pill" style="border: 1.5px solid #B48F2E; color: #8A6C1E">قيد المراجعة</span></header>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 16px">
+            <div style="display: flex; flex-direction: column">
+              <span style="font-size: 12px; font-weight: 800; padding-bottom: 6px">المكتب ومقدم الطلب</span>
+              <div class="row"><span>اسم المكتب</span><span>مكتب أ للعقارات</span></div>
+              <div class="row"><span>رقم رخصة فال</span><span style="direction: ltr">1200XXXXXX</span></div>
+              <div class="row"><span>مقدم الطلب</span><span>عبدالعزيز · مالك المكتب العقاري</span></div>
+              <div class="row"><span>رقم التواصل</span><span style="direction: ltr">+966 5X XXX 7710</span></div>
+              <div class="row"><span>حي المكتب</span><span>أبحر الشمالية</span></div>
+              <div class="row" style="border-bottom: 0"><span>طريقة الدوام</span><span>دوام واحد</span></div>
+              <div style="position: relative; height: 120px; background: #E9E5DB; border: 1.5px solid #141311; display: flex; align-items: center; justify-content: center; margin-top: 10px"><span style="position: absolute; inset: 0; background-image: linear-gradient(#D4CFC4 1px, transparent 1px), linear-gradient(90deg, #D4CFC4 1px, transparent 1px); background-size: 24px 24px"></span><span style="position: relative; width: 22px; height: 26px; background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span><a href="#maps" style="position: absolute; bottom: 6px; right: 8px; font-size: 10px; font-weight: 700; background: #FFFFFF; padding: 2px 6px; text-decoration: none">افتح في خرائط قوقل</a></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px">
+              <span style="font-size: 12px; font-weight: 800">التغطية والتخصص</span>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px"><span class="tag" style="background: #141311; color: #FFFFFF">شمال جدة</span><span class="tag">أبحر الشمالية</span><span class="tag">الشاطئ</span><span class="tag">المحمدية</span></div>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px"><span class="tag">فلل</span><span class="tag">عماير سكنية</span><span class="tag">أراضي مطورة</span></div>
+              <span style="font-size: 12px; font-weight: 800; margin-top: 6px">ما عندهم وما يحتاجون</span>
+              <div class="row"><span>عروض من الملاك · بعقود موثقة</span><span>6 · 4 · الإجمالي 10</span></div>
+              <div class="row"><span>طلبات في أحياء أخرى</span><span>الروضة، الصفا</span></div>
+              <div class="row"><span>يريدون</span><span style="font-weight: 600; max-width: 220px">طلبات جادّة في أبحر والشاطئ، وشريك للطلبات خارج نطاقهم</span></div>
+              <div class="row" style="border-bottom: 0"><span>سيضيفون</span><span style="font-weight: 600; max-width: 220px">10 عروض شمال جدة، رد خلال ساعة</span></div>
+              <div style="display: flex; gap: 10px; font-size: 12px; margin-top: 4px"><span class="tag" style="background: #F3F1EB">موافقة الميثاق: نعم · 1.0</span><span class="tag">الظهور في الدليل: نعم</span></div>
+            </div>
+          </div>
+
+          <!-- Manual licence check -->
+          <div style="margin: 0 16px 16px 16px; padding: 14px 16px; border: 1.5px solid #141311; border-right: 6px solid #B48F2E; background: #F8F7F4; display: flex; flex-direction: column; gap: 10px">
+            <label style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 800"><input type="checkbox" checked style="width: 20px; height: 20px; accent-color: #141311">تم التحقق من الرخصة في موقع الهيئة</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px">
+              <label style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-weight: 600; color: #5E5A52">تاريخ التحقق<input type="text" value="2026/10/12" style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF; direction: ltr; text-align: right"></label>
+              <label style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-weight: 600; color: #5E5A52">انتهاء الرخصة<input type="text" value="2027/06/30" style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF; direction: ltr; text-align: right"></label>
+              <label style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-weight: 600; color: #5E5A52">اسم المكتب في الهيئة<input type="text" value="مكتب أ للعقارات" style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF"></label>
+            </div>
+            <span style="font-size: 11px; color: #5E5A52; line-height: 1.6">تحقق يدوي: افتح موقع الهيئة، ابحث بالرقم، وطابق الاسم. يُسجَّل اسم من تحقق وتاريخه، ويُذكَّر المدير قبل انتهاء الرخصة بـ 30 يوماً.</span>
+          </div>
+
+          <!-- Decision -->
+          <div style="display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border-top: 1.5px solid #141311">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap">
+              <button type="button" class="btn gold" style="height: 44px">اعتمد كعضو موثّق</button>
+              <button type="button" class="btn" style="height: 44px">اطلب معلومات إضافية</button>
+              <button type="button" class="btn" style="height: 44px">ارفض مع السبب</button>
+              <span style="margin-right: auto; align-self: center; font-size: 11px; color: #5E5A52">الاعتماد يرسل واتساب برابط صفحة العضو ويضيفه للرادار فوراً</span>
+            </div>
+            <label style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-weight: 600; color: #5E5A52">سبب الرفض أو النواقص (يُرسل للمكتب كما هو)<select style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF"><option>اختر سبباً من القائمة…</option><option>رقم رخصة فال لا يطابق اسم المكتب</option><option>الرخصة منتهية</option><option>موقع المكتب خارج جدة</option><option>بيانات ناقصة: موقع المكتب</option><option>سبب آخر (اكتب)</option></select></label>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

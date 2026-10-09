@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإدارة · محرر صفحة الرئيسية</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+.f{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:700;color:#5E5A52}
+.f input,.f textarea,.f select{font:inherit;font-size:14px;font-weight:600;color:#141311;border:1.5px solid #141311;background:#FFFFFF;padding:0 12px;height:44px;box-sizing:border-box;width:100%}
+.f textarea{height:auto;min-height:84px;padding:10px 12px;resize:vertical;line-height:1.6}
+.f .c{border:1px solid #B48F2E;background:#FFFDF6}
+.sec{background:#FFFFFF;border:1.5px solid #141311;display:flex;flex-direction:column}
+.sec>header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1.5px solid #141311;background:#F3F1EB}
+.sec>div{display:grid;gap:14px;padding:16px}
+.h{font-size:14px;font-weight:800;display:flex;align-items:center;gap:10px}
+.sw{position:relative;width:40px;height:22px;background:#141311;display:inline-block}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;background:#B48F2E;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.sw.off{background:#FFFFFF;box-shadow:inset 0 0 0 1.5px #141311}
+.sw.off::after{left:auto;right:3px;background:#141311}
+</style>
+</helmet>
+<div dir="rtl" style="box-sizing: border-box; min-height: 100vh; background: #F8F7F4; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; font-feature-settings: 'tnum' 1; display: flex; flex-direction: column; min-width: 0">
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 24px; height: 60px; background: #141311; color: #FFFFFF">
+    <div style="display: flex; align-items: center; gap: 16px"><img src="/_blob/74198517e5ad06a71e300a3da635ec66" alt="إس إم كيو العقارية" style="height: 28px; width: auto; display: block"><span style="font-size: 12px; font-weight: 700; padding: 4px 8px; background: #B48F2E; color: #141311">لوحة الإدارة</span></div>
+    <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700"><span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; font-size: 12px; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)">ن</span>نورة · محررة</span>
+  </header>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; flex: 1">
+    <nav aria-label="أقسام الإدارة" style="flex: 0 1 240px; min-width: 0; background: #FFFFFF; border-left: 1.5px solid #141311; display: flex; flex-direction: column; padding: 16px 0; align-self: stretch">
+      <a href="Admin-Overview-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">نظرة عامة</a>
+      <a href="Admin-Approvals-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>طلبات الموافقة</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">3</span></a>
+      <a href="Admin-Inventory-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الوحدات</a>
+      <a href="Admin-Projects-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المشاريع</a>
+      <a href="Admin-Leads-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الطلبات الواردة</a>
+      <a href="Admin-Analytics-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">تحليلات البحث</a>
+      <a href="Admin-Visitors-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الزوار</a>
+      <span style="padding: 14px 20px 4px 20px; font-size: 11px; font-weight: 800; color: #5E5A52; border-top: 1px solid #D4CFC4; margin-top: 6px">تعاون معنا</span>
+      <a href="Admin-Marketers-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>المسوّقون</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #141311; font-size: 11px; font-weight: 800; padding: 0 6px">2</span></a>
+      <a href="Admin-Alliance-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>غرفة التحالف</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">5</span></a>
+      <a href="Admin-Content-D.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 800; color: #141311; text-decoration: none; background: #F3F1EB; border-right: 4px solid #B48F2E">المحتوى والأسئلة</a>
+      <a href="Admin-Users-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none; margin-top: auto; border-top: 1px solid #D4CFC4">الإعدادات والمستخدمون</a>
+    </nav>
+    <main style="flex: 999 1 640px; min-width: 0; padding: 28px 32px 0 32px; display: flex; flex-direction: column; gap: 20px">
+      <nav aria-label="المسار" style="font-size: 12px; font-weight: 700; color: #5E5A52"><a href="Admin-Content-D.dc.html" style="text-decoration: none">المحتوى والأسئلة</a> › الصفحات › الرئيسية</nav>
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; font-weight: 800">الرئيسية <span style="font-size: 14px; font-weight: 600; color: #5E5A52">/</span></h1><span style="font-size: 13px; color: #5E5A52">حقول مرتّبة حسب أقسام الصفحة. الأرقام (الأسعار، عدد الوحدات) تُحسب من الوحدات ولا تُكتب هنا</span></div>
+        <div role="tablist" aria-label="اللغة" style="display: flex; border: 1.5px solid #141311; background: #FFFFFF">
+          <button type="button" role="tab" aria-selected="true" style="height: 40px; padding: 0 18px; border: 0; font: inherit; font-size: 13px; font-weight: 800; background: #141311; color: #FFFFFF; cursor: pointer">العربية</button>
+          <button type="button" role="tab" aria-selected="false" style="height: 40px; padding: 0 18px; border: 0; border-right: 1.5px solid #141311; font: inherit; font-size: 13px; font-weight: 700; background: #FFFFFF; color: #141311; cursor: pointer; display: flex; align-items: center; gap: 8px">English <span style="font-size: 10px; font-weight: 800; padding: 1px 6px; border: 1.5px solid #B48F2E; color: #8A6C1E">4 حقول فارغة</span></button>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap">
+        <!-- Fields -->
+        <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+          <section class="sec">
+            <header><span class="h"><span style="width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>1 · الهيرو</span><span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700">ظاهر<span class="sw" role="switch" aria-checked="true" aria-label="إظهار القسم"></span></span></header>
+            <div>
+              <label class="f">السطر العلوي<input value="إس إم كيو العقارية · جدة"></label>
+              <label class="f">العنوان<textarea style="min-height: 64px; border-color: #B48F2E; border-width: 2px">بيتك في جدة، بالأرقام أولاً</textarea><span style="font-weight: 600; color: #8A6C1E">غير محفوظ · كان: «شقتك في جدة تبدأ من رقم»</span></label>
+              <label class="f">الفقرة<textarea>وحدات حقيقية بأسعار معلنة، من غير «اتصل للسعر». ابدأ من ميزانيتك وسنعرض لك ما يناسبها فقط.</textarea></label>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px">
+                <label class="f">زر أساسي (نص)<input value="ابدأ من ميزانيتك"></label>
+                <label class="f">زر أساسي (الوجهة)<select><option>الباحث في نفس الصفحة</option><option>النتائج</option><option>واتساب</option></select></label>
+              </div>
+              <label class="f">صورة الهيرو<span style="display: flex; align-items: center; gap: 12px; border: 1.5px dashed #141311; padding: 10px 12px; background: #F8F7F4"><span style="width: 72px; height: 40px; background: #E9E5DB; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)"></span><span style="flex: 1; font-size: 12px; color: #3A3630">IMG-HERO-BRAND · تعبيرية · 2400×1350 · يُسمح بالشعار في هذه الخانة فقط</span><a href="Admin-Media-D.dc.html" style="font-size: 12px; font-weight: 800; text-decoration: none">استبدال</a></span></label>
+            </div>
+          </section>
+
+          <section class="sec">
+            <header><span class="h">2 · الباحث بالميزانية</span><span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700">ظاهر<span class="sw" role="switch" aria-checked="true" aria-label="إظهار القسم"></span></span></header>
+            <div>
+              <label class="f">عنوان القسم<input value="كم ميزانيتك؟"></label>
+              <label class="f">نص المساعدة تحت المنزلق<input value="السعر الكامل للوحدة. ضريبة التصرفات وتكاليف التسجيل تُحسب على حدة."></label>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px">
+                <label class="f">الحد الأدنى للمنزلق<input value="300,000" style="direction: ltr; text-align: right"></label>
+                <label class="f">الحد الأعلى<input value="2,000,000" style="direction: ltr; text-align: right"></label>
+              </div>
+              <p style="margin: 0; font-size: 12px; color: #5E5A52">القيم الافتراضية للميزانية تُدار من <a href="Admin-Lists-D.dc.html" style="font-weight: 700; text-decoration: none">القوائم › الميزانيات</a>.</p>
+            </div>
+          </section>
+
+          <section class="sec">
+            <header><span class="h">3 · دليل الأسعار (معاينة)</span><span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700">ظاهر<span class="sw" role="switch" aria-checked="true" aria-label="إظهار القسم"></span></span></header>
+            <div>
+              <label class="f">العنوان<input value="الأسعار الحقيقية، قبل أن تتصل"></label>
+              <label class="f">الفقرة<textarea>الأرقام تُحسب من الوحدات المتاحة الآن، وتتغير كلما بيعت وحدة.</textarea></label>
+            </div>
+          </section>
+
+          <section class="sec">
+            <header><span class="h">4 · لماذا إس إم كيو</span><span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700">ظاهر<span class="sw" role="switch" aria-checked="true" aria-label="إظهار القسم"></span></span></header>
+            <div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px">
+                <label class="f">نقطة 1<input value="سعر معلن لكل وحدة"></label>
+                <label class="f">نقطة 2<input value="رد خلال ساعات العمل"></label>
+                <label class="f">نقطة 3<input class="c" value="+2000 متدرب [للتأكيد]"></label>
+              </div>
+              <p style="margin: 0; font-size: 12px; color: #8A6C1E; font-weight: 700">النقطة 3 موسومة [للتأكيد]: تبقى بالوسم على الموقع حتى يؤكدها مدير.</p>
+            </div>
+          </section>
+
+          <section class="sec">
+            <header><span class="h">5 · الأسئلة الشائعة (مختارات)</span><span style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700">مخفي<span class="sw off" role="switch" aria-checked="false" aria-label="إظهار القسم"></span></span></header>
+            <div>
+              <p style="margin: 0; font-size: 13px; color: #5E5A52">تظهر أول 4 أسئلة منشورة من <a href="Admin-FAQ-D.dc.html" style="font-weight: 700; text-decoration: none">الأسئلة الشائعة</a>. القسم مخفي الآن لأن 3 أسئلة فيها [مسودة إجابة].</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Live preview -->
+        <aside aria-label="معاينة حية" style="flex: 0 1 420px; min-width: 0; position: sticky; top: 16px; display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <span style="font-size: 12px; font-weight: 800">معاينة حية · المسودة</span>
+            <div role="group" style="display: flex; border: 1.5px solid #141311; background: #FFFFFF; font-size: 11px; font-weight: 800"><button type="button" aria-pressed="true" style="height: 30px; padding: 0 10px; border: 0; font: inherit; background: #141311; color: #FFFFFF; cursor: pointer">390</button><button type="button" aria-pressed="false" style="height: 30px; padding: 0 10px; border: 0; border-right: 1.5px solid #141311; font: inherit; background: #FFFFFF; color: #141311; cursor: pointer">1440</button></div>
+          </div>
+          <div style="border: 1.5px solid #141311; background: #FFFFFF; overflow: hidden">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: #141311; color: #FFFFFF"><img src="/_blob/74198517e5ad06a71e300a3da635ec66" alt="" style="height: 22px; width: auto"><span style="width: 22px; height: 22px; border: 1.5px solid #FFFFFF"></span></div>
+            <div style="position: relative; height: 190px; background: #E9E5DB; clip-path: polygon(0 0, 100% 0, 100% 100%, 50px 100%, 0 calc(100% - 86px))"><span style="position: absolute; top: 8px; left: 8px; font-size: 9px; font-weight: 700; background: #FFFFFF; padding: 2px 6px">صورة تعبيرية</span></div>
+            <div style="padding: 16px 16px 20px 16px; display: flex; flex-direction: column; gap: 8px">
+              <span style="font-size: 10px; font-weight: 700; color: #8A6C1E">إس إم كيو العقارية · جدة</span>
+              <span style="font-size: 22px; font-weight: 800; line-height: 1.3; outline: 2px solid #B48F2E; outline-offset: 4px">بيتك في جدة، بالأرقام أولاً</span>
+              <span style="font-size: 12px; line-height: 1.6; color: #3A3630">وحدات حقيقية بأسعار معلنة، من غير «اتصل للسعر». ابدأ من ميزانيتك وسنعرض لك ما يناسبها فقط.</span>
+              <span style="margin-top: 6px; height: 42px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; font-size: 13px; font-weight: 800; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)">ابدأ من ميزانيتك</span>
+            </div>
+            <div style="padding: 16px; background: #F3F1EB; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 16px; font-weight: 800">كم ميزانيتك؟</span><span style="height: 4px; background: #141311; position: relative"><span style="position: absolute; top: -8px; right: 35%; width: 20px; height: 20px; background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span></span><span style="font-size: 10px; color: #5E5A52">السعر الكامل للوحدة. ضريبة التصرفات وتكاليف التسجيل تُحسب على حدة.</span></div>
+          </div>
+          <span style="font-size: 11px; color: #5E5A52">الإطار الذهبي يحدّد الحقل الذي تحرّره الآن. المعاينة تعرض المسودة لا النسخة المنشورة.</span>
+        </aside>
+      </div>
+
+      <!-- Save bar: unsaved state -->
+      <div role="region" aria-label="شريط الحفظ" style="position: sticky; bottom: 0; margin: 12px -32px 0 -32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 32px; background: #141311; color: #FFFFFF; border-top: 3px solid #B48F2E; flex-wrap: wrap">
+        <span style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700"><span style="width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>تغييرات غير محفوظة في حقل واحد · آخر نشر قبل 6 أيام بواسطة سعود</span>
+        <div style="display: flex; gap: 10px">
+          <button type="button" style="height: 42px; padding: 0 16px; border: 1.5px solid #C9C2B3; background: transparent; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer">تجاهل</button>
+          <a href="Home-D.dc.html" style="height: 42px; padding: 0 16px; display: flex; align-items: center; border: 1.5px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 700">معاينة في الموقع</a>
+          <button type="button" style="height: 42px; padding: 0 16px; border: 1.5px solid #FFFFFF; background: #FFFFFF; color: #141311; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer">حفظ كمسودة</button>
+          <button type="button" style="height: 42px; padding: 0 18px; border: 0; background: #B48F2E; color: #141311; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)">نشر</button>
+        </div>
+      </div>
+
+      <!-- Save bar: just published state (second state, shown below for the build) -->
+      <div style="margin: 24px -32px 0 -32px; padding: 16px 32px 32px 32px; background: #F3F1EB; display: flex; flex-direction: column; gap: 10px">
+        <span style="font-size: 12px; font-weight: 800; color: #5E5A52">الحالة الثانية للشريط · بعد النشر مباشرة (تبقى 6 ثوانٍ ثم تعود لـ «لا تغييرات غير محفوظة»)</span>
+        <div role="status" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 32px; background: #141311; color: #FFFFFF; border-top: 3px solid #B48F2E; flex-wrap: wrap">
+          <span style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700"><span style="width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg></span>نُشرت الرئيسية الآن · نورة · 14:31 · <a href="Home-D.dc.html" style="color: #B48F2E; font-weight: 800">افتح الصفحة</a></span>
+          <div style="display: flex; gap: 10px">
+            <button type="button" style="height: 42px; padding: 0 16px; border: 1.5px solid #C9C2B3; background: transparent; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer">تراجع عن النشر</button>
+            <button type="button" disabled style="height: 42px; padding: 0 18px; border: 0; background: #3A3630; color: #C9C2B3; font: inherit; font-size: 13px; font-weight: 800; cursor: default; clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)">منشور</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2200}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

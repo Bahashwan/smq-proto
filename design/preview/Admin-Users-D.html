@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإدارة · الإعدادات والمستخدمون</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+.panel{background:#FFFFFF;border:1.5px solid #141311;display:flex;flex-direction:column}
+.panel>header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;border-bottom:1.5px solid #141311;background:#F3F1EB}
+.panel h2{margin:0;font-size:15px;font-weight:800}
+.m{font-size:11px;color:#5E5A52;font-weight:600}
+.btn{height:34px;padding:0 12px;border:1.5px solid #141311;background:#FFFFFF;color:#141311;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+.av{width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:#141311;color:#FFFFFF;font-size:13px;font-weight:800;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);flex:none}
+.av.g{background:#B48F2E;color:#141311}
+.role{font-size:11px;font-weight:800;padding:2px 8px}
+.role.a{background:#141311;color:#FFFFFF}
+.role.e{border:1.5px solid #141311;color:#141311}
+.perm td,.perm th{padding:8px 12px;border-bottom:1px solid #D4CFC4;font-size:12px;text-align:right}
+.perm th{font-weight:800;background:#F8F7F4}
+.ok{display:inline-block;width:14px;height:14px;background:#B48F2E;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.no{display:inline-block;width:14px;height:14px;box-shadow:inset 0 0 0 1.5px #D4CFC4}
+.log{display:grid;grid-template-columns:120px 90px 1fr;gap:12px;padding:9px 16px;border-bottom:1px solid #D4CFC4;font-size:12px}
+</style>
+<div dir="rtl" style="box-sizing: border-box; min-height: 100vh; background: #F8F7F4; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; font-feature-settings: 'tnum' 1; display: flex; flex-direction: column; min-width: 0">
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 24px; height: 60px; background: #141311; color: #FFFFFF">
+    <div style="display: flex; align-items: center; gap: 16px"><img src="assets/lockup-goldmark-white.png" alt="إس إم كيو العقارية" style="height: 28px; width: auto; display: block"><span style="font-size: 12px; font-weight: 700; padding: 4px 8px; background: #B48F2E; color: #141311">لوحة الإدارة</span></div>
+    <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700"><span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; font-size: 12px; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)">س</span>سعود · مدير</span>
+  </header>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; flex: 1">
+    <nav aria-label="أقسام الإدارة" style="flex: 0 1 240px; min-width: 0; background: #FFFFFF; border-left: 1.5px solid #141311; display: flex; flex-direction: column; padding: 16px 0; align-self: stretch">
+      <a href="Admin-Overview-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">نظرة عامة</a>
+      <a href="Admin-Approvals-D.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>طلبات الموافقة</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">3</span></a>
+      <a href="Admin-Inventory-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الوحدات</a>
+      <a href="Admin-Projects-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المشاريع</a>
+      <a href="Admin-Leads-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الطلبات الواردة</a>
+      <a href="Admin-Analytics-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">تحليلات البحث</a>
+      <a href="Admin-Visitors-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الزوار</a>
+      <span style="padding: 14px 20px 4px 20px; font-size: 11px; font-weight: 800; color: #5E5A52; border-top: 1px solid #D4CFC4; margin-top: 6px">تعاون معنا</span>
+      <a href="Admin-Marketers-D.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>المسوّقون</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #141311; font-size: 11px; font-weight: 800; padding: 0 6px">2</span></a>
+      <a href="Admin-Alliance-D.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>غرفة التحالف</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">5</span></a>
+      <a href="Admin-Content-D.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المحتوى والأسئلة</a>
+      <a href="Admin-Users-D.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 800; color: #141311; text-decoration: none; margin-top: auto; border-top: 1px solid #D4CFC4; background: #F3F1EB; border-right: 4px solid #B48F2E">الإعدادات والمستخدمون</a>
+    </nav>
+    <main style="flex: 999 1 640px; min-width: 0; padding: 28px 32px 48px 32px; display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; font-weight: 800">الإعدادات والمستخدمون</h1><span style="font-size: 13px; color: #5E5A52">من يدخل اللوحة وماذا يستطيع، وحالة ربط واتساب بزنس. لا حسابات للزوار في أي مكان على الموقع</span></div>
+        <button type="button" style="display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border: 0; background: #141311; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)">+ دعوة مستخدم</button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; align-items: start">
+        <!-- Users -->
+        <section class="panel">
+          <header><h2>المستخدمون <span class="m">3 نشطون · دعوة معلّقة</span></h2><span class="m">آخر دخول بتوقيت جدة</span></header>
+          <div style="display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid #D4CFC4"><span class="av g">س</span><div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 800">سعود معيض <span class="role a">مدير</span></span><span class="m" style="direction: ltr; text-align: right">saud@smqre.com · آخر دخول اليوم 09:12</span></div><span class="m">المالك · لا يُحذف</span></div>
+          <div style="display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid #D4CFC4"><span class="av">ن</span><div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 800">نورة الشريف <span class="role e">محررة</span></span><span class="m" style="direction: ltr; text-align: right">noura@smqre.com · آخر دخول أمس 17:40</span></div><button type="button" class="btn">تعديل الدور</button><button type="button" class="btn">إيقاف</button></div>
+          <div style="display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid #D4CFC4"><span class="av">ف</span><div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 800">فيصل الحربي <span class="role e">محرر</span></span><span class="m" style="direction: ltr; text-align: right">faisal@smqre.com · آخر دخول قبل 6 أيام</span></div><button type="button" class="btn">تعديل الدور</button><button type="button" class="btn">إيقاف</button></div>
+          <div style="display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: #FFFDF6"><span class="av" style="background: #FFFFFF; box-shadow: inset 0 0 0 2px #141311; color: #141311">؟</span><div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 800">دعوة معلّقة <span class="role e">محرر</span></span><span class="m" style="direction: ltr; text-align: right">m.baeshen@smqre.com · أُرسلت قبل 3 أيام · تنتهي بعد 4</span></div><button type="button" class="btn">إعادة الإرسال</button><button type="button" class="btn">إلغاء</button></div>
+
+          <!-- Invite form -->
+          <div style="display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border-top: 1.5px solid #141311; background: #F8F7F4">
+            <span style="font-size: 12px; font-weight: 800">دعوة مستخدم</span>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 150px auto; gap: 10px; align-items: end">
+              <label style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-weight: 700; color: #5E5A52">الاسم<input value="" placeholder="الاسم الكامل" style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; border: 1.5px solid #141311; background: #FFFFFF"></label>
+              <label style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-weight: 700; color: #5E5A52">البريد<input value="" placeholder="name@smqre.com" style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; border: 1.5px solid #141311; background: #FFFFFF; direction: ltr; text-align: right"></label>
+              <label style="display: flex; flex-direction: column; gap: 4px; font-size: 11px; font-weight: 700; color: #5E5A52">الدور<select style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF"><option>محرر</option><option>مدير</option></select></label>
+              <button type="button" style="height: 40px; padding: 0 14px; border: 0; background: #141311; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer">أرسل الدعوة</button>
+            </div>
+            <span class="m">تصل الدعوة بالبريد وتصلح 7 أيام. المستخدم يضع كلمة مروره بنفسه. لا تسجيل ذاتي من صفحة الدخول.</span>
+          </div>
+        </section>
+
+        <div style="display: flex; flex-direction: column; gap: 16px">
+          <!-- WhatsApp Business -->
+          <section class="panel">
+            <header><h2>واتساب بزنس</h2><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800"><span style="width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>متصل</span></header>
+            <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; font-size: 13px">
+              <div style="display: flex; justify-content: space-between; gap: 10px"><span class="m">الرقم</span><span style="font-weight: 700; direction: ltr">+966 55 999 7929</span></div>
+              <div style="display: flex; justify-content: space-between; gap: 10px"><span class="m">آخر رسالة تلقائية</span><span style="font-weight: 700">اليوم 10:04 · تأكيد طلب 2026-1042</span></div>
+              <div style="display: flex; justify-content: space-between; gap: 10px"><span class="m">القوالب المعتمدة</span><span style="font-weight: 700">3 من 3</span></div>
+              <p style="margin: 0; padding: 10px 12px; background: #F3F1EB; font-size: 12px; line-height: 1.6"><strong>الوضع اليدوي</strong> يعمل تلقائياً إذا انقطع الاتصال: تظهر أزرار «أرسل على واتساب» بدل الإرسال التلقائي في الموافقات والطلبات الواردة، ويُسجَّل كل إرسال يدوي في السجل.</p>
+              <div style="display: flex; gap: 8px"><button type="button" class="btn">إعادة الربط</button><button type="button" class="btn">تحويل إلى الوضع اليدوي</button></div>
+            </div>
+          </section>
+
+          <!-- State: manual mode (second state) -->
+          <section class="panel" style="border-style: dashed">
+            <header style="background: #FFFDF6; border-bottom-color: #B48F2E"><h2>واتساب بزنس <span class="m">الحالة الثانية</span></h2><span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; color: #8A6C1E"><span style="width: 10px; height: 10px; background: #FFFFFF; box-shadow: inset 0 0 0 2px #141311; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)"></span>غير متصل · وضع يدوي</span></header>
+            <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; font-size: 13px">
+              <span>انقطع الاتصال قبل 40 دقيقة. 2 رسالتان بانتظار الإرسال اليدوي في <a href="Admin-Approvals-D.html" style="font-weight: 800; text-decoration: none">الموافقات</a>.</span>
+              <button type="button" style="height: 40px; border: 0; background: #B48F2E; color: #141311; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)">إعادة الربط الآن</button>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Roles matrix -->
+      <section class="panel">
+        <header><h2>الأدوار والصلاحيات</h2><span class="m">دوران فقط. الصلاحيات ثابتة في النسخة الأولى، تُعرض للتوضيح لا للتعديل</span></header>
+        <table class="perm" style="border-collapse: collapse; width: 100%">
+          <thead><tr><th style="width: 40%">الإجراء</th><th>مدير</th><th>محرر</th><th style="text-align: right">ملاحظة</th></tr></thead>
+          <tbody>
+            <tr><td>تحرير الوحدات والمشاريع والمحتوى، حفظ كمسودة</td><td><span class="ok"></span></td><td><span class="ok"></span></td><td class="m">كل التحرير متاح للمحرر</td></tr>
+            <tr><td>نشر صفحة أو وحدة</td><td><span class="ok"></span></td><td><span class="ok"></span></td><td class="m">يُسجَّل باسم الناشر في السجل</td></tr>
+            <tr><td>إزالة وسم [للتأكيد] أو [مسودة إجابة]</td><td><span class="ok"></span></td><td><span class="no"></span></td><td class="m">المحرر يطلب التأكيد، والمدير يؤكد</td></tr>
+            <tr><td>الموافقة على عقار مالك أو رفضه</td><td><span class="ok"></span></td><td><span class="no"></span></td><td class="m">يمكن للمحرر الكتابة للمالك وطلب نواقص</td></tr>
+            <tr><td>تغيير حالة وحدة إلى «مباع»</td><td><span class="ok"></span></td><td><span class="no"></span></td><td class="m">«محجوز» متاح للمحرر مع تاريخ</td></tr>
+            <tr><td>استيراد Excel</td><td><span class="ok"></span></td><td><span class="ok"></span></td><td class="m">المعاينة إجبارية قبل التطبيق</td></tr>
+            <tr><td>حذف وحدة أو مشروع أو سؤال</td><td><span class="ok"></span></td><td><span class="no"></span></td><td class="m">حوار تأكيد يطلب كتابة الرمز</td></tr>
+            <tr><td>رؤية بيانات الزوار والطلبات الواردة</td><td><span class="ok"></span></td><td><span class="ok"></span></td><td class="m">أرقام الجوال تظهر للدورين</td></tr>
+            <tr><td>إعدادات الموقع، المستخدمون، واتساب بزنس</td><td><span class="ok"></span></td><td><span class="no"></span></td><td class="m">هذه الصفحة للمدير فقط</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Audit log -->
+      <section class="panel">
+        <header><h2>سجل الإجراءات</h2><div style="display: flex; gap: 8px; align-items: center"><select style="height: 32px; padding: 0 10px; font: inherit; font-size: 12px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF"><option>كل المستخدمين</option><option>سعود</option><option>نورة</option><option>فيصل</option></select><select style="height: 32px; padding: 0 10px; font: inherit; font-size: 12px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF"><option>آخر 30 يوماً</option><option>آخر 90 يوماً</option></select><button type="button" class="btn">تصدير CSV</button></div></header>
+        <div class="log" style="font-weight: 800; color: #5E5A52; font-size: 11px; background: #F8F7F4"><span>الوقت</span><span>المستخدم</span><span>الإجراء</span></div>
+        <div class="log"><span>اليوم 10:04</span><span>النظام</span><span>أُرسلت تلقائياً: تأكيد استلام الطلب 2026-1042 (واتساب بزنس متصل)</span></div>
+        <div class="log"><span>اليوم 09:12</span><span>سعود</span><span>دخول من جدة · Chrome · iPhone</span></div>
+        <div class="log"><span>أمس 17:40</span><span>نورة</span><span>حفظت مسودة: الرئيسية › الهيرو › العنوان</span></div>
+        <div class="log"><span>أمس 16:55</span><span>نورة</span><span>علّمت الطلب SMQ-2C91E «تم الرد»</span></div>
+        <div class="log"><span>أمس 11:30</span><span>سعود</span><span>غيّر حالة YS-A إلى «مباع» · تاريخ البيع 2026-09-28</span></div>
+        <div class="log"><span>قبل 3 أيام</span><span>سعود</span><span>أرسل الدعوة إلى m.baeshen@smqre.com بدور «محرر»</span></div>
+        <div class="log"><span>قبل 4 أيام</span><span>فيصل</span><span>استورد ملف Excel: 10 صفوف، تغيّر سعر RZ-C من 510,000 إلى 499,000 ثم تراجع</span></div>
+        <div class="log" style="border-bottom: 0"><span>قبل 6 أيام</span><span>سعود</span><span>أرسل على واتساب يدوياً: رفض الطلب 2026-1037 (الاتصال كان منقطعاً)</span></div>
+      </section>
+    </main>
+  </div>
+</div>
+</body>
+</html>

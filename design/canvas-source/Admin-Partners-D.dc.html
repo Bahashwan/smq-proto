@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإدارة · الشركاء والتمويل</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+.row{display:grid;grid-template-columns:36px 120px 1fr 140px 1fr 90px 90px;gap:14px;align-items:center;padding:12px 16px;border-bottom:1px solid #D4CFC4;background:#FFFFFF;font-size:13px}
+.drag{width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:#5E5A52;cursor:grab}
+.logo{height:48px;border:1px solid #D4CFC4;background:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#5E5A52;padding:0 8px;text-align:center}
+.sw{position:relative;width:40px;height:22px;background:#141311;display:inline-block;flex:none}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;background:#B48F2E;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.sw.off{background:#FFFFFF;box-shadow:inset 0 0 0 1.5px #141311}
+.sw.off::after{left:auto;right:3px;background:#141311}
+.sel{height:36px;padding:0 10px;font:inherit;font-size:12px;font-weight:700;color:#141311;border:1.5px solid #141311;background:#FFFFFF;width:100%}
+.btn{height:34px;padding:0 12px;border:1.5px solid #141311;background:#FFFFFF;color:#141311;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+</style>
+</helmet>
+<div dir="rtl" style="box-sizing: border-box; min-height: 100vh; background: #F8F7F4; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; font-feature-settings: 'tnum' 1; display: flex; flex-direction: column; min-width: 0">
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 24px; height: 60px; background: #141311; color: #FFFFFF">
+    <div style="display: flex; align-items: center; gap: 16px"><img src="/_blob/74198517e5ad06a71e300a3da635ec66" alt="إس إم كيو العقارية" style="height: 28px; width: auto; display: block"><span style="font-size: 12px; font-weight: 700; padding: 4px 8px; background: #B48F2E; color: #141311">لوحة الإدارة</span></div>
+    <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700"><span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; font-size: 12px; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)">س</span>سعود · مدير</span>
+  </header>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; flex: 1">
+    <nav aria-label="أقسام الإدارة" style="flex: 0 1 240px; min-width: 0; background: #FFFFFF; border-left: 1.5px solid #141311; display: flex; flex-direction: column; padding: 16px 0; align-self: stretch">
+      <a href="Admin-Overview-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">نظرة عامة</a>
+      <a href="Admin-Approvals-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>طلبات الموافقة</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">3</span></a>
+      <a href="Admin-Inventory-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الوحدات</a>
+      <a href="Admin-Projects-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المشاريع</a>
+      <a href="Admin-Leads-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الطلبات الواردة</a>
+      <a href="Admin-Analytics-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">تحليلات البحث</a>
+      <a href="Admin-Visitors-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الزوار</a>
+      <span style="padding: 14px 20px 4px 20px; font-size: 11px; font-weight: 800; color: #5E5A52; border-top: 1px solid #D4CFC4; margin-top: 6px">تعاون معنا</span>
+      <a href="Admin-Marketers-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>المسوّقون</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #141311; font-size: 11px; font-weight: 800; padding: 0 6px">2</span></a>
+      <a href="Admin-Alliance-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>غرفة التحالف</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">5</span></a>
+      <a href="Admin-Content-D.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 800; color: #141311; text-decoration: none; background: #F3F1EB; border-right: 4px solid #B48F2E">المحتوى والأسئلة</a>
+      <a href="Admin-Users-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none; margin-top: auto; border-top: 1px solid #D4CFC4">الإعدادات والمستخدمون</a>
+    </nav>
+    <main style="flex: 999 1 640px; min-width: 0; padding: 28px 32px 48px 32px; display: flex; flex-direction: column; gap: 20px">
+      <nav aria-label="المسار" style="font-size: 12px; font-weight: 700; color: #5E5A52"><a href="Admin-Content-D.dc.html" style="text-decoration: none">المحتوى والأسئلة</a> › الشركاء والتمويل</nav>
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; font-weight: 800">الشركاء والتمويل</h1><span style="font-size: 13px; color: #5E5A52">الشعارات تُرفع من ملفات الشركاء الرسمية فقط، لا تُولَّد. كتلة «شركاؤنا وجهات التمويل» في صفحة من نحن تظهر فقط إذا كان شعار واحد على الأقل مرئياً</span></div>
+        <button type="button" style="display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border: 0; background: #141311; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)">+ شريك</button>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 2px solid #B48F2E; background: #FFFDF6; font-size: 13px; line-height: 1.6"><span style="flex: none; width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span><span><strong>الكتلة مخفية على الموقع الآن.</strong> 5 شركاء مُدخلون، كلهم بوضع «مخفي» حتى تصل الموافقات الكتابية على استخدام الشعارات [للتأكيد]. فعّل أي شعار وستظهر الكتلة فوراً.</span></div>
+
+      <div style="border: 1.5px solid #141311">
+        <div style="display: grid; grid-template-columns: 36px 120px 1fr 140px 1fr 90px 90px; gap: 14px; padding: 10px 16px; font-size: 11px; font-weight: 800; color: #5E5A52; background: #F3F1EB; border-bottom: 1.5px solid #141311"><span></span><span>الشعار</span><span>الاسم</span><span>النوع</span><span>الرابط</span><span>مرئي</span><span></span></div>
+
+        <div class="row"><span class="drag" aria-label="اسحب"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.6"/><circle cx="10" cy="3" r="1.6"/><circle cx="4" cy="9" r="1.6"/><circle cx="10" cy="9" r="1.6"/><circle cx="4" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/></svg></span><span class="logo">شعار PNG<br>الهيئة العامة للعقار</span><span style="font-weight: 800">الهيئة العامة للعقار <span style="display: block; font-size: 11px; font-weight: 600; color: #5E5A52">ترخيص فال رقم [للتأكيد]</span></span><select class="sel"><option selected>جهة تنظيمية</option><option>بنك</option><option>مطوّر</option><option>أخرى</option></select><input value="https://rega.gov.sa" style="height: 36px; padding: 0 10px; font: inherit; font-size: 12px; direction: ltr; border: 1.5px solid #141311; width: 100%; box-sizing: border-box"><span class="sw off" role="switch" aria-checked="false" aria-label="مرئي"></span><button type="button" class="btn">استبدال</button></div>
+
+        <div class="row"><span class="drag" aria-label="اسحب"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.6"/><circle cx="10" cy="3" r="1.6"/><circle cx="4" cy="9" r="1.6"/><circle cx="10" cy="9" r="1.6"/><circle cx="4" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/></svg></span><span class="logo">شعار PNG<br>بنك 1</span><span style="font-weight: 800">بنك شريك 1 <span style="display: block; font-size: 11px; font-weight: 600; color: #5E5A52">الاسم يُدخل بعد توقيع الاتفاقية [للتأكيد]</span></span><select class="sel"><option>جهة تنظيمية</option><option selected>بنك</option><option>مطوّر</option><option>أخرى</option></select><input value="" placeholder="https://" style="height: 36px; padding: 0 10px; font: inherit; font-size: 12px; direction: ltr; border: 1.5px solid #141311; width: 100%; box-sizing: border-box"><span class="sw off" role="switch" aria-checked="false" aria-label="مرئي"></span><button type="button" class="btn">استبدال</button></div>
+
+        <div class="row"><span class="drag" aria-label="اسحب"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.6"/><circle cx="10" cy="3" r="1.6"/><circle cx="4" cy="9" r="1.6"/><circle cx="10" cy="9" r="1.6"/><circle cx="4" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/></svg></span><span class="logo">شعار PNG<br>بنك 2</span><span style="font-weight: 800">بنك شريك 2 <span style="display: block; font-size: 11px; font-weight: 600; color: #5E5A52">[للتأكيد]</span></span><select class="sel"><option>جهة تنظيمية</option><option selected>بنك</option><option>مطوّر</option><option>أخرى</option></select><input value="" placeholder="https://" style="height: 36px; padding: 0 10px; font: inherit; font-size: 12px; direction: ltr; border: 1.5px solid #141311; width: 100%; box-sizing: border-box"><span class="sw off" role="switch" aria-checked="false" aria-label="مرئي"></span><button type="button" class="btn">استبدال</button></div>
+
+        <div class="row"><span class="drag" aria-label="اسحب"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.6"/><circle cx="10" cy="3" r="1.6"/><circle cx="4" cy="9" r="1.6"/><circle cx="10" cy="9" r="1.6"/><circle cx="4" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/></svg></span><span class="logo">شعار PNG<br>المطوّر</span><span style="font-weight: 800">مطوّر جاردن الروضة <span style="display: block; font-size: 11px; font-weight: 600; color: #5E5A52">[للتأكيد]</span></span><select class="sel"><option>جهة تنظيمية</option><option>بنك</option><option selected>مطوّر</option><option>أخرى</option></select><input value="" placeholder="https://" style="height: 36px; padding: 0 10px; font: inherit; font-size: 12px; direction: ltr; border: 1.5px solid #141311; width: 100%; box-sizing: border-box"><span class="sw off" role="switch" aria-checked="false" aria-label="مرئي"></span><button type="button" class="btn">استبدال</button></div>
+
+        <!-- Row with upload pending -->
+        <div class="row" style="border-bottom: 0"><span class="drag" aria-label="اسحب"><svg aria-hidden="true" width="14" height="18" viewBox="0 0 14 18" fill="currentColor"><circle cx="4" cy="3" r="1.6"/><circle cx="10" cy="3" r="1.6"/><circle cx="4" cy="9" r="1.6"/><circle cx="10" cy="9" r="1.6"/><circle cx="4" cy="15" r="1.6"/><circle cx="10" cy="15" r="1.6"/></svg></span><span class="logo" style="border: 1.5px dashed #141311; color: #141311">ارفع PNG أو SVG<br>بخلفية شفافة</span><span style="font-weight: 800">برنامج سكني <span style="display: block; font-size: 11px; font-weight: 600; color: #5E5A52">لا شعار بعد</span></span><select class="sel"><option>جهة تنظيمية</option><option>بنك</option><option>مطوّر</option><option selected>أخرى</option></select><input value="https://sakani.sa" style="height: 36px; padding: 0 10px; font: inherit; font-size: 12px; direction: ltr; border: 1.5px solid #141311; width: 100%; box-sizing: border-box"><span class="sw off" role="switch" aria-checked="false" aria-disabled="true" aria-label="مرئي، معطّل بلا شعار" style="opacity: .5"></span><button type="button" class="btn">حذف</button></div>
+      </div>
+      <span style="font-size: 12px; color: #5E5A52">قواعد: الشعار ملف حقيقي من الشريك، ارتفاعه 40px على الموقع، تدرّج رمادي بلا ألوان، لا يُظهر «مرئي» ما دام الشعار فارغاً. ترتيب الصفوف هو ترتيب الظهور.</span>
+
+      <!-- Preview of About block -->
+      <section style="display: flex; flex-direction: column; gap: 10px">
+        <div style="display: flex; align-items: center; justify-content: space-between"><h2 style="margin: 0; font-size: 16px; font-weight: 800">معاينة كتلة «من نحن»</h2><span style="font-size: 12px; color: #5E5A52">كما ستظهر لو فُعّلت 3 شعارات</span></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+          <div style="background: #FFFFFF; border: 1.5px solid #141311; padding: 22px 24px; display: flex; flex-direction: column; gap: 14px">
+            <span style="font-size: 11px; font-weight: 800; color: #8A6C1E">الحالة: 3 مرئية</span>
+            <span style="font-size: 18px; font-weight: 800">شركاؤنا وجهات التمويل</span>
+            <span style="font-size: 12px; line-height: 1.6; color: #3A3630">نعمل مع بنوك مرخّصة وجهات تنظيمية. الموافقة على التمويل بيد البنك، ونحن نجهّز الملف.</span>
+            <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap; padding-top: 4px"><span style="height: 40px; width: 110px; background: #E9E5DB; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #5E5A52">شعار 1</span><span style="height: 40px; width: 90px; background: #E9E5DB; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #5E5A52">شعار 2</span><span style="height: 40px; width: 120px; background: #E9E5DB; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #5E5A52">شعار 3</span></div>
+          </div>
+          <div style="background: #FFFFFF; border: 1.5px dashed #141311; padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; justify-content: center; align-items: center; text-align: center">
+            <span style="font-size: 11px; font-weight: 800; color: #8A6C1E">الحالة الحالية: 0 مرئية</span>
+            <span style="font-size: 14px; font-weight: 800">الكتلة لا تُرسم أصلاً</span>
+            <span style="font-size: 12px; line-height: 1.6; color: #5E5A52; max-width: 320px">لا عنوان، لا مكان فارغ. قسم «آراء العملاء» يرتفع ليأخذ مكانها، وتختفي هذه الملاحظة من لوحة الإدارة أيضاً حين يصبح شعار واحد مرئياً.</span>
+          </div>
+        </div>
+      </section>
+
+      <div role="region" aria-label="شريط الحفظ" style="position: sticky; bottom: 0; margin: 4px -32px -48px -32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 32px; background: #141311; color: #FFFFFF; border-top: 3px solid #B48F2E">
+        <span style="font-size: 13px; font-weight: 700; color: #C9C2B3">لا تغييرات غير محفوظة</span>
+        <div style="display: flex; gap: 10px"><a href="About-D.dc.html" style="height: 42px; padding: 0 16px; display: flex; align-items: center; border: 1.5px solid #FFFFFF; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 700">معاينة من نحن</a><button type="button" disabled style="height: 42px; padding: 0 18px; border: 0; background: #3A3630; color: #C9C2B3; font: inherit; font-size: 13px; font-weight: 800; cursor: default; clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)">حفظ</button></div>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1150}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

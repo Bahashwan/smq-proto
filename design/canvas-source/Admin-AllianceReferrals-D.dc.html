@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>الإدارة · غرفة التحالف · الإحالات والصفقات</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#8A6C1E}a:hover{color:#141311}
+.sub{display:flex;border-bottom:1.5px solid #141311;overflow-x:auto}
+.sub a{flex:none;padding:10px 14px;font-size:13px;font-weight:700;color:#5E5A52;text-decoration:none;display:flex;align-items:center;gap:6px}
+.sub a[aria-current]{color:#141311;font-weight:800;border-bottom:3px solid #B48F2E;margin-bottom:-1.5px}
+.sub a i{font-style:normal;min-width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;background:#F3F1EB;font-size:10px;font-weight:800;padding:0 5px}
+.sub a[aria-current] i{background:#B48F2E}
+table{border-collapse:collapse;width:100%;background:#FFFFFF;border:1.5px solid #141311}
+th,td{padding:10px 12px;text-align:right;font-size:12px;border-bottom:1px solid #D4CFC4;vertical-align:middle}
+th{background:#F3F1EB;font-weight:800;color:#5E5A52;font-size:11px;border-bottom:1.5px solid #141311;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.st{display:flex;gap:3px;align-items:center}
+.st i{width:14px;height:14px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);background:#FFFFFF;box-shadow:inset 0 0 0 1.5px #D4CFC4}
+.st i.d{background:#141311;box-shadow:none}
+.st i.n{background:#B48F2E;box-shadow:none}
+.st i.x{background:#FFFFFF;box-shadow:inset 0 0 0 2px #141311}
+.days{display:inline-flex;align-items:center;gap:6px;font-weight:700}
+.days b{display:inline-block;width:60px;height:8px;background:#E9E5DB;position:relative}
+.days b span{position:absolute;top:0;right:0;height:100%;background:#141311}
+.flag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:800;padding:2px 7px;border:1.5px solid #B48F2E;color:#8A6C1E;white-space:nowrap}
+.flag::before{content:"";width:8px;height:8px;background:#B48F2E;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.btn{height:32px;padding:0 10px;border:1.5px solid #141311;background:#FFFFFF;color:#141311;font:inherit;font-size:11px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;white-space:nowrap}
+.kpi{padding:14px 16px;background:#FFFFFF;border:1.5px solid #141311;display:flex;flex-direction:column;gap:2px}
+.kpi small{font-size:11px;color:#5E5A52}.kpi b{font-size:24px;font-weight:800}
+</style>
+</helmet>
+<div dir="rtl" style="box-sizing: border-box; min-height: 100vh; background: #F8F7F4; color: #141311; font-family: 'Noto Kufi Arabic', 'Segoe UI', system-ui, sans-serif; font-feature-settings: 'tnum' 1; display: flex; flex-direction: column; min-width: 0">
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 24px; height: 60px; background: #141311; color: #FFFFFF">
+    <div style="display: flex; align-items: center; gap: 16px"><img src="/_blob/74198517e5ad06a71e300a3da635ec66" alt="إس إم كيو العقارية" style="height: 28px; width: auto; display: block"><span style="font-size: 12px; font-weight: 700; padding: 4px 8px; background: #B48F2E; color: #141311">لوحة الإدارة</span></div>
+    <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700"><span style="width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #B48F2E; color: #141311; font-size: 12px; clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)">س</span>سعود · مدير</span>
+  </header>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; flex: 1">
+    <nav aria-label="أقسام الإدارة" style="flex: 0 1 240px; min-width: 0; background: #FFFFFF; border-left: 1.5px solid #141311; display: flex; flex-direction: column; padding: 16px 0; align-self: stretch">
+      <a href="Admin-Overview-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">نظرة عامة</a>
+      <a href="Admin-Approvals-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>طلبات الموافقة</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">3</span></a>
+      <a href="Admin-Inventory-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الوحدات</a>
+      <a href="Admin-Projects-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المشاريع</a>
+      <a href="Admin-Leads-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الطلبات الواردة</a>
+      <a href="Admin-Analytics-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">تحليلات البحث</a>
+      <a href="Admin-Visitors-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">الزوار</a>
+      <span style="padding: 14px 20px 4px 20px; font-size: 11px; font-weight: 800; color: #5E5A52; border-top: 1px solid #D4CFC4; margin-top: 6px">تعاون معنا</span>
+      <a href="Admin-Marketers-D.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none"><span>المسوّقون</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #141311; font-size: 11px; font-weight: 800; padding: 0 6px">2</span></a>
+      <a href="Admin-Alliance-D.dc.html" aria-current="page" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 800; color: #141311; text-decoration: none; background: #F3F1EB; border-right: 4px solid #B48F2E"><span>غرفة التحالف</span><span style="min-width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #B48F2E; font-size: 11px; font-weight: 800; padding: 0 6px">5</span></a>
+      <a href="Admin-Content-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none">المحتوى والأسئلة</a>
+      <a href="Admin-Users-D.dc.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; font-size: 14px; font-weight: 700; color: #141311; text-decoration: none; margin-top: auto; border-top: 1px solid #D4CFC4">الإعدادات والمستخدمون</a>
+    </nav>
+    <main style="flex: 999 1 640px; min-width: 0; padding: 24px 32px 48px 32px; display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; font-weight: 800">غرفة التحالف · الإحالات والصفقات</h1><span style="font-size: 13px; color: #5E5A52">كل سجل إحالة: المرحلة، القيمة، التقسيم، أيام الحماية المتبقية، وعلم النزاع. التقسيم والحماية افتراضيان من الميثاق [للتأكيد]</span></div>
+        <div style="display: flex; gap: 8px"><select aria-label="المرحلة" style="height: 38px; padding: 0 10px; font: inherit; font-size: 12px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF"><option>كل المراحل</option><option>تعارف</option><option>معاينة</option><option>تفاوض</option><option>إفراغ</option><option>لم تتم</option></select><label style="display: flex; align-items: center; gap: 6px; height: 38px; padding: 0 12px; border: 1.5px solid #141311; background: #FFFFFF; font-size: 12px; font-weight: 700"><input type="checkbox" style="accent-color: #141311">النزاعات فقط</label><button type="button" class="btn" style="height: 38px">تصدير CSV</button></div>
+      </div>
+      <nav class="sub" aria-label="أقسام غرفة التحالف">
+        <a href="Admin-Alliance-D.dc.html">نظرة عامة</a>
+        <a href="Admin-AllianceApplications-D.dc.html">طلبات الانضمام <i>4</i></a>
+        <a href="Admin-AllianceMembers-D.dc.html">الأعضاء <i>12</i></a>
+        <a href="Admin-AllianceRadar-D.dc.html">الرادار</a>
+        <a href="Admin-AllianceRequests-D.dc.html">الطلبات والمطابقات <i>5</i></a>
+        <a href="Admin-AllianceReferrals-D.dc.html" aria-current="page">الإحالات والصفقات <i>3</i></a>
+        <a href="Admin-AllianceReport-D.dc.html">التقرير الشهري</a>
+        <a href="Admin-AllianceSettings-D.dc.html">الميثاق والإعدادات</a>
+      </nav>
+
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px">
+        <div class="kpi"><small>سجلات جارية</small><b>3</b></div>
+        <div class="kpi"><small>قيمة الصفقات الجارية</small><b>4,690,000</b></div>
+        <div class="kpi"><small>أُفرغت منذ الإطلاق</small><b>2 · 3,900,000</b></div>
+        <div class="kpi" style="border-right: 5px solid #B48F2E"><small>نزاعات مفتوحة</small><b>1</b></div>
+        <div class="kpi" style="background: #141311; color: #FFFFFF; border-color: #141311"><small style="color: #C9C2B3">عمولة التحالف المقدّرة</small><b style="color: #B48F2E">[للتأكيد]</b></div>
+      </div>
+
+      <table>
+        <thead><tr><th>السجل</th><th>الطلب والعرض</th><th>المكتبان</th><th>المرحلة</th><th>القيمة</th><th>التقسيم</th><th>الحماية المتبقية</th><th>نزاع</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><strong style="direction: ltr; display: inline-block">REF-2026-0117</strong><br><span style="color: #5E5A52">2026/10/10</span></td><td>الفيصلية · شقة 4 غرف<br><span style="color: #5E5A52">عرض 165 م² · موثّق</span></td><td>SMQ ↔ مكتب ط</td><td><span class="st" title="معاينة"><i class="d"></i><i class="n"></i><i></i><i></i></span><span style="font-size: 11px; font-weight: 700">معاينة · الخميس</span></td><td><strong>440,000</strong></td><td>50 / 50 [للتأكيد]</td><td><span class="days"><b><span style="width: 100%"></span></b>90 من 90</span></td><td></td><td><a href="Member-Referral-M.dc.html" class="btn">افتح</a></td></tr>
+          <tr style="background: #FFFDF6"><td><strong style="direction: ltr; display: inline-block">REF-2026-0098</strong><br><span style="color: #5E5A52">2026/09/21</span></td><td>الشاطئ · فيلا<br><span style="color: #5E5A52">عرض 420 م² · مباشر من المالك</span></td><td>مكتب أ ↔ مكتب ج</td><td><span class="st" title="تفاوض"><i class="d"></i><i class="d"></i><i class="n"></i><i></i></span><span style="font-size: 11px; font-weight: 700">تفاوض</span></td><td><strong>1,850,000</strong></td><td>50 / 50 [للتأكيد]</td><td><span class="days"><b><span style="width: 78%"></span></b>70 من 90</span></td><td><span class="flag">نزاع · 4 أيام</span></td><td><button type="button" class="btn" style="background: #141311; color: #FFFFFF">افصل</button></td></tr>
+          <tr><td><strong style="direction: ltr; display: inline-block">REF-2026-0104</strong><br><span style="color: #5E5A52">2026/09/28</span></td><td>الروضة · أرض مطورة<br><span style="color: #5E5A52">عرض 600 م² · موثّق</span></td><td>مكتب أ ↔ مكتب ي</td><td><span class="st" title="تفاوض"><i class="d"></i><i class="d"></i><i class="n"></i><i></i></span><span style="font-size: 11px; font-weight: 700">تفاوض</span></td><td><strong>2,400,000</strong></td><td>50 / 50 [للتأكيد]</td><td><span class="days"><b><span style="width: 86%"></span></b>77 من 90</span></td><td></td><td><a href="Member-Referral-M.dc.html" class="btn">افتح</a></td></tr>
+          <tr style="color: #5E5A52"><td><strong style="direction: ltr; display: inline-block; color: #141311">REF-2026-0061</strong><br>2026/08/14</td><td>أبحر الشمالية · فيلا<br>عرض 480 م² · موثّق</td><td>مكتب ك ↔ مكتب أ</td><td><span class="st" title="إفراغ"><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i></span><span style="font-size: 11px; font-weight: 700; color: #141311">إفراغ · 2026/09/30</span></td><td><strong style="color: #141311">2,050,000</strong></td><td>50 / 50</td><td>انتهت بالإفراغ</td><td></td><td><a href="Member-Referral-M.dc.html" class="btn">افتح</a></td></tr>
+          <tr style="color: #5E5A52"><td><strong style="direction: ltr; display: inline-block; color: #141311">REF-2026-0049</strong><br>2026/08/02</td><td>الصفا · شقة 3 غرف<br>عرض 130 م² · موثّق</td><td>SMQ ↔ مكتب هـ</td><td><span class="st" title="إفراغ"><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i></span><span style="font-size: 11px; font-weight: 700; color: #141311">إفراغ · 2026/09/12</span></td><td><strong style="color: #141311">1,850,000</strong></td><td>50 / 50</td><td>انتهت بالإفراغ</td><td></td><td><a href="Member-Referral-M.dc.html" class="btn">افتح</a></td></tr>
+          <tr style="color: #5E5A52"><td><strong style="direction: ltr; display: inline-block; color: #141311">REF-2026-0033</strong><br>2026/07/19</td><td>المحمدية · شقة غرفتين<br>عرض 95 م² · مباشر</td><td>مكتب د ↔ مكتب ب</td><td><span class="st" title="لم تتم"><i class="d"></i><i class="d"></i><i class="x"></i><i></i></span><span style="font-size: 11px; font-weight: 700; color: #141311">لم تتم · المشتري انسحب</span></td><td>520,000</td><td>لا عمولة</td><td>أُغلقت</td><td></td><td><a href="Member-Referral-M.dc.html" class="btn">افتح</a></td></tr>
+        </tbody>
+      </table>
+
+      <!-- Dispute panel -->
+      <section style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start">
+        <div style="background: #FFFFFF; border: 2px solid #B48F2E; display: flex; flex-direction: column">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1.5px solid #B48F2E; background: #FFFDF6; font-size: 14px; font-weight: 800"><span style="display: flex; align-items: center; gap: 8px"><span style="width: 10px; height: 10px; background: #B48F2E; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)"></span>نزاع · REF-2026-0098</span><span style="font-size: 11px; color: #8A6C1E">مفتوح منذ 4 أيام</span></div>
+          <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; font-size: 12px; line-height: 1.6">
+            <div style="padding: 10px 12px; background: #F8F7F4; border-right: 3px solid #141311"><strong>مكتب ج:</strong> «المشتري عاد إلينا مباشرة بعد المعاينة وطلب إنهاء الصفقة عبرنا دون مكتب أ. نطلب تحويل المرحلة إلى لم تتم.»</div>
+            <div style="padding: 10px 12px; background: #F8F7F4; border-right: 3px solid #D4CFC4"><strong>مكتب أ:</strong> لم يردّ منذ 4 أيام (ذُكِّر مرتين على واتساب).</div>
+            <span style="color: #5E5A52">الميثاق: التعارف مسجّل 2026/09/21، والحماية 90 يوماً تشمل أي صفقة على نفس العقار مع نفس المشتري [للتأكيد]. تخطّي السجل سبب للإخراج.</span>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap"><button type="button" class="btn" style="height: 38px; background: #141311; color: #FFFFFF; font-size: 12px">أبقِ السجل والتقسيم</button><button type="button" class="btn" style="height: 38px; font-size: 12px">عدّل التقسيم</button><button type="button" class="btn" style="height: 38px; font-size: 12px">حوّل إلى «لم تتم»</button><button type="button" class="btn" style="height: 38px; font-size: 12px">راسل الطرفين</button></div>
+          </div>
+        </div>
+        <div style="background: #FFFFFF; border: 1.5px solid #141311; display: flex; flex-direction: column">
+          <div style="padding: 12px 16px; border-bottom: 1.5px solid #141311; background: #F3F1EB; font-size: 14px; font-weight: 800">تحديث مرحلة سجل</div>
+          <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; font-size: 12px">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+              <label style="display: flex; flex-direction: column; gap: 4px; font-weight: 600; color: #5E5A52">السجل<select style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF"><option>REF-2026-0117 · معاينة</option><option>REF-2026-0098 · تفاوض</option><option>REF-2026-0104 · تفاوض</option></select></label>
+              <label style="display: flex; flex-direction: column; gap: 4px; font-weight: 600; color: #5E5A52">المرحلة الجديدة<select style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; font-weight: 700; border: 1.5px solid #141311; background: #FFFFFF"><option>تعارف</option><option>معاينة</option><option selected>تفاوض</option><option>إفراغ</option><option>لم تتم</option></select></label>
+              <label style="display: flex; flex-direction: column; gap: 4px; font-weight: 600; color: #5E5A52">القيمة النهائية (عند الإفراغ)<input type="text" placeholder="ريال" style="height: 40px; padding: 0 10px; font: inherit; font-size: 13px; font-weight: 700; border: 1.5px solid #141311; direction: ltr; text-align: right"></label>
+              <label style="display: flex; flex-direction: column; gap: 4px; font-weight: 600; color: #5E5A52">تأكيد الطرفين<span style="display: flex; gap: 8px; height: 40px; align-items: center"><label style="display: flex; align-items: center; gap: 4px"><input type="checkbox" checked style="accent-color: #141311">المكتب 1</label><label style="display: flex; align-items: center; gap: 4px"><input type="checkbox" style="accent-color: #141311">المكتب 2</label></span></label>
+            </div>
+            <button type="button" class="btn" style="height: 40px; background: #B48F2E; border: 0; font-size: 13px; align-self: flex-start; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)">حدّث وأرسل للمكتبين</button>
+            <span style="color: #5E5A52; line-height: 1.6">كل تحديث يُسجَّل باسم من حدّثه ويُرسل نسخة من السجل المحدّث للمكتبين على واتساب.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

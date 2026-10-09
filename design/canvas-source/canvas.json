@@ -1,0 +1,1406 @@
+{
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-09T18:52:00Z"
+ },
+ "title": "SMQ Real Estate · Redesign",
+ "launch": {
+  "view": "canvas"
+ },
+ "pages": [],
+ "boards": {
+  "A-Hero.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "A · الدفتر · Home hero (mobile)"
+  },
+  "A-Card.dc.html": {
+   "x": 470,
+   "y": 0,
+   "w": 358,
+   "h": 560,
+   "title": "A · الدفتر · Result card"
+  },
+  "B-Hero.dc.html": {
+   "x": 0,
+   "y": 1264,
+   "w": 390,
+   "h": 844,
+   "title": "B · القطع · Home hero (mobile)"
+  },
+  "B-Card.dc.html": {
+   "x": 470,
+   "y": 1264,
+   "w": 358,
+   "h": 560,
+   "title": "B · القطع · Result card"
+  },
+  "Home-M.dc.html": {
+   "x": 0,
+   "y": 2528,
+   "w": 390,
+   "h": 4700,
+   "title": "الرئيسية · 390"
+  },
+  "Home-D.dc.html": {
+   "x": 470,
+   "y": 2528,
+   "w": 1440,
+   "h": 4900,
+   "title": "الرئيسية · 1440",
+   "expand": "fill"
+  },
+  "Results-M.dc.html": {
+   "x": 0,
+   "y": 7848,
+   "w": 390,
+   "h": 2550,
+   "title": "النتائج · 390"
+  },
+  "Results-Filters-M.dc.html": {
+   "x": 470,
+   "y": 7848,
+   "w": 390,
+   "h": 844,
+   "title": "ورقة الفلاتر · 390"
+  },
+  "Results-D.dc.html": {
+   "x": 940,
+   "y": 7848,
+   "w": 1440,
+   "h": 1750,
+   "title": "النتائج · 1440",
+   "expand": "fill"
+  },
+  "Guide-M.dc.html": {
+   "x": 0,
+   "y": 10818,
+   "w": 390,
+   "h": 1700,
+   "title": "دليل الأسعار · 390"
+  },
+  "Guide-D.dc.html": {
+   "x": 470,
+   "y": 10818,
+   "w": 1440,
+   "h": 1400,
+   "title": "دليل الأسعار · 1440",
+   "expand": "fill"
+  },
+  "Project-M.dc.html": {
+   "x": 0,
+   "y": 12938,
+   "w": 390,
+   "h": 3050,
+   "title": "صفحة المشروع · 390"
+  },
+  "Project-D.dc.html": {
+   "x": 470,
+   "y": 12938,
+   "w": 1440,
+   "h": 2650,
+   "title": "صفحة المشروع · 1440",
+   "expand": "fill"
+  },
+  "Unit-M.dc.html": {
+   "x": 0,
+   "y": 16408,
+   "w": 390,
+   "h": 3200,
+   "title": "صفحة الوحدة · 390"
+  },
+  "Unit-D.dc.html": {
+   "x": 470,
+   "y": 16408,
+   "w": 1440,
+   "h": 2300,
+   "title": "صفحة الوحدة · 1440",
+   "expand": "fill"
+  },
+  "Compare-M.dc.html": {
+   "x": 0,
+   "y": 20028,
+   "w": 390,
+   "h": 1400,
+   "title": "المقارنة · 390"
+  },
+  "Compare-D.dc.html": {
+   "x": 470,
+   "y": 20028,
+   "w": 1440,
+   "h": 1300,
+   "title": "المقارنة · 1440",
+   "expand": "fill"
+  },
+  "State-Loading-M.dc.html": {
+   "x": 0,
+   "y": 21848,
+   "w": 390,
+   "h": 844,
+   "title": "حالة التحميل · 390"
+  },
+  "State-Empty-M.dc.html": {
+   "x": 470,
+   "y": 21848,
+   "w": 390,
+   "h": 900,
+   "title": "لا نتائج · 390"
+  },
+  "State-Empty-D.dc.html": {
+   "x": 940,
+   "y": 21848,
+   "w": 1440,
+   "h": 1150,
+   "title": "لا نتائج · 1440",
+   "expand": "fill"
+  },
+  "State-Cards.dc.html": {
+   "x": 2460,
+   "y": 21848,
+   "w": 800,
+   "h": 640,
+   "title": "بطاقات: مباع ومحجوز"
+  },
+  "Services-M.dc.html": {
+   "x": 0,
+   "y": 23418,
+   "w": 390,
+   "h": 2250,
+   "title": "الخدمات · 390"
+  },
+  "Services-D.dc.html": {
+   "x": 470,
+   "y": 23418,
+   "w": 1440,
+   "h": 1600,
+   "title": "الخدمات · 1440",
+   "expand": "fill"
+  },
+  "Add-M.dc.html": {
+   "x": 0,
+   "y": 26088,
+   "w": 390,
+   "h": 2250,
+   "title": "أضف عقارك · 390"
+  },
+  "Add-D.dc.html": {
+   "x": 470,
+   "y": 26088,
+   "w": 1440,
+   "h": 1500,
+   "title": "أضف عقارك · 1440",
+   "expand": "fill"
+  },
+  "About-M.dc.html": {
+   "x": 0,
+   "y": 28758,
+   "w": 390,
+   "h": 2400,
+   "title": "من نحن · 390"
+  },
+  "About-D.dc.html": {
+   "x": 470,
+   "y": 28758,
+   "w": 1440,
+   "h": 2250,
+   "title": "من نحن · 1440",
+   "expand": "fill"
+  },
+  "Contact-M.dc.html": {
+   "x": 0,
+   "y": 31578,
+   "w": 390,
+   "h": 1800,
+   "title": "تواصل معنا · 390"
+  },
+  "Contact-D.dc.html": {
+   "x": 470,
+   "y": 31578,
+   "w": 1440,
+   "h": 1450,
+   "title": "تواصل معنا · 1440",
+   "expand": "fill"
+  },
+  "NotFound-M.dc.html": {
+   "x": 0,
+   "y": 33798,
+   "w": 390,
+   "h": 844,
+   "title": "404 · 390"
+  },
+  "NotFound-D.dc.html": {
+   "x": 470,
+   "y": 33798,
+   "w": 1440,
+   "h": 800,
+   "title": "404 · 1440",
+   "expand": "fill"
+  },
+  "HeaderFooter.dc.html": {
+   "x": 1990,
+   "y": 33798,
+   "w": 1440,
+   "h": 1400,
+   "title": "الهيدر والفوتر · الحالات"
+  },
+  "Tokens.dc.html": {
+   "x": 0,
+   "y": 35618,
+   "w": 1440,
+   "h": 1900,
+   "title": "ورقة الرموز · Tokens"
+  },
+  "Components.dc.html": {
+   "x": 0,
+   "y": 37938,
+   "w": 1440,
+   "h": 1550,
+   "title": "ورقة المكونات · Components"
+  },
+  "Shots.dc.html": {
+   "x": 0,
+   "y": 39908,
+   "w": 1440,
+   "h": 3150,
+   "title": "قائمة الصور · Image shot list"
+  },
+  "Admin-M.dc.html": {
+   "x": 0,
+   "y": 43478,
+   "w": 390,
+   "h": 2100,
+   "title": "الإدارة · الجوال · الموافقات"
+  },
+  "Admin-Overview-D.dc.html": {
+   "x": 470,
+   "y": 43478,
+   "w": 1440,
+   "h": 1200,
+   "title": "الإدارة · نظرة عامة",
+   "expand": "fill"
+  },
+  "Admin-Approvals-D.dc.html": {
+   "x": 1990,
+   "y": 43478,
+   "w": 1440,
+   "h": 1600,
+   "title": "الإدارة · مراجعة طلب إضافة عقار",
+   "expand": "fill"
+  },
+  "Admin-Inventory-D.dc.html": {
+   "x": 0,
+   "y": 45998,
+   "w": 1440,
+   "h": 1350,
+   "title": "الإدارة · الوحدات واستيراد Excel",
+   "expand": "fill"
+  },
+  "Admin-Analytics-D.dc.html": {
+   "x": 1520,
+   "y": 45998,
+   "w": 1440,
+   "h": 1700,
+   "title": "الإدارة · تحليلات البحث",
+   "expand": "fill"
+  },
+  "Admin-Visitors-D.dc.html": {
+   "x": 3040,
+   "y": 45998,
+   "w": 1440,
+   "h": 1350,
+   "title": "الإدارة · الزوار",
+   "expand": "fill"
+  },
+  "Admin-Login-M.dc.html": {
+   "x": 0,
+   "y": 48118,
+   "w": 390,
+   "h": 844,
+   "title": "دخول الإدارة · 390"
+  },
+  "Admin-Login-D.dc.html": {
+   "x": 470,
+   "y": 48118,
+   "w": 1440,
+   "h": 800,
+   "title": "دخول الإدارة · 1440",
+   "expand": "fill"
+  },
+  "Admin-Projects-D.dc.html": {
+   "x": 1990,
+   "y": 48118,
+   "w": 1440,
+   "h": 1150,
+   "title": "الإدارة · المشاريع",
+   "expand": "fill"
+  },
+  "Admin-ProjectEditor-D.dc.html": {
+   "x": 3510,
+   "y": 48118,
+   "w": 1440,
+   "h": 2050,
+   "title": "الإدارة · محرر المشروع",
+   "expand": "fill"
+  },
+  "Admin-UnitEditor-D.dc.html": {
+   "x": 0,
+   "y": 50588,
+   "w": 1440,
+   "h": 2250,
+   "title": "الإدارة · محرر الوحدة",
+   "expand": "fill"
+  },
+  "Admin-Leads-D.dc.html": {
+   "x": 1520,
+   "y": 50588,
+   "w": 1440,
+   "h": 1150,
+   "title": "الإدارة · الطلبات الواردة",
+   "expand": "fill"
+  },
+  "Admin-Leads-M.dc.html": {
+   "x": 3040,
+   "y": 50588,
+   "w": 390,
+   "h": 2500,
+   "title": "الطلبات الواردة · 390"
+  },
+  "Admin-Content-D.dc.html": {
+   "x": 0,
+   "y": 53508,
+   "w": 1440,
+   "h": 1500,
+   "title": "الإدارة · مركز المحتوى",
+   "expand": "fill"
+  },
+  "Admin-PageEditor-D.dc.html": {
+   "x": 1520,
+   "y": 53508,
+   "w": 1440,
+   "h": 2200,
+   "title": "الإدارة · محرر الصفحة الرئيسية",
+   "expand": "fill"
+  },
+  "Admin-FAQ-D.dc.html": {
+   "x": 3040,
+   "y": 53508,
+   "w": 1440,
+   "h": 1550,
+   "title": "الإدارة · الأسئلة الشائعة",
+   "expand": "fill"
+  },
+  "Admin-Partners-D.dc.html": {
+   "x": 4560,
+   "y": 53508,
+   "w": 1440,
+   "h": 1150,
+   "title": "الإدارة · الشركاء والتمويل",
+   "expand": "fill"
+  },
+  "Admin-Testimonials-D.dc.html": {
+   "x": 0,
+   "y": 56128,
+   "w": 1440,
+   "h": 1350,
+   "title": "الإدارة · الشهادات ونقاط الإثبات",
+   "expand": "fill"
+  },
+  "Admin-Lists-D.dc.html": {
+   "x": 1520,
+   "y": 56128,
+   "w": 1440,
+   "h": 1250,
+   "title": "الإدارة · القوائم",
+   "expand": "fill"
+  },
+  "Admin-SiteSettings-D.dc.html": {
+   "x": 3040,
+   "y": 56128,
+   "w": 1440,
+   "h": 1750,
+   "title": "الإدارة · إعدادات الموقع",
+   "expand": "fill"
+  },
+  "Admin-SEO-D.dc.html": {
+   "x": 4560,
+   "y": 56128,
+   "w": 1440,
+   "h": 1650,
+   "title": "الإدارة · SEO",
+   "expand": "fill"
+  },
+  "Admin-Media-D.dc.html": {
+   "x": 0,
+   "y": 58298,
+   "w": 1440,
+   "h": 2050,
+   "title": "الإدارة · الوسائط",
+   "expand": "fill"
+  },
+  "Admin-Users-D.dc.html": {
+   "x": 1520,
+   "y": 58298,
+   "w": 1440,
+   "h": 2100,
+   "title": "الإدارة · الإعدادات والمستخدمون",
+   "expand": "fill"
+  },
+  "Admin-Pieces-D.dc.html": {
+   "x": 3040,
+   "y": 58298,
+   "w": 1440,
+   "h": 1350,
+   "title": "الإدارة · إشعارات، تأكيدات، حالات فارغة",
+   "expand": "fill"
+  },
+  "Components2.dc.html": {
+   "x": 4560,
+   "y": 58298,
+   "w": 1440,
+   "h": 2300,
+   "title": "ورقة المكونات 2 · الإدارة"
+  },
+  "Add-Step1-M.dc.html": {
+   "x": 0,
+   "y": 61018,
+   "w": 390,
+   "h": 1700,
+   "title": "أضف عقارك · الخطوة 1 · 390"
+  },
+  "Add-Step2-M.dc.html": {
+   "x": 470,
+   "y": 61018,
+   "w": 390,
+   "h": 1750,
+   "title": "أضف عقارك · الخطوة 2 · 390"
+  },
+  "Add-Success-M.dc.html": {
+   "x": 940,
+   "y": 61018,
+   "w": 390,
+   "h": 844,
+   "title": "أضف عقارك · تم الإرسال · 390"
+  },
+  "Add-Step2-D.dc.html": {
+   "x": 1410,
+   "y": 61018,
+   "w": 1440,
+   "h": 1800,
+   "title": "أضف عقارك · الخطوة 2 · 1440",
+   "expand": "fill"
+  },
+  "Add-Step3-D.dc.html": {
+   "x": 2930,
+   "y": 61018,
+   "w": 1440,
+   "h": 1500,
+   "title": "أضف عقارك · الخطوة 3 · 1440",
+   "expand": "fill"
+  },
+  "Add-Success-D.dc.html": {
+   "x": 4450,
+   "y": 61018,
+   "w": 1440,
+   "h": 800,
+   "title": "أضف عقارك · تم الإرسال · 1440",
+   "expand": "fill"
+  },
+  "Results-Map-M.dc.html": {
+   "x": 0,
+   "y": 63238,
+   "w": 390,
+   "h": 844,
+   "title": "النتائج · خريطة · 390"
+  },
+  "Results-Map-D.dc.html": {
+   "x": 470,
+   "y": 63238,
+   "w": 1440,
+   "h": 1000,
+   "title": "النتائج · خريطة · 1440",
+   "expand": "fill"
+  },
+  "Projects-M.dc.html": {
+   "x": 1990,
+   "y": 63238,
+   "w": 390,
+   "h": 1700,
+   "title": "المشاريع · 390"
+  },
+  "Projects-D.dc.html": {
+   "x": 2460,
+   "y": 63238,
+   "w": 1440,
+   "h": 1250,
+   "title": "المشاريع · 1440",
+   "expand": "fill"
+  },
+  "Results-Loading-D.dc.html": {
+   "x": 3980,
+   "y": 63238,
+   "w": 1440,
+   "h": 1400,
+   "title": "النتائج · تحميل · 1440",
+   "expand": "fill"
+  },
+  "Unit-Reserved-M.dc.html": {
+   "x": 0,
+   "y": 65358,
+   "w": 390,
+   "h": 2100,
+   "title": "وحدة محجوزة · 390"
+  },
+  "Unit-Sold-M.dc.html": {
+   "x": 470,
+   "y": 65358,
+   "w": 390,
+   "h": 2000,
+   "title": "وحدة مباعة · 390"
+  },
+  "Unit-Roof-M.dc.html": {
+   "x": 940,
+   "y": 65358,
+   "w": 390,
+   "h": 2450,
+   "title": "فيلا روف · 390"
+  },
+  "Unit-Gallery-M.dc.html": {
+   "x": 1410,
+   "y": 65358,
+   "w": 390,
+   "h": 844,
+   "title": "المعرض ملء الشاشة · 390"
+  },
+  "Unit-Plan-M.dc.html": {
+   "x": 1880,
+   "y": 65358,
+   "w": 390,
+   "h": 844,
+   "title": "عارض المخطط · 390"
+  },
+  "Unit-Gallery-D.dc.html": {
+   "x": 2350,
+   "y": 65358,
+   "w": 1440,
+   "h": 900,
+   "title": "المعرض ملء الشاشة · 1440",
+   "expand": "fill"
+  },
+  "Unit-Tier-Real-M.dc.html": {
+   "x": 0,
+   "y": 68228,
+   "w": 390,
+   "h": 1000,
+   "title": "وحدة · صور فعلية"
+  },
+  "Unit-Tier-Gen-M.dc.html": {
+   "x": 470,
+   "y": 68228,
+   "w": 390,
+   "h": 950,
+   "title": "وحدة · صور مولّدة بوسم"
+  },
+  "Unit-Tier-Typo-M.dc.html": {
+   "x": 940,
+   "y": 68228,
+   "w": 390,
+   "h": 950,
+   "title": "وحدة · بديل طباعي"
+  },
+  "About-Proof-D.dc.html": {
+   "x": 1410,
+   "y": 68228,
+   "w": 1440,
+   "h": 1100,
+   "title": "من نحن · التمويل والشهادات ظاهرة",
+   "expand": "fill"
+  },
+  "Compare-One-M.dc.html": {
+   "x": 2930,
+   "y": 68228,
+   "w": 390,
+   "h": 1200,
+   "title": "المقارنة · وحدة واحدة"
+  },
+  "Compare-Empty-M.dc.html": {
+   "x": 3400,
+   "y": 68228,
+   "w": 390,
+   "h": 844,
+   "title": "المقارنة · فارغة"
+  },
+  "Contact-Success-M.dc.html": {
+   "x": 0,
+   "y": 69848,
+   "w": 390,
+   "h": 844,
+   "title": "تواصل · تم الإرسال"
+  },
+  "Contact-Error-M.dc.html": {
+   "x": 470,
+   "y": 69848,
+   "w": 390,
+   "h": 1200,
+   "title": "تواصل · خطأ"
+  },
+  "Header-Scrolled-D.dc.html": {
+   "x": 940,
+   "y": 69848,
+   "w": 1440,
+   "h": 320,
+   "title": "الهيدر عند التمرير · 1440",
+   "expand": "fill"
+  },
+  "Privacy-M.dc.html": {
+   "x": 2460,
+   "y": 69848,
+   "w": 390,
+   "h": 1800,
+   "title": "الخصوصية · 390"
+  },
+  "Privacy-D.dc.html": {
+   "x": 2930,
+   "y": 69848,
+   "w": 1440,
+   "h": 1500,
+   "title": "الخصوصية · 1440",
+   "expand": "fill"
+  },
+  "EN-Home-M.dc.html": {
+   "x": 0,
+   "y": 72068,
+   "w": 390,
+   "h": 2500,
+   "title": "Home · EN · 390"
+  },
+  "EN-Card-M.dc.html": {
+   "x": 470,
+   "y": 72068,
+   "w": 390,
+   "h": 560,
+   "title": "Result card · EN"
+  },
+  "EN-Unit-M.dc.html": {
+   "x": 940,
+   "y": 72068,
+   "w": 390,
+   "h": 1750,
+   "title": "Unit · EN · 390"
+  },
+  "OG-Home.dc.html": {
+   "x": 0,
+   "y": 74988,
+   "w": 1200,
+   "h": 630,
+   "title": "معاينة رابط · الرئيسية"
+  },
+  "OG-Project.dc.html": {
+   "x": 1280,
+   "y": 74988,
+   "w": 1200,
+   "h": 630,
+   "title": "معاينة رابط · المشروع"
+  },
+  "OG-Unit.dc.html": {
+   "x": 2560,
+   "y": 74988,
+   "w": 1200,
+   "h": 630,
+   "title": "معاينة رابط · الوحدة"
+  },
+  "Icons.dc.html": {
+   "x": 3840,
+   "y": 74988,
+   "w": 800,
+   "h": 400,
+   "title": "الأيقونة والفافيكون"
+  },
+  "Hub-M.dc.html": {
+   "x": 0,
+   "y": 76038,
+   "w": 390,
+   "h": 1750,
+   "title": "تعاون معنا · 390"
+  },
+  "Hub-D.dc.html": {
+   "x": 470,
+   "y": 76038,
+   "w": 1440,
+   "h": 1050,
+   "title": "تعاون معنا · 1440",
+   "expand": "fill"
+  },
+  "Alliance-M.dc.html": {
+   "x": 1990,
+   "y": 76038,
+   "w": 390,
+   "h": 3700,
+   "title": "تحالف مكاتب جدة · 390 · 12 عضواً"
+  },
+  "Alliance-Launch-M.dc.html": {
+   "x": 2460,
+   "y": 76038,
+   "w": 390,
+   "h": 1450,
+   "title": "تحالف مكاتب جدة · 390 · يوم الإطلاق، 0 أعضاء"
+  },
+  "Alliance-D.dc.html": {
+   "x": 2930,
+   "y": 76038,
+   "w": 1440,
+   "h": 2400,
+   "title": "تحالف مكاتب جدة · 1440",
+   "expand": "fill"
+  },
+  "AllianceApply-Step1-M.dc.html": {
+   "x": 0,
+   "y": 80158,
+   "w": 390,
+   "h": 1700,
+   "title": "الانضمام · الخطوة 1 · المكتب ومقدم الطلب · 390"
+  },
+  "AllianceApply-Step2-M.dc.html": {
+   "x": 470,
+   "y": 80158,
+   "w": 390,
+   "h": 1850,
+   "title": "الانضمام · الخطوة 2 · التغطية والتخصص · 390"
+  },
+  "AllianceApply-Step3-M.dc.html": {
+   "x": 940,
+   "y": 80158,
+   "w": 390,
+   "h": 1650,
+   "title": "الانضمام · الخطوة 3 · ما عندكم وما تحتاجون · 390"
+  },
+  "AllianceApply-Step2-D.dc.html": {
+   "x": 1410,
+   "y": 80158,
+   "w": 1440,
+   "h": 1500,
+   "title": "الانضمام · الخطوة 2 · 1440",
+   "expand": "fill"
+  },
+  "AllianceApply-Success-M.dc.html": {
+   "x": 2930,
+   "y": 80158,
+   "w": 390,
+   "h": 844,
+   "title": "الانضمام · تم الإرسال · 390"
+  },
+  "AllianceApply-Status-M.dc.html": {
+   "x": 3400,
+   "y": 80158,
+   "w": 390,
+   "h": 1550,
+   "title": "حالة الطلب · قيد المراجعة، موثّق، مرفوض · 390"
+  },
+  "Marketer-M.dc.html": {
+   "x": 0,
+   "y": 82428,
+   "w": 390,
+   "h": 1850,
+   "title": "انضم كمسوّق · 390"
+  },
+  "Marketer-D.dc.html": {
+   "x": 470,
+   "y": 82428,
+   "w": 1440,
+   "h": 1300,
+   "title": "انضم كمسوّق · 1440",
+   "expand": "fill"
+  },
+  "MarketerPage-M.dc.html": {
+   "x": 1990,
+   "y": 82428,
+   "w": 390,
+   "h": 950,
+   "title": "صفحة المسوّق · رابطه وأرقامه · 390"
+  },
+  "Add-Step2-Building-M.dc.html": {
+   "x": 2460,
+   "y": 82428,
+   "w": 390,
+   "h": 2000,
+   "title": "أضف عقارك · الخطوة 2 · عمارة بدخل · 390"
+  },
+  "State-Empty-Success-M.dc.html": {
+   "x": 2930,
+   "y": 82428,
+   "w": 390,
+   "h": 844,
+   "title": "النتائج الفارغة · أُرسل الطلب للتحالف · 390"
+  },
+  "Member-Request-M.dc.html": {
+   "x": 0,
+   "y": 84848,
+   "w": 390,
+   "h": 1200,
+   "title": "طلب جديد في حي تغطيه · 390"
+  },
+  "Member-Request-States-M.dc.html": {
+   "x": 470,
+   "y": 84848,
+   "w": 390,
+   "h": 1100,
+   "title": "الطلب · منتهٍ ومُجاب · 390"
+  },
+  "Member-Referral-M.dc.html": {
+   "x": 940,
+   "y": 84848,
+   "w": 390,
+   "h": 1250,
+   "title": "سجل الإحالة · 390"
+  },
+  "Member-Ledger-M.dc.html": {
+   "x": 1410,
+   "y": 84848,
+   "w": 390,
+   "h": 1300,
+   "title": "الميزان · صفحة العضو · 390"
+  },
+  "Member-Report-M.dc.html": {
+   "x": 1880,
+   "y": 84848,
+   "w": 390,
+   "h": 1800,
+   "title": "تقرير الطلب الشهري · 390"
+  },
+  "Member-Report-D.dc.html": {
+   "x": 2350,
+   "y": 84848,
+   "w": 1440,
+   "h": 1550,
+   "title": "تقرير الطلب الشهري · 1440",
+   "expand": "fill"
+  },
+  "Admin-Marketers-D.dc.html": {
+   "x": 0,
+   "y": 87068,
+   "w": 1440,
+   "h": 1200,
+   "title": "الإدارة · المسوّقون · 1440",
+   "expand": "fill"
+  },
+  "Admin-MarketerDetail-D.dc.html": {
+   "x": 1520,
+   "y": 87068,
+   "w": 1440,
+   "h": 1250,
+   "title": "الإدارة · مسوّق · 1440",
+   "expand": "fill"
+  },
+  "Admin-Alliance-D.dc.html": {
+   "x": 3040,
+   "y": 87068,
+   "w": 1440,
+   "h": 1100,
+   "title": "الإدارة · غرفة التحالف · نظرة عامة · 1440",
+   "expand": "fill"
+  },
+  "Admin-AllianceApplications-D.dc.html": {
+   "x": 4560,
+   "y": 87068,
+   "w": 1440,
+   "h": 1300,
+   "title": "الإدارة · طلبات الانضمام والمراجعة · 1440",
+   "expand": "fill"
+  },
+  "Admin-AllianceMembers-D.dc.html": {
+   "x": 0,
+   "y": 88788,
+   "w": 1440,
+   "h": 1250,
+   "title": "الإدارة · الأعضاء · 1440",
+   "expand": "fill"
+  },
+  "Admin-AllianceMember-D.dc.html": {
+   "x": 1520,
+   "y": 88788,
+   "w": 1440,
+   "h": 1050,
+   "title": "الإدارة · ملف عضو · 1440",
+   "expand": "fill"
+  },
+  "Admin-AllianceRadar-D.dc.html": {
+   "x": 3040,
+   "y": 88788,
+   "w": 1440,
+   "h": 1600,
+   "title": "الإدارة · الرادار · 1440",
+   "expand": "fill"
+  },
+  "Admin-AllianceRequests-D.dc.html": {
+   "x": 4560,
+   "y": 88788,
+   "w": 1440,
+   "h": 1200,
+   "title": "الإدارة · الطلبات والمطابقات · 1440",
+   "expand": "fill"
+  },
+  "Admin-AllianceReferrals-D.dc.html": {
+   "x": 0,
+   "y": 90808,
+   "w": 1440,
+   "h": 1200,
+   "title": "الإدارة · الإحالات والصفقات · 1440",
+   "expand": "fill"
+  },
+  "Admin-AllianceReport-D.dc.html": {
+   "x": 1520,
+   "y": 90808,
+   "w": 1440,
+   "h": 1300,
+   "title": "الإدارة · التقرير الشهري · 1440",
+   "expand": "fill"
+  },
+  "Admin-AllianceSettings-D.dc.html": {
+   "x": 3040,
+   "y": 90808,
+   "w": 1440,
+   "h": 1700,
+   "title": "الإدارة · الميثاق والإعدادات والنماذج · 1440",
+   "expand": "fill"
+  },
+  "Admin-Alliance-M.dc.html": {
+   "x": 4560,
+   "y": 90808,
+   "w": 390,
+   "h": 1550,
+   "title": "الإدارة · التحالف · إجراءات اليوم · 390"
+  },
+  "Components3.dc.html": {
+   "x": 0,
+   "y": 92928,
+   "w": 1440,
+   "h": 2300,
+   "title": "ورقة المكونات 3 · التحالف",
+   "expand": "fill"
+  }
+ },
+ "order": [
+  "A-Hero.dc.html",
+  "A-Card.dc.html",
+  "B-Hero.dc.html",
+  "B-Card.dc.html",
+  "Home-M.dc.html",
+  "Home-D.dc.html",
+  "Results-M.dc.html",
+  "Results-Filters-M.dc.html",
+  "Results-D.dc.html",
+  "Guide-M.dc.html",
+  "Guide-D.dc.html",
+  "Project-M.dc.html",
+  "Project-D.dc.html",
+  "Unit-M.dc.html",
+  "Unit-D.dc.html",
+  "Compare-M.dc.html",
+  "Compare-D.dc.html",
+  "State-Loading-M.dc.html",
+  "State-Empty-M.dc.html",
+  "State-Empty-D.dc.html",
+  "State-Cards.dc.html",
+  "Services-M.dc.html",
+  "Services-D.dc.html",
+  "Add-M.dc.html",
+  "Add-D.dc.html",
+  "About-M.dc.html",
+  "About-D.dc.html",
+  "Contact-M.dc.html",
+  "Contact-D.dc.html",
+  "NotFound-M.dc.html",
+  "NotFound-D.dc.html",
+  "HeaderFooter.dc.html",
+  "Tokens.dc.html",
+  "Components.dc.html",
+  "Shots.dc.html",
+  "Admin-M.dc.html",
+  "Admin-Overview-D.dc.html",
+  "Admin-Approvals-D.dc.html",
+  "Admin-Inventory-D.dc.html",
+  "Admin-Analytics-D.dc.html",
+  "Admin-Visitors-D.dc.html",
+  "Admin-Login-M.dc.html",
+  "Admin-Login-D.dc.html",
+  "Admin-Projects-D.dc.html",
+  "Admin-ProjectEditor-D.dc.html",
+  "Admin-UnitEditor-D.dc.html",
+  "Admin-Leads-D.dc.html",
+  "Admin-Leads-M.dc.html",
+  "Admin-Content-D.dc.html",
+  "Admin-PageEditor-D.dc.html",
+  "Admin-FAQ-D.dc.html",
+  "Admin-Partners-D.dc.html",
+  "Admin-Testimonials-D.dc.html",
+  "Admin-Lists-D.dc.html",
+  "Admin-SiteSettings-D.dc.html",
+  "Admin-SEO-D.dc.html",
+  "Admin-Media-D.dc.html",
+  "Admin-Users-D.dc.html",
+  "Admin-Pieces-D.dc.html",
+  "Components2.dc.html",
+  "Add-Step1-M.dc.html",
+  "Add-Step2-M.dc.html",
+  "Add-Success-M.dc.html",
+  "Add-Step2-D.dc.html",
+  "Add-Step3-D.dc.html",
+  "Add-Success-D.dc.html",
+  "Results-Map-M.dc.html",
+  "Results-Map-D.dc.html",
+  "Projects-M.dc.html",
+  "Projects-D.dc.html",
+  "Results-Loading-D.dc.html",
+  "Unit-Reserved-M.dc.html",
+  "Unit-Sold-M.dc.html",
+  "Unit-Roof-M.dc.html",
+  "Unit-Gallery-M.dc.html",
+  "Unit-Plan-M.dc.html",
+  "Unit-Gallery-D.dc.html",
+  "Unit-Tier-Real-M.dc.html",
+  "Unit-Tier-Gen-M.dc.html",
+  "Unit-Tier-Typo-M.dc.html",
+  "About-Proof-D.dc.html",
+  "Compare-One-M.dc.html",
+  "Compare-Empty-M.dc.html",
+  "Contact-Success-M.dc.html",
+  "Contact-Error-M.dc.html",
+  "Header-Scrolled-D.dc.html",
+  "Privacy-M.dc.html",
+  "Privacy-D.dc.html",
+  "EN-Home-M.dc.html",
+  "EN-Card-M.dc.html",
+  "EN-Unit-M.dc.html",
+  "OG-Home.dc.html",
+  "OG-Project.dc.html",
+  "OG-Unit.dc.html",
+  "Icons.dc.html",
+  "Hub-M.dc.html",
+  "Hub-D.dc.html",
+  "Alliance-M.dc.html",
+  "Alliance-Launch-M.dc.html",
+  "Alliance-D.dc.html",
+  "AllianceApply-Step1-M.dc.html",
+  "AllianceApply-Step2-M.dc.html",
+  "AllianceApply-Step3-M.dc.html",
+  "AllianceApply-Step2-D.dc.html",
+  "AllianceApply-Success-M.dc.html",
+  "AllianceApply-Status-M.dc.html",
+  "Marketer-M.dc.html",
+  "Marketer-D.dc.html",
+  "MarketerPage-M.dc.html",
+  "Add-Step2-Building-M.dc.html",
+  "State-Empty-Success-M.dc.html",
+  "Member-Request-M.dc.html",
+  "Member-Request-States-M.dc.html",
+  "Member-Referral-M.dc.html",
+  "Member-Ledger-M.dc.html",
+  "Member-Report-M.dc.html",
+  "Member-Report-D.dc.html",
+  "Admin-Marketers-D.dc.html",
+  "Admin-MarketerDetail-D.dc.html",
+  "Admin-Alliance-D.dc.html",
+  "Admin-AllianceApplications-D.dc.html",
+  "Admin-AllianceMembers-D.dc.html",
+  "Admin-AllianceMember-D.dc.html",
+  "Admin-AllianceRadar-D.dc.html",
+  "Admin-AllianceRequests-D.dc.html",
+  "Admin-AllianceReferrals-D.dc.html",
+  "Admin-AllianceReport-D.dc.html",
+  "Admin-AllianceSettings-D.dc.html",
+  "Admin-Alliance-M.dc.html",
+  "Components3.dc.html"
+ ],
+ "notes": {
+  "dirA": {
+   "x": 0,
+   "y": -270,
+   "text": "الاتجاه A · الدفتر",
+   "kind": "title1",
+   "maxW": 828
+  },
+  "dirB": {
+   "x": 0,
+   "y": 994,
+   "text": "الاتجاه B · القطع (المختار)",
+   "kind": "title1",
+   "maxW": 828
+  },
+  "tHome": {
+   "x": 0,
+   "y": 2258,
+   "text": "01 · الرئيسية",
+   "kind": "title1",
+   "maxW": 1910
+  },
+  "tResults": {
+   "x": 0,
+   "y": 7578,
+   "text": "02 · النتائج والفلاتر",
+   "kind": "title1",
+   "maxW": 2380
+  },
+  "tGuide": {
+   "x": 0,
+   "y": 10548,
+   "text": "03 · دليل الأسعار",
+   "kind": "title1",
+   "maxW": 1910
+  },
+  "tProject": {
+   "x": 0,
+   "y": 12668,
+   "text": "04 · صفحة المشروع",
+   "kind": "title1",
+   "maxW": 1910
+  },
+  "tUnit": {
+   "x": 0,
+   "y": 16138,
+   "text": "05 · صفحة الوحدة",
+   "kind": "title1",
+   "maxW": 1910
+  },
+  "tCompare": {
+   "x": 0,
+   "y": 19758,
+   "text": "06 · المقارنة",
+   "kind": "title1",
+   "maxW": 1910
+  },
+  "tStates": {
+   "x": 0,
+   "y": 21578,
+   "text": "07 · الحالات: تحميل، لا نتائج، مباع، محجوز",
+   "kind": "title1",
+   "maxW": 3260
+  },
+  "tServices": {
+   "x": 0,
+   "y": 23148,
+   "text": "08 · الخدمات",
+   "kind": "title1",
+   "maxW": 1910
+  },
+  "tAdd": {
+   "x": 0,
+   "y": 25818,
+   "text": "09 · أضف عقارك",
+   "kind": "title1",
+   "maxW": 1910
+  },
+  "tAbout": {
+   "x": 0,
+   "y": 28488,
+   "text": "10 · من نحن",
+   "kind": "title1",
+   "maxW": 1910
+  },
+  "tContact": {
+   "x": 0,
+   "y": 31308,
+   "text": "11 · تواصل معنا",
+   "kind": "title1",
+   "maxW": 1910
+  },
+  "t404": {
+   "x": 0,
+   "y": 33528,
+   "text": "12 · 404، الهيدر والفوتر",
+   "kind": "title1",
+   "maxW": 3430
+  },
+  "tTokens": {
+   "x": 0,
+   "y": 35348,
+   "text": "13 · ورقة الرموز",
+   "kind": "title1",
+   "maxW": 1440
+  },
+  "tComponents": {
+   "x": 0,
+   "y": 37668,
+   "text": "14 · ورقة المكونات",
+   "kind": "title1",
+   "maxW": 1440
+  },
+  "tShots": {
+   "x": 0,
+   "y": 39638,
+   "text": "15 · قائمة الصور",
+   "kind": "title1",
+   "maxW": 1440
+  },
+  "sampleValues": {
+   "x": 1990,
+   "y": 2258,
+   "w": 400,
+   "text": "قيم تجريبية تحتاج تأكيد العميل قبل البناء:\n• تاريخ التسليم المتوقع (استُخدم: الربع الثاني 2027)\n• شهادة الإشغال، الضمانات، نوع التأمين\n• الاتجاه، الطابق، ارتفاع السقف، مساحة السطح\n• غرفة الخادمة والسائق لكل نموذج\n• إجابات الأسئلة الشائعة (مسودات)\n• تاريخ آخر تحديث (استُخدم: 2026/10/01)\n\nمؤكد من العميل: الأسعار، المساحات، الغرف، الحالة (مباع/متاح)، مميزات المشروع، التراخيص، العنوان، الساعات، الأرقام، +2000 متدرب.",
+   "fill": "orange"
+  },
+  "sarNote": {
+   "x": 1990,
+   "y": 2258,
+   "w": 400,
+   "text": "رمز الريال السعودي: مرسوم كعنصر SVG مؤقت في كل التصاميم. المطوّر يستبدله بالرمز الرسمي (Unicode U+20C1) أو ملف SVG من البنك المركزي السعودي بنفس الارتفاع (0.75em) واللون (يرث لون النص).",
+   "fill": "blue"
+  },
+  "tAdmin1": {
+   "x": 0,
+   "y": 43208,
+   "text": "16 · لوحة الإدارة: الموافقات والنظرة العامة",
+   "kind": "title1",
+   "maxW": 3430
+  },
+  "tAdmin2": {
+   "x": 0,
+   "y": 45728,
+   "text": "17 · لوحة الإدارة: الوحدات، التحليلات، الزوار",
+   "kind": "title1",
+   "maxW": 4480
+  },
+  "t18": {
+   "x": 0,
+   "y": 47848,
+   "text": "18 · الإدارة: الدخول والمشاريع",
+   "kind": "title1",
+   "maxW": 4950
+  },
+  "t19": {
+   "x": 0,
+   "y": 50318,
+   "text": "19 · الإدارة: محرر الوحدة والطلبات الواردة",
+   "kind": "title1",
+   "maxW": 3430
+  },
+  "t20": {
+   "x": 0,
+   "y": 53238,
+   "text": "20 · الإدارة: المحتوى، محرر الصفحة، الأسئلة، الشركاء",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "t21": {
+   "x": 0,
+   "y": 55858,
+   "text": "21 · الإدارة: الشهادات، القوائم، إعدادات الموقع، SEO",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "t22": {
+   "x": 0,
+   "y": 58028,
+   "text": "22 · الإدارة: الوسائط، المستخدمون، القطع الصغيرة، مكونات الإدارة",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "t23": {
+   "x": 0,
+   "y": 60748,
+   "text": "23 · أضف عقارك: الخطوات والنجاح",
+   "kind": "title1",
+   "maxW": 5890
+  },
+  "t24": {
+   "x": 0,
+   "y": 62968,
+   "text": "24 · الخريطة، فهرس المشاريع، هيكل التحميل",
+   "kind": "title1",
+   "maxW": 5420
+  },
+  "t25": {
+   "x": 0,
+   "y": 65088,
+   "text": "25 · صفحة الوحدة: محجوز، مباع، فيلا روف، المعرض، المخطط",
+   "kind": "title1",
+   "maxW": 3790
+  },
+  "t26": {
+   "x": 0,
+   "y": 67958,
+   "text": "26 · طبقات الصور الثلاث، من نحن مع الإثباتات، المقارنة",
+   "kind": "title1",
+   "maxW": 3790
+  },
+  "t27": {
+   "x": 0,
+   "y": 69578,
+   "text": "27 · تواصل: نجاح وخطأ، الهيدر عند التمرير، الخصوصية",
+   "kind": "title1",
+   "maxW": 4370
+  },
+  "t28": {
+   "x": 0,
+   "y": 71798,
+   "text": "28 · English · LTR",
+   "kind": "title1",
+   "maxW": 1440
+  },
+  "t29": {
+   "x": 0,
+   "y": 74718,
+   "text": "29 · معاينات الروابط والأيقونات",
+   "kind": "title1",
+   "maxW": 4640
+  },
+  "t30": {
+   "x": 0,
+   "y": 75768,
+   "text": "30 · تعاون معنا: البوابة وتحالف مكاتب جدة",
+   "kind": "title1",
+   "maxW": 1400
+  },
+  "t31": {
+   "x": 0,
+   "y": 79888,
+   "text": "31 · طلب الانضمام للتحالف: 3 خطوات، النجاح، صفحة الحالة",
+   "kind": "title1",
+   "maxW": 1400
+  },
+  "t32": {
+   "x": 0,
+   "y": 82158,
+   "text": "32 · المسوّقون، أضف عقارك (عمارة بدخل)، النتائج الفارغة مع جسر التحالف",
+   "kind": "title1",
+   "maxW": 1400
+  },
+  "t33": {
+   "x": 0,
+   "y": 84578,
+   "text": "33 · صفحات الأعضاء من روابط واتساب، بلا دخول",
+   "kind": "title1",
+   "maxW": 1400
+  },
+  "t34": {
+   "x": 0,
+   "y": 86798,
+   "text": "34 · الإدارة: المسوّقون وغرفة التحالف (نظرة عامة، طلبات الانضمام)",
+   "kind": "title1",
+   "maxW": 1400
+  },
+  "t35": {
+   "x": 0,
+   "y": 88518,
+   "text": "35 · غرفة التحالف: الأعضاء، الرادار، الطلبات والمطابقات",
+   "kind": "title1",
+   "maxW": 1400
+  },
+  "t36": {
+   "x": 0,
+   "y": 90538,
+   "text": "36 · غرفة التحالف: الإحالات، التقرير الشهري، الميثاق والإعدادات، لوحة الجوال",
+   "kind": "title1",
+   "maxW": 1400
+  },
+  "t37": {
+   "x": 0,
+   "y": 92658,
+   "text": "37 · ورقة المكونات 3 · مكونات التحالف",
+   "kind": "title1",
+   "maxW": 1400
+  }
+ },
+ "designSystems": []
+}
