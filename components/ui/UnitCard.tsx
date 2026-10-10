@@ -100,7 +100,7 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
         <div className="flex items-center justify-between gap-3 px-3.5 py-3">
           <span className="flex flex-col gap-0.5 min-w-0">
             <Link href={link} className="text-body font-extrabold text-ink no-underline hover:underline">
-              {en ? `Apartment, model ${unit.model} · ${BUILDINGS[unit.building].nameEn}` : `${unit.nameAr} · ${unit.buildingNameAr}`}
+              {en ? `${unit.nameEn ?? `Apartment, model ${unit.model}`} · ${BUILDINGS[unit.building].nameEn}` : `${unit.nameAr} · ${unit.buildingNameAr}`}
             </Link>
             <span className="text-caption">{en ? metaEn : metaLine}</span>
           </span>
@@ -122,13 +122,13 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
     return (
       <article className={cx("flex flex-col border-interactive bg-paper", className)}>
         <div className="relative">
-          <ImageSlot slotId={cover} tier={imageTier} src={src} cut="xl" className="h-42.5" showId={false} lang={lang} unit={slotUnit} />
+          <ImageSlot slotId={cover} tier={imageTier} src={src} cut="xl" className="h-42.5 md:h-40" showId={false} lang={lang} unit={slotUnit} />
           <StatusBadge status="reserved" lang={lang} className="absolute top-3 start-3" />
           <BuildingTag className="absolute bottom-0 end-0">{en ? `${BUILDINGS[unit.building].nameEn} building` : `عمارة ${unit.buildingNameAr}`}</BuildingTag>
         </div>
         <div className="flex items-start justify-between gap-3 px-3.5 pt-3 pb-2">
           <Link href={link} className="flex flex-col gap-0.5 min-w-0 no-underline text-ink">
-            <span className="text-h3 font-extrabold">{en ? `Apartment, model ${unit.model}` : unit.nameAr}</span>
+            <span className="text-h3 font-extrabold">{en ? (unit.nameEn ?? `Apartment, model ${unit.model}`) : unit.nameAr}</span>
             <span className="text-caption text-muted">{en ? metaEn : metaLine}</span>
           </Link>
           {until && <span className="shrink-0 pt-1 text-caption text-muted">{en ? `Reserved until ${until}` : `محجوز حتى ${until}`}</span>}
@@ -167,7 +167,7 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
           <div className="flex flex-col gap-1 px-3.5 pt-3.5 pb-2.5">
             <h3 className="m-0 text-h3 font-extrabold leading-snug">
               <Link href={link} className="no-underline text-ink hover:underline">
-                {en ? `Apartment, model ${unit.model}` : unit.nameAr}
+                {en ? (unit.nameEn ?? `Apartment, model ${unit.model}`) : unit.nameAr}
               </Link>
             </h3>
             {place && <p className="m-0 text-caption text-muted">{place}</p>}
@@ -210,14 +210,14 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
     <article className={cx("flex flex-col border-interactive bg-paper", className)}>
       <div className="relative">
         <Link href={link} className="block" aria-label={unit.nameAr}>
-          <ImageSlot slotId={cover} tier={imageTier} src={src} cut="xl" className="h-42.5" showId={false} lang={lang} unit={slotUnit} />
+          <ImageSlot slotId={cover} tier={imageTier} src={src} cut="xl" className="h-42.5 md:h-40" showId={false} lang={lang} unit={slotUnit} />
         </Link>
         {badge}
         <BuildingTag className="absolute bottom-0 end-0">{en ? `${BUILDINGS[unit.building].nameEn} building` : `عمارة ${unit.buildingNameAr}`}</BuildingTag>
       </div>
       <div className="flex items-start justify-between gap-3 px-3.5 pt-3 pb-2">
         <Link href={link} className="flex flex-col gap-0.5 min-w-0 no-underline text-ink">
-          <span className="text-h3 font-extrabold">{en ? `Apartment, model ${unit.model}` : unit.nameAr}</span>
+          <span className="text-h3 font-extrabold">{en ? (unit.nameEn ?? `Apartment, model ${unit.model}`) : unit.nameAr}</span>
           <span className="text-caption text-muted">{en ? metaEn : metaLine}</span>
         </Link>
         {deliveryLabel && <span className="shrink-0 pt-1 text-caption text-muted text-end">{deliveryLabel}</span>}

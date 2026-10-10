@@ -267,7 +267,7 @@ export function ResultsPage() {
         )}
       </main>
       <CompareBar nameOf={(slug) => (unitBySlug(slug) ? compareName(unitBySlug(slug)!) : undefined)} />
-      <Footer compact links={RESULTS_FOOTER_LINKS} />
+      <Footer compact links={RESULTS_FOOTER_LINKS} privacy={false} />
       <FiltersSheet filters={r.filters} overrides={r.overrides} />
     </>
   );

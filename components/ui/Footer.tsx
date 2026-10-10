@@ -25,10 +25,12 @@ export interface FooterProps {
   compact?: boolean;
   settings?: FooterSettings;
   links?: NavItem[];
+  /** compact desktop line: « · الخصوصية» after the copyright (the results boards end at «© 2026 إس إم كيو العقارية») */
+  privacy?: boolean;
   className?: string;
 }
 
-export function Footer({ variant = "ar", compact, settings, links, className }: FooterProps) {
+export function Footer({ variant = "ar", compact, settings, links, privacy = true, className }: FooterProps) {
   const en = variant === "en";
   const licence = settings?.licence ?? LICENCE;
   const phone = settings?.phone ?? PHONE_DISPLAY;
@@ -77,10 +79,12 @@ export function Footer({ variant = "ar", compact, settings, links, className }: 
             <span className="hidden md:inline"> · </span>
             <br className="md:hidden" />
             {`© ${COPYRIGHT_YEAR} ${BRAND_AR}`}
-            <span className="hidden md:inline">
-              {" · "}
-              <PrivacyLink />
-            </span>
+            {privacy && (
+              <span className="hidden md:inline">
+                {" · "}
+                <PrivacyLink />
+              </span>
+            )}
           </p>
         </div>
       </footer>
