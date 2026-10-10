@@ -63,7 +63,8 @@ for (const board of boards) {
     const bBuf = await sharp(bFile).extract({ left: 0, top: bTop, width, height: bh }).resize({ width: colW }).png().toBuffer();
     const pBuf = await sharp(pFile).extract({ left: 0, top: pTop, width: pm.width ?? width, height: ph }).resize({ width: colW }).png().toBuffer();
     const bOutH = Math.round(bh * scale);
-    const pOutH = Math.round(ph * scale);
+    // the page can be narrower than its board (a 1440 component board shot at 390): scale by the actual widths
+    const pOutH = Math.round((ph * colW) / (pm.width ?? width));
     const H = LABEL + Math.max(bOutH, pOutH);
     const W = colW * 2 + GAP;
     const file = path.join(outDir, `${board}-${String(i + 1).padStart(2, "0")}.png`);
