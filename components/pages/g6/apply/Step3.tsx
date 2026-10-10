@@ -91,8 +91,8 @@ export function ApplyStep3() {
               </div>
             )}
           </div>
-          <TextArea id="apply-want" label="ماذا تريدون من التحالف" required rows={3} placeholder="مثال: طلبات مشترين جادّين في أبحر، وتقرير عن أسعار المتر" value={d.want} onChange={(e) => updateDraft({ want: e.target.value })} error={errors.want} />
-          <TextArea id="apply-add" label="ماذا ستضيفون للتحالف" required rows={3} placeholder="مثال: 10 عروض فلل بعقود وساطة" value={d.add} onChange={(e) => updateDraft({ add: e.target.value })} error={errors.add} />
+          <TextArea id="apply-want" label="ماذا تريدون من التحالف" required requiredMark="asterisk" rows={3} placeholder="مثال: طلبات مشترين جادّين في أبحر، وتقرير عن أسعار المتر" value={d.want} onChange={(e) => updateDraft({ want: e.target.value })} error={errors.want} />
+          <TextArea id="apply-add" label="ماذا ستضيفون للتحالف" required requiredMark="asterisk" rows={3} placeholder="مثال: 10 عروض فلل بعقود وساطة" value={d.add} onChange={(e) => updateDraft({ add: e.target.value })} error={errors.add} />
           <TextArea id="apply-notes" label="ملاحظات" rows={3} placeholder="اختياري" value={d.notes} onChange={(e) => updateDraft({ notes: e.target.value })} />
           <Checkbox id="apply-directory" label="أوافق على ظهور اسم المكتب والحي والتخصص في دليل الأعضاء بعد التوثيق (اختياري)." checked={d.directoryConsent} onChange={(e) => updateDraft({ directoryConsent: e.target.checked })} />
           <div className="flex flex-col gap-1">

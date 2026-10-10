@@ -32,6 +32,10 @@ export interface HeaderProps {
   waText?: string;
   /** the phone menu button and its sheet (the alliance flow boards drop it: logo + WhatsApp only) */
   menu?: boolean;
+  /** the desktop phone number / icon (AllianceApply-Step2-D has none) */
+  phone?: boolean;
+  /** the 3px gold rule under the active nav item (the alliance boards mark it in gold text only) */
+  activeRule?: boolean;
   className?: string;
 }
 
@@ -44,7 +48,7 @@ function isActive(item: NavItem, path: string, forced?: string): boolean {
   return path === m || path.startsWith(`${m}/`);
 }
 
-export function Header({ variant = "ar", showEn, transparent, switchHref, active, demo, withMenu, waText, menu = true, className }: HeaderProps) {
+export function Header({ variant = "ar", showEn, transparent, switchHref, active, demo, withMenu, waText, menu = true, phone = true, activeRule = true, className }: HeaderProps) {
   const en = variant === "en";
   const path = useClientPath();
   const q = useQuery();
@@ -117,7 +121,7 @@ export function Header({ variant = "ar", showEn, transparent, switchHref, active
                   className={cx(
                     "no-underline whitespace-nowrap motion-hover transition-colors hover:bg-ink-2",
                     scrolled ? "px-2 xl:px-2.5 py-2.5 text-label" : "px-2 xl:px-3 py-3 text-label",
-                    on ? cx("text-gold font-bold", !scrolled && "border-b-[3px] border-gold") : "text-paper font-semibold",
+                    on ? cx("text-gold font-bold", !scrolled && activeRule && "border-b-[3px] border-gold") : "text-paper font-semibold",
                   )}
                 >
                   {item.label}
@@ -139,10 +143,12 @@ export function Header({ variant = "ar", showEn, transparent, switchHref, active
               ))}
             <span className="hidden lg:contents">
               {/* the number needs the 1440 width; between 1024 and 1439 the header uses the scrolled phone icon */}
-              <a href={`tel:${PHONE_TEL}`} aria-label={en ? `Call ${PHONE_DISPLAY}` : `اتصال ${PHONE_DISPLAY}`} className={cx("inline-flex items-center justify-center size-10 border-[1.5px] border-muted text-paper no-underline hover:bg-ink-2 motion-hover transition-colors", !scrolled && "xl:hidden")}>
-                <PhoneIcon />
-              </a>
-              {!scrolled && (
+              {phone && (
+                <a href={`tel:${PHONE_TEL}`} aria-label={en ? `Call ${PHONE_DISPLAY}` : `اتصال ${PHONE_DISPLAY}`} className={cx("inline-flex items-center justify-center size-10 border-[1.5px] border-muted text-paper no-underline hover:bg-ink-2 motion-hover transition-colors", !scrolled && "xl:hidden")}>
+                  <PhoneIcon />
+                </a>
+              )}
+              {phone && !scrolled && (
                 <a href={`tel:${PHONE_TEL}`} dir="ltr" className="hidden xl:inline-flex items-center px-1 py-3 text-label font-semibold no-underline text-paper tnum hover:underline">
                   {PHONE_DISPLAY}
                 </a>

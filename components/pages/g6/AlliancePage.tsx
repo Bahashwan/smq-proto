@@ -377,7 +377,7 @@ export function AlliancePage() {
         }
         link={{ label: "تعاون معنا ←", href: "/collaborate" }}
       />
-      <Header active="/collaborate" waText="التحالف" menu={!launch} />
+      <Header active="/collaborate" waText="التحالف" menu={!launch} activeRule={false} />
       <main>
         <Hero launch={launch} counts={counts} />
         {!launch && <HowItWorks />}

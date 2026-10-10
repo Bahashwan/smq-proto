@@ -1194,7 +1194,7 @@ export function whenLabel(iso: string, now: string | Date = NOW): string {
   const pa = partsIn(a);
   const pn = partsIn(toDate(now));
   const dayDiff = Math.round((Date.parse(pn.ymd) - Date.parse(pa.ymd)) / 86400000);
-  const t = `${pa.hour}:${String(pa.minute).padStart(2, "0")}`;
+  const t = `${String(pa.hour).padStart(2, "0")}:${String(pa.minute).padStart(2, "0")}`;
   if (dayDiff === 0) return `اليوم ${t}`;
   if (dayDiff === 1) return `أمس ${t}`;
   if (dayDiff < 7) return `${["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"][pa.weekday]} ${t}`;

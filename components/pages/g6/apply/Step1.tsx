@@ -55,11 +55,12 @@ export function ApplyStep1() {
           }}
         >
           {list.length > 0 && <ErrorSummary title={errorsTitle(list.length, "لم ننتقل للخطوة التالية.")} errors={list} />}
-          <TextField id="apply-officeName" label="اسم المكتب العقاري" required placeholder="كما في الرخصة" value={d.officeName} onChange={(e) => updateDraft({ officeName: e.target.value })} error={errors.officeName} autoComplete="organization" />
+          <TextField id="apply-officeName" label="اسم المكتب العقاري" required requiredMark="asterisk" placeholder="كما في الرخصة" value={d.officeName} onChange={(e) => updateDraft({ officeName: e.target.value })} error={errors.officeName} autoComplete="organization" />
           <TextField
             id="apply-licence"
             label="رقم رخصة فال للمكتب"
             required
+            requiredMark="asterisk"
             ltr
             inputMode="numeric"
             maxLength={10}
@@ -69,11 +70,12 @@ export function ApplyStep1() {
             onChange={(e) => updateDraft({ licence: e.target.value.replace(/[^\d]/g, "") })}
             error={errors.licence}
           />
-          <TextField id="apply-applicantName" label="الاسم الكريم" required placeholder="اسم مقدم الطلب" value={d.applicantName} onChange={(e) => updateDraft({ applicantName: e.target.value })} error={errors.applicantName} autoComplete="name" />
+          <TextField id="apply-applicantName" label="الاسم الكريم" required requiredMark="asterisk" placeholder="اسم مقدم الطلب" value={d.applicantName} onChange={(e) => updateDraft({ applicantName: e.target.value })} error={errors.applicantName} autoComplete="name" />
           <TextField
             id="apply-phone"
             label="رقم التواصل"
             required
+            requiredMark="asterisk"
             type="tel"
             ltr
             inputMode="tel"
@@ -86,7 +88,7 @@ export function ApplyStep1() {
             autoComplete="tel"
           />
           <RadioGroup name="apply-role" label="صفة مقدم الطلب" required columns={2} options={roles.map((r) => ({ value: r, label: r }))} value={d.role} onChange={(v) => updateDraft({ role: v })} />
-          <SelectField id="apply-district" label="حي المكتب" required placeholder="اختر الحي" value={d.district} onChange={(e) => updateDraft({ district: e.target.value, pin: null })} error={errors.district}>
+          <SelectField id="apply-district" label="حي المكتب" required requiredMark="asterisk" placeholder="اختر الحي" value={d.district} onChange={(e) => updateDraft({ district: e.target.value, pin: null })} error={errors.district}>
             {SECTOR_ORDER.map((s) => (
               <optgroup key={s} label={SECTOR_LABELS[s]}>
                 {districts
@@ -99,7 +101,7 @@ export function ApplyStep1() {
               </optgroup>
             ))}
           </SelectField>
-          <FieldShell id="apply-maps-field" as="div" label={FIELD_LABELS.maps} required error={errors.maps}>
+          <FieldShell id="apply-maps-field" as="div" label={FIELD_LABELS.maps} required requiredMark="asterisk" error={errors.maps}>
             <div id="apply-maps" tabIndex={-1} className="outline-none">
             <PinPicker
               showModeTabs
@@ -113,6 +115,7 @@ export function ApplyStep1() {
               height={110}
               gridSize={24}
               showRoads={false}
+              echoLink={false}
               pinSize="s"
               ariaLabel="موقع المكتب على الخريطة"
             />

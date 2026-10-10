@@ -14,7 +14,7 @@ export function ApplyShell({ band = "طلب الانضمام", bandD = "طلب �
   return (
     <div className="flex min-h-dvh flex-col bg-cream text-ink">
       <AllianceBand text={`مبادرة من SMQ · ${band}`} textD={`مبادرة من SMQ · ${bandD}`} link={{ label: "عن التحالف ←", href: "/alliance" }} />
-      <Header active="/collaborate" waText={waText} menu={false} />
+      <Header active="/collaborate" waText={waText} menu={false} phone={false} activeRule={false} />
       <main className="flex-1">
         <div className={cx("container-smq pt-6 pb-7 md:pt-8 md:pb-16", aside ? "md:grid md:grid-cols-[minmax(0,1fr)_300px] md:items-start md:gap-8 lg:grid-cols-[minmax(0,1fr)_360px]" : wide ? "" : "md:max-w-[760px]")}>
           <div className="min-w-0">{children}</div>

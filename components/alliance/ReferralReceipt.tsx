@@ -62,7 +62,7 @@ export interface ReferralReceiptProps {
 
 function Row({ k, v, gold }: { k: string; v: ReactNode; gold?: boolean }) {
   return (
-    <div className="flex items-baseline justify-between gap-3 py-2 text-[13px]" style={{ borderBottom: "1px dashed var(--smq-line)" }}>
+    <div className="flex items-baseline justify-between gap-3 py-[9px] text-[13px] leading-[1.9]" style={{ borderBottom: "1px dashed var(--smq-line)" }}>
       <span className="text-muted">{k}</span>
       <span className={cx("text-end font-extrabold tnum", gold && "text-gold-text")}>{v}</span>
     </div>

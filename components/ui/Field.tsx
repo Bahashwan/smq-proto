@@ -13,6 +13,8 @@ export interface FieldShellProps {
   hint?: ReactNode;
   error?: ReactNode;
   required?: boolean;
+  /** how «required» shows: the gold hexagon dot (default) or the gold «*» of the alliance boards («الحقول بعلامة * مطلوبة») */
+  requiredMark?: "dot" | "asterisk";
   disabled?: boolean;
   /** QA only: draw the focus state */
   state?: "focus";
@@ -53,7 +55,7 @@ export function Hint({ id, children, className }: { id?: string; children: React
 }
 
 /** Label + control + hint/error, with the ids wired for assistive tech */
-export function FieldShell({ id, label, hint, error, required, disabled, state, className, children, as = "label", trailing }: FieldShellProps) {
+export function FieldShell({ id, label, hint, error, required, requiredMark = "dot", disabled, state, className, children, as = "label", trailing }: FieldShellProps) {
   const Wrapper = as;
   return (
     <Wrapper className={cx("flex flex-col gap-1 text-caption font-semibold", error ? "text-gold-text" : disabled ? "text-disabled" : state === "focus" ? "text-gold-text" : "text-muted", className)} {...(as === "label" ? { htmlFor: id } : {})}>
@@ -61,11 +63,16 @@ export function FieldShell({ id, label, hint, error, required, disabled, state, 
         <span className="flex items-center justify-between gap-3">
           <span className="inline-flex items-center gap-1">
             {label}
-            {required && (
-              <span className="inline-flex items-center gap-1" aria-hidden>
-                <StatusDot tone="gold" size={2} />
-              </span>
-            )}
+            {required &&
+              (requiredMark === "asterisk" ? (
+                <span className="font-extrabold text-gold-text" aria-hidden>
+                  *
+                </span>
+              ) : (
+                <span className="inline-flex items-center gap-1" aria-hidden>
+                  <StatusDot tone="gold" size={2} />
+                </span>
+              ))}
           </span>
           {trailing}
         </span>
@@ -81,6 +88,7 @@ type Shared = {
   hint?: ReactNode;
   error?: ReactNode;
   required?: boolean;
+  requiredMark?: "dot" | "asterisk";
   /** force an LTR control (phone numbers, codes); digits stay right-aligned in Arabic pages */
   ltr?: boolean;
   state?: "focus";
@@ -91,11 +99,11 @@ type Shared = {
 
 export type TextFieldProps = Shared & Omit<InputHTMLAttributes<HTMLInputElement>, "size">;
 
-export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function TextField({ label, hint, error, required, ltr, state, wrapperClassName, size, trailing, id, className, disabled, ...rest }, ref) {
+export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function TextField({ label, hint, error, required, requiredMark, ltr, state, wrapperClassName, size, trailing, id, className, disabled, ...rest }, ref) {
   const auto = useId();
   const fid = id ?? `f-${auto}`;
   return (
-    <FieldShell id={fid} label={label} hint={hint} error={error} required={required} disabled={disabled} state={state} className={wrapperClassName} trailing={trailing}>
+    <FieldShell id={fid} label={label} hint={hint} error={error} required={required} requiredMark={requiredMark} disabled={disabled} state={state} className={wrapperClassName} trailing={trailing}>
       <input
         ref={ref}
         id={fid}
@@ -113,11 +121,11 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(function T
 
 export type SelectFieldProps = Shared & Omit<SelectHTMLAttributes<HTMLSelectElement>, "size"> & { options?: { value: string; label: string; disabled?: boolean }[]; placeholder?: string };
 
-export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(function SelectField({ label, hint, error, required, state, wrapperClassName, size, trailing, id, className, disabled, options, placeholder, children, ...rest }, ref) {
+export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(function SelectField({ label, hint, error, required, requiredMark, state, wrapperClassName, size, trailing, id, className, disabled, options, placeholder, children, ...rest }, ref) {
   const auto = useId();
   const fid = id ?? `f-${auto}`;
   return (
-    <FieldShell id={fid} label={label} hint={hint} error={error} required={required} disabled={disabled} state={state} className={wrapperClassName} trailing={trailing}>
+    <FieldShell id={fid} label={label} hint={hint} error={error} required={required} requiredMark={requiredMark} disabled={disabled} state={state} className={wrapperClassName} trailing={trailing}>
       <span className="relative block">
         <select
           ref={ref}
@@ -149,14 +157,14 @@ export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(funct
 
 export type TextAreaProps = Shared & TextareaHTMLAttributes<HTMLTextAreaElement> & { rows?: number; counter?: boolean };
 
-export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function TextArea({ label, hint, error, required, state, wrapperClassName, trailing, id, className, disabled, rows = 4, maxLength, counter = true, onChange, value, defaultValue, ...rest }, ref) {
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function TextArea({ label, hint, error, required, requiredMark, state, wrapperClassName, trailing, id, className, disabled, rows = 4, maxLength, counter = true, onChange, value, defaultValue, ...rest }, ref) {
   const auto = useId();
   const fid = id ?? `f-${auto}`;
   const [internal, setInternal] = useState(String(defaultValue ?? "").length);
   const count = value !== undefined ? String(value).length : internal;
   const counterNode = maxLength && counter ? <span className="text-caption font-semibold text-muted tnum" dir="ltr">{`${count} / ${maxLength}`}</span> : trailing;
   return (
-    <FieldShell id={fid} label={label} hint={hint} error={error} required={required} disabled={disabled} state={state} className={wrapperClassName} trailing={counterNode}>
+    <FieldShell id={fid} label={label} hint={hint} error={error} required={required} requiredMark={requiredMark} disabled={disabled} state={state} className={wrapperClassName} trailing={counterNode}>
       <textarea
         ref={ref}
         id={fid}

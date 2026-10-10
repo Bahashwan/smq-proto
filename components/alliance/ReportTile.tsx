@@ -18,9 +18,9 @@ export function ReportBarRow({ label, pct, tone = "ink", max = 100, className }:
   const fill = tone === "gold" ? "bg-gold" : tone === "muted" ? "bg-on-ink-muted" : "bg-ink";
   const w = max > 0 ? Math.min(100, Math.round((pct / max) * 100)) : 0;
   return (
-    <div className={cx("grid items-center gap-2 py-[5px] text-[12px]", className)} style={{ gridTemplateColumns: "92px 1fr 44px" }}>
+    <div className={cx("grid grid-cols-[92px_1fr_44px] items-center gap-2 py-[5px] text-[12px] md:grid-cols-[110px_1fr_48px] md:py-1.5 md:text-[13px]", className)}>
       <span>{label}</span>
-      <div className="relative h-4 bg-slot">
+      <div className="relative h-4 bg-slot md:h-[18px]">
         <span className={cx("absolute top-0 start-0 h-full", fill)} style={{ width: `${w}%` }} />
       </div>
       <strong className="text-end tnum">{pct}%</strong>

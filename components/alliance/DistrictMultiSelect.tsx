@@ -80,9 +80,9 @@ export function DistrictMultiSelect({ districts, value, onChange, sectors, requi
   const tags = selected.length > 0 && (
     <div className="mb-1.5 flex flex-wrap gap-1.5">
       {selected.map((d) => (
-        <span key={d.slug} className="inline-flex h-8 items-center gap-1.5 bg-ink ps-2.5 text-[12px] font-bold text-paper">
+        <span key={d.slug} className="inline-flex h-8 items-center gap-1.5 bg-ink px-2.5 text-[12px] font-bold text-paper">
           {d.ar}
-          <button type="button" aria-label={`إزالة ${d.ar}`} onClick={() => remove(d.slug)} className="flex h-8 w-8 items-center justify-center text-[14px] font-extrabold text-gold">
+          <button type="button" aria-label={`إزالة ${d.ar}`} onClick={() => remove(d.slug)} className="-me-1 flex h-8 min-w-5 items-center justify-center px-0.5 text-[14px] font-extrabold text-gold">
             ×
           </button>
         </span>
@@ -102,6 +102,7 @@ export function DistrictMultiSelect({ districts, value, onChange, sectors, requi
         <SearchIcon />
         <input
           type="search"
+          size={1}
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder={showError ? errorText : placeholder}

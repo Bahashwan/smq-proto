@@ -65,6 +65,8 @@ export interface PinPickerProps {
   /** grid cell in px (boards: 28 add · 24 alliance · 30 site settings) */
   gridSize?: number;
   pinSize?: "m" | "s";
+  /** echo a short (unparseable) maps link under the box; AllianceApply-Step1-M has no echo */
+  echoLink?: boolean;
   disabled?: boolean;
   ariaLabel?: string;
   className?: string;
@@ -94,6 +96,7 @@ export function PinPicker({
   showRoads = true,
   gridSize = 28,
   pinSize = "m",
+  echoLink = true,
   disabled = false,
   ariaLabel = "موقع العقار على الخريطة",
   className,
@@ -356,7 +359,7 @@ export function PinPicker({
           {preview ? previewHint : hint}
         </span>
       </div>
-      {mode === "link" && linkState === "short" && (
+      {echoLink && mode === "link" && linkState === "short" && (
         <span dir="ltr" className="text-caption truncate text-end text-muted">
           {link.trim()}
         </span>
