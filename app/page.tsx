@@ -2,7 +2,8 @@ import Link from "next/link";
 import { Accordion, Button, Eyebrow, Footer, Header, HexNumber, ImageSlot, LogoMark, Mark, Price, Row, RowGroup, SectionHeading, Tag, WhatsAppIcon, PhoneIcon, LICENCE, PHONE_DISPLAY, PHONE_TEL, WA_DISPLAY } from "@/components/ui";
 import { MapEmbed } from "@/components/map";
 import { HomeFinder } from "@/components/pages/g1/HomeFinder";
-import { countsByStatus, guideTables, projectStats, unitPpm } from "@/data/selectors";
+import { LiveAvailableCount, LiveProjectFrom, LiveProjectStat } from "@/components/pages/g1/HomeLive";
+import { guideTables, unitPpm } from "@/data/selectors";
 import { projectById } from "@/data/projects";
 import { homeFaq, proofNumbers } from "@/data/content";
 import { settings } from "@/data/settings";
@@ -26,9 +27,7 @@ function thousands(from: number, to: number): string {
 }
 
 export default function HomePage() {
-  const counts = countsByStatus();
   const project = projectById("rwd-01")!;
-  const stats = projectStats("rwd-01");
   const guide = guideTables("rawdah");
   const trainees = proofNumbers.find((p) => p.key === "trainees");
   const guideRows = [
@@ -67,7 +66,7 @@ export default function HomePage() {
               </Button>
             </div>
             <div className="hidden md:flex mt-8 flex-wrap items-center gap-x-8 gap-y-2 text-label font-normal text-muted">
-              <span><strong className="text-ink text-h3 me-1.5">{counts.available}</strong>وحدات متاحة الآن</span>
+              <span><strong className="text-ink text-h3 me-1.5"><LiveAvailableCount /></strong>وحدات متاحة الآن</span>
               {trainees && <span><strong className="text-ink text-h3 me-1.5">+2000</strong>متدرب مع المؤسس</span>}
               <span>مرخصون من الهيئة العامة للعقار · <span className="tnum">{LICENCE.rega}</span></span>
             </div>
@@ -80,7 +79,7 @@ export default function HomePage() {
         </section>
         <div className="md:hidden flex justify-between gap-3 px-4 pt-4 text-caption text-muted">
           <span>مرخصون من الهيئة العامة للعقار · <span className="tnum">{LICENCE.rega}</span></span>
-          <span className="font-bold text-ink whitespace-nowrap">{counts.available} وحدات متاحة الآن</span>
+          <span className="font-bold text-ink whitespace-nowrap"><LiveAvailableCount /> وحدات متاحة الآن</span>
         </div>
 
         {/* Finder */}
@@ -99,17 +98,17 @@ export default function HomePage() {
               <Eyebrow>حي الروضة، جدة · {project.statusAr}</Eyebrow>
               <h3 className="m-0 text-[22px] md:text-[36px] font-extrabold leading-tight">{project.nameAr}</h3>
               <p className="m-0 text-label font-normal md:text-body text-muted">
-                <span className="md:hidden">عمارتان، روز وياسمين · {stats.listed} نماذج · شقق من غرفتين إلى 3 غرف وفلل روف</span>
+                <span className="md:hidden">عمارتان، روز وياسمين · <LiveProjectStat projectId={project.id} field="listed" /> نماذج · شقق من غرفتين إلى 3 غرف وفلل روف</span>
                 <span className="hidden md:inline">{project.descriptionAr}</span>
               </p>
               <div className="flex items-baseline justify-between gap-3 md:hidden">
-                <span className="text-caption text-muted">من <Price value={stats.fromPrice ?? 0} className="text-[20px] font-extrabold text-ink" /></span>
-                <span className="text-caption text-muted">{stats.available} متاحة من {stats.listed}</span>
+                <span className="text-caption text-muted">من <LiveProjectFrom projectId={project.id} className="text-[20px] font-extrabold text-ink" /></span>
+                <span className="text-caption text-muted"><LiveProjectStat projectId={project.id} field="available" /> متاحة من <LiveProjectStat projectId={project.id} field="listed" /></span>
               </div>
               <div className="hidden md:grid grid-cols-3 gap-4 mt-2">
-                <div><Price value={stats.fromPrice ?? 0} className="text-[22px] font-extrabold" /><div className="text-caption text-muted">تبدأ من</div></div>
-                <div><span className="text-[22px] font-extrabold tnum">{stats.available}</span> <span className="text-label text-muted">من {stats.listed}</span><div className="text-caption text-muted">وحدات متاحة</div></div>
-                <div><span className="text-[22px] font-extrabold tnum">{stats.ppm ? fmtNum(stats.ppm.min) : "—"}</span><div className="text-caption text-muted">أقل سعر للمتر</div></div>
+                <div><LiveProjectFrom projectId={project.id} className="text-[22px] font-extrabold" /><div className="text-caption text-muted">تبدأ من</div></div>
+                <div><span className="text-[22px] font-extrabold tnum"><LiveProjectStat projectId={project.id} field="available" /></span> <span className="text-label text-muted">من <LiveProjectStat projectId={project.id} field="listed" /></span><div className="text-caption text-muted">وحدات متاحة</div></div>
+                <div><span className="text-[22px] font-extrabold tnum"><LiveProjectStat projectId={project.id} field="ppmMin" /></span><div className="text-caption text-muted">أقل سعر للمتر</div></div>
               </div>
               <div className="flex flex-wrap gap-2 mt-1">{project.features.map((f) => <Tag key={f}>{f}</Tag>)}</div>
               <div className="hidden md:block mt-3"><Button variant="secondary" size="s" href={`/projects/${project.slug}`} arrow>صفحة المشروع</Button></div>

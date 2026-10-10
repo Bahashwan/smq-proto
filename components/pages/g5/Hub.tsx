@@ -1,7 +1,7 @@
 "use client";
 // /collaborate · «تعاون معنا» (Hub-M, Hub-D): three doors by who you are, each saying who it is for, what you get, what
 // we need and how long it takes. The doors are the alliance library's DoorCard (owners gold with the big cut, offices
-// ink with the honeycomb, marketers outlined with the link chip), sized up to the hub boards through className.
+// ink with the honeycomb, marketers outlined with the link chip) at the large size, CTA arrow included.
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { DoorCard } from "@/components/alliance";
@@ -47,9 +47,6 @@ function Honeycomb() {
   );
 }
 
-/** sizes the DoorCard up to the hub boards: padding, title, CTA */
-const DOOR = "h-full [&>span]:h-full [&>span]:gap-2.5 [&>span]:p-5 md:[&>span]:p-6 [&>span>b]:text-h2 [&>span>b]:leading-tight [&>span>span:last-child]:mt-auto [&>span>span:last-child]:h-11 [&>span>span:last-child]:px-4 [&>span>span:last-child]:text-label";
-
 export function Hub() {
   const marks = useMarks();
   return (
@@ -75,7 +72,7 @@ export function Hub() {
             eyebrow="01 · للمُلّاك"
             title="عندك عقار؟"
             cta="أضف عقارك"
-            className={DOOR}
+            size="l"
             text={
               <span className="flex flex-col gap-3">
                 <span className="text-label font-normal leading-relaxed md:text-body">
@@ -99,7 +96,7 @@ export function Hub() {
             title="عندك مكتب عقاري؟"
             cta="اعرف عن التحالف"
             icon={<Honeycomb />}
-            className={`${DOOR} [&>span>*:not([aria-hidden])]:relative`}
+            size="l"
             text={
               <span className="relative flex flex-col gap-3">
                 <span className="text-label font-normal leading-relaxed md:text-body">
@@ -132,7 +129,7 @@ export function Hub() {
                 </span>
               ) : null
             }
-            className={DOOR}
+            size="l"
             text={
               <span className="flex flex-col gap-3">
                 <span className="text-label font-normal leading-relaxed md:text-body">سوّق وحداتنا برابطك الخاص. كل زيارة وضغطة واتساب تُحسب لك، والعمولة مكتوبة قبل أن تبدأ.</span>

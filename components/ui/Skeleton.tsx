@@ -33,8 +33,29 @@ export function SkeletonLines({ n = 3, className }: { n?: number; className?: st
   );
 }
 
-/** The results-card skeleton: image with the cut, title lines, price band, actions */
-export function SkeletonCard({ className, actions = true }: { className?: string; actions?: boolean }) {
+/**
+ * The results-card skeleton: image with the cut, title lines, price band, actions (State-Loading-M). `grid` draws the
+ * desktop grid card of Results-Loading-D instead: the hexagon badge placeholder on the image, two bars, the 46px price
+ * row with its hairline, no actions.
+ */
+export function SkeletonCard({ className, actions = true, grid }: { className?: string; actions?: boolean; grid?: boolean }) {
+  if (grid) {
+    return (
+      <div aria-hidden className={cx("flex flex-col border-[1.5px] border-line", className)}>
+        <span className="relative block">
+          <SkeletonBlock h={170} cut className="w-full" />
+          <span className="absolute top-3 start-3 size-13 hex-flat bg-sand" />
+        </span>
+        <span className="flex flex-col gap-2 p-3.5">
+          <SkeletonBlock h={18} className="w-3/5" />
+          <SkeletonBlock h={14} tone="sand" className="w-4/5" />
+        </span>
+        <span className="flex items-center h-11.5 px-3.5 bg-sand border-t border-line">
+          <span className="block h-5 w-2/5 bg-line animate-skeleton" />
+        </span>
+      </div>
+    );
+  }
   return (
     <div aria-hidden className={cx("flex flex-col border-[1.5px] border-line", className)}>
       <SkeletonBlock h={170} cut className="w-full" />

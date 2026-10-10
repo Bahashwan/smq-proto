@@ -9,11 +9,12 @@ import { Tbc } from "@/components/alliance";
 import { cx } from "@/lib/format";
 import { AllianceBand, ShortFooter } from "../chrome";
 
-export function ApplyShell({ band = "طلب الانضمام", bandD = "طلب الانضمام إلى تحالف مكاتب جدة العقارية", children, aside, wide, footer = true }: { band?: string; bandD?: string; children: ReactNode; aside?: ReactNode; wide?: boolean; footer?: boolean }) {
+/** The flow boards' header: logo and WhatsApp prefilled with «التحالف» (the status page sends the application id), no menu button. */
+export function ApplyShell({ band = "طلب الانضمام", bandD = "طلب الانضمام إلى تحالف مكاتب جدة العقارية", children, aside, wide, footer = true, waText = "التحالف" }: { band?: string; bandD?: string; children: ReactNode; aside?: ReactNode; wide?: boolean; footer?: boolean; waText?: string }) {
   return (
     <div className="flex min-h-dvh flex-col bg-cream text-ink">
       <AllianceBand text={`مبادرة من SMQ · ${band}`} textD={`مبادرة من SMQ · ${bandD}`} link={{ label: "عن التحالف ←", href: "/alliance" }} />
-      <Header active="/collaborate" />
+      <Header active="/collaborate" waText={waText} menu={false} />
       <main className="flex-1">
         <div className={cx("container-smq py-6 md:py-8", aside ? "md:grid md:grid-cols-[minmax(0,1fr)_300px] md:items-start md:gap-8 lg:grid-cols-[minmax(0,1fr)_360px]" : wide ? "" : "md:max-w-[760px]")}>
           <div className="min-w-0">{children}</div>

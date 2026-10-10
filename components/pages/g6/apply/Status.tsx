@@ -69,7 +69,7 @@ export function ApplicationStatus({ id }: { id: string }) {
   const decisionOn = a.verification?.date;
 
   return (
-    <ApplyShell band="حالة الطلب" bandD="حالة طلب الانضمام إلى تحالف مكاتب جدة العقارية">
+    <ApplyShell band="حالة الطلب" bandD="حالة طلب الانضمام إلى تحالف مكاتب جدة العقارية" waText={a.id}>
       <div className="flex flex-col gap-5 pb-4">
         <div className="flex flex-col gap-2">
           <h1 className="text-[22px] font-extrabold md:text-[28px]">حالة طلب الانضمام</h1>

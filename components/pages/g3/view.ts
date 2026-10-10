@@ -6,6 +6,7 @@ import { useMemo } from "react";
 import type { District, ImageTier, Project, Unit, UnitStatus } from "@/data/types";
 import { projectById } from "@/data/projects";
 import { districtBySlug } from "@/data/districts";
+import { settings } from "@/data/settings";
 import { floorLabel, UNIT_TYPE_AR } from "@/data/units";
 import {
   TODAY,
@@ -40,8 +41,8 @@ export function addDays(iso: string, n: number): string {
 export function daysBetween(from: string, to: string): number {
   return Math.round((Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000);
 }
-/** Days a deposit holds the price (the FAQ's «عربون حجز يثبّت السعر 14 يوماً», content faq-02 / faq-04). */
-export const RESERVATION_DAYS = 14;
+/** Days a deposit holds the price (site settings; the FAQ's «عربون حجز يثبّت السعر 14 يوماً», faq-02 / faq-04). */
+export const RESERVATION_DAYS = settings.reservationDays ?? 14;
 
 /** «الربع 2 · 2027» / «Q2 2027» from the project's delivery milestone */
 export function deliveryShort(project: Project | undefined, lang: "ar" | "en" = "ar"): string {

@@ -2,10 +2,11 @@
 // Public header (HeaderFooter, Header-Scrolled-D, B-Hero boards): 72px ink bar with the gold-mark + white lockup,
 // the nav, EN, the phone number and the only coloured button (WhatsApp). After 120px of scroll: 56px, mark + name,
 // phone becomes an icon, a 2px gold rule, no shadow. On the phone the bar hides on scroll down and returns on scroll
-// up; the menu button (and ?menu=1) opens the ink sheet from the top.
+// up; the menu button (and ?menu=1) opens the ink sheet from the top (rows at the board's 20px / normal line height,
+// about 67px). The alliance flow boards drop the menu button (`menu={false}`) and prefill WhatsApp (`waText`).
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { cx } from "@/lib/format";
+import { cx, waLink } from "@/lib/format";
 import { setQuery, useClientPath, useQuery } from "@/lib/location";
 import { Lockup, LogoMark } from "./Brand";
 import { Button, IconButton } from "./Button";
@@ -27,6 +28,10 @@ export interface HeaderProps {
   demo?: "default" | "scrolled";
   /** QA only: let a demo header own the ?menu=1 sheet */
   withMenu?: boolean;
+  /** prefilled WhatsApp message for every WhatsApp link in the bar and the menu («التحالف», «مسوّق», an application id) */
+  waText?: string;
+  /** the phone menu button and its sheet (the alliance flow boards drop it: logo + WhatsApp only) */
+  menu?: boolean;
   className?: string;
 }
 
@@ -39,11 +44,12 @@ function isActive(item: NavItem, path: string, forced?: string): boolean {
   return path === m || path.startsWith(`${m}/`);
 }
 
-export function Header({ variant = "ar", showEn, transparent, switchHref, active, demo, withMenu, className }: HeaderProps) {
+export function Header({ variant = "ar", showEn, transparent, switchHref, active, demo, withMenu, waText, menu = true, className }: HeaderProps) {
   const en = variant === "en";
   const path = useClientPath();
   const q = useQuery();
-  const ownsMenu = !demo || !!withMenu;
+  const wa = waText ? waLink(waText) : WA_URL;
+  const ownsMenu = menu && (!demo || !!withMenu);
   const menuOpen = q.get("menu") === "1" && ownsMenu;
   const [scrolledLive, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -141,27 +147,29 @@ export function Header({ variant = "ar", showEn, transparent, switchHref, active
                   {PHONE_DISPLAY}
                 </a>
               )}
-              <Button variant="whatsapp" size="s" href={WA_URL} className={scrolled ? "h-10 px-3.5" : "h-11 px-4.5"}>
+              <Button variant="whatsapp" size="s" href={wa} className={scrolled ? "h-10 px-3.5" : "h-11 px-4.5"}>
                 {en ? "WhatsApp" : "واتساب"}
               </Button>
             </span>
             <span className="contents lg:hidden">
-              <IconButton label={en ? "Chat on WhatsApp" : "تواصل عبر واتساب"} href={WA_URL} tone="gold" size={44}>
+              <IconButton label={en ? "Chat on WhatsApp" : "تواصل عبر واتساب"} href={wa} tone="gold" size={44}>
                 <WhatsAppIcon size={20} />
               </IconButton>
-              <button type="button" aria-label={en ? "Menu" : "القائمة"} aria-expanded={menuOpen} aria-controls="smq-menu" onClick={openMenu} className="inline-flex items-center justify-center size-11 text-paper bg-transparent hover:bg-ink-2 motion-hover transition-colors">
-                <MenuIcon />
-              </button>
+              {menu && (
+                <button type="button" aria-label={en ? "Menu" : "القائمة"} aria-expanded={menuOpen} aria-controls="smq-menu" onClick={openMenu} className="inline-flex items-center justify-center size-11 text-paper bg-transparent hover:bg-ink-2 motion-hover transition-colors">
+                  <MenuIcon />
+                </button>
+              )}
             </span>
           </div>
         </div>
       </header>
-      {ownsMenu && <MobileMenu open={menuOpen} onClose={closeMenu} variant={variant} switchTo={switchTo} showEn={showEn} path={path} />}
+      {ownsMenu && <MobileMenu open={menuOpen} onClose={closeMenu} variant={variant} switchTo={switchTo} showEn={showEn} path={path} wa={wa} />}
     </>
   );
 }
 
-function MobileMenu({ open, onClose, variant, switchTo, showEn, path }: { open: boolean; onClose: () => void; variant: "ar" | "en"; switchTo: string; showEn?: boolean; path: string }) {
+function MobileMenu({ open, onClose, variant, switchTo, showEn, path, wa }: { open: boolean; onClose: () => void; variant: "ar" | "en"; switchTo: string; showEn?: boolean; path: string; wa: string }) {
   const en = variant === "en";
   const [mounted, shown] = usePresence(open, 200);
   const ref = useRef<HTMLDivElement>(null);
@@ -190,13 +198,13 @@ function MobileMenu({ open, onClose, variant, switchTo, showEn, path }: { open: 
           {items.map((item, i) => {
             const on = item.match ? path === item.match || path.startsWith(`${item.match}/`) : false;
             return (
-              <Link key={item.href} href={item.href} onClick={onClose} aria-current={on ? "page" : undefined} className={cx("py-3.5 text-h2 md:text-h2 font-extrabold no-underline", on ? "text-gold" : "text-paper", i < items.length - 1 && "border-b border-ink-2")}>
+              <Link key={item.href} href={item.href} onClick={onClose} aria-current={on ? "page" : undefined} className={cx("py-3.5 text-h2 leading-[normal] font-extrabold no-underline", on ? "text-gold" : "text-paper", i < items.length - 1 && "border-b border-ink-2")}>
                 {item.label}
               </Link>
             );
           })}
           <div className="flex gap-2 mt-3">
-            <Button variant="primary" size="m" href={WA_URL} className="flex-1">
+            <Button variant="primary" size="m" href={wa} className="flex-1">
               {en ? "WhatsApp" : "واتساب"}
             </Button>
             <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center justify-center h-13 px-4 border-[1.5px] border-paper text-paper text-label font-bold no-underline hover:bg-ink-2 motion-hover transition-colors">

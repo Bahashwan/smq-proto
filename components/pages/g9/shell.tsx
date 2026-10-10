@@ -1,55 +1,14 @@
 "use client";
-// G9 · the AdminShell every marketers / alliance-room page renders (fixture notifications, nav counters computed from
-// the selectors plus the in-memory store), the alliance room's sub-tabs with their computed counters, and the small
+// G9 · the AdminShell every marketers / alliance-room page renders (the shared bell and live nav counters of
+// components/admin), the alliance room's sub-tabs with their computed counters, and the small
 // pieces the room's pages share (hexagon avatar, framed section, link tile, hexagon tag).
-import { useMemo, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import Link from "next/link";
-import { AdminShell, PHONE_TABS, type AdminShellProps, type NavCounts, type Notification, type PhoneTab } from "@/components/admin";
-import { notifications as notificationFixture } from "@/data/content";
+import { AdminShell, PHONE_TABS, useAllianceOverview, type AdminShellProps, type PhoneTab } from "@/components/admin";
 import { offices } from "@/data/offices";
-import { allianceOverview, approvalCounts, leadCounts, marketersByStage } from "@/data/selectors";
-import { useStore } from "@/lib/store";
 import { cx, fmtNum } from "@/lib/format";
 
-export const ADMIN_NOTIFICATIONS: Notification[] = notificationFixture.map((n) => ({
-  id: n.id,
-  title: n.titleAr || undefined,
-  text: n.textAr,
-  when: n.whenAr,
-  href: n.href,
-  linkLabel: n.linkAr,
-  read: !n.unread,
-}));
-
-/** The alliance overview numbers with every store override merged in. */
-export function useAllianceOverview() {
-  const requests = useStore((s) => s.requests);
-  const referralStages = useStore((s) => s.referralStages);
-  const applications = useStore((s) => s.applications);
-  const createdReferrals = useStore((s) => s.createdReferrals);
-  return useMemo(
-    () => allianceOverview({ requestOverrides: requests, referralOverrides: referralStages, applicationOverrides: applications, createdReferrals }),
-    [requests, referralStages, applications, createdReferrals],
-  );
-}
-
-/** approvals = open submissions · leads = «بلا رد» · marketers = new applicants · alliance = applications to verify +
- *  open disputes (the same rule as the admin-core pages). */
-export function useAdminCounts(): NavCounts {
-  const approvals = useStore((s) => s.approvals);
-  const leads = useStore((s) => s.leads);
-  const marketers = useStore((s) => s.marketers);
-  const ov = useAllianceOverview();
-  return useMemo(
-    () => ({
-      approvals: approvalCounts(approvals).open,
-      leads: leadCounts(leads).unanswered,
-      marketers: marketersByStage(marketers).new.length,
-      alliance: ov.pendingApplications + ov.disputes,
-    }),
-    [approvals, leads, marketers, ov],
-  );
-}
+export { ADMIN_NOTIFICATIONS, useAdminCounts, useAllianceOverview } from "@/components/admin";
 
 export type G9ShellProps = Omit<AdminShellProps, "notifications" | "counts">;
 
@@ -61,8 +20,7 @@ const ROOM_PHONE_TABS: PhoneTab[] = (() => {
 })();
 
 export function G9Shell(props: G9ShellProps) {
-  const counts = useAdminCounts();
-  return <AdminShell phoneTabs={ROOM_PHONE_TABS} {...props} notifications={ADMIN_NOTIFICATIONS} counts={counts} />;
+  return <AdminShell phoneTabs={ROOM_PHONE_TABS} {...props} />;
 }
 
 // ---------------------------------------------------------------------------------------------- alliance room tabs

@@ -142,7 +142,7 @@ export interface BreadcrumbItem {
   href?: string;
 }
 
-/** «جدة / الروضة / جاردن الروضة»: the last item is the current page */
+/** «جدة / الروضة / جاردن الروضة»: links in gold text (the boards' link colour), muted slashes, the current page in bold ink */
 export function Breadcrumb({ items, className, label = "المسار" }: { items: BreadcrumbItem[]; className?: string; label?: string }) {
   return (
     <nav aria-label={label} className={cx("flex flex-wrap items-center gap-1.5 text-caption md:text-label md:font-normal text-muted", className)}>
@@ -151,7 +151,7 @@ export function Breadcrumb({ items, className, label = "المسار" }: { items
         return (
           <span key={i} className="inline-flex items-center gap-1.5">
             {it.href && !last ? (
-              <Link href={it.href} className="no-underline hover:text-ink hover:underline">
+              <Link href={it.href} className="no-underline text-gold-text hover:text-ink hover:underline">
                 {it.label}
               </Link>
             ) : (

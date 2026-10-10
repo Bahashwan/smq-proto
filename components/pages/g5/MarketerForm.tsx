@@ -105,7 +105,7 @@ export function MarketerForm() {
   };
 
   return (
-    <Shell footer={MARKETER_FOOTER}>
+    <Shell footer={MARKETER_FOOTER} waText="مسوّق">
       <section className="bg-sand text-ink [clip-path:polygon(0_0,100%_0,100%_100%,52px_100%,0_calc(100%-30px))] md:[clip-path:polygon(0_0,100%_0,100%_100%,120px_100%,0_calc(100%-69px))]">
         <Container className="flex flex-col gap-1.5 pb-12 pt-6 md:grid md:grid-cols-2 md:items-center md:gap-10 md:pb-18 md:pt-10">
           <div className="flex flex-col gap-1.5">

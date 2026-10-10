@@ -177,13 +177,15 @@ export interface CompareToggleProps {
   unavailable?: boolean;
   size?: "s" | "m" | "l";
   lang?: "ar" | "en";
+  /** the visible word when it is not «قارن» («أضف للمقارنة» on the unit page); the full state still reads «ممتلئة (3/3)» */
+  label?: string;
   className?: string;
 }
 
 /** The «قارن» checkbox label of the cards: paper → sand when checked, line frame when disabled */
-export function CompareToggle({ checked, onChange, disabled, full, unavailable, size = "m", lang = "ar", className }: CompareToggleProps) {
+export function CompareToggle({ checked, onChange, disabled, full, unavailable, size = "m", lang = "ar", label, className }: CompareToggleProps) {
   const off = disabled || full || unavailable;
-  const text = full ? "ممتلئة (3/3)" : lang === "en" ? "Compare" : "قارن";
+  const text = full ? (lang === "en" ? "Full (3/3)" : "ممتلئة (3/3)") : label ?? (lang === "en" ? "Compare" : "قارن");
   const aria = unavailable ? "غير متاح للمقارنة" : checked ? "في المقارنة" : lang === "en" ? "Add to compare" : "أضف إلى المقارنة";
   return (
     <label

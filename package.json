@@ -18,6 +18,7 @@
     "postbuild": "node scripts/postbuild.mjs",
     "coverage": "tsx scripts/check-coverage.ts",
     "qa": "tsx scripts/qa/smoke.ts",
+    "qa:copy": "tsx scripts/qa/copy.ts",
     "qa:tours": "tsx scripts/qa/tours.ts",
     "qa:flows": "tsx scripts/qa/flows.ts"
   },

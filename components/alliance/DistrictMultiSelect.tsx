@@ -7,7 +7,8 @@ import { normalizeAr, SECTOR_LABELS, SECTOR_ORDER } from "./lib";
 /**
  * «اختيار الأحياء المتعدد»: the chosen districts as ink tags with a gold ×, a search field, and the list grouped by
  * sector and sorted alphabetically inside each group. Fixed list, no free text. On phone the list opens as a
- * full-screen sheet; from md up it stays inline under the field.
+ * full-screen sheet (default) or stays inline under the field like on desktop (`phone="inline"`, the apply boards);
+ * from md up it stays inline under the field. `initialQuery` starts the search with text (a board's typed state).
  */
 export interface DistrictMultiSelectProps {
   districts: District[];
@@ -29,6 +30,10 @@ export interface DistrictMultiSelectProps {
   sheetTitle?: string;
   /** from md up: keep the grouped list open under the field (default true); false shows the field alone */
   inlineList?: boolean;
+  /** phone behaviour: the full-screen sheet (default) or the inline field and list of the desktop */
+  phone?: "sheet" | "inline";
+  /** text already typed in the search field */
+  initialQuery?: string;
   className?: string;
 }
 
@@ -39,9 +44,10 @@ const SearchIcon = () => (
   </svg>
 );
 
-export function DistrictMultiSelect({ districts, value, onChange, sectors, requireSector, disabled, error, label, placeholder = "ابحث عن حي", requestHref, note, sheetTitle = "الأحياء", inlineList = true, className }: DistrictMultiSelectProps) {
+export function DistrictMultiSelect({ districts, value, onChange, sectors, requireSector, disabled, error, label, placeholder = "ابحث عن حي", requestHref, note, sheetTitle = "الأحياء", inlineList = true, phone = "sheet", initialQuery = "", className }: DistrictMultiSelectProps) {
   const uid = useId();
-  const [q, setQ] = useState("");
+  const sheet = phone === "sheet";
+  const [q, setQ] = useState(initialQuery);
   const [open, setOpen] = useState(false);
   const blocked = disabled || (requireSector && (!sectors || sectors.length === 0));
   const errorText = error === true ? "اختر حياً واحداً على الأقل" : error || "";
@@ -145,39 +151,41 @@ export function DistrictMultiSelect({ districts, value, onChange, sectors, requi
       )}
       {tags}
       {/* phone: the field opens a full-screen sheet */}
-      <div className="md:hidden">
-        {blocked ? (
-          field()
-        ) : (
-          <button type="button" onClick={() => setOpen(true)} className={cx("flex h-11 w-full items-center gap-2 px-3 text-start", fieldLook)} aria-haspopup="dialog" aria-expanded={open}>
-            <SearchIcon />
-            <span className={cx("text-[14px]", showError ? "text-muted" : "text-muted")}>{showError ? errorText : placeholder}</span>
-          </button>
-        )}
-        {open && (
-          <div role="dialog" aria-modal="true" aria-label={sheetTitle} className="fixed inset-0 z-50 flex flex-col bg-paper">
-            <div className="flex h-14 shrink-0 items-center justify-between gap-3 px-4" style={{ borderBottom: "1.5px solid var(--smq-ink)" }}>
-              <span className="text-h3">{sheetTitle}</span>
-              <button type="button" onClick={() => setOpen(false)} className="h-11 bg-ink px-4 text-[13px] font-extrabold text-paper cut-s">
-                تم
-              </button>
+      {sheet && (
+        <div className="md:hidden">
+          {blocked ? (
+            field()
+          ) : (
+            <button type="button" onClick={() => setOpen(true)} className={cx("flex h-11 w-full items-center gap-2 px-3 text-start", fieldLook)} aria-haspopup="dialog" aria-expanded={open}>
+              <SearchIcon />
+              <span className={cx("text-[14px]", showError ? "text-muted" : "text-muted")}>{showError ? errorText : placeholder}</span>
+            </button>
+          )}
+          {open && (
+            <div role="dialog" aria-modal="true" aria-label={sheetTitle} className="fixed inset-0 z-50 flex flex-col bg-paper">
+              <div className="flex h-14 shrink-0 items-center justify-between gap-3 px-4" style={{ borderBottom: "1.5px solid var(--smq-ink)" }}>
+                <span className="text-h3">{sheetTitle}</span>
+                <button type="button" onClick={() => setOpen(false)} className="h-11 bg-ink px-4 text-[13px] font-extrabold text-paper cut-s">
+                  تم
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto p-4">
+                {tags}
+                {field(true)}
+                {list}
+                {note && <p className="mt-2 text-caption text-muted">{note}</p>}
+              </div>
             </div>
-            <div className="flex-1 overflow-y-auto p-4">
-              {tags}
-              {field(true)}
-              {list}
-              {note && <p className="mt-2 text-caption text-muted">{note}</p>}
-            </div>
-          </div>
-        )}
-      </div>
-      {/* desktop: inline */}
-      <div className="hidden md:block">
+          )}
+        </div>
+      )}
+      {/* desktop (and the inline phone): the field with the list under it */}
+      <div className={cx(sheet && "hidden md:block")}>
         {field()}
         {!blocked && inlineList && <div className="max-h-[320px] overflow-y-auto">{list}</div>}
       </div>
       {showError && <span className="mt-1 text-caption font-bold text-gold-text md:hidden">{errorText}</span>}
-      {note && <p className="mt-2 hidden text-caption text-muted md:block">{note}</p>}
+      {note && <p className={cx("mt-2 text-caption text-muted", sheet && "hidden md:block")}>{note}</p>}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 // Site settings (Admin-SiteSettings-D, Admin-Users-D, HeaderFooter, Contact-D) and the alliance settings
 // (Admin-AllianceSettings-D). The office pin and the real licences come from the brief; the embed URLs are built from
 // the coordinates until the owner pastes Google's own «Embed a map» code (docs/route-map.md).
+import { districts } from "./districts";
 import type { AllianceSettings, SiteSettings } from "./types";
 
 export const OFFICE_LAT = 21.5604526;
@@ -69,6 +70,7 @@ export const settings: SiteSettings = {
     youtube: "",
   },
   domain: "smq-re.com",
+  reservationDays: 14,
   switches: { financingBlock: false, testimonials: false, alliancePublic: true, marketersOpen: true },
   siteSwitches: { showSoldInResults: false, generatedLabel: true, acceptOwnerListings: true },
   whatsappBusiness: {
@@ -107,7 +109,7 @@ export const allianceSettings: AllianceSettings = {
     specialties: ["عماير تجارية", "عماير سكنية", "أراضي مطورة", "أراضي خام", "فلل", "شقق", "مكاتب", "مستودعات", "أراضي زراعية", "صناعية", "تعليمي", "منتجعات وشاليهات", "أخرى"],
     hours: ["دوام واحد", "صباحي", "مسائي", "أخرى"],
     applicantRoles: ["مالك المكتب العقاري", "مدير", "موظف", "أخرى"],
-    districtsCount: 30,
+    districtsCount: districts.length,
   },
   forms: [
     { key: "alliance", nameAr: "طلب الانضمام للتحالف", metaAr: "3 خطوات · /alliance/apply · آخر رد اليوم", open: true, responses: 41, imported: 37, path: "/alliance/apply" },

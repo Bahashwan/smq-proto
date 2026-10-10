@@ -1,52 +1,19 @@
 "use client";
-// G8 · the AdminShell every content page renders (fixture notifications, nav counters from the selectors and the
-// store), the «المحتوى والأسئلة › …» path, the page head, the save strip of the content boards and the AR / EN switch
+// G8 · the AdminShell every content page renders (the shared bell and live nav counters of components/admin), the
+// «المحتوى والأسئلة › …» path, the page head, the save strip of the content boards and the AR / EN switch
 // with the board's «4 حقول فارغة» wording.
-import { useMemo, type KeyboardEvent, type ReactNode } from "react";
+import type { KeyboardEvent, ReactNode } from "react";
 import Link from "next/link";
-import { AdminShell, PageHeader, type AdminShellProps, type NavCounts, type Notification } from "@/components/admin";
-import { notifications as notificationFixture } from "@/data/content";
-import { allianceOverview, approvalCounts, leadCounts, marketersByStage } from "@/data/selectors";
-import { useStore } from "@/lib/store";
+import { AdminShell, PageHeader, type AdminShellProps } from "@/components/admin";
 import { cx, fmtNum } from "@/lib/format";
 
 export const SAUD = { name: "سعود", role: "مدير", initial: "س" };
 export const NOURA = { name: "نورة", role: "محررة", initial: "ن" };
 
-/** The bell's items, mapped from the fixture (Admin-Pieces-D · 1). */
-export const ADMIN_NOTIFICATIONS: Notification[] = notificationFixture.map((n) => ({
-  id: n.id,
-  title: n.titleAr || undefined,
-  text: n.textAr,
-  when: n.whenAr,
-  href: n.href,
-  linkLabel: n.linkAr,
-  read: !n.unread,
-}));
-
-/** approvals = open submissions · leads = «بلا رد» · marketers = new applicants · alliance = applications to verify + open disputes. */
-function useAdminCounts(): NavCounts {
-  const approvals = useStore((s) => s.approvals);
-  const leads = useStore((s) => s.leads);
-  const marketers = useStore((s) => s.marketers);
-  const applications = useStore((s) => s.applications);
-  const referralStages = useStore((s) => s.referralStages);
-  return useMemo(() => {
-    const ov = allianceOverview({ applicationOverrides: applications, referralOverrides: referralStages });
-    return {
-      approvals: approvalCounts(approvals).open,
-      leads: leadCounts(leads).unanswered,
-      marketers: marketersByStage(marketers).new.length,
-      alliance: ov.pendingApplications + ov.disputes,
-    };
-  }, [approvals, leads, marketers, applications, referralStages]);
-}
-
 export type G8ShellProps = Omit<AdminShellProps, "notifications" | "counts">;
 
 export function G8Shell({ active = "content", ...props }: G8ShellProps) {
-  const counts = useAdminCounts();
-  return <AdminShell active={active} {...props} notifications={ADMIN_NOTIFICATIONS} counts={counts} />;
+  return <AdminShell active={active} {...props} />;
 }
 
 /** «المحتوى والأسئلة › الأسئلة الشائعة» */

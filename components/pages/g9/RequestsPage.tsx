@@ -456,6 +456,7 @@ export function RequestsPage() {
       title={<RoomTitle section="الطلبات والمطابقات" />}
       subtitle="كل طلب يحمل مصدره. يُرسل لمن يغطي الحي مرتّبين بالميزان، وتصل عروضهم هنا، وSMQ تختار العرض وتنشئ سجل الإحالة"
       user={{ name: "نورة", role: "محررة", initial: "ن" }}
+      inlineActions
       actions={
         <>
           <span className="flex flex-wrap items-center gap-1.5 text-[11px] font-bold">

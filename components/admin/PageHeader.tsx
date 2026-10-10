@@ -15,13 +15,15 @@ export interface PageHeaderProps {
   className?: string;
   /** Smaller title (section headers inside a page, 18px). */
   size?: "page" | "section";
+  /** From md up keep the actions beside a long subtitle instead of wrapping them under it (Admin-AllianceRequests-D). */
+  inlineActions?: boolean;
 }
 
-export function PageHeader({ title, subtitle, actions, note, as: Tag = "h1", className, size = "page" }: PageHeaderProps) {
+export function PageHeader({ title, subtitle, actions, note, as: Tag = "h1", className, size = "page", inlineActions }: PageHeaderProps) {
   const noteNode = note === true ? ILLUSTRATIVE_NOTE : note || null;
   return (
-    <div className={cx("flex flex-wrap items-end justify-between gap-x-4 gap-y-3", className)}>
-      <div className="flex min-w-0 flex-col gap-1">
+    <div className={cx("flex flex-wrap items-end justify-between gap-x-4 gap-y-3", inlineActions && "md:flex-nowrap", className)}>
+      <div className={cx("flex min-w-0 flex-col gap-1", inlineActions && "md:flex-1")}>
         <Tag className={cx("font-extrabold leading-tight", size === "page" ? "text-h3 md:text-[28px]" : "text-h3")}>{title}</Tag>
         {(subtitle || noteNode) && (
           <span className="text-caption font-normal text-muted md:text-label md:font-normal">
@@ -31,7 +33,7 @@ export function PageHeader({ title, subtitle, actions, note, as: Tag = "h1", cla
           </span>
         )}
       </div>
-      {actions && <div className="flex flex-wrap items-center gap-2">{actions}</div>}
+      {actions && <div className={cx("flex flex-wrap items-center gap-2", inlineActions && "md:shrink-0")}>{actions}</div>}
     </div>
   );
 }

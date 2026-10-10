@@ -35,7 +35,7 @@ export function MarketerSent() {
   ];
 
   return (
-    <Shell footer={MARKETER_FOOTER}>
+    <Shell footer={MARKETER_FOOTER} waText="مسوّق">
       <SentLayout
         text="طلب انضمامك كمسوّق عند فريق SMQ. نتواصل معك خلال أسبوع لمقابلة قصيرة على واتساب أو اتصال، وعند القبول تصلك صفحتك ورابطك."
         number={<NumberBlock no={s.no} line="اذكر الرقم في أي تواصل." />}

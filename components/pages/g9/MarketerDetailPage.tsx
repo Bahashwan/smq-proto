@@ -20,7 +20,7 @@ import { initial } from "./MarketersPage";
 type Edit = { name?: string; phoneMasked?: string; social?: string; bio?: string; slug?: string };
 type Note = { by: string; at: string; text: string };
 
-/** «نشط منذ 2026/09/14 · الروضة، الصفا، النعيم · 3 إلى 5 سنوات · آخر زيارة عبر رابطه أمس» */
+/** «نشط منذ 2026/09/14 · الروضة، الصفا، النعيم · 3 إلى 5 سنوات · آخر زيارة عبر رابطه قبل ساعتين» */
 function headLine(m: Marketer, stage: Marketer["stage"]): string {
   const since =
     stage === "active"
@@ -32,8 +32,9 @@ function headLine(m: Marketer, stage: Marketer["stage"]): string {
           : stage === "interview"
             ? m.interviewAt
             : m.submittedAt && `وصل ${agoShort(m.submittedAt)}`;
-  const last = leads.filter((l) => l.viaMarketer === m.id).sort((a, b) => (a.at < b.at ? 1 : -1))[0];
-  return [since, m.districts.map(districtAr).join("، "), m.yearsLabel, stage === "active" && last ? `آخر زيارة عبر رابطه ${agoLabel(last.at)}` : null].filter(Boolean).join(" · ");
+  // the link's latest visit; without one, the newest lead the marketer brought
+  const last = m.lastVisitAt ?? leads.filter((l) => l.viaMarketer === m.id).sort((a, b) => (a.at < b.at ? 1 : -1))[0]?.at;
+  return [since, m.districts.map(districtAr).join("، "), m.yearsLabel, stage === "active" && last ? `آخر زيارة عبر رابطه ${agoLabel(last)}` : null].filter(Boolean).join(" · ");
 }
 
 function DataRow({ label, children }: { label: string; children: React.ReactNode }) {

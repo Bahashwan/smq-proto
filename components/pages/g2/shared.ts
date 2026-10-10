@@ -172,13 +172,6 @@ export function maskPhone(phone: string): string {
   return `${d.slice(0, 2)}X XXX ${d.slice(-4)}`;
 }
 
-/**
- * The UnitCard status badge carries `absolute top-3 start-3`, but StatusBadge's own `relative` wins in the generated
- * CSS order, so the hexagon falls under the image. Until components/ui fixes it, the card lists force the position
- * (no-op once fixed). Reported to the components/ui owner.
- */
-export const CARD_BADGE_FIX = "[&_[data-status]]:absolute!";
-
 /** «+6 وحدات» · «+2 وحدة» · «+12 وحدة» (the board's pill form) */
 export function deltaUnits(n: number): string {
   return `+${n} ${n >= 3 && n <= 10 ? "وحدات" : "وحدة"}`;

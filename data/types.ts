@@ -277,6 +277,7 @@ export interface Marketer {
   licenceExpiresOn?: string;
   peakNoteAr?: string; // «الذروة: مساء الخميس»
   negotiatingUnit?: string; // the unit code of the deal in negotiation
+  lastVisitAt?: string; // ISO · the latest visit through the marketer's link («آخر زيارة عبر رابطه قبل ساعتين»)
 }
 
 export type LeadKind = "whatsapp" | "call" | "form" | "notify" | "owner";
@@ -482,6 +483,8 @@ export interface SiteSettings {
   social?: { handle: string; x: string; instagram: string; snapchat: string; tiktok: string; linkedin: string; youtube: string };
   siteSwitches?: { showSoldInResults: boolean; generatedLabel: boolean; acceptOwnerListings: boolean };
   domain?: string;
+  /** days a deposit holds the price («عربون حجز يثبّت السعر 14 يوماً», FAQ faq-02 / faq-04, Unit-Reserved-M) */
+  reservationDays?: number;
 }
 
 // ---------------------------------------------------------------------------

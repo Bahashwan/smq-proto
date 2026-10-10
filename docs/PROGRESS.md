@@ -73,6 +73,10 @@ Phase 8 · Images
 Phase 9 · Link previews and icons
 - [x] `/og/home`, `/og/project/[slug]`, `/og/unit/[code]` rendered to `public/og/*.png` and wired (OG-Home is the site default); favicon and app icons per the Icons board
 
+Phase 10 · Board review round (no images)
+- [x] Shared gaps from the build reports closed: header `waText` + `menu` (alliance flow boards: logo + WhatsApp «التحالف», no menu; marketer pages «مسوّق»), menu rows at the board's 67px, desktop skeleton card with the hexagon badge, the hub's large door with the CTA arrow, inline phone district picker + typed search, admin counters and bell shared by every admin page (`components/admin/live.ts`), PageHeader `inlineActions`, CompareToggle `label`, gold breadcrumb links, live home counts, data (`districtsCount` from the fixture, `reservationDays` in settings, SEO variables as on Admin-SEO-D, marketer `lastVisitAt`)
+- [~] Independent board-vs-page review per group (`scripts/shots/pair.ts` sheets + `npm run qa:copy`), then fixes per group
+
 ## Decision log
 
 | Date | Decision | Source |

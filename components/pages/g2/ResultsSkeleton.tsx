@@ -111,7 +111,7 @@ export function DesktopGridSkeleton() {
       </span>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))] gap-4">
         {Array.from({ length: 6 }).map((_, i) => (
-          <Skeleton.Card key={i} actions={false} />
+          <Skeleton.Card key={i} grid />
         ))}
       </div>
     </div>

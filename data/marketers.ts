@@ -22,6 +22,7 @@ export const marketers: Marketer[] = [
     districts: ["rawdah", "safa", "naeem"],
     years: 4,
     yearsLabel: "3 إلى 5 سنوات",
+    lastVisitAt: "2026-10-10T20:00:00+03:00",
     social: "@abdullah.re · سناب 12k",
     bio: "«أسوّق عبر سناب للعوائل في الروضة والصفا، 3 صفقات شقق في 2025»",
     cv: "cv-abdullah.pdf",

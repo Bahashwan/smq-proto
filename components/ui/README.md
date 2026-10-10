@@ -28,7 +28,7 @@ Client components (`"use client"`): Chip/Segmented/Tabs/CompareToggle/Switch, th
 | `FilterChip` | `children` · `onRemove?` or `href?` · `className?` · 32px, sand, `×` with `aria-label="إزالة"` |
 | `Segmented<T>` | `options: {value, label, disabled?}[]` · `value` · `onChange(value)` · `label: string` (group aria-label) · `stretch?` · `size?: "m" \| "s"` · `className?` |
 | `Tabs` | `items: {label, href? \| onClick?, active?, id?, state?}[]` · `label: string` · `size?: "m" \| "l"` · `className?` · 1.5px ink rule, active = 3px gold rule |
-| `CompareToggle` | `checked` · `onChange?(checked)` · `disabled?` · `full?` («ممتلئة (3/3)») · `unavailable?` (reserved/sold: disabled box, `aria-label="غير متاح للمقارنة"`) · `size?: "s" \| "m" \| "l"` (44 / 46 / 50px) · `lang?` · `className?` |
+| `CompareToggle` | `checked` · `onChange?(checked)` · `disabled?` · `full?` («ممتلئة (3/3)») · `unavailable?` (reserved/sold: disabled box, `aria-label="غير متاح للمقارنة"`) · `size?: "s" \| "m" \| "l"` (44 / 46 / 50px) · `lang?` · `label?` (the word instead of «قارن», e.g. «أضف للمقارنة»; the full state keeps «ممتلئة (3/3)» / "Full (3/3)") · `className?` |
 | `Switch` | `checked` · `onChange(checked)` · `label?` (the word beside the switch) · `aria-label?` · `disabled?` · `className?` · hexagon knob: gold at the line end = on |
 
 ## Fields (sheet §3, Contact-Error-M rules)
@@ -76,7 +76,7 @@ All fields: label 11/600 muted (gold when focused or in error), control 48px wit
 | `RowGroup` | `children` · `header?: ReactNode[]` · `columns?` (CSS grid template) · `framed?` (default true: 1.5px ink frame; false: top rule + hairlines) · `aria-label?` · `className?` |
 | `Row` | grid row: `cells: ReactNode[]` · or key/value: `label` + `value` + `tbc?` (adds the chip) · `href?` / `onClick?` (hover sand) · `muted?` · `columns?` · `divider?` (default true) · `state?` (QA) · `className?` |
 | `Accordion` | `items: {id, q, a, draft?, defaultOpen?}[]` · `onToggle?(id, open)` · `className?` · `<details>`; hexagon ring «+» → gold «−» |
-| `Breadcrumb` | `items: {label, href?}[]` (last = current page) · `label?` («المسار») · `className?` |
+| `Breadcrumb` | `items: {label, href?}[]` (last = current page, bold ink; links in gold text, slashes muted, as the boards) · `label?` («المسار») · `className?` |
 | `Eyebrow` | `children` · `onInk?` · `onGold?` · `as?` · `className?` |
 | `SectionHeading` | `title` · `link?: {label, href}` · `size?: "s" \| "m" \| "l"` · `as?: "h1" \| "h2" \| "h3"` · `eyebrow?` · `description?` · `onInk?` · `id?` · `className?` |
 | `HexNumber` | `children` («01»…«05») · `tone?: "gold" \| "ink" \| "ink-2"` · `size?: 32 \| 40 \| 48 \| 56` · `className?` |
@@ -115,7 +115,7 @@ All fields: label 11/600 muted (gold when focused or in error), control 48px wit
 | `BottomSheet` | `open` · `onClose` · `title?` · `actions?` (header nodes before the × button) · `children` · `footer?` · `desktop?: "sheet" \| "dialog"` (centred 560px dialog from md) · `size?: "auto" \| "full"` · `closeLabel?` · `portal?` (default true) · `labelledBy?` · `className?` · 200ms slide, ink scrim, focus trap, Esc, scrim click, body scroll lock, focus restored |
 | `Skeleton.Block` / `SkeletonBlock` | `w?` / `h?` (px or class) · `tone?: "slot" \| "sand"` · `cut?` · `className?` |
 | `Skeleton.Lines` | `n?` · `className?` |
-| `Skeleton.Card` | `actions?` · `className?` · the results-card skeleton |
+| `Skeleton.Card` | `actions?` · `grid?` (Results-Loading-D card: hexagon badge placeholder, 46px price row, no actions) · `className?` · the results-card skeleton |
 | `Skeleton.Status` | `children` («نبحث في الوحدات المتاحة…») · pulsing gold marker, `role=status` |
 | `Skeleton.Filters` | the filter row skeleton |
 
@@ -123,7 +123,7 @@ All fields: label 11/600 muted (gold when focused or in error), control 48px wit
 
 | Export | Props |
 |---|---|
-| `Header` | `variant?: "ar" \| "en"` · `showEn?` (the language switch: only on `/`, `/units`, `/units/[code]` and their `/en` twins) · `transparent?` (overlay the hero until scrolled) · `switchHref?` (computed from the path when omitted) · `active?` (force the active nav item) · `demo?: "default" \| "scrolled"` + `withMenu?` (QA) · `className?`. Sticky 72px ink bar (64px on the phone); after 120px: 56px, mark + «SMQ العقارية», phone → icon, 2px gold rule; on the phone it hides on scroll down and returns on scroll up. The menu button and `?menu=1` open the ink sheet from the top (links of the HeaderFooter board, واتساب / اتصال / EN, Esc, focus trap) |
+| `Header` | `variant?: "ar" \| "en"` · `showEn?` (the language switch: only on `/`, `/units`, `/units/[code]` and their `/en` twins) · `transparent?` (overlay the hero until scrolled) · `switchHref?` (computed from the path when omitted) · `active?` (force the active nav item) · `demo?: "default" \| "scrolled"` + `withMenu?` (QA) · `waText?` (prefilled WhatsApp message on every WhatsApp link: «التحالف», «مسوّق», an application id) · `menu?` (default true; the alliance flow boards set false: logo + WhatsApp only) · `className?`. Sticky 72px ink bar (64px on the phone); after 120px: 56px, mark + «SMQ العقارية», phone → icon, 2px gold rule; on the phone it hides on scroll down and returns on scroll up. The menu button and `?menu=1` open the ink sheet from the top (links of the HeaderFooter board at 20px with the normal line height, about 67px a row; واتساب / اتصال / EN, Esc, focus trap) |
 | `Footer` | `variant?: "ar" \| "en"` · `compact?` (the results / unit footer) · `settings?: {phone?, whatsapp?, email?, addressAr?, hoursAr?, licence?: {rega, cr}}` (overrides; the defaults already come from `data/settings`) · `links?: NavItem[]` · `className?` · always carries «ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433» and the © line |
 | `LicenceLine` | `variant?` · `licence?: {rega, cr}` · `className?` |
 | `EnHtmlAttrs` | no props · sets `<html lang="en" dir="ltr">` before paint (inline script) and on mount, restores `ar` / `rtl` on unmount. Use inside the `/en` wrapper `<div dir="ltr" lang="en" className="font-latin">` |

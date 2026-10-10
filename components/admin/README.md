@@ -8,7 +8,8 @@ Toasts are not duplicated here: fire `useStore().toast(text, { action })` from `
 
 | Export | Props |
 |---|---|
-| `AdminShell` | `title?`, `subtitle?`, `actions?` (slot), `children`, `active?: NavKey` (derived from the path when omitted), `phoneActive?: NavKey`, `notifications?: Notification[]`, `phoneTabs?: boolean \| PhoneTab[]` (default the seven Admin-M tabs), `counts?: NavCounts` (approvals / leads / marketers / alliance numbers from the page's fixtures), `note?: boolean \| ReactNode` (true → «الأرقام توضيحية» on the header line), `user?: AdminUser` (default سعود · مدير · س), `topbarCaption?`, `phoneHideHeader?`, `layout?: "auto" \| "desktop" \| "phone"` (previews), `className?`, `mainClassName?` |
+| `AdminShell` | `title?`, `subtitle?`, `actions?` (slot), `children`, `active?: NavKey` (derived from the path when omitted), `phoneActive?: NavKey`, `notifications?: Notification[]` (default `ADMIN_NOTIFICATIONS`, the fixture bell), `phoneTabs?: boolean \| PhoneTab[]` (default the seven Admin-M tabs), `counts?: NavCounts` (approvals / leads / marketers / alliance; default the live `useAdminCounts()`), `note?: boolean \| ReactNode` (true → «الأرقام توضيحية» on the header line), `user?: AdminUser` (default سعود · مدير · س), `topbarCaption?`, `phoneHideHeader?`, `inlineActions?` (PageHeader option below), `layout?: "auto" \| "desktop" \| "phone"` (previews), `className?`, `mainClassName?` |
+| `useAdminCounts()` · `useAllianceOverview()` · `ADMIN_NOTIFICATIONS` (`live.ts`) | Shared by every admin page: nav counters from the selectors plus the session store (open approvals, «بلا رد» leads, new marketers, applications to verify + open disputes), the alliance overview with the store's overrides, and the bell's fixture items. A change on one page updates the counters on every page |
 | `AdminTopbar` | `notifications?`, `onMenu?`, `user?`, `searchPlaceholder?` («ابحث في الوحدات والطلبات والزوار»), `siteHref?` («عرض الموقع» → `/`), `caption?`, `layout?`, `className?` |
 | `AdminSidebar` | `active?: NavKey`, `counts?`, `className?`, `onNavigate?`, `inSheet?` |
 | `AdminPhoneTabs` | `active?`, `counts?`, `tabs?: PhoneTab[]`, `layout?: "auto" \| "desktop" \| "phone"` (auto = hidden from md), `className?` |
@@ -16,7 +17,7 @@ Toasts are not duplicated here: fire `useStore().toast(text, { action })` from `
 | `NotificationsBell` | `items: Notification[]`, `onMarkAllRead?`, `allHref?` (default `/admin`), `large?` (44px, phone), `boxed?`, `className?`. Dropdown: «الإشعارات», «علّم الكل كمقروء», «كل الإشعارات»; closes on Esc / outside click |
 | `NotificationsList` | `items`, `className?` — the list alone |
 | `Notification` | `{ id, title?, text, when, href?, linkLabel?, read? }` |
-| `PageHeader` | `title`, `subtitle?`, `actions?`, `note?: boolean \| ReactNode`, `as?: "h1" \| "h2"`, `size?: "page" \| "section"`, `className?` |
+| `PageHeader` | `title`, `subtitle?`, `actions?`, `note?: boolean \| ReactNode`, `as?: "h1" \| "h2"`, `size?: "page" \| "section"`, `inlineActions?` (md+: actions stay beside a long subtitle, Admin-AllianceRequests-D), `className?` |
 | `SectionHeader` | `title`, `action?`, `subtitle?`, `className?` — h2 + link opposite (Admin-M sections) |
 | `ILLUSTRATIVE_NOTE` | the string «الأرقام توضيحية» |
 | `Panel` | `title?`, `action?`, `children`, `className?`, `bodyClassName?` (default `p-4`), `hairline?`, `as?`, `id?`, `aria-label?` — white panel with the ink frame and an optional header |

@@ -12,7 +12,7 @@ import type { ImageTier, Unit } from "@/data/types";
 import { unitBySlug } from "@/data/units";
 import { projectStats, type UnitOverrides } from "@/data/selectors";
 import { useResults, type ProjectGroup } from "./useResults";
-import { CARD_BADGE_FIX, RULE_B, compareName, deliveryShort, filtersKey, moreUnitsLabel, projectLine, soldMonth } from "./shared";
+import { RULE_B, compareName, deliveryShort, filtersKey, moreUnitsLabel, projectLine, soldMonth } from "./shared";
 import { ActiveChips, FiltersButton, SortControl, ViewToggle, viewHrefs } from "./ResultsToolbar";
 import { FiltersColumn, FiltersSheet } from "./FiltersForm";
 import { DesktopGridSkeleton, FiltersColumnSkeleton, LoadingStatus, PhoneListSkeleton, SLOW_AFTER_MS, SlowNotice, ToolbarSkeleton } from "./ResultsSkeleton";
@@ -110,7 +110,7 @@ function PhoneList({ groups, sold, overrides, tier }: ListProps) {
   const [visible, setVisible] = useState(PAGE_PHONE);
   const remaining = Math.max(0, cards.length - visible);
   return (
-    <div className={cx("flex flex-col gap-3.5", CARD_BADGE_FIX)}>
+    <div className="flex flex-col gap-3.5">
       {regroup(cards.slice(0, visible)).map(({ group, units }) => (
         <section key={group.project.id} aria-label={group.project.nameAr} className="flex flex-col gap-3.5">
           <ProjectRow group={group} overrides={overrides} />
@@ -144,7 +144,7 @@ function DesktopList({ groups, sold, overrides, tier }: ListProps) {
       {regroup(cards.slice(0, visible)).map(({ group, units }) => (
         <section key={group.project.id} aria-label={group.project.nameAr} className="flex flex-col gap-4">
           <ProjectRow group={group} overrides={overrides} desktop />
-          <div className={cx(grid, CARD_BADGE_FIX)}>
+          <div className={grid}>
             {units.map((unit) => (
               <UnitCard key={unit.code} unit={unit} status={unit.status} tier={tier} projectName={group.project.nameAr} compare={{ checked: compare.has(unit.slug), full: compare.isFull, onChange: () => compare.toggle(unit.slug) }} />
             ))}

@@ -36,11 +36,11 @@ export const MARKETER_FOOTER: NavItem[] = [
   { label: "الخصوصية", href: "/privacy" },
 ];
 
-/** Header (تعاون معنا active, as every G5 board draws it) + main + the compact footer with the board's links */
-export function Shell({ children, footer = ADD_FOOTER, mainClassName }: { children: ReactNode; footer?: NavItem[]; mainClassName?: string }) {
+/** Header (تعاون معنا active, as every G5 board draws it; `waText` prefills WhatsApp, «مسوّق» on the marketer boards) + main + the compact footer with the board's links */
+export function Shell({ children, footer = ADD_FOOTER, mainClassName, waText }: { children: ReactNode; footer?: NavItem[]; mainClassName?: string; waText?: string }) {
   return (
     <>
-      <Header active="/collaborate" />
+      <Header active="/collaborate" waText={waText} />
       <main className={cx("pb-12 md:pb-20", mainClassName)}>{children}</main>
       <Footer compact links={footer} />
     </>

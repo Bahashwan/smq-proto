@@ -8,6 +8,7 @@ import { AdminPhoneTabs } from "./AdminPhoneTabs";
 import { AdminSidebar } from "./AdminSidebar";
 import { AdminTopbar, layoutShow, type AdminUser } from "./AdminTopbar";
 import { Drawer } from "./Drawer";
+import { ADMIN_NOTIFICATIONS, useAdminCounts } from "./live";
 import type { Notification } from "./Notifications";
 import { PageHeader } from "./PageHeader";
 import type { NavCounts, NavKey, PhoneTab } from "./nav";
@@ -21,10 +22,11 @@ export interface AdminShellProps {
   active?: NavKey;
   /** Active phone tab when it differs from the sidebar item (Admin-M opens on «الموافقات»). */
   phoneActive?: NavKey;
+  /** The bell's items; the fixture notifications when omitted. */
   notifications?: Notification[];
   /** false hides the phone tab row; an array replaces the default seven tabs. */
   phoneTabs?: boolean | PhoneTab[];
-  /** Counters on the nav (approvals, leads, marketers, alliance) from the page's fixtures. */
+  /** Counters on the nav (approvals, leads, marketers, alliance); the live counters (fixtures + store) when omitted. */
   counts?: NavCounts;
   /** true → «الأرقام توضيحية» on the header line. */
   note?: boolean | ReactNode;
@@ -33,14 +35,18 @@ export interface AdminShellProps {
   topbarCaption?: ReactNode;
   /** Hide the page header on the phone (Admin-M starts with the tiles). */
   phoneHideHeader?: boolean;
+  /** Keep the header's actions beside a long subtitle from md up (PageHeader `inlineActions`). */
+  inlineActions?: boolean;
   /** auto = by viewport; desktop / phone force one layout (styleguide previews). */
   layout?: "auto" | "desktop" | "phone";
   className?: string;
   mainClassName?: string;
 }
 
-export function AdminShell({ title, subtitle, actions, children, active, phoneActive, notifications = [], phoneTabs = true, counts, note, user, topbarCaption, phoneHideHeader, layout = "auto", className, mainClassName }: AdminShellProps) {
+export function AdminShell({ title, subtitle, actions, children, active, phoneActive, notifications = ADMIN_NOTIFICATIONS, phoneTabs = true, counts: countsProp, note, user, topbarCaption, phoneHideHeader, inlineActions, layout = "auto", className, mainClassName }: AdminShellProps) {
   const [menu, setMenu] = useState(false);
+  const live = useAdminCounts();
+  const counts = countsProp ?? live;
   const mainPad = layout === "auto" ? "gap-4 px-4 py-4 md:gap-6 md:px-8 md:pb-12 md:pt-7" : layout === "desktop" ? "gap-6 px-8 pb-12 pt-7" : "gap-4 px-4 py-4";
   return (
     <div className={cx("bg-cream text-ink", layout === "auto" ? "min-h-dvh" : "min-h-full", className)}>
@@ -51,7 +57,7 @@ export function AdminShell({ title, subtitle, actions, children, active, phoneAc
         <main className={cx("flex min-w-0 flex-1 flex-col", mainPad, mainClassName)}>
           {(title || actions) && (
             <div className={cx(phoneHideHeader && (layout === "auto" ? "hidden md:block" : layout === "phone" ? "hidden" : "block"))}>
-              <PageHeader title={title} subtitle={subtitle} actions={actions} note={note} />
+              <PageHeader title={title} subtitle={subtitle} actions={actions} note={note} inlineActions={inlineActions} />
             </div>
           )}
           {children}
