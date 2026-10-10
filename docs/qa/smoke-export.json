@@ -1,0 +1,776 @@
+[
+  {
+    "board": "Home-M",
+    "route": "/",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Home-D",
+    "route": "/",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Header-Scrolled-D",
+    "route": "/",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "B-Hero",
+    "route": "/",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "HeaderFooter",
+    "route": "/?menu=1",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Services-M",
+    "route": "/services",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Services-D",
+    "route": "/services",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "About-M",
+    "route": "/about",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "About-D",
+    "route": "/about",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "NotFound-M",
+    "route": "/this-page-does-not-exist",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "NotFound-D",
+    "route": "/this-page-does-not-exist",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "About-Proof-D",
+    "route": "/about?proof=1",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Privacy-M",
+    "route": "/privacy",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Privacy-D",
+    "route": "/privacy",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "EN-Home-M",
+    "route": "/en",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "B-Card",
+    "route": "/units",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-M",
+    "route": "/units?district=rawdah&max=700000&type=apt&u=rz-d,ys-d",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-D",
+    "route": "/units?district=rawdah&max=700000&type=apt&u=rz-d,ys-d",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Results-Filters-M",
+    "route": "/units?district=rawdah&max=700000&type=apt&sheet=filters",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "State-Loading-M",
+    "route": "/units?skeleton=1",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-Loading-D",
+    "route": "/units?skeleton=1",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "State-Empty-M",
+    "route": "/units?district=faisaliyah&max=450000&beds=4&type=apt&feat=driver",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "State-Empty-D",
+    "route": "/units?district=faisaliyah&max=450000&beds=4&type=apt&feat=driver",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "State-Cards",
+    "route": "/units",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-Map-M",
+    "route": "/units/map?district=rawdah&max=700000&type=apt&pin=rwd-01",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-Map-D",
+    "route": "/units/map?district=rawdah&max=700000&type=apt&pin=rwd-01",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "EN-Card-M",
+    "route": "/en/units",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "State-Empty-Success-M",
+    "route": "/alliance/request/sent?req=REQ-2026-0412",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-M",
+    "route": "/units/rz-a",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-D",
+    "route": "/units/rz-a",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Compare-M",
+    "route": "/compare?u=rz-d,ys-d,rz-c",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Compare-D",
+    "route": "/compare?u=rz-d,ys-d,rz-c",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Unit-Reserved-M",
+    "route": "/units/ys-d?ustatus=reserved",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Sold-M",
+    "route": "/units/ys-a",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Roof-M",
+    "route": "/units/rz-rf",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Gallery-M",
+    "route": "/units/rz-a/gallery?i=3",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Gallery-D",
+    "route": "/units/rz-a/gallery?i=3",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Unit-Plan-M",
+    "route": "/units/rz-a/plan",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Tier-Real-M",
+    "route": "/units/rz-a?tier=real",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Tier-Gen-M",
+    "route": "/units/rz-a",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Tier-Typo-M",
+    "route": "/units/rz-a?tier=typo",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Compare-One-M",
+    "route": "/compare?u=rz-a",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Compare-Empty-M",
+    "route": "/compare",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "EN-Unit-M",
+    "route": "/en/units/rz-a",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Guide-M",
+    "route": "/guide",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Guide-D",
+    "route": "/guide",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Project-M",
+    "route": "/projects/garden-rawdah",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Project-D",
+    "route": "/projects/garden-rawdah",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Contact-M",
+    "route": "/contact",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Contact-D",
+    "route": "/contact",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Projects-M",
+    "route": "/projects",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Projects-D",
+    "route": "/projects",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Contact-Success-M",
+    "route": "/contact/sent",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Contact-Error-M",
+    "route": "/contact?offline=1",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Add-D",
+    "route": "/add",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Add-M",
+    "route": "/add/contact",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Add-Step1-M",
+    "route": "/add",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Add-Step2-M",
+    "route": "/add/details",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Add-Step2-Building-M",
+    "route": "/add/details?type=building",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Add-Step2-D",
+    "route": "/add/details?type=building",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Add-Step3-D",
+    "route": "/add/contact?type=building",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Add-Success-M",
+    "route": "/add/sent?no=2026-1043",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Add-Success-D",
+    "route": "/add/sent?no=2026-1042",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Hub-M",
+    "route": "/collaborate",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Hub-D",
+    "route": "/collaborate",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Marketer-M",
+    "route": "/marketers",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Marketer-D",
+    "route": "/marketers",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Marketer-Sent-M",
+    "route": "/marketers/sent",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Marketer-Sent-D",
+    "route": "/marketers/sent",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Alliance-M",
+    "route": "/alliance",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Alliance-D",
+    "route": "/alliance",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Alliance-Launch-M",
+    "route": "/alliance?members=0",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Step1-M",
+    "route": "/alliance/apply",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Step2-M",
+    "route": "/alliance/apply/coverage",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Step2-D",
+    "route": "/alliance/apply/coverage",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Step3-M",
+    "route": "/alliance/apply/offers",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Success-M",
+    "route": "/alliance/apply/sent",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Status-M",
+    "route": "/alliance/status/ALL-2026-0038?app=verified",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Status-M",
+    "route": "/alliance/status/ALL-2026-0038?app=rejected",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Status-M",
+    "route": "/alliance/status/ALL-2026-0038",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "MarketerPage-M",
+    "route": "/m/mk-07",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Request-M",
+    "route": "/member/office-09/requests/REQ-2026-0412",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Request-States-M",
+    "route": "/member/office-09/requests/REQ-2026-0412?mreq=expired",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Request-States-M",
+    "route": "/member/office-09/requests/REQ-2026-0412?mreq=answered",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Referral-M",
+    "route": "/member/office-09/referrals/REF-2026-0117",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Ledger-M",
+    "route": "/member/office-09",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Ledger-M",
+    "route": "/member/office-01",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Report-M",
+    "route": "/member/office-01/report",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Report-D",
+    "route": "/member/office-01/report",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Login-M",
+    "route": "/admin/login?error=1",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Admin-Login-D",
+    "route": "/admin/login?error=1",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-M",
+    "route": "/admin",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Admin-Overview-D",
+    "route": "/admin",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Approvals-D",
+    "route": "/admin/approvals/2026-1042",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Inventory-D",
+    "route": "/admin/units?import=1&sel=RZ-A,RZ-B",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-UnitEditor-D",
+    "route": "/admin/units/rz-a",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Projects-D",
+    "route": "/admin/projects",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-ProjectEditor-D",
+    "route": "/admin/projects/rwd-01",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Leads-D",
+    "route": "/admin/leads?lead=SMQ-8F3A2",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Leads-M",
+    "route": "/admin/leads",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Admin-Analytics-D",
+    "route": "/admin/analytics",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Visitors-D",
+    "route": "/admin/visitors?v=v-8f3a2",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Content-D",
+    "route": "/admin/content",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-PageEditor-D",
+    "route": "/admin/content/pages/home",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-FAQ-D",
+    "route": "/admin/content/faq?edit=faq-05",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Partners-D",
+    "route": "/admin/content/partners",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Testimonials-D",
+    "route": "/admin/content/testimonials",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Lists-D",
+    "route": "/admin/content/lists",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-SiteSettings-D",
+    "route": "/admin/content/site-settings",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-SEO-D",
+    "route": "/admin/content/seo",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Media-D",
+    "route": "/admin/content/media",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Users-D",
+    "route": "/admin/users?wa=manual",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Users-D",
+    "route": "/admin/users",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Pieces-D",
+    "route": "/admin/units?empty=1",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Pieces-D",
+    "route": "/admin/leads?empty=1",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Pieces-D",
+    "route": "/admin/units/rz-a",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Pieces-D",
+    "route": "/admin/content/needs-confirmation",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Marketers-D",
+    "route": "/admin/marketers",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-MarketerDetail-D",
+    "route": "/admin/marketers/mk-07",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Alliance-D",
+    "route": "/admin/alliance",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Alliance-M",
+    "route": "/admin/alliance",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceApplications-D",
+    "route": "/admin/alliance/applications?id=ALL-2026-0038",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceMembers-D",
+    "route": "/admin/alliance/members",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceMember-D",
+    "route": "/admin/alliance/members/office-01",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceRadar-D",
+    "route": "/admin/alliance/radar?district=obhur-north",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceRequests-D",
+    "route": "/admin/alliance/requests?req=REQ-2026-0412",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceReferrals-D",
+    "route": "/admin/alliance/referrals",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceReport-D",
+    "route": "/admin/alliance/report",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceSettings-D",
+    "route": "/admin/alliance/settings",
+    "width": 1440,
+    "issues": []
+  }
+]

@@ -72,6 +72,17 @@ await step("alliance · member sees the referral record", async () => {
   if (!(await page.getByText("REF-2026-0117").count())) throw new Error("record not shown");
 });
 
+// Owner: the building variant computes its yield, the success screen echoes the request number
+await step("owner · building details compute per-m² and gross yield", async () => {
+  await go("/add/details?type=building");
+  const text = await page.locator("main").innerText();
+  if (!/العائد/.test(text) || !/\d+(\.\d+)?\s*%/.test(text)) throw new Error("no computed yield on the building step");
+});
+await step("owner · success screen shows 2026-1042", async () => {
+  await go("/add/sent?no=2026-1042");
+  if (!(await page.getByText("2026-1042").count())) throw new Error("request number missing");
+});
+
 // Owner: approval checklist then «اعتماد ونشر»
 await step("owner · admin approves 2026-1042 after the checklist", async () => {
   await go("/admin/approvals/2026-1042");
