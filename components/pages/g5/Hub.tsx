@@ -99,7 +99,7 @@ export function Hub() {
             title="عندك مكتب عقاري؟"
             cta="اعرف عن التحالف"
             icon={<Honeycomb />}
-            className={DOOR}
+            className={`${DOOR} [&>span>*:not([aria-hidden])]:relative`}
             text={
               <span className="relative flex flex-col gap-3">
                 <span className="text-label font-normal leading-relaxed md:text-body">
@@ -127,7 +127,7 @@ export function Hub() {
             cta="انضم كمسوّق"
             icon={
               marks ? (
-                <span className="absolute end-5 top-5 border-[1.5px] border-gold px-1.5 py-0.5 text-caption font-bold text-gold-text md:end-6 md:top-6">
+                <span className="absolute end-5 top-5 text-caption font-bold text-gold-text md:end-6 md:top-6">
                   <MarkedText text="الحقول [للتأكيد]" />
                 </span>
               ) : null

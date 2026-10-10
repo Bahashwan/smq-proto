@@ -55,7 +55,7 @@ export function MarketerSent() {
               تابع طلبك عبر واتساب
             </Button>
             <HomeButton />
-            <Button variant="link" href="/m/mk-07" className="h-11 self-center md:ms-2">
+            <Button variant="link" href="/m/mk-07" className="h-11 self-center whitespace-nowrap md:ms-2">
               كيف تبدو صفحة المسوّق بعد القبول ←
             </Button>
           </>

@@ -45,7 +45,7 @@ function Tiles() {
   const tiles = [
     { hex: "gold" as const, t: "رابط متابَع", s: <>ورمز QR باسمك</> },
     { hex: "ink" as const, t: "أرقامك", s: <>زيارات، واتساب، طلبات</> },
-    { hex: "outline" as const, t: "عمولة", s: <MarkedText text="النسبة [للتأكيد]" className="text-gold-text" /> },
+    { hex: "outline" as const, t: "عمولة", s: <span className="text-gold-text"><MarkedText text="النسبة [للتأكيد]" /></span> },
   ];
   return (
     <div className="grid grid-cols-3 gap-2.5 md:gap-2">
@@ -153,7 +153,7 @@ export function MarketerForm() {
               طلب الانضمام
             </h2>
             {marks && (
-              <span className="max-w-48 text-end text-caption font-extrabold leading-relaxed text-gold-text md:max-w-none md:border-[1.5px] md:border-gold md:px-2 md:py-1">
+              <span className="max-w-48 text-end text-caption font-extrabold leading-relaxed text-gold-text md:max-w-none">
                 <MarkedText text="الحقول [للتأكيد] حتى يصل النموذج الحقيقي" />
               </span>
             )}
@@ -163,7 +163,7 @@ export function MarketerForm() {
             <TextField id={ID.phone} label="رقم الجوال (واتساب)" placeholder="05XXXXXXXX" type="tel" inputMode="tel" autoComplete="tel" ltr aria-required value={draft.phone} onChange={(e) => update({ phone: e.target.value })} error={errors[ID.phone]} wrapperClassName="md:order-2" />
             <TextField id="mk-fal" label="رقم رخصة فال إن وجدت" placeholder="اختياري، يرفع أولويتك" inputMode="numeric" value={draft.fal} onChange={(e) => update({ fal: e.target.value })} wrapperClassName="md:order-3" />
             <div className="md:order-5 md:col-span-2" id={ID.districts}>
-              <DistrictMultiSelect districts={districts} value={draft.districts} onChange={(v) => update({ districts: v })} label="الأحياء التي تعرفها" placeholder="أضف حياً من القائمة" inlineList={false} />
+              <DistrictMultiSelect districts={districts} value={draft.districts} onChange={(v) => update({ districts: v })} label={<span className="text-caption font-semibold text-muted">الأحياء التي تعرفها</span>} placeholder="أضف حياً من القائمة" inlineList={false} />
             </div>
             <SelectField id="mk-years" label="سنوات الخبرة" options={YEARS.map((y) => ({ value: y, label: y }))} value={draft.years} onChange={(e) => update({ years: e.target.value })} wrapperClassName="md:order-4" />
             <TextField id="mk-social" label="حسابات التواصل" placeholder="إكس، إنستغرام، سناب: اسم المستخدم" value={draft.social} onChange={(e) => update({ social: e.target.value })} wrapperClassName="md:order-6" />
