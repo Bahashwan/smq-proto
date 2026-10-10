@@ -109,7 +109,7 @@ export function ProofBlocks() {
       <section className="bg-ink text-paper cut-xl">
         <div className="container-smq py-10 md:py-14 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
           {numbers.map((n) => (
-            <div key={n.value} className="flex flex-col gap-1.5">
+            <div key={n.value} className="flex flex-col gap-1.5 border-s-[3px] border-gold ps-4">
               <span className="text-price-s md:text-[40px] font-extrabold leading-none tnum">{n.value}</span>
               <span className="text-label font-normal text-on-ink-muted leading-snug">{n.label}</span>
             </div>
@@ -128,13 +128,13 @@ export function ProofBlocks() {
         </div>
         <div className="grid gap-4 md:grid-cols-3 md:gap-6">
           {testimonials.map((t) => (
-            <blockquote key={t.id} className="m-0 flex flex-col gap-3 p-5 border-hairline">
+            <blockquote key={t.id} className="m-0 flex flex-col gap-3 p-5 md:p-6 border-interactive">
               <span aria-hidden className="size-4 hex-flat bg-gold" />
-              <p className="m-0 text-body leading-relaxed">
+              <p className="m-0 text-body md:text-[17px] leading-relaxed">
                 <MarkedText text={t.text} />
               </p>
-              <footer className="flex flex-wrap items-center justify-between gap-2 text-caption text-muted">
-                <span className="font-bold text-ink">
+              <footer className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-line text-caption font-normal text-muted">
+                <span>
                   {t.name} · {t.role}
                   {t.unitCode ? ` · ${t.unitCode}` : ""}
                 </span>

@@ -47,10 +47,10 @@ const SERVICES: Service[] = [
     framed: true,
     actions: (
       <>
-        <Button href={waLink("أريد شراء عقار")} size="s" className="h-11 px-4">
+        <Button href={waLink("أريد شراء عقار")} size="s" className="h-12 px-4 flex-1 md:flex-none">
           ابدأ على واتساب
         </Button>
-        <Button href="/#finder" variant="ghost" size="s" className="h-11 px-4">
+        <Button href="/#finder" variant="ghost" size="s" className="h-12 px-4">
           جرّب الميزانية
         </Button>
       </>
@@ -70,10 +70,10 @@ const SERVICES: Service[] = [
     tone: "sand",
     actions: (
       <>
-        <Button href="/add" variant="secondary" size="s" className="h-11 px-4">
+        <Button href="/add" variant="secondary" size="s" className="h-12 px-4 flex-1 md:flex-none">
           أضف عقارك مجاناً
         </Button>
-        <Button href={waLink("أريد بيع عقاري")} variant="ghost" size="s" className="h-11 px-4">
+        <Button href={waLink("أريد بيع عقاري")} variant="ghost" size="s" className="h-12 px-4">
           واتساب
         </Button>
       </>
@@ -91,7 +91,7 @@ const SERVICES: Service[] = [
     ],
     tone: "paper",
     actions: (
-      <Button href={waLink("أريد استشارة استثمارية")} size="s" className="h-11 px-4">
+      <Button href={waLink("أريد استشارة استثمارية")} size="s" className="h-12 px-4 flex-1 md:flex-none">
         اعرض فرصة على واتساب
       </Button>
     ),
@@ -108,7 +108,7 @@ const SERVICES: Service[] = [
     ],
     tone: "ink",
     actions: (
-      <Button href={waLink("أريد حجز استشارة")} size="s" className="h-11 px-4">
+      <Button href={waLink("أريد حجز استشارة")} size="s" className="h-12 px-4 flex-1 md:flex-none">
         احجز استشارة على واتساب
       </Button>
     ),
@@ -129,20 +129,27 @@ function ServiceBlock({ s }: { s: Service }) {
       )}
     >
       <div className="flex items-center gap-3">
-        <HexNumber size={40} tone="gold">
-          {s.n}
-        </HexNumber>
+        <span className="md:hidden">
+          <HexNumber size={48} tone="gold">
+            {s.n}
+          </HexNumber>
+        </span>
+        <span className="hidden md:inline-flex">
+          <HexNumber size={56} tone="gold">
+            {s.n}
+          </HexNumber>
+        </span>
         <h2 className="m-0 text-[24px] md:text-h2 font-extrabold leading-tight">{s.title}</h2>
       </div>
       <p className={cx("m-0 text-body md:text-[15px]", ink ? "text-on-ink-muted" : "text-muted")}>{s.lead}</p>
-      <div className="flex flex-col gap-2 text-label md:text-[14px] font-normal leading-relaxed">
+      <div className="flex flex-col gap-2 border-s-2 border-gold ps-3 text-label md:text-[14px] font-normal leading-relaxed">
         {s.lines.map((l) => (
           <span key={l.k}>
             <strong className="font-extrabold">{l.k}</strong> <Resp m={l.m} d={l.d} />
           </span>
         ))}
       </div>
-      <div className="flex flex-wrap gap-2.5 mt-1">{s.actions}</div>
+      <div className="flex gap-2.5 mt-1">{s.actions}</div>
     </article>
   );
 }
@@ -172,15 +179,15 @@ export default function ServicesPage() {
 
         <section className="container-smq py-8 md:pb-16 md:pt-0 flex flex-col gap-2.5">
           <Eyebrow className="md:hidden">خدمة خامسة للمُلّاك</Eyebrow>
-          <Link href="/add" className="flex items-center justify-between gap-4 border-interactive p-4 md:p-6 no-underline text-ink hover:bg-sand motion-hover transition-colors">
+          <Link href="/add" className="flex items-center justify-between gap-4 border-interactive p-5 md:p-7 no-underline text-ink hover:bg-sand motion-hover transition-colors">
             <span className="flex flex-col gap-1">
               <Eyebrow className="hidden md:block" as="span">
                 خدمة خامسة للمُلّاك
               </Eyebrow>
               <span className="text-h3 md:text-[22px] font-extrabold leading-tight">أضف عقارك</span>
-              <span className="text-caption md:text-label font-normal text-muted">أربع خطوات، نموذج قصير، ونسوقه لك مجاناً حتى البيع.</span>
+              <span className="text-[12px] md:text-label font-normal text-muted">أربع خطوات، نموذج قصير، ونسوقه لك مجاناً حتى البيع.</span>
             </span>
-            <ArrowIcon size={22} className="shrink-0 md:hidden" />
+            <ArrowIcon size={22} className="shrink-0 text-gold md:hidden" />
             <span className="hidden md:inline-flex items-center gap-2 h-11 px-4 bg-ink text-paper text-label font-extrabold cut-m shrink-0">
               ابدأ الآن
               <ArrowIcon size={18} className="text-gold" />

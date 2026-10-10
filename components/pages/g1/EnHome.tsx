@@ -36,11 +36,6 @@ function listEn(items: string[]): string {
 
 const SERVICE_HREFS = ["/services#buy", "/services#sell", "/services#invest", "/services", "/add"];
 
-// Board geometry of the two ink blocks (60° cuts): the hero's long flat cut at the bottom end, the guide block's
-// cut-l sized cut at the bottom start. No cut token has these corners, so the polygons are written here.
-const HERO_CUT = "[clip-path:polygon(0_0,100%_0,100%_calc(100%-30px),calc(100%-52px)_100%,0_100%)]";
-const GUIDE_CUT = "[clip-path:polygon(0_0,100%_0,100%_100%,16px_100%,0_calc(100%-28px))]";
-
 export function EnHome() {
   const project = projectById("rwd-01")!;
   const stats = projectStats(project.id);
@@ -84,12 +79,12 @@ export function EnHome() {
       <Header variant="en" showEn />
       <main>
         {/* hero */}
-        <section className={`relative bg-ink text-paper ${HERO_CUT}`}>
-          <div aria-hidden className="absolute inset-0 opacity-35">
+        <section className="relative bg-ink text-paper cut-xl">
+          <div aria-hidden className="absolute inset-0 opacity-25">
             <ImageSlot slotId="IMG-HERO-BRAND" tier="generated" label={false} showId={false} lang="en" as="div" className="h-full" />
           </div>
           <IllustrativeLabel lang="en" className="absolute top-3 end-3 z-[1]" />
-          <div className="container-smq relative pt-9 pb-10 md:py-16 flex flex-col">
+          <div className="container-smq relative pt-8 pb-10 md:py-16 flex flex-col">
             <span className="text-[12px] font-bold text-gold">{en("hero", "topline")}</span>
             <h1 className="m-0 mt-2.5 text-[30px] md:text-h1 font-extrabold leading-[1.15]">{en("hero", "title")}</h1>
             <p className="m-0 mt-3 text-body text-on-ink-muted leading-relaxed">{en("hero", "paragraph")}</p>
@@ -159,17 +154,17 @@ export function EnHome() {
 
         {/* price guide */}
         <section className="container-smq">
-          <div className={`bg-ink text-paper px-4.5 pt-5 pb-6 ${GUIDE_CUT}`}>
+          <div className="bg-ink text-paper cut-l px-4.5 pt-5 pb-6">
             <span className="text-[12px] font-bold text-gold">{en("guide", "eyebrow")}</span>
             <dl className="m-0 mt-1.5 flex flex-col divide-y divide-ink-2">
               {guideRows.map((r) => (
-                <div key={r.label} className="flex items-center justify-between gap-3 py-3.5 text-label">
+                <div key={r.label} className="flex items-center justify-between gap-3 py-3.5 text-label font-normal">
                   <dt>{r.label}</dt>
                   <dd className="m-0 font-extrabold tnum text-end">{r.value}</dd>
                 </div>
               ))}
             </dl>
-            <p className="m-0 mt-2 text-caption text-on-ink-muted leading-relaxed">{en("guide", "footnote")}</p>
+            <p className="m-0 mt-2 text-caption font-normal text-on-ink-muted leading-relaxed">{en("guide", "paragraph")}</p>
             <Link href="/guide" className="inline-block mt-3 text-label font-extrabold text-gold no-underline hover:underline">
               {en("guide", "link")}
             </Link>
@@ -181,13 +176,13 @@ export function EnHome() {
           <h2 className="m-0 pb-3.5 text-h2 font-extrabold border-b-[1.5px] border-ink">{en("services", "title")}</h2>
           <div className="flex flex-col">
             {services.map((s) => (
-              <Link key={s.n} href={s.href} className="flex items-center gap-4 py-4 border-b border-line no-underline text-ink hover:bg-sand motion-hover transition-colors">
+              <Link key={s.n} href={s.href} className="flex items-center gap-4 py-3.5 border-b border-line no-underline text-ink hover:bg-sand motion-hover transition-colors">
                 <HexNumber size={40} tone={s.owner ? "ink" : "gold"}>
                   {s.n}
                 </HexNumber>
                 <span className="flex flex-col gap-0.5 min-w-0">
                   <span className="text-[15px] font-bold">{s.title}</span>
-                  <span className="text-[12px] text-muted leading-relaxed">
+                  <span className="text-[12px] text-muted leading-snug">
                     <MarkedText text={s.line} />
                   </span>
                 </span>
@@ -200,7 +195,7 @@ export function EnHome() {
         <section className="container-smq py-8">
           <div className="border-interactive px-4.5 py-5 flex flex-col gap-3">
             <h2 className="m-0 text-h3 font-extrabold">{en("contact", "title")}</h2>
-            <p className="m-0 text-label text-ink-2 leading-relaxed">{en("contact", "help")}</p>
+            <p className="m-0 text-label font-normal text-ink-2 leading-relaxed">{en("contact", "help")}</p>
             <Button href={WA_URL} variant="whatsapp" size="m" full className="mt-1">
               {en("hero", "secondaryText")}
             </Button>

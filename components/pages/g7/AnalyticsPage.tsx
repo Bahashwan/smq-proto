@@ -93,9 +93,10 @@ export function AnalyticsPage() {
       <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(400px,100%),1fr))]">
         <Panel
           title="الميزانيات المبحوثة"
-          action={<span className="text-caption font-normal text-muted">{`الوسيط ${fmtNum(p.medianBudget / 1000)} ألف · المتوسط ${fmtNum(p.meanBudget / 1000)} ألف`}</span>}
+          action={<span className="hidden text-caption font-normal text-muted md:inline">{`الوسيط ${fmtNum(p.medianBudget / 1000)} ألف · المتوسط ${fmtNum(p.meanBudget / 1000)} ألف`}</span>}
           bodyClassName="p-5"
         >
+          <p className="mb-3 text-caption text-muted md:hidden">{`الوسيط ${fmtNum(p.medianBudget / 1000)} ألف · المتوسط ${fmtNum(p.meanBudget / 1000)} ألف`}</p>
           <BudgetBars p={p} />
           <p className="mt-4 bg-sand px-3 py-2.5 text-[12px] leading-relaxed">
             <strong>فجوة المعروض:</strong> {gap.lineAr}
@@ -156,10 +157,13 @@ export function AnalyticsPage() {
                 {h}
               </span>
             ))}
-            <span className="whitespace-nowrap font-extrabold text-ink" style={{ gridColumnStart: peak + 1, gridColumnEnd: 25 }}>
+            <span className="hidden whitespace-nowrap font-extrabold text-ink md:block" style={{ gridColumnStart: peak + 1, gridColumnEnd: 25 }}>
               {peak} إلى {peak + 2} الذروة
             </span>
           </div>
+          <p className="mt-1 text-end text-caption font-extrabold md:hidden">
+            {peak} إلى {peak + 2} الذروة
+          </p>
           <p className="mt-3 text-[12px] text-muted">{p.hoursNoteAr}</p>
         </Panel>
       </div>

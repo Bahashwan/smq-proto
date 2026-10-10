@@ -16,7 +16,7 @@ const PILLARS: { word: string; tone: "gold" | "ink"; text: string }[] = [
 
 function HexWord({ word, tone, size = "m" }: { word: string; tone: "gold" | "ink"; size?: "m" | "s" }) {
   return (
-    <span className={cx("inline-flex items-center justify-center shrink-0 hex-flat font-extrabold leading-none", size === "m" ? "h-11 min-w-24 px-6 text-[15px]" : "h-9 min-w-22 px-5 text-label", tone === "gold" ? "bg-gold text-ink" : "bg-ink text-paper")}>
+    <span className={cx("inline-flex items-center justify-center shrink-0 hex-flat font-extrabold leading-none", size === "m" ? "size-23 text-[15px]" : "h-9 min-w-22 px-5 text-label", tone === "gold" ? "bg-gold text-ink" : "bg-ink text-paper")}>
       {word}
     </span>
   );
@@ -54,7 +54,7 @@ export default function AboutPage() {
             <p className="m-0 text-body md:text-[16px] text-muted leading-relaxed">SMQ شركة متخصصة في الاستثمار والتسويق العقاري، تأسست على يد المستشار العقاري سعود معيض، لتقديم حلول عقارية احترافية قائمة على فهم عميق للسوق السعودي.</p>
             <p className="m-0 text-body md:text-[16px] text-muted leading-relaxed">نؤمن أن العقار قرار استثماري يتطلب تحليلاً دقيقاً ورؤية واضحة. بالمعرفة السوقية والتخطيط المدروس والتنفيذ المحترف، نمكّن عملاءنا من قرارات واثقة وقيمة مستدامة على المدى الطويل.</p>
           </div>
-          <ImageSlot slotId="IMG-ED-BALAD-RAWASHEEN" tier="generated" cut="xl" label={false} className="mt-6 md:mt-0 h-[240px] md:h-full md:min-h-[420px]">
+          <ImageSlot slotId="IMG-ED-BALAD-RAWASHEEN" tier="generated" cut="xl" label={false} showId={false} className="mt-6 -mx-4 md:mx-0 md:mt-0 h-[240px] md:h-full md:min-h-[420px]">
             <figcaption className="absolute bottom-3 start-3 z-[1] inline-flex items-center px-2 py-1 bg-paper text-caption font-bold text-ink leading-none whitespace-nowrap">صورة تعبيرية · البلد، جدة</figcaption>
           </ImageSlot>
         </section>
@@ -67,7 +67,7 @@ export default function AboutPage() {
               <div className="flex gap-4 md:block">
                 <FounderTile className="shrink-0 w-[150px] h-[188px] md:hidden" />
                 <div className="flex flex-col gap-1 min-w-0 md:gap-2">
-                  <h2 className="m-0 text-h2 md:text-display font-extrabold leading-tight">سعود معيض</h2>
+                  <h2 className="m-0 text-[28px] md:text-display font-extrabold leading-tight">سعود معيض</h2>
                   <span className="text-label md:text-[16px] font-normal text-muted">خبير ومستشار عقاري · مؤسس SMQ</span>
                   <span className="mt-1 flex items-baseline gap-2 md:mt-3">
                     <span className="text-[32px] md:text-display font-extrabold leading-none tnum">{traineesNumber}</span>
@@ -130,14 +130,14 @@ export default function AboutPage() {
             <Eyebrow>مرخصون ومنظمون</Eyebrow>
             <h2 className="m-0 hidden md:block text-h2 font-extrabold leading-tight">نعمل تحت رقابة الهيئة العامة للعقار</h2>
             <div className="grid grid-cols-2 gap-3">
-              <div className="bg-ink text-paper cut-m p-4 md:p-5 flex flex-col gap-1">
-                <span className="text-caption font-semibold text-on-ink-muted">ترخيص الهيئة العامة للعقار</span>
+              <div className="bg-ink text-paper cut-m p-3.5 md:p-5 flex flex-col gap-1">
+                <span className="text-[10px] md:text-caption font-semibold text-on-ink-muted">ترخيص الهيئة العامة للعقار</span>
                 <span className="text-[16px] md:text-[22px] font-extrabold tnum" dir="ltr">
                   {LICENCE.rega}
                 </span>
               </div>
-              <div className="bg-ink text-paper cut-m p-4 md:p-5 flex flex-col gap-1">
-                <span className="text-caption font-semibold text-on-ink-muted">السجل التجاري</span>
+              <div className="bg-ink text-paper cut-m p-3.5 md:p-5 flex flex-col gap-1">
+                <span className="text-[10px] md:text-caption font-semibold text-on-ink-muted">السجل التجاري</span>
                 <span className="text-[16px] md:text-[22px] font-extrabold tnum" dir="ltr">
                   {LICENCE.cr}
                 </span>
@@ -148,11 +148,11 @@ export default function AboutPage() {
         </section>
 
         {/* phone: the gold ask block */}
-        <section className="bg-gold text-ink cut-xl md:hidden">
-          <div className="container-smq py-7 flex flex-col gap-2 items-start">
+        <section className="container-smq pb-8 md:hidden">
+          <div className="bg-gold text-ink cut-xl px-5 py-6 flex flex-col gap-2">
             <span className="text-h3 font-extrabold">اسأل سعود مباشرة</span>
             <span className="text-label font-normal text-on-gold-muted">سؤال واحد على واتساب يكفي لتعرف إن كنا الجهة المناسبة لك.</span>
-            <Button href={waLink()} variant="secondary" size="s" className="mt-2 h-11 px-4">
+            <Button href={waLink()} variant="secondary" size="s" full className="mt-2 h-11 px-4">
               واتساب <span className="tnum" dir="ltr">{WA_DISPLAY}</span>
             </Button>
           </div>

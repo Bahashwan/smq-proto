@@ -34,7 +34,7 @@ export function ServicesNav({ items, className }: { items: ServicesNavItem[]; cl
             href={`#${it.id}`}
             aria-current={current === it.id ? "location" : undefined}
             onClick={() => setCurrent(it.id)}
-            className={cx("shrink-0 inline-flex items-center h-11 px-2.5 text-label font-bold no-underline whitespace-nowrap tnum motion-hover transition-colors", current === it.id ? "text-ink border-b-[3px] border-gold" : "text-muted hover:text-ink")}
+            className={cx("shrink-0 inline-flex items-center h-14 px-2.5 text-label font-bold no-underline whitespace-nowrap tnum motion-hover transition-colors", current === it.id ? "text-ink border-b-[3px] border-gold" : "text-muted hover:text-ink")}
           >
             {it.label}
           </a>

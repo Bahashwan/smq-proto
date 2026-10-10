@@ -48,7 +48,7 @@ export function EnFinder({ initialBudget = 700_000 }: { initialBudget?: number }
   const unitsWord = count === 1 ? "unit" : "units";
 
   return (
-    <section id="budget" className="container-smq py-7 flex flex-col gap-4 scroll-mt-16">
+    <section id="budget" className="container-smq py-7 flex flex-col gap-3 scroll-mt-16">
       <h2 className="m-0 text-h2 font-extrabold">What&apos;s your budget?</h2>
       <div className="flex items-end justify-between gap-4">
         <span className="flex items-baseline gap-1.5">

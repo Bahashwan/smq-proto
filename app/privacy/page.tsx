@@ -1,12 +1,15 @@
 // /privacy · Privacy-M / Privacy-D: short policy with a sticky contents list on desktop.
 import type { ReactNode } from "react";
-import { EMAIL, Eyebrow, Footer, Header, LICENCE, Mark, WA_URL } from "@/components/ui";
-import { Resp, shellFooterLinks } from "@/components/pages/g1/shell";
+import { EMAIL, Eyebrow, Footer, Header, LICENCE, Mark, NAV_AR, StatusDot, WA_URL } from "@/components/ui";
+import { Resp } from "@/components/pages/g1/shell";
 import { settings } from "@/data/settings";
 
 export const metadata = { title: "الخصوصية" };
 
 const UPDATED = "2026/10/01";
+
+/** Privacy-M footer: the main pages without «المشاريع» and «تعاون معنا», then «الخصوصية». */
+const FOOTER_LINKS = [...NAV_AR.filter((l) => l.href !== "/projects" && l.href !== "/collaborate"), { label: "الخصوصية", href: "/privacy" }];
 
 interface Section {
   id: string;
@@ -46,7 +49,7 @@ const SECTIONS: Section[] = [
     m: (
       <>
         طلبات التواصل سنتين من آخر رسالة، ثم تُحذف. سجلات التصفح المجمّعة 13 شهراً. تستطيع طلب حذف بياناتك في أي وقت برسالة واتساب أو بريد إلى{" "}
-        <a href={`mailto:${EMAIL}`} className="font-bold text-ink" dir="ltr">
+        <a href={`mailto:${EMAIL}`} className="text-gold-text underline underline-offset-2" dir="ltr">
           {EMAIL}
         </a>
         ، ونؤكد الحذف خلال 7 أيام.
@@ -96,9 +99,9 @@ export default function PrivacyPage() {
 
         <div className="container-smq py-8 md:py-14 md:grid md:grid-cols-[260px_minmax(0,1fr)] md:gap-12 md:items-start">
           <nav aria-label="محتويات الصفحة" className="hidden md:flex md:flex-col md:gap-1 md:sticky md:top-20">
-            <span className="text-caption font-extrabold text-muted mb-2">في هذه الصفحة</span>
+            <span className="text-caption font-extrabold text-muted mb-1">في هذه الصفحة</span>
             {SECTIONS.map((s) => (
-              <a key={s.id} href={`#${s.id}`} className="py-1.5 text-label font-semibold text-ink no-underline hover:text-gold-text hover:underline">
+              <a key={s.id} href={`#${s.id}`} className="py-2.5 border-b border-line last-of-type:border-b-0 text-label font-bold text-ink no-underline hover:text-gold-text hover:underline">
                 {s.title}
               </a>
             ))}
@@ -107,17 +110,20 @@ export default function PrivacyPage() {
               <a href={`mailto:${EMAIL}`} className="font-bold no-underline hover:underline" dir="ltr">
                 {EMAIL}
               </a>
-              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="font-bold no-underline hover:underline">
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="mt-1 pt-2 border-t border-line font-bold no-underline hover:underline">
                 واتساب
               </a>
             </div>
           </nav>
 
-          <div className="flex flex-col gap-7 md:gap-9">
+          <div className="flex flex-col gap-7 md:gap-8 md:max-w-[760px]">
             {SECTIONS.map((s) => (
               <section key={s.id} id={s.id} className="scroll-mt-20 flex flex-col gap-2">
-                <h2 className="m-0 text-h3 md:text-h2 font-extrabold">{s.title}</h2>
-                <p className="m-0 text-body leading-relaxed">
+                <h2 className="m-0 flex items-center gap-2 text-h3 font-extrabold">
+                  <StatusDot tone="gold" size={2.5} />
+                  {s.title}
+                </h2>
+                <p className="m-0 text-body leading-loose">
                   <Resp m={s.m} d={s.d} />
                 </p>
               </section>
@@ -128,22 +134,22 @@ export default function PrivacyPage() {
               <span className="font-normal leading-relaxed">
                 {company} · السجل التجاري <span className="tnum">{LICENCE.cr}</span> · حي الروضة، جدة
                 <br />
-                <a href={`mailto:${EMAIL}`} className="font-bold" dir="ltr">
+                <a href={`mailto:${EMAIL}`} className="font-bold text-gold-text underline underline-offset-2" dir="ltr">
                   {EMAIL}
                 </a>{" "}
                 ·{" "}
-                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="font-bold">
+                <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="font-bold text-gold-text underline underline-offset-2">
                   واتساب
                 </a>
               </span>
             </div>
-            <p className="m-0 hidden md:block text-label font-normal text-muted leading-relaxed">
+            <p className="m-0 hidden md:block pt-4 border-t border-line text-label font-normal text-muted leading-relaxed">
               {company} · السجل التجاري <span className="tnum">{LICENCE.cr}</span> · ترخيص فال <span className="tnum">{LICENCE.rega}</span> · حي الروضة، جدة. هذه الصفحة تحمل noindex ولا تظهر في نتائج البحث.
             </p>
           </div>
         </div>
       </main>
-      <Footer compact links={shellFooterLinks("/privacy", [{ label: "الخصوصية", href: "/privacy" }])} />
+      <Footer compact links={FOOTER_LINKS} />
     </>
   );
 }
