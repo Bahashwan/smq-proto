@@ -19,6 +19,6 @@ export const screens: Screen[] = [
   { board: "Admin-Users-D", route: "/admin/users", width: 1440, section: S, note: "WhatsApp Business «متصل» by default" },
   { board: "Admin-Pieces-D", route: "/admin/units?empty=1", width: 1440, section: S, note: "empty state «لا وحدات بعد» (g7 route)" },
   { board: "Admin-Pieces-D", route: "/admin/leads?empty=1", width: 1440, section: S, note: "empty state «لا طلبات بلا رد» (g7 route)" },
-  { board: "Admin-Pieces-D", route: "/admin/units/rz-a", width: 1440, section: S, note: "delete dialog: «حذف الوحدة» types the code (g7 route)" },
+  { board: "Admin-Pieces-D", route: "/admin/units/rz-a", width: 1440, section: S, note: "delete dialog: «حذف الوحدة» types the code (g7 route)", prepare: { click: 'button:has-text("حذف الوحدة نهائياً")' }, viewport: true },
   { board: "Admin-Pieces-D", route: "/admin/content/needs-confirmation", width: 1440, section: S, note: "the bell dropdown open over the «يحتاج تأكيداً» list; toasts follow every action", prepare: { click: BELL }, viewport: true },
 ];

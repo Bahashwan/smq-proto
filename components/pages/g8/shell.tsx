@@ -31,15 +31,15 @@ export function Crumbs({ trail }: { trail: string }) {
 /** Path + title block of a content page. */
 export function ContentHead({ trail, title, path, subtitle, actions, note }: { trail?: string; title: ReactNode; path?: string; subtitle?: ReactNode; actions?: ReactNode; note?: boolean }) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-5">
       {trail && <Crumbs trail={trail} />}
       <PageHeader
         title={
           <>
             {title}
             {path && (
-              <span dir="ltr" className="ms-2 text-[14px] font-semibold text-muted">
-                {path}
+              <span className="ms-2 text-[14px] font-semibold text-muted">
+                <bdi dir="ltr">{path}</bdi>
               </span>
             )}
           </>
@@ -66,11 +66,12 @@ export function H2({ children, aside, className }: { children: ReactNode; aside?
 
 export type StripState = "clean" | "dirty" | "saving" | "saved";
 
-const BTN = "flex h-9 cursor-pointer items-center whitespace-nowrap px-3 text-label motion-hover transition-colors";
-const ON_INK_OUTLINE = cx(BTN, "border-[1.5px] border-on-ink-muted bg-transparent font-bold text-paper hover:border-paper");
-const ON_INK_WHITE = cx(BTN, "border-[1.5px] border-paper bg-paper font-extrabold text-ink hover:bg-sand");
-const GOLD = cx(BTN, "cut-s bg-gold font-extrabold text-ink hover:bg-gold-hover");
-const OFF = cx(BTN, "cut-s cursor-default bg-ink-2 font-extrabold text-on-ink-muted");
+// 42px buttons, 16px sides (18px on the cut primary), as the content boards draw the strip
+const BTN = "flex h-[42px] cursor-pointer items-center whitespace-nowrap text-label motion-hover transition-colors";
+const ON_INK_OUTLINE = cx(BTN, "border-[1.5px] border-on-ink-muted bg-transparent px-4 font-bold text-paper hover:border-paper");
+const ON_INK_WHITE = cx(BTN, "border-[1.5px] border-paper bg-paper px-4 font-extrabold text-ink hover:bg-sand");
+const GOLD = cx(BTN, "cut-s bg-gold px-[18px] font-extrabold text-ink hover:bg-gold-hover");
+const OFF = cx(BTN, "cut-s cursor-default bg-ink-2 px-[18px] font-extrabold text-on-ink-muted");
 
 /** The ink bar at the foot of the content editors. Links stay in every state; «تجاهل» / draft / primary in the dirty one. */
 export function SaveStrip({
@@ -111,7 +112,7 @@ export function SaveStrip({
 }) {
   const showMark = mark ?? state === "dirty";
   return (
-    <div role="region" aria-label="شريط الحفظ" className="sticky bottom-0 z-20 flex flex-wrap items-center justify-between gap-2.5 border-t-[3px] border-gold bg-ink px-4 py-3 text-label text-paper">
+    <div role="region" aria-label="شريط الحفظ" className="sticky bottom-0 z-20 -mx-4 mt-1 flex flex-wrap items-center justify-between gap-x-4 gap-y-2.5 border-t-[3px] border-gold bg-ink px-4 py-3.5 text-label text-paper md:-mx-8 md:px-8">
       <span aria-live="polite" className="flex min-w-0 items-center gap-2 font-bold">
         {state === "saved" ? (
           <>
@@ -139,7 +140,7 @@ export function SaveStrip({
           </>
         )}
       </span>
-      <span className="flex flex-wrap items-center gap-2">
+      <span className="flex flex-wrap items-center gap-2.5">
         {state === "dirty" && onDiscard && (
           <button type="button" onClick={onDiscard} className={ON_INK_OUTLINE}>
             {discardLabel}
@@ -183,7 +184,7 @@ export function SaveStrip({
 /** A link styled for the ink strip («معاينة في الموقع», «معاينة من نحن»). */
 export function StripLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <Link href={href} className="flex h-9 items-center whitespace-nowrap border-[1.5px] border-paper px-3 text-label font-bold text-paper no-underline motion-hover transition-colors hover:bg-ink-2">
+    <Link href={href} className="flex h-[42px] items-center whitespace-nowrap border-[1.5px] border-paper px-4 text-label font-bold text-paper no-underline motion-hover transition-colors hover:bg-ink-2">
       {children}
     </Link>
   );
@@ -204,7 +205,7 @@ export function LangSwitch({ value, onChange, enEmpty, size = "m" }: { value: "a
     { id: "en", label: "English" },
   ];
   return (
-    <div role="tablist" aria-label="لغة الحقول" onKeyDown={onKey} className="inline-flex shrink-0 border-interactive bg-paper">
+    <div role="tablist" aria-label="اللغة" onKeyDown={onKey} className="inline-flex shrink-0 border-interactive bg-paper">
       {tabs.map((t, i) => {
         const on = t.id === value;
         return (
@@ -235,11 +236,12 @@ export function LangSwitch({ value, onChange, enEmpty, size = "m" }: { value: "a
   );
 }
 
-/** Hexagon yes / no mark (roles matrix, legends). */
+/** Yes / no mark of the roles matrix: gold hexagon = yes, hairline square = no (status by shape). */
 export function HexYes({ on, label }: { on: boolean; label?: string }) {
   return (
-    <span className="inline-flex items-center">
-      {on ? <span aria-hidden className="hex-flat block size-3.5 bg-gold" /> : <span aria-hidden className="hex-flat flex size-3.5 items-center justify-center bg-line"><span className="hex-flat block size-2 bg-paper" /></span>}
+    // relative: keeps the sr-only word inside the table's scroller on the phone
+    <span className="relative inline-flex items-center">
+      {on ? <span aria-hidden className="hex-flat block size-3.5 bg-gold" /> : <span aria-hidden className="block size-3.5 border-[1.5px] border-line" />}
       {label !== undefined ? <span className="sr-only">{label}</span> : <span className="sr-only">{on ? "نعم" : "لا"}</span>}
     </span>
   );

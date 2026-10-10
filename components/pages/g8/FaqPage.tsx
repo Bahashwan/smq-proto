@@ -16,7 +16,7 @@ import { ContentHead, G8Shell, LangSwitch, NOURA } from "./shell";
 
 const DRAFT_RE = /\[مسودة إجابة\]/;
 const FIRST = 8;
-const COLS = "grid grid-cols-[36px_minmax(0,1fr)_150px_110px_90px] items-center gap-3";
+const COLS = "grid grid-cols-[36px_minmax(0,1fr)_150px_110px_90px] items-center gap-3.5";
 
 export function FaqPage() {
   const list = useFaq();
@@ -74,7 +74,7 @@ export function FaqPage() {
         title="الأسئلة الشائعة"
         subtitle={<MarkedText text={`${countWord(s.total, W.question)} · ${s.published} منشورة · ${s.drafts} بإجابة [مسودة إجابة] لا تُنشر حتى يؤكدها مدير. الترتيب هنا هو ترتيب الموقع، اسحب للتغيير`} />}
         actions={
-          <button type="button" onClick={() => setQuery({ edit: "new" }, "replace")} className="flex h-11 cursor-pointer items-center bg-ink px-4 text-label font-extrabold text-paper cut-s motion-hover transition-colors hover:bg-ink-2">
+          <button type="button" onClick={() => setQuery({ edit: "new" }, "replace")} className="flex h-10 cursor-pointer items-center bg-ink px-4 text-label font-extrabold text-paper cut-s motion-hover transition-colors hover:bg-ink-2">
             + سؤال جديد
           </button>
         }
@@ -82,7 +82,7 @@ export function FaqPage() {
 
       <div className="overflow-x-auto border-interactive bg-paper">
         <div className="min-w-[820px]">
-          <div className={cx(COLS, "bg-sand px-3 py-2.5 text-caption font-extrabold text-muted")}>
+          <div className={cx(COLS, "border-b-[1.5px] border-ink bg-sand px-4 py-2.5 text-caption font-extrabold text-muted")}>
             <span />
             <span>السؤال والإجابة</span>
             <span>يظهر في</span>
@@ -93,16 +93,17 @@ export function FaqPage() {
             const draft = f.draft || DRAFT_RE.test(f.a);
             const isDragging = dragging === f.id;
             return (
-              <div key={f.id} ref={rowRef(f.id)} className={cx(COLS, "relative border-t border-line px-3 py-4 text-label font-normal", isDragging ? "bg-sand" : draft ? "bg-cream-focus" : editId === f.id ? "bg-cream" : "bg-paper")}>
-                {isDragging && <span aria-hidden className="absolute inset-x-0 -top-px h-[3px] bg-gold" />}
+              <div key={f.id} ref={rowRef(f.id)} className={cx(COLS, "relative border-line px-4 py-3.5 text-label font-normal [&+&]:border-t", isDragging ? "bg-sand outline-2 -outline-offset-2 outline-solid outline-gold" : draft ? "bg-cream-focus" : editId === f.id ? "bg-cream" : "bg-paper")}>
+                {/* the row being dragged: gold frame and the drop line under it (Admin-FAQ-D) */}
+                {isDragging && <span aria-hidden className="absolute inset-x-4 -bottom-0.5 z-10 h-[3px] bg-gold" />}
                 <DragHandle {...handleProps(f.id)} />
                 <div className="flex min-w-0 flex-col gap-1">
                   <span className="text-[14px] font-extrabold">
                     {f.q}
                     {draft && <Mark>[مسودة إجابة]</Mark>}
                   </span>
-                  <span className="line-clamp-2 text-[12px] text-muted">
-                    <MarkedText text={f.a.replace(/^\s*\[مسودة إجابة\]\s*/, "")} />
+                  <span className="line-clamp-3 text-[12px] leading-[1.6] text-muted">
+                    <MarkedText text={draft && !DRAFT_RE.test(f.a) ? `[مسودة إجابة] ${f.a}` : f.a} />
                   </span>
                 </div>
                 <span className="text-[12px]">{(f.pages ?? []).join(" · ")}</span>
@@ -110,7 +111,7 @@ export function FaqPage() {
                   <Switch checked={f.published && !draft} disabled={draft} onChange={(v) => togglePublish(f, v)} aria-label={f.published && !draft ? "منشور" : "غير منشور"} />
                 </span>
                 <span className="flex justify-end">
-                  <button type="button" onClick={() => setQuery({ edit: f.id }, "replace")} aria-label={`تحرير «${f.q}»`} className="flex h-9 w-full cursor-pointer items-center justify-center border-[1.5px] border-ink px-3 text-[12px] font-bold motion-hover transition-colors hover:bg-sand">
+                  <button type="button" onClick={() => setQuery({ edit: f.id }, "replace")} aria-label={`تحرير «${f.q}»`} className="flex h-[34px] w-full cursor-pointer items-center justify-center border-[1.5px] border-ink bg-paper px-3 text-[12px] font-extrabold motion-hover transition-colors hover:bg-sand">
                     تحرير
                   </button>
                 </span>
@@ -122,7 +123,7 @@ export function FaqPage() {
       <p className="text-[12px] text-muted">
         {rest.length > 0 && (
           <>
-            <button type="button" onClick={() => setAll((v) => !v)} aria-expanded={all} className="cursor-pointer font-bold text-gold-text underline-offset-2 hover:underline">
+            <button type="button" onClick={() => setAll((v) => !v)} aria-expanded={all} className="cursor-pointer text-muted underline-offset-2 hover:text-ink hover:underline">
               {all ? `عرض أول ${FIRST} فقط` : `و${countWord(rest.length, W.question)}${restAllPublished ? " منشورة" : ""} أخرى`}
             </button>{" "}
             ·{" "}
@@ -174,8 +175,8 @@ function FaqEditor({ item, onClose, onDelete }: { item: FaqItem | null; onClose:
   const q = lang === "ar" ? qAr : qEn;
   const a = lang === "ar" ? aAr : aEn;
   return (
-    <section aria-label="تحرير سؤال" className="border-[1.5px] border-s-[5px] border-ink border-s-gold bg-paper">
-      <header className="flex flex-wrap items-center justify-between gap-3 bg-sand px-4 py-3">
+    <section aria-label="تحرير سؤال" className="border-[1.5px] border-s-[6px] border-ink border-s-gold bg-paper">
+      <header className="flex flex-wrap items-center justify-between gap-3 border-b-[1.5px] border-ink bg-sand px-4 py-3">
         <span className="text-[14px] font-extrabold">{item ? `تحرير · «${item.q}»` : "سؤال جديد"}</span>
         <LangSwitch value={lang} onChange={setLang} size="s" />
       </header>
@@ -200,7 +201,7 @@ function FaqEditor({ item, onClose, onDelete }: { item: FaqItem | null; onClose:
           <textarea value={a} rows={4} dir={lang === "en" ? "ltr" : undefined} placeholder={lang === "en" ? aAr : undefined} onChange={(e) => (lang === "ar" ? setAAr : setAEn)(e.target.value)} className={ctl(lang === "ar" && draft ? "error" : "admin", "min-h-[120px] py-2.5 leading-relaxed")} />
         </Field>
       </div>
-      <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-line px-4 py-3">
+      <footer className="flex flex-wrap items-center justify-between gap-3 border-t-[1.5px] border-ink px-4 py-3">
         {item ? (
           <button type="button" onClick={() => onDelete(item)} className="flex h-10 cursor-pointer items-center border-[1.5px] border-ink bg-paper px-4 text-label font-bold motion-hover transition-colors hover:bg-sand">
             حذف السؤال

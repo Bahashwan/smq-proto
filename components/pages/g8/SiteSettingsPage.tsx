@@ -86,17 +86,20 @@ function fromFixture(): S {
   };
 }
 
+/** The 11px muted hint under a field (`.hint` on the board). */
+const HINT = "text-caption font-semibold text-muted";
+
 /** Fields that change with the AR / EN tab (the rest are shared: numbers, addresses of the web). */
 const BILINGUAL: Partial<Record<keyof S, keyof S>> = { address: "addressEn", hours: "hoursEn", afterHours: "afterHoursEn", company: "companyEn", tagline: "taglineEn", footer: "footerEn" };
 
 function Section({ title, aside, children, wide, cols = 2 }: { title: string; aside?: string; children: ReactNode; wide?: boolean; cols?: 2 | 3 }) {
   return (
     <section aria-label={title} className={cx("border-interactive bg-paper", wide && "col-span-full")}>
-      <header className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-        <h2 className="text-[16px] font-extrabold">{title}</h2>
-        {aside && <span className="text-[12px] text-muted">{aside}</span>}
+      <header className="flex min-h-[50px] flex-wrap items-center justify-between gap-x-3 gap-y-1 border-b-[1.5px] border-ink bg-sand px-4 py-3">
+        <h2 className="text-[14px] font-extrabold">{title}</h2>
+        {aside && <span className={HINT}>{aside}</span>}
       </header>
-      <div className={cx("grid gap-4 p-4", cols === 2 ? "sm:grid-cols-2" : "md:grid-cols-3")}>{children}</div>
+      <div className={cx("grid gap-3.5 p-4", cols === 2 ? "sm:grid-cols-2" : "md:grid-cols-3")}>{children}</div>
     </section>
   );
 }
@@ -133,7 +136,7 @@ export function SiteSettingsPage() {
     const kk = keyFor(k);
     const ltr = opts.ltr || (lang === "en" && !!BILINGUAL[k]);
     return (
-      <Field label={label} note={opts.hint}>
+      <Field label={label} note={opts.hint && <span className={HINT}>{opts.hint}</span>}>
         <input
           value={String(st[kk] ?? "")}
           onChange={(e) => set(kk, e.target.value as S[typeof kk])}
@@ -187,8 +190,16 @@ export function SiteSettingsPage() {
           {text("company", "اسم الشركة (كما في التذييل)")}
           {text("cr", "السجل التجاري", { ltr: true })}
           {text("rega", "ترخيص فال (الهيئة العامة للعقار)", { ltr: true, hint: "يظهر في التذييل وصفحة الوحدة" })}
-          <Field label={<>الرقم الضريبي {taxTbc && !st.tax && <Mark>[للتأكيد]</Mark>}</>} note={taxTbc ? <span className="text-gold-text">يبقى بالوسم على الموقع حتى يُدخل ويُؤكَّد</span> : undefined}>
-            <input value={st.tax} onChange={(e) => set("tax", e.target.value)} dir="ltr" inputMode="numeric" aria-label="الرقم الضريبي" className={ctl(st.tax ? "admin" : "tbc", cx(INPUT_H, "text-right"))} />
+          <Field label="الرقم الضريبي" as="div">
+            {/* empty: the field shows its [للتأكيد] value, as the chip, until a number is typed */}
+            <span className="relative block">
+              <input value={st.tax} onChange={(e) => set("tax", e.target.value)} dir="ltr" inputMode="numeric" aria-label="الرقم الضريبي" className={ctl(st.tax ? "admin" : "tbc", cx(INPUT_H, "text-right"))} />
+              {!st.tax && (
+                <span aria-hidden className="pointer-events-none absolute inset-y-0 start-3 flex items-center">
+                  <Mark>[للتأكيد]</Mark>
+                </span>
+              )}
+            </span>
           </Field>
           <div className="sm:col-span-2">{text("tagline", "العبارة التعريفية (الرأس والمعاينات)")}</div>
           <div className="sm:col-span-2">{text("footer", "عبارة التذييل")}</div>
@@ -204,8 +215,8 @@ export function SiteSettingsPage() {
         </Section>
 
         <section aria-label="موقع المكتب على الخريطة" className="border-interactive bg-paper">
-          <header className="border-b-[1.5px] border-ink bg-sand px-4 py-3">
-            <h2 className="text-[16px] font-extrabold">موقع المكتب على الخريطة</h2>
+          <header className="flex min-h-[50px] items-center border-b-[1.5px] border-ink bg-sand px-4 py-3">
+            <h2 className="text-[14px] font-extrabold">موقع المكتب على الخريطة</h2>
           </header>
           <div className="p-4">
             <PinPicker latLng={{ lat: st.lat, lng: st.lng }} coordinateFields="above" gridSize={30} hint="اسحب الدبوس أو أدخل الإحداثيات" ariaLabel="موقع المكتب على الخريطة" onChange={(v) => {
@@ -217,7 +228,7 @@ export function SiteSettingsPage() {
 
         <Section title="قوالب رسائل واتساب" aside="المتغيرات بين أقواس تُستبدل تلقائياً. الرمز {code} يربط الضغطة بالمحادثة في الطلبات الواردة" wide cols={3}>
           {WA_TEMPLATES.map((t, i) => (
-            <Field key={t.id} label={t.label} note={i === 0 && example ? `مثال: ${example}` : undefined}>
+            <Field key={t.id} label={t.label} note={i === 0 && example ? <span className={HINT}>مثال: {example}</span> : undefined}>
               <textarea
                 value={st.templates[i] ?? ""}
                 onChange={(e) => set("templates", st.templates.map((x, j) => (j === i ? e.target.value : x)))}
@@ -252,10 +263,10 @@ export function SiteSettingsPage() {
 
 function SwitchCard({ label, hint, checked, onChange }: { label: string; hint: string; checked: boolean; onChange: (v: boolean) => void }) {
   return (
-    <div className="flex items-center justify-between gap-3 border-hairline px-4 py-3">
+    <div className="flex items-center justify-between gap-3 border-[1.5px] border-line px-3.5 py-3">
       <span className="flex flex-col gap-0.5">
         <span className="text-label font-bold">{label}</span>
-        <span className="text-[12px] font-normal text-muted">
+        <span className={HINT}>
           <MarkedText text={hint} />
         </span>
       </span>

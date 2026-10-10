@@ -26,8 +26,10 @@ interface Row {
 }
 
 const PARTNERS_W = { one: "شريك واحد", two: "شريكان", few: "شركاء", many: "شريكاً" };
-const COLS = "grid grid-cols-[36px_120px_minmax(0,1fr)_140px_minmax(0,1fr)_90px_90px] items-center gap-3";
+const COLS = "grid grid-cols-[36px_120px_minmax(0,1fr)_140px_minmax(0,1fr)_90px_90px] items-center gap-3.5";
 const FINANCING_KINDS = ["بنك", "جهة تنظيمية"];
+/** The placeholder logo widths of the «من نحن» preview (110 · 90 · 120, as the board). */
+const LOGO_W = ["w-[110px]", "w-[90px]", "w-[120px]"];
 
 export function PartnersPage() {
   const merged = usePartners();
@@ -86,7 +88,7 @@ export function PartnersPage() {
         title="الشركاء والتمويل"
         subtitle="الشعارات تُرفع من ملفات الشركاء الرسمية فقط، لا تُولَّد. كتلة «شركاؤنا وجهات التمويل» في صفحة من نحن تظهر فقط إذا كان شعار واحد على الأقل مرئياً"
         actions={
-          <button type="button" onClick={add} className="flex h-11 cursor-pointer items-center bg-ink px-4 text-label font-extrabold text-paper cut-s motion-hover transition-colors hover:bg-ink-2">
+          <button type="button" onClick={add} className="flex h-10 cursor-pointer items-center bg-ink px-4 text-label font-extrabold text-paper cut-s motion-hover transition-colors hover:bg-ink-2">
             + شريك
           </button>
         }
@@ -105,7 +107,7 @@ export function PartnersPage() {
 
       <div className="overflow-x-auto border-interactive bg-paper">
         <div className="min-w-[900px]">
-          <div className={cx(COLS, "bg-sand px-3 py-2.5 text-caption font-extrabold text-muted")}>
+          <div className={cx(COLS, "border-b-[1.5px] border-ink bg-sand px-4 py-2.5 text-caption font-extrabold text-muted")}>
             <span />
             <span>الشعار</span>
             <span>الاسم</span>
@@ -115,25 +117,25 @@ export function PartnersPage() {
             <span />
           </div>
           {rows.map((r) => (
-            <div key={r.id} ref={rowRef(r.id)} className={cx(COLS, "relative border-t border-line px-3 py-3 text-label font-normal", dragging === r.id ? "bg-sand" : "bg-paper")}>
-              {dragging === r.id && <span aria-hidden className="absolute inset-x-0 -top-px h-[3px] bg-gold" />}
+            <div key={r.id} ref={rowRef(r.id)} className={cx(COLS, "relative border-line px-4 py-3 text-label font-normal [&+&]:border-t", dragging === r.id ? "bg-sand outline-2 -outline-offset-2 outline-solid outline-gold" : "bg-paper")}>
+              {dragging === r.id && <span aria-hidden className="absolute inset-x-4 -bottom-0.5 z-10 h-[3px] bg-gold" />}
               <DragHandle {...handleProps(r.id, "اسحب")} />
               {r.hasLogo ? (
-                <button type="button" onClick={() => pickLogo(r.id)} aria-label={`استبدال شعار ${r.name}`} className="flex h-12 cursor-pointer flex-col items-center justify-center overflow-hidden border border-line bg-paper px-2 text-center text-[10px] font-extrabold leading-tight text-muted hover:bg-cream">
+                <button type="button" onClick={() => pickLogo(r.id)} aria-label={`استبدال شعار ${r.name}`} className="flex h-12 cursor-pointer flex-col items-center justify-center overflow-hidden border border-line bg-paper px-2 text-center text-caption font-extrabold leading-snug text-muted hover:bg-cream">
                   {r.logoSrc ? (
                     // eslint-disable-next-line @next/next/no-img-element -- a local preview of the partner's own file
                     <img src={r.logoSrc} alt="" className="max-h-10 max-w-full object-contain grayscale" />
                   ) : (
                     <>
                       <span>شعار PNG</span>
-                      <span className="max-w-full truncate font-semibold">{shortName(r)}</span>
+                      <span className="max-w-full">{shortName(r)}</span>
                     </>
                   )}
                 </button>
               ) : (
-                <button type="button" onClick={() => pickLogo(r.id)} className="flex h-12 cursor-pointer flex-col items-center justify-center border-[1.5px] border-dashed border-ink px-2 text-center text-[10px] font-extrabold leading-tight text-ink hover:bg-cream">
+                <button type="button" onClick={() => pickLogo(r.id)} className="flex h-12 cursor-pointer flex-col items-center justify-center border-[1.5px] border-dashed border-ink px-2 text-center text-caption font-extrabold leading-snug text-ink hover:bg-cream">
                   <span>ارفع PNG أو SVG</span>
-                  <span className="font-semibold">بخلفية شفافة</span>
+                  <span>بخلفية شفافة</span>
                 </button>
               )}
               <span className="flex min-w-0 flex-col gap-0.5">
@@ -143,27 +145,27 @@ export function PartnersPage() {
                   <span className="font-extrabold">{r.name}</span>
                 )}
                 {r.noteAr && (
-                  <span className="text-caption font-semibold text-muted">
+                  <span className="text-caption font-semibold leading-snug text-muted">
                     <MarkedText text={r.noteAr} />
                   </span>
                 )}
               </span>
-              <select value={r.kindAr} onChange={(e) => update(r.id, { kindAr: e.target.value })} aria-label={`نوع ${r.name}`} className={ctl("admin", "h-10 cursor-pointer text-label")}>
+              <select value={r.kindAr} onChange={(e) => update(r.id, { kindAr: e.target.value })} aria-label={`نوع ${r.name}`} className={ctl("admin", "h-9 cursor-pointer px-2.5 text-[12px] font-bold")}>
                 {PARTNER_KINDS_AR.map((k) => (
                   <option key={k}>{k}</option>
                 ))}
               </select>
-              <input value={r.url} onChange={(e) => update(r.id, { url: e.target.value })} placeholder="https://" dir="ltr" aria-label={`رابط ${r.name}`} className={ctl("admin", "h-10 text-[12px]")} />
+              <input value={r.url} onChange={(e) => update(r.id, { url: e.target.value })} placeholder="https://" dir="ltr" aria-label={`رابط ${r.name}`} className={ctl("admin", "h-9 px-2.5 text-[12px] font-normal")} />
               <span>
                 <Switch checked={r.visible && r.hasLogo} disabled={!r.hasLogo} onChange={(v) => update(r.id, { visible: v })} aria-label={r.hasLogo ? "مرئي" : "مرئي، معطّل بلا شعار"} />
               </span>
               <span className="flex justify-end">
                 {r.hasLogo ? (
-                  <button type="button" onClick={() => pickLogo(r.id)} className="flex h-9 cursor-pointer items-center border-[1.5px] border-ink px-3 text-[12px] font-bold hover:bg-sand">
+                  <button type="button" onClick={() => pickLogo(r.id)} className="flex h-[34px] w-full cursor-pointer items-center justify-center border-[1.5px] border-ink bg-paper px-3 text-[12px] font-extrabold hover:bg-sand">
                     استبدال
                   </button>
                 ) : (
-                  <button type="button" onClick={() => setDeleting(r)} className="flex h-9 cursor-pointer items-center border-[1.5px] border-ink px-3 text-[12px] font-bold hover:bg-sand">
+                  <button type="button" onClick={() => setDeleting(r)} className="flex h-[34px] w-full cursor-pointer items-center justify-center border-[1.5px] border-ink bg-paper px-3 text-[12px] font-extrabold hover:bg-sand">
                     حذف
                   </button>
                 )}
@@ -179,10 +181,10 @@ export function PartnersPage() {
         <div className="grid gap-4 md:grid-cols-2">
           <AboutBlock status={`الحالة: ${hypothetical} مرئية`} logos={Array.from({ length: hypothetical }, (_, i) => ({ key: `h${i}`, label: `شعار ${i + 1}` }))} />
           {visibleRows.length === 0 ? (
-            <div className="flex flex-col gap-2 border-[1.5px] border-dashed border-ink bg-paper p-5">
+            <div className="flex flex-col items-center justify-center gap-3.5 border-[1.5px] border-dashed border-ink bg-paper px-6 py-5.5 text-center">
               <span className="text-caption font-extrabold text-gold-text">الحالة الحالية: 0 مرئية</span>
               <span className="text-[14px] font-extrabold">الكتلة لا تُرسم أصلاً</span>
-              <span className="text-[12px] text-muted">لا عنوان، لا مكان فارغ. قسم «آراء العملاء» يرتفع ليأخذ مكانها، وتختفي هذه الملاحظة من لوحة الإدارة أيضاً حين يصبح شعار واحد مرئياً.</span>
+              <span className="max-w-[320px] text-[12px] leading-[1.6] text-muted">لا عنوان، لا مكان فارغ. قسم «آراء العملاء» يرتفع ليأخذ مكانها، وتختفي هذه الملاحظة من لوحة الإدارة أيضاً حين يصبح شعار واحد مرئياً.</span>
             </div>
           ) : (
             <AboutBlock status={`الحالة الحالية: ${visibleRows.length} مرئية`} logos={visibleRows.map((r) => ({ key: r.id, label: r.name, src: r.logoSrc }))} />
@@ -215,13 +217,13 @@ export function PartnersPage() {
 
 function AboutBlock({ status, logos }: { status: string; logos: { key: string; label: string; src?: string }[] }) {
   return (
-    <div className="flex flex-col gap-2.5 border-interactive bg-paper p-5">
+    <div className="flex flex-col gap-3.5 border-interactive bg-paper px-6 py-5.5">
       <span className="text-caption font-extrabold text-gold-text">{status}</span>
       <span className="text-[18px] font-extrabold">شركاؤنا وجهات التمويل</span>
-      <span className="text-[12px] text-ink-2">نعمل مع بنوك مرخّصة وجهات تنظيمية. الموافقة على التمويل بيد البنك، ونحن نجهّز الملف.</span>
-      <div className="mt-1 flex flex-wrap gap-2.5">
+      <span className="text-[12px] leading-[1.6] text-ink-2">نعمل مع بنوك مرخّصة وجهات تنظيمية. الموافقة على التمويل بيد البنك، ونحن نجهّز الملف.</span>
+      <div className="flex flex-wrap items-center gap-5 pt-1">
         {logos.map((l, i) => (
-          <span key={l.key} className={cx("flex h-10 items-center justify-center overflow-hidden bg-slot px-3 text-[10px] font-extrabold text-muted", i === 2 ? "w-[120px]" : "w-[96px]")}>
+          <span key={l.key} className={cx("flex h-10 items-center justify-center overflow-hidden bg-slot px-3 text-[10px] font-extrabold text-muted", LOGO_W[i % LOGO_W.length])}>
             {l.src ? (
               // eslint-disable-next-line @next/next/no-img-element -- local preview of an uploaded partner logo
               <img src={l.src} alt={l.label} className="max-h-8 max-w-full object-contain grayscale" />

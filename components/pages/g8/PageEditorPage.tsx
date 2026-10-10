@@ -303,12 +303,9 @@ function HomePreview({ width, lang, v, ar, active, visible }: { width: PreviewWi
             <span className={cx("font-extrabold", desk ? "text-[28px]" : "text-[16px]")}>{val("finder.title")}</span>
           </Frame>
           <Frame on={active === "finder.sliderMin" || active === "finder.sliderMax"}>
+            {/* no min / max words on the board: the two fields move the knob of the 700,000 start instead */}
             <span className="relative my-2 block h-[3px] bg-ink">
-              <span aria-hidden className="hex-flat absolute top-1/2 size-4 -translate-y-1/2 bg-gold" style={{ insetInlineEnd: "28%" }} />
-            </span>
-            <span className={cx("flex justify-between font-bold text-muted tnum", desk ? "text-[12px]" : "text-[9px]")} dir="ltr">
-              <span>{val("finder.sliderMin")}</span>
-              <span>{val("finder.sliderMax")}</span>
+              <span aria-hidden className="hex-flat absolute top-1/2 size-4 translate-x-1/2 -translate-y-1/2 bg-gold" style={{ right: `${knobAt(val("finder.sliderMin"), val("finder.sliderMax"))}%` }} />
             </span>
           </Frame>
           <Frame on={active === "finder.help"}>
@@ -318,6 +315,14 @@ function HomePreview({ width, lang, v, ar, active, visible }: { width: PreviewWi
       )}
     </div>
   );
+}
+
+/** Where the finder's 700,000 start sits on the min … max track, in % from the right (the track runs RTL). */
+function knobAt(min: string, max: string): number {
+  const lo = Number(min.replace(/[^\d]/g, ""));
+  const hi = Number(max.replace(/[^\d]/g, ""));
+  if (!(hi > lo)) return 50;
+  return Math.min(100, Math.max(0, ((700_000 - lo) / (hi - lo)) * 100));
 }
 
 // ------------------------------------------------------------------ the other pages of the hub

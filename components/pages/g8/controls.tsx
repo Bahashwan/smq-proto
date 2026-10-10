@@ -4,23 +4,35 @@
 import { useRef, useState, type KeyboardEvent, type PointerEvent, type ReactNode } from "react";
 import { cx } from "@/lib/format";
 
-export type CtlTone = "admin" | "tbc" | "active" | "computed" | "error";
+export type CtlTone = "admin" | "tbc" | "active" | "unsaved" | "computed" | "readonly" | "error";
 
 const FRAME: Record<CtlTone, string> = {
   admin: "border-[1.5px] border-ink bg-paper",
   tbc: "border-[1.5px] border-gold bg-cream-focus",
   active: "border-[1.5px] border-gold bg-paper",
+  // the field with an unsaved edit (Admin-SEO-D «من نحن» description)
+  unsaved: "border-2 border-gold bg-paper",
   computed: "border-[1.5px] border-line bg-sand text-muted",
+  // computed value the board draws in the ink frame on sand (Admin-Testimonials-D «10 نماذج»)
+  readonly: "border-[1.5px] border-ink bg-sand",
   error: "border-2 border-gold bg-cream-focus",
+};
+
+const HAS = {
+  width: /(^|\s)w-/,
+  size: /(^|\s)text-(\[\d|label|caption|body|h\d)/,
+  weight: /(^|\s)font-(normal|medium|semibold|bold|extrabold)/,
 };
 
 /** Control classes: 44px inputs, 1.5px frame, gold focus. */
 export function ctl(tone: CtlTone = "admin", extra?: string) {
-  // a width in `extra` replaces the default full width (utilities of one property must not be stacked)
-  const width = /(^|\s)w-/.test(extra ?? "") ? "" : "w-full";
+  // a width, font size or weight in `extra` replaces the default (utilities of one property must not be stacked)
+  const x = extra ?? "";
   return cx(
-    width,
-    "min-w-0 px-3 text-[14px] font-semibold text-ink placeholder:font-normal placeholder:text-disabled focus:border-gold focus:bg-cream-focus focus-visible:outline-0 disabled:text-disabled",
+    !HAS.width.test(x) && "w-full",
+    !HAS.size.test(x) && "text-[14px]",
+    !HAS.weight.test(x) && "font-semibold",
+    "min-w-0 px-3 text-ink placeholder:font-normal placeholder:text-disabled focus:border-gold focus:bg-cream-focus focus-visible:outline-0 disabled:text-disabled",
     FRAME[tone],
     extra,
   );

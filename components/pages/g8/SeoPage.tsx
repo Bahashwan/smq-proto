@@ -19,17 +19,6 @@ import { ctl } from "./controls";
 import { countWord, digitWord, W } from "./model";
 import { ContentHead, G8Shell, LangSwitch, NOURA, SaveStrip, type StripState } from "./shell";
 
-/** Template strings as the board writes them (the fixture names some variables differently; both names fill). */
-const BOARD_TEMPLATES: Record<string, Partial<SeoRow>> = {
-  unit: {
-    descriptionAr: "{type} في {district}، جدة. {beds} غرف و{baths} حمامات، {area} م²، بسعر {price} ريال {status_phrase}. تفاصيل كاملة ومخطط وتواصل مباشر على واتساب.",
-    descriptionNoteAr: "{status_phrase} = «متاحة الآن» أو «محجوزة» أو «مباعة»",
-  },
-  project: {
-    titleAr: "{project} · {district} · من {min_price} ريال",
-    descriptionAr: "{available_count} وحدة متاحة في {project}، {district}. {types_phrase}، أسعار معلنة من {min_price} إلى {max_price} ريال. التسليم {delivery}.",
-  },
-};
 const FIRST_ROWS = 5;
 const COLS = "grid grid-cols-[200px_minmax(0,1fr)_minmax(0,1fr)_300px] items-start gap-4";
 const STATUS_PHRASE = { available: "متاحة الآن", reserved: "محجوزة", sold: "مباعة" } as const;
@@ -71,7 +60,7 @@ export function SeoPage({ ogFiles = [] }: { ogFiles?: string[] }) {
   const vars = useVariables();
   const [lang, setLang] = useState<Lang>("ar");
   const [all, setAll] = useState(false);
-  const rows = useMemo(() => seo.map((r) => ({ ...r, ...BOARD_TEMPLATES[r.key] })), []);
+  const rows = seo;
   const init = useMemo(() => {
     const out: Record<string, Texts> = {};
     for (const r of rows) {
@@ -147,12 +136,12 @@ export function SeoPage({ ogFiles = [] }: { ogFiles?: string[] }) {
                   </span>
                   {r.template && r.pagesCount !== undefined && <span className="bg-sand px-2 py-0.5 text-caption font-bold">{digitWord(r.pagesCount, W.page)}</span>}
                 </div>
-                <label className="flex min-w-0 flex-col gap-1.5">
+                <label className="relative flex min-w-0 flex-col gap-1.5">
                   <span className="sr-only">العنوان · {r.pageAr}</span>
-                  <input value={t.title} onChange={(e) => setText(r.key, "title", e.target.value)} dir={lang === "en" ? "ltr" : undefined} placeholder={lang === "en" ? r.titleAr : undefined} className={ctl(!r.template && t.title.length > SEO_LIMITS.title ? "error" : "admin", "h-11 font-bold")} />
+                  <input value={t.title} onChange={(e) => setText(r.key, "title", e.target.value)} dir={lang === "en" ? "ltr" : undefined} placeholder={lang === "en" ? r.titleAr : undefined} className={ctl(!r.template && t.title.length > SEO_LIMITS.title ? "error" : "admin", "h-11")} />
                   <Counter note={r.template && r.key !== "home" ? (lang === "ar" ? `مثال: ${filledTitle}` : filledTitle) : lang === "ar" ? r.titleNoteAr : undefined} count={r.template ? filledTitle.length : t.title.length} limit={SEO_LIMITS.title} approx={r.template} />
                 </label>
-                <label className="flex min-w-0 flex-col gap-1.5">
+                <label className="relative flex min-w-0 flex-col gap-1.5">
                   <span className="sr-only">الوصف · {r.pageAr}</span>
                   <textarea
                     value={descValue}
@@ -160,7 +149,7 @@ export function SeoPage({ ogFiles = [] }: { ogFiles?: string[] }) {
                     rows={3}
                     dir={lang === "en" ? "ltr" : undefined}
                     placeholder={lang === "en" ? r.descriptionAr : undefined}
-                    className={ctl(!r.template && filledDesc.length > SEO_LIMITS.description ? "error" : "admin", "min-h-[76px] py-2 font-bold leading-relaxed")}
+                    className={ctl(!r.template && filledDesc.length > SEO_LIMITS.description ? "error" : unsavedDesc ? "unsaved" : "admin", "min-h-[70px] py-2.5 leading-[1.6]")}
                   />
                   <Counter note={unsavedDesc ? "غير محفوظ" : lang === "ar" ? r.descriptionNoteAr : undefined} noteGold={unsavedDesc} count={filledDesc.length} limit={SEO_LIMITS.description} approx={r.template} />
                 </label>
@@ -172,7 +161,7 @@ export function SeoPage({ ogFiles = [] }: { ogFiles?: string[] }) {
       </div>
       <p className="text-[12px] text-muted">
         {rest.length > 0 && (
-          <button type="button" onClick={() => setAll((x) => !x)} aria-expanded={all} className="cursor-pointer font-bold text-gold-text underline-offset-2 hover:underline">
+          <button type="button" onClick={() => setAll((x) => !x)} aria-expanded={all} className="cursor-pointer text-muted underline-offset-2 hover:text-ink hover:underline">
             {all ? `عرض أول ${FIRST_ROWS} فقط` : `و${countWord(rest.length, W.page)} أخرى (${rest.map((r) => r.pageAr).join("، ")}) بنفس الصف`}
           </button>
         )}
@@ -185,12 +174,39 @@ export function SeoPage({ ogFiles = [] }: { ogFiles?: string[] }) {
   );
 }
 
+/** The preview title as the link card cuts it: the last « · » or «، » part goes while it is longer than 45 letters. */
+function previewTitle(t: string): string {
+  let out = t;
+  while (out.length > 45) {
+    const at = Math.max(out.lastIndexOf(" · "), out.lastIndexOf("، "));
+    if (at <= 0) break;
+    out = out.slice(0, at);
+  }
+  return out;
+}
+
+/** The preview line: the first clause that ends between 30 and 50 letters («؟» kept, «،» «.» «؛» dropped), else the
+ *  words up to 45 letters, then «…». */
+function previewDescription(d: string): string {
+  const re = /[،.؛؟!]/g;
+  for (let m = re.exec(d); m; m = re.exec(d)) {
+    const i = m.index;
+    if (m[0] === "." && /\d/.test(d[i - 1] ?? "") && /\d/.test(d[i + 1] ?? "")) continue; // 1.7
+    if (i < 30) continue;
+    if (i > 50) break;
+    return `${d.slice(0, m[0] === "؟" || m[0] === "!" ? i + 1 : i).trim()}…`;
+  }
+  if (d.length <= 45) return d;
+  const cut = d.lastIndexOf(" ", 45);
+  return `${d.slice(0, cut > 0 ? cut : 45).trim()}…`;
+}
+
 function Counter({ note, noteGold, count, limit, approx }: { note?: string; noteGold?: boolean; count: number; limit: number; approx?: boolean }) {
   const over = !approx && count > limit;
   return (
     <span className="flex items-start justify-between gap-3 text-caption">
       <span className={cx(noteGold ? "font-bold text-gold-text" : "font-normal text-muted")}>{note && <MarkedText text={note} />}</span>
-      <span className={cx("shrink-0 tnum", over ? "font-extrabold text-gold-text" : "font-semibold text-muted")}>
+      <span className={cx("shrink-0 tnum", over ? "font-extrabold text-gold-text" : noteGold ? "font-semibold text-gold-text" : "font-semibold text-muted")}>
         {approx ? `≈ ${count}` : `${count} / ${limit}`}
       </span>
     </span>
@@ -217,13 +233,12 @@ function LinkPreview({ row, lang, domain, path, title, description, ogFiles, var
         )}
         {has && row.og.includes("مشترك") && <span className="absolute bottom-1.5 start-1.5 bg-ink px-1.5 py-px text-caption font-extrabold text-gold">{row.og}</span>}
       </div>
-      <div className="flex min-w-0 flex-col gap-0.5 border-t-[1.5px] border-ink px-3 py-2.5">
-        <span dir="ltr" className="truncate text-start text-caption font-normal text-muted">
-          {domain}
-          {path === "/" ? "" : path}
+      <div className="flex min-w-0 flex-col gap-0.5 border-t-[1.5px] border-ink px-3 py-2">
+        <span className="truncate text-[10px] font-normal text-muted">
+          <bdi dir="ltr">{`${domain}${path === "/" ? "" : path}`}</bdi>
         </span>
-        <span className="truncate text-[13px] font-extrabold">{title.replace(/\s*\[(للتأكيد|مسودة إجابة)\]/g, "")}</span>
-        <span className="truncate text-caption font-normal text-muted">{description.replace(/\s*\[(للتأكيد|مسودة إجابة)\]/g, "")}</span>
+        <span className="truncate text-[12px] font-extrabold">{previewTitle(title.replace(/\s*\[(للتأكيد|مسودة إجابة)\]/g, ""))}</span>
+        <span className="truncate text-[10px] font-normal leading-normal text-ink-2">{previewDescription(description.replace(/\s*\[(للتأكيد|مسودة إجابة)\]/g, ""))}</span>
       </div>
     </div>
   );

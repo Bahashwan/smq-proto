@@ -21,6 +21,8 @@ interface Reason { key: string; labelAr: string; count: number }
 interface State { districts: District[]; cities: Simple[]; unitTypes: UnitType[]; budgets: Budget[]; reasons: Reason[] }
 
 const FIRST_DISTRICTS = 6;
+/** The muted 11px meta words of the list rows and panel heads. */
+const META = "text-caption font-semibold text-muted";
 
 function fromFixture(): State {
   return {
@@ -101,7 +103,7 @@ export function ListsPage() {
           onAdd={(v) => set("districts", [...st.districts, { key: key(), labelAr: v, comingSoon: true }])}
           footer={
             moreDistricts > 0 && (
-              <button type="button" onClick={() => setAllDistricts((x) => !x)} aria-expanded={allDistricts} className="w-full cursor-pointer border-t border-line px-4 py-3 text-start text-[12px] font-normal text-ink-2 hover:bg-cream">
+              <button type="button" onClick={() => setAllDistricts((x) => !x)} aria-expanded={allDistricts} className="w-full cursor-pointer border-t border-line py-2.5 pe-4 ps-14 text-start text-caption font-semibold text-muted hover:bg-cream hover:text-ink">
                 {allDistricts ? `عرض أول ${FIRST_DISTRICTS} فقط` : `و${countWord(moreDistricts, W.district)} أخرى بلا وحدات (تظهر في «أضف عقارك» فقط)`}
               </button>
             )
@@ -116,11 +118,11 @@ export function ListsPage() {
               return (
                 <>
                   <span className="min-w-0 flex-1 text-label">
-                    <span className="font-extrabold">{d.labelAr}</span>
-                    <span className="text-[12px] font-normal text-muted"> · {d.noteAr ?? (n > 0 ? countWord(n, W.unit) : "0")}</span>
+                    <span className="font-bold">{d.labelAr}</span>
+                    <span className={META}> · {d.noteAr ?? (n > 0 ? countWord(n, W.unit) : "0")}</span>
                   </span>
-                  <span className="flex shrink-0 items-center gap-2.5">
-                    {d.comingSoon ? <span className="border-[1.5px] border-gold px-1.5 py-px text-[12px] font-extrabold text-gold-text">قريباً</span> : <span className="text-[12px] font-bold text-muted">قريباً</span>}
+                  <span className="flex shrink-0 items-center gap-3">
+                    {d.comingSoon ? <span className="border-[1.5px] border-gold px-2 py-px text-caption font-extrabold text-gold-text">قريباً</span> : <span className={META}>قريباً</span>}
                     <Switch checked={d.comingSoon} onChange={(v) => set("districts", st.districts.map((x) => (x.key === d.key ? { ...x, comingSoon: v } : x)))} aria-label={`قريباً · ${d.labelAr}`} />
                   </span>
                 </>
@@ -133,8 +135,8 @@ export function ListsPage() {
           <ListPanel title="المدن" count={String(st.cities.length)} meta={st.cities.length === 1 ? lists.citiesNoteAr : `${st.cities.length} مدن · يظهر فلتر المدينة`} addLabel="مدينة جديدة" onAdd={(v) => set("cities", [...st.cities, { key: key(), labelAr: v }])}>
             {st.cities.map((c) => (
               <div key={c.key} className="flex min-h-12 items-center justify-between gap-3 border-t border-line px-4 py-2.5 text-label first:border-t-0">
-                <span className="font-extrabold">{c.labelAr}</span>
-                {c.noteAr && <span className="text-[12px] font-normal text-muted">{c.noteAr}</span>}
+                <span className="font-bold">{c.labelAr}</span>
+                {c.noteAr && <span className={META}>{c.noteAr}</span>}
               </div>
             ))}
           </ListPanel>
@@ -145,8 +147,8 @@ export function ListsPage() {
               render={(u, i) => (
                 <>
                   <span className="min-w-0 flex-1 text-label">
-                    <span className="font-extrabold">{u.labelAr}</span>
-                    <span className="text-[12px] font-normal text-muted">
+                    <span className="font-bold">{u.labelAr}</span>
+                    <span className={META}>
                       {" "}
                       · {u.pluralAr} · {unitsOfType(u.key)}
                       {u.noteAr ? ` · ${u.noteAr}` : ""}
@@ -159,7 +161,7 @@ export function ListsPage() {
           </ListPanel>
         </div>
 
-        <ListPanel title="الميزانيات المقترحة" count={String(st.budgets.length)} meta="أزرار تحت المنزلق، بالريال" addLabel="قيمة بالريال" numeric onAdd={(v) => {
+        <ListPanel title="الميزانيات المقترحة" count={String(st.budgets.length)} meta="أزرار تحت المنزلق، بالريال" addLabel="قيمة بالريال" addAria="قيمة جديدة" numeric onAdd={(v) => {
           const value = parseInt(v.replace(/[^\d]/g, ""), 10);
           if (!value) return false;
           set("budgets", [...st.budgets, { key: key(), labelAr: `حتى ${fmtCompactAr(value)}`, value, visible: true }]);
@@ -174,8 +176,8 @@ export function ListsPage() {
               return (
                 <>
                   <span className="min-w-0 flex-1 text-label">
-                    <span className="font-extrabold">{b.labelAr}</span>
-                    <span className="text-[12px] font-normal text-muted tnum"> · {meta}</span>
+                    <span className="font-bold">{b.labelAr}</span>
+                    <span className={cx(META, "tnum")}> · {meta}</span>
                   </span>
                   <Switch checked={b.visible} onChange={(v) => set("budgets", st.budgets.map((x) => (x.key === b.key ? { ...x, visible: v, noteAr: x.noteAr === "مخفي" && v ? undefined : x.noteAr } : x)))} aria-label={b.visible ? "ظاهر" : "مخفي"} />
                 </>
@@ -190,8 +192,8 @@ export function ListsPage() {
             onReorder={(ids) => set("reasons", ids.map((id) => st.reasons.find((r) => r.key === id)!))}
             render={(r, i) => (
               <>
-                <span className="min-w-0 flex-1 text-label font-extrabold">{r.labelAr}</span>
-                <span className="shrink-0 text-[12px] font-normal text-muted tnum">{i === 0 ? `${r.count} مرة` : r.count}</span>
+                <span className="min-w-0 flex-1 text-label font-bold">{r.labelAr}</span>
+                <span className={cx(META, "shrink-0 tnum")}>{i === 0 ? `${r.count} مرة` : r.count}</span>
               </>
             )}
           />
@@ -207,11 +209,11 @@ const SHAPE_OF: Record<string, number> = { apartment: 0, "roof-villa": 1, villa:
 function TypeShape({ k, i }: { k: string; i: number }) {
   const shape = SHAPE_OF[k] ?? i % 3;
   if (shape === 0) return <span aria-hidden className="block size-5 shrink-0 border-2 border-ink" />;
-  if (shape === 1) return <span aria-hidden className="block size-5 shrink-0 bg-ink [clip-path:polygon(0_100%,50%_0,100%_100%)]" />;
-  return <span aria-hidden className="hex-flat block h-[18px] w-5 shrink-0 bg-ink" />;
+  if (shape === 1) return <span aria-hidden className="block size-4 shrink-0 bg-ink [clip-path:polygon(0_100%,50%_0,100%_100%)]" />;
+  return <span aria-hidden className="hex-flat block size-4 shrink-0 bg-ink" />;
 }
 
-function ListPanel({ title, count, meta, children, addLabel, onAdd, numeric, footer }: { title: string; count: string; meta: string; children: ReactNode; addLabel: string; onAdd: (v: string) => void | false; numeric?: boolean; footer?: ReactNode }) {
+function ListPanel({ title, count, meta, children, addLabel, addAria, onAdd, numeric, footer }: { title: string; count: string; meta: string; children: ReactNode; addLabel: string; addAria?: string; onAdd: (v: string) => void | false; numeric?: boolean; footer?: ReactNode }) {
   const [v, setV] = useState("");
   const [err, setErr] = useState(false);
   const add = () => {
@@ -221,25 +223,26 @@ function ListPanel({ title, count, meta, children, addLabel, onAdd, numeric, foo
   };
   return (
     <section aria-label={title} className="border-interactive bg-paper">
-      <header className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-        <h2 className="text-[16px] font-extrabold">
-          {title} <span className="text-caption font-bold text-muted tnum">{count}</span>
+      <header className="flex flex-wrap items-center justify-between gap-x-2.5 gap-y-1 border-b-[1.5px] border-ink bg-sand px-4 py-3.5">
+        <h2 className="text-[15px] font-extrabold leading-[1.6]">
+          {title} <span className={cx(META, "tnum")}>{count}</span>
         </h2>
-        <span className="text-[12px] text-muted">{meta}</span>
+        <span className={META}>{meta}</span>
       </header>
       <div>{children}</div>
       {footer}
-      <div className="flex gap-2 border-t-[1.5px] border-ink p-3">
+      <div className="flex items-center gap-2 border-t-[1.5px] border-ink bg-cream px-4 py-2.5">
         <input
           value={v}
           onChange={(e) => setV(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && add()}
           placeholder={addLabel}
-          aria-label={addLabel}
+          aria-label={addAria ?? addLabel}
           inputMode={numeric ? "numeric" : undefined}
-          className={ctl(err ? "error" : "admin", "h-11")}
+          dir={numeric ? "ltr" : undefined}
+          className={ctl(err ? "error" : "admin", cx("h-9 px-2.5 text-label font-normal", numeric && "text-right"))}
         />
-        <button type="button" onClick={add} className="flex h-11 shrink-0 cursor-pointer items-center bg-ink px-4 text-label font-extrabold text-paper motion-hover transition-colors hover:bg-ink-2">
+        <button type="button" onClick={add} className="flex h-9 shrink-0 cursor-pointer items-center bg-ink px-3 text-[12px] font-extrabold text-paper motion-hover transition-colors hover:bg-ink-2">
           أضف
         </button>
       </div>
@@ -253,8 +256,8 @@ function SortRows<T extends { key: string }>({ items, onReorder, render, rowClas
   return (
     <>
       {items.map((it, i) => (
-        <div key={it.key} ref={rowRef(it.key)} className={cx("relative flex min-h-12 items-center gap-3 border-t border-line py-1.5 pe-4 ps-1.5 first:border-t-0", dragging === it.key ? "bg-sand" : rowClass?.(it))}>
-          {dragging === it.key && <span aria-hidden className="absolute inset-x-0 -top-px h-[3px] bg-gold" />}
+        <div key={it.key} ref={rowRef(it.key)} className={cx("relative flex min-h-12 items-center gap-3 border-t border-line py-1.5 pe-4 ps-1.5 first:border-t-0", dragging === it.key ? "bg-sand outline-2 -outline-offset-2 outline-solid outline-gold" : rowClass?.(it))}>
+          {dragging === it.key && <span aria-hidden className="absolute inset-x-4 -bottom-0.5 z-10 h-[3px] bg-gold" />}
           <DragHandle {...handleProps(it.key, "اسحب")} />
           {render(it, i)}
         </div>

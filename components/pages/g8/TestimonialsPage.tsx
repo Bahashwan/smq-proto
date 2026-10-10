@@ -18,7 +18,7 @@ import { ContentHead, G8Shell, H2, SAUD, SaveStrip, type StripState } from "./sh
 const MODELS_W = { one: "نموذج واحد", two: "نموذجان", few: "نماذج", many: "نموذجاً" };
 const CONSENT_SOURCES = ["واتساب", "بريد", "ورقي"];
 const PROOF_NC: Record<string, string> = { trainees: "nc-trainees", since: "nc-since" };
-const PROOF_COLS = "grid grid-cols-[160px_minmax(0,1fr)_minmax(0,1fr)_110px_90px] items-center gap-3";
+const PROOF_COLS = "grid grid-cols-[160px_minmax(0,1fr)_minmax(0,1fr)_110px_90px] items-center gap-3.5";
 
 interface Proof {
   key: string;
@@ -88,7 +88,7 @@ export function TestimonialsPage() {
         title="آراء العملاء والأرقام"
         subtitle="كتلة الآراء في «من نحن» تظهر فقط حين تكون 3 آراء منشورة على الأقل. الآراء نصوص حقيقية بموافقة صاحبها، بلا صور أشخاص"
         actions={
-          <button type="button" onClick={() => setAdding(true)} className="flex h-11 cursor-pointer items-center bg-ink px-4 text-label font-extrabold text-paper cut-s motion-hover transition-colors hover:bg-ink-2">
+          <button type="button" onClick={() => setAdding(true)} className="flex h-10 cursor-pointer items-center bg-ink px-4 text-label font-extrabold text-paper cut-s motion-hover transition-colors hover:bg-ink-2">
             + رأي
           </button>
         }
@@ -123,40 +123,35 @@ export function TestimonialsPage() {
         <h2 id="t-h" className="text-[16px] font-extrabold">
           الآراء
         </h2>
-        <div className="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))]">
+        <div className="grid gap-3.5 [grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))]">
           {items.map((t) => {
             const live = t.published && t.consent;
             return (
               <article key={t.id} className={cx("flex flex-col bg-paper", t.consent ? "border-interactive" : "border-[1.5px] border-dashed border-ink")}>
-                <header className="flex items-start justify-between gap-3 border-b border-line px-4 py-3 text-label">
-                  <span className="font-extrabold">
-                    {[t.name, t.role, t.unitCode, t.date].filter(Boolean).join(" · ")}
-                  </span>
-                  <span className="flex shrink-0 items-center gap-2 text-[12px] font-bold">
-                    {live ? "منشور" : <span className="border-[1.5px] border-ink px-1.5 py-px text-caption font-extrabold">مسودة</span>}
+                <header className="flex items-center justify-between gap-2.5 border-b border-line px-3.5 py-2.5 text-[12px] font-bold text-muted">
+                  <span>{[t.name, t.role, t.unitCode, t.date].filter(Boolean).join(" · ")}</span>
+                  <span className="flex shrink-0 items-center gap-2">
+                    {live ? "منشور" : <span className="border-[1.5px] border-ink px-2 py-px text-caption font-extrabold text-ink">مسودة</span>}
                     <Switch checked={live} disabled={!t.consent} onChange={(v) => updateT(t.id, { published: v })} aria-label={t.consent ? (live ? "منشور" : "غير منشور") : "غير منشور، بلا موافقة"} />
                   </span>
                 </header>
                 {editing === t.id ? (
-                  <textarea value={t.text} onChange={(e) => updateT(t.id, { text: e.target.value })} rows={3} aria-label="نص الرأي" className={ctl("admin", "m-4 w-auto py-2.5 leading-relaxed")} />
+                  <textarea value={t.text} onChange={(e) => updateT(t.id, { text: e.target.value })} rows={3} aria-label="نص الرأي" className={ctl("admin", "m-3.5 w-auto py-2.5 leading-relaxed")} />
                 ) : (
-                  <p className={cx("px-4 py-3 text-[15px] font-bold leading-relaxed", !live && "font-semibold text-muted")}>{t.text}</p>
+                  <p className={cx("p-3.5 text-[14px] font-semibold leading-[1.7]", !live && "text-muted")}>{t.text}</p>
                 )}
-                <footer className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-line px-4 py-3 text-[12px]">
+                <footer className="mt-auto flex items-center justify-between gap-2.5 border-t border-line px-3.5 py-2.5 text-[12px]">
                   {t.consent ? (
-                    <span className="text-muted">
-                      موافقة كتابية: نعم · {t.consentSource}
-                      {t.sample && " · نص تجريبي"}
-                    </span>
+                    <span className="min-w-0 text-muted">موافقة كتابية: نعم · {t.consentSource}</span>
                   ) : (
-                    <span className="font-bold text-gold-text">موافقة كتابية: لا. النشر معطّل حتى تُسجَّل الموافقة</span>
+                    <span className="min-w-0 font-bold text-gold-text">موافقة كتابية: لا. النشر معطّل حتى تُسجَّل الموافقة</span>
                   )}
                   {t.consent ? (
-                    <button type="button" onClick={() => setEditing(editing === t.id ? null : t.id)} className="flex h-9 cursor-pointer items-center border-[1.5px] border-ink px-3 font-bold hover:bg-sand">
+                    <button type="button" onClick={() => setEditing(editing === t.id ? null : t.id)} className="flex h-[34px] shrink-0 cursor-pointer items-center border-[1.5px] border-ink bg-paper px-3 font-extrabold hover:bg-sand">
                       {editing === t.id ? "تم" : "تحرير"}
                     </button>
                   ) : (
-                    <button type="button" onClick={() => setConsentFor(t.id)} className="flex h-9 cursor-pointer items-center border-[1.5px] border-ink px-3 font-bold hover:bg-sand">
+                    <button type="button" onClick={() => setConsentFor(t.id)} className="flex h-[34px] shrink-0 cursor-pointer items-center border-[1.5px] border-ink bg-paper px-3 font-extrabold hover:bg-sand">
                       سجّل الموافقة
                     </button>
                   )}
@@ -177,7 +172,7 @@ export function TestimonialsPage() {
               toast("أُضيف الرأي كمسودة · سجّل الموافقة لنشره", { kind: "ok" });
             }} />
           ) : (
-            <button type="button" onClick={() => setAdding(true)} className="flex min-h-[200px] cursor-pointer flex-col items-center justify-center gap-2 border-[1.5px] border-dashed border-ink bg-paper p-6 text-center hover:bg-cream">
+            <button type="button" onClick={() => setAdding(true)} className="flex min-h-[180px] cursor-pointer flex-col items-center justify-center gap-2 border-[1.5px] border-dashed border-ink bg-paper px-4 py-7 text-center hover:bg-cream">
               <span className="text-[14px] font-extrabold">+ رأي جديد</span>
               <span className="text-[12px] text-muted">الاسم بالأحرف الأولى أو كما يفضّل العميل، رمز الوحدة إن وُجد، النص، ومصدر الموافقة.</span>
             </button>
@@ -191,7 +186,7 @@ export function TestimonialsPage() {
         </H2>
         <div className="overflow-x-auto border-interactive bg-paper">
           <div className="min-w-[820px]">
-            <div className={cx(PROOF_COLS, "bg-sand px-4 py-2.5 text-caption font-extrabold text-muted")}>
+            <div className={cx(PROOF_COLS, "border-b-[1.5px] border-ink bg-sand px-4 py-2.5 text-caption font-extrabold text-muted")}>
               <span>الرقم</span>
               <span>الوصف</span>
               <span>المصدر</span>
@@ -199,8 +194,8 @@ export function TestimonialsPage() {
               <span />
             </div>
             {proof.map((p) => (
-              <div key={p.key} className={cx(PROOF_COLS, "border-t border-line px-4 py-3 text-label font-normal")}>
-                <input value={p.value} readOnly={p.computed} onChange={(e) => updateP(p.key, { value: e.target.value })} aria-label="الرقم" className={ctl(p.computed ? "computed" : p.tbc ? "tbc" : "admin", cx(INPUT_H, "font-bold"))} />
+              <div key={p.key} className={cx(PROOF_COLS, "border-line px-4 py-3 text-label font-normal [&+&]:border-t")}>
+                <input value={p.value} readOnly={p.computed} onChange={(e) => updateP(p.key, { value: e.target.value })} aria-label="الرقم" className={ctl(p.computed ? "readonly" : p.tbc ? "tbc" : "admin", INPUT_H)} />
                 <input value={p.descriptionAr} onChange={(e) => updateP(p.key, { descriptionAr: e.target.value })} aria-label="الوصف" className={ctl("admin", INPUT_H)} />
                 <span className={cx("text-[12px]", p.tbc ? "font-bold text-gold-text" : "text-muted")}>
                   <MarkedText text={p.sourceAr} />

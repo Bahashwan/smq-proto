@@ -11,8 +11,8 @@ import { countWord, PATCH, useNeedsConfirmation, W } from "./model";
 import { ContentHead, G8Shell, SAUD } from "./shell";
 import { waitingLine } from "./ContentHubPage";
 
-const COLS = "grid grid-cols-[1fr_1.6fr_150px_220px] items-center gap-4";
-const SMALL_BTN = "inline-flex h-9 items-center px-3 text-[12px] font-bold no-underline motion-hover transition-colors";
+const COLS = "grid grid-cols-[1fr_1.6fr_150px_200px] items-center gap-3";
+const SMALL_BTN = "inline-flex h-8 items-center px-3.5 text-[12px] font-bold no-underline motion-hover transition-colors";
 
 export function NeedsConfirmationPage() {
   const { rows, count } = useNeedsConfirmation();
@@ -33,14 +33,14 @@ export function NeedsConfirmationPage() {
       ) : (
         <div className="overflow-x-auto border-interactive bg-paper">
           <div className="min-w-[860px]">
-            <div className={cx(COLS, "bg-sand px-4 py-3 text-caption font-extrabold text-muted")}>
+            <div className={cx(COLS, "border-b-[1.5px] border-ink bg-sand px-4 py-2.5 text-caption font-extrabold text-muted")}>
               <span>الحقل</span>
               <span>القيمة الحالية</span>
               <span>أين يظهر</span>
               <span />
             </div>
             {rows.map((r) => (
-              <div key={r.id} className={cx(COLS, "border-t border-line px-4 py-3 text-label font-normal")}>
+              <div key={r.id} className={cx(COLS, "border-line px-4 py-2.5 text-label font-normal [&+&]:border-t")}>
                 <span className="font-extrabold">{r.kind === "draft" ? faqRowLabel(r.count ?? 0) : r.fieldAr}</span>
                 <span className="font-bold text-gold-text">
                   {r.kind === "draft" ? (
@@ -63,11 +63,11 @@ export function NeedsConfirmationPage() {
                         تعديل
                       </Link>
                       {r.disabledReasonAr ? (
-                        <button type="button" disabled className={cx(SMALL_BTN, "cursor-default border-[1.5px] border-line text-disabled")}>
+                        <button type="button" disabled className={cx(SMALL_BTN, "cursor-default border-[1.5px] border-ink bg-ink font-extrabold text-paper opacity-40")}>
                           {r.disabledReasonAr}
                         </button>
                       ) : (
-                        <button type="button" onClick={() => confirm(r.id, r.fieldAr)} className={cx(SMALL_BTN, "cursor-pointer bg-ink font-extrabold text-paper hover:bg-ink-2")}>
+                        <button type="button" onClick={() => confirm(r.id, r.fieldAr)} className={cx(SMALL_BTN, "cursor-pointer border-[1.5px] border-ink bg-ink font-extrabold text-paper hover:bg-ink-2")}>
                           أكّد وأزل الوسم
                         </button>
                       )}
@@ -80,7 +80,7 @@ export function NeedsConfirmationPage() {
         </div>
       )}
       <p className="text-caption font-normal leading-relaxed text-muted">
-        {waitingLine(count).replace(" بانتظار التأكيد", "")}. «أكّد وأزل الوسم» يحذف الوسم من كل مكان يظهر فيه الحقل في خطوة واحدة ويسجّل في سجل الإجراءات. محرر يرى القائمة للقراءة فقط مع زر «اطلب التأكيد».
+        {`${waitingLine(count).replace(" بانتظار التأكيد", "")}. «أكّد وأزل الوسم» يحذف الوسم من كل مكان يظهر فيه الحقل في خطوة واحدة ويسجّل في سجل الإجراءات. محرر يرى القائمة للقراءة فقط مع زر «اطلب التأكيد».`}
       </p>
     </G8Shell>
   );

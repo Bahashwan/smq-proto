@@ -4,6 +4,7 @@
 // switches the send buttons of approvals and requests), the fixed roles matrix and the audit log with its filters.
 import { useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
+import { MarkedText } from "@/components/ui";
 import { adminUsers, auditLog, rolesMatrix } from "@/data/content";
 import { settings } from "@/data/settings";
 import type { AdminUser } from "@/data/types";
@@ -14,7 +15,9 @@ import { ctl, Field } from "./controls";
 import { ContentHead, G8Shell, HexYes, SAUD } from "./shell";
 
 const ROLE_AR: Record<AdminUser["role"], string> = { manager: "مدير", editor: "محرر" };
-const BTN = "flex h-9 cursor-pointer items-center border-[1.5px] border-ink bg-paper px-3 text-[12px] font-bold motion-hover transition-colors hover:bg-sand";
+const BTN = "flex h-[34px] cursor-pointer items-center border-[1.5px] border-ink bg-paper px-3 text-[12px] font-extrabold motion-hover transition-colors hover:bg-sand";
+/** 11px muted meta words (`.m` on the board). */
+const META = "text-caption font-semibold text-muted";
 const PERIODS = ["آخر 30 يوماً", "آخر 90 يوماً"];
 
 interface Row extends AdminUser {
@@ -73,7 +76,7 @@ export function UsersPage() {
         title="الإعدادات والمستخدمون"
         subtitle="من يدخل اللوحة وماذا يستطيع، وحالة ربط واتساب بزنس. لا حسابات للزوار في أي مكان على الموقع"
         actions={
-          <a href="#invite" className="flex h-11 items-center bg-ink px-4 text-label font-extrabold text-paper no-underline cut-s motion-hover transition-colors hover:bg-ink-2">
+          <a href="#invite" className="flex h-10 items-center bg-ink px-4 text-label font-extrabold text-paper no-underline cut-s motion-hover transition-colors hover:bg-ink-2">
             + دعوة مستخدم
           </a>
         }
@@ -81,16 +84,16 @@ export function UsersPage() {
 
       <div className="grid items-start gap-4 lg:grid-cols-[1.3fr_1fr]">
         <section aria-labelledby="users-h" className="border-interactive bg-paper">
-          <header className="flex flex-wrap items-baseline justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-            <h2 id="users-h" className="text-[16px] font-extrabold">
-              المستخدمون <span className="text-[12px] font-bold text-muted">{active} نشطون{pending ? ` · ${pending === 1 ? "دعوة معلّقة" : `${pending} دعوات معلّقة`}` : ""}</span>
+          <header className="flex min-h-[52px] flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
+            <h2 id="users-h" className="text-[15px] font-extrabold">
+              المستخدمون <span className={META}>{active} نشطون{pending ? ` · ${pending === 1 ? "دعوة معلّقة" : `${pending} دعوات معلّقة`}` : ""}</span>
             </h2>
-            <span className="text-[12px] text-muted">آخر دخول بتوقيت جدة</span>
+            <span className={META}>آخر دخول بتوقيت جدة</span>
           </header>
           {users.map((u) => (
             <div key={u.id} className={cx("flex flex-wrap items-center gap-3 border-b border-line px-4 py-3", u.pending && "bg-cream-focus", u.suspended && "opacity-60")}>
-              <span aria-hidden className={cx("hex-flat flex h-9 w-10 shrink-0 items-center justify-center text-label font-extrabold", u.pending ? "bg-ink" : "bg-gold text-ink")}>
-                {u.pending ? <span className="hex-flat flex h-[32px] w-[36px] items-center justify-center bg-paper text-ink">{u.initial}</span> : u.initial}
+              <span aria-hidden className={cx("hex-flat flex size-9 shrink-0 items-center justify-center text-label font-extrabold", u.pending ? "bg-ink" : u.role === "manager" ? "bg-gold text-ink" : "bg-ink text-paper")}>
+                {u.pending ? <span className="hex-flat flex size-8 items-center justify-center bg-paper text-ink">{u.initial}</span> : u.initial}
               </span>
               <div className="flex min-w-0 flex-1 flex-col gap-0.5">
                 <span className="text-[14px] font-extrabold">
@@ -113,16 +116,16 @@ export function UsersPage() {
                       <option value="manager">مدير</option>
                     </select>
                   ) : (
-                    <span className={cx("ms-1 border-[1.5px] border-ink px-1.5 py-px text-caption font-extrabold", u.role === "manager" && !u.pending && "bg-ink text-paper")}>{u.roleAr}</span>
+                    <span className={cx("ms-1 border-[1.5px] border-ink px-2 py-px text-caption font-extrabold", u.role === "manager" && !u.pending && "bg-ink text-paper")}>{u.roleAr}</span>
                   )}
                   {u.suspended && <span className="ms-1.5 text-caption font-bold text-muted">موقوف</span>}
                 </span>
-                <span className="text-[12px] text-muted">
-                  <span dir="ltr">{u.email}</span> · {u.lastLoginAr}
+                <span dir="ltr" className={cx(META, "text-right")}>
+                  {u.email} · {u.lastLoginAr}
                 </span>
               </div>
               {u.noteAr ? (
-                <span className="text-[12px] font-bold text-muted">{u.noteAr}</span>
+                <span className={META}>{u.noteAr}</span>
               ) : u.pending ? (
                 <span className="flex gap-2">
                   <button type="button" className={BTN} onClick={() => toast(`أُعيد إرسال الدعوة إلى ${u.email}`, { kind: "ok" })}>
@@ -168,19 +171,19 @@ export function UsersPage() {
         </section>
 
         {manual ? (
-          <section aria-labelledby="wa-h" className="border-2 border-gold bg-paper">
-            <header className="flex flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-gold bg-cream-focus px-4 py-3">
-              <h2 id="wa-h" className="text-[16px] font-extrabold">
+          <section aria-labelledby="wa-h" className="border-[1.5px] border-dashed border-ink bg-paper">
+            <header className="flex min-h-[52px] flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-gold bg-cream-focus px-4 py-3">
+              <h2 id="wa-h" className="text-[15px] font-extrabold">
                 واتساب بزنس
               </h2>
               <span className="flex items-center gap-1.5 text-[12px] font-extrabold text-gold-text">
-                <span aria-hidden className="hex-flat flex size-3.5 items-center justify-center bg-gold">
-                  <span className="hex-flat block size-2 bg-paper" />
+                <span aria-hidden className="hex-flat flex size-2.5 items-center justify-center bg-ink">
+                  <span className="hex-flat block size-1.5 bg-paper" />
                 </span>
                 غير متصل · وضع يدوي
               </span>
             </header>
-            <div className="flex flex-col items-start gap-3 p-4 text-label font-normal">
+            <div className="flex flex-col gap-2.5 px-4 py-3.5 text-label font-normal">
               <span>
                 {noteBefore}
                 {at >= 0 && (
@@ -190,30 +193,30 @@ export function UsersPage() {
                 )}
                 {noteAfter}
               </span>
-              <button type="button" onClick={() => { set("wa", "connected"); toast("أُعيد ربط واتساب بزنس · الإرسال تلقائي من جديد", { kind: "ok" }); }} className="flex h-11 cursor-pointer items-center bg-gold px-4 text-label font-extrabold text-ink cut-s motion-hover transition-colors hover:bg-gold-hover">
+              <button type="button" onClick={() => { set("wa", "connected"); toast("أُعيد ربط واتساب بزنس · الإرسال تلقائي من جديد", { kind: "ok" }); }} className="flex h-10 cursor-pointer items-center justify-center bg-gold px-4 text-label font-extrabold text-ink cut-s motion-hover transition-colors hover:bg-gold-hover">
                 إعادة الربط الآن
               </button>
             </div>
           </section>
         ) : (
           <section aria-labelledby="wa-h" className="border-interactive bg-paper">
-            <header className="flex flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-              <h2 id="wa-h" className="text-[16px] font-extrabold">
+            <header className="flex min-h-[52px] flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
+              <h2 id="wa-h" className="text-[15px] font-extrabold">
                 واتساب بزنس
               </h2>
               <span className="flex items-center gap-1.5 text-[12px] font-extrabold">
-                <span aria-hidden className="hex-flat block size-3.5 bg-gold" />
+                <span aria-hidden className="hex-flat block size-2.5 bg-gold" />
                 متصل
               </span>
             </header>
-            <div className="flex flex-col gap-0 px-4 py-2 text-label font-normal">
+            <div className="flex flex-col gap-2.5 px-4 py-3.5 text-label font-normal">
               <Line label="الرقم" value={<span dir="ltr">{settings.whatsappBusiness.number}</span>} />
               <Line label="آخر رسالة تلقائية" value={settings.whatsappBusiness.lastSync} />
               <Line label="القوالب المعتمدة" value={settings.whatsappBusiness.templatesApproved ?? ""} />
-              <p className="my-3 bg-sand px-3 py-2.5 text-[12px] leading-relaxed">
+              <p className="bg-sand px-3 py-2.5 text-[12px] leading-[1.6]">
                 <strong className="font-extrabold">الوضع اليدوي</strong> يعمل تلقائياً إذا انقطع الاتصال: تظهر أزرار «أرسل على واتساب» بدل الإرسال التلقائي في الموافقات والطلبات الواردة، ويُسجَّل كل إرسال يدوي في السجل.
               </p>
-              <div className="flex flex-wrap gap-2 pb-2">
+              <div className="flex flex-wrap gap-2">
                 <button type="button" className={BTN} onClick={() => toast("أُعيد ربط واتساب بزنس · الاتصال سليم", { kind: "ok" })}>
                   إعادة الربط
                 </button>
@@ -227,33 +230,35 @@ export function UsersPage() {
       </div>
 
       <section aria-labelledby="roles-h" className="border-interactive bg-paper">
-        <header className="flex flex-wrap items-baseline justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-          <h2 id="roles-h" className="text-[16px] font-extrabold">
+        <header className="flex min-h-[52px] flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
+          <h2 id="roles-h" className="text-[15px] font-extrabold">
             الأدوار والصلاحيات
           </h2>
-          <span className="text-[12px] text-muted">دوران فقط. الصلاحيات ثابتة في النسخة الأولى، تُعرض للتوضيح لا للتعديل</span>
+          <span className={META}>دوران فقط. الصلاحيات ثابتة في النسخة الأولى، تُعرض للتوضيح لا للتعديل</span>
         </header>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[720px] border-collapse text-label font-normal">
+          <table className="w-full min-w-[720px] border-collapse text-[12px] font-normal">
             <thead>
-              <tr className="text-caption font-extrabold text-muted">
-                <th scope="col" className="px-4 py-2.5 text-start">الإجراء</th>
-                <th scope="col" className="w-20 px-2 py-2.5 text-center">مدير</th>
-                <th scope="col" className="w-20 px-2 py-2.5 text-center">محرر</th>
-                <th scope="col" className="px-4 py-2.5 text-start">ملاحظة</th>
+              <tr className="bg-cream text-[12px] font-extrabold">
+                <th scope="col" className="px-3 py-2 text-start">الإجراء</th>
+                <th scope="col" className="w-20 px-3 py-2 text-start">مدير</th>
+                <th scope="col" className="w-20 px-3 py-2 text-start">محرر</th>
+                <th scope="col" className="px-3 py-2 text-start">ملاحظة</th>
               </tr>
             </thead>
             <tbody>
               {rolesMatrix.map((r) => (
                 <tr key={r.actionAr} className="border-t border-line">
-                  <td className="px-4 py-2.5">{r.actionAr}</td>
-                  <td className="px-2 py-2.5 text-center">
+                  <td className="px-3 py-2">
+                    <MarkedText text={r.actionAr} />
+                  </td>
+                  <td className="px-3 py-2">
                     <HexYes on={r.manager} />
                   </td>
-                  <td className="px-2 py-2.5 text-center">
+                  <td className="px-3 py-2">
                     <HexYes on={r.editor} />
                   </td>
-                  <td className="px-4 py-2.5 text-[12px] text-muted">{r.noteAr}</td>
+                  <td className={cx(META, "px-3 py-2")}>{r.noteAr}</td>
                 </tr>
               ))}
             </tbody>
@@ -262,8 +267,8 @@ export function UsersPage() {
       </section>
 
       <section aria-labelledby="log-h" className="border-interactive bg-paper">
-        <header className="flex flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-          <h2 id="log-h" className="text-[16px] font-extrabold">
+        <header className="flex min-h-[52px] flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
+          <h2 id="log-h" className="text-[15px] font-extrabold">
             سجل الإجراءات
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -283,16 +288,16 @@ export function UsersPage() {
             </button>
           </div>
         </header>
-        <div className="grid grid-cols-[130px_100px_1fr] gap-3 bg-cream px-4 py-2 text-caption font-extrabold text-muted">
+        <div className="grid grid-cols-[120px_90px_1fr] gap-3 bg-cream px-4 py-[9px] text-caption font-extrabold text-muted">
           <span>الوقت</span>
           <span>المستخدم</span>
           <span>الإجراء</span>
         </div>
         {log.map((a) => (
-          <div key={a.at + a.textAr} className="grid grid-cols-[130px_100px_1fr] gap-3 border-t border-line px-4 py-2.5 text-label font-normal">
-            <span className="text-muted">{a.whenAr}</span>
-            <span className="font-bold">{a.user}</span>
-            <span>{a.textAr}</span>
+          <div key={a.at + a.textAr} className="grid grid-cols-[120px_90px_1fr] gap-3 border-t border-line px-4 py-[9px] text-[12px] font-normal">
+            <span>{a.whenAr}</span>
+            <span>{a.user}</span>
+            <span className="min-w-0 [overflow-wrap:anywhere]">{a.textAr}</span>
           </div>
         ))}
       </section>
@@ -302,8 +307,8 @@ export function UsersPage() {
 
 function Line({ label, value }: { label: string; value: ReactNode }) {
   return (
-    <div className="flex items-center justify-between gap-3 border-b border-line py-2.5">
-      <span className="text-muted">{label}</span>
+    <div className="flex items-center justify-between gap-2.5">
+      <span className={META}>{label}</span>
       <span className="font-bold">{value}</span>
     </div>
   );

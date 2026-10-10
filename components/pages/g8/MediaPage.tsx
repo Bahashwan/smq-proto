@@ -96,9 +96,9 @@ export function MediaPage() {
 
       {sections.map((s) => (
         <section key={s.sectionAr} aria-label={s.sectionAr} className="flex flex-col gap-3">
-          <h2 className="flex flex-wrap items-baseline gap-x-2.5 text-[16px] font-extrabold">
+          <h2 className="mt-1.5 flex flex-wrap items-baseline gap-x-2.5 text-label font-extrabold">
             {s.sectionAr}
-            <span className="text-[12px] font-normal text-muted">{[countWord(mediaSections().find((x) => x.sectionAr === s.sectionAr)?.slots.length ?? 0, W.slot), SECTION_NOTES[s.sectionAr]].filter(Boolean).join(" · ")}</span>
+            <span className="text-caption font-semibold text-muted">{[countWord(mediaSections().find((x) => x.sectionAr === s.sectionAr)?.slots.length ?? 0, W.slot), SECTION_NOTES[s.sectionAr]].filter(Boolean).join(" · ")}</span>
           </h2>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             {s.slots.map((m) => (m.tier === "empty" && !uploads[m.id] ? <FounderCard key={m.id} slot={m} onUpload={() => pick(m.id)} /> : <SlotCard key={m.id} slot={m} upload={uploads[m.id]} onReplace={() => pick(m.id)} />))}
@@ -117,7 +117,7 @@ function FilterChip({ on, onClick, label, tone, disabled }: { on: boolean; onCli
       onClick={onClick}
       disabled={disabled && !on}
       className={cx(
-        "flex h-10 cursor-pointer items-center border-[1.5px] px-3.5 text-[12px] tnum motion-hover transition-colors disabled:cursor-default disabled:border-line disabled:text-disabled",
+        "flex h-9 cursor-pointer items-center border-[1.5px] px-3 text-[12px] tnum motion-hover transition-colors disabled:cursor-default disabled:border-line disabled:text-disabled",
         on ? "border-ink bg-ink font-extrabold text-paper" : tone === "gold" ? "border-gold bg-cream-focus font-bold text-gold-text hover:bg-sand" : "border-ink bg-paper font-bold text-ink hover:bg-sand",
       )}
     >
@@ -142,14 +142,14 @@ function SlotCard({ slot, upload, onReplace }: { slot: MediaSlot; upload?: Uploa
         <span dir="ltr" className="truncate text-end text-[10px] font-extrabold tracking-wide text-ink-2">
           {slot.id}
         </span>
-        <span className="text-label font-extrabold leading-snug">{upload ? upload.name : slot.descriptionAr}</span>
+        <span className="text-[12px] font-bold leading-[1.4]">{upload ? upload.name : slot.descriptionAr}</span>
       </div>
-      <div className="mt-auto flex items-center justify-between gap-2 border-t border-line px-2.5 py-2">
-        <span className="flex items-center gap-1.5 text-caption font-bold text-muted">
+      <div className="mt-auto flex items-center justify-between gap-1.5 border-t border-line px-2.5 py-1.5">
+        <span className="flex items-center gap-1.5 text-[10px] font-bold text-muted">
           الوسم
           <Switch checked={tier !== "real" && slot.labelOn} onChange={onLabel} aria-label={tier === "real" ? "الوسم مطفأ: صورة فعلية" : "الوسم إجباري على التعبيرية"} />
         </span>
-        <button type="button" onClick={onReplace} className="flex h-9 cursor-pointer items-center border-[1.5px] border-ink px-2.5 text-[12px] font-extrabold hover:bg-sand">
+        <button type="button" onClick={onReplace} className="flex h-7 cursor-pointer items-center border-[1.5px] border-ink bg-paper px-2 text-[10px] font-extrabold hover:bg-sand">
           استبدال
         </button>
       </div>
@@ -168,11 +168,11 @@ function FounderCard({ slot, onUpload }: { slot: MediaSlot; onUpload: () => void
         <span dir="ltr" className="truncate text-end text-[10px] font-extrabold tracking-wide text-ink-2">
           {slot.id}
         </span>
-        <span className="text-label font-extrabold leading-snug">{slot.descriptionAr}</span>
+        <span className="text-[12px] font-bold leading-[1.4]">{slot.descriptionAr}</span>
       </div>
-      <div className="mt-auto flex items-center justify-between gap-2 border-t border-line px-2.5 py-2">
-        <span className="text-caption font-bold text-gold-text">فارغة · «من نحن» تعرض بطاقة طباعية حتى الرفع</span>
-        <button type="button" onClick={onUpload} className="flex h-9 shrink-0 cursor-pointer items-center border-[1.5px] border-ink px-2.5 text-[12px] font-extrabold hover:bg-sand">
+      <div className="mt-auto flex items-center justify-between gap-1.5 border-t border-line px-2.5 py-1.5">
+        <span className="text-[10px] font-bold text-gold-text">فارغة · «من نحن» تعرض بطاقة طباعية حتى الرفع</span>
+        <button type="button" onClick={onUpload} className="flex h-7 shrink-0 cursor-pointer items-center border-[1.5px] border-ink bg-paper px-2 text-[10px] font-extrabold hover:bg-sand">
           رفع
         </button>
       </div>
