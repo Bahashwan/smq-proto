@@ -1,5 +1,7 @@
 # Build briefs · page groups, presenter, images, OG
 
+> Executed on 2026-10-10: every group below is built (see `docs/PROGRESS.md`). Kept as the record of what each group was asked to do, and as the template for re-running a group after a large design change.
+
 These are the briefs the cloud session was about to hand to parallel build agents when the owner asked to stop and continue locally. Run each one as a Claude Code subagent (Agent tool) or as a workflow stage, two to five at a time, or work through them yourself in order. Every brief starts with the preamble below and obeys `docs/BUILD-CONTRACTS.md` (ownership table, verification steps). The foundation they build on: `data/*` (fixtures + `data/selectors.ts`), `components/ui`, `components/admin`, `components/alliance`, `components/map` (each with a README listing its exports), `lib/*`, `lib/screens/<group>.ts` stubs, `scripts/shots/*`.
 
 ## Preamble (paste at the top of every brief)

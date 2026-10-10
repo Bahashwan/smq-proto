@@ -29,7 +29,7 @@ Conventions
 | Compare-M, Compare-D | `/compare?u=rz-d,ys-d,rz-c` | Best-in-row gold marker computed. Selection also kept on the device 7 days |
 | State-Loading-M, Results-Loading-D | `/units?skeleton=1` | Presenter switch «loading skeletons»; also shown briefly on filter changes |
 | State-Empty-M, State-Empty-D | `/units?district=faisaliyah&max=450000&beds=4&type=apt&feat=driver` | Zero results computed. The "القيد الذي يحذف أكثر النتائج" line and the loosen-one-constraint suggestions with their `+n` are computed from the fixtures (see plan). Alliance bridge form with consent tick |
-| State-Cards | `/units` (sold card in the «مباعة، للمرجع فقط» strip) and `/units/ys-d?ustatus=reserved` (reserved card in «نماذج أخرى») | Card states |
+| State-Cards | `/units` at 390 (the full sold card in the «مباعة، للمرجع فقط» strip; desktop uses Results-D's compact sold rows). The reserved card state is the shared `UnitCard` (`/demo/components`); `/units/ys-d?ustatus=reserved` is the reserved unit page | Card states |
 | Services-M, Services-D | `/services` (`#buy #sell #invest #consult`) | Default |
 | Add-M (phone, step 3), Add-D (desktop, step 1) | `/add` (step 1), `/add/contact` (step 3) | See section 23 |
 | About-M, About-D | `/about` | Opens in the About-D state (no financing or testimonial blocks) |
@@ -187,7 +187,7 @@ Storage keys: `smq.presenter` (switches, localStorage), `smq.compare` (compare s
 
 Tour steps
 - Buyer: `/` (budget 700k, count changes) → `/units?…` (filters, sort) → `/units/rz-a` (gallery, plan) → `/compare?u=rz-d,ys-d,rz-c` → WhatsApp link with the prefilled message.
-- Owner: `/collaborate` → `/add` (type عمارة سكنية) → `/add/details` (income variant, computed yield) → `/add/contact` (وكيل) → `/add/sent?no=2026-1042` → `/admin/approvals/2026-1042` (role checklist, approve).
+- Owner: `/collaborate` → `/add?type=building` (type عمارة سكنية) → `/add/details?type=building` (income variant, computed yield) → `/add/contact?type=building` (وكيل) → `/add/sent?no=2026-1042` → `/admin/approvals/2026-1042` (role checklist, approve).
 - Alliance request: `/units?district=faisaliyah&max=450000&beds=4&type=apt&feat=driver` (0 results, bridge form) → `/alliance/request/sent?req=REQ-2026-0412` → `/member/office-09/requests/REQ-2026-0412` (مكتب ط answers) → `/admin/alliance/requests?req=REQ-2026-0412` (pick the offer, create REF-2026-0117) → `/member/office-09/referrals/REF-2026-0117` → `/member/office-09` (ledger).
 
 ## Plan
