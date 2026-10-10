@@ -31,6 +31,18 @@ export async function newPage(browser: Browser, width: number, height = 900): Pr
 export async function settle(page: Page, extraWait = 0) {
   await page.evaluate(() => document.fonts?.ready);
   await page.waitForLoadState("networkidle").catch(() => {});
+  // walk the page so lazy images and in-view effects load, then wait for every image and return to the top
+  await page.evaluate(async () => {
+    const step = Math.max(400, Math.floor(window.innerHeight * 0.8));
+    for (let y = 0; y < document.documentElement.scrollHeight; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => setTimeout(r, 60));
+    }
+    document.querySelectorAll<HTMLImageElement>("img[loading=lazy]").forEach((img) => (img.loading = "eager"));
+    await Promise.all(Array.from(document.images).filter((i) => !i.complete).map((i) => new Promise((r) => { i.onload = i.onerror = () => r(null); setTimeout(() => r(null), 4000); })));
+    window.scrollTo(0, 0);
+  }).catch(() => {});
+  await page.waitForTimeout(150);
   if (extraWait) await page.waitForTimeout(extraWait);
 }
 
