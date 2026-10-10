@@ -9,6 +9,7 @@ import { districtBySlug } from "@/data/districts";
 import { floorLabel, UNIT_TYPE_AR } from "@/data/units";
 import {
   TODAY,
+  availableUnits,
   comparedToDistrict,
   comparedToProject,
   deliveryQuarterIndex,
@@ -16,16 +17,15 @@ import {
   listedUnits,
   otherModelsInBuilding,
   otherRoof,
-  projectStats,
   similarAvailable,
   unitDistrictSlug,
   unitPpm,
   type ComparedToDistrict,
   type UnitOverrides,
 } from "@/data/selectors";
-import { fmtNum } from "@/lib/format";
+import { fmtNum, plural, UNITS } from "@/lib/format";
 import { usePresenter, type Tier } from "@/lib/presenter";
-import { useStore } from "@/lib/store";
+import { useUnitOverrides } from "@/lib/store";
 import { orientationWord } from "@/components/ui";
 
 export const TIER_OF: Record<Tier, ImageTier> = { real: "real", gen: "generated", typo: "typographic" };
@@ -36,7 +36,11 @@ export function addDays(iso: string, n: number): string {
   d.setUTCDate(d.getUTCDate() + n);
   return d.toISOString().slice(0, 10);
 }
-/** Days a reservation holds (the boards' «14 يوماً من العربون») */
+/** Whole days between two ISO dates */
+export function daysBetween(from: string, to: string): number {
+  return Math.round((Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000);
+}
+/** Days a deposit holds the price (the FAQ's «عربون حجز يثبّت السعر 14 يوماً», content faq-02 / faq-04). */
 export const RESERVATION_DAYS = 14;
 
 /** «الربع 2 · 2027» / «Q2 2027» from the project's delivery milestone */
@@ -74,6 +78,8 @@ export interface UnitView {
   tier: ImageTier;
   ppm: number;
   reservedUntil?: string;
+  /** days the deposit holds (reservedUntil − the day it was reserved) */
+  reservedDays?: number;
   soldOn?: string;
   updatedAt: string;
   project: Project | undefined;
@@ -87,7 +93,8 @@ export interface UnitView {
   similar: Unit[];
   otherRoof: Unit | null;
   roofs: { available: number; listed: number };
-  projectAvailable: number;
+  /** available units of the project other than this one */
+  projectAvailableOthers: number;
   floorWordAr?: string;
   facingAr?: string;
   typeAr: string;
@@ -101,6 +108,7 @@ export function buildUnitView(unit: Unit, overrides: UnitOverrides, forcedStatus
   const project = projectById(unit.projectId);
   const district = districtBySlug(unitDistrictSlug(unit));
   const listedRoofs = listedUnits(overrides).filter((u) => u.type === "roof-villa" && u.projectId === unit.projectId);
+  const updatedAt = forced ? TODAY : unit.updatedAt;
   const reservedUntil = status === "reserved" ? (unit.reservedUntil ?? addDays(TODAY, RESERVATION_DAYS)) : undefined;
   const soldOn = status === "sold" ? (unit.soldOn ?? TODAY) : undefined;
   return {
@@ -110,8 +118,9 @@ export function buildUnitView(unit: Unit, overrides: UnitOverrides, forcedStatus
     tier,
     ppm: unitPpm(unit),
     reservedUntil,
+    reservedDays: reservedUntil ? (unit.reservedUntil ? RESERVATION_DAYS : daysBetween(TODAY, reservedUntil)) : undefined,
     soldOn,
-    updatedAt: forced ? TODAY : unit.updatedAt,
+    updatedAt,
     project,
     district,
     deliveryShort: deliveryShort(project),
@@ -123,19 +132,14 @@ export function buildUnitView(unit: Unit, overrides: UnitOverrides, forcedStatus
     similar: similarAvailable(unit, overrides),
     otherRoof: otherRoof(unit, overrides),
     roofs: { available: listedRoofs.filter((u) => u.status === "available").length, listed: listedRoofs.length },
-    projectAvailable: projectStats(unit.projectId, overrides).available,
+    projectAvailableOthers: availableUnits(overrides).filter((u) => u.projectId === unit.projectId && u.code !== unit.code).length,
     floorWordAr: floorLabel(unit),
     facingAr: orientationWord(unit.orientation?.value),
     typeAr: UNIT_TYPE_AR[unit.type],
   };
 }
 
-/** The store's override maps as the selectors take them. */
-export function useUnitOverrides(): UnitOverrides {
-  const unitStatus = useStore((s) => s.unitStatus);
-  const unitHidden = useStore((s) => s.unitHidden);
-  return useMemo(() => ({ unitStatus, unitHidden }), [unitStatus, unitHidden]);
-}
+export { useUnitOverrides };
 
 export function useUnitView(unit: Unit): UnitView {
   const overrides = useUnitOverrides();
@@ -148,24 +152,56 @@ export function yesNo(v: boolean | undefined, lang: "ar" | "en" = "ar"): string 
   return v ? (lang === "en" ? "Yes" : "نعم") : lang === "en" ? "No" : "لا";
 }
 
-/** «690,000 ريال» */
+/** «690,000 ريال» (the rows spell the word) */
 export function riyalWord(n: number): string {
   return `${fmtNum(n)} ريال`;
 }
 
-const UNIT_COUNT_WORDS = ["", "وحدة واحدة", "وحدتان", "3 وحدات", "4 وحدات", "5 وحدات", "6 وحدات", "7 وحدات", "8 وحدات", "9 وحدات", "10 وحدات"];
-/** «4 وحدات» · «وحدتان» · «11 وحدة» */
+/** «8 وحدات» · «وحدتان» · «11 وحدة» */
 export function unitsWord(n: number): string {
-  return UNIT_COUNT_WORDS[n] ?? `${n} وحدة`;
+  return plural(n, UNITS);
+}
+
+/** The spec line's bedroom words: «غرفتان» · «3 غرف نوم» */
+export function bedsSpec(n: number): string {
+  return n === 1 ? "غرفة نوم واحدة" : n === 2 ? "غرفتان" : `${n} غرف نوم`;
+}
+/** The tile caption under the bedroom figure: «غرفة نوم» · «غرف نوم» */
+export function bedsCaption(n: number): string {
+  return n === 1 ? "غرفة نوم" : "غرف نوم";
+}
+/** The spec line's bathroom words as the boards write them: «3 حمامات» · «2 حمامات» */
+export function bathsSpec(n: number): string {
+  return n === 1 ? "حمام واحد" : `${n} حمامات`;
+}
+/** «موقف واحد» · «موقفان» · «3 مواقف» */
+export function parkingWord(n: number): string {
+  return n === 1 ? "موقف واحد" : n === 2 ? "موقفان" : `${n} مواقف`;
+}
+const nf2 = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+/** «147.00» · «3.20» */
+export function fmt2(n: number): string {
+  return nf2.format(n);
+}
+const nf1 = new Intl.NumberFormat("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+/** «42.0» */
+export function fmt1(n: number): string {
+  return nf1.format(n);
 }
 
 /** The prefilled WhatsApp texts of the unit boards, with the visitor reference code appended. */
 export function unitWaText(v: UnitView, code: string, lang: "ar" | "en" = "ar"): string {
   const u = v.unit;
   const project = v.project?.nameAr ?? "";
-  if (lang === "en") return `Asking about model ${u.model}, ${u.building === "RZ" ? "Rose" : "Yasmin"}, ${v.project?.nameEn ?? ""} (${u.code}) · ${code}`;
-  if (v.status === "reserved") return `قائمة الانتظار ${u.code} · ${code}`;
-  if (v.status === "sold") return `${u.code} مباعة، ما البدائل؟ · ${code}`;
-  if (u.type === "roof-villa") return `أسأل عن فيلا الروف ${u.code} · ${code}`;
-  return `أرغب بالاستفسار عن ${u.nameAr} عمارة ${u.buildingNameAr} في ${project} (${u.code}) · ${code}`;
+  const tail = code ? ` · ${code}` : "";
+  if (lang === "en") return `Asking about model ${u.model}, ${u.building === "RZ" ? "Rose" : "Yasmin"}, ${v.project?.nameEn ?? ""} (${u.code})${tail}`;
+  if (v.status === "reserved") return `قائمة الانتظار ${u.code}${tail}`;
+  if (v.status === "sold") return `${u.code} مباعة، ما البدائل؟${tail}`;
+  if (u.type === "roof-villa") return `أسأل عن فيلا الروف ${u.code}${tail}`;
+  return `أرغب بالاستفسار عن ${u.nameAr} عمارة ${u.buildingNameAr} في ${project} (${u.code})${tail}`;
+}
+
+/** «نموذج A» / «فيلا الروف»: the object of «اسأل عن …» */
+export function askObject(unit: Unit): string {
+  return unit.type === "roof-villa" ? "فيلا الروف" : `نموذج ${unit.model}`;
 }

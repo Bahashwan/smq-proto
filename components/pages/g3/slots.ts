@@ -1,59 +1,80 @@
-// Slot ids → the room words the boards print on thumbnails and in the gallery (Unit-M/D, Unit-Gallery-M/D),
-// and the gallery lists per unit. No numbers here: counts come from the lists themselves.
+// Slot ids → the room words the boards print on thumbnails and in the gallery (Unit-M/D, Unit-Roof-M,
+// Unit-Gallery-M/D, EN-Unit-M), and the gallery list per unit. No numbers here: counts come from the lists.
 import type { Unit } from "@/data/types";
 import { projectById } from "@/data/projects";
 
 export interface SlotLabel {
+  /** the full room name (aria-label, gallery header) */
   ar: string;
-  /** the short word on a thumbnail («النوم» for the master bedroom in the gallery strip) */
+  /** the word on a unit-page thumbnail («غرفة النوم» for the master bedroom) */
   short: string;
+  /** the word in the phone gallery strip («النوم») */
+  gal: string;
+  /** the word in the desktop gallery list («النوم الرئيسية») */
+  galD: string;
   en: string;
 }
 
+const L = (ar: string, short = ar, gal = short, galD = gal, en = ar): SlotLabel => ({ ar, short, gal, galD, en });
+
 const LABELS: Record<string, SlotLabel> = {
-  "IMG-PRJ-ROWDAH-EXT": { ar: "الواجهة", short: "الواجهة", en: "Facade" },
-  "IMG-PRJ-BLDG-ROSE-FACADE": { ar: "الواجهة", short: "الواجهة", en: "Facade" },
-  "IMG-PRJ-BLDG-YASMIN-FACADE": { ar: "الواجهة", short: "الواجهة", en: "Facade" },
-  "IMG-PRJ-ROWDAH-ENTRANCE": { ar: "المدخل", short: "المدخل", en: "Entrance" },
-  "IMG-PRJ-ROWDAH-LOBBY": { ar: "البهو", short: "البهو", en: "Lobby" },
-  "IMG-PRJ-ROWDAH-PARKING": { ar: "المواقف", short: "المواقف", en: "Parking" },
-  "IMG-UNIT-APT-2BR-LIVING": { ar: "الصالة", short: "الصالة", en: "Living room" },
-  "IMG-UNIT-APT-3BR-LIVING": { ar: "الصالة", short: "الصالة", en: "Living room" },
-  "IMG-UNIT-ROOF-LIVING": { ar: "الصالة", short: "الصالة", en: "Living room" },
-  "IMG-UNIT-APT-KITCHEN-OPEN": { ar: "المطبخ", short: "المطبخ", en: "Kitchen" },
-  "IMG-UNIT-APT-KITCHEN-CLOSED": { ar: "المطبخ", short: "المطبخ", en: "Kitchen" },
-  "IMG-UNIT-APT-3BR-MASTER": { ar: "غرفة النوم الرئيسية", short: "غرفة النوم", en: "Master bedroom" },
-  "IMG-UNIT-APT-2BR-BEDROOM": { ar: "غرفة النوم", short: "غرفة النوم", en: "Bedroom" },
-  "IMG-UNIT-APT-BALCONY": { ar: "البلكونة", short: "البلكونة", en: "Balcony" },
-  "IMG-UNIT-APT-BATH": { ar: "الحمام", short: "الحمام", en: "Bathroom" },
-  "IMG-UNIT-MAID-ROOM": { ar: "غرفة الخادمة", short: "غ. الخادمة", en: "Maid's room" },
-  "IMG-UNIT-ROOF-TERRACE": { ar: "التراس", short: "التراس", en: "Terrace" },
-  "IMG-UNIT-SMARTHOME-DETAIL": { ar: "سمارت هوم", short: "سمارت هوم", en: "Smart home" },
+  "IMG-PRJ-ROWDAH-EXT": L("الواجهة", "الواجهة", "الواجهة", "الواجهة", "Facade"),
+  "IMG-PRJ-BLDG-ROSE-FACADE": L("الواجهة", "الواجهة", "الواجهة", "الواجهة", "Facade"),
+  "IMG-PRJ-BLDG-YASMIN-FACADE": L("الواجهة", "الواجهة", "الواجهة", "الواجهة", "Facade"),
+  "IMG-PRJ-ROWDAH-ENTRANCE": L("المدخل", "المدخل", "المدخل", "المدخل", "Entrance"),
+  "IMG-PRJ-ROWDAH-LOBBY": L("البهو", "البهو", "البهو", "البهو", "Lobby"),
+  "IMG-PRJ-ROWDAH-PARKING": L("المواقف", "المواقف", "المواقف", "المواقف", "Parking"),
+  "IMG-UNIT-APT-2BR-LIVING": L("الصالة", "الصالة", "الصالة", "الصالة", "Living room"),
+  "IMG-UNIT-APT-3BR-LIVING": L("الصالة", "الصالة", "الصالة", "الصالة", "Living room"),
+  "IMG-UNIT-ROOF-LIVING": L("الصالة", "الصالة", "الصالة", "الصالة", "Living room"),
+  "IMG-UNIT-APT-KITCHEN-OPEN": L("المطبخ", "المطبخ", "المطبخ", "المطبخ", "Kitchen"),
+  "IMG-UNIT-APT-KITCHEN-CLOSED": L("المطبخ", "المطبخ", "المطبخ", "المطبخ", "Kitchen"),
+  "IMG-UNIT-APT-3BR-MASTER": L("غرفة النوم الرئيسية", "غرفة النوم", "النوم", "النوم الرئيسية", "Bedroom"),
+  "IMG-UNIT-APT-2BR-BEDROOM": L("غرفة النوم", "غرفة النوم", "النوم", "غرفة النوم", "Bedroom"),
+  "IMG-UNIT-APT-BALCONY": L("البلكونة", "البلكونة", "الشرفة", "الشرفة", "Balcony"),
+  "IMG-UNIT-APT-BATH": L("الحمام", "الحمام", "الحمام", "الحمام", "Bathroom"),
+  "IMG-UNIT-MAID-ROOM": L("غرفة الخادمة", "غ. الخادمة", "غ. الخادمة", "غرفة الخادمة", "Maid's room"),
+  "IMG-UNIT-ROOF-TERRACE": L("التراس", "التراس", "التراس", "التراس", "Terrace"),
+  "IMG-UNIT-SMARTHOME-DETAIL": L("سمارت هوم", "سمارت هوم", "سمارت هوم", "سمارت هوم", "Smart home"),
 };
 
-export function slotLabel(id: string): SlotLabel {
-  return LABELS[id] ?? { ar: id, short: id, en: id };
+/** Roof villas: the bedroom shot is the upper floor (Unit-Roof-M «الدور العلوي»). */
+const ROOF_LABELS: Record<string, SlotLabel> = {
+  "IMG-UNIT-APT-3BR-MASTER": L("الدور العلوي", "الدور العلوي", "الدور العلوي", "الدور العلوي", "Upper floor"),
+};
+
+export function slotLabel(id: string, unit?: Pick<Unit, "type">): SlotLabel {
+  return (unit?.type === "roof-villa" ? ROOF_LABELS[id] : undefined) ?? LABELS[id] ?? L(id, id, id, id, id);
 }
 
 export interface GalleryItem extends SlotLabel {
   slotId: string;
 }
 
-const toItem = (slotId: string): GalleryItem => ({ slotId, ...slotLabel(slotId) });
+const toItem = (unit: Unit) => (slotId: string): GalleryItem => ({ slotId, ...slotLabel(slotId, unit) });
 
 /** The thumbnails under the unit cover: the unit's own slots, cover first. */
 export function unitThumbs(unit: Unit): GalleryItem[] {
-  return unit.images.map(toItem);
+  return unit.images.map(toItem(unit));
 }
 
-/** The full-screen gallery: the building's facade and the project entrance first, then the unit's slots. */
+const BATH = "IMG-UNIT-APT-BATH";
+const ROOM_RANK = ["LIVING", "KITCHEN", "MASTER", "BEDROOM", "BATH", "BALCONY", "MAID", "SMARTHOME"];
+const rank = (id: string) => {
+  const i = ROOM_RANK.findIndex((k) => id.includes(k));
+  return i < 0 ? ROOM_RANK.length : i;
+};
+
+/** The full-screen gallery (Unit-Gallery-M/D): the building's facade and the project entrance first, then the
+ *  unit's rooms in walking order (apartments also get the shared bathroom shot, as the gallery boards list it). */
 export function galleryItems(unit: Unit): GalleryItem[] {
   const p = projectById(unit.projectId);
-  const facade = p?.images.find((s) => s.includes(unit.building === "RZ" ? "ROSE" : "YASMIN"));
+  const facade = p?.images.find((s) => s.includes(unit.building === "RZ" ? "ROSE" : "YASMIN")) ?? p?.images.find((s) => s.includes("EXT"));
   const entrance = p?.images.find((s) => s.includes("ENTRANCE"));
-  const ids = [facade, entrance, ...unit.images].filter((s): s is string => !!s);
-  return Array.from(new Set(ids)).map(toItem);
+  const rooms = unit.type === "apartment" ? [...unit.images, ...(unit.images.includes(BATH) ? [] : [BATH])].sort((a, b) => rank(a) - rank(b)) : unit.images;
+  const ids = [facade, entrance, ...rooms].filter((s): s is string => !!s);
+  return Array.from(new Set(ids)).map(toItem(unit));
 }
 
-/** Files the server found for a slot (real photo under /public/real, generated render under /public/images). */
-export type SlotFiles = Record<string, { real?: string; gen?: string } | undefined>;
+/** Real photo files the server found under /public/real (slot id → URL). */
+export type RealFiles = Record<string, string>;
