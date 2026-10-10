@@ -121,6 +121,7 @@ export function AddStep1() {
                     onLinkChange={(l) => update({ pinLink: l })}
                     locateButton={!desktop}
                     hint={desktop ? "اضغط لتحديد الموقع أو اسحب الدبوس" : undefined}
+                    hintPlacement={desktop ? "center" : "corner"}
                     height={desktop ? 180 : 150}
                   />
                 </div>

@@ -67,6 +67,8 @@ export interface PinPickerProps {
   pinSize?: "m" | "s";
   /** echo a short (unparseable) maps link under the box; AllianceApply-Step1-M has no echo */
   echoLink?: boolean;
+  /** the hint chip at the bottom corner (default) or centred with an ink frame (Add-D) */
+  hintPlacement?: "corner" | "center";
   disabled?: boolean;
   ariaLabel?: string;
   className?: string;
@@ -97,6 +99,7 @@ export function PinPicker({
   gridSize = 28,
   pinSize = "m",
   echoLink = true,
+  hintPlacement = "corner",
   disabled = false,
   ariaLabel = "موقع العقار على الخريطة",
   className,
@@ -355,7 +358,15 @@ export function PinPicker({
             موقعي الحالي
           </button>
         )}
-        <span aria-live="polite" className={cx("text-caption absolute bottom-2 z-[2] max-w-[calc(100%-16px)] truncate bg-paper px-[6px] py-[2px] font-bold", locateButton ? "end-2" : "start-2")}>
+        <span
+          aria-live="polite"
+          className={cx(
+            "absolute z-[2] truncate bg-paper font-bold",
+            hintPlacement === "center" && !preview
+              ? "top-1/2 left-1/2 max-w-[calc(100%-32px)] -translate-x-1/2 -translate-y-1/2 border-interactive px-3 py-2 text-caption md:text-[12px] pointer-events-none"
+              : cx("text-caption bottom-2 max-w-[calc(100%-16px)] px-[6px] py-[2px]", locateButton ? "end-2" : "start-2"),
+          )}
+        >
           {preview ? previewHint : hint}
         </span>
       </div>
