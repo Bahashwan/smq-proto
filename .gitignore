@@ -14,3 +14,4 @@ next-env.d.ts
 *.tsbuildinfo
 docs/shots/tmp/
 public/images/_candidates/
+public/images/*/source.png
