@@ -30,23 +30,23 @@ export function ContactSentPage() {
       <Header />
       <main className="flex min-h-[calc(100svh-64px)] flex-col md:min-h-0">
         <Container className="flex flex-1 flex-col pb-6 pt-8 md:max-w-xl md:pb-16 md:pt-14">
-          <CheckHex className="size-14" />
-          <h1 className="m-0 mt-5 text-h1 font-extrabold">وصلتنا رسالتك</h1>
-          <p className="m-0 mt-3 text-body font-normal text-ink-2" aria-live="polite">
+          <CheckHex className="size-14" icon={26} />
+          <h1 className="m-0 mt-4.5 text-h1 font-extrabold">وصلتنا رسالتك</h1>
+          <p className="m-0 mt-4.5 text-body font-normal text-ink-2" aria-live="polite">
             شكراً {first}. نرد خلال ساعات العمل، {reply.hoursAr}. {reply.lineAr}
           </p>
-          <div className="mt-5 flex flex-col gap-2 border-interactive px-4 py-4">
+          <div className="mt-4.5 flex flex-col gap-2 border-interactive px-4 py-3.5">
             <span className="text-caption font-extrabold md:text-label">ما أرسلته</span>
             <span className="text-label font-normal leading-relaxed text-ink-2">«{s.message}»</span>
             <span className="text-caption font-normal text-muted">
               الرد على <span dir="ltr" className="tnum">{s.phoneMasked}</span> · واتساب أو اتصال، كما اخترت
             </span>
           </div>
-          <div className="mt-4 flex flex-col gap-1 bg-sand px-4 py-3.5 text-caption font-normal md:text-label md:font-normal">
+          <div className="mt-4.5 flex flex-col gap-1.5 bg-sand px-3.5 py-3 text-caption font-normal leading-relaxed md:text-label md:font-normal">
             <span className="font-extrabold">مستعجل؟</span>
             <span>واتساب أسرع من النموذج خارج ساعات العمل: الرسائل تصل الفريق على الجوال.</span>
           </div>
-          <div className="mt-auto flex flex-col gap-2.5 pt-10">
+          <div className="mt-auto flex flex-col gap-2 pt-10">
             <a href={waLink(`${s.name}، ${s.message}`)} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-13 items-center justify-center gap-2.5 bg-gold px-4 text-body font-extrabold text-ink no-underline cut-m hover:bg-gold-hover motion-hover transition-colors">
               <WhatsAppIcon size={20} />
               أكمل على واتساب برسالتك نفسها

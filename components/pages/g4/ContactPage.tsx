@@ -126,7 +126,7 @@ export function ContactPage() {
           <Container className="md:max-w-xl">
             <h1 className="m-0 text-h1 font-extrabold">اكتب لنا</h1>
             <p className="m-0 mt-1.5 text-label font-normal text-muted">نرد خلال ساعات العمل. الحقول بالذهبي تحتاج تصحيحاً.</p>
-            <form noValidate onSubmit={submit} className="mt-5 flex flex-col gap-4" aria-label="اكتب لنا">
+            <form noValidate onSubmit={submit} className="mt-3.5 flex flex-col gap-3.5" aria-label="اكتب لنا">
               {summary.length > 0 && <ErrorSummary key={attempt} title={`لم تُرسل الرسالة. ${fieldsToFix(summary.length)}:`} errors={summary} />}
               <TextField id={ID.name} label="الاسم" autoComplete="name" value={draft.name} onChange={(e) => update("name", e.target.value)} error={err("name")} />
               <TextField id={ID.phone} label="رقم الجوال" type="tel" inputMode="numeric" autoComplete="tel" ltr placeholder="05XXXXXXXX" value={draft.phone} onChange={(e) => update("phone", e.target.value)} error={err("phone")} />
@@ -150,8 +150,8 @@ export function ContactPage() {
               />
               {offlineFail && (
                 <div role="alert" className="flex items-center justify-between gap-3 border-error px-3.5 py-3 text-caption font-normal md:text-label md:font-normal">
-                  <span className="flex items-start gap-2">
-                    <StatusDot tone="gold" size={2.5} className="mt-1.5" />
+                  <span className="flex items-center gap-2">
+                    <StatusDot tone="gold" size={2} />
                     <span>
                       <strong className="block font-extrabold">تعذّر الإرسال، انقطع الاتصال.</strong>
                       رسالتك محفوظة في هذه الصفحة.
@@ -184,17 +184,17 @@ export function ContactPage() {
   return (
     <>
       <Header />
-      <main className="pb-12 md:pb-16">
+      <main className="pb-9 md:pb-16">
         <Container className="pt-6 md:pt-12">
-          <div className="flex flex-col gap-8 md:grid md:grid-cols-2 md:items-start md:gap-10">
+          <div className="flex flex-col gap-5 md:grid md:grid-cols-2 md:items-start md:gap-10">
             {/* details */}
-            <section aria-labelledby="contact-title" className="flex min-w-0 flex-col gap-4 md:gap-5">
-              <div className="flex flex-col gap-1.5">
+            <section aria-labelledby="contact-title" className="flex min-w-0 flex-col gap-3 md:gap-4">
+              <div className="flex flex-col gap-3 md:gap-4">
                 <span className="text-caption font-bold text-gold-text md:text-label">تواصل معنا</span>
                 <h1 id="contact-title" className="m-0 text-h1 font-extrabold">
                   أسرع طريق: واتساب
                 </h1>
-                <p className="m-0 mt-1 text-label font-normal leading-relaxed text-muted md:text-body">
+                <p className="m-0 text-label font-normal leading-relaxed text-muted md:text-body">
                   نرد خلال ساعات العمل، {h.days} من {h.from} إلى {h.to}. خارجها تصلك رسالة تلقائية ونعود إليك أول الدوام.
                 </p>
               </div>
@@ -207,11 +207,11 @@ export function ContactPage() {
                   {settings.whatsappDisplay}
                 </span>
               </a>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2 md:gap-2.5">
                 <ContactCell href={PHONE_TEL} label="اتصال" value={settings.phone} />
                 <ContactCell href={`mailto:${EMAIL}`} label="البريد" value={EMAIL} small />
               </div>
-              <div className="flex flex-col border-t border-ink text-label font-normal md:text-body">
+              <div className="mt-3 flex flex-col border-t-[1.5px] border-ink text-label font-normal md:mt-2 md:text-body">
                 <InfoRow className="order-1" label="ساعات العمل">
                   {h.days}
                   <br className="md:hidden" />
@@ -232,7 +232,7 @@ export function ContactPage() {
             </section>
 
             {/* phone: the office map comes before the form */}
-            <section aria-label={`المكتب · ${district}`} className="flex flex-col gap-3 md:hidden">
+            <section aria-label={`المكتب · ${district}`} className="flex flex-col gap-2 md:hidden">
               <MapEmbed lat={settings.office.lat} lng={settings.office.lng} title="خريطة Google بموقع مكتب SMQ" placeholder="office" forceEmbedUrl={settings.office.embedUrlAr} />
               <OutlineLink href={settings.office.mapsLink} external className="min-h-12 w-full">
                 افتح الاتجاهات في الخرائط
@@ -240,14 +240,14 @@ export function ContactPage() {
             </section>
 
             {/* the three-field form */}
-            <form noValidate onSubmit={submit} aria-labelledby="contact-form-title" className="border-interactive">
-              <div className="flex flex-col gap-1 border-b-[1.5px] border-ink px-4 py-4 md:px-6 md:py-5">
+            <form noValidate onSubmit={submit} aria-labelledby="contact-form-title" className="border-interactive max-md:mt-2">
+              <div className="flex flex-col gap-0.5 border-b-[1.5px] border-ink px-4 py-3.5 md:px-6 md:py-4.5">
                 <h2 id="contact-form-title" className="m-0 text-h3 font-extrabold">
                   أو اترك رسالة
                 </h2>
                 <span className="text-caption font-normal text-muted md:text-label md:font-normal">ثلاثة حقول فقط، ونرد على واتساب.</span>
               </div>
-              <div className="flex flex-col gap-4 px-4 py-5 md:px-6 md:py-6">
+              <div className="flex flex-col gap-3 p-4 md:gap-3.5 md:p-6">
                 <TextField id={ID.name} label="الاسم" autoComplete="name" value={draft.name} onChange={(e) => update("name", e.target.value)} />
                 <TextField id={ID.phone} label="رقم الجوال (واتساب)" type="tel" inputMode="numeric" autoComplete="tel" ltr placeholder="05XXXXXXXX" value={draft.phone} onChange={(e) => update("phone", e.target.value)} />
                 <TextArea id={ID.message} label="رسالتك" rows={5} maxLength={MESSAGE_MAX} counter={false} className="md:min-h-48" placeholder="مثال: أبحث عن شقة 3 غرف في الروضة حتى 700 ألف" value={draft.message} onChange={(e) => update("message", e.target.value)} />
@@ -258,7 +258,7 @@ export function ContactPage() {
             </form>
           </div>
 
-          <Socials className="mt-8 md:hidden" label />
+          <Socials className="mt-6 md:hidden" label />
 
           {/* desktop: the office map */}
           <section aria-labelledby="office-title" className="mt-14 hidden flex-col gap-4 md:flex">
@@ -281,7 +281,7 @@ export function ContactPage() {
 
 function ContactCell({ href, label, value, small }: { href: string; label: string; value: string; small?: boolean }) {
   return (
-    <a href={href} className="flex min-h-16 flex-col justify-center gap-1 border-interactive px-4 py-3 text-ink no-underline hover:bg-sand motion-hover transition-colors">
+    <a href={href} className="flex min-h-15 flex-col justify-center gap-0.5 border-interactive px-3.5 py-2.5 text-ink no-underline hover:bg-sand motion-hover transition-colors md:min-h-16 md:px-4">
       <span className="text-caption font-normal text-muted">{label}</span>
       <span dir="ltr" className={cx("text-end font-extrabold tnum", small ? "text-label md:text-body" : "text-body md:text-h3")}>
         {value}
@@ -292,22 +292,26 @@ function ContactCell({ href, label, value, small }: { href: string; label: strin
 
 function InfoRow({ label, children, className }: { label: string; children: ReactNode; className?: string }) {
   return (
-    <div className={cx("flex items-start justify-between gap-4 border-b border-line py-3.5", className)}>
+    <div className={cx("flex items-start justify-between gap-3 border-b border-line py-3 md:gap-4 md:py-3.5", className)}>
       <span className="shrink-0 text-muted">{label}</span>
-      <span className="min-w-0 text-start font-bold md:text-end">{children}</span>
+      <span className="min-w-0 text-end font-bold">{children}</span>
     </div>
   );
 }
 
+/** Contact-M/D list the networks with Snapchat before X (the footer boards keep the shared order). */
+const SOCIAL_ORDER = ["instagram", "tiktok", "snapchat", "x", "youtube"];
+const CONTACT_SOCIAL = [...SOCIAL].sort((a, b) => SOCIAL_ORDER.indexOf(a.id) - SOCIAL_ORDER.indexOf(b.id));
+
 function Socials({ className, label }: { className?: string; label?: boolean }) {
   return (
-    <div className={cx("flex flex-wrap items-center gap-3", label ? "flex-col items-start" : "", className)}>
+    <div className={cx("flex flex-wrap items-center gap-2.5", label ? "flex-col items-start" : "md:mt-1", className)}>
       <span className="text-caption font-bold text-muted">
         {label && "تابعنا "}
         <span dir="ltr">{HANDLE}</span>
       </span>
-      <div className="flex items-center gap-3">
-        {SOCIAL.map((s) => (
+      <div className="flex items-center gap-2 md:gap-2.5">
+        {CONTACT_SOCIAL.map((s) => (
           <IconButton key={s.id} label={s.label} href={s.href} tone="ghost-paper" size={44}>
             <SocialIcon id={s.id} />
           </IconButton>

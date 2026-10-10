@@ -37,7 +37,7 @@ export function ProjectsPage() {
   return (
     <>
       <Header />
-      <main className="pb-12 lg:pb-16">
+      <main className="pb-8 lg:pb-16">
         <section className="bg-ink pb-12 pt-7 text-paper [clip-path:polygon(0_0,100%_0,100%_100%,52px_100%,0_calc(100%-30px))] lg:pb-16 lg:pt-12 lg:[clip-path:polygon(0_0,100%_0,100%_100%,120px_100%,0_calc(100%-69px))]">
           <Container className="flex flex-col gap-2 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
             <div className="flex flex-col gap-1.5">
@@ -58,11 +58,11 @@ export function ProjectsPage() {
           <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
             {/* the automatic owner group */}
             {owner.project && (
-              <article className="flex flex-col gap-3 border-interactive px-4 py-5 lg:gap-4 lg:px-6 lg:py-6">
-                <div className="flex items-start justify-between gap-3">
+              <article className="flex flex-col gap-3 border-interactive px-4 py-3.5 lg:gap-3.5 lg:px-6 lg:py-5">
+                <div className="flex items-center justify-between gap-3">
                   <div className="flex flex-col gap-1">
                     <span className="text-caption font-bold text-gold-text lg:text-label">أحياء متفرقة · بعد تحققنا</span>
-                    <Link href={owner.districtSlug ? unitsUrl({ district: owner.districtSlug }) : "/units"} className="text-h3 font-extrabold text-ink no-underline hover:underline lg:text-h2">
+                    <Link href={owner.districtSlug ? unitsUrl({ district: owner.districtSlug }) : "/units"} className="text-h2 font-extrabold text-ink no-underline hover:underline">
                       وحدات من مُلّاك
                     </Link>
                   </div>
@@ -80,11 +80,11 @@ export function ProjectsPage() {
                     </>
                   )}
                 </p>
-                <div className="grid grid-cols-2 gap-2.5 lg:flex">
-                  <OutlineLink href={owner.districtSlug ? unitsUrl({ district: owner.districtSlug }) : "/units"} className="min-h-12 font-extrabold lg:px-5">
+                <div className="grid grid-cols-2 gap-2 lg:flex lg:gap-2.5">
+                  <OutlineLink href={owner.districtSlug ? unitsUrl({ district: owner.districtSlug }) : "/units"} className="min-h-11 font-extrabold lg:min-h-12 lg:px-4.5">
                     اعرض الوحدة
                   </OutlineLink>
-                  <Link href="/add" className="inline-flex min-h-12 items-center justify-center bg-sand px-5 text-label font-extrabold text-ink no-underline hover:bg-slot motion-hover transition-colors">
+                  <Link href="/add" className="inline-flex min-h-11 items-center justify-center bg-sand px-4.5 text-label font-extrabold text-ink no-underline hover:bg-slot motion-hover transition-colors lg:min-h-12">
                     أضف عقارك
                   </Link>
                 </div>
@@ -93,11 +93,11 @@ export function ProjectsPage() {
 
             {/* drafts: «قريباً» with «نبّهني» */}
             {drafts.map((p) => (
-              <article key={p.id} className="flex flex-col gap-3 border-[1.5px] border-dashed border-ink px-4 py-5 lg:gap-4 lg:px-6 lg:py-6">
-                <div className="flex items-start justify-between gap-3">
+              <article key={p.id} className="flex flex-col gap-3 border-[1.5px] border-dashed border-ink px-4 py-3.5 lg:gap-3.5 lg:px-6 lg:py-5">
+                <div className="flex items-center justify-between gap-3">
                   <div className="flex flex-col gap-1">
                     <span className="text-caption font-bold text-gold-text lg:text-label">{districtAr(p.districtSlug)} · قريباً</span>
-                    <span className="text-h3 font-extrabold lg:text-h2">{p.nameAr}</span>
+                    <span className="text-h2 font-extrabold">{p.nameAr}</span>
                   </div>
                   <RingHex size="l">قريباً</RingHex>
                 </div>
@@ -111,15 +111,15 @@ export function ProjectsPage() {
           </div>
 
           {/* the numbers */}
-          <section aria-labelledby="projects-numbers" className="mt-6 flex flex-col gap-3 lg:mt-2">
+          <section aria-labelledby="projects-numbers" className="mt-3 flex flex-col gap-2.5 lg:mt-0">
             <h2 id="projects-numbers" className="m-0 text-body font-extrabold lg:sr-only">
               بالأرقام
             </h2>
-            <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4">
+            <div className="grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-3">
               <NumberTile label="وحدات متاحة الآن" value={fmtNum(available.length + owner.count)} note={[...perProject, owner.count ? `${owner.count} من مالك` : null].filter(Boolean).join(" · ")} />
               <NumberTile label="أقل سعر معلن" value={cheapest ? fmtNum(cheapest.priceSar) : "—"} note={cheapest ? unitPhrase(cheapest) : ""} />
               <NumberTile className="hidden lg:flex" label="بيعت هذا العام" value={fmtNum(sold.length)} note={sold.length ? `${sold.map((u) => u.code).join(" و ")} · ${soldBuildings}` : ""} />
-              <Link href="/guide" className="hidden flex-col gap-1.5 bg-ink px-5 py-5 text-paper no-underline cut-m hover:bg-ink-2 motion-hover transition-colors lg:flex">
+              <Link href="/guide" className="hidden flex-col gap-1 bg-ink px-4.5 py-5 text-paper no-underline cut-m hover:bg-ink-2 motion-hover transition-colors lg:flex">
                 <span className="text-caption font-normal text-on-ink-muted">كل الأرقام</span>
                 <span className="text-h3 font-extrabold">دليل الأسعار</span>
                 <span className="text-caption font-normal text-gold">النطاقات بالغرف والنوع ←</span>
@@ -138,15 +138,15 @@ export function ProjectsPage() {
 
 function NumberTile({ label, value, note, className }: { label: string; value: ReactNode; note: ReactNode; className?: string }) {
   return (
-    <div className={cx("flex flex-col gap-1.5 bg-sand px-4 py-4 lg:px-5 lg:py-6", className)}>
+    <div className={cx("flex flex-col gap-1 bg-sand px-3 py-3.5 lg:px-4.5 lg:py-5", className)}>
       <span className="text-caption font-normal text-muted lg:text-caption">{label}</span>
-      <span className="text-h2 font-extrabold leading-none tnum">{value}</span>
+      <span className="text-h2 font-extrabold tnum">{value}</span>
       <span className="text-caption font-normal text-muted">{note}</span>
     </div>
   );
 }
 
-/** The published project card (Projects-M stacked, Projects-D side by side with the image at the end). */
+/** The published project card (Projects-M stacked, Projects-D side by side with the 520px image on the start side). */
 function ProjectCard({ p, ov }: { p: Project; ov?: UnitOverrides }) {
   const stats = projectStats(p.id, ov);
   const list = listedUnits(ov).filter((u) => u.projectId === p.id);
@@ -168,17 +168,17 @@ function ProjectCard({ p, ov }: { p: Project; ov?: UnitOverrides }) {
   const eyebrow = `${p.districtSlug ? `حي ${districtAr(p.districtSlug)}` : ""} · ${buildingsNom(p)}`;
 
   return (
-    <article className="border-interactive lg:grid lg:grid-cols-[minmax(0,1fr)_520px]">
-      <div className="relative lg:order-2">
+    <article className="border-interactive lg:grid lg:grid-cols-[520px_minmax(0,1fr)]">
+      <div className="relative">
         <ImageSlot slotId={p.images[0]} tier="generated" showId={false} cut="xl" alt={`${p.nameAr}، واجهة المشروع`} className="h-48 lg:h-full lg:min-h-80 lg:[clip-path:none]" />
-        <GoldHex className="absolute start-4 top-3 size-14 text-caption lg:start-5 lg:top-4 lg:size-16">
+        <GoldHex className="absolute start-3 top-3 size-14 text-caption lg:start-4 lg:top-4 lg:size-16">
           <span>{stats.available}</span>
           <span>متاحة</span>
         </GoldHex>
         <span className="absolute bottom-0 end-0 bg-ink py-2 pe-3.5 ps-5 text-caption font-bold text-paper cut-tag lg:hidden">{p.statusAr}</span>
       </div>
-      <div className="flex min-w-0 flex-col lg:order-1">
-        <div className="flex flex-col gap-1.5 px-4 pb-4 pt-4 lg:gap-2 lg:px-6 lg:pt-6">
+      <div className="flex min-w-0 flex-col">
+        <div className="flex flex-col gap-1.5 px-4 pb-2.5 pt-3.5 lg:gap-2 lg:px-6.5 lg:pb-4 lg:pt-5.5">
           <span className="flex flex-wrap items-center gap-2 text-caption font-bold text-gold-text lg:text-label">
             {eyebrow}
             <span className="hidden bg-ink px-2 py-0.5 text-caption font-bold text-paper lg:inline">{p.statusAr}</span>
@@ -186,25 +186,25 @@ function ProjectCard({ p, ov }: { p: Project; ov?: UnitOverrides }) {
           <Link href={href} className="text-h2 font-extrabold text-ink no-underline hover:underline">
             {p.nameAr}
           </Link>
-          <p className="m-0 text-caption font-normal leading-relaxed text-muted lg:text-label lg:font-normal lg:text-ink-2">
+          <p className="m-0 text-caption font-normal leading-relaxed text-muted lg:max-w-140 lg:text-body lg:font-normal lg:text-ink-2">
             <MarkedText text={textM} className="lg:hidden" />
             <MarkedText text={textD} className="hidden lg:inline" />
           </p>
         </div>
         {/* phone: from · to · per m² from */}
-        <div className="grid grid-cols-3 border-y border-ink lg:hidden">
+        <div className="grid grid-cols-3 border-y-[1.5px] border-ink lg:hidden">
           <Cell label="من" value={stats.fromPrice} />
           <Cell label="إلى" value={stats.toPrice} />
           <Cell label="المتر من" value={stats.ppm?.min ?? null} />
         </div>
         {/* desktop: apartments from · top beds · roof from · per m² */}
-        <div className="hidden grid-cols-4 border-y border-ink bg-cream lg:grid">
+        <div className="hidden grid-cols-4 border-y-[1.5px] border-ink bg-cream lg:grid">
           <Cell label="الشقق من" value={aptFrom} />
           <Cell label={topBeds ? bedsLabel(topBeds) : ""} value={topBedsFrom} />
           <Cell label="فيلا روف من" value={minPrice(roofs)} />
           <Cell label="المتر" value={stats.ppm ? `${fmtNum(stats.ppm.min)} إلى ${fmtNum(stats.ppm.max)}` : null} />
         </div>
-        <div className="flex gap-2.5 px-4 py-4 lg:mt-auto lg:px-6 lg:py-4">
+        <div className="flex gap-2 px-4 pb-3.5 pt-3 lg:mt-auto lg:gap-2.5 lg:px-6.5 lg:pb-5 lg:pt-4">
           <Button href={href} variant="secondary" size="m" className="flex-1 lg:flex-none">
             صفحة المشروع
           </Button>
@@ -225,7 +225,7 @@ function minPrice(list: Unit[]): number | null {
 }
 function Cell({ label, value }: { label: string; value: number | string | null }) {
   return (
-    <span className="flex min-w-0 flex-col gap-1 border-s border-line px-4 py-3 first:border-s-0 lg:px-4 lg:py-4">
+    <span className="flex min-w-0 flex-col gap-0.5 border-s border-line px-3 py-2.5 first:border-s-0 lg:px-4 lg:py-3">
       <small className="text-caption font-normal text-muted">{label}</small>
       <b className="whitespace-nowrap text-body font-extrabold tnum lg:text-h3">{value == null ? "—" : typeof value === "number" ? fmtNum(value) : value}</b>
     </span>

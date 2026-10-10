@@ -8,7 +8,6 @@ import { MapEmbed, PROJECT_ZOOM } from "@/components/map";
 import { projectBySlug } from "@/data/projects";
 import { districtAr } from "@/data/districts";
 import { modelLabel, UNIT_TYPE_AR } from "@/data/units";
-import { directionsUrl } from "@/data/settings";
 import { listedUnits, projectBuildingCounts, projectStats, unitPpm } from "@/data/selectors";
 import type { Project, Unit } from "@/data/types";
 import { useUnitOverrides } from "@/lib/store";
@@ -56,25 +55,19 @@ export function ProjectPage({ slug }: { slug: string }) {
 
         {/* phone hero */}
         <div className="lg:hidden">
-          <ImageSlot
-            slotId={p.images[0]}
-            tier="generated"
-            ratio="3:2"
-            alt={`${p.nameAr}، واجهة المشروع`}
-            className="mt-3 [clip-path:polygon(0_0,100%_0,100%_100%,48px_100%,0_calc(100%-83px))]"
-          >
+          <ImageSlot slotId={p.images[0]} tier="generated" ratio="3:2" cut="img-l" alt={`${p.nameAr}، واجهة المشروع`} className="mt-4">
             <span className="absolute start-4 top-4 bg-ink px-2.5 py-1.5 text-caption font-bold text-paper">{p.statusAr}</span>
           </ImageSlot>
-          <Container className="flex flex-col gap-3 pt-5">
+          <Container className="flex flex-col gap-2.5 pt-5">
             <span className="text-caption font-bold text-gold-text">
-              {dAr}، جدة · مشروع رقم {p.code}
+              حي {dAr}، جدة · مشروع رقم {p.code}
             </span>
             <h1 className="m-0 text-h1 font-extrabold">{p.nameAr}</h1>
             <p className="m-0 text-body font-normal text-muted">{p.descriptionAr}</p>
-            <StatBand className="cut-l" cellClass="px-3.5 py-3.5" valueClass="text-h3" cells={band} />
-            <div className="flex flex-wrap gap-2">
+            <StatBand className="mt-1.5 cut-l" cellClass="px-3.5 py-4" valueClass="text-h3" cells={band} />
+            <div className="mt-1 flex flex-wrap gap-1.5">
               {p.features.map((f) => (
-                <span key={f} className="border border-line px-2.5 py-1 text-caption font-semibold">
+                <span key={f} className="border border-line px-2.5 py-1.5 text-caption font-semibold">
                   {f}
                 </span>
               ))}
@@ -84,14 +77,14 @@ export function ProjectPage({ slug }: { slug: string }) {
 
         {/* desktop hero */}
         <Container className="hidden lg:block lg:pt-6">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col gap-4 bg-gold px-10 pb-14 pt-10 text-ink [clip-path:polygon(0_0,100%_0,100%_100%,64px_100%,0_calc(100%-37px))]">
               <span className="text-label font-bold text-on-gold-muted">
-                {dAr}، جدة · مشروع رقم {p.code} · {p.statusAr}
+                حي {dAr}، جدة · مشروع رقم {p.code} · {p.statusAr}
               </span>
               <h1 className="m-0 text-display font-extrabold">{p.nameAr}</h1>
               <p className="m-0 text-body font-normal text-on-gold-muted">{p.descriptionAr}</p>
-              <StatBand className="mt-1" cellClass="px-5 py-4" valueClass="text-h2" cells={band} />
+              <StatBand className="mt-2" cellClass="p-5" valueClass="text-h2" cells={band} />
               <div className="flex flex-wrap gap-2">
                 {p.features.map((f) => (
                   <span key={f} className="border-interactive px-3 py-1.5 text-caption font-bold">
@@ -107,18 +100,21 @@ export function ProjectPage({ slug }: { slug: string }) {
               alt={`${p.nameAr}، واجهة المشروع`}
               label={false}
               showId={false}
-              className="lg:aspect-auto [clip-path:polygon(0_0,100%_0,100%_calc(100%-83px),calc(100%-48px)_100%,0_100%)]"
+              className="cut-img-l-start lg:aspect-auto"
             >
               <IllustrativeLabel className="absolute start-4 top-4 z-[1]" />
-              <span dir="ltr" className="absolute end-4 top-4 z-[1] bg-paper px-2 py-1 text-caption font-normal leading-none text-muted">
-                {p.images[0]} · 3:2
+              {/* the id chip sits at the line end (left); its own text runs LTR inside */}
+              <span className="absolute end-4 top-4 z-[1] flex">
+                <span dir="ltr" className="block bg-paper px-2.5 py-1.5 text-caption font-normal leading-none text-muted">
+                  {p.images[0]} · 3:2
+                </span>
               </span>
             </ImageSlot>
           </div>
         </Container>
 
         {/* section nav */}
-        <nav aria-label="أقسام الصفحة" className="sticky top-14 z-20 mt-6 border-y-[1.5px] border-ink bg-paper lg:mt-10">
+        <nav aria-label="أقسام الصفحة" className="sticky top-14 z-20 mt-5 border-y-[1.5px] border-ink bg-paper lg:mt-10">
           <Container className="flex items-center justify-between gap-4">
             <div className="-mx-4 flex overflow-x-auto px-4 lg:mx-0 lg:px-0">
               {SECTIONS.map((s) => (
@@ -143,18 +139,18 @@ export function ProjectPage({ slug }: { slug: string }) {
           </Container>
         </nav>
 
-        <Container className="flex flex-col gap-10 pb-10 pt-8 lg:gap-20 lg:pb-20 lg:pt-20">
+        <Container className="flex flex-col gap-8 pb-8 pt-6 lg:gap-16 lg:pb-20 lg:pt-14">
           {/* buildings */}
-          <section id="buildings" aria-labelledby="h-buildings" className="scroll-mt-28 flex flex-col gap-4 lg:gap-6">
+          <section id="buildings" aria-labelledby="h-buildings" className="scroll-mt-28 flex flex-col gap-3 lg:gap-5">
             <h2 id="h-buildings" className="m-0 text-h2 font-extrabold">
               العمارتان
             </h2>
-            <div className="grid grid-cols-2 gap-3 lg:gap-4">
+            <div className="grid grid-cols-2 gap-2.5 lg:gap-5">
               {buildings.map((b, i) => (
                 <a key={b.code} href="#models" className="flex flex-col border-interactive text-ink no-underline hover:bg-sand motion-hover transition-colors lg:grid lg:grid-cols-[160px_minmax(0,1fr)]">
-                  <ImageSlot slotId={p.images[i + 1] ?? p.images[0]} tier="generated" compact showId={false} cut="img" className="hidden lg:block lg:h-full lg:min-h-36" />
-                  <span className="flex flex-col gap-1.5 p-4 lg:gap-2 lg:px-6 lg:py-5">
-                    <GoldHex className="size-8 text-label">{b.letter}</GoldHex>
+                  <ImageSlot slotId={p.images[i + 1] ?? p.images[0]} tier="generated" compact showId={false} cut="img" className="hidden lg:block lg:h-full lg:min-h-42" />
+                  <span className="flex flex-col gap-2 p-3.5 lg:p-5">
+                    <GoldHex className="size-10 text-body">{b.letter}</GoldHex>
                     <span className="text-h3 font-extrabold">عمارة {b.nameAr}</span>
                     <span className="text-caption font-normal leading-relaxed text-muted lg:text-label lg:font-normal">
                       <span className="lg:hidden">
@@ -181,7 +177,7 @@ export function ProjectPage({ slug }: { slug: string }) {
           </section>
 
           {/* models */}
-          <section id="models" aria-labelledby="h-models" className="scroll-mt-28 flex flex-col gap-4 lg:gap-6">
+          <section id="models" aria-labelledby="h-models" className="scroll-mt-28 flex flex-col gap-3 lg:gap-5">
             <div className="flex items-baseline justify-between gap-4">
               <h2 id="h-models" className="m-0 text-h2 font-extrabold">
                 كل النماذج
@@ -194,9 +190,9 @@ export function ProjectPage({ slug }: { slug: string }) {
             <ModelsTable units={models} />
           </section>
 
-          <div className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-8">
+          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:gap-10">
             {/* location */}
-            <section id="location" aria-labelledby="h-location" className="scroll-mt-28 flex min-w-0 flex-col gap-4 lg:gap-6">
+            <section id="location" aria-labelledby="h-location" className="scroll-mt-28 flex min-w-0 flex-col gap-3 lg:gap-4">
               <h2 id="h-location" className="m-0 text-h2 font-extrabold">
                 الموقع
               </h2>
@@ -212,9 +208,8 @@ export function ProjectPage({ slug }: { slug: string }) {
                     الموقع تقريبي <Mark>[للتأكيد]</Mark>
                   </>
                 }
-                directionsHref={directionsUrl(p.centre.lat, p.centre.lng)}
               />
-              <div className="flex flex-col text-label font-normal lg:text-body">
+              <div className="flex flex-col border-t-[1.5px] border-ink text-label font-normal lg:text-body">
                 <LocRow label="الحي">{dAr}، جدة</LocRow>
                 <LocRow label="أقرب طريق رئيسي">
                   <Mark>[للتأكيد]</Mark>
@@ -226,7 +221,7 @@ export function ProjectPage({ slug }: { slug: string }) {
             </section>
 
             {/* delivery */}
-            <section id="delivery" aria-labelledby="h-delivery" className="scroll-mt-28 flex min-w-0 flex-col gap-4 lg:gap-6">
+            <section id="delivery" aria-labelledby="h-delivery" className="scroll-mt-28 flex min-w-0 flex-col gap-3 lg:gap-4">
               <h2 id="h-delivery" className="m-0 text-h2 font-extrabold">
                 التسليم والضمانات
               </h2>
@@ -236,7 +231,7 @@ export function ProjectPage({ slug }: { slug: string }) {
         </Container>
 
         {/* phone: the sticky WhatsApp bar */}
-        <div className="sticky bottom-0 z-20 border-t border-line bg-paper px-4 py-3 lg:hidden">
+        <div className="sticky bottom-0 z-20 border-t-[1.5px] border-ink bg-paper px-4 pb-3.5 pt-2.5 lg:hidden">
           <a href={wa} target="_blank" rel="noopener noreferrer" className="flex min-h-14 items-center justify-between gap-3 bg-gold px-4 text-ink no-underline cut-m">
             <span className="inline-flex items-center gap-2 text-body font-extrabold">
               <WhatsAppIcon size={20} />
@@ -253,7 +248,7 @@ export function ProjectPage({ slug }: { slug: string }) {
 
 function LocRow({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <div className="flex items-center justify-between gap-4 border-b border-line py-3">
+    <div className="flex items-center justify-between gap-4 border-b border-line py-2.5 lg:py-3">
       <span className="text-muted">{label}</span>
       <span className="font-bold">{children}</span>
     </div>
@@ -271,7 +266,7 @@ function ModelsList({ units }: { units: Unit[] }) {
   const grid = "grid grid-cols-[1.3fr_0.9fr_1fr_0.7fr] items-center gap-2 px-3";
   return (
     <div className="border-interactive lg:hidden">
-      <div className={cx(grid, "border-b border-line py-2.5 text-caption font-bold text-muted")}>
+      <div className={cx(grid, "border-b-[1.5px] border-ink py-2.5 text-caption font-bold text-muted")}>
         <span>النموذج</span>
         <span>م² · غرف</span>
         <span>السعر · للمتر</span>
@@ -317,12 +312,12 @@ function ModelsList({ units }: { units: Unit[] }) {
 
 /** Project-D: the models table */
 function ModelsTable({ units }: { units: Unit[] }) {
-  const th = "px-4 py-3.5 text-start text-caption font-bold text-muted";
+  const th = "px-4 py-3 text-start text-caption font-bold text-muted";
   return (
     <div className="hidden border-interactive lg:block">
       <table className="w-full border-collapse text-body">
         <thead>
-          <tr className="border-b border-line">
+          <tr className="border-b-[1.5px] border-ink">
             <th className={th}>النموذج</th>
             <th className={th}>العمارة</th>
             <th className={th}>النوع</th>
@@ -340,7 +335,7 @@ function ModelsTable({ units }: { units: Unit[] }) {
           {units.map((u, i) => {
             const sold = u.status === "sold";
             const newBuilding = i > 0 && units[i - 1].building !== u.building;
-            const td = "px-4 py-3";
+            const td = "px-4 py-3.5";
             return (
               <tr key={u.code} className={cx(i > 0 && (newBuilding ? "border-t-[1.5px] border-ink" : "border-t border-line"), sold ? "text-muted" : "text-ink")}>
                 <td className={cx(td, "font-extrabold text-ink")}>{modelLabel(u)}</td>
@@ -348,14 +343,15 @@ function ModelsTable({ units }: { units: Unit[] }) {
                 <td className={td}>{UNIT_TYPE_AR[u.type]}</td>
                 <td className={cx(td, "tnum")}>{u.beds}</td>
                 <td className={cx(td, "tnum")}>{area2(u.areaM2)}</td>
-                <td className={cx(td, "font-extrabold tnum", sold && "line-through")}>
-                  <Price value={u.priceSar} sign={false} />
+                <td className={cx(td, "font-extrabold tnum")}>
+                  {/* Price is inline-flex: the strike has to sit on it, a td's decoration does not reach inside */}
+                  <Price value={u.priceSar} sign={false} className={sold ? "line-through" : undefined} />
                 </td>
                 <td className={cx(td, "tnum")}>{fmtNum(unitPpm(u))}</td>
                 <td className={td}>
                   <StatusWord u={u} />
                 </td>
-                <td className={cx(td, "text-end")}>
+                <td className="px-4 py-3 text-end">
                   {sold ? (
                     <span className="text-caption font-normal">بيعت {soldMonth(u.soldOn)}</span>
                   ) : (
@@ -379,7 +375,7 @@ function Delivery({ p }: { p: Project }) {
   const current = p.milestones.find((m) => !m.done);
   return (
     <div className="border-interactive">
-      <Milestone mark={<CheckHex className="size-11" />} title={`حالة المشروع: ${p.statusAr}`}>
+      <Milestone mark={<CheckHex className="size-9 lg:size-10" icon={16} />} title={`حالة المشروع: ${p.statusAr}`}>
         {[...done.map((m) => m.label), current ? `${current.label} جارية` : null].filter(Boolean).join(" · ")}
         {current?.tbc && <Mark>[للتأكيد]</Mark>}
       </Milestone>
@@ -389,7 +385,7 @@ function Delivery({ p }: { p: Project }) {
       <Milestone mark={<RingHex size="s">3</RingHex>} title={`شهادة الإشغال: ${p.occupancy}`}>
         <Mark>الحالة الحالية للتأكيد</Mark>
       </Milestone>
-      <div className="flex flex-col gap-1 bg-sand px-4 py-3.5 text-caption font-normal lg:grid lg:grid-cols-2 lg:gap-4 lg:px-5 lg:text-label lg:font-normal">
+      <div className="flex flex-col gap-1.5 bg-sand p-3.5 text-caption font-normal leading-relaxed lg:grid lg:grid-cols-2 lg:gap-3 lg:px-5 lg:py-4.5 lg:text-label lg:font-normal">
         <span className="flex flex-wrap items-center gap-x-1 lg:flex-col lg:items-start">
           <strong className="font-bold">
             الضمانات<span className="lg:hidden">:</span>
@@ -408,9 +404,9 @@ function Delivery({ p }: { p: Project }) {
 }
 function Milestone({ mark, title, children }: { mark: ReactNode; title: string; children: ReactNode }) {
   return (
-    <div className="flex items-start gap-3.5 border-b border-line px-4 py-4 lg:px-5">
-      <span className="flex size-11 shrink-0 items-center justify-center">{mark}</span>
-      <span className="flex min-w-0 flex-col gap-1">
+    <div className="flex items-center gap-3 border-b border-line p-3.5 lg:gap-3.5 lg:px-5 lg:py-4.5">
+      <span className="flex shrink-0 items-center justify-center">{mark}</span>
+      <span className="flex min-w-0 flex-col gap-0.5">
         <span className="text-body font-extrabold">{title}</span>
         <span className="text-caption font-normal text-muted lg:text-label lg:font-normal">{children}</span>
       </span>

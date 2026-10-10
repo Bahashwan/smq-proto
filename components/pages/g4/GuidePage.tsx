@@ -30,11 +30,11 @@ export function GuidePage() {
   return (
     <>
       <Header />
-      <main className="pb-12 lg:pb-16">
+      <main className="pb-8 lg:pb-16">
         <Container className="pt-6 lg:pt-12">
           {/* intro */}
-          <section className="flex flex-col gap-2.5 lg:grid lg:grid-cols-2 lg:items-center lg:gap-4">
-            <div className="flex flex-col gap-1.5">
+          <section className="flex flex-col gap-2 lg:grid lg:grid-cols-2 lg:items-end lg:gap-8">
+            <div className="flex flex-col gap-2 lg:gap-2.5">
               <span className="text-caption font-bold text-gold-text lg:text-label">دليل الأسعار</span>
               <h1 className="m-0 text-h1 font-extrabold">كم يكلف السكن في جدة؟</h1>
             </div>
@@ -45,7 +45,7 @@ export function GuidePage() {
           </section>
 
           {/* phone: district chips */}
-          <nav aria-label="الأحياء" className="-mx-4 mt-5 flex gap-2 overflow-x-auto px-4 lg:hidden">
+          <nav aria-label="الأحياء" className="-mx-4 mt-4 flex gap-2 overflow-x-auto px-4 lg:hidden">
             {chips.map(({ district, live: on, listed }) =>
               on ? (
                 <a key={district.slug} href={`#${district.slug}`} aria-current="true" className="inline-flex h-10 shrink-0 items-center gap-2 bg-ink px-3.5 text-label font-bold text-paper no-underline">
@@ -61,11 +61,11 @@ export function GuidePage() {
             )}
           </nav>
 
-          <div className="mt-5 lg:mt-10 lg:grid lg:grid-cols-[282px_minmax(0,1fr)] lg:items-start lg:gap-8">
+          <div className="mt-4 lg:mt-8 lg:grid lg:grid-cols-[282px_minmax(0,1fr)] lg:items-start lg:gap-8">
             {/* desktop: district list */}
             <aside className="hidden border-interactive lg:block">
               <nav aria-label="الأحياء">
-                <span className="block border-b border-line px-4 py-3.5 text-caption font-bold text-muted">الأحياء · جدة</span>
+                <span className="block border-b-[1.5px] border-ink px-4 py-3.5 text-caption font-bold text-muted">الأحياء · جدة</span>
                 {chips.map(({ district, live: on, listed }) =>
                   on ? (
                     <a key={district.slug} href={`#${district.slug}`} aria-current="true" className="flex min-h-15 items-center justify-between gap-3 bg-ink px-4 py-4 text-paper no-underline">
@@ -73,14 +73,14 @@ export function GuidePage() {
                       <span className="text-caption text-gold tnum">{unitsCount(listed)}</span>
                     </a>
                   ) : (
-                    <span key={district.slug} className="flex min-h-15 items-center justify-between gap-3 border-b border-line px-4 py-4 text-muted">
+                    <span key={district.slug} className="flex min-h-15 items-center justify-between gap-3 border-t border-line px-4 py-4 text-muted">
                       <span className="text-body font-bold">{district.ar}</span>
                       <span className="text-caption">قريباً</span>
                     </span>
                   ),
                 )}
               </nav>
-              <div className="flex flex-col gap-3 px-4 py-5">
+              <div className="flex flex-col gap-2 border-t-[1.5px] border-ink p-4">
                 <span className="text-label font-bold">لم تجد حيك؟</span>
                 <a href={wa} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center gap-2 bg-gold px-4 text-label font-extrabold text-ink no-underline cut-s hover:bg-gold-hover motion-hover transition-colors">
                   أرسل ميزانيتك على واتساب
@@ -110,7 +110,7 @@ export function GuidePage() {
                 ]}
               />
               <StatBand
-                className="mt-6 hidden lg:grid [clip-path:polygon(0_0,calc(100%-20px)_0,100%_35px,100%_100%,0_100%)]"
+                className="mt-6 hidden cut-l lg:grid"
                 cellClass="px-5 py-6"
                 valueClass="text-h2"
                 cells={[
@@ -144,8 +144,8 @@ export function GuidePage() {
                 <p className="m-0 pt-4 text-caption font-normal text-muted">المعيّن الذهبي = «يبدأ من». الشريط الأسود = النطاق المعتاد بين أقل وأعلى سعر مدرج.</p>
               </div>
 
-              <div className="mt-8 flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:gap-6">
-                <div className="flex min-w-0 flex-col gap-3">
+              <div className="mt-6 flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-6">
+                <div className="flex min-w-0 flex-col gap-3.5 lg:gap-3">
                   <h3 className="m-0 text-body font-extrabold leading-snug">حسب عدد الغرف</h3>
                   <Table
                     head={["الغرف", "يبدأ من", <><span className="lg:hidden">النطاق المعتاد</span><span className="hidden lg:inline">النطاق · النماذج</span></>]}
@@ -156,7 +156,7 @@ export function GuidePage() {
                     }))}
                   />
                 </div>
-                <div className="flex min-w-0 flex-col gap-3">
+                <div className="flex min-w-0 flex-col gap-3.5 lg:gap-3">
                   <h3 className="m-0 text-body font-extrabold leading-snug">حسب نوع الوحدة</h3>
                   <Table
                     head={["النوع", "للمتر من", "المساحات"]}
@@ -165,24 +165,24 @@ export function GuidePage() {
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-col gap-3">
+              <div className="mt-6 flex flex-col gap-3.5 lg:gap-3">
                 <h3 className="m-0 text-body font-extrabold leading-snug">حسب المشروع</h3>
                 {g.byProject.map((p) => (
                   <ProjectRow key={p.project.id} item={p} />
                 ))}
               </div>
 
-              <p className="m-0 mt-4 text-caption font-normal leading-relaxed text-muted lg:hidden">
+              <p className="m-0 mt-5 text-caption font-normal leading-relaxed text-muted lg:hidden">
                 آخر تحديث {slashDate(g.updatedAt)} · الأسعار بالريال السعودي شاملة ما يذكر في صفحة كل وحدة. سعر المتر = السعر ÷ المساحة الصافية للوحدة.
               </p>
             </section>
           </div>
 
           {/* phone: «لم تجد حيك؟» */}
-          <section aria-labelledby="guide-ask" className="mt-10 flex flex-col gap-2.5 bg-gold px-5 pb-8 pt-6 text-ink [clip-path:polygon(0_0,100%_0,100%_100%,36px_100%,0_calc(100%-20px))] lg:hidden">
+          <section aria-labelledby="guide-ask" className="mt-7 flex flex-col gap-2.5 bg-gold p-5 text-ink [clip-path:polygon(0_0,100%_0,100%_100%,36px_100%,0_calc(100%-20px))] lg:hidden">
             <h2 id="guide-ask" className="m-0 text-h3 font-extrabold">لم تجد حيك؟</h2>
             <p className="m-0 text-label font-normal leading-relaxed text-on-gold-muted">أرسل ميزانيتك والحي الذي تفضله، ونرد عليك بما نعرفه عن السوق هناك خلال ساعات العمل.</p>
-            <a href={wa} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex min-h-13 items-center justify-center gap-2 bg-ink px-4 text-body font-extrabold text-paper no-underline hover:bg-ink-2 motion-hover transition-colors">
+            <a href={wa} target="_blank" rel="noopener noreferrer" className="mt-1 inline-flex min-h-12 items-center justify-center gap-2 bg-ink px-4 text-body font-extrabold text-paper no-underline hover:bg-ink-2 motion-hover transition-colors">
               أرسل طلبك على واتساب
             </a>
           </section>
@@ -221,10 +221,10 @@ function typeNote(r: TypeRow, first: boolean): ReactNode {
 }
 
 function Table({ head, rows }: { head: ReactNode[]; rows: { key: string; href?: string; cells: ReactNode[] }[] }) {
-  const grid = "grid grid-cols-[1.2fr_1fr_1.2fr] items-center gap-3 px-4 lg:grid-cols-[1fr_1fr_1.3fr]";
+  const grid = "grid grid-cols-[1.2fr_1fr_1.2fr] items-baseline gap-2 px-3.5 lg:grid-cols-[1fr_1fr_1.3fr] lg:px-4";
   return (
     <div className="border-interactive">
-      <div className={cx(grid, "border-b border-line py-3 text-caption font-bold text-muted")}>
+      <div className={cx(grid, "border-b border-line py-2.5 text-caption font-bold text-muted")}>
         {head.map((h, i) => (
           <span key={i}>{h}</span>
         ))}
@@ -237,7 +237,7 @@ function Table({ head, rows }: { head: ReactNode[]; rows: { key: string; href?: 
             <span className="text-caption font-normal leading-relaxed text-muted lg:text-caption">{r.cells[2]}</span>
           </>
         );
-        const cls = cx(grid, "min-h-15 py-3.5", i < rows.length - 1 && "border-b border-line");
+        const cls = cx(grid, "py-3.5", i < rows.length - 1 && "border-b border-line");
         return r.href ? (
           <Link key={r.key} href={r.href} className={cx(cls, "text-ink no-underline hover:bg-sand motion-hover transition-colors")}>
             {inner}
@@ -291,7 +291,7 @@ function ProjectRow({ item }: { item: ReturnType<typeof guideTables>["byProject"
   return (
     <>
       {/* phone card */}
-      <Link href={href} className="flex items-center justify-between gap-4 border-interactive px-4 py-4 text-ink no-underline hover:bg-sand motion-hover transition-colors lg:hidden">
+      <Link href={href} className="flex items-center justify-between gap-3 border-interactive p-3.5 text-ink no-underline hover:bg-sand motion-hover transition-colors lg:hidden">
         <span className="flex min-w-0 flex-col gap-1">
           <span className="text-body font-extrabold">{p.nameAr}</span>
           <span className="text-caption font-normal leading-relaxed text-muted">

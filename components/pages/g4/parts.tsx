@@ -7,8 +7,9 @@ import type { NavItem } from "@/components/ui";
 
 /** White hexagon with the 1.5px ink ring (nested hexagons, as the library draws rings). */
 export function RingHex({ children, size = "m", className }: { children: ReactNode; size?: "s" | "m" | "l"; className?: string }) {
-  const outer = size === "s" ? "size-8" : size === "m" ? "size-12" : "size-14";
-  const text = size === "s" ? "text-caption" : size === "m" ? "text-label" : "text-caption";
+  // s: the project milestones (36 → 40px) · m: 48px · l: the projects cards (48 → 56px)
+  const outer = size === "s" ? "size-9 lg:size-10" : size === "m" ? "size-12" : "size-12 lg:size-14";
+  const text = size === "s" ? "text-label" : size === "m" ? "text-label" : "text-caption";
   return (
     <span className={cx("relative inline-flex shrink-0 items-center justify-center hex-flat bg-ink font-extrabold leading-none tnum", outer, className)}>
       <span aria-hidden className="absolute inset-[1.5px] hex-flat bg-paper" />
@@ -21,10 +22,11 @@ export function RingHex({ children, size = "m", className }: { children: ReactNo
 export function GoldHex({ children, className }: { children: ReactNode; className?: string }) {
   return <span className={cx("inline-flex shrink-0 flex-col items-center justify-center hex-flat bg-gold text-ink font-extrabold leading-tight text-center tnum", className)}>{children}</span>;
 }
-export function CheckHex({ className }: { className?: string }) {
+/** Gold hexagon with the check; `className` carries the size (default 48px). */
+export function CheckHex({ className = "size-12", icon = 20 }: { className?: string; icon?: number }) {
   return (
-    <GoldHex className={cx("size-12", className)}>
-      <CheckIcon size={20} />
+    <GoldHex className={className}>
+      <CheckIcon size={icon} />
     </GoldHex>
   );
 }
@@ -100,6 +102,7 @@ export const FOOTER_LINKS = {
   project: [L.units, L.guide, L.services, L.about, L.contact],
   contact: [L.units, L.guide, L.services, L.collab, L.about],
 };
+/** The G4 desktop footers end at «© 2026 إس إم كيو العقارية» (no privacy link on the boards' desktop line). */
 export function PageFooter({ links }: { links: NavItem[] }) {
-  return <Footer compact links={links} />;
+  return <Footer compact links={links} privacy={false} />;
 }
