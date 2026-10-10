@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Button, CheckIcon, Container, Footer, Header } from "@/components/ui";
 import { cx, fmtNum } from "@/lib/format";
 import { useQuery } from "@/lib/location";
-import { usePatch, useStore } from "@/lib/store";
+import { usePatch, useStore, useUnitOverrides } from "@/lib/store";
 import { unitsUrl, type UnitTypeParam } from "@/lib/url";
 import { districtAr } from "@/data/districts";
 import { requestById } from "@/data/requests";
@@ -24,14 +24,15 @@ interface EchoedRequest {
   phoneMasked: string;
 }
 
-interface CreatedPatch {
+/** the fields the bridge form patches onto a created request (a type alias, so it fits the store's Record shape) */
+type CreatedPatch = {
   beds?: number | null;
   budgetMax?: number | null;
   type?: UnitTypeParam | null;
   typeLabelAr?: string;
   buyerPhoneMasked?: string;
   districtSlug?: string;
-}
+};
 
 function useEchoedRequest(id: string): EchoedRequest {
   const created = useStore((s) => s.createdRequests).find((r) => r.id === id);
@@ -64,7 +65,7 @@ export function RequestSent() {
   const id = q.get("req") ?? DEFAULT_REQ;
   const req = useEchoedRequest(id);
   const toast = useStore((s) => s.toast);
-  const overrides = { unitStatus: useStore((s) => s.unitStatus), unitHidden: useStore((s) => s.unitHidden) };
+  const overrides = useUnitOverrides();
   const [copied, setCopied] = useState(false);
   const dAr = req.districtSlug === "all" ? "كل جدة" : districtAr(req.districtSlug);
 
