@@ -335,7 +335,7 @@ function PhoneApprovalCard({ a }: { a: Approval }) {
     third = [`${what.replace(" من المالك", "")} ${agoLabel(reqLog.at)}`, ...rest].join(" · ");
   } else if (a.ownerNotes && a.ownerNotes.length < 40) third = a.ownerNotes;
   else if (a.role !== "owner") third = ROLE_LABELS[a.role];
-  else if (listedInDistrict(a.districtSlug) === 0) third = `${fmtNum(analytics.districtSessions30d[a.districtSlug] ?? 0)} بحثاً عن هذا الحي بلا نتيجة`;
+  else if (listedInDistrict(a.districtSlug) === 0) third = `${fmtNum(analytics.zeroResultsByDistrict30d[a.districtSlug] ?? analytics.districtSessions30d[a.districtSlug] ?? 0)} بحثاً عن هذا الحي بلا نتيجة`;
   const more = Math.max(0, a.photosCount - 2);
   return (
     <article className={cx("flex flex-col bg-paper", awaiting ? "border-hairline" : "border-interactive")}>

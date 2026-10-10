@@ -59,7 +59,7 @@ export const units: Unit[] = [
     orientation: { value: "شمالي", tbc: true },
     ceilingM: { value: 3.2, tbc: true },
     features: { ...APT_FEATURES, maid: true, balcony: true },
-    otherFeatures: APT_OTHER,
+    otherFeatures: ["دخول ذكي للعمارة", "أبواب مرتفعة"], // Unit-M and Admin-UnitEditor-D (Unit-D writes «دخول ذكي · موقف خاص»)
     imageTier: "generated",
     images: ["IMG-UNIT-APT-3BR-LIVING", "IMG-UNIT-APT-KITCHEN-OPEN", "IMG-UNIT-APT-3BR-MASTER", "IMG-UNIT-APT-BALCONY"],
     plan: "plan-apt-a",

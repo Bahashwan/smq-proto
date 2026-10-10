@@ -83,6 +83,7 @@ export interface Project {
   code?: string; // RWD-01 · ABH-01 · IND (the Excel key shown in the admin)
   autoGroup?: boolean; // «وحدات المُلّاك»: an automatic group, never a project on the site
   descriptionDraftAr?: string; // unsaved editor draft (Admin-ProjectEditor-D)
+  pinDraft?: { lat: number; lng: number }; // unsaved pin move in the same draft (21.5812, 39.1700)
   descriptionEn?: string;
   tbcFields?: string[]; // «4 حقول بانتظار تأكيد المطوّر»
   adminNoteAr?: string; // the one-line summary on the admin projects card

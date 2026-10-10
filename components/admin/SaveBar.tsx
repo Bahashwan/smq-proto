@@ -43,9 +43,12 @@ export function unsavedFieldsText(n: number): string {
 
 const PRIMARY = "flex h-[34px] cursor-pointer items-center px-3 text-[12px] font-extrabold cut-s motion-hover transition-colors";
 const GOLD = cx(PRIMARY, "bg-gold text-ink hover:bg-gold-hover");
-const DISABLED = cx(PRIMARY, "cursor-default bg-ink-2 text-on-ink-muted");
-const ON_INK_OUTLINE = "flex h-[34px] cursor-pointer items-center border-[1.5px] border-on-ink-muted bg-transparent px-2.5 text-[12px] font-bold text-paper hover:border-paper";
-const ON_INK_WHITE = "flex h-[34px] cursor-pointer items-center border-[1.5px] border-paper bg-paper px-2.5 text-[12px] font-extrabold text-ink hover:bg-sand";
+const DISABLED = cx(PRIMARY, "cursor-default bg-ink-2 text-disabled");
+// «تجاهل»: ink-2 frame, muted words · «حفظ كمسودة»: white frame and words (Admin-ProjectEditor-D)
+const ON_INK_OUTLINE = "flex h-[34px] cursor-pointer items-center border-[1.5px] border-ink-2 bg-transparent px-2.5 text-[12px] font-bold text-on-ink-muted hover:border-paper hover:text-paper";
+const ON_INK_WHITE = "flex h-[34px] cursor-pointer items-center border-[1.5px] border-paper bg-transparent px-2.5 text-[12px] font-bold text-paper hover:bg-ink-2";
+// the clean state of an editor with drafts: both buttons drawn disabled (Admin-UnitEditor-D)
+const DRAFT_DISABLED = "flex h-[34px] cursor-default items-center border-[1.5px] border-ink-2 bg-transparent px-2.5 text-[12px] font-bold text-disabled";
 
 export function SaveBar({ state, onSave, onDiscard, onDraft, onUndo, onFix, dirtyCount = 0, message, savedText = "نُشر الآن ·", openHref, openLabel = "افتح", errorText, labels, extra, sticky, className }: SaveBarProps) {
   const L = { save: "حفظ", publish: "نشر", draft: "مسودة", discard: "تجاهل", undo: "تراجع", fix: "اذهب للحقل", saving: "يُحفظ…", published: "منشور", ...labels };
@@ -56,7 +59,12 @@ export function SaveBar({ state, onSave, onDiscard, onDraft, onUndo, onFix, dirt
       className={cx("flex items-center justify-between gap-2.5 border-t-[3px] border-gold bg-ink px-3.5 py-2.5 text-[12px] font-bold text-paper", sticky && "sticky bottom-0 z-20", className)}
     >
       <span aria-live="polite" className="flex min-w-0 items-center gap-2">
-        {state === "clean" && <span className="text-on-ink-muted">{message ?? unsavedFieldsText(0)}</span>}
+        {state === "clean" && (
+          <>
+            <span aria-hidden className="hex-point size-2 shrink-0 bg-on-ink-muted" />
+            <span className="text-on-ink-muted">{message ?? unsavedFieldsText(0)}</span>
+          </>
+        )}
         {state === "dirty" && (
           <>
             <span aria-hidden className="hex-point size-2 shrink-0 bg-gold" />
@@ -90,11 +98,21 @@ export function SaveBar({ state, onSave, onDiscard, onDraft, onUndo, onFix, dirt
         )}
       </span>
       <span className="flex shrink-0 items-center gap-1.5">
-        {state === "clean" && (
-          <button type="button" disabled className={DISABLED}>
-            {L.save}
-          </button>
-        )}
+        {state === "clean" &&
+          (onDraft ? (
+            <>
+              <button type="button" disabled className={DRAFT_DISABLED}>
+                {L.draft}
+              </button>
+              <button type="button" disabled className={DISABLED}>
+                {L.publish}
+              </button>
+            </>
+          ) : (
+            <button type="button" disabled className={DISABLED}>
+              {L.save}
+            </button>
+          ))}
         {state === "dirty" && (
           <>
             {extra}

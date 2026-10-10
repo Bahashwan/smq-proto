@@ -218,9 +218,9 @@ export function districtLabel(slug: string, variant: MapVariant = "desktop"): La
   return getGeometry(variant).labels[slug];
 }
 
-/** 21.5604526 → "21.5604526" (seven decimals, Western digits). */
-export function formatCoord(n: number): string {
-  return n.toFixed(7);
+/** 21.5604526 → "21.5604526" (seven decimals by default, Western digits). */
+export function formatCoord(n: number, decimals = 7): string {
+  return n.toFixed(decimals);
 }
 
 // ─── Google Maps links ───────────────────────────────────────────────────────────────────────────────────

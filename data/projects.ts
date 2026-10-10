@@ -35,6 +35,7 @@ export const projects: Project[] = [
     descriptionAr:
       "عمارتان سكنيتان، روز وياسمين، في قلب حي الروضة. شقق من غرفتين إلى 3 غرف بين 80 و147 م²، وفيلتان روف بخمس غرف ومسطح 411 و419 م². تسليم متوقع في الربع الثاني من 2027.",
     descriptionDraftAr: "عمارتان سكنيتان، روز وياسمين، في قلب حي الروضة. شقق من غرفتين إلى 3 غرف بين 80 و147 م²، وفيلتان روف بخمس غرف ومسطح 411 و419 م².",
+    pinDraft: { lat: 21.5812, lng: 39.17 },
     descriptionEn: "Two residential buildings, Rose and Yasmin, in the heart of Al Rawdah. 2 and 3-bedroom apartments between 80 and 147 m², and two 5-bedroom roof villas of 411 and 419 m². Expected delivery Q2 2027.",
     tbcFields: ["التسليم المتوقع", "مرحلة التشطيبات", "الضمانات", "نوع التأمين"],
     log: [

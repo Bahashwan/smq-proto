@@ -100,7 +100,7 @@ Phase 10 · Board review round
 | 2026-10-10 | Header between 1024 and 1439 px: phone icon instead of the number and a tighter nav so nothing overflows; 1440 matches the boards | Claude, from the G4 report |
 | 2026-10-10 | Presenter switches are one URL parameter each (`members`, `tier`, `ustatus`, `app`, `mreq`, `wa`, `skeleton`, `marks`, `proof`, `offline`, `empty`, `error`, `tour`+`step`); storage keys `smq.presenter`, `smq.compare`, `smq.ref`, `smq.store` | Claude, table in `docs/route-map.md` |
 | 2026-10-10 | Images: the client asked to use the generated images without generating more. First-run candidates rejected for sea views are re-used cropped to their slot ratio (no sea in frame); the two facades keep the building with the sea line above the wall retouched to sky. Parking and the open kitchen stay placeholders | Client, Claude |
-| 2026-10-10 | Board conflicts kept as the fixtures say: RZ-A «مميزات جوهرية أخرى» = «دخول ذكي · موقف خاص» (Unit-D) though Unit-M and Admin-UnitEditor-D write «دخول ذكي للعمارة · أبواب مرتفعة»; apply status time «أمس 11:20» as on Admin-AllianceApplications-D | Claude |
+| 2026-10-10 | Board conflicts: RZ-A «مميزات جوهرية أخرى» = «دخول ذكي للعمارة · أبواب مرتفعة» (Unit-M and Admin-UnitEditor-D; Unit-D writes «دخول ذكي · موقف خاص»); unit update dates follow the public unit boards (RZ-RF 2026/10/01, YS-A 2026/09/28), not Admin-Inventory-D; apply status time «أمس 11:20» as on Admin-AllianceApplications-D | Claude |
 | 2026-10-10 | About-Proof-D shows testimonial t-03 as published (role «مشترٍ», YS-A, سبتمبر 2026) through the fixture's `proof` variant; the admin still holds it pending | Claude, from the boards |
 
 ## Open questions for the client

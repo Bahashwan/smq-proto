@@ -60,6 +60,8 @@ export interface PinPickerProps {
   locateButton?: boolean;
   /** «خط العرض» / «خط الطول» fields with seven decimals (admin boards) */
   coordinateFields?: boolean | "above" | "below";
+  /** decimals in the coordinate fields (Admin-ProjectEditor-D shows four: 21.5812) */
+  decimals?: number;
   showLabels?: boolean;
   showRoads?: boolean;
   /** grid cell in px (boards: 28 add · 24 alliance · 30 site settings) */
@@ -94,6 +96,7 @@ export function PinPicker({
   previewHint = PICKER_PREVIEW_HINT,
   locateButton = false,
   coordinateFields = false,
+  decimals = 7,
   showLabels = false,
   showRoads = true,
   gridSize = 28,
@@ -209,13 +212,13 @@ export function PinPicker({
   const preview = mode === "link" && (linkState === "located" || linkState === "short");
 
   // coordinate fields keep their own text while being edited
-  const [latText, setLatText] = useState(() => formatCoord(ll.lat));
-  const [lngText, setLngText] = useState(() => formatCoord(ll.lng));
+  const [latText, setLatText] = useState(() => formatCoord(ll.lat, decimals));
+  const [lngText, setLngText] = useState(() => formatCoord(ll.lng, decimals));
   const [editing, setEditing] = useState<null | "lat" | "lng">(null);
   useEffect(() => {
-    if (editing !== "lat") setLatText(formatCoord(ll.lat));
-    if (editing !== "lng") setLngText(formatCoord(ll.lng));
-  }, [ll.lat, ll.lng, editing]);
+    if (editing !== "lat") setLatText(formatCoord(ll.lat, decimals));
+    if (editing !== "lng") setLngText(formatCoord(ll.lng, decimals));
+  }, [ll.lat, ll.lng, editing, decimals]);
   const onCoord = (which: "lat" | "lng", text: string) => {
     if (which === "lat") setLatText(text);
     else setLngText(text);
@@ -358,7 +361,7 @@ export function PinPicker({
             موقعي الحالي
           </button>
         )}
-        <span
+        {(preview ? previewHint : hint) !== "" && <span
           aria-live="polite"
           className={cx(
             "absolute z-[2] truncate bg-paper font-bold",
@@ -368,7 +371,7 @@ export function PinPicker({
           )}
         >
           {preview ? previewHint : hint}
-        </span>
+        </span>}
       </div>
       {echoLink && mode === "link" && linkState === "short" && (
         <span dir="ltr" className="text-caption truncate text-end text-muted">

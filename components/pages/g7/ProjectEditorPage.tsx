@@ -93,8 +93,11 @@ export function ProjectEditorPage({ id }: { id?: string }) {
   const saved = usePatch<Partial<Form>>("projectEdit", id ?? "new");
   const extraLog = usePatch<{ entries: { by: string; text: string; at: string }[] }>("projectLog", id ?? "new")?.entries ?? [];
   const initial = useMemo<Form>(() => ({ ...fromProject(project), ...(saved ?? {}) }), [project, saved]);
-  // The fixture's unsaved editor draft (Admin-ProjectEditor-D): the description was edited and not yet published.
-  const [draft, setDraft] = useState<Partial<Form>>(() => (project?.descriptionDraftAr && !saved ? { descriptionAr: project.descriptionDraftAr } : {}));
+  // The fixture's unsaved editor draft (Admin-ProjectEditor-D): the description was edited and the pin moved, not yet
+  // published («تغييرات غير محفوظة في 3 حقول»).
+  const [draft, setDraft] = useState<Partial<Form>>(() =>
+    saved || !project ? {} : { ...(project.descriptionDraftAr ? { descriptionAr: project.descriptionDraftAr } : {}), ...(project.pinDraft ? { lat: project.pinDraft.lat, lng: project.pinDraft.lng } : {}) },
+  );
   const [phase, setPhase] = useState<"idle" | "saving" | "saved">("idle");
   const [lang, setLang] = useState<"ar" | "en">("ar");
   const [newFeature, setNewFeature] = useState("");
@@ -255,8 +258,9 @@ export function ProjectEditorPage({ id }: { id?: string }) {
               <PinPicker
                 latLng={{ lat: form.lat, lng: form.lng }}
                 coordinateFields="below"
+                decimals={4}
                 gridSize={30}
-                hint="اسحب الدبوس أو أدخل الإحداثيات"
+                hint=""
                 onChange={(v) => {
                   if (Math.abs(v.lat - form.lat) > 1e-7 || Math.abs(v.lng - form.lng) > 1e-7) setDraft((d) => ({ ...d, lat: v.lat, lng: v.lng }));
                 }}

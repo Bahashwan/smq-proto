@@ -364,7 +364,8 @@ function LeadDetails({ lead, ov, onClose, phone }: { lead: Lead; ov: LeadsOv; on
   const statusSeg = (
     <PeriodToggle
       label="حالة الطلب"
-      className={cx("flex w-full [&>button]:flex-1", !phone && "*:aria-pressed:bg-gold *:aria-pressed:text-ink")}
+      tone={phone ? "ink" : "gold"}
+      className="flex w-full [&>button]:flex-1"
       value={st}
       onChange={(v) => {
         if (v === "closed") setAsking(true);

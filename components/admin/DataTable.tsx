@@ -1,6 +1,6 @@
 "use client";
 // Data table (Components2 · 1). A CSS-grid table with ARIA table roles: sand head with sort marks, hairline rows,
-// states hover (cream), selected (sand + gold bar at the start edge), focus (gold outline), changed (cream-focus),
+// states hover (cream), selected (sand, as Admin-Inventory-D draws it), focus (gold outline), changed (cream-focus),
 // hidden/muted (muted text, the status keeps its shape). Selection, bulk actions slot, sticky head, row click.
 import { useEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent, type ReactNode } from "react";
 import { cx } from "@/lib/format";
@@ -108,8 +108,9 @@ export function DataTable<T>({
   const allSelected = selectableKeys.length > 0 && selectableKeys.every((k) => sel.includes(k));
   const someSelected = sel.length > 0 && !allSelected;
   const allRef = useRef<HTMLInputElement>(null);
+  // Admin-Inventory-D: «تحديد الكل» stays empty while only some rows are selected (no indeterminate dash)
   useEffect(() => {
-    if (allRef.current) allRef.current.indeterminate = someSelected;
+    if (allRef.current) allRef.current.indeterminate = false;
   }, [someSelected]);
 
   const toggleAll = () => setSel(allSelected ? [] : selectableKeys);
@@ -188,7 +189,6 @@ export function DataTable<T>({
                   "focus-visible:outline-2 focus-visible:outline-gold focus-visible:-outline-offset-2",
                 )}
               >
-                {isSel && <span aria-hidden className="absolute inset-y-0 start-0 w-1 bg-gold" />}
                 {selectable && (
                   <span role="cell" className="flex items-center" onClick={(e) => e.stopPropagation()}>
                     <input type="checkbox" aria-label="تحديد" checked={isSel} disabled={st.selectionDisabled} onChange={() => toggleOne(k)} className="size-4 accent-ink" />

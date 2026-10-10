@@ -87,7 +87,9 @@ export function AnalyticsPage() {
             <span key={f.labelAr}>{f.labelAr}</span>
           ))}
         </div>
-        <p className="mt-4 text-[12px] text-muted">أكبر تسرب بين البحث وفتح الوحدة: {drop}% من الباحثين لم يفتحوا أي وحدة.</p>
+        <p className="mt-4 text-[12px] text-muted">
+          أكبر تسرب بين البحث وفتح الوحدة: {drop}% من الباحثين لم يفتحوا أي وحدة. {analytics.funnelZeroSharePct}% منهم كانت نتيجتهم صفر.
+        </p>
       </Panel>
 
       <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(400px,100%),1fr))]">

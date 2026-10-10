@@ -177,6 +177,10 @@ export const analytics = {
   sourcesAr: ["كل المصادر", "سناب شات", "تيك توك", "واتساب", "إنستغرام", "قوقل", "مباشر"],
   districtSessions30d,
   districtSessions90d,
+  /** searches in the last 30 days that found no unit in the district (Admin-M approval card, Admin-Analytics-D note) */
+  zeroResultsByDistrict30d: { "obhur-north": 970 } as Record<string, number>,
+  /** share of the searchers who opened no unit and whose result was empty (Admin-Analytics-D funnel line) */
+  funnelZeroSharePct: 44,
   radarDistricts,
   unitWeek,
   /** Alliance-wide response numbers, 30 days (Admin-Alliance-D «سرعة الرد») */
