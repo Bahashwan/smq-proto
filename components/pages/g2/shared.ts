@@ -7,6 +7,7 @@ import { modelLabel, UNIT_TYPE_AR } from "@/data/units";
 import { bedsWord, deliveryQuarterIndex, pinCounts, type Pin, type UnitOverrides } from "@/data/selectors";
 import { filtersToParams, type UnitFilters } from "@/lib/url";
 import { setQuery } from "@/lib/location";
+import { fmtNum } from "@/lib/format";
 import type { MapPin } from "@/components/map";
 
 export const FILTER_KEYS = ["district", "min", "max", "type", "beds", "amin", "amax", "pstatus", "delivery", "feat", "sort", "sheet", "pin"] as const;
@@ -170,3 +171,49 @@ export function maskPhone(phone: string): string {
   if (d.length < 6) return "05X XXX XXXX";
   return `${d.slice(0, 2)}X XXX ${d.slice(-4)}`;
 }
+
+/**
+ * The UnitCard status badge carries `absolute top-3 start-3`, but StatusBadge's own `relative` wins in the generated
+ * CSS order, so the hexagon falls under the image. Until components/ui fixes it, the card lists force the position
+ * (no-op once fixed). Reported to the components/ui owner.
+ */
+export const CARD_BADGE_FIX = "[&_[data-status]]:absolute!";
+
+/** «+6 وحدات» · «+2 وحدة» · «+12 وحدة» (the board's pill form) */
+export function deltaUnits(n: number): string {
+  return `+${n} ${n >= 3 && n <= 10 ? "وحدات" : "وحدة"}`;
+}
+
+/** «بيعت 2026/09» from the unit's sale date */
+export function soldMonth(u: Unit): string | null {
+  return u.soldOn ? `بيعت ${u.soldOn.slice(0, 7).replace("-", "/")}` : null;
+}
+
+function millions(n: number): string {
+  return String(Math.round((n / 1_000_000) * 100) / 100);
+}
+/** The map side list's last line: «و2 وحدة أخرى · فيلتا الروف خارج الميزانية (1.6 و1.65 مليون)» */
+export function otherUnitsNote(others: Unit[], max: number | null): string | null {
+  const n = others.length;
+  if (!n) return null;
+  const count = `و${n} ${n >= 3 && n <= 10 ? "وحدات أخرى" : "وحدة أخرى"}`;
+  const overBudget = max != null && others.every((u) => u.priceSar > max);
+  const types = [...new Set(others.map((u) => u.type))];
+  let what = "";
+  if (types.length === 1) {
+    if (types[0] === "roof-villa") what = n === 1 ? "فيلا الروف" : n === 2 ? "فيلتا الروف" : "فلل الروف";
+    else what = n === 1 ? "الشقة" : n === 2 ? "الشقتان" : "الشقق";
+  }
+  const reason = overBudget ? "خارج الميزانية" : "خارج فلاترك";
+  const prices = [...others.map((u) => u.priceSar)].sort((a, b) => a - b);
+  let priceNote = "";
+  if (overBudget && n <= 3) {
+    priceNote = prices.every((p) => p >= 1_000_000) ? ` (${prices.map(millions).join(" و")} مليون)` : ` (${prices.map(fmtNum).join(" و")})`;
+  }
+  return `${count} · ${what ? `${what} ` : ""}${reason}${priceNote}`;
+}
+
+/** One-sided 1.5px ink rules from the border token (the boards' section dividers) */
+export const RULE_B = "[border-block-end:var(--smq-border-interactive)]";
+export const RULE_T = "[border-block-start:var(--smq-border-interactive)]";
+export const RULE_E = "[border-inline-end:var(--smq-border-interactive)]";

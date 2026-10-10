@@ -2,6 +2,7 @@
 // label and state below is computed from data/* and data/selectors.ts.
 import {
   allApplications,
+  allianceReports,
   analytics,
   applications,
   availableUnits,
@@ -26,7 +27,6 @@ import {
   type Referral,
   type Sector,
 } from "@/data";
-import { SECTOR_ORDER } from "@/components/alliance";
 import { fmtDateLong } from "@/lib/format";
 
 /** «+966 5X XXX 7710» → «05X XXX 7710» (the boards' local form) */
@@ -62,14 +62,15 @@ export interface SectorBlock {
  */
 export function coverageBlocks(perSector: number): SectorBlock[] {
   return coverageBySector().map((s) => {
-    const covered = new Set(s.districts.filter((d) => d.count > 0).map((d) => d.district.slug));
-    const picked: typeof s.districts = [];
-    for (const d of s.districts) {
-      const room = perSector - picked.length;
-      const coveredLeft = s.districts.filter((x) => covered.has(x.district.slug) && !picked.includes(x)).length;
-      if (covered.has(d.district.slug) || room > coveredLeft) picked.push(d);
-      if (picked.length >= perSector && coveredLeft === 0) break;
-    }
+    let room = Math.max(0, perSector - s.districts.filter((d) => d.count > 0).length);
+    const picked = s.districts.filter((d) => {
+      if (d.count > 0) return true;
+      if (room > 0) {
+        room--;
+        return true;
+      }
+      return false;
+    });
     return { sector: s.sector, offices: s.offices, districts: picked.map((d) => ({ district: d.district, count: d.count })) };
   });
 }
@@ -189,15 +190,9 @@ export function goldRows(rows: PctRow[], report: AllianceReport, kind: "district
   return out;
 }
 
-/** The latest published monthly report. */
+/** The latest published monthly report (what members receive). */
 export function latestPublished(): AllianceReport | undefined {
-  return analytics.allianceReports
-    ? undefined
-    : undefined;
-}
-
-export function sectorOrder(): Sector[] {
-  return SECTOR_ORDER;
+  return allianceReports.filter((r) => r.status === "published").sort((x, y) => (x.id < y.id ? 1 : -1))[0];
 }
 
 export function marketerParams(): { token: string }[] {

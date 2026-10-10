@@ -10,7 +10,7 @@ import { useStore } from "@/lib/store";
 import { unitsUrl, DEFAULT_FILTERS, type UnitFilters } from "@/lib/url";
 import { districtAr } from "@/data/districts";
 import { bedsWord, coverageByDistrict, nextRequestNumber, TYPE_PARAM_SINGULAR, type EmptyState as EmptyStateData } from "@/data/selectors";
-import { maskPhone, writeFilters } from "./shared";
+import { deltaUnits, maskPhone, writeFilters } from "./shared";
 
 /** «أبحث عن 4 غرف في الفيصلية حتى 450,000» */
 export function requestWaText(f: UnitFilters): string {
@@ -34,36 +34,56 @@ export function requestChips(f: UnitFilters): string[] {
   return out;
 }
 
+/** the headline line without the «، لكن لدينا 10 في الروضة» clause (the phone board stops after «بعد.») */
+function shortLine(empty: EmptyStateData, filters: UnitFilters): string | null {
+  const h = empty.headline;
+  if (!h) return null;
+  if (h.key === "district" && filters.district) return `لا نملك وحدات مدرجة في ${districtAr(filters.district)} بعد.`;
+  return h.lineAr;
+}
+
 export function EmptyState({ filters, empty, className }: { filters: UnitFilters; empty: EmptyStateData; className?: string }) {
   const h = empty.headline;
   const clear = () => writeFilters({ ...DEFAULT_FILTERS, sort: filters.sort }, "push");
+  // the board's heading promises one constraint; with the fixtures some filter sets need several (derived copy)
+  const multi = empty.suggestions.some((s) => s.changes.length > 1);
+  const phoneLine = shortLine(empty, filters);
   return (
-    <div className={cx("flex flex-col gap-6", className)}>
+    <div className={cx("flex flex-col gap-6 md:gap-8", className)}>
       <div className="grid gap-5 md:grid-cols-[repeat(auto-fit,minmax(min(380px,100%),1fr))] md:gap-6">
-        <div className="flex flex-col gap-2 bg-gold px-5 pb-8 pt-5 text-ink cut-img md:cut-xl md:px-8 md:pb-12 md:pt-7">
-          <span className="text-price font-extrabold leading-none tnum md:text-[96px]">0</span>
+        <div className="flex flex-col gap-2 bg-gold px-5 pb-9 pt-5 text-ink cut-img md:cut-xl md:px-8 md:pb-14 md:pt-7">
+          <span className="text-[44px] font-extrabold leading-none tnum md:text-[96px]">0</span>
           <h2 className="m-0 text-h2">لا توجد وحدة تطابق كل الفلاتر</h2>
           {h && (
             <p className="m-0 text-label font-normal text-on-gold-muted md:text-body">
-              القيد الذي يحذف أكثر النتائج هو <strong className="text-ink">{h.labelAr}</strong>. {h.lineAr}
+              القيد الذي يحذف أكثر النتائج هو <strong className="text-ink">{h.labelAr}</strong>. <span className="md:hidden">{phoneLine}</span>
+              <span className="hidden md:inline">{h.lineAr}</span>
             </p>
           )}
         </div>
         <div className="flex flex-col gap-2.5">
-          <span className="text-caption font-bold text-muted md:text-label">جرّب تخفيف قيد واحد</span>
+          <span className="text-caption font-bold text-muted md:text-label">{multi ? "تخفيف قيد واحد لا يكفي هنا؛ جرّب هذه التركيبات" : "جرّب تخفيف قيد واحد"}</span>
           {empty.suggestions.map((s) => (
-            <Link key={s.labelAr} href={unitsUrl({ ...s.filters, sort: filters.sort })} className="flex min-h-12 items-center justify-between gap-3 border-interactive px-3.5 py-2.5 text-ink no-underline hover:bg-sand motion-hover transition-colors">
-              <span className="text-label font-bold md:text-body md:font-bold">{s.labelAr}</span>
+            <Link key={s.labelAr} href={unitsUrl({ ...s.filters, sort: filters.sort })} className="flex min-h-[52px] items-center justify-between gap-3 border-interactive px-3.5 py-2.5 text-ink no-underline hover:bg-sand motion-hover transition-colors md:min-h-14 md:px-5">
+              {s.changes.length > 1 ? (
+                <ul className="m-0 flex list-none flex-col gap-0.5 p-0 text-label font-bold md:text-body">
+                  {s.changes.map((c) => (
+                    <li key={c.labelAr}>{c.labelAr}</li>
+                  ))}
+                </ul>
+              ) : (
+                <span className="text-label font-bold md:text-body">{s.labelAr}</span>
+              )}
               <Pill tone="ink" delta className="shrink-0">
                 <span className="md:hidden">+{s.count}</span>
-                <span className="hidden md:inline">{s.deltaAr}</span>
+                <span className="hidden md:inline">{deltaUnits(s.count)}</span>
               </Pill>
             </Link>
           ))}
           <button type="button" onClick={clear} className="self-start py-1 text-label font-bold text-gold-text underline hover:text-ink motion-hover transition-colors md:hidden">
             مسح كل الفلاتر
           </button>
-          <div className="mt-1 flex flex-col gap-3 bg-sand p-4 md:flex-row md:items-center md:justify-between">
+          <div className="mt-1 flex flex-col gap-3 bg-sand p-4 md:flex-row md:items-center md:justify-between md:px-5">
             <span className="flex flex-col gap-1">
               <span className="text-body font-extrabold">أو أرسل لنا طلبك</span>
               <span className="text-caption font-normal text-muted md:hidden">نحفظ ميزانيتك وحيّك وعدد الغرف، ونراسلك عندما تُدرج وحدة تناسبها.</span>
@@ -141,7 +161,7 @@ export function AllianceBridge({ filters, className }: { filters: UnitFilters; c
         <HexDots count={2} className="md:hidden" />
         <HexDots count={3} className="hidden md:flex" />
         <span className="mt-1 text-caption font-bold text-gold">مبادرة من SMQ · تحالف مكاتب جدة</span>
-        <h2 id={`${uid}-title`} className="m-0 text-body font-extrabold leading-snug md:text-h2">
+        <h2 id={`${uid}-title`} className="m-0 text-body font-extrabold leading-snug md:text-[22px] md:leading-tight">
           مكاتب مرخصة في تحالف جدة تغطي هذا الحي
         </h2>
         <p className="m-0 hidden text-label font-normal text-on-ink-muted md:block">{intro} ونسجّل التعارف.</p>
@@ -158,16 +178,18 @@ export function AllianceBridge({ filters, className }: { filters: UnitFilters; c
               {c}
             </Pill>
           ))}
-          <Link href={editHref} scroll={false} className="text-caption font-bold text-ink no-underline underline-offset-2 hover:underline">
+          <Link href={editHref} scroll={false} className="text-caption font-bold text-gold-text no-underline underline-offset-2 hover:text-ink hover:underline">
             تعديل
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-[1fr_1fr_180px] md:items-end">
           <TextField id={`${uid}-name`} label="الاسم" placeholder="اسمك" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} error={errors.name} />
           <TextField id={`${uid}-phone`} label="الجوال" placeholder="05XXXXXXXX" type="tel" ltr inputMode="tel" autoComplete="tel" value={phone} onChange={(e) => setPhone(e.target.value)} error={errors.phone} />
-          <Button type="submit" variant="primary" size="m" loading={sending} className="hidden h-12 md:inline-flex">
-            أرسل الطلب للتحالف
-          </Button>
+          <div className="hidden md:block">
+            <Button type="submit" variant="primary" size="m" full loading={sending} className="h-12">
+              أرسل الطلب للتحالف
+            </Button>
+          </div>
         </div>
         <div className="flex flex-col gap-1">
           <label className={cx("flex cursor-pointer items-start gap-3 bg-cream p-3 text-caption font-normal leading-relaxed text-ink md:text-label md:font-normal", errors.consent ? "border-error" : "border-interactive")}>
@@ -176,9 +198,11 @@ export function AllianceBridge({ filters, className }: { filters: UnitFilters; c
           </label>
           {errors.consent && <ErrorText id={`${uid}-consent-err`}>{errors.consent}</ErrorText>}
         </div>
-        <Button type="submit" variant="primary" size="m" full loading={sending} className="h-12 md:hidden">
-          أرسل الطلب للتحالف
-        </Button>
+        <div className="md:hidden">
+          <Button type="submit" variant="primary" size="m" full loading={sending} className="h-12">
+            أرسل الطلب للتحالف
+          </Button>
+        </div>
       </form>
     </section>
   );

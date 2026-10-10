@@ -4,14 +4,15 @@ import { CompareBar, Container, EnHtmlAttrs, Footer, Header, UnitCard, useCompar
 import { fmtDate } from "@/lib/format";
 import { usePresenter, type Tier } from "@/lib/presenter";
 import type { ImageTier, Unit } from "@/data/types";
-import { unitBySlug } from "@/data/units";
+import { BUILDINGS, unitBySlug } from "@/data/units";
 import { useResults } from "./useResults";
-import { deliveryShortEn } from "./shared";
+import { CARD_BADGE_FIX, deliveryShortEn } from "./shared";
+import { useCompareUrl } from "./useCompareUrl";
 
 const TIER: Record<Tier, ImageTier> = { real: "real", gen: "generated", typo: "typographic" };
 
 function nameEn(u: Unit): string {
-  return `${u.nameEn ?? `Apartment, model ${u.model}`} · ${u.building === "RZ" ? "Rose" : "Yasmin"}`;
+  return `${u.nameEn ?? `Apartment, model ${u.model}`} · ${BUILDINGS[u.building].nameEn}`;
 }
 
 export function EnResults() {
@@ -19,6 +20,7 @@ export function EnResults() {
   const { state } = usePresenter();
   const tier = TIER[state.tier];
   const compare = useCompare();
+  useCompareUrl();
   const avail = r.result.available.length;
   const sold = r.result.sold.length;
   const cards = r.groups.flatMap((g) => g.units.map((unit) => ({ unit, project: g.project })));
@@ -40,7 +42,7 @@ export function EnResults() {
             )}{" "}
             within your filters · Updated {fmtDate(r.updatedAt)}
           </p>
-          <div className="mt-5 flex flex-col gap-4 md:grid md:grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))]">
+          <div className={`mt-5 flex flex-col gap-4 md:grid md:grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))] ${CARD_BADGE_FIX}`}>
             {cards.map(({ unit, project }) => (
               <UnitCard key={unit.code} unit={unit} status={unit.status} tier={tier} lang="en" projectName={project.nameEn} deliveryLabel={deliveryShortEn(project)} compare={{ checked: compare.has(unit.slug), full: compare.isFull, onChange: () => compare.toggle(unit.slug) }} />
             ))}
@@ -51,7 +53,7 @@ export function EnResults() {
                 <span className="shrink-0 text-caption font-bold text-muted">Sold, for reference only</span>
                 <span aria-hidden="true" className="h-px flex-1 bg-line" />
               </div>
-              <div className="mt-4 flex flex-col gap-4 md:grid md:grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))]">
+              <div className={`mt-4 flex flex-col gap-4 md:grid md:grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))] ${CARD_BADGE_FIX}`}>
                 {r.result.sold.map((u) => (
                   <UnitCard key={u.code} unit={u} status="sold" tier={tier} lang="en" />
                 ))}

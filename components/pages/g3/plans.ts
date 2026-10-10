@@ -1,4 +1,6 @@
-// Schematic plans (Unit-Plan-M): rooms as rectangles on a unit-less grid, never a real floor plan. Room areas are
+// Schematic plans (Unit-Plan-M): rooms as rectangles on a unit-less grid, never a real floor plan. x is measured
+// from the start side (the right in RTL, as the board draws it); window sides are compass sides of the drawing
+// with north up (e = the physical right wall, w = the physical left wall). Room areas are
 // the rectangle's share of the drawing applied to the unit's fixture area, so every figure is computed and stays
 // «تقريبية»; the dimensions toggle derives metres from the same share.
 import type { Unit } from "@/data/types";
@@ -18,6 +20,8 @@ export interface PlanRoom {
   windows?: Side[];
   /** the room's figure is itself «[للتأكيد]» (the living room on the board) */
   tbc?: boolean;
+  /** open kitchen: the label reads «مفتوح» instead of an area (Unit-Plan-M) */
+  open?: boolean;
 }
 
 export interface PlanFloor {
@@ -48,11 +52,11 @@ const aptA: PlanFloor = {
   entrance: { x: 60, y: 87, w: 10, h: 2 },
   rooms: [
     { id: "living", label: "الصالة والمجلس", x: 0, y: 0, w: 50, h: 44, kind: "majlis", windows: ["n", "n"], tbc: true },
-    { id: "kitchen", label: "المطبخ", x: 50, y: 0, w: 20, h: 26, kind: "kitchen" },
-    { id: "master", label: "غرفة النوم الرئيسية", x: 70, y: 0, w: 30, h: 38, kind: "room", windows: ["n", "e"] },
+    { id: "kitchen", label: "المطبخ", x: 50, y: 0, w: 20, h: 26, kind: "kitchen", open: true },
+    { id: "master", label: "غرفة النوم الرئيسية", x: 70, y: 0, w: 30, h: 38, kind: "room", windows: ["n", "w"] },
     { id: "mbath", label: "حمام رئيسي", x: 70, y: 38, w: 16, h: 14, kind: "bath" },
     { id: "maid", label: "غ. خادمة", x: 86, y: 38, w: 14, h: 20, kind: "service" },
-    { id: "bed2", label: "غرفة نوم 2", x: 0, y: 44, w: 30, h: 36, kind: "room", windows: ["s", "w"] },
+    { id: "bed2", label: "غرفة نوم 2", x: 0, y: 44, w: 30, h: 36, kind: "room", windows: ["s", "e"] },
     { id: "bed3", label: "غرفة نوم 3", x: 30, y: 50, w: 26, h: 30, kind: "room", windows: ["s"] },
     { id: "bath", label: "حمام", x: 56, y: 56, w: 14, h: 14, kind: "bath" },
     { id: "balcony", label: "البلكونة", x: 0, y: 80, w: 30, h: 8, kind: "balcony" },
@@ -69,10 +73,10 @@ const aptB: PlanFloor = {
   rooms: [
     { id: "living", label: "الصالة", x: 0, y: 0, w: 48, h: 44, kind: "majlis", windows: ["n", "n"], tbc: true },
     { id: "kitchen", label: "المطبخ", x: 48, y: 0, w: 22, h: 26, kind: "kitchen" },
-    { id: "master", label: "غرفة النوم الرئيسية", x: 70, y: 0, w: 30, h: 38, kind: "room", windows: ["n", "e"] },
+    { id: "master", label: "غرفة النوم الرئيسية", x: 70, y: 0, w: 30, h: 38, kind: "room", windows: ["n", "w"] },
     { id: "mbath", label: "حمام رئيسي", x: 70, y: 38, w: 16, h: 14, kind: "bath" },
     { id: "maid", label: "غ. خادمة", x: 86, y: 38, w: 14, h: 20, kind: "service" },
-    { id: "bed2", label: "غرفة نوم 2", x: 0, y: 44, w: 32, h: 36, kind: "room", windows: ["s", "w"] },
+    { id: "bed2", label: "غرفة نوم 2", x: 0, y: 44, w: 32, h: 36, kind: "room", windows: ["s", "e"] },
     { id: "bath2", label: "حمام", x: 32, y: 56, w: 14, h: 14, kind: "bath" },
     { id: "bath3", label: "حمام ضيوف", x: 56, y: 56, w: 14, h: 14, kind: "bath" },
     { id: "balcony", label: "البلكونة", x: 0, y: 80, w: 32, h: 8, kind: "balcony" },
@@ -89,9 +93,9 @@ const aptC: PlanFloor = {
   rooms: [
     { id: "living", label: "الصالة", x: 0, y: 0, w: 46, h: 40, kind: "majlis", windows: ["n"], tbc: true },
     { id: "kitchen", label: "المطبخ", x: 46, y: 0, w: 24, h: 24, kind: "kitchen" },
-    { id: "master", label: "غرفة النوم الرئيسية", x: 70, y: 0, w: 30, h: 36, kind: "room", windows: ["n", "e"] },
+    { id: "master", label: "غرفة النوم الرئيسية", x: 70, y: 0, w: 30, h: 36, kind: "room", windows: ["n", "w"] },
     { id: "mbath", label: "حمام رئيسي", x: 70, y: 36, w: 16, h: 14, kind: "bath" },
-    { id: "bed2", label: "غرفة نوم 2", x: 0, y: 40, w: 34, h: 30, kind: "room", windows: ["s", "w"] },
+    { id: "bed2", label: "غرفة نوم 2", x: 0, y: 40, w: 34, h: 30, kind: "room", windows: ["s", "e"] },
     { id: "bath", label: "حمام", x: 34, y: 46, w: 16, h: 14, kind: "bath" },
     { id: "balcony", label: "البلكونة", x: 0, y: 70, w: 34, h: 8, kind: "balcony" },
   ],
@@ -100,9 +104,9 @@ const aptC: PlanFloor = {
 const aptD: PlanFloor = {
   ...aptC,
   rooms: [
-    { id: "living", label: "الصالة", x: 0, y: 0, w: 48, h: 40, kind: "majlis", windows: ["n", "w"], tbc: true },
+    { id: "living", label: "الصالة", x: 0, y: 0, w: 48, h: 40, kind: "majlis", windows: ["n", "e"], tbc: true },
     { id: "kitchen", label: "المطبخ", x: 48, y: 0, w: 22, h: 24, kind: "kitchen" },
-    { id: "master", label: "غرفة النوم الرئيسية", x: 70, y: 0, w: 30, h: 36, kind: "room", windows: ["n", "e"] },
+    { id: "master", label: "غرفة النوم الرئيسية", x: 70, y: 0, w: 30, h: 36, kind: "room", windows: ["n", "w"] },
     { id: "mbath", label: "حمام رئيسي", x: 70, y: 36, w: 16, h: 14, kind: "bath" },
     { id: "bed2", label: "غرفة نوم 2", x: 0, y: 40, w: 32, h: 30, kind: "room", windows: ["s"] },
     { id: "bath", label: "حمام", x: 32, y: 46, w: 16, h: 14, kind: "bath" },
@@ -118,14 +122,14 @@ const roofLower: PlanFloor = {
   share: 0.56,
   entrance: ENTRANCE_S(100, 88),
   rooms: [
-    { id: "living", label: "الصالة والمجلس", x: 0, y: 0, w: 50, h: 44, kind: "majlis", windows: ["n", "n", "w"], tbc: true },
+    { id: "living", label: "الصالة والمجلس", x: 0, y: 0, w: 50, h: 44, kind: "majlis", windows: ["n", "n", "e"], tbc: true },
     { id: "kitchen", label: "المطبخ", x: 50, y: 0, w: 22, h: 26, kind: "kitchen" },
     { id: "dining", label: "الطعام", x: 50, y: 26, w: 22, h: 18, kind: "room" },
-    { id: "master", label: "غرفة النوم الرئيسية", x: 72, y: 0, w: 28, h: 36, kind: "room", windows: ["n", "e"] },
+    { id: "master", label: "غرفة النوم الرئيسية", x: 72, y: 0, w: 28, h: 36, kind: "room", windows: ["n", "w"] },
     { id: "mbath", label: "حمام رئيسي", x: 72, y: 36, w: 14, h: 12, kind: "bath" },
     { id: "maid", label: "غ. خادمة", x: 86, y: 36, w: 14, h: 18, kind: "service" },
     { id: "driver", label: "غ. سائق", x: 86, y: 54, w: 14, h: 16, kind: "service" },
-    { id: "bed2", label: "غرفة نوم 2", x: 0, y: 44, w: 30, h: 36, kind: "room", windows: ["s", "w"] },
+    { id: "bed2", label: "غرفة نوم 2", x: 0, y: 44, w: 30, h: 36, kind: "room", windows: ["s", "e"] },
     { id: "bed3", label: "غرفة نوم 3", x: 30, y: 50, w: 26, h: 30, kind: "room", windows: ["s"] },
     { id: "bath", label: "حمام", x: 56, y: 56, w: 14, h: 14, kind: "bath" },
     { id: "balcony", label: "البلكونة", x: 0, y: 80, w: 30, h: 8, kind: "balcony" },
@@ -140,10 +144,10 @@ const roofUpper: PlanFloor = {
   share: 0.44,
   entrance: { x: 44, y: 79, w: 10, h: 2 },
   rooms: [
-    { id: "terrace", label: "التراس", x: 0, y: 0, w: 58, h: 50, kind: "balcony", windows: ["n", "w"], tbc: true },
-    { id: "omajlis", label: "مجلس خارجي", x: 58, y: 0, w: 42, h: 28, kind: "majlis", windows: ["n", "e"] },
-    { id: "bed4", label: "غرفة نوم 4", x: 58, y: 28, w: 42, h: 28, kind: "room", windows: ["e"] },
-    { id: "bed5", label: "غرفة نوم 5", x: 0, y: 50, w: 40, h: 30, kind: "room", windows: ["s", "w"] },
+    { id: "terrace", label: "التراس", x: 0, y: 0, w: 58, h: 50, kind: "balcony", windows: ["n", "e"], tbc: true },
+    { id: "omajlis", label: "مجلس خارجي", x: 58, y: 0, w: 42, h: 28, kind: "majlis", windows: ["n", "w"] },
+    { id: "bed4", label: "غرفة نوم 4", x: 58, y: 28, w: 42, h: 28, kind: "room", windows: ["w"] },
+    { id: "bed5", label: "غرفة نوم 5", x: 0, y: 50, w: 40, h: 30, kind: "room", windows: ["s", "e"] },
     { id: "bath4", label: "حمام", x: 40, y: 50, w: 16, h: 14, kind: "bath" },
     { id: "bath5", label: "حمام", x: 58, y: 56, w: 16, h: 14, kind: "bath" },
     { id: "pantry", label: "مطبخ تحضيري", x: 74, y: 56, w: 26, h: 24, kind: "kitchen" },

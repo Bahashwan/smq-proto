@@ -95,6 +95,8 @@ export interface UnitView {
   roofs: { available: number; listed: number };
   /** available units of the project other than this one */
   projectAvailableOthers: number;
+  /** listed units of the project (the «كل النماذج العشرة» link) */
+  projectListed: number;
   floorWordAr?: string;
   facingAr?: string;
   typeAr: string;
@@ -133,6 +135,7 @@ export function buildUnitView(unit: Unit, overrides: UnitOverrides, forcedStatus
     otherRoof: otherRoof(unit, overrides),
     roofs: { available: listedRoofs.filter((u) => u.status === "available").length, listed: listedRoofs.length },
     projectAvailableOthers: availableUnits(overrides).filter((u) => u.projectId === unit.projectId && u.code !== unit.code).length,
+    projectListed: listedUnits(overrides).filter((u) => u.projectId === unit.projectId).length,
     floorWordAr: floorLabel(unit),
     facingAr: orientationWord(unit.orientation?.value),
     typeAr: UNIT_TYPE_AR[unit.type],

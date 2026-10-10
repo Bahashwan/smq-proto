@@ -22,37 +22,58 @@ function GridIcon({ size = 16 }: { size?: number }) {
     </svg>
   );
 }
+/** the folded map of the boards' view toggle */
 function MapIcon({ size = 16 }: { size?: number }) {
   return (
-    <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round">
-      <path d="M12 21s6-6.2 6-11a6 6 0 1 0-12 0c0 4.8 6 11 6 11z" />
-      <path d="M9.5 10l2.5-1.5 2.5 1.5-2.5 1.5z" />
+    <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="miter">
+      <path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z" />
+      <path d="M9 4v14M15 6v14" />
     </svg>
   );
 }
 
-/** «الفلاتر» ink button with the gold count (phone) · «الفلاتر · 3» on the map */
+/** «الفلاتر» ink button with the gold count (list) · «الفلاتر · 3» (map: `variant="map"`, 34px) */
 export function FiltersButton({ count, href, variant = "list", className }: { count: number; href: string; variant?: "list" | "map"; className?: string }) {
+  const map = variant === "map";
   return (
-    <Link href={href} scroll={false} className={cx("inline-flex h-11 shrink-0 items-center gap-2 bg-ink px-3.5 text-label font-bold text-paper no-underline hover:bg-ink-2 motion-hover transition-colors", variant === "list" ? "cut-s" : "border-interactive", className)}>
-      <FilterIcon />
-      {variant === "map" ? <span>الفلاتر{count > 0 ? ` · ${count}` : ""}</span> : <span>الفلاتر</span>}
-      {variant === "list" && count > 0 && <CountBadge>{count}</CountBadge>}
+    <Link
+      href={href}
+      scroll={false}
+      className={cx(
+        "inline-flex shrink-0 items-center gap-2 bg-ink font-bold text-paper no-underline hover:bg-ink-2 motion-hover transition-colors",
+        map ? "h-[34px] border-interactive px-3 text-caption font-extrabold" : "h-11 px-3 text-label cut-s",
+        className,
+      )}
+    >
+      <FilterIcon size={map ? 14 : 16} />
+      {map ? <span>الفلاتر{count > 0 ? ` · ${count}` : ""}</span> : <span>الفلاتر</span>}
+      {!map && count > 0 && <CountBadge>{count}</CountBadge>}
     </Link>
   );
 }
 
-/** «الترتيب: السعر، الأقل أولاً ▾» · a ghost control over a native select */
-export function SortControl({ value, onChange, options, label = "الترتيب", prefix = "الترتيب:", className }: { value: SortParam; onChange: (s: SortParam) => void; options?: { value: SortParam; label: string }[]; label?: string; prefix?: string | null; className?: string }) {
+/**
+ * «الترتيب: السعر، الأقل أولاً ▾» · a ghost control over a native select. `stacked` (the phone toolbar) puts the
+ * prefix above the value so both fit the 136px the row leaves.
+ */
+export function SortControl({ value, onChange, options, label = "الترتيب", prefix = "الترتيب:", stacked, size = "m", className }: { value: SortParam; onChange: (s: SortParam) => void; options?: { value: SortParam; label: string }[]; label?: string; prefix?: string | null; stacked?: boolean; size?: "m" | "s"; className?: string }) {
   const opts = options ?? (Object.keys(SORT_LABELS) as SortParam[]).map((k) => ({ value: k, label: SORT_LABELS[k] }));
   const current = opts.find((o) => o.value === value) ?? opts[0];
+  const box = stacked ? "h-11 gap-1 px-2" : size === "s" ? "h-10 gap-2 px-2.5 text-[12px] font-bold" : "h-11 gap-2 px-3 text-label font-bold";
   return (
-    <span className={cx("relative inline-flex h-11 min-w-0 items-center gap-2 border-interactive bg-paper px-3 text-label font-bold text-ink", className)}>
-      <span className="truncate">
-        {prefix && <span className="font-medium text-muted">{prefix} </span>}
-        {current.label}
-      </span>
-      <ChevronDownIcon size={16} />
+    <span className={cx("relative inline-flex min-w-0 items-center justify-between border-interactive bg-paper text-ink", box, className)}>
+      {stacked ? (
+        <span className="flex min-w-0 flex-col items-start">
+          {prefix && <span className="text-caption font-medium leading-tight text-muted">{prefix}</span>}
+          <span className="max-w-full truncate text-[12px] font-bold leading-tight">{current.label}</span>
+        </span>
+      ) : (
+        <span className="truncate">
+          {prefix && <span className="font-medium text-muted">{prefix} </span>}
+          {current.label}
+        </span>
+      )}
+      <ChevronDownIcon size={stacked ? 14 : 16} />
       <select aria-label={label} value={value} onChange={(e) => onChange(e.target.value as SortParam)} className="absolute inset-0 h-full w-full cursor-pointer opacity-0">
         {opts.map((o) => (
           <option key={o.value} value={o.value}>
@@ -65,13 +86,13 @@ export function SortControl({ value, onChange, options, label = "الترتيب"
 }
 
 /** Grid / map toggle: the active side is ink; the other side links to the other view with the same query */
-export function ViewToggle({ active, gridHref, mapHref, labels, className }: { active: "grid" | "map"; gridHref: string; mapHref: string; labels?: boolean | "map"; className?: string }) {
-  const item = "inline-flex h-full items-center gap-1.5 px-3 text-label font-bold no-underline";
+export function ViewToggle({ active, gridHref, mapHref, labels, size = "m", className }: { active: "grid" | "map"; gridHref: string; mapHref: string; labels?: boolean | "map"; size?: "m" | "s"; className?: string }) {
+  const item = cx("inline-flex h-full items-center justify-center gap-1.5 no-underline", labels ? "px-3" : "w-11", size === "s" ? "text-caption font-bold" : "text-label font-bold");
   const words = labels === true || labels === "map";
   return (
-    <div aria-label="طريقة العرض" className={cx("inline-flex h-11 shrink-0 items-stretch border-interactive bg-paper", className)}>
+    <div role="group" aria-label="طريقة العرض" className={cx("inline-flex shrink-0 items-stretch border-interactive bg-paper", size === "s" ? "h-[34px]" : "h-11", className)}>
       {active === "grid" ? (
-        <span aria-current="true" className={cx(item, "bg-ink text-paper")}>
+        <span aria-current="true" aria-label={words ? undefined : "شبكة"} className={cx(item, "bg-ink text-paper")}>
           <GridIcon />
           {labels === true && <span>شبكة</span>}
         </span>
@@ -82,7 +103,7 @@ export function ViewToggle({ active, gridHref, mapHref, labels, className }: { a
         </Link>
       )}
       {active === "map" ? (
-        <span aria-current="true" className={cx(item, "bg-ink text-paper")}>
+        <span aria-current="true" className={cx(item, "bg-ink font-extrabold text-paper")}>
           {labels === "map" ? <span>خريطة</span> : <MapIcon />}
           {labels === true && <span>خريطة</span>}
         </span>
@@ -96,12 +117,12 @@ export function ViewToggle({ active, gridHref, mapHref, labels, className }: { a
   );
 }
 
-/** Active filter chips with «مسح الكل» */
-export function ActiveChips({ filters, clearLabel = "مسح الكل", mode = "replace", className }: { filters: UnitFilters; clearLabel?: string | null; mode?: "push" | "replace"; className?: string }) {
+/** Active filter chips with «مسح الكل»; `scroll` keeps them on one line that scrolls sideways (phone boards) */
+export function ActiveChips({ filters, clearLabel = "مسح الكل", mode = "replace", scroll, className }: { filters: UnitFilters; clearLabel?: string | null; mode?: "push" | "replace"; scroll?: boolean; className?: string }) {
   const chips = activeConstraints(filters);
   if (!chips.length) return null;
   return (
-    <div className={cx("flex flex-wrap items-center gap-2", className)}>
+    <div className={cx("flex items-center gap-1.5", scroll ? "-mx-4 overflow-x-auto px-4 pb-0.5 [&>*]:shrink-0" : "flex-wrap gap-2", className)}>
       {chips.map((c) => (
         <FilterChip key={c.key} onRemove={() => writeFilters({ ...filters, ...withoutConstraint(filters, c.key) }, mode)}>
           {c.chipAr}
@@ -116,8 +137,8 @@ export function ActiveChips({ filters, clearLabel = "مسح الكل", mode = "r
   );
 }
 
-/** the list and map URLs that keep the current query */
-export function viewHrefs(filters: UnitFilters): { grid: string; map: string; sheet: string } {
+/** the list and map URLs that keep the current query; `sheet` opens the filters sheet over the current view */
+export function viewHrefs(filters: UnitFilters, view: "grid" | "map" = "grid"): { grid: string; map: string; sheet: string } {
   const clean = { ...filters, sheet: null };
-  return { grid: unitsUrl({ ...clean, pin: null }), map: unitsUrl(clean, "/units/map"), sheet: unitsUrl({ ...clean, sheet: "filters" }, filters.pin ? "/units/map" : "/units") };
+  return { grid: unitsUrl({ ...clean, pin: null }), map: unitsUrl(clean, "/units/map"), sheet: unitsUrl({ ...clean, sheet: "filters" }, view === "map" ? "/units/map" : "/units") };
 }

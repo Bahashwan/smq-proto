@@ -96,9 +96,9 @@ export function RequestSent() {
   return (
     <>
       <Header />
-      <main className="pb-10">
-        <Container className="pt-6">
-          <div className="mx-auto flex w-full max-w-[480px] flex-col gap-4">
+      <main className="flex min-h-[calc(100dvh-64px)] flex-col md:min-h-0">
+        <Container className="flex flex-1 flex-col pb-5 pt-7 md:pb-12 md:pt-10">
+          <div className="mx-auto flex w-full max-w-[480px] flex-1 flex-col gap-4 px-1">
             <span aria-hidden="true" className="hex-flat inline-flex size-14 items-center justify-center bg-gold text-ink">
               <CheckIcon size={26} />
             </span>
@@ -110,10 +110,10 @@ export function RequestSent() {
             <div className="flex flex-col gap-1.5 bg-ink p-4 text-paper cut-l">
               <span className="text-caption font-bold text-on-ink-muted">رقم الطلب</span>
               <div className="flex items-center justify-between gap-3">
-                <span className="text-h2 font-extrabold tnum" dir="ltr">
+                <span className="text-price-s tracking-[0.04em] tnum" dir="ltr">
                   {req.id}
                 </span>
-                <button type="button" onClick={copy} aria-live="polite" className="inline-flex h-10 items-center border-[1.5px] border-paper px-3 text-caption font-extrabold text-paper hover:bg-ink-2 motion-hover transition-colors">
+                <button type="button" onClick={copy} aria-live="polite" className="inline-flex h-11 shrink-0 items-center border-[1.5px] border-paper px-3 text-caption font-extrabold text-paper hover:bg-ink-2 motion-hover transition-colors">
                   {copied ? "نُسخ" : "نسخ"}
                 </button>
               </div>
@@ -123,7 +123,7 @@ export function RequestSent() {
             </div>
             <div className="flex flex-col border-interactive">
               {rows.map((row, i) => (
-                <div key={row.title} className={cx("flex items-start gap-3 p-3 text-caption font-normal leading-relaxed", i > 0 && "border-t border-line")}>
+                <div key={row.title} className={cx("flex items-start gap-3 px-3.5 py-2.5 text-caption font-normal leading-relaxed", i > 0 && "border-t border-line")}>
                   <span aria-hidden="true" className="relative mt-1 inline-flex size-3.5 shrink-0 items-center justify-center">
                     {row.tone === "bg-paper ring-hex" ? (
                       <>
@@ -140,7 +140,7 @@ export function RequestSent() {
                 </div>
               ))}
             </div>
-            <div className="mt-2 flex flex-col gap-2.5">
+            <div className="mt-auto flex flex-col gap-2 pt-4">
               <Button variant="secondary" size="l" full href={waitingHref} className="text-label">
                 في الانتظار؟ {waitingLabel} · {waiting}
               </Button>
