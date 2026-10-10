@@ -199,7 +199,7 @@ function Desktop() {
                 label={r.district.ar}
                 value={fmtNum(r.sessions)}
                 state={r.action === "self" ? "active" : r === mini[mini.length - 1] && mini.length > 4 ? "muted" : "gap"}
-                size={72}
+                size={64}
                 href={`/admin/alliance/radar?district=${r.district.slug}`}
               />
             ))}

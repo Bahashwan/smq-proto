@@ -12,7 +12,7 @@ export default function NotFound() {
       <Header />
       <main className="relative overflow-hidden min-h-[calc(100dvh-64px)] flex flex-col justify-center md:block md:min-h-0">
         <LogoMark size={330} className="absolute bottom-12 -end-20 opacity-8 pointer-events-none select-none md:hidden" />
-        <div className="container-smq relative w-full py-10 md:py-20 md:grid md:grid-cols-2 md:gap-12 md:items-center">
+        <div className="container-smq relative w-full pt-10 pb-24 md:py-20 md:grid md:grid-cols-2 md:gap-12 md:items-center">
           <div className="flex flex-col items-start gap-4">
             <span className="text-[112px] md:text-[160px] font-extrabold leading-none text-gold tnum tracking-tight">404</span>
             <h1 className="m-0 text-[26px] md:text-h1 font-extrabold leading-tight">

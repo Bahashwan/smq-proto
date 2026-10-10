@@ -59,8 +59,14 @@ export function useNeedsConfirmation() {
 
 // ---------------------------------------------------------------- FAQ
 
+type FaqPatch = Partial<FaqItem> & { created?: boolean; deleted?: boolean };
+
 export function mergeFaq(patches: Patches, order: string[] | undefined): FaqItem[] {
-  const list = faqFixture.map((f) => ({ ...f, ...(patches?.[f.id] as Partial<FaqItem> | undefined) }));
+  const fixtureIds = new Set(faqFixture.map((f) => f.id));
+  const created = Object.entries(patches ?? {})
+    .filter(([id, p]) => !fixtureIds.has(id) && (p as FaqPatch).created)
+    .map(([id, p], i) => ({ id, q: "", a: "", draft: false, published: false, order: 100 + i, pages: [], ...(p as FaqPatch) }) as FaqItem & FaqPatch);
+  const list = [...faqFixture.map((f) => ({ ...f, ...(patches?.[f.id] as FaqPatch | undefined) }) as FaqItem & FaqPatch), ...created].filter((f) => !f.deleted);
   if (!order?.length) return list.sort((a, b) => a.order - b.order);
   const pos = new Map(order.map((id, i) => [id, i]));
   return list.sort((a, b) => (pos.get(a.id) ?? 99) - (pos.get(b.id) ?? 99));
@@ -82,7 +88,13 @@ export function usePartners(): Partner[] {
 }
 export function useTestimonials(): Testimonial[] {
   const patches = useStore((s) => s.patches[PATCH.testimonial]) as Patches;
-  return useMemo(() => testimonialsFixture.map((t) => ({ ...t, ...(patches?.[t.id] as Partial<Testimonial> | undefined) })), [patches]);
+  return useMemo(() => {
+    const ids = new Set(testimonialsFixture.map((t) => t.id));
+    const created = Object.entries(patches ?? {})
+      .filter(([id, p]) => !ids.has(id) && (p as { created?: boolean }).created)
+      .map(([id, p]) => ({ id, name: "", role: "", text: "", consent: false, published: false, sample: false, ...(p as Partial<Testimonial>) }));
+    return [...testimonialsFixture.map((t) => ({ ...t, ...(patches?.[t.id] as Partial<Testimonial> | undefined) })), ...created];
+  }, [patches]);
 }
 export function testimonialsSummary(list: Testimonial[]) {
   const published = list.filter((t) => t.published && t.consent).length;

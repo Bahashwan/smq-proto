@@ -138,7 +138,7 @@ export function ProjectsPage() {
 
 function NumberTile({ label, value, note, className }: { label: string; value: ReactNode; note: ReactNode; className?: string }) {
   return (
-    <div className={cx("flex flex-col gap-1.5 bg-sand px-4 py-4 lg:px-5 lg:py-5", className)}>
+    <div className={cx("flex flex-col gap-1.5 bg-sand px-4 py-4 lg:px-5 lg:py-6", className)}>
       <span className="text-caption font-normal text-muted lg:text-caption">{label}</span>
       <span className="text-h2 font-extrabold leading-none tnum">{value}</span>
       <span className="text-caption font-normal text-muted">{note}</span>

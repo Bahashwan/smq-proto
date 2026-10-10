@@ -129,7 +129,7 @@ export function ProofBlocks() {
         <div className="grid gap-4 md:grid-cols-3 md:gap-6">
           {testimonials.map((t) => (
             <blockquote key={t.id} className="m-0 flex flex-col gap-3 p-5 md:p-6 border-interactive">
-              <span aria-hidden className="size-4 hex-flat bg-gold" />
+              <span aria-hidden className="size-5 hex-flat bg-gold" />
               <p className="m-0 text-body md:text-[17px] leading-relaxed">
                 <MarkedText text={t.text} />
               </p>

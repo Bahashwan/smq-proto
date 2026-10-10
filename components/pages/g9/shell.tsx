@@ -4,7 +4,7 @@
 // pieces the room's pages share (hexagon avatar, framed section, link tile, hexagon tag).
 import { useMemo, type ReactNode } from "react";
 import Link from "next/link";
-import { AdminShell, type AdminShellProps, type NavCounts, type Notification } from "@/components/admin";
+import { AdminShell, PHONE_TABS, type AdminShellProps, type NavCounts, type Notification, type PhoneTab } from "@/components/admin";
 import { notifications as notificationFixture } from "@/data/content";
 import { offices } from "@/data/offices";
 import { allianceOverview, approvalCounts, leadCounts, marketersByStage } from "@/data/selectors";
@@ -53,9 +53,16 @@ export function useAdminCounts(): NavCounts {
 
 export type G9ShellProps = Omit<AdminShellProps, "notifications" | "counts">;
 
+/** Admin-Alliance-M's tab order: «التحالف» sits fourth, after «الواردة», so it is in view and marked active. */
+const ROOM_PHONE_TABS: PhoneTab[] = (() => {
+  const alliance = PHONE_TABS.filter((t) => t.key === "alliance");
+  const rest = PHONE_TABS.filter((t) => t.key !== "alliance");
+  return [...rest.slice(0, 3), ...alliance, ...rest.slice(3)];
+})();
+
 export function G9Shell(props: G9ShellProps) {
   const counts = useAdminCounts();
-  return <AdminShell {...props} notifications={ADMIN_NOTIFICATIONS} counts={counts} />;
+  return <AdminShell phoneTabs={ROOM_PHONE_TABS} {...props} notifications={ADMIN_NOTIFICATIONS} counts={counts} />;
 }
 
 // ---------------------------------------------------------------------------------------------- alliance room tabs
@@ -119,11 +126,11 @@ export function RoomTitle({ section }: { section?: string }) {
 // ---------------------------------------------------------------------------------------------- shared pieces
 
 /** Letter in a flat hexagon (marketer and office avatars). */
-export function HexAvatar({ letter, tone = "ink", size = 28, className }: { letter: string; tone?: "ink" | "gold" | "muted"; size?: number; className?: string }) {
+export function HexAvatar({ letter, tone = "ink", size = 28, className }: { letter: string; tone?: "ink" | "gold" | "muted" | "inkGold"; size?: number; className?: string }) {
   return (
     <span
       aria-hidden
-      className={cx("hex-flat inline-flex shrink-0 items-center justify-center font-extrabold leading-none", tone === "gold" ? "bg-gold text-ink" : tone === "muted" ? "bg-muted text-paper" : "bg-ink text-paper", className)}
+      className={cx("hex-flat inline-flex shrink-0 items-center justify-center font-extrabold leading-none", tone === "gold" ? "bg-gold text-ink" : tone === "muted" ? "bg-muted text-paper" : tone === "inkGold" ? "bg-ink text-gold" : "bg-ink text-paper", className)}
       style={{ width: size, height: Math.round(size * 0.9), fontSize: Math.max(11, Math.round(size * 0.45)) }}
     >
       {letter}
@@ -156,7 +163,7 @@ export function LinkTile({ href, label, value, note, rule, ink, className }: { h
         className,
       )}
     >
-      {rule && !ink && <span aria-hidden className="absolute inset-y-0 end-0 w-[5px] bg-gold" />}
+      {rule && !ink && <span aria-hidden className="absolute inset-y-0 start-0 w-[5px] bg-gold" />}
       <small className={cx("text-caption font-bold md:text-[12px]", ink ? "text-on-ink-muted" : "text-muted")}>{label}</small>
       <b className={cx("text-2xl font-extrabold leading-none tnum md:text-[28px]", ink ? "text-gold" : "text-ink")}>{value}</b>
       {note && <span className={cx("text-caption md:text-[12px]", ink ? "text-on-ink-muted" : "text-muted")}>{note}</span>}

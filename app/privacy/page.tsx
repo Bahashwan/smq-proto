@@ -93,7 +93,7 @@ export default function PrivacyPage() {
               </Eyebrow>
               <h1 className="m-0 text-[30px] md:text-h1 font-extrabold leading-tight">الخصوصية، بالعربي الواضح</h1>
             </div>
-            <p className="m-0 mt-3 md:mt-0 text-label md:text-[14px] font-normal leading-relaxed">صفحة قصيرة لأن ما نجمعه قليل. لا حسابات على الموقع، ولا نبيع بياناتك لأحد.</p>
+            <p className="m-0 mt-3 md:mt-0 md:max-w-[440px] md:justify-self-end text-label md:text-[14px] font-normal leading-relaxed">صفحة قصيرة لأن ما نجمعه قليل. لا حسابات على الموقع، ولا نبيع بياناتك لأحد.</p>
           </div>
         </section>
 

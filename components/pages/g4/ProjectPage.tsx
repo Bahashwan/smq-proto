@@ -2,7 +2,7 @@
 // /projects/[slug] · Project-M, Project-D. Buildings and counts from projectBuildingCounts(), the models table from the
 // listed units (store overrides merged), milestones with [للتأكيد], the keyless project embed at the district centre.
 import Link from "next/link";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Breadcrumb, Container, Header, IllustrativeLabel, ImageSlot, Mark, Price, WhatsAppIcon } from "@/components/ui";
 import { MapEmbed, PROJECT_ZOOM } from "@/components/map";
 import { projectBySlug } from "@/data/projects";
@@ -38,7 +38,7 @@ export function ProjectPage({ slug }: { slug: string }) {
     .sort((a, b) => order.indexOf(a.building) - order.indexOf(b.building) || MODEL_ORDER.indexOf(a.model) - MODEL_ORDER.indexOf(b.model));
   const dAr = districtAr(p.districtSlug);
   const wa = waLink(`أرغب بالاستفسار عن مشروع ${p.nameAr}`);
-  const active = useActiveSection(SECTIONS.map((s) => s.id));
+  const [active, pin] = useActiveSection(SECTIONS.map((s) => s.id));
 
   const band = [
     { value: stats.fromPrice != null ? fmtNum(stats.fromPrice) : "—", label: "يبدأ من", gold: true },
@@ -85,7 +85,7 @@ export function ProjectPage({ slug }: { slug: string }) {
         {/* desktop hero */}
         <Container className="hidden lg:block lg:pt-6">
           <div className="grid grid-cols-2 gap-6">
-            <div className="flex flex-col gap-4 bg-gold px-8 pb-10 pt-8 text-ink [clip-path:polygon(0_0,100%_0,100%_100%,64px_100%,0_calc(100%-37px))]">
+            <div className="flex flex-col gap-4 bg-gold px-10 pb-14 pt-10 text-ink [clip-path:polygon(0_0,100%_0,100%_100%,64px_100%,0_calc(100%-37px))]">
               <span className="text-label font-bold text-on-gold-muted">
                 {dAr}، جدة · مشروع رقم {p.code} · {p.statusAr}
               </span>
@@ -118,16 +118,17 @@ export function ProjectPage({ slug }: { slug: string }) {
         </Container>
 
         {/* section nav */}
-        <nav aria-label="أقسام الصفحة" className="sticky top-14 z-20 mt-6 border-y-[1.5px] border-ink bg-paper lg:mt-8">
+        <nav aria-label="أقسام الصفحة" className="sticky top-14 z-20 mt-6 border-y-[1.5px] border-ink bg-paper lg:mt-10">
           <Container className="flex items-center justify-between gap-4">
             <div className="-mx-4 flex overflow-x-auto px-4 lg:mx-0 lg:px-0">
               {SECTIONS.map((s) => (
                 <a
                   key={s.id}
                   href={`#${s.id}`}
+                  onClick={() => pin(s.id)}
                   aria-current={active === s.id ? "true" : undefined}
                   className={cx(
-                    "inline-flex min-h-12 shrink-0 items-center whitespace-nowrap px-3 text-label font-bold no-underline motion-hover transition-colors lg:px-4 lg:text-body lg:font-bold",
+                    "inline-flex min-h-12 shrink-0 items-center whitespace-nowrap px-3 text-label font-bold no-underline motion-hover transition-colors lg:min-h-15 lg:px-4",
                     active === s.id ? "-mb-[1.5px] border-b-[3px] border-gold text-ink" : "text-muted hover:text-ink",
                   )}
                 >
@@ -142,7 +143,7 @@ export function ProjectPage({ slug }: { slug: string }) {
           </Container>
         </nav>
 
-        <Container className="flex flex-col gap-10 pb-10 pt-8 lg:gap-16 lg:pb-16 lg:pt-14">
+        <Container className="flex flex-col gap-10 pb-10 pt-8 lg:gap-20 lg:pb-20 lg:pt-20">
           {/* buildings */}
           <section id="buildings" aria-labelledby="h-buildings" className="scroll-mt-28 flex flex-col gap-4 lg:gap-6">
             <h2 id="h-buildings" className="m-0 text-h2 font-extrabold">
@@ -417,22 +418,36 @@ function Milestone({ mark, title, children }: { mark: ReactNode; title: string; 
   );
 }
 
-/** The section in view drives the nav's active item (the first one by default). */
-function useActiveSection(ids: string[]): string {
+/** The section in view drives the nav's active item (the first one by default). Sections that share a row (location
+ *  and delivery on desktop) resolve to the first; a clicked item stays active while the anchor jump scrolls. */
+function useActiveSection(ids: string[]): [string, (id: string) => void] {
   const [active, setActive] = useState(ids[0]);
+  const pinned = useRef(0);
   const key = ids.join(",");
   useEffect(() => {
     const list = key.split(",");
     let raf = 0;
     const update = () => {
       raf = 0;
+      if (Date.now() < pinned.current) return;
       let cur = list[0];
+      let best = -Infinity;
       for (const id of list) {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= 140) cur = id;
+        const top = document.getElementById(id)?.getBoundingClientRect().top;
+        if (top != null && top <= 140 && top > best + 1) {
+          cur = id;
+          best = top;
+        }
       }
+      // at the end of the page the sections that never reach the top count once they are in view
       const atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
-      setActive(atEnd ? list[list.length - 1] : cur);
+      const next = atEnd
+        ? list.find((id) => {
+            const top = document.getElementById(id)?.getBoundingClientRect().top;
+            return top != null && top > Math.max(best, 140) + 1 && top < window.innerHeight;
+          })
+        : undefined;
+      setActive(next ?? cur);
     };
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);
@@ -444,5 +459,9 @@ function useActiveSection(ids: string[]): string {
       if (raf) cancelAnimationFrame(raf);
     };
   }, [key]);
-  return active;
+  const pin = (id: string) => {
+    pinned.current = Date.now() + 1200;
+    setActive(id);
+  };
+  return [active, pin];
 }

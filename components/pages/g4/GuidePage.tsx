@@ -4,7 +4,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowIcon, Container, Header, Price, useVisitorCode } from "@/components/ui";
-import { areaRange, guideDistricts, guideTables, listedUnits, projectStats, unitDistrictSlug, type BedsRow, type TypeRow } from "@/data/selectors";
+import { areaRange, guideDistricts, guideTables, listedUnits, unitDistrictSlug, type BedsRow, type TypeRow } from "@/data/selectors";
 import { WA_TEMPLATES, fillTemplate } from "@/data/settings";
 import { useUnitOverrides } from "@/lib/store";
 import { useHasHydrated } from "@/lib/location";
@@ -287,7 +287,6 @@ function BarRow({ row, scale }: { row: BedsRow; scale: { min: number; max: numbe
 
 function ProjectRow({ item }: { item: ReturnType<typeof guideTables>["byProject"][number] }) {
   const p = item.project;
-  const stats = projectStats(p.id);
   const href = `/projects/${p.slug}`;
   return (
     <>
@@ -296,7 +295,7 @@ function ProjectRow({ item }: { item: ReturnType<typeof guideTables>["byProject"
         <span className="flex min-w-0 flex-col gap-1">
           <span className="text-body font-extrabold">{p.nameAr}</span>
           <span className="text-caption font-normal leading-relaxed text-muted">
-            {buildingsConstruct(p)} · {modelsWord(stats.listed)} · تسليم {deliveryShort(p.deliveryLabel.value)}
+            {buildingsConstruct(p)} · {modelsWord(item.listed)} · تسليم {deliveryShort(p.deliveryLabel.value)}
           </span>
         </span>
         <span className="flex shrink-0 flex-col items-end gap-1">

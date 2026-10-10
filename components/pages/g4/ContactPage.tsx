@@ -250,7 +250,7 @@ export function ContactPage() {
               <div className="flex flex-col gap-4 px-4 py-5 md:px-6 md:py-6">
                 <TextField id={ID.name} label="الاسم" autoComplete="name" value={draft.name} onChange={(e) => update("name", e.target.value)} />
                 <TextField id={ID.phone} label="رقم الجوال (واتساب)" type="tel" inputMode="numeric" autoComplete="tel" ltr placeholder="05XXXXXXXX" value={draft.phone} onChange={(e) => update("phone", e.target.value)} />
-                <TextArea id={ID.message} label="رسالتك" rows={5} maxLength={MESSAGE_MAX} counter={false} placeholder="مثال: أبحث عن شقة 3 غرف في الروضة حتى 700 ألف" value={draft.message} onChange={(e) => update("message", e.target.value)} />
+                <TextArea id={ID.message} label="رسالتك" rows={5} maxLength={MESSAGE_MAX} counter={false} className="md:min-h-48" placeholder="مثال: أبحث عن شقة 3 غرف في الروضة حتى 700 ألف" value={draft.message} onChange={(e) => update("message", e.target.value)} />
                 <Button type="submit" id="contact-submit" variant="secondary" size="l" arrow full>
                   أرسل الرسالة
                 </Button>
@@ -308,7 +308,7 @@ function Socials({ className, label }: { className?: string; label?: boolean }) 
       </span>
       <div className="flex items-center gap-3">
         {SOCIAL.map((s) => (
-          <IconButton key={s.id} label={s.label} href={s.href} tone="ghost-ink" size={44}>
+          <IconButton key={s.id} label={s.label} href={s.href} tone="ghost-paper" size={44}>
             <SocialIcon id={s.id} />
           </IconButton>
         ))}
