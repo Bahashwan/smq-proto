@@ -33,7 +33,8 @@ export default function DemoPage() {
       </section>
 
       {SECTIONS.map((section) => {
-        const rows = allScreens.filter((s) => s.section === section);
+        // groups may append a qualifier to the heading («33 · Member pages (390 only, no login)»)
+        const rows = allScreens.filter((s) => s.section === section || s.section.startsWith(`${section} `));
         if (!rows.length) return null;
         return (
           <section key={section}>
