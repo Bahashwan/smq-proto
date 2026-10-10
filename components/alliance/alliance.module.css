@@ -1,0 +1,22 @@
+/* Alliance-only motion. The honeycomb fills cell by cell over the skeleton duration token (1400ms);
+   under prefers-reduced-motion the token is 0ms and the animation is removed, so the end state renders. */
+.fill {
+  animation: hexfill 360ms var(--smq-ease) both;
+  animation-delay: calc(var(--i, 0) * var(--smq-motion-skeleton) / var(--n, 12));
+  transform-origin: center;
+}
+@keyframes hexfill {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    animation: none;
+  }
+}

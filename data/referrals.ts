@@ -1,0 +1,167 @@
+// Referral records (Admin-AllianceReferrals-D, Member-Referral-M, Member-Ledger-M): six REF-2026-* records.
+// REF-2026-0117 is SMQ ↔ مكتب ط (office-09) on REQ-2026-0412. Split and protection are the charter defaults [للتأكيد]
+// on open records; closed records show the agreed values without the mark. Days left are computed by protectionDaysLeft().
+import type { Referral, ReferralStage } from "./types";
+
+export const REFERRAL_STAGE_LABELS: Record<ReferralStage, string> = { intro: "تعارف", viewing: "معاينة", negotiation: "تفاوض", transfer: "إفراغ", failed: "لم تتم" };
+export const REFERRAL_STAGES: ReferralStage[] = ["intro", "viewing", "negotiation", "transfer", "failed"];
+
+export const referrals: Referral[] = [
+  {
+    id: "REF-2026-0117",
+    requestId: "REQ-2026-0412",
+    requesterOfficeId: "SMQ",
+    offerOfficeId: "office-09",
+    districtSlug: "faisaliyah",
+    summary: "شقة · 4 غرف · الفيصلية · حتى 450,000",
+    offerSummary: "شقة · 165 م² · 440,000 ريال",
+    offerAreaM2: 165,
+    brokered: true,
+    valueSar: 440000,
+    split: "50 / 50",
+    splitTbc: true,
+    protectionDays: 90,
+    introducedOn: "2026-10-10",
+    createdAt: "2026-10-10T14:35:00+03:00",
+    offerSentAt: "2026-10-10T10:42:00+03:00",
+    stage: "viewing",
+    stageLabelAr: "معاينة · الخميس",
+    stageNote: "التعارف 2026/10/10 · المعاينة محجوزة الخميس 4 م. تُحدَّث المرحلة من فريق SMQ بعد تأكيد المكتبين.",
+    createdBy: "فريق SMQ · نورة",
+    charterVersion: "1.0",
+  },
+  {
+    id: "REF-2026-0104",
+    requestId: "REQ-2026-0389", // an earlier member request of مكتب أ, closed before the designed board; not in data/requests
+    requesterOfficeId: "office-01",
+    offerOfficeId: "office-10",
+    districtSlug: "rawdah",
+    summary: "أرض مطورة · الروضة · حتى 2,500,000",
+    offerSummary: "أرض مطورة · 600 م² · 2,400,000 ريال",
+    offerAreaM2: 600,
+    brokered: true,
+    valueSar: 2400000,
+    split: "50 / 50",
+    splitTbc: true,
+    protectionDays: 90,
+    introducedOn: "2026-09-28",
+    createdAt: "2026-09-28T13:10:00+03:00",
+    stage: "negotiation",
+    stageLabelAr: "تفاوض",
+    stageNote: "تفاوض على السعر · الطرفان أكّدا المعاينة.",
+    createdBy: "فريق SMQ · نورة",
+    charterVersion: "1.0",
+  },
+  {
+    id: "REF-2026-0098",
+    requestId: "REQ-2026-0398",
+    requesterOfficeId: "office-01",
+    offerOfficeId: "office-03",
+    districtSlug: "shati",
+    summary: "فيلا · الشاطئ · حتى 2,000,000",
+    offerSummary: "فيلا · 420 م² · 1,850,000 ريال",
+    offerAreaM2: 420,
+    brokered: false,
+    valueSar: 1850000,
+    split: "50 / 50",
+    splitTbc: true,
+    protectionDays: 90,
+    introducedOn: "2026-09-21",
+    createdAt: "2026-09-21T16:00:00+03:00",
+    stage: "negotiation",
+    stageLabelAr: "تفاوض · نزاع",
+    stageNote: "تفاوض · نزاع مفتوح",
+    dispute: {
+      openedDaysAgo: 4,
+      claim: "«المشتري عاد إلينا مباشرة بعد المعاينة وطلب إنهاء الصفقة عبرنا دون مكتب أ. نطلب تحويل المرحلة إلى لم تتم.»",
+      counter: "لم يردّ منذ 4 أيام (ذُكِّر مرتين على واتساب).",
+    },
+    disputeOpenedOn: "2026-10-06",
+    createdBy: "فريق SMQ · سعود",
+    charterVersion: "1.0",
+  },
+  {
+    id: "REF-2026-0061",
+    requestId: "REQ-2026-0377",
+    requesterOfficeId: "office-11",
+    offerOfficeId: "office-01",
+    districtSlug: "obhur-north",
+    summary: "فيلا · أبحر الشمالية · حتى 2,100,000",
+    offerSummary: "فيلا · 480 م² · 2,050,000 ريال",
+    offerAreaM2: 480,
+    brokered: true,
+    valueSar: 2050000,
+    split: "50 / 50",
+    splitTbc: false,
+    protectionDays: 90,
+    introducedOn: "2026-08-14",
+    createdAt: "2026-08-14T11:00:00+03:00",
+    stage: "transfer",
+    stageLabelAr: "إفراغ · 2026/09/30",
+    stageNote: "أُفرغت 2026/09/30",
+    closedOn: "2026-09-30",
+    finalValueSar: 2050000,
+    createdBy: "فريق SMQ · سعود",
+    charterVersion: "1.0",
+  },
+  {
+    id: "REF-2026-0049",
+    requestId: "REQ-2026-0341", // a visitor request closed in August; not in data/requests
+    requesterOfficeId: "SMQ",
+    offerOfficeId: "office-05",
+    districtSlug: "safa",
+    summary: "شقة · 3 غرف · الصفا",
+    offerSummary: "شقة · 130 م² · 1,850,000 ريال",
+    offerAreaM2: 130,
+    brokered: true,
+    valueSar: 1850000,
+    split: "50 / 50",
+    splitTbc: false,
+    protectionDays: 90,
+    introducedOn: "2026-08-02",
+    createdAt: "2026-08-02T12:20:00+03:00",
+    stage: "transfer",
+    stageLabelAr: "إفراغ · 2026/09/12",
+    stageNote: "أُفرغت 2026/09/12",
+    closedOn: "2026-09-12",
+    finalValueSar: 1850000,
+    createdBy: "فريق SMQ · نورة",
+    charterVersion: "1.0",
+  },
+  {
+    id: "REF-2026-0033",
+    requestId: "REQ-2026-0302", // a member request of مكتب د closed in July; not in data/requests
+    requesterOfficeId: "office-04",
+    offerOfficeId: "office-02",
+    districtSlug: "mohammadiyah",
+    summary: "شقة · غرفتان · المحمدية",
+    offerSummary: "شقة · 95 م² · 520,000 ريال",
+    offerAreaM2: 95,
+    brokered: false,
+    valueSar: 520000,
+    split: "لا عمولة",
+    splitTbc: false,
+    protectionDays: 90,
+    introducedOn: "2026-07-19",
+    createdAt: "2026-07-19T10:05:00+03:00",
+    stage: "failed",
+    stageLabelAr: "لم تتم · المشتري انسحب",
+    stageNote: "لم تتم · المشتري انسحب",
+    closedOn: "2026-08-04",
+    noCommission: true,
+    createdBy: "فريق SMQ · سعود",
+    charterVersion: "1.0",
+  },
+];
+
+export function referralById(id: string): Referral | undefined {
+  const needle = id.toUpperCase();
+  return referrals.find((r) => r.id === needle || r.id.replace("REF-2026-", "REF-") === needle);
+}
+export function shortReferralId(id: string): string {
+  return id.replace("REF-2026-", "REF-");
+}
+/** Records an office appears in, as requester or offer side. */
+export function referralsForOffice(officeId: string): Referral[] {
+  return referrals.filter((r) => r.requesterOfficeId === officeId || r.offerOfficeId === officeId);
+}
