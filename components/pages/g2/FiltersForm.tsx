@@ -6,7 +6,9 @@ import { useId, useMemo, useState, type ReactNode } from "react";
 import { BottomSheet, Button, Chip, CountBadge, FilterChip, Segmented, SelectField, TextField } from "@/components/ui";
 import { fmtNum, cx } from "@/lib/format";
 import { setQuery } from "@/lib/location";
-import { BUDGET_MAX, BUDGET_MIN } from "@/components/ui";
+/** The filter sheet's budget scale (Results-Filters-M: «من» 300,000, track to 2,000,000); the finders keep the wider stepper range. */
+const BUDGET_MIN = 300_000;
+const BUDGET_MAX = 2_000_000;
 import { DEFAULT_FILTERS, type UnitFilters, type UnitTypeParam } from "@/lib/url";
 import { siteDistricts } from "@/data/districts";
 import { publicProjects } from "@/data/projects";
