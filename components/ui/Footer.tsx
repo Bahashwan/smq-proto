@@ -8,6 +8,7 @@ import { IconButton } from "./Button";
 import { ADDRESS_AR, BRAND_AR, BRAND_EN, COPYRIGHT_YEAR, EMAIL, FOOTER_COMPACT_AR, HANDLE, HOURS_AR, LICENCE, MENU_AR, NAV_EN, PHONE_DISPLAY, SITE, SOCIAL, TAGLINE_AR, WA_DISPLAY, type NavItem } from "./constants";
 import { SocialIcon } from "./icons";
 import { LicenceLine } from "./LicenceLine";
+import { FooterLinks, PrivacyLink } from "./FooterLinks";
 
 export interface FooterSettings {
   phone?: string;
@@ -65,23 +66,21 @@ export function Footer({ variant = "ar", compact, settings, links, className }: 
   if (compact) {
     const items = links ?? FOOTER_COMPACT_AR;
     return (
-      <footer className={cx("bg-ink text-on-ink-muted text-caption", className)}>
+      <footer className={cx("bg-ink text-on-ink-muted text-caption font-normal", className)}>
         <div className="container-smq flex flex-col gap-4 py-7 md:flex-row md:items-center md:justify-between md:gap-4 md:border-t md:border-ink-2 md:py-6">
           <Link href="/" className="self-start no-underline" aria-label={BRAND_AR}>
             <Lockup tone="white" height={32} decorative className="md:h-7.5" />
           </Link>
-          <nav aria-label="روابط" className="flex flex-wrap gap-x-4 gap-y-2 text-label font-normal md:hidden">
-            {items.map((l) => (
-              <Link key={l.href} href={l.href} className="text-paper no-underline hover:underline">
-                {l.label}
-              </Link>
-            ))}
-          </nav>
+          <FooterLinks items={items} className="flex flex-wrap gap-x-4 gap-y-2 text-label font-normal md:hidden" />
           <p className="m-0 pt-3 border-t border-ink-2 leading-relaxed md:border-0 md:pt-0">
             <LicenceLine variant="ar" licence={licence} />
             <span className="hidden md:inline"> · </span>
             <br className="md:hidden" />
             {`© ${COPYRIGHT_YEAR} ${BRAND_AR}`}
+            <span className="hidden md:inline">
+              {" · "}
+              <PrivacyLink />
+            </span>
           </p>
         </div>
       </footer>

@@ -155,3 +155,6 @@ All fields: label 11/600 muted (gold when focused or in error), control 48px wit
 - Sticky header + anchors: the header is 56px when scrolled; give in-page targets `scroll-mt-16`.
 - Chips on the boards carry no cut (a cut would clip the frame); `cut` is opt-in for filled chips.
 - `floorWord(value)` and `orientationWord(value)` are exported for pages that print the same lines.
+
+- Type tokens carry weights: `text-label` is 700 and `text-caption` 600. Add `font-normal` wherever a board sets regular text at those sizes.
+- The compact footer marks the current page in gold (`FooterLinks`, `PrivacyLink`).

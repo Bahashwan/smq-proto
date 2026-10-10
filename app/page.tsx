@@ -208,7 +208,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-3">
               <h2 className="m-0 text-h2 md:text-[32px] font-extrabold">كلّمنا الآن</h2>
               <Button href={waLink()} variant="whatsapp" size="l" between className="md:text-[17px]"><span className="flex items-center gap-2"><WhatsAppIcon size={22} />واتساب</span><span className="tnum font-bold">{WA_DISPLAY}</span></Button>
-              <Button href={PHONE_TEL} variant="ghost" size="l" between className="bg-paper"><span className="flex items-center gap-2"><PhoneIcon size={20} />اتصال</span><span className="tnum">{PHONE_DISPLAY}</span></Button>
+              <Button href={`tel:${PHONE_TEL}`} variant="ghost" size="l" between className="bg-paper"><span className="flex items-center gap-2"><PhoneIcon size={20} />اتصال</span><span className="tnum">{PHONE_DISPLAY}</span></Button>
               <div className="grid grid-cols-2 gap-4 mt-2">
                 <div className="flex flex-col gap-1"><span className="text-caption font-bold text-muted">ساعات العمل</span><span className="text-label font-semibold">{settings.hours.days}<br />{settings.hours.from} إلى {settings.hours.to}</span></div>
                 <div className="flex flex-col gap-1"><span className="text-caption font-bold text-muted">المكتب</span><span className="text-label font-semibold">{settings.office.addressAr}</span></div>

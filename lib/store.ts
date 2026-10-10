@@ -103,7 +103,7 @@ export const useStore = create<StoreState>()(
 );
 
 /** Read a free-form patch for an entity id (undefined when none). */
-export function usePatch<T extends Record<string, unknown>>(entity: string, id: string): Partial<T> | undefined {
+export function usePatch<T extends object>(entity: string, id: string): Partial<T> | undefined {
   return useStore((s) => s.patches[entity]?.[id]) as Partial<T> | undefined;
 }
 

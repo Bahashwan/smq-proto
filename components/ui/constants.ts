@@ -55,12 +55,14 @@ export const MENU_AR: NavItem[] = [
 ];
 
 /** Compact footer links (Results / Unit boards) */
+/** Compact footer links as the unit and privacy boards list them (Privacy-M) */
 export const FOOTER_COMPACT_AR: NavItem[] = [
+  { label: "العقارات", href: "/units" },
   { label: "دليل الأسعار", href: "/guide" },
   { label: "الخدمات", href: "/services" },
-  { label: "تعاون معنا", href: "/collaborate" },
   { label: "من نحن", href: "/about" },
   { label: "تواصل معنا", href: "/contact" },
+  { label: "الخصوصية", href: "/privacy" },
 ];
 
 /** English pages exist only for home, results and the unit; the rest fall back to the Arabic pages (EN-Home-M footer) */

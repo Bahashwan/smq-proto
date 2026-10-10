@@ -90,9 +90,11 @@ export function ImageSlot({ slotId, tier, ratio, src, realSrc, alt = "", unit, l
   const file = src ?? realSrc;
   const base = cx("relative block overflow-hidden m-0 min-w-0", ratio && RATIO[ratio], CUT[cut], className);
   const idLine = showId && !compact && (
-    <span className="absolute bottom-3 end-3 max-w-[calc(100%-8.5rem)] truncate px-2 py-1 bg-paper text-caption font-normal text-muted leading-none whitespace-nowrap" dir="ltr">
-      {slotId}
-      {ratio ? ` · ${ratio}` : ""}
+    <span className="absolute bottom-3 end-3 max-w-[calc(100%-8.5rem)] flex">
+      <span className="block truncate px-2 py-1 bg-paper text-caption font-normal text-muted leading-none whitespace-nowrap" dir="ltr">
+        {slotId}
+        {ratio ? ` · ${ratio}` : ""}
+      </span>
     </span>
   );
 

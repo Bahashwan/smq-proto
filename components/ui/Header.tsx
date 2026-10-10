@@ -96,7 +96,7 @@ export function Header({ variant = "ar", showEn, transparent, switchHref, active
                 <span className="text-label font-extrabold tracking-wide">{en ? "SMQ Real Estate" : BRAND_SHORT}</span>
               </>
             ) : (
-              <Lockup tone="goldmark-white" height={26} lang={variant} decorative className="lg:h-9" />
+              <Lockup tone="goldmark-white" height={26} lang={variant} decorative className="lg:h-7 xl:h-9" />
             )}
           </Link>
 
@@ -110,7 +110,7 @@ export function Header({ variant = "ar", showEn, transparent, switchHref, active
                   aria-current={on ? "page" : undefined}
                   className={cx(
                     "no-underline whitespace-nowrap motion-hover transition-colors hover:bg-ink-2",
-                    scrolled ? "px-2.5 py-2.5 text-label" : "px-3 py-3 text-label",
+                    scrolled ? "px-2 xl:px-2.5 py-2.5 text-label" : "px-2 xl:px-3 py-3 text-label",
                     on ? cx("text-gold font-bold", !scrolled && "border-b-[3px] border-gold") : "text-paper font-semibold",
                   )}
                 >
@@ -132,12 +132,12 @@ export function Header({ variant = "ar", showEn, transparent, switchHref, active
                 </Link>
               ))}
             <span className="hidden lg:contents">
-              {scrolled ? (
-                <a href={`tel:${PHONE_TEL}`} aria-label={en ? `Call ${PHONE_DISPLAY}` : `اتصال ${PHONE_DISPLAY}`} className="inline-flex items-center justify-center size-10 border-[1.5px] border-muted text-paper no-underline hover:bg-ink-2 motion-hover transition-colors">
-                  <PhoneIcon />
-                </a>
-              ) : (
-                <a href={`tel:${PHONE_TEL}`} dir="ltr" className="inline-flex items-center px-1 py-3 text-label font-semibold no-underline text-paper tnum hover:underline">
+              {/* the number needs the 1440 width; between 1024 and 1439 the header uses the scrolled phone icon */}
+              <a href={`tel:${PHONE_TEL}`} aria-label={en ? `Call ${PHONE_DISPLAY}` : `اتصال ${PHONE_DISPLAY}`} className={cx("inline-flex items-center justify-center size-10 border-[1.5px] border-muted text-paper no-underline hover:bg-ink-2 motion-hover transition-colors", !scrolled && "xl:hidden")}>
+                <PhoneIcon />
+              </a>
+              {!scrolled && (
+                <a href={`tel:${PHONE_TEL}`} dir="ltr" className="hidden xl:inline-flex items-center px-1 py-3 text-label font-semibold no-underline text-paper tnum hover:underline">
                   {PHONE_DISPLAY}
                 </a>
               )}
