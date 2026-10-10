@@ -55,7 +55,7 @@ export function EnResults() {
                 <span aria-hidden="true" className="h-px flex-1 bg-line" />
               </div>
               <div className="mt-4 flex flex-col gap-4 md:grid md:grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))]">
-                {r.result.sold.map((u) => (
+                {r.sold.map((u) => (
                   <UnitCard key={u.code} unit={u} status="sold" tier={tier} lang="en" />
                 ))}
               </div>

@@ -54,12 +54,13 @@ export function FiltersButton({ count, href, variant = "list", className }: { co
 
 /**
  * «الترتيب: السعر، الأقل أولاً ▾» · a ghost control over a native select. `stacked` (the phone toolbar) puts the
- * prefix above the value so both fit the 136px the row leaves.
+ * prefix above the value so both fit the 136px the row leaves. Heights as drawn: `s` 36px (Results-Map-D bar),
+ * `m` 44px, `l` 48px (Results-D toolbar).
  */
-export function SortControl({ value, onChange, options, label = "الترتيب", prefix = "الترتيب:", stacked, size = "m", className }: { value: SortParam; onChange: (s: SortParam) => void; options?: { value: SortParam; label: string }[]; label?: string; prefix?: string | null; stacked?: boolean; size?: "m" | "s"; className?: string }) {
+export function SortControl({ value, onChange, options, label = "الترتيب", prefix = "الترتيب:", stacked, size = "m", className }: { value: SortParam; onChange: (s: SortParam) => void; options?: { value: SortParam; label: string }[]; label?: string; prefix?: string | null; stacked?: boolean; size?: "s" | "m" | "l"; className?: string }) {
   const opts = options ?? (Object.keys(SORT_LABELS) as SortParam[]).map((k) => ({ value: k, label: SORT_LABELS[k] }));
   const current = opts.find((o) => o.value === value) ?? opts[0];
-  const box = stacked ? "h-11 gap-1 px-2" : size === "s" ? "h-10 gap-2 px-2.5 text-[12px] font-bold" : "h-11 gap-2 px-3 text-label font-bold";
+  const box = stacked ? "h-11 gap-1 px-2" : size === "s" ? "h-9 gap-2 px-2.5 text-[12px] font-bold" : size === "l" ? "h-12 gap-4 px-3.5 text-label font-bold" : "h-11 gap-2 px-3 text-label font-bold";
   return (
     <span className={cx("relative inline-flex min-w-0 items-center justify-between border-interactive bg-paper text-ink", box, className)}>
       {stacked ? (
@@ -85,12 +86,18 @@ export function SortControl({ value, onChange, options, label = "الترتيب"
   );
 }
 
-/** Grid / map toggle: the active side is ink; the other side links to the other view with the same query */
-export function ViewToggle({ active, gridHref, mapHref, labels, size = "m", className }: { active: "grid" | "map"; gridHref: string; mapHref: string; labels?: boolean | "map"; size?: "m" | "s"; className?: string }) {
-  const item = cx("inline-flex h-full items-center justify-center gap-1.5 no-underline", labels ? "px-3" : "w-11", size === "s" ? "text-caption font-bold" : "text-label font-bold");
+const TOGGLE_H = { s: "h-[34px]", bar: "h-9", m: "h-11", l: "h-12" } as const;
+
+/**
+ * Grid / map toggle: the active side is ink; the other side links to the other view with the same query. Heights as
+ * drawn: `s` 34px (Results-Map-M bar), `bar` 36px (Results-Map-D bar), `m` 44px (phone toolbar), `l` 48px (Results-D).
+ */
+export function ViewToggle({ active, gridHref, mapHref, labels, size = "m", className }: { active: "grid" | "map"; gridHref: string; mapHref: string; labels?: boolean | "map"; size?: keyof typeof TOGGLE_H; className?: string }) {
+  const small = size === "s" || size === "bar";
+  const item = cx("inline-flex h-full items-center justify-center no-underline", labels ? (size === "s" || size === "m" ? "gap-1.5 px-3" : "gap-2 px-3.5") : "w-11 gap-1.5", small ? "text-caption font-bold" : "text-label font-bold");
   const words = labels === true || labels === "map";
   return (
-    <div role="group" aria-label="طريقة العرض" className={cx("inline-flex shrink-0 items-stretch border-interactive bg-paper", size === "s" ? "h-[34px]" : "h-11", className)}>
+    <div role="group" aria-label="طريقة العرض" className={cx("inline-flex shrink-0 items-stretch border-interactive bg-paper", TOGGLE_H[size], className)}>
       {active === "grid" ? (
         <span aria-current="true" aria-label={words ? undefined : "شبكة"} className={cx(item, "bg-ink text-paper")}>
           <GridIcon />

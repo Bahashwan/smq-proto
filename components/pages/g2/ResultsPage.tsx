@@ -3,7 +3,7 @@
 // Filters, sort and the compare selection (`u=`) live in the URL; everything shown is computed from the fixtures.
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { CompareBar, Container, Footer, Header, LoadMore, Pill, Price, Skeleton, StatusBadge, UnitCard, useCompare } from "@/components/ui";
+import { CompareBar, Container, Footer, Header, LoadMore, MENU_AR, Pill, Price, Skeleton, StatusBadge, UnitCard, useCompare } from "@/components/ui";
 import { bedsLabel, cx, fmtArea, fmtDate } from "@/lib/format";
 import { setQuery } from "@/lib/location";
 import { usePresenter, type Tier } from "@/lib/presenter";
@@ -21,7 +21,11 @@ import { useCompareUrl } from "./useCompareUrl";
 import { useHeaderOffset } from "./useHeaderOffset";
 
 const PAGE_PHONE = 4;
+/** the phone sold strip opens with the latest sale; the others come with «عرض … أخرى» (Results-M) */
+const SOLD_FIRST_PHONE = 1;
 const PAGE_DESKTOP = 6;
+/** the results footer as Results-M draws it: «دليل الأسعار · الخدمات · تعاون معنا · من نحن · تواصل معنا» */
+const RESULTS_FOOTER_LINKS = MENU_AR.filter((l) => ["/guide", "/services", "/collaborate", "/about", "/contact"].includes(l.href));
 const TIER: Record<Tier, ImageTier> = { real: "real", gen: "generated", typo: "typographic" };
 
 export const RESULTS_TITLE = "الوحدات في جدة";
@@ -46,7 +50,7 @@ function ProjectRow({ group, overrides, desktop }: { group: ProjectGroup; overri
         <span className={cx("font-extrabold", desktop ? "text-h3" : "text-[16px] leading-snug")}>{project.nameAr}</span>
         <span className="text-caption font-normal text-muted">{projectLine(project, desktop)}</span>
       </Link>
-      <Pill tone="sand" className="shrink-0">
+      <Pill tone="sand" className={cx("shrink-0", desktop && "md:px-2.5 md:py-2")}>
         {stats.available} من {stats.listed} متاحة
       </Pill>
     </div>
@@ -103,15 +107,18 @@ function flatCards(groups: ProjectGroup[]) {
   return groups.flatMap((g) => g.units.map((unit) => ({ unit, group: g })));
 }
 
-/** Results-M: project row, cards (four a page) with the delivery line, the sold strip, «عرض … أخرى» */
+/** Results-M: project row, cards (four a page) with the delivery line, the sold strip (the latest sale first), then
+ *  «عرض … أخرى» counting the cards and the sales still folded */
 function PhoneList({ groups, sold, overrides, tier }: ListProps) {
   const compare = useCompare();
   const cards = flatCards(groups);
-  const [visible, setVisible] = useState(PAGE_PHONE);
-  const remaining = Math.max(0, cards.length - visible);
+  const [pages, setPages] = useState(1);
+  const shownCards = Math.min(cards.length, pages * PAGE_PHONE);
+  const shownSold = pages > 1 ? sold.length : Math.min(sold.length, SOLD_FIRST_PHONE);
+  const remaining = cards.length - shownCards + (sold.length - shownSold);
   return (
     <div className="flex flex-col gap-3.5">
-      {regroup(cards.slice(0, visible)).map(({ group, units }) => (
+      {regroup(cards.slice(0, shownCards)).map(({ group, units }) => (
         <section key={group.project.id} aria-label={group.project.nameAr} className="flex flex-col gap-3.5">
           <ProjectRow group={group} overrides={overrides} />
           {units.map((unit) => (
@@ -119,15 +126,15 @@ function PhoneList({ groups, sold, overrides, tier }: ListProps) {
           ))}
         </section>
       ))}
-      {sold.length > 0 && (
+      {shownSold > 0 && (
         <>
           <SoldDivider />
-          {sold.map((u) => (
+          {sold.slice(0, shownSold).map((u) => (
             <UnitCard key={u.code} unit={u} status="sold" tier={tier} />
           ))}
         </>
       )}
-      {remaining > 0 && <LoadMore label={moreUnitsLabel(remaining)} onClick={() => setVisible((v) => v + PAGE_PHONE)} className="w-full" />}
+      {remaining > 0 && <LoadMore label={moreUnitsLabel(remaining)} onClick={() => setPages((n) => n + 1)} className="w-full" />}
     </div>
   );
 }
@@ -214,13 +221,13 @@ export function ResultsPage() {
     <>
       <Header showEn switchHref={unitsUrl({ ...r.filters, sheet: null, pin: null }, "/en/units")} />
       <main className="pb-10">
-        <Container className="pt-5 md:pt-8">
-          <div className="flex flex-col gap-1.5 md:flex-row md:items-center md:justify-between md:gap-6">
+        <Container className="pt-5 md:pt-9">
+          <div className="flex flex-col gap-1.5 md:flex-row md:items-end md:justify-between md:gap-6">
             <div className="flex min-w-0 flex-col gap-1.5">
               <h1 className="m-0 text-[26px] font-extrabold leading-tight md:text-[36px]">{RESULTS_TITLE}</h1>
               {status}
             </div>
-            {!isEmpty && <div className="hidden shrink-0 items-center gap-2.5 md:flex">{loading ? <ToolbarSkeleton /> : <SortControl value={r.filters.sort} onChange={sortChange} />}{!loading && <ViewToggle active="grid" gridHref={hrefs.grid} mapHref={hrefs.map} labels />}</div>}
+            {!isEmpty && <div className="hidden shrink-0 items-center gap-2.5 md:flex">{loading ? <ToolbarSkeleton /> : <SortControl value={r.filters.sort} onChange={sortChange} size="l" />}{!loading && <ViewToggle active="grid" gridHref={hrefs.grid} mapHref={hrefs.map} labels size="l" />}</div>}
           </div>
           {isEmpty && <ActiveChips filters={r.filters} className={cx("mt-4 hidden pb-4 md:flex", RULE_B)} />}
         </Container>
@@ -251,16 +258,16 @@ export function ResultsPage() {
           </Container>
         ) : (
           <>
-            <Container className="pt-4 md:hidden">{slow ? null : loading ? <PhoneListSkeleton /> : <PhoneList key={key} groups={r.groups} sold={r.result.sold} overrides={r.overrides} tier={tier} />}</Container>
+            <Container className="pt-4 md:hidden">{slow ? null : loading ? <PhoneListSkeleton /> : <PhoneList key={key} groups={r.groups} sold={r.sold} overrides={r.overrides} tier={tier} />}</Container>
             <Container className="hidden pt-6 md:grid md:grid-cols-[300px_minmax(0,1fr)] md:items-start md:gap-8">
               <div>{loading ? <FiltersColumnSkeleton /> : <FiltersColumn filters={r.filters} overrides={r.overrides} />}</div>
-              <div className="min-w-0">{slow ? null : loading ? <DesktopGridSkeleton /> : <DesktopList key={key} groups={r.groups} sold={r.result.sold} overrides={r.overrides} tier={tier} />}</div>
+              <div className="min-w-0">{slow ? null : loading ? <DesktopGridSkeleton /> : <DesktopList key={key} groups={r.groups} sold={r.sold} overrides={r.overrides} tier={tier} />}</div>
             </Container>
           </>
         )}
       </main>
       <CompareBar nameOf={(slug) => (unitBySlug(slug) ? compareName(unitBySlug(slug)!) : undefined)} />
-      <Footer compact />
+      <Footer compact links={RESULTS_FOOTER_LINKS} />
       <FiltersSheet filters={r.filters} overrides={r.overrides} />
     </>
   );

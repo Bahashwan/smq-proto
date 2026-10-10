@@ -100,11 +100,12 @@ export function EmptyState({ filters, empty, className }: { filters: UnitFilters
   );
 }
 
-function HexDots({ count, className }: { count: number; className?: string }) {
+/** the bridge's mark: one gold hexagon, then ink-2 ones (18px / 2px apart on the phone, 26px / 3px on desktop) */
+function HexDots({ count, size, className }: { count: number; size: string; className?: string }) {
   return (
-    <span aria-hidden="true" className={cx("flex items-center gap-1", className)}>
+    <span aria-hidden="true" className={cx("flex items-center", className)}>
       {Array.from({ length: count }).map((_, i) => (
-        <span key={i} className={cx("hex-flat inline-block size-4", i === 0 ? "bg-gold" : "bg-ink-2")} />
+        <span key={i} className={cx("hex-flat inline-block", size, i === 0 ? "bg-gold" : "bg-ink-2")} />
       ))}
     </span>
   );
@@ -157,15 +158,18 @@ export function AllianceBridge({ filters, className }: { filters: UnitFilters; c
 
   return (
     <section aria-labelledby={`${uid}-title`} className={cx("grid border-interactive bg-paper md:grid-cols-[380px_minmax(0,1fr)]", className)}>
-      <div className="flex flex-col gap-2 bg-ink px-4 pb-6 pt-4 text-paper cut-img md:[clip-path:none] md:px-6 md:py-6">
-        <HexDots count={2} className="md:hidden" />
-        <HexDots count={3} className="hidden md:flex" />
-        <span className="mt-1 text-caption font-bold text-gold">مبادرة من SMQ · تحالف مكاتب جدة</span>
-        <h2 id={`${uid}-title`} className="m-0 text-body font-extrabold leading-snug md:text-[22px] md:leading-tight">
-          مكاتب مرخصة في تحالف جدة تغطي هذا الحي
-        </h2>
-        <p className="m-0 hidden text-label font-normal text-on-ink-muted md:block">{intro} ونسجّل التعارف.</p>
-        <Link href="/alliance" className="hidden text-caption font-bold text-gold no-underline hover:underline md:inline">
+      {/* phone: the two hexagons beside the eyebrow and title (State-Empty-M) · desktop: a column with three (State-Empty-D) */}
+      <div className="flex items-center gap-3 bg-ink px-4 pb-4 pt-3.5 text-paper cut-img md:flex-col md:items-stretch md:[clip-path:none] md:px-6 md:py-6.5">
+        <HexDots count={2} size="size-4.5" className="shrink-0 gap-0.5 md:hidden" />
+        <HexDots count={3} size="size-6.5" className="hidden gap-0.75 md:flex" />
+        <div className="flex min-w-0 flex-1 flex-col gap-0.5 md:gap-3">
+          <span className="text-caption font-bold text-gold">مبادرة من SMQ · تحالف مكاتب جدة</span>
+          <h2 id={`${uid}-title`} className="m-0 text-body font-extrabold leading-snug md:text-[22px] md:leading-tight">
+            مكاتب مرخصة في تحالف جدة تغطي هذا الحي
+          </h2>
+          <p className="m-0 hidden text-label font-normal text-on-ink-muted md:block">{intro} ونسجّل التعارف.</p>
+        </div>
+        <Link href="/alliance" className="hidden text-caption font-bold text-gold underline underline-offset-2 hover:text-paper md:mt-auto md:inline">
           ما التحالف؟ ←
         </Link>
       </div>

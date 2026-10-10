@@ -9,7 +9,7 @@ import { parseFilters, type UnitFilters } from "@/lib/url";
 import { activeConstraints, emptyStateSuggestions, filterUnits, latestUpdate, type EmptyState, type FilterResult, type UnitOverrides } from "@/data/selectors";
 import { projectById, projects } from "@/data/projects";
 import type { Project, Unit } from "@/data/types";
-import { filtersKey } from "./shared";
+import { filtersKey, latestSoldFirst } from "./shared";
 
 export const FILTER_SKELETON_MS = 400;
 
@@ -23,6 +23,8 @@ export interface ResultsState {
   overrides: UnitOverrides;
   result: FilterResult;
   groups: ProjectGroup[];
+  /** the matching sold units, latest sale first (the «مباعة، للمرجع فقط» strip) */
+  sold: Unit[];
   constraints: ReturnType<typeof activeConstraints>;
   empty: EmptyState;
   updatedAt: string;
@@ -72,6 +74,7 @@ export function useResults(): ResultsState {
       .map(([id, units]) => ({ project: projectById(id) ?? projects[0], units }))
       .filter((g) => !!g.project);
   }, [result.matched]);
+  const sold = useMemo(() => latestSoldFirst(result.sold), [result.sold]);
   const constraints = useMemo(() => activeConstraints(filters), [filters]);
   const empty = useMemo(() => emptyStateSuggestions(filters, overrides), [filters, overrides]);
   const updatedAt = useMemo(() => latestUpdate(result.matched.length ? result.matched : undefined), [result.matched]);
@@ -81,6 +84,7 @@ export function useResults(): ResultsState {
     overrides,
     result,
     groups,
+    sold,
     constraints,
     empty,
     updatedAt,

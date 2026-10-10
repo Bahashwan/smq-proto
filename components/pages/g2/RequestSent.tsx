@@ -124,11 +124,11 @@ export function RequestSent() {
             <div className="flex flex-col border-interactive">
               {rows.map((row, i) => (
                 <div key={row.title} className={cx("flex items-start gap-3 px-3.5 py-2.5 text-caption font-normal leading-relaxed", i > 0 && "border-t border-line")}>
-                  <span aria-hidden="true" className="relative mt-1 inline-flex size-3.5 shrink-0 items-center justify-center">
+                  <span aria-hidden="true" className="relative mt-1.5 inline-flex size-2.5 shrink-0 items-center justify-center">
                     {row.tone === "bg-paper ring-hex" ? (
                       <>
                         <span className="hex-point absolute inset-0 bg-ink" />
-                        <span className="hex-point absolute inset-[2px] bg-paper" />
+                        <span className="hex-point absolute inset-[1.5px] bg-paper" />
                       </>
                     ) : (
                       <span className={cx("hex-point absolute inset-0", row.tone)} />

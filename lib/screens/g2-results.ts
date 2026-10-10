@@ -4,7 +4,8 @@ const RESULTS = "/units?district=rawdah&max=700000&type=apt";
 // the boards show two units ticked for comparison (D روز, D ياسمين): the selection lives in the URL as on /compare
 const RESULTS_COMPARE = `${RESULTS}&u=rz-d,ys-d`;
 const EMPTY = "/units?district=faisaliyah&max=450000&beds=4&type=apt&feat=driver";
-const MAP = "/units/map?district=rawdah&max=700000&type=apt&pin=rwd-01";
+// the map boards search by budget only (no district or type: the desktop bar shows «+ الحي» and «+ النوع»)
+const MAP = "/units/map?max=700000&pin=rwd-01";
 const R1 = "1–12 · Public site, round 1";
 const R2 = "23–29 · Public, round 2";
 

@@ -103,9 +103,14 @@ export function projectsWord(n: number): string {
   return `${n} مشروعاً`;
 }
 
-/** «نموذج D روز» · «روف ياسمين» (compare bar names) */
+/** «نموذج D روز» · «روف ياسمين» (compare bar names, Results-D) */
 export function compareName(unit: Unit): string {
-  return `${modelLabel(unit)} ${unit.buildingNameAr}`;
+  return unit.type === "roof-villa" ? `${modelLabel(unit)} ${unit.buildingNameAr}` : `نموذج ${modelLabel(unit)} ${unit.buildingNameAr}`;
+}
+
+/** The sold strip's order: the latest sale first (Results-M/D: «A · ياسمين» 2026/09 before «C · ياسمين» 2026/08) */
+export function latestSoldFirst(list: Unit[]): Unit[] {
+  return [...list].sort((a, b) => (b.soldOn ?? "").localeCompare(a.soldOn ?? ""));
 }
 
 /** «غرفتان و3 غرف» from a list of units */

@@ -135,12 +135,12 @@ function SideList({ pin, overrides, filters }: { pin: ResultPin | null; override
         {matched.map((u) => (
           <Link key={u.code} href={`/units/${u.slug}`} className="flex items-center gap-3 border-interactive bg-paper p-3 text-ink no-underline outline-gold -outline-offset-2 hover:outline-2 motion-hover">
             <ImageSlot slotId={u.images[0]} tier="generated" className="h-[72px] w-24 shrink-0" cut="img" showId={false} label={false} compact />
-            <span className="flex min-w-0 flex-1 flex-col gap-0.5">
+            <span className="flex min-w-0 flex-1 flex-col gap-1.5">
               <span className="text-label font-extrabold">
                 {u.code} · {UNIT_TYPE_AR[u.type]} · {u.buildingNameAr}
               </span>
               <span className="text-caption font-normal text-muted">
-                {bedsLabel(u.beds)} · {bathsLabel(u.baths)} · {fmtArea(u.areaM2)} م²
+                {bedsLabel(u.beds)} · {u.baths === 2 ? "2 حمام" : bathsLabel(u.baths)} · {fmtArea(u.areaM2)} م²
               </span>
               <span className="text-body font-extrabold tnum">
                 {fmtNum(u.priceSar)} <span className="text-caption font-semibold text-muted">{fmtNum(unitPpm(u))} للمتر</span>
@@ -189,6 +189,19 @@ export function MapPage() {
   const listHref = unitsUrl({ ...r.filters, sheet: null, pin: null });
   const close = () => setQuery({ pin: null }, "replace");
   const select = (id: string) => setQuery({ pin: id === r.filters.pin ? null : id }, "replace");
+  // «موقعي» (Results-Map-M): the browser's position selects the nearest pin; without a position the map stays as it is
+  const locate = () => {
+    if (typeof navigator === "undefined" || !navigator.geolocation) return;
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        const d = (p: ResultPin) => (p.pin.centre.lat - coords.latitude) ** 2 + (p.pin.centre.lng - coords.longitude) ** 2;
+        const near = [...pins].sort((a, b) => d(a) - d(b))[0];
+        if (near) setQuery({ pin: near.id }, "replace");
+      },
+      () => {},
+      { timeout: 8000, maximumAge: 600_000 },
+    );
+  };
   const sortChange = (s: SortParam) => setQuery({ sort: s === "price" ? null : s }, "replace");
   const addChips = [!r.filters.district && "+ الحي", !r.filters.type.length && "+ النوع"].filter(Boolean) as string[];
   const hasChips = r.constraints.length > 0;
@@ -246,7 +259,7 @@ export function MapPage() {
                 ترتيب
                 <SortControl value={r.filters.sort} onChange={sortChange} options={MAP_SORT} prefix={null} label="ترتيب" size="s" />
               </label>
-              <ViewToggle active="map" gridHref={hrefs.grid} mapHref={hrefs.map} labels="map" className="h-10" />
+              <ViewToggle active="map" gridHref={hrefs.grid} mapHref={hrefs.map} labels="map" size="bar" />
             </div>
           </Container>
         </div>
@@ -255,7 +268,7 @@ export function MapPage() {
           <div className={cx("hidden min-h-0 md:flex md:flex-col", RULE_E)}>
             <SideList pin={selected} overrides={r.overrides} filters={r.filters} />
           </div>
-          <SchematicMap variant="phone" pins={pins} selectedId={selected?.id ?? null} onSelect={select} regionLabel="جدة · شمال وسط" className="min-h-[260px] flex-1 md:hidden" />
+          <SchematicMap variant="phone" pins={pins} selectedId={selected?.id ?? null} onSelect={select} onLocate={locate} regionLabel="جدة · شمال وسط" className="min-h-[260px] flex-1 md:hidden" />
           <SchematicMap
             variant="desktop"
             pins={pins}
