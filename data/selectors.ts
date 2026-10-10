@@ -327,7 +327,7 @@ export function sortUnits(list: Unit[], sort: SortParam = "price"): Unit[] {
     case "ppm": return arr.sort((a, b) => unitPpm(a) - unitPpm(b) || a.priceSar - b.priceSar);
     case "area": return arr.sort((a, b) => b.areaM2 - a.areaM2 || a.priceSar - b.priceSar);
     case "delivery": return arr.sort((a, b) => (deliveryQuarterIndex(projectById(a.projectId)) ?? 0) - (deliveryQuarterIndex(projectById(b.projectId)) ?? 0) || a.priceSar - b.priceSar);
-    default: return arr.sort((a, b) => a.priceSar - b.priceSar || unitPpm(a) - unitPpm(b));
+    default: return arr.sort((a, b) => a.priceSar - b.priceSar || a.code.localeCompare(b.code)); // equal prices: RZ before YS, as the boards list them
   }
 }
 export interface FilterResult {

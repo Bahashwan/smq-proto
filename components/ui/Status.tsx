@@ -32,7 +32,8 @@ const SIZE: Record<NonNullable<StatusBadgeProps["size"]>, { outer: string; ring:
 export function StatusBadge({ status, size = 52, lang = "ar", className }: StatusBadgeProps) {
   const s = SIZE[size];
   const word = WORD[status][lang];
-  const base = cx("relative inline-flex items-center justify-center shrink-0 hex-flat font-extrabold leading-none text-center", s.outer, className);
+  const positioned = /(^|\s)(absolute|fixed|sticky)(\s|$)/.test(className ?? "");
+  const base = cx(!positioned && "relative", "inline-flex items-center justify-center shrink-0 hex-flat font-extrabold leading-none text-center", s.outer, className);
   if (status === "available") {
     return (
       <span className={cx(base, "bg-gold text-ink", size === 40 ? "text-caption" : "text-caption")} data-status={status}>

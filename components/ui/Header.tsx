@@ -66,7 +66,14 @@ export function Header({ variant = "ar", showEn, transparent, switchHref, active
   }, [demo]);
 
   const nav = en ? NAV_EN : NAV_AR;
-  const switchTo = switchHref ?? (en ? (path.startsWith("/en") ? path.slice(3) || "/" : "/") : path === "/" || path === "" ? "/en" : `/en${path}`);
+  // only /, /units and /units/[code] have English twins; deeper unit pages and the map fall back to their nearest twin
+  const twin = (p: string): string => {
+    const m = p.match(/^\/units\/([a-z0-9-]+)/);
+    if (m && m[1] !== "map") return `/units/${m[1]}`;
+    if (p.startsWith("/units")) return "/units";
+    return "/";
+  };
+  const switchTo = switchHref ?? (en ? twin(path.startsWith("/en") ? path.slice(3) || "/" : "/") : `/en${twin(path) === "/" ? "" : twin(path)}` || "/en");
   const openMenu = () => setQuery({ menu: "1" }, "push");
   const closeMenu = () => setQuery({ menu: null }, "replace");
 

@@ -9,6 +9,7 @@ import { Button } from "./Button";
 import { CompareToggle } from "./Chip";
 import { ImageSlot } from "./ImageSlot";
 import { PriceBand } from "./PriceBand";
+import { BUILDINGS } from "@/data/units";
 import { Price } from "./Price";
 import { BuildingTag, StatusBadge, Tag } from "./Status";
 import { FEATURE_LABELS } from "./constants";
@@ -81,7 +82,10 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
   const cover = unit.images[0] ?? `IMG-UNIT-${unit.code}`;
   const perM = calcPpm(unit.priceSar, unit.areaM2);
   const en = lang === "en";
-  const metaLine = `${bedsLabel(unit.beds)} · ${bathsLabel(unit.baths)} · ${fmtArea(unit.areaM2)} م²`;
+  // the result boards write «2 حمام» / «3 حمامات» and add one standout feature: maid room first, else balcony
+  const bathsCard = unit.baths === 2 ? "2 حمام" : bathsLabel(unit.baths);
+  const standout = unit.features.maid ? " · غرفة خادمة" : unit.features.balcony ? " · بلكونة" : "";
+  const metaLine = `${bedsLabel(unit.beds)} · ${bathsCard} · ${fmtArea(unit.areaM2)} م²${standout}`;
   const metaEn = `${unit.beds} bed · ${unit.baths} bath · ${fmtArea(unit.areaM2)} m²`;
 
   if (st === "sold") {
@@ -96,14 +100,13 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
         <div className="flex items-center justify-between gap-3 px-3.5 py-3">
           <span className="flex flex-col gap-0.5 min-w-0">
             <Link href={link} className="text-body font-extrabold text-ink no-underline hover:underline">
-              {en ? `Apartment, model ${unit.model} · ${unit.buildingNameAr}` : `${unit.nameAr} · ${unit.buildingNameAr}`}
+              {en ? `Apartment, model ${unit.model} · ${BUILDINGS[unit.building].nameEn}` : `${unit.nameAr} · ${unit.buildingNameAr}`}
             </Link>
             <span className="text-caption">{en ? metaEn : metaLine}</span>
           </span>
           <span className="flex flex-col items-end shrink-0">
             <Price value={unit.priceSar} sign={false} className="text-h3 font-extrabold line-through" />
             {soldOn && <span className="text-caption">{en ? `Sold ${soldOn}` : `بيعت ${soldOn}`}</span>}
-            <span className="text-caption">{en ? "For reference only" : "للمرجع فقط"}</span>
           </span>
         </div>
         <Button variant="ghost" size="s" href={waLink(text)} className="mx-3.5 mb-3 h-11 text-label font-bold">
@@ -121,7 +124,7 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
         <div className="relative">
           <ImageSlot slotId={cover} tier={imageTier} src={src} cut="xl" className="h-42.5" showId={false} lang={lang} unit={slotUnit} />
           <StatusBadge status="reserved" lang={lang} className="absolute top-3 start-3" />
-          <BuildingTag className="absolute bottom-0 end-0">{en ? `${unit.buildingNameAr} building` : `عمارة ${unit.buildingNameAr}`}</BuildingTag>
+          <BuildingTag className="absolute bottom-0 end-0">{en ? `${BUILDINGS[unit.building].nameEn} building` : `عمارة ${unit.buildingNameAr}`}</BuildingTag>
         </div>
         <div className="flex items-start justify-between gap-3 px-3.5 pt-3 pb-2">
           <Link href={link} className="flex flex-col gap-0.5 min-w-0 no-underline text-ink">
@@ -130,7 +133,7 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
           </Link>
           {until && <span className="shrink-0 pt-1 text-caption text-muted">{en ? `Reserved until ${until}` : `محجوز حتى ${until}`}</span>}
         </div>
-        <PriceBand price={unit.priceSar} ppm={perM} variant="reserved" size="s" ppmLabel={en ? "per m²" : "للمتر"} />
+        <PriceBand price={unit.priceSar} ppm={perM} variant="reserved" size="s" ppmLabel={en ? "per m²" : "للمتر"} lang={lang} />
         <div className="flex gap-2 px-3.5 pt-2.5 pb-3">
           <Button variant="ghost" size="s" href={waLink(text)} className="flex-1 h-11.5 text-label font-extrabold">
             {en ? "Tell me if the reservation is cancelled" : "أبلغني إن أُلغي الحجز"}
@@ -157,7 +160,7 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
             {badge}
             {projectName && (
               <BuildingTag href={projectHref} className="absolute bottom-0 end-0">
-                {projectName} · {unit.buildingNameAr}
+                {projectName} · {en ? BUILDINGS[unit.building].nameEn : unit.buildingNameAr}
               </BuildingTag>
             )}
           </div>
@@ -181,7 +184,7 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
               </div>
             ))}
           </div>
-          <PriceBand price={unit.priceSar} ppm={perM} variant="dark" size="m" stacked ppmLabel={en ? "per m²" : "للمتر المربع"} />
+          <PriceBand price={unit.priceSar} ppm={perM} variant="dark" size="m" stacked ppmLabel={en ? "per m²" : "للمتر المربع"} lang={lang} />
           {tags.length > 0 && (
             <div className="flex flex-wrap gap-1.5 px-3.5 pt-3">
               {tags.map((t) => (
@@ -210,7 +213,7 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
           <ImageSlot slotId={cover} tier={imageTier} src={src} cut="xl" className="h-42.5" showId={false} lang={lang} unit={slotUnit} />
         </Link>
         {badge}
-        <BuildingTag className="absolute bottom-0 end-0">{en ? `${unit.buildingNameAr} building` : `عمارة ${unit.buildingNameAr}`}</BuildingTag>
+        <BuildingTag className="absolute bottom-0 end-0">{en ? `${BUILDINGS[unit.building].nameEn} building` : `عمارة ${unit.buildingNameAr}`}</BuildingTag>
       </div>
       <div className="flex items-start justify-between gap-3 px-3.5 pt-3 pb-2">
         <Link href={link} className="flex flex-col gap-0.5 min-w-0 no-underline text-ink">
@@ -219,7 +222,7 @@ export function UnitCard({ unit, href, projectName, projectHref, districtName, d
         </Link>
         {deliveryLabel && <span className="shrink-0 pt-1 text-caption text-muted text-end">{deliveryLabel}</span>}
       </div>
-      <PriceBand price={unit.priceSar} ppm={perM} variant="dark" size="s" ppmLabel={en ? "per m²" : "للمتر"} />
+      <PriceBand price={unit.priceSar} ppm={perM} variant="dark" size="s" ppmLabel={en ? "per m²" : "للمتر"} lang={lang} />
       <div className="flex gap-2 px-3.5 pt-2.5 pb-3">
         <Button variant="whatsapp" size="s" href={waLink(text)} className="flex-1 h-11.5 text-label">
           {en ? "WhatsApp" : "واتساب"}

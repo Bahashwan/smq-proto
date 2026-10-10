@@ -25,9 +25,11 @@ export interface PriceBandProps {
   /** extra line under the band content */
   children?: ReactNode;
   className?: string;
+  /** en: «690,000 SAR» as the EN boards print it (no riyal sign) */
+  lang?: "ar" | "en";
 }
 
-export function PriceBand({ price, ppm, area, variant = "dark", size = "s", ppmLabel = "للمتر المربع", soldLabel, cut, stacked, children, className }: PriceBandProps) {
+export function PriceBand({ price, ppm, area, variant = "dark", size = "s", ppmLabel = "للمتر المربع", soldLabel, cut, stacked, children, className, lang = "ar" }: PriceBandProps) {
   const perM = ppm ?? (area ? calcPpm(price, area) : undefined);
   const priceCls = size === "s" ? "text-h2" : size === "m" ? "text-price-s" : "text-price";
   if (variant === "sold") {
@@ -42,7 +44,13 @@ export function PriceBand({ price, ppm, area, variant = "dark", size = "s", ppmL
   const reserved = variant === "reserved";
   return (
     <div className={cx("flex items-center justify-between gap-3 px-3.5", size === "l" ? "py-5" : size === "m" ? "py-3.5" : "py-2.5", reserved ? "bg-ink-2 text-paper" : "bg-ink text-paper", cut && "cut-l", className)}>
-      <Price value={price} className={cx("leading-none", priceCls)} signClassName={reserved ? "text-on-ink-muted" : "text-gold"} />
+      {lang === "en" ? (
+        <span className={cx("leading-none tnum whitespace-nowrap", priceCls)} dir="ltr">
+          {fmtNum(price)} <span className={cx("text-label font-bold", reserved ? "text-on-ink-muted" : "text-gold")}>SAR</span>
+        </span>
+      ) : (
+        <Price value={price} className={cx("leading-none", priceCls)} signClassName={reserved ? "text-on-ink-muted" : "text-gold"} />
+      )}
       {perM !== undefined &&
         (stacked ? (
           <span className="flex flex-col items-end leading-tight text-end">
