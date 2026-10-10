@@ -17,7 +17,9 @@
     "images:convert": "tsx scripts/images/convert.ts",
     "postbuild": "node scripts/postbuild.mjs",
     "coverage": "tsx scripts/check-coverage.ts",
-    "qa": "tsx scripts/qa/smoke.ts"
+    "qa": "tsx scripts/qa/smoke.ts",
+    "qa:tours": "tsx scripts/qa/tours.ts",
+    "qa:flows": "tsx scripts/qa/flows.ts"
   },
   "dependencies": {
     "@fontsource-variable/noto-kufi-arabic": "^5.3.0",
