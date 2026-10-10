@@ -119,14 +119,14 @@ export function PartnersPage() {
               {dragging === r.id && <span aria-hidden className="absolute inset-x-0 -top-px h-[3px] bg-gold" />}
               <DragHandle {...handleProps(r.id, "اسحب")} />
               {r.hasLogo ? (
-                <button type="button" onClick={() => pickLogo(r.id)} aria-label={`استبدال شعار ${r.name}`} className="flex h-12 cursor-pointer flex-col items-center justify-center overflow-hidden bg-sand px-2 text-center text-[10px] font-extrabold leading-tight text-muted">
+                <button type="button" onClick={() => pickLogo(r.id)} aria-label={`استبدال شعار ${r.name}`} className="flex h-12 cursor-pointer flex-col items-center justify-center overflow-hidden border border-line bg-paper px-2 text-center text-[10px] font-extrabold leading-tight text-muted hover:bg-cream">
                   {r.logoSrc ? (
                     // eslint-disable-next-line @next/next/no-img-element -- a local preview of the partner's own file
                     <img src={r.logoSrc} alt="" className="max-h-10 max-w-full object-contain grayscale" />
                   ) : (
                     <>
                       <span>شعار PNG</span>
-                      <span className="truncate font-semibold">{r.name}</span>
+                      <span className="max-w-full truncate font-semibold">{shortName(r)}</span>
                     </>
                   )}
                 </button>
@@ -153,7 +153,7 @@ export function PartnersPage() {
                   <option key={k}>{k}</option>
                 ))}
               </select>
-              <input value={r.url} onChange={(e) => update(r.id, { url: e.target.value })} placeholder="https://" dir="ltr" aria-label={`رابط ${r.name}`} className={ctl("admin", "h-10 text-right text-[12px]")} />
+              <input value={r.url} onChange={(e) => update(r.id, { url: e.target.value })} placeholder="https://" dir="ltr" aria-label={`رابط ${r.name}`} className={ctl("admin", "h-10 text-[12px]")} />
               <span>
                 <Switch checked={r.visible && r.hasLogo} disabled={!r.hasLogo} onChange={(v) => update(r.id, { visible: v })} aria-label={r.hasLogo ? "مرئي" : "مرئي، معطّل بلا شعار"} />
               </span>
@@ -233,4 +233,10 @@ function AboutBlock({ status, logos }: { status: string; logos: { key: string; l
       </div>
     </div>
   );
+}
+
+/** The short name under «شعار PNG» on the logo tile («بنك 1», «المطوّر»). */
+function shortName(r: Row): string {
+  if (r.kind === "developer") return "المطوّر";
+  return r.name.replace(/^بنك شريك (\d+)$/, "بنك $1");
 }

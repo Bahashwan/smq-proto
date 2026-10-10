@@ -93,7 +93,7 @@ export function FaqPage() {
             const draft = f.draft || DRAFT_RE.test(f.a);
             const isDragging = dragging === f.id;
             return (
-              <div key={f.id} ref={rowRef(f.id)} className={cx(COLS, "relative border-t border-line px-3 py-3 text-label font-normal", isDragging ? "bg-sand" : draft ? "bg-cream-focus" : editId === f.id ? "bg-cream" : "bg-paper")}>
+              <div key={f.id} ref={rowRef(f.id)} className={cx(COLS, "relative border-t border-line px-3 py-4 text-label font-normal", isDragging ? "bg-sand" : draft ? "bg-cream-focus" : editId === f.id ? "bg-cream" : "bg-paper")}>
                 {isDragging && <span aria-hidden className="absolute inset-x-0 -top-px h-[3px] bg-gold" />}
                 <DragHandle {...handleProps(f.id)} />
                 <div className="flex min-w-0 flex-col gap-1">
@@ -102,7 +102,7 @@ export function FaqPage() {
                     {draft && <Mark>[مسودة إجابة]</Mark>}
                   </span>
                   <span className="line-clamp-2 text-[12px] text-muted">
-                    <MarkedText text={f.a} />
+                    <MarkedText text={f.a.replace(/^\s*\[مسودة إجابة\]\s*/, "")} />
                   </span>
                 </div>
                 <span className="text-[12px]">{(f.pages ?? []).join(" · ")}</span>
@@ -110,7 +110,7 @@ export function FaqPage() {
                   <Switch checked={f.published && !draft} disabled={draft} onChange={(v) => togglePublish(f, v)} aria-label={f.published && !draft ? "منشور" : "غير منشور"} />
                 </span>
                 <span className="flex justify-end">
-                  <button type="button" onClick={() => setQuery({ edit: f.id }, "replace")} aria-label={`تحرير «${f.q}»`} className="flex h-9 cursor-pointer items-center border-[1.5px] border-ink px-3 text-[12px] font-bold motion-hover transition-colors hover:bg-sand">
+                  <button type="button" onClick={() => setQuery({ edit: f.id }, "replace")} aria-label={`تحرير «${f.q}»`} className="flex h-9 w-full cursor-pointer items-center justify-center border-[1.5px] border-ink px-3 text-[12px] font-bold motion-hover transition-colors hover:bg-sand">
                     تحرير
                   </button>
                 </span>
@@ -174,7 +174,7 @@ function FaqEditor({ item, onClose, onDelete }: { item: FaqItem | null; onClose:
   const q = lang === "ar" ? qAr : qEn;
   const a = lang === "ar" ? aAr : aEn;
   return (
-    <section aria-label="تحرير سؤال" className="border-interactive bg-paper">
+    <section aria-label="تحرير سؤال" className="border-[1.5px] border-s-[5px] border-ink border-s-gold bg-paper">
       <header className="flex flex-wrap items-center justify-between gap-3 bg-sand px-4 py-3">
         <span className="text-[14px] font-extrabold">{item ? `تحرير · «${item.q}»` : "سؤال جديد"}</span>
         <LangSwitch value={lang} onChange={setLang} size="s" />
@@ -197,7 +197,7 @@ function FaqEditor({ item, onClose, onDelete }: { item: FaqItem | null; onClose:
           </span>
         </Field>
         <Field label="الإجابة" className="md:col-span-2" note={lang === "ar" && draft ? "الوسم [مسودة إجابة] في أول الإجابة يمنع النشر. محررة لا تستطيع حذفه؛ اطلبي التأكيد من سعود." : error || undefined} noteTone="gold">
-          <textarea value={a} rows={3} dir={lang === "en" ? "ltr" : undefined} placeholder={lang === "en" ? aAr : undefined} onChange={(e) => (lang === "ar" ? setAAr : setAEn)(e.target.value)} className={ctl(lang === "ar" && draft ? "error" : "admin", "min-h-[84px] py-2.5 leading-relaxed")} />
+          <textarea value={a} rows={4} dir={lang === "en" ? "ltr" : undefined} placeholder={lang === "en" ? aAr : undefined} onChange={(e) => (lang === "ar" ? setAAr : setAEn)(e.target.value)} className={ctl(lang === "ar" && draft ? "error" : "admin", "min-h-[120px] py-2.5 leading-relaxed")} />
         </Field>
       </div>
       <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-line px-4 py-3">

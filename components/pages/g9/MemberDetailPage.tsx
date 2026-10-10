@@ -6,7 +6,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { AdminButton, AdminSelect, Dialog, Drawer } from "@/components/admin";
-import { DistrictMultiSelect, HexCell, StagePill, fmtReply } from "@/components/alliance";
+import { DistrictMultiSelect, HexCell, REFERRAL_STAGE_WORD, fmtReply } from "@/components/alliance";
 import { MarkedText } from "@/components/ui";
 import { analytics } from "@/data/analytics";
 import { districtAr, districts, SECTORS } from "@/data/districts";
@@ -54,13 +54,16 @@ function Bars({ title, tone, rows }: { title: string; tone: "gold" | "ink"; rows
   );
 }
 
+/** Referral stage tones: معاينة gold · تفاوض ink · إفراغ outline (Components3 stage pill), تعارف gold outline. */
+const STAGE_TONE = { intro: "goldOutline", viewing: "gold", negotiation: "ink", transfer: "outline", failed: "muted" } as const;
+
 type LogRow = { id: string; summary: string; other: string; stage: React.ReactNode; hot?: boolean; at: string };
 
 function StageTag({ children, tone }: { children: React.ReactNode; tone: "gold" | "ink" | "outline" | "goldOutline" | "muted" }) {
   return (
     <span
       className={cx(
-        "inline-flex min-w-[110px] justify-end px-2 py-1 text-[11px] font-extrabold",
+        "inline-flex w-[110px] justify-start px-2 py-1 text-[11px] font-extrabold",
         tone === "gold" && "bg-gold text-ink",
         tone === "ink" && "bg-ink text-paper",
         tone === "outline" && "border-interactive text-ink",
@@ -92,7 +95,7 @@ function useLog(o: Office | undefined): LogRow[] {
         summary: `${districtAr(r.districtSlug)} · ${kind} ${fmtNum(r.valueSar)} · ${mine ? `عرضه على طلب ${other}` : `طلبه، عرض ${other}`}`,
         other,
         hot: dispute,
-        stage: dispute ? <StageTag tone="ink">{`${r.stageLabelAr?.split(" · ")[0] ?? "تفاوض"} · نزاع`}</StageTag> : <StagePill stage={st} />,
+        stage: dispute ? <StageTag tone="ink">{`${REFERRAL_STAGE_WORD[st]} · نزاع`}</StageTag> : <StageTag tone={STAGE_TONE[st]}>{REFERRAL_STAGE_WORD[st]}</StageTag>,
       };
     });
     const refReqIds = new Set(refs.map((r) => r.requestId));

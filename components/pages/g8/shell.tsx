@@ -77,7 +77,7 @@ export function ContentHead({ trail, title, path, subtitle, actions, note }: { t
             )}
           </>
         }
-        subtitle={subtitle}
+        subtitle={subtitle ? <span className="font-normal leading-relaxed">{subtitle}</span> : undefined}
         actions={actions}
         note={note}
       />

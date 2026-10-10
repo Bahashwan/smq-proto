@@ -100,7 +100,7 @@ export function TestimonialsPage() {
             i < s.published ? (
               <span key={i} aria-hidden className="hex-flat block h-[22px] w-[26px] bg-gold" />
             ) : (
-              <span key={i} aria-hidden className="hex-flat flex h-[22px] w-[26px] items-center justify-center bg-gold">
+              <span key={i} aria-hidden className="hex-flat flex h-[22px] w-[26px] items-center justify-center bg-ink">
                 <span className="hex-flat block h-[18px] w-[22px] bg-paper" />
               </span>
             ),
@@ -127,11 +127,10 @@ export function TestimonialsPage() {
           {items.map((t) => {
             const live = t.published && t.consent;
             return (
-              <article key={t.id} className="flex flex-col gap-3 border-interactive bg-paper p-4">
-                <header className="flex items-start justify-between gap-3 text-label">
+              <article key={t.id} className={cx("flex flex-col bg-paper", t.consent ? "border-interactive" : "border-[1.5px] border-dashed border-ink")}>
+                <header className="flex items-start justify-between gap-3 border-b border-line px-4 py-3 text-label">
                   <span className="font-extrabold">
                     {[t.name, t.role, t.unitCode, t.date].filter(Boolean).join(" · ")}
-                    {t.sample && <span className="ms-2 inline-block border border-line px-1.5 text-caption font-semibold text-muted">نص تجريبي</span>}
                   </span>
                   <span className="flex shrink-0 items-center gap-2 text-[12px] font-bold">
                     {live ? "منشور" : <span className="border-[1.5px] border-ink px-1.5 py-px text-caption font-extrabold">مسودة</span>}
@@ -139,13 +138,16 @@ export function TestimonialsPage() {
                   </span>
                 </header>
                 {editing === t.id ? (
-                  <textarea value={t.text} onChange={(e) => updateT(t.id, { text: e.target.value })} rows={3} aria-label="نص الرأي" className={ctl("admin", "py-2.5 leading-relaxed")} />
+                  <textarea value={t.text} onChange={(e) => updateT(t.id, { text: e.target.value })} rows={3} aria-label="نص الرأي" className={ctl("admin", "m-4 w-auto py-2.5 leading-relaxed")} />
                 ) : (
-                  <p className={cx("text-body leading-relaxed", !live && "text-muted")}>{t.text}</p>
+                  <p className={cx("px-4 py-3 text-[15px] font-bold leading-relaxed", !live && "font-semibold text-muted")}>{t.text}</p>
                 )}
-                <footer className="mt-auto flex flex-wrap items-center justify-between gap-2 text-[12px]">
+                <footer className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-line px-4 py-3 text-[12px]">
                   {t.consent ? (
-                    <span className="text-muted">موافقة كتابية: نعم · {t.consentSource}</span>
+                    <span className="text-muted">
+                      موافقة كتابية: نعم · {t.consentSource}
+                      {t.sample && " · نص تجريبي"}
+                    </span>
                   ) : (
                     <span className="font-bold text-gold-text">موافقة كتابية: لا. النشر معطّل حتى تُسجَّل الموافقة</span>
                   )}
@@ -175,7 +177,7 @@ export function TestimonialsPage() {
               toast("أُضيف الرأي كمسودة · سجّل الموافقة لنشره", { kind: "ok" });
             }} />
           ) : (
-            <button type="button" onClick={() => setAdding(true)} className="flex cursor-pointer flex-col items-start gap-2 border-[1.5px] border-dashed border-ink bg-transparent p-4 text-start hover:bg-paper">
+            <button type="button" onClick={() => setAdding(true)} className="flex min-h-[200px] cursor-pointer flex-col items-center justify-center gap-2 border-[1.5px] border-dashed border-ink bg-paper p-6 text-center hover:bg-cream">
               <span className="text-[14px] font-extrabold">+ رأي جديد</span>
               <span className="text-[12px] text-muted">الاسم بالأحرف الأولى أو كما يفضّل العميل، رمز الوحدة إن وُجد، النص، ومصدر الموافقة.</span>
             </button>
@@ -208,11 +210,11 @@ export function TestimonialsPage() {
                 </span>
                 <span className="flex justify-end">
                   {p.tbc ? (
-                    <button type="button" onClick={() => confirmProof(p)} className="flex h-9 cursor-pointer items-center bg-ink px-3 text-[12px] font-extrabold text-paper hover:bg-ink-2">
+                    <button type="button" onClick={() => confirmProof(p)} className="flex h-9 w-full cursor-pointer items-center justify-center border-[1.5px] border-ink bg-paper px-3 text-[12px] font-extrabold hover:bg-sand">
                       أكّد
                     </button>
                   ) : p.computed ? null : (
-                    <Link href="/admin/content/site-settings" className="flex h-9 items-center border-[1.5px] border-ink px-3 text-[12px] font-bold text-ink no-underline hover:bg-sand">
+                    <Link href="/admin/content/site-settings" className="flex h-9 w-full items-center justify-center border-[1.5px] border-ink px-3 text-[12px] font-bold text-ink no-underline hover:bg-sand">
                       تحرير
                     </Link>
                   )}

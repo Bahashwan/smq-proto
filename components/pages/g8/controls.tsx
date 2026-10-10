@@ -7,17 +7,17 @@ import { cx } from "@/lib/format";
 export type CtlTone = "admin" | "tbc" | "active" | "computed" | "error";
 
 const FRAME: Record<CtlTone, string> = {
-  admin: "border-ink bg-paper",
-  tbc: "border-gold bg-cream-focus",
-  active: "border-gold bg-paper",
-  computed: "border-line bg-sand text-muted",
-  error: "border-gold bg-cream-focus border-2",
+  admin: "border-[1.5px] border-ink bg-paper",
+  tbc: "border-[1.5px] border-gold bg-cream-focus",
+  active: "border-[1.5px] border-gold bg-paper",
+  computed: "border-[1.5px] border-line bg-sand text-muted",
+  error: "border-2 border-gold bg-cream-focus",
 };
 
 /** Control classes: 44px inputs, 1.5px frame, gold focus. */
 export function ctl(tone: CtlTone = "admin", extra?: string) {
   return cx(
-    "w-full min-w-0 border-[1.5px] px-3 text-[14px] font-semibold text-ink placeholder:font-normal placeholder:text-disabled focus:border-gold focus:bg-cream-focus focus-visible:outline-0 disabled:text-disabled",
+    "w-full min-w-0 px-3 text-[14px] font-semibold text-ink placeholder:font-normal placeholder:text-disabled focus:border-gold focus:bg-cream-focus focus-visible:outline-0 disabled:text-disabled",
     FRAME[tone],
     extra,
   );

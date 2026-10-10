@@ -6,7 +6,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { AdminButton } from "@/components/admin";
-import { FalBadge, fmtReply } from "@/components/alliance";
+import { daysLabel, fmtReply } from "@/components/alliance";
 import { MarkedText } from "@/components/ui";
 import { districtAr, SECTORS } from "@/data/districts";
 import { offices } from "@/data/offices";
@@ -45,11 +45,23 @@ export function LedgerCells({ o, max }: { o: Office; max: number }) {
   );
 }
 
+/** «موثّقة» · «تنتهي بعد 24 يوماً» · «موقوف»: the short licence chip of the members table (hexagon + word). */
+function LicenceChip({ tone, children }: { tone: "ok" | "soon" | "off"; children: React.ReactNode }) {
+  return (
+    <span className={cx("inline-flex items-center gap-1.5 px-1.5 py-0.5 text-[11px] font-extrabold", tone === "soon" ? "border-hairline bg-paper" : "bg-sand", tone === "off" && "text-muted")}>
+      <span aria-hidden className={cx("hex-flat relative inline-block h-2 w-2.5 shrink-0", tone === "ok" ? "bg-gold" : tone === "soon" ? "bg-ink" : "bg-line")}>
+        {tone === "soon" && <span className="hex-flat absolute inset-[1.5px] bg-paper" />}
+      </span>
+      {children}
+    </span>
+  );
+}
+
 export function LicenceCell({ o }: { o: Office }) {
   if (o.status === "suspended")
     return (
       <span className="flex flex-col items-start gap-1">
-        <FalBadge suspended />
+        <LicenceChip tone="off">موقوف</LicenceChip>
         <span className="text-[12px] text-muted">{o.suspendedReason}</span>
       </span>
     );
@@ -57,7 +69,7 @@ export function LicenceCell({ o }: { o: Office }) {
   const soon = left <= 30;
   return (
     <span className="flex flex-col items-start gap-1">
-      <FalBadge verified expiringInDays={soon ? left : undefined} />
+      {soon ? <LicenceChip tone="soon">{`تنتهي بعد ${daysLabel(left)}`}</LicenceChip> : <LicenceChip tone="ok">موثّقة</LicenceChip>}
       {soon ? (
         <span className="text-[12px] font-bold text-gold-text">{`${fmtDate(o.licence.expiresOn)}${o.licenceReminded ? " · ذُكِّر" : ""}`}</span>
       ) : (
@@ -116,7 +128,7 @@ export function MembersPage() {
           <thead>
             <tr className="border-b-[1.5px] border-ink bg-sand text-[11px] font-extrabold text-muted">
               {["المكتب", "الجهة", "الأحياء", "التخصص", "الرخصة", "الميزان · أعطى / استقبل", "متوسط الرد", ""].map((h, i) => (
-                <th key={i} scope="col" className="px-4 py-3.5 text-start font-extrabold">
+                <th key={i} scope="col" className="whitespace-nowrap px-4 py-3.5 text-start font-extrabold">
                   {h}
                 </th>
               ))}
