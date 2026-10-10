@@ -123,14 +123,14 @@ function Eyebrow({ hub, crumb }: { hub?: boolean; crumb?: boolean }) {
   );
 }
 
-/** Phone hero of the add steps (Add-Step1-M / Add-Step2-M / Add-Step2-Building-M / Add-M) */
-export function HeroPhone({ text, hub, className }: { text?: ReactNode; hub?: boolean; className?: string }) {
+/** Phone hero of the add steps (Add-Step1-M / Add-Step2-M / Add-Step2-Building-M / Add-M; Add-M sets its line at 14px) */
+export function HeroPhone({ text, hub, className, textClassName = "text-label" }: { text?: ReactNode; hub?: boolean; className?: string; textClassName?: string }) {
   return (
     <section className={cx("bg-gold text-ink md:hidden", HERO_CUT_PHONE, className)}>
       <Container className="flex flex-col gap-1.5 pb-11 pt-6">
         <Eyebrow hub={hub} />
         <h1 className="m-0 text-h1">أضف عقارك</h1>
-        {text && <p className="m-0 text-label font-normal leading-relaxed text-on-gold-muted">{text}</p>}
+        {text && <p className={cx("m-0 font-normal leading-relaxed text-on-gold-muted", textClassName)}>{text}</p>}
       </Container>
     </section>
   );
@@ -168,13 +168,13 @@ export function HowItWorks({ variant }: { variant: "phone" | "desktop" }) {
       </h2>
       <ol className="m-0 flex list-none flex-col p-0">
         {HOW.map((s, i) => (
-          <li key={s.t} className={cx("flex items-start gap-3.5", phone ? "py-3.5" : "px-6 py-4.5", i > 0 && "border-t border-line")}>
+          <li key={s.t} className={cx("flex items-start", phone ? "gap-3.5 py-3.5" : "gap-4 px-6 py-5", i > 0 && "border-t border-line")}>
             <HexBadge tone={i === 0 ? "ink" : "outline"} className={phone ? "size-10 text-label" : "size-11 text-body"}>
               {i + 1}
             </HexBadge>
-            <span className="flex flex-col gap-1 pt-0.5">
-              <span className={cx("font-extrabold", phone ? "text-body" : "text-h3")}>{s.t}</span>
-              <span className={cx("font-normal text-muted", phone ? "text-caption leading-relaxed" : "text-label")}>{s.d}</span>
+            <span className={cx("flex flex-col pt-0.5", phone ? "gap-1" : "gap-0.5")}>
+              <span className="text-body font-extrabold">{s.t}</span>
+              <span className={cx("font-normal leading-relaxed text-muted", phone ? "text-caption" : "text-label")}>{s.d}</span>
             </span>
           </li>
         ))}
@@ -188,11 +188,11 @@ export function HeroDesktopIntro() {
   return (
     <Container className="hidden pt-12 md:block">
       <div className="grid grid-cols-2 items-stretch gap-8">
-        <section className="flex flex-col items-start gap-2 bg-gold px-10 pb-24 pt-10 text-ink [clip-path:polygon(0_0,100%_0,100%_100%,64px_100%,0_calc(100%-37px))]">
+        <section className="flex flex-col items-start gap-3.5 bg-gold p-10 text-ink [clip-path:polygon(0_0,100%_0,100%_100%,64px_100%,0_calc(100%-37px))]">
           <Eyebrow />
           <h1 className="m-0 text-display">أضف عقارك</h1>
-          <p className="m-0 max-w-xl text-body font-normal leading-relaxed text-on-gold-muted">نموذج من ثلاث خطوات يأخذ دقيقتين. بعدها نتواصل معك خلال 24 ساعة، نصور، وننشر لعملاء جاهزين.</p>
-          <a href={waLink(WA_ADD)} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex h-13 items-center gap-2.5 bg-ink px-5 text-label font-extrabold text-paper no-underline hover:bg-ink-2 motion-hover transition-colors">
+          <p className="m-0 max-w-120 text-body font-normal text-on-gold-muted">نموذج من ثلاث خطوات يأخذ دقيقتين. بعدها نتواصل معك خلال 24 ساعة، نصور، وننشر لعملاء جاهزين.</p>
+          <a href={waLink(WA_ADD)} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex h-13 items-center gap-2.5 bg-ink px-5 text-label font-extrabold text-paper no-underline hover:bg-ink-2 motion-hover transition-colors">
             <WhatsAppIcon size={18} />
             تفضّل واتساب؟ أرسل الصك والصور مباشرة
           </a>
@@ -384,7 +384,7 @@ export function Counter({ label, value, onChange, min = 0, max = 99, id }: { lab
       <span id={lid} className="text-caption font-semibold text-muted">
         {label}
       </span>
-      <div role="group" aria-labelledby={lid} className="grid h-12 grid-cols-3 border-interactive bg-paper">
+      <div role="group" aria-labelledby={lid} className="grid h-12 grid-cols-[3rem_minmax(0,1fr)_3rem] border-interactive bg-paper">
         <button type="button" aria-label="أقل" className={btn} disabled={value <= min} onClick={() => onChange(Math.max(min, value - 1))}>
           −
         </button>
@@ -440,7 +440,7 @@ export function MoneyField({ id, label, value, onChange, error, labelClassName =
       <label htmlFor={id} className={cx(labelClassName, error && "text-gold-text")}>
         {label}
       </label>
-      <div className={cx("flex h-14 items-stretch bg-paper", error ? "border-error bg-cream-focus" : "border-interactive has-[:focus]:border-gold has-[:focus]:bg-cream-focus")}>
+      <div className={cx("flex h-13 items-stretch bg-paper md:h-14", error ? "border-error bg-cream-focus" : "border-interactive has-[:focus]:border-gold has-[:focus]:bg-cream-focus")}>
         <NumberInput
           id={id}
           value={value}
@@ -449,7 +449,7 @@ export function MoneyField({ id, label, value, onChange, error, labelClassName =
           aria-describedby={error ? `${id}-error` : undefined}
           className="min-w-0 flex-1 bg-transparent px-3.5 text-h3 font-extrabold text-ink outline-none tnum"
         />
-        <span className="flex w-11 shrink-0 items-center justify-center border-s-[1.5px] border-ink text-label text-muted md:w-12">
+        <span className="flex shrink-0 items-center justify-center border-s-[1.5px] border-ink px-3 text-h3 text-ink md:px-3.5">
           <RiyalSign />
         </span>
       </div>
@@ -458,8 +458,10 @@ export function MoneyField({ id, label, value, onChange, error, labelClassName =
   );
 }
 
-/** One file chosen locally (the power of attorney, the brokerage contract, the CV): dashed tile → the file name */
-export function FileTile({ id, label, accept, prompt, file, onFile, hint }: { id: string; label: ReactNode; accept: string; prompt: string; file: string; onFile: (name: string) => void; hint?: ReactNode }) {
+/** One file chosen locally (the power of attorney, the brokerage contract, the CV): dashed tile (icon and prompt at the
+ *  line start, as Add-Step3-D and Marketer-M/D draw it) → the file name.
+ *  `cream` = the cream tile of a white form (Marketer CV); white inside the cream role block (Add-Step3-D). */
+export function FileTile({ id, label, accept, prompt, file, onFile, hint, cream }: { id: string; label: ReactNode; accept: string; prompt: string; file: string; onFile: (name: string) => void; hint?: ReactNode; cream?: boolean }) {
   return (
     <div className="flex min-w-0 flex-col gap-1">
       <label htmlFor={id} className="text-caption font-semibold text-muted">
@@ -475,7 +477,7 @@ export function FileTile({ id, label, accept, prompt, file, onFile, hint }: { id
           </button>
         </div>
       ) : (
-        <span className="relative flex h-12 cursor-pointer items-center justify-center gap-2 border-[1.5px] border-dashed border-ink bg-paper text-label font-bold text-ink hover:bg-cream has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-gold">
+        <span className={cx("relative flex h-12 cursor-pointer items-center gap-2.5 border-[1.5px] border-dashed border-ink px-3 text-label font-bold text-ink has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-gold", cream ? "bg-cream hover:bg-sand" : "bg-paper hover:bg-cream")}>
           <UploadIcon />
           {prompt}
           <input

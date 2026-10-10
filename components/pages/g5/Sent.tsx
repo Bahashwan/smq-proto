@@ -39,10 +39,10 @@ export function NumberBlock({ no, line }: { no: string; line: ReactNode }) {
     }
   };
   return (
-    <div className="flex flex-col gap-2 bg-ink px-5 py-5 text-paper cut-l md:gap-2.5 md:px-6 md:py-7">
+    <div className="flex flex-col gap-2 bg-ink px-5 py-5 text-paper cut-l md:px-6.5 md:py-6">
       <span className="text-caption font-bold text-on-ink-muted md:text-label">رقم الطلب · احفظه للمتابعة</span>
       <div className="flex items-center justify-between gap-3">
-        <span className="text-h1 font-extrabold leading-none tnum md:text-display" dir="ltr">
+        <span className="text-h1 font-extrabold leading-none tnum" dir="ltr">
           {no}
         </span>
         <button
@@ -75,7 +75,7 @@ export function SentSteps({ steps }: { steps: SentStep[] }) {
             {i + 1}
           </HexBadge>
           <span className="text-label font-normal leading-relaxed md:hidden">
-            <strong className="font-extrabold">{s.title}:</strong> {s.phone}
+            <strong className="font-extrabold">{`${s.title}:`}</strong> {s.phone}
           </span>
           <span className="hidden flex-col gap-1 md:flex">
             <span className="text-label font-extrabold">{s.title}</span>
@@ -90,15 +90,15 @@ export function SentSteps({ steps }: { steps: SentStep[] }) {
 /** «ملخص ما أرسلت» (desktop) */
 export function SentSummary({ rows }: { rows: { label: string; value: ReactNode }[] }) {
   return (
-    <section aria-labelledby="sent-summary" className="hidden flex-col gap-2.5 border-interactive px-5 py-5 text-label font-normal md:flex">
+    <section aria-labelledby="sent-summary" className="hidden flex-col gap-2 border-interactive px-4.5 py-4 text-label font-normal leading-relaxed md:flex">
       <h2 id="sent-summary" className="m-0 text-caption font-extrabold">
         ملخص ما أرسلت
       </h2>
-      <dl className="m-0 flex flex-col gap-2.5">
+      <dl className="m-0 flex flex-col gap-2">
         {rows.map((r) => (
-          <div key={r.label} className="grid grid-cols-[minmax(0,0.75fr)_minmax(0,1fr)] gap-4">
-            <dt className="text-muted">{r.label}</dt>
-            <dd className="m-0 tnum">{r.value}</dd>
+          <div key={r.label} className="flex items-baseline justify-between gap-4">
+            <dt className="shrink-0 text-muted">{r.label}</dt>
+            <dd className="m-0 text-end tnum">{r.value}</dd>
           </div>
         ))}
       </dl>
@@ -111,12 +111,12 @@ export function SentLayout({ text, number, steps, actions, summary }: { text: Re
   return (
     <Container className="pt-8 md:pt-14">
       <div className="flex flex-col gap-6 md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:gap-x-12 md:gap-y-6">
-        <div className="order-1 flex flex-col items-start gap-3 md:col-start-1 md:row-start-1">
+        <div className="order-1 flex flex-col items-start gap-3 md:col-start-1 md:row-start-1 md:gap-5.5">
           <HexBadge tone="gold" className="size-14 md:size-16">
             <CheckIcon size={26} />
           </HexBadge>
-          <h1 className="m-0 mt-1 text-h1">وصلنا طلبك</h1>
-          <p className="m-0 text-body font-normal leading-relaxed text-ink-2">{text}</p>
+          <h1 className="m-0 mt-1 text-h1 md:mt-0">وصلنا طلبك</h1>
+          <p className="m-0 text-body font-normal leading-relaxed text-ink-2 md:max-w-130">{text}</p>
         </div>
         <div className="order-2 flex flex-col gap-4 md:col-start-2 md:row-span-3 md:row-start-1">
           {number}

@@ -68,7 +68,7 @@ export function AddStep3() {
 
   return (
     <Shell>
-      <HeroPhone text="نموذج من ثلاث خطوات يأخذ دقيقتين. بعدها نتواصل معك خلال 24 ساعة، نصور، وننشر لعملاء جاهزين." />
+      <HeroPhone text="نموذج من ثلاث خطوات يأخذ دقيقتين. بعدها نتواصل معك خلال 24 ساعة، نصور، وننشر لعملاء جاهزين." textClassName="text-body" />
       <Container className="mt-7 md:hidden">
         <HowItWorks variant="phone" />
       </Container>
@@ -129,7 +129,7 @@ export function AddStep3() {
                     value={draft.phone}
                     onChange={(e) => update({ phone: e.target.value })}
                     error={errors[FIELD.phone]}
-                    hint={<span className="text-gold-text md:hidden">سنرسل عليه رسالة تأكيد. الرقم مطلوب.</span>}
+                    hint={<span className="font-normal text-gold-text md:hidden">سنرسل عليه رسالة تأكيد. الرقم مطلوب.</span>}
                   />
                   <TextField id={FIELD.email} label="البريد الإلكتروني (اختياري)" type="email" autoComplete="email" ltr value={draft.email} onChange={(e) => update({ email: e.target.value })} error={errors[FIELD.email]} />
                   <TileGroup
@@ -151,13 +151,13 @@ export function AddStep3() {
                 onChange={(e) => update({ consent: e.target.checked })}
                 error={errors[FIELD.consent]}
                 label={
-                  <>
-                    أوافق على تواصل SMQ معي بخصوص هذا العقار، وأقر أني المالك أو مفوّض عنه<span className="md:hidden">.</span>
-                    <span className="hidden md:inline">، وأن المعلومات صحيحة.</span>{" "}
+                  <span className="font-normal text-muted md:text-ink-2">
+                    <span className="md:hidden">أوافق على تواصل SMQ معي بخصوص هذا العقار، وأقر أني المالك أو مفوّض عنه.</span>
+                    <span className="hidden md:inline">أوافق على تواصل SMQ معي بخصوص هذا العقار، وأقر أني المالك أو مفوّض عنه، وأن المعلومات صحيحة.</span>{" "}
                     <Link href="/privacy" className="text-gold-text underline underline-offset-2 hover:text-ink">
                       سياسة الخصوصية
                     </Link>
-                  </>
+                  </span>
                 }
               />
               <NavRow back={`/add/details${query}`} next="أرسل الطلب" />

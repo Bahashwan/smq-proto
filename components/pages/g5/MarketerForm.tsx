@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState, type FormEvent } from "react";
 import { DistrictMultiSelect } from "@/components/alliance";
-import { Button, Checkbox, Container, MarkedText, SelectField, TextArea, TextField } from "@/components/ui";
+import { Button, Checkbox, Container, Mark, MarkedText, SelectField, TextArea, TextField } from "@/components/ui";
 import { forms } from "@/data/content";
 import { districts } from "@/data/districts";
 import { useHasHydrated } from "@/lib/location";
@@ -60,14 +60,15 @@ function Tiles() {
   );
 }
 
+/** The ink bar reads left to right as on the boards: the link at the line end, «مثال الرابط» (phone) at the start */
 function LinkBar() {
   return (
-    <div className="flex items-center justify-between gap-3 bg-ink px-4 py-3.5 text-paper cut-m md:px-5">
+    <div className="flex items-center justify-end gap-3 bg-ink px-4 py-3.5 text-paper cut-m md:px-5">
+      <span className="me-auto text-caption font-normal text-on-ink-muted md:hidden">مثال الرابط</span>
       <span className="inline-flex items-center gap-2.5 font-mono text-label" dir="ltr">
         <span aria-hidden className="inline-block size-2.5 bg-gold hex-flat" />
         smq-re.com/r/your-name
       </span>
-      <span className="text-caption font-normal text-on-ink-muted md:hidden">مثال الرابط</span>
     </div>
   );
 }
@@ -153,9 +154,15 @@ export function MarketerForm() {
               طلب الانضمام
             </h2>
             {marks && (
-              <span className="max-w-48 text-end text-caption font-extrabold leading-relaxed text-gold-text md:max-w-none">
-                <MarkedText text="الحقول [للتأكيد] حتى يصل النموذج الحقيقي" />
-              </span>
+              <>
+                <span className="max-w-48 text-end text-caption font-extrabold leading-relaxed text-gold-text md:hidden">
+                  <MarkedText text="الحقول [للتأكيد] حتى يصل النموذج الحقيقي" />
+                </span>
+                {/* Marketer-D outlines the whole note as one chip */}
+                <span className="hidden md:block">
+                  <Mark>الحقول للتأكيد حتى يصل النموذج الحقيقي</Mark>
+                </span>
+              </>
             )}
           </div>
           <form noValidate onSubmit={submit} aria-labelledby="mk-form" className="flex flex-col gap-4 px-4 py-5 md:grid md:grid-cols-2 md:gap-x-4 md:gap-y-5 md:px-6 md:py-6">
@@ -169,10 +176,10 @@ export function MarketerForm() {
             <TextField id="mk-social" label="حسابات التواصل" placeholder="إكس، إنستغرام، سناب: اسم المستخدم" value={draft.social} onChange={(e) => update({ social: e.target.value })} wrapperClassName="md:order-6" />
             <TextArea id="mk-bio" label="نبذة" placeholder="سطران: أين تسوّق وكيف" rows={3} value={draft.bio} onChange={(e) => update({ bio: e.target.value })} wrapperClassName="md:order-8 md:col-span-2" />
             <div className="md:order-7">
-              <FileTile id="mk-cv" label="سيرة ذاتية (اختياري)" accept="application/pdf" prompt="PDF حتى 5 MB" file={draft.cv} onFile={(n) => update({ cv: n })} />
+              <FileTile id="mk-cv" label="سيرة ذاتية (اختياري)" accept="application/pdf" prompt="PDF حتى 5 MB" file={draft.cv} onFile={(n) => update({ cv: n })} cream />
             </div>
             <div className="md:order-9 md:col-span-2">
-              <Checkbox id={ID.consent} checked={draft.consent} onChange={(e) => update({ consent: e.target.checked })} error={errors[ID.consent]} label={<MarkedText text="أوافق على تواصل SMQ معي، وعلى شروط التسويق والعمولة [للتأكيد] عند قبولي." />} />
+              <Checkbox id={ID.consent} checked={draft.consent} onChange={(e) => update({ consent: e.target.checked })} error={errors[ID.consent]} label={<MarkedText text="أوافق على تواصل SMQ معي، وعلى شروط التسويق والعمولة [للتأكيد] عند قبولي." className="font-normal text-ink-2" />} />
             </div>
             <div className="flex flex-col gap-3 md:order-10 md:col-span-2">
               <Button variant="secondary" type="submit" className="w-full md:w-auto md:self-start">

@@ -5,17 +5,25 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { DoorCard } from "@/components/alliance";
-import { Container, MarkedText } from "@/components/ui";
+import { Container, Mark, MarkedText } from "@/components/ui";
 import { useMarks } from "@/lib/presenter";
 import { cx, waLink } from "@/lib/format";
 import { HUB_FOOTER, Shell } from "./parts";
 
 type Tone = "owners" | "offices" | "marketers";
 
-/** «تحصل على / نحتاج منك / الوقت» under a hairline */
+/** Hub-D: each door is at least 520px tall and its facts sit at the bottom, above the CTA, with the free space after
+ *  the description. DoorCard's text wrapper is the card's second-to-last child (the CTA is the last), so on desktop it
+ *  grows into a flex column and the facts' mt-auto reaches the bottom. */
+const DOOR_D = "md:min-h-130 md:[&>span>:nth-last-child(2)]:flex md:[&>span>:nth-last-child(2)]:grow md:[&>span>:nth-last-child(2)]:flex-col";
+/** the description + facts column inside a door (fills the grown wrapper on desktop) */
+const BODY = "flex flex-col gap-3 md:grow";
+
+/** «تحصل على / نحتاج منك / الوقت» under a hairline: 72px / 84px key column (Hub-M / Hub-D); on desktop pinned to the
+ *  bottom of the door, 14px above the CTA */
 function Facts({ tone, rows }: { tone: Tone; rows: { k: string; v: ReactNode }[] }) {
   return (
-    <span className={cx("mt-1 grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-2.5 border-t pt-4 text-caption leading-relaxed md:text-label", tone === "offices" ? "border-ink-2" : tone === "owners" ? "border-on-gold-muted/40" : "border-line")}>
+    <span className={cx("mt-1 grid grid-cols-[4.5rem_minmax(0,1fr)] gap-x-2.5 gap-y-1 border-t pt-2.5 text-caption leading-relaxed md:mb-1 md:mt-auto md:grid-cols-[5.25rem_minmax(0,1fr)] md:gap-x-3 md:gap-y-1.5 md:pt-3 md:text-label", tone === "offices" ? "border-ink-2" : tone === "owners" ? "border-gold-text" : "border-line")}>
       {rows.map((r) => (
         <span key={r.k} className="contents">
           <span className={cx("font-extrabold", tone === "offices" ? "text-gold" : "text-ink")}>{r.k}</span>
@@ -73,8 +81,9 @@ export function Hub() {
             title="عندك عقار؟"
             cta="أضف عقارك"
             size="l"
+            className={DOOR_D}
             text={
-              <span className="flex flex-col gap-3">
+              <span className={BODY}>
                 <span className="text-label font-normal leading-relaxed md:text-body">
                   نعرضه بسعر معلن لمشترين جاهزين، بعد تحقق وتصوير، بلا تكلفة عليك.<span className="hidden md:inline"> شقة، فيلا، أو عمارة بدخل.</span>
                 </span>
@@ -97,8 +106,9 @@ export function Hub() {
             cta="اعرف عن التحالف"
             icon={<Honeycomb />}
             size="l"
+            className={DOOR_D}
             text={
-              <span className="relative flex flex-col gap-3">
+              <span className={cx("relative", BODY)}>
                 <span className="text-label font-normal leading-relaxed md:text-body">
                   {pd(
                     "تحالف مكاتب جدة العقارية: نمرّر طلبات المشترين وعروض العقارات بين المكاتب لنقفل الصفقات أسرع، وكل تعارف مسجّل.",
@@ -124,14 +134,16 @@ export function Hub() {
             cta="انضم كمسوّق"
             icon={
               marks ? (
-                <span className="absolute end-5 top-5 text-caption font-bold text-gold-text md:end-6 md:top-6">
-                  <MarkedText text="الحقول [للتأكيد]" />
+                <span className="absolute end-5 top-5 md:end-6 md:top-6">
+                  {/* Hub-M / Hub-D outline the whole «الحقول [للتأكيد]» as one chip */}
+                  <Mark>الحقول للتأكيد</Mark>
                 </span>
               ) : null
             }
             size="l"
+            className={DOOR_D}
             text={
-              <span className="flex flex-col gap-3">
+              <span className={BODY}>
                 <span className="text-label font-normal leading-relaxed md:text-body">سوّق وحداتنا برابطك الخاص. كل زيارة وضغطة واتساب تُحسب لك، والعمولة مكتوبة قبل أن تبدأ.</span>
                 <span className="flex items-center gap-2.5 bg-sand px-3 py-2.5 font-mono text-caption font-bold text-ink" dir="ltr">
                   <span aria-hidden className="inline-block size-2.5 bg-gold hex-flat" />
