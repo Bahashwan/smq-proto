@@ -433,7 +433,7 @@ export function sentFromApproval(a: Approval): AddSent {
     attached: a.attachments.length > 0,
     photos: a.photosCount,
     timing: pick(TIMING, a.timing),
-    phone: a.phoneMasked,
+    phone: a.phoneLast4 ? `05X XXX ${a.phoneLast4}` : a.phoneMasked,
   };
 }
 

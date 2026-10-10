@@ -68,8 +68,9 @@ export function Footer({ variant = "ar", compact, settings, links, privacy = tru
   if (compact) {
     const items = links ?? FOOTER_COMPACT_AR;
     return (
-      <footer className={cx("bg-ink text-on-ink-muted text-caption font-normal", className)}>
-        <div className="container-smq flex flex-col gap-4 py-7 md:flex-row md:items-center md:justify-between md:gap-4 md:border-t md:border-ink-2 md:py-6">
+      <footer className={cx("bg-ink text-on-ink-muted text-caption font-normal md:pt-7 md:pb-6", className)}>
+        {/* desktop: 28px of footer, the ink-2 rule, then the line 20px below it (Results-D, Contact-D) */}
+        <div className="container-smq flex flex-col gap-4 py-7 md:flex-row md:items-center md:justify-between md:gap-4 md:border-t md:border-ink-2 md:pt-5 md:pb-0">
           <Link href="/" className="self-start no-underline" aria-label={BRAND_AR}>
             <Lockup tone="white" height={32} decorative className="md:h-7.5" />
           </Link>

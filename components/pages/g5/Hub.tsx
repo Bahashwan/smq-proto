@@ -13,9 +13,8 @@ import { HUB_FOOTER, Shell } from "./parts";
 type Tone = "owners" | "offices" | "marketers";
 
 /** Hub-D: each door is at least 520px tall and its facts sit at the bottom, above the CTA, with the free space after
- *  the description. DoorCard's text wrapper is the card's second-to-last child (the CTA is the last), so on desktop it
- *  grows into a flex column and the facts' mt-auto reaches the bottom. */
-const DOOR_D = "md:min-h-130 md:[&>span>:nth-last-child(2)]:flex md:[&>span>:nth-last-child(2)]:grow md:[&>span>:nth-last-child(2)]:flex-col";
+ *  the description (DoorCard size="l" grows its text column; the facts' md:mt-auto reaches the bottom). */
+const DOOR_D = "md:min-h-130";
 /** the description + facts column inside a door (fills the grown wrapper on desktop) */
 const BODY = "flex flex-col gap-3 md:grow";
 

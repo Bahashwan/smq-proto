@@ -28,18 +28,18 @@ export interface FieldShellProps {
 
 export function fieldControlClass({ error, disabled, state, size = "m" }: { error?: boolean; disabled?: boolean; state?: "focus"; size?: "m" | "s" }): string {
   return cx(
-    "w-full min-w-0 bg-paper text-ink font-semibold outline-none motion-hover transition-colors placeholder:text-disabled",
+    "w-full min-w-0 text-ink font-semibold outline-none motion-hover transition-colors placeholder:text-disabled",
     size === "m" ? "h-12 px-3 text-body" : "h-10 px-2.5 text-label",
-    error ? "border-error" : "border-interactive focus:border-gold focus:bg-cream-focus focus-visible:outline-none",
+    error ? "border-error bg-cream-focus" : "bg-paper border-interactive focus:border-gold focus:bg-cream-focus focus-visible:outline-none",
     state === "focus" && !error && "border-gold bg-cream-focus",
     disabled && "border-line bg-cream text-disabled cursor-not-allowed",
   );
 }
 
-/** Worded error message under a field: gold hexagon bullet + text (never an icon alone) */
+/** Worded error message under a field: gold hexagon bullet + ink text (never an icon alone; Contact-Error-M .msg) */
 export function ErrorText({ id, children, className }: { id?: string; children: ReactNode; className?: string }) {
   return (
-    <span id={id} className={cx("flex items-start gap-1.5 text-caption font-semibold text-gold-text", className)}>
+    <span id={id} className={cx("flex items-start gap-1.5 text-caption font-bold text-ink", className)}>
       <StatusDot tone="gold" size={2} className="mt-1.5" />
       <span>{children}</span>
     </span>
@@ -58,7 +58,7 @@ export function Hint({ id, children, className }: { id?: string; children: React
 export function FieldShell({ id, label, hint, error, required, requiredMark = "dot", disabled, state, className, children, as = "label", trailing }: FieldShellProps) {
   const Wrapper = as;
   return (
-    <Wrapper className={cx("flex flex-col gap-1 text-caption font-semibold", error ? "text-gold-text" : disabled ? "text-disabled" : state === "focus" ? "text-gold-text" : "text-muted", className)} {...(as === "label" ? { htmlFor: id } : {})}>
+    <Wrapper className={cx("flex flex-col gap-1 text-caption font-semibold", disabled ? "text-disabled" : state === "focus" && !error ? "text-gold-text" : "text-muted", className)} {...(as === "label" ? { htmlFor: id } : {})}>
       {(label || trailing) && (
         <span className="flex items-center justify-between gap-3">
           <span className="inline-flex items-center gap-1">
@@ -155,16 +155,18 @@ export const SelectField = forwardRef<HTMLSelectElement, SelectFieldProps>(funct
   );
 });
 
-export type TextAreaProps = Shared & TextareaHTMLAttributes<HTMLTextAreaElement> & { rows?: number; counter?: boolean };
+export type TextAreaProps = Shared & TextareaHTMLAttributes<HTMLTextAreaElement> & { rows?: number; counter?: boolean; /** the «60 / 600» counter in the label row (default) or under the box at the line end (Contact-Error-M) */ counterPlacement?: "label" | "below" };
 
-export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function TextArea({ label, hint, error, required, requiredMark, state, wrapperClassName, trailing, id, className, disabled, rows = 4, maxLength, counter = true, onChange, value, defaultValue, ...rest }, ref) {
+export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function TextArea({ label, hint, error, required, requiredMark, state, wrapperClassName, trailing, id, className, disabled, rows = 4, maxLength, counter = true, counterPlacement = "label", onChange, value, defaultValue, ...rest }, ref) {
   const auto = useId();
   const fid = id ?? `f-${auto}`;
   const [internal, setInternal] = useState(String(defaultValue ?? "").length);
   const count = value !== undefined ? String(value).length : internal;
-  const counterNode = maxLength && counter ? <span className="text-caption font-semibold text-muted tnum" dir="ltr">{`${count} / ${maxLength}`}</span> : trailing;
+  const counterNode = maxLength && counter ? <span className="text-caption font-semibold text-muted tnum" dir="ltr">{`${count} / ${maxLength}`}</span> : null;
+  // under the box the counter appears once there is text (Contact-M shows none on the empty form)
+  const below = counterPlacement === "below" && counterNode;
   return (
-    <FieldShell id={fid} label={label} hint={hint} error={error} required={required} requiredMark={requiredMark} disabled={disabled} state={state} className={wrapperClassName} trailing={counterNode}>
+    <FieldShell id={fid} label={label} hint={hint} error={error} required={required} requiredMark={requiredMark} disabled={disabled} state={state} className={wrapperClassName} trailing={below ? trailing : (counterNode ?? trailing)}>
       <textarea
         ref={ref}
         id={fid}
@@ -183,6 +185,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function 
         className={cx(fieldControlClass({ error: !!error, disabled, state }), "h-auto py-3 leading-relaxed resize-y", className)}
         {...rest}
       />
+      {below && count > 0 && <span className="self-end">{counterNode}</span>}
     </FieldShell>
   );
 });
@@ -307,12 +310,12 @@ export function ErrorSummary({ title, errors, className, autoFocus = true }: Err
         <StatusDot tone="gold" size={2.5} className="mt-1.5" />
         <span>{title}</span>
       </span>
-      <ul className="flex flex-col gap-1 ps-4.5 m-0 list-none">
+      <ul className="flex flex-col gap-1 p-0 m-0 list-none">
         {errors.map((e) => (
           <li key={e.id}>
             <a
               href={`#${e.id}`}
-              className="font-bold text-ink underline decoration-gold underline-offset-4 hover:text-gold-text"
+              className="font-bold text-gold-text underline underline-offset-4 hover:text-ink"
               onClick={(ev) => {
                 const el = document.getElementById(e.id);
                 if (el) {

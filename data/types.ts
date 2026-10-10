@@ -342,6 +342,7 @@ export interface Approval {
   role: ApprovalRole;
   submitterName: string;
   phoneMasked: string;
+  phoneLast4?: string; // the confirmation screens print «05X XXX 4821» (Add-Success-M / -D)
   purpose: "sell" | "rent";
   city: string;
   districtSlug: string;

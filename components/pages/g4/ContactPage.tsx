@@ -132,7 +132,7 @@ export function ContactPage() {
               <TextField id={ID.phone} label="رقم الجوال" type="tel" inputMode="numeric" autoComplete="tel" ltr placeholder="05XXXXXXXX" value={draft.phone} onChange={(e) => update("phone", e.target.value)} error={err("phone")} />
               <RadioGroup name="contact-method" label="طريقة الرد" options={METHODS} value={draft.method} onChange={(v) => update("method", v)} />
               <SelectField id="contact-subject" label="الموضوع" options={SUBJECTS} value={draft.subject} onChange={(e) => update("subject", e.target.value)} />
-              <TextArea id={ID.message} label="رسالتك" rows={4} maxLength={MESSAGE_MAX} value={draft.message} onChange={(e) => update("message", e.target.value)} error={err("message")} />
+              <TextArea id={ID.message} label="رسالتك" rows={4} maxLength={MESSAGE_MAX} counterPlacement="below" value={draft.message} onChange={(e) => update("message", e.target.value)} error={err("message")} />
               <Checkbox
                 id={ID.consent}
                 framed

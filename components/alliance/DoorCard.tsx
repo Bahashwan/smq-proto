@@ -8,8 +8,8 @@ import { HexDot } from "./HexCell";
  * «بطاقة الباب» on تعاون معنا. The three doors differ by material on purpose: owners = gold block with the big
  * cut, offices = ink with the honeycomb, marketers = outlined with the link motif. Hover draws a 6px gold rule at
  * the inline start (no shadow, no motion); focus is the theme's gold outline on the unclipped anchor. `size="l"` is
- * the hub's door (Hub-M, Hub-D): roomier padding, the h2 title, the CTA pinned to the bottom at 42/46px with its
- * arrow, and the card fills its grid row.
+ * the hub's door (Hub-M, Hub-D): roomier padding, the 26px / h2 title, the text column growing to the CTA, the CTA
+ * pinned to the bottom at 42/46px with its arrow, and the card fills its grid row.
  */
 export type DoorVariant = "owners" | "offices" | "marketers";
 
@@ -72,9 +72,10 @@ export function DoorCard({ variant, eyebrow, title, text, cta, href, icon, cut, 
         <span aria-hidden className="pointer-events-none absolute inset-y-0 start-0 w-1.5 bg-gold opacity-0 group-hover:opacity-100" />
         {variant === "offices" && decoration}
         <span className={cx("relative text-caption font-bold", eyebrowTone)}>{eyebrow}</span>
-        <b className={cx("relative", large ? "text-h2 leading-tight" : "text-h3")}>{title}</b>
+        <b className={cx("relative", large ? "text-[26px] leading-tight md:text-h2" : "text-h3")}>{title}</b>
         {variant === "marketers" && decoration}
-        {text && <span className={cx("relative", textTone)}>{text}</span>}
+        {/* on the large door the text grows so its last block (the hub's facts) can sit on the CTA with mt-auto */}
+        {text && <span className={cx("relative", large && "flex grow flex-col", textTone)}>{text}</span>}
         <span className={cx("relative inline-flex items-center gap-2 self-start font-extrabold", large ? "mt-auto h-10.5 px-4 text-label md:h-11.5 md:px-4.5" : "mt-1 h-9 min-h-9 px-3", button)}>
           {cta}
           {withArrow && <ArrowIcon size={16} className={variant === "owners" ? "text-gold" : undefined} />}
