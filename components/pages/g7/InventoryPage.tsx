@@ -184,20 +184,20 @@ export function InventoryPage() {
   const columns: Column<InvRow>[] = [
     { key: "code", label: "الكود", width: "72px", bold: true, ltr: true, render: (r) => <span className="font-bold">{r.code}</span> },
     { key: "name", label: "النموذج · العمارة", width: "minmax(110px,1.2fr)", render: (r) => <span className="font-extrabold text-ink">{r.name}</span> },
-    { key: "type", label: "النوع", width: "70px", render: (r) => r.typeAr },
-    { key: "beds", label: "غرف", width: "44px", render: (r) => (r.beds ?? "—") },
-    { key: "area", label: "م²", width: "64px", render: (r) => <span className="tnum">{r.areaM2 !== null ? r.areaM2.toFixed(2) : "—"}</span> },
+    { key: "type", label: "النوع", width: "70px", className: "font-normal", render: (r) => r.typeAr },
+    { key: "beds", label: "غرف", width: "44px", className: "font-normal", render: (r) => (r.beds ?? "—") },
+    { key: "area", label: "م²", width: "64px", className: "font-normal", render: (r) => <span className="tnum">{r.areaM2 !== null ? r.areaM2.toFixed(2) : "—"}</span> },
     {
       key: "price",
       label: "السعر",
       width: "92px",
       render: (r) => (
-        <span className={cx("font-extrabold tnum", r.status === "sold" && "line-through")}>
-          <Price value={r.priceSar} sign={false} />
+        <span className="font-extrabold tnum">
+          <Price value={r.priceSar} sign={false} className={cx(r.status === "sold" && "line-through")} />
         </span>
       ),
     },
-    { key: "ppm", label: "للمتر", width: "60px", render: (r) => <span className="tnum">{r.areaM2 ? fmtNum(unitPpm({ priceSar: r.priceSar, areaM2: r.areaM2 })) : "—"}</span> },
+    { key: "ppm", label: "للمتر", width: "60px", className: "font-normal", render: (r) => <span className="tnum">{r.areaM2 ? fmtNum(unitPpm({ priceSar: r.priceSar, areaM2: r.areaM2 })) : "—"}</span> },
     {
       key: "status",
       label: "الحالة (تحرير مباشر)",
@@ -228,6 +228,7 @@ export function InventoryPage() {
       key: "views",
       label: "مشاهدات · واتساب · 7 أيام",
       width: "minmax(120px,1fr)",
+      className: "font-normal",
       render: (r) => (r.views === null ? "—" : <span className={cx("tnum", topViews.includes(r.code) && "font-extrabold")}>{`${r.views} · ${r.whatsapp}${r.note ? ` (${r.note})` : ""}`}</span>),
     },
     {
@@ -236,7 +237,7 @@ export function InventoryPage() {
       width: "80px",
       render: (r) =>
         r.photos ? (
-          <span className={cx("inline-block px-1.5 py-0.5 text-caption", r.photos.tier === "real" ? "bg-ink text-paper" : "border-hairline bg-sand text-ink")}>
+          <span className={cx("inline-block px-1.5 py-0.5 text-caption", r.photos.tier === "real" ? "bg-ink text-paper" : cx("border-hairline bg-sand", r.status === "sold" || r.hidden ? "text-muted" : "text-ink"))}>
             {TIER_WORD[r.photos.tier]} {r.photos.count}
           </span>
         ) : (
@@ -526,7 +527,7 @@ function ImportBlock({ onClose }: { onClose: () => void }) {
           <AdminButton variant="gold" size="md" onClick={apply} disabled={applied}>
             تطبيق الاستيراد
           </AdminButton>
-          <span className="text-caption text-muted">يُسجَّل في السجل ويمكن التراجع عنه خلال 24 ساعة. «آخر تحديث» للوحدات المعدلة يصبح اليوم.</span>
+          <span className="min-w-[180px] flex-1 text-caption font-normal text-muted">يُسجَّل في السجل ويمكن التراجع عنه خلال 24 ساعة. «آخر تحديث» للوحدات المعدلة يصبح اليوم.</span>
         </>
       }
     />

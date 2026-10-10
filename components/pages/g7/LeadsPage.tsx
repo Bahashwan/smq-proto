@@ -3,9 +3,10 @@
 // (store: setLead). `?lead=<id>` opens the details: an inline column on desktop, a bottom sheet on the phone.
 // «علّم كمردود» marks it answered; closing a lead asks for the reason (اشترى · لم يرد · غير مناسب). Notes are kept in
 // memory. `?empty=1` (presenter «Admin empty states») shows the «لا طلبات بلا رد» state.
-import { useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
+import { useId, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
-import { AdminButton, Drawer, EmptyState, IconSearch, PeriodToggle, StatusPill } from "@/components/admin";
+import { AdminButton, Drawer, EmptyState, IconSearch, IconWhatsApp, PeriodToggle, StatusPill } from "@/components/admin";
+import { PhoneIcon } from "@/components/ui";
 import { approvalById } from "@/data/approvals";
 import { CLOSE_REASONS, leadById, leads, LEAD_KIND_LABELS, LEAD_STATUS_LABELS } from "@/data/leads";
 import { unitByCode } from "@/data/units";
@@ -67,7 +68,13 @@ export function LeadsPage() {
   const open = openId ? leadById(openId) : undefined;
 
   // Designed rows first (they carry the boards' stories), then the illustrative filler, newest first in each.
-  const all = useMemo(() => [...leads.filter((l) => !l.generated), ...leads.filter((l) => l.generated)].filter((l) => !(empty && effectiveLeadStatus(l, ov) === "unanswered")), [ov, empty]);
+  const all = useMemo(
+    () =>
+      [...leads.filter((l) => !l.generated).sort((a, b) => (a.at === b.at ? (a.id < b.id ? -1 : 1) : a.at < b.at ? 1 : -1)), ...leads.filter((l) => l.generated)].filter(
+        (l) => !(empty && effectiveLeadStatus(l, ov) === "unanswered"),
+      ),
+    [ov, empty],
+  );
   const counts = {
     unanswered: all.filter((l) => effectiveLeadStatus(l, ov) === "unanswered").length,
     answered: all.filter((l) => effectiveLeadStatus(l, ov) === "answered").length,
@@ -149,7 +156,7 @@ export function LeadsPage() {
           ) : (
             <section className="min-w-0 overflow-x-auto border-interactive bg-paper" aria-label="الطلبات">
               <div role="table" aria-label="الطلبات الواردة" className="min-w-[760px]">
-                <div role="row" className="grid grid-cols-[120px_1.6fr_1fr_110px_90px] gap-3 border-b border-line px-4 py-3 text-caption font-bold text-muted">
+                <div role="row" className="grid grid-cols-[120px_1.6fr_1fr_110px_90px] gap-3 border-b-[1.5px] border-ink px-4 py-2.5 text-caption font-bold text-muted">
                   {["النوع", "الطلب", "من", "الحالة", "الوقت"].map((h) => (
                     <span key={h} role="columnheader">
                       {h}
@@ -300,36 +307,48 @@ function ReasonPicker({ onPick, onCancel }: { onPick: (r: string) => void; onCan
   );
 }
 
-function Notes({ lead }: { lead: Lead }) {
+function Notes({ lead, phone }: { lead: Lead; phone?: boolean }) {
   const extra = usePatch<{ notes: Note[] }>("leadNotes", lead.id)?.notes ?? [];
   const patch = useStore((s) => s.patch);
   const toast = useStore((s) => s.toast);
   const [text, setText] = useState("");
+  const id = useId();
   const notes = [...lead.notes, ...extra];
+  function save() {
+    if (!text.trim()) {
+      document.getElementById(`${id}-note`)?.focus();
+      return;
+    }
+    patch("leadNotes", lead.id, { notes: [...extra, { by: "سعود", at: NOW, text: text.trim() }] });
+    setText("");
+    toast("حُفظت الملاحظة");
+  }
+  const placeholder = phone ? "أضف ملاحظة…" : "أضف ملاحظة";
   return (
-    <div className="flex flex-col gap-2">
+    <div className={cx("flex flex-col", phone ? "gap-1.5" : "gap-2")}>
       <span className="text-[12px] font-extrabold">ملاحظات الفريق</span>
       {notes.map((n, i) => (
-        <div key={i} className="flex flex-col gap-1 bg-sand px-3 py-2.5 text-[12px] leading-relaxed">
+        <div key={i} className={cx("flex flex-col gap-1 leading-relaxed", phone ? "border-s-[3px] border-line bg-cream px-3 py-2.5 text-[13px]" : "bg-sand px-2.5 py-2 text-[12px]")}>
           <span>{n.text}</span>
-          <span className="text-caption text-muted">
+          <span className="text-caption font-normal text-muted">
             {n.by} · {whenLabel(n.at)}
           </span>
         </div>
       ))}
-      <textarea value={text} onChange={(e) => setText(e.target.value)} rows={3} placeholder="أضف ملاحظة" aria-label="أضف ملاحظة" className="border-interactive bg-paper px-3 py-2 text-[12px]" />
-      <AdminButton
-        size="sm"
-        className="self-start"
-        disabled={!text.trim()}
-        onClick={() => {
-          patch("leadNotes", lead.id, { notes: [...extra, { by: "سعود", at: NOW, text: text.trim() }] });
-          setText("");
-          toast("حُفظت الملاحظة");
-        }}
-      >
-        حفظ الملاحظة
-      </AdminButton>
+      <textarea
+        id={`${id}-note`}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        rows={2}
+        placeholder={placeholder}
+        aria-label={placeholder}
+        className={cx("border-interactive bg-paper", phone ? "min-h-16 px-3 py-2.5 text-[13px]" : "px-2.5 py-2 text-[12px]")}
+      />
+      {(!phone || text.trim()) && (
+        <AdminButton size="xs" className="self-start" onClick={save}>
+          حفظ الملاحظة
+        </AdminButton>
+      )}
     </div>
   );
 }
@@ -340,10 +359,12 @@ function LeadDetails({ lead, ov, onClose, phone }: { lead: Lead; ov: LeadsOv; on
   const [asking, setAsking] = useState(false);
   const toast = useStore((s) => s.toast);
   const middle = lead.detail.split(" · ").filter((p) => !(lead.code && p.includes(lead.code)) && !p.includes("ميزانية"))[0];
+  const sec = phone ? undefined : "border-b border-line px-[18px] py-3 last:border-b-0";
+  // Desktop board: the pressed status is gold; the phone sheet keeps the ink fill.
   const statusSeg = (
     <PeriodToggle
       label="حالة الطلب"
-      className="flex w-full [&>button]:flex-1"
+      className={cx("flex w-full [&>button]:flex-1", !phone && "*:aria-pressed:bg-gold *:aria-pressed:text-ink")}
       value={st}
       onChange={(v) => {
         if (v === "closed") setAsking(true);
@@ -377,29 +398,35 @@ function LeadDetails({ lead, ov, onClose, phone }: { lead: Lead; ov: LeadsOv; on
       )}
       {phone && (
         <div className="flex flex-col gap-2 px-4 pt-2">
-          <span className="flex items-center gap-2">
-            <span className="text-[20px] font-extrabold">{lead.code ?? lead.name ?? lead.id}</span>
+          <span className="flex items-center justify-between gap-2">
+            {lead.code ? (
+              <span dir="ltr" className="font-mono text-[20px] font-extrabold">
+                {lead.code}
+              </span>
+            ) : (
+              <span className="text-[20px] font-extrabold">{lead.name ?? lead.id}</span>
+            )}
             <StatusPill status={statusWord(lead, ov)} variant={st === "unanswered" ? "goldOutline" : st === "answered" ? "ink" : "muted"} />
           </span>
           {lead.code && !lead.phoneMasked && (
             <>
               <p className="text-[12px] text-muted">لا رقم جوال: الزائر ضغط واتساب ولم يملأ نموذجاً. ابحثوا عن الرمز في محادثات واتساب بزنس.</p>
-              <AdminButton
-                size="md"
-                className="self-start"
+              <button
+                type="button"
+                className="flex h-11 items-center justify-center border-interactive bg-paper px-4 text-label text-ink motion-hover hover:bg-sand"
                 onClick={() => {
                   navigator.clipboard?.writeText(lead.code ?? "").catch(() => {});
                   toast(`نُسخ ${lead.code}`);
                 }}
               >
                 انسخ {lead.code} للبحث في واتساب
-              </AdminButton>
+              </button>
             </>
           )}
         </div>
       )}
       {!phone && st !== "closed" && (
-        <div className="flex gap-2 border-b border-line px-5 py-4">
+        <div className="flex gap-2 border-b border-line px-[18px] py-3">
           {st === "unanswered" && (
             <AdminButton variant="gold" size="lg" className="flex-1" onClick={act.answered}>
               علّم كمردود
@@ -410,30 +437,34 @@ function LeadDetails({ lead, ov, onClose, phone }: { lead: Lead; ov: LeadsOv; on
           </AdminButton>
         </div>
       )}
-      <div className={cx("flex flex-col gap-5", phone ? "px-4 py-4" : "px-5 py-4")}>
+      <div className={cx("flex flex-col", phone && "gap-5 px-4 py-4")}>
         {asking && (
-          <ReasonPicker
-            onPick={(r) => {
-              act.close(r);
-              setAsking(false);
-            }}
-            onCancel={() => setAsking(false)}
-          />
+          <div className={sec}>
+            <ReasonPicker
+              onPick={(r) => {
+                act.close(r);
+                setAsking(false);
+              }}
+              onCancel={() => setAsking(false)}
+            />
+          </div>
         )}
         {lead.path.length > 0 && (
-          <div className="flex flex-col text-[12px]">
-            <span className="mb-1 font-extrabold">مسار الزائر</span>
-            <ol className={cx("flex flex-col", phone && "list-decimal ps-5 text-label font-normal text-ink-2")}>
+          <div className={cx("flex flex-col text-[12px]", sec)}>
+            <span className="pb-1.5 font-extrabold">مسار الزائر</span>
+            <ol className={cx("flex flex-col", phone && "list-decimal ps-3.5 text-[13px] font-normal leading-[1.8] text-ink-2")}>
               {lead.path.map((p, i) => (
-                <li key={i} className={cx("border-b border-line py-2 last:border-b-0", i === lead.path.length - 1 && "font-bold")}>
+                <li key={i} className={cx(!phone && "border-t border-sand py-[5px] leading-relaxed", i === lead.path.length - 1 && "font-bold")}>
                   {p}
                 </li>
               ))}
             </ol>
           </div>
         )}
-        <Notes lead={lead} />
-        <div className="flex flex-col gap-2 text-[12px]">
+        <div className={sec}>
+          <Notes lead={lead} phone={phone} />
+        </div>
+        <div className={cx("flex flex-col text-[12px]", phone ? "gap-2" : "gap-1.5", sec)}>
           <span className="font-extrabold">{phone ? "الحالة اليدوية" : "الحالة"}</span>
           {statusSeg}
           {phone ? (
@@ -443,7 +474,7 @@ function LeadDetails({ lead, ov, onClose, phone }: { lead: Lead; ov: LeadsOv; on
               </AdminButton>
             )
           ) : (
-            <span className="text-caption leading-relaxed text-muted">الموقع لا يستطيع معرفة ما إذا كان الرد قد حدث على واتساب. الفريق يغيّر الحالة يدوياً. عند الإغلاق، اختر السبب: اشترى، لم يرد، غير مناسب.</span>
+            <span className="text-caption font-normal leading-relaxed text-muted">الموقع لا يستطيع معرفة ما إذا كان الرد قد حدث على واتساب. الفريق يغيّر الحالة يدوياً. عند الإغلاق، اختر السبب: اشترى، لم يرد، غير مناسب.</span>
           )}
         </div>
       </div>
@@ -459,15 +490,22 @@ function PhoneCard({ l, ov, onDetails }: { l: Lead; ov: LeadsOv; onDetails: () =
   const [asking, setAsking] = useState(false);
   const unit = l.unitCode ? unitByCode(l.unitCode) : undefined;
   const approval = l.kind === "owner" ? approvalById(l.id) : undefined;
-  const when = l.at >= "2026-10-09" ? whenLabel(l.at) : agoLabel(l.at);
+  const toast = useStore((s) => s.toast);
+  // Today reads as the bare time on the phone board («ضغطة واتساب · 14:22»), yesterday as «أمس 21:05».
+  const when = l.at >= "2026-10-09" ? whenLabel(l.at).replace(/^اليوم /, "") : agoLabel(l.at);
   const meta = `${KIND_META[l.kind]} · ${when}`;
+  const pending = !!approval && st !== "closed";
+  const needsAction = st === "unanswered" || pending;
+  const callToast = () => toast(`${l.name ?? l.id} · ${l.phoneMasked ?? ""}`, { kind: "info" });
   const title: ReactNode =
     l.kind === "owner" && approval ? (
       <>
         طلب رقم <span dir="ltr">{approval.id}</span>
       </>
     ) : l.code ? (
-      <span dir="ltr">{l.code}</span>
+      <span dir="ltr" className="font-mono">
+        {l.code}
+      </span>
     ) : (
       l.name ?? l.id
     );
@@ -486,7 +524,7 @@ function PhoneCard({ l, ov, onDetails }: { l: Lead; ov: LeadsOv; onDetails: () =
     body = (
       <span className="text-label font-normal">
         من صفحة{" "}
-        <Link href={`/units/${unit.slug}`} className="font-bold text-gold-text underline">
+        <Link href={`/units/${unit.slug}`} className="font-bold text-gold-text hover:text-ink hover:underline">
           {unit.code} · {unit.buildingNameAr} · {fmtNum(unit.priceSar)}
         </Link>{" "}
         · الرمز نفسه في أول رسالته على واتساب
@@ -498,9 +536,9 @@ function PhoneCard({ l, ov, onDetails }: { l: Lead; ov: LeadsOv; onDetails: () =
     body = (
       <>
         {l.phoneMasked && (
-          <span dir="ltr" className="self-end text-[14px] font-bold tnum">
+          <button type="button" dir="ltr" onClick={callToast} className="self-start text-[14px] font-bold text-gold-text tnum hover:text-ink">
             {l.phoneMasked}
-          </span>
+          </button>
         )}
         <p className="text-label font-normal text-ink-2">{l.kind === "notify" ? l.detail.split(" · ").slice(-1)[0] : l.title}</p>
       </>
@@ -508,13 +546,18 @@ function PhoneCard({ l, ov, onDetails }: { l: Lead; ov: LeadsOv; onDetails: () =
   }
   const waReply = `https://wa.me/?text=${encodeURIComponent(`مرحباً ${l.name ?? ""}، معك فريق SMQ العقارية بخصوص طلبك.`)}`;
   return (
-    <li className={cx("flex flex-col gap-2 px-4 py-3.5", st === "unanswered" ? "border-interactive bg-paper" : st === "answered" ? "border-[1.5px] border-line bg-paper" : "border-[1.5px] border-line bg-sand")}>
+    <li
+      className={cx(
+        "flex flex-col border-[1.5px] px-3.5 py-3.5",
+        needsAction ? "gap-2 border-ink border-s-[5px] border-s-gold bg-paper" : st === "answered" ? "gap-1.5 border-line bg-paper" : "gap-1.5 border-line bg-sand",
+      )}
+    >
       <div className="flex items-center justify-between gap-2">
-        <span className="text-[12px] font-bold text-muted">{meta}</span>
-        <StatusPill
-          status={l.kind === "owner" && approval && st !== "closed" ? "بانتظار الموافقة" : statusWord(l, ov)}
-          variant={l.kind === "owner" && approval && st !== "closed" ? "outline" : st === "unanswered" ? "goldOutline" : st === "answered" ? "ink" : "muted"}
-        />
+        <span className="flex items-center gap-2 text-[12px] font-bold text-muted">
+          {l.kind === "whatsapp" && <IconWhatsApp size={16} className="shrink-0 text-ink" />}
+          {meta}
+        </span>
+        <StatusPill status={pending ? "بانتظار الموافقة" : statusWord(l, ov)} variant={pending ? "outline" : st === "unanswered" ? "goldOutline" : st === "answered" ? "ink" : "muted"} />
       </div>
       <span className={cx("font-extrabold", st === "unanswered" ? "text-[17px]" : "text-[16px]")}>{title}</span>
       {body}
@@ -534,6 +577,11 @@ function PhoneCard({ l, ov, onDetails }: { l: Lead; ov: LeadsOv; onDetails: () =
               <a href={waReply} target="_blank" rel="noreferrer" className="cut-s flex h-11 flex-1 items-center justify-center bg-gold text-label text-ink">
                 رد على واتساب
               </a>
+              {l.kind === "form" && l.phoneMasked && (
+                <button type="button" aria-label="اتصال" onClick={callToast} className="flex size-11 shrink-0 items-center justify-center border-interactive bg-paper text-ink hover:bg-sand">
+                  <PhoneIcon size={18} />
+                </button>
+              )}
               <AdminButton size="lg" onClick={act.answered}>
                 علّم كمردود
               </AdminButton>

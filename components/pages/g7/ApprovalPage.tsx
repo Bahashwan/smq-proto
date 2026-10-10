@@ -253,15 +253,15 @@ export function ApprovalPage({ id }: { id: string }) {
                 </select>
               </AdminRow>
               <AdminRow label="الاتجاه · ارتفاع السقف">
-                <span className="flex gap-2">
+                <span className="flex gap-1.5">
                   <input aria-label="الاتجاه" placeholder="الاتجاه" className={cx(SMALL, "w-[104px]")} />
-                  <input aria-label="ارتفاع السقف بالمتر" placeholder="م" inputMode="decimal" className={cx(SMALL, "w-[88px]")} />
+                  <input aria-label="ارتفاع السقف بالمتر" placeholder="م" inputMode="decimal" className={cx(SMALL, "w-[104px]")} />
                 </span>
               </AdminRow>
-              <div className="flex flex-wrap gap-x-5 gap-y-2 border-b border-line py-3">
+              <div className="flex flex-wrap gap-x-3 gap-y-1 border-b border-line py-2.5">
                 {FEATURE_LABELS.map(([k, label]) => (
-                  <label key={k} className="flex min-h-8 items-center gap-2 text-[12px] font-semibold">
-                    <input type="checkbox" checked={features[k]} onChange={(e) => setFeatures((f) => ({ ...f, [k]: e.target.checked }))} className="size-4 accent-ink" />
+                  <label key={k} className="flex min-h-8 items-center gap-1.5 text-[12px] font-semibold">
+                    <input type="checkbox" checked={features[k]} onChange={(e) => setFeatures((f) => ({ ...f, [k]: e.target.checked }))} className="size-3.5 accent-ink" />
                     {label}
                   </label>
                 ))}
@@ -278,10 +278,10 @@ export function ApprovalPage({ id }: { id: string }) {
               <h2 className="text-[12px] font-extrabold">قائمة التحقق قبل النشر · تتغيّر مع صفة مقدم العرض</h2>
               <PeriodToggle label="الصفة" size="sm" options={ROLES.map((r) => ({ value: r, label: ROLE_LABELS[r] }))} value={role} onChange={(v) => setRole(v as ApprovalRole)} />
             </div>
-            <ul className="flex flex-col">
+            <ul className="flex flex-col gap-2">
               {a.checklist[role].map((item, i) => (
                 <li key={`${role}-${i}`}>
-                  <label className="flex min-h-10 items-center gap-3 text-label font-normal">
+                  <label className="flex min-h-6 items-center gap-2.5 text-label font-normal">
                     <input
                       type="checkbox"
                       checked={checks[role][i] ?? false}
@@ -508,8 +508,12 @@ function Photos({ a, teamFiles, onTeamFiles, onRequestPhotos, disabled }: { a: A
       <span className="text-[12px] font-bold text-muted">صور المالك · {a.photosCount} · اضغط للتكبير، اسحب لإعادة الترتيب، الأولى هي الغلاف</span>
       <div className="grid gap-2 md:grid-cols-[2fr_1fr_1fr]">
         <div className="relative h-[220px] bg-slot" role="img" aria-label={`صورة الغلاف${names[0] ? ` · ${names[0]}` : ""}`}>
-          {names[0] && <span className="absolute start-2 top-2 bg-paper px-1.5 py-0.5 text-caption">{names[0]}</span>}
-          <span className="absolute bottom-2 end-2 bg-gold px-1.5 py-0.5 text-caption font-bold text-ink">الغلاف</span>
+          {names[0] && (
+            <span className="absolute end-2 top-2 bg-paper px-1.5 py-0.5 text-caption font-normal">
+              <span dir="ltr">{names[0]}</span>
+            </span>
+          )}
+          <span className="absolute bottom-2 start-2 bg-gold px-1.5 py-0.5 text-caption font-bold text-ink">الغلاف</span>
         </div>
         <div className="grid grid-rows-2 gap-2">
           {[1, 2].map((i) => (
@@ -517,7 +521,7 @@ function Photos({ a, teamFiles, onTeamFiles, onRequestPhotos, disabled }: { a: A
           ))}
         </div>
         <div className="grid grid-rows-2 gap-2">
-          <label htmlFor={`${uid}-team`} className={cx("flex min-h-[100px] cursor-pointer items-center justify-center border-[1.5px] border-dashed border-ink bg-cream px-3 text-center text-[12px] font-bold hover:bg-sand", disabled && "pointer-events-none opacity-50")}>
+          <label htmlFor={`${uid}-team`} className={cx("flex min-h-[100px] cursor-pointer items-center justify-center border-[1.5px] border-dashed border-ink bg-cream px-2 text-center text-[12px] font-bold hover:bg-sand", disabled && "pointer-events-none opacity-50")}>
             + رفع صور الفريق
             <input
               id={`${uid}-team`}
@@ -532,7 +536,7 @@ function Photos({ a, teamFiles, onTeamFiles, onRequestPhotos, disabled }: { a: A
               }}
             />
           </label>
-          <button type="button" disabled={disabled || a.status === "awaiting-photos"} onClick={onRequestPhotos} className="min-h-[100px] border-interactive bg-paper px-3 text-[12px] font-bold hover:bg-sand disabled:border-line disabled:text-disabled">
+          <button type="button" disabled={disabled || a.status === "awaiting-photos"} onClick={onRequestPhotos} className="min-h-[100px] border-interactive bg-paper px-2 text-[12px] font-bold hover:bg-sand disabled:border-line disabled:text-disabled">
             طلب صور إضافية من المالك
           </button>
         </div>
@@ -554,12 +558,14 @@ function LogItem({ e, wa, onSent }: { e: LogEntry; wa: "connected" | "manual"; o
   const isMessage = e.by === "النظام" && !!e.mode;
   const mode = isMessage ? (e.created ? e.mode : wa === "manual" ? "manual" : "auto") : e.mode;
   const pending = isMessage && mode === "manual" && !e.sent;
-  const marker = pending ? "border-interactive bg-paper" : e.by === "النظام" || e.by === "المالك" ? "bg-ink" : "bg-gold";
+  const marker = e.by === "النظام" || e.by === "المالك" || pending ? "bg-ink" : "bg-gold";
   const msg = e.text.match(/«(.+)»/)?.[1] ?? e.text;
   const ownerSource = e.by === "المالك" ? e.noteAr : undefined;
   return (
     <li className="flex gap-3 border-b border-line py-3.5 text-[12px] leading-relaxed last:border-b-0">
-      <span aria-hidden className={cx("mt-1.5 size-2.5 shrink-0 hex-point", marker)} />
+      <span aria-hidden className={cx("relative mt-1.5 size-2.5 shrink-0 hex-point", marker)}>
+        {pending && <span className="absolute inset-[1.5px] bg-paper hex-point" />}
+      </span>
       <span className="flex min-w-0 flex-col gap-1">
         {pending ? (
           <>

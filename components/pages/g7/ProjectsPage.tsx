@@ -4,7 +4,7 @@
 import { useState, type DragEvent, type KeyboardEvent } from "react";
 import Link from "next/link";
 import { AdminLinkButton, Dialog, DragHandle } from "@/components/admin";
-import { ImageSlot, Mark } from "@/components/ui";
+import { ImageSlot } from "@/components/ui";
 import { approvals } from "@/data/approvals";
 import { districtAr } from "@/data/districts";
 import { projects } from "@/data/projects";
@@ -13,6 +13,7 @@ import type { Project } from "@/data/types";
 import { usePatch, useStore, useUnitOverrides } from "@/lib/store";
 import { cx, plural } from "@/lib/format";
 import { G7Shell } from "./shell";
+import { deliveryShort } from "./util";
 
 const CUT = "[clip-path:polygon(0_0,100%_0,100%_100%,30px_100%,0_calc(100%-52px))]";
 const buildingsWord = (n: number) => plural(n, { one: "عمارة واحدة", two: "عمارتان", few: "عمارات", many: "عمارة" });
@@ -73,8 +74,8 @@ export function ProjectsPage() {
                 ) : draft ? (
                   <span className="flex h-full items-center justify-center text-[12px] text-muted">لا صور بعد</span>
                 ) : null}
-                {!draft && <span className="absolute end-3 top-3 bg-ink px-2 py-1 text-caption font-bold text-paper">منشور</span>}
-                {p.images.length > 0 && <span className="absolute bottom-4 end-11 bg-paper px-1.5 py-0.5 text-caption font-bold">{`تعبيرية · ${photosWord(p.images.length)}`}</span>}
+                {!draft && <span className="absolute start-2.5 top-2.5 bg-ink px-2 py-1 text-caption font-bold text-paper">منشور</span>}
+                {p.images.length > 0 && <span className="absolute bottom-2 end-10 bg-paper px-1.5 py-0.5 text-caption font-bold">{`تعبيرية · ${photosWord(p.images.length)}`}</span>}
               </div>
               <div className="flex flex-1 flex-col gap-2 px-5 py-4">
                 <span className="text-[12px] font-bold text-gold-text">
@@ -91,13 +92,7 @@ export function ProjectsPage() {
                     p.adminNoteAr
                   ) : (
                     <>
-                      {buildingsWord(p.buildings.length)} · {modelsWord(st.listed)} · {st.available} متاحة · {st.sold} مباعة · {p.statusAr} · تسليم {p.deliveryLabel.value}
-                      {p.deliveryLabel.tbc && (
-                        <>
-                          {" "}
-                          <Mark>[للتأكيد]</Mark>
-                        </>
-                      )}
+                      {buildingsWord(p.buildings.length)} · {modelsWord(st.listed)} · {st.available} متاحة · {st.sold} مباعة · {p.statusAr} · تسليم {deliveryShort(p.deliveryLabel.value)}
                     </>
                   )}
                 </span>

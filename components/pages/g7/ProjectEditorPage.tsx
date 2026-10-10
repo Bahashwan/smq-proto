@@ -15,6 +15,7 @@ import type { Project } from "@/data/types";
 import { usePatch, useStore, useUnitOverrides } from "@/lib/store";
 import { cx, fmtDate, plural } from "@/lib/format";
 import { G7Shell } from "./shell";
+import { unsavedInFields } from "./util";
 
 interface Building {
   key: string;
@@ -367,6 +368,7 @@ export function ProjectEditorPage({ id }: { id?: string }) {
         className="-mx-4 mt-2 md:-mx-8"
         state={state}
         dirtyCount={changed.length}
+        message={state === "dirty" ? unsavedInFields(changed.length) : undefined}
         onDiscard={() => setDraft({})}
         onDraft={() => save(false)}
         onSave={() => save(true)}

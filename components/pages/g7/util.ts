@@ -24,6 +24,20 @@ export function unitsWord(n: number): string {
   return plural(n, { one: "وحدة واحدة", two: "وحدتان", few: "وحدات", many: "وحدة" });
 }
 
+const QUARTER: Record<string, number> = { الأول: 1, الثاني: 2, الثالث: 3, الرابع: 4 };
+/** «الربع الثاني 2027» → «الربع 2 · 2027» (the admin cards write the short form). */
+export function deliveryShort(label: string): string {
+  const m = label.match(/الربع\s+(\S+)\s+(?:من\s+)?(\d{4})/);
+  return m ? `الربع ${QUARTER[m[1]] ?? m[1]} · ${m[2]}` : label;
+}
+
+/** The editors' dirty line as Admin-ProjectEditor-D writes it: «تغييرات غير محفوظة في 3 حقول». */
+export function unsavedInFields(n: number): string {
+  if (n === 1) return "تغييرات غير محفوظة في حقل واحد";
+  if (n === 2) return "تغييرات غير محفوظة في حقلين";
+  return `تغييرات غير محفوظة في ${n} ${n <= 10 ? "حقول" : "حقلاً"}`;
+}
+
 /** «D · روز» */
 export function unitShort(u: Pick<Unit, "model" | "buildingNameAr" | "type">): string {
   return `${u.type === "roof-villa" ? "روف" : u.model} · ${u.buildingNameAr}`;

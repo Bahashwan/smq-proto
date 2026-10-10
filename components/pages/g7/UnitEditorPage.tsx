@@ -19,6 +19,7 @@ import type { Unit, UnitStatus } from "@/data/types";
 import { useStore, useUnitOverrides, usePatch } from "@/lib/store";
 import { cx, fmtDate, fmtNum } from "@/lib/format";
 import { G7Shell } from "./shell";
+import { unsavedInFields } from "./util";
 
 interface Form {
   building: "RZ" | "YS";
@@ -448,6 +449,7 @@ export function UnitEditorPage({ slug }: { slug?: string }) {
         className="-mx-4 mt-2 md:-mx-8"
         state={state}
         dirtyCount={changed.length}
+        message={state === "dirty" ? unsavedInFields(changed.length) : undefined}
         onDraft={() => save(false)}
         onSave={() => save(true)}
         onDiscard={() => setDraft({})}

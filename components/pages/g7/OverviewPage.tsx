@@ -124,9 +124,9 @@ function ApprovalsPanel({ items }: { items: Approval[] }) {
             </span>
           </span>
           <StatusPill status={a.status === "awaiting-photos" ? "بانتظار صور" : "جديد"} variant={a.status === "awaiting-photos" ? "outline" : "gold"} />
-          <AdminLinkButton href={`/admin/approvals/${a.id}`} variant="ink" size="sm">
+          <Link href={`/admin/approvals/${a.id}`} className="flex h-9 shrink-0 items-center bg-ink px-3 text-[12px] font-extrabold text-paper motion-hover hover:bg-ink-2">
             مراجعة
-          </AdminLinkButton>
+          </Link>
         </div>
       ))}
     </Panel>
@@ -317,6 +317,13 @@ function PhoneOverview({ openApprovals, recentLeads, leadsOv }: { openApprovals:
   );
 }
 
+/** The phone card's short mask: «0559XXXXXX» → «0559…XX» (Admin-M). */
+function shortMask(masked: string): string {
+  const digits = masked.replace(/\s/g, "");
+  const lead = digits.match(/^\d+/)?.[0] ?? "";
+  return lead && digits.length > lead.length + 2 ? `${lead}…${digits.slice(-2)}` : masked;
+}
+
 function PhoneApprovalCard({ a }: { a: Approval }) {
   const awaiting = a.status === "awaiting-photos";
   const facts = approvalFacts(a);
@@ -334,11 +341,11 @@ function PhoneApprovalCard({ a }: { a: Approval }) {
     <article className={cx("flex flex-col bg-paper", awaiting ? "border-hairline" : "border-interactive")}>
       {!awaiting && (
         <div aria-hidden className="grid h-[120px] grid-cols-3 gap-0.5">
+          <div className="col-span-2 bg-slot" />
           <div className="grid grid-rows-2 gap-0.5">
             <div className="bg-slot" />
             <div className="flex items-center justify-center bg-slot text-caption font-bold">{more > 0 ? `+${more}` : ""}</div>
           </div>
-          <div className="col-span-2 bg-slot" />
         </div>
       )}
       <div className="flex flex-col gap-1.5 px-4 py-3">
@@ -351,7 +358,7 @@ function PhoneApprovalCard({ a }: { a: Approval }) {
           <span className="text-caption font-semibold text-muted"> · {(awaiting ? facts.filter((f) => f.includes("للمتر")) : facts).join(" · ") || (c.ppm ? `${fmtNum(c.ppm)} للمتر` : "")}</span>
         </span>
         <span className="text-[12px] text-muted">
-          {[a.submitterName, awaiting ? null : a.phoneMasked, third || null].filter(Boolean).join(" · ")}
+          {[a.submitterName, awaiting ? null : shortMask(a.phoneMasked), third || null].filter(Boolean).join(" · ")}
         </span>
       </div>
       {!awaiting && (
@@ -404,7 +411,7 @@ function PhoneUnits() {
                   setUnitStatus(u.code, v);
                   toast(`حُفظت الوحدة ${u.code} · ${STATUS_WORD[v]}`, { action: { label: "معاينة", href: `/units/${u.slug}` } });
                 }}
-                className="h-10 min-w-24 border-[1.5px] border-gold bg-paper px-2 text-[12px] font-bold text-ink"
+                className="h-10 border-[1.5px] border-gold bg-paper px-2 text-[12px] font-bold text-ink"
               >
                 {(Object.keys(STATUS_WORD) as UnitStatus[]).map((s) => (
                   <option key={s} value={s}>

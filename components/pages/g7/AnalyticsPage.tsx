@@ -98,8 +98,9 @@ export function AnalyticsPage() {
         >
           <p className="mb-3 text-caption text-muted md:hidden">{`الوسيط ${fmtNum(p.medianBudget / 1000)} ألف · المتوسط ${fmtNum(p.meanBudget / 1000)} ألف`}</p>
           <BudgetBars p={p} />
-          <p className="mt-4 bg-sand px-3 py-2.5 text-[12px] leading-relaxed">
-            <strong>فجوة المعروض:</strong> {gap.lineAr}
+          <p className="mt-4 flex flex-col gap-1 bg-sand px-3 py-2.5 text-[12px] leading-relaxed">
+            <strong>فجوة المعروض:</strong>
+            <span>{gap.lineAr}</span>
           </p>
         </Panel>
         <Panel title="الأحياء المطلوبة مقابل المعروض" action={<span className="text-caption font-normal text-muted">الذهبي = طلب بلا وحدات</span>} bodyClassName="p-5">
@@ -179,7 +180,7 @@ function MiniBars({ title, rows, labelWidth }: { title: string; rows: PctRow[]; 
       {rows.map((r) => (
         <div key={r.key} className="grid items-center gap-2" style={{ gridTemplateColumns: `${labelWidth} 1fr 36px` }}>
           <span className={cx(r.pct === max && "font-extrabold")}>{r.labelAr}</span>
-          <HBar value={r.pct} max={max} gold={r.pct === max} className="h-2.5" />
+          <HBar value={r.pct} max={100} gold={r.pct === max} className="h-2.5" />
           <span className="text-muted tnum">{r.pct}%</span>
         </div>
       ))}

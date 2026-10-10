@@ -147,7 +147,7 @@ export function VisitorsPage() {
 
       <div className={cx("grid items-start gap-6", open && wide && "xl:grid-cols-[minmax(0,1fr)_360px]")}>
         <section className="flex min-w-0 flex-col border-interactive bg-paper" aria-labelledby="recent-h">
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-4 py-3">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b-[1.5px] border-ink px-4 py-3">
             <h2 id="recent-h" className="text-[15px] font-extrabold">
               آخر الزوار
             </h2>
@@ -267,21 +267,21 @@ function VisitorDetails({ v, onClose, phone }: { v: Visitor; onClose: () => void
         </div>
       )}
       {phone && v.code && <p className="px-4 pt-2 text-[12px] text-muted">{`ضغط واتساب · الرمز ${v.code} داخل الرسالة الجاهزة · لا رقم حتى تصل رسالته`}</p>}
-      <dl className="grid grid-cols-2 gap-x-4 gap-y-3 border-b border-line px-5 py-4 text-[12px]">
+      <dl className="grid grid-cols-2 gap-x-4 border-b border-line px-4 py-3 text-[12px]">
         {facts.map(([k, val]) => (
-          <div key={k} className="flex flex-col gap-0.5">
-            <dt className="text-muted">{k}</dt>
-            <dd className="font-extrabold">{val}</dd>
+          <div key={k} className="flex items-baseline justify-between gap-2 py-1.5">
+            <dt className="shrink-0 text-muted">{k}</dt>
+            <dd className="text-end font-extrabold">{val}</dd>
           </div>
         ))}
       </dl>
-      <div className="flex flex-col gap-1 px-5 py-4 text-[12px]">
-        <span className="mb-1 font-extrabold">مسار الجلسة</span>
+      <div className="flex flex-col px-4 py-3 text-[12px]">
+        <span className="pb-2 font-extrabold">مسار الجلسة</span>
         <ol className="flex flex-col">
           {steps.map((st, i) => {
             const wa = st.step.includes("واتساب");
             return (
-              <li key={i} className="flex gap-3 py-2 leading-relaxed">
+              <li key={i} className="flex gap-2.5 border-t border-line py-[7px] leading-relaxed">
                 <span aria-hidden className={cx("mt-1.5 size-2.5 shrink-0 hex-point", wa ? "bg-gold" : "bg-ink")} />
                 <span>
                   <strong>{st.step}</strong> {st.text}
@@ -292,30 +292,30 @@ function VisitorDetails({ v, onClose, phone }: { v: Visitor; onClose: () => void
           })}
         </ol>
       </div>
-      <div className="flex flex-wrap gap-2 px-5 pb-3">
+      <div className="flex gap-2 border-t-[1.5px] border-ink px-4 py-3">
         {v.code && (
-          <AdminButton
-            variant="gold"
-            size="sm"
+          <button
+            type="button"
             onClick={() => {
               navigator.clipboard?.writeText(v.code ?? "").catch(() => {});
               toast(`نُسخ ${v.code}`);
             }}
+            className="cut-s flex min-h-10 min-w-0 flex-1 items-center justify-center bg-gold px-3 py-1 text-center text-[12px] font-extrabold leading-snug text-ink motion-hover hover:bg-gold-hover"
           >
             انسخ {v.code} للبحث في واتساب
-          </AdminButton>
+          </button>
         )}
         {lead ? (
-          <Link href={`/admin/leads?lead=${lead.id}`} className="flex h-[38px] items-center border-interactive bg-paper px-3.5 text-[12px] font-bold text-ink hover:bg-sand">
+          <Link href={`/admin/leads?lead=${lead.id}`} className="flex h-10 shrink-0 items-center border-interactive bg-paper px-3 text-[12px] font-bold text-ink hover:bg-sand">
             تحويل إلى عميل
           </Link>
         ) : (
-          <AdminButton size="sm" onClick={() => toast(`سُجّل ${v.id} كعميل محتمل`, { action: { label: "الطلبات الواردة", href: "/admin/leads" } })}>
+          <AdminButton size="sm" className="shrink-0" onClick={() => toast(`سُجّل ${v.id} كعميل محتمل`, { action: { label: "الطلبات الواردة", href: "/admin/leads" } })}>
             تحويل إلى عميل
           </AdminButton>
         )}
       </div>
-      <p className="px-5 pb-5 text-caption leading-relaxed text-muted">الزوار المجهولون يُحفظون 90 يوماً ثم يُحذفون. الموقع لا يعرف رقم من ضغط واتساب؛ الرسالة الجاهزة تحمل رمزاً مرجعياً يطابق الزائر عندما تصل رسالته. رقم الجوال يُخزَّن فقط عند إرسال نموذج.</p>
+      <p className="px-4 pb-4 text-caption font-normal leading-relaxed text-muted">الزوار المجهولون يُحفظون 90 يوماً ثم يُحذفون. الموقع لا يعرف رقم من ضغط واتساب؛ الرسالة الجاهزة تحمل رمزاً مرجعياً يطابق الزائر عندما تصل رسالته. رقم الجوال يُخزَّن فقط عند إرسال نموذج.</p>
     </div>
   );
 }

@@ -39,11 +39,11 @@ export function LoginPage() {
   const field = cx("h-[52px] w-full bg-paper px-4 text-[15px] font-semibold text-ink outline-none", error ? "border-error" : "border-interactive");
   return (
     <div className="flex min-h-dvh flex-col bg-cream text-ink md:grid md:grid-cols-2">
-      <aside className="bg-ink px-5 pb-9 pt-6 text-paper [clip-path:polygon(0_0,100%_0,100%_100%,40px_100%,0_calc(100%-23px))] md:flex md:flex-col md:justify-between md:px-12 md:py-12 md:[clip-path:none]">
-        <Lockup tone="goldmark-white" height={30} className="self-start md:h-11" />
-        <div className="mt-6 md:mt-0">
+      <aside className="bg-ink px-5 pb-6 pt-7 text-paper [clip-path:polygon(0_0,100%_0,100%_100%,40px_100%,0_calc(100%-23px))] md:flex md:flex-col md:justify-between md:px-12 md:py-12 md:[clip-path:none]">
+        <Lockup tone="goldmark-white" height={30} className="self-start md:h-10" />
+        <div className="mt-4.5 md:mt-0">
           <p className="text-[12px] font-bold text-gold md:text-[13px]">لوحة الإدارة</p>
-          <p className="mt-2 text-[22px] font-extrabold leading-snug md:mt-3 md:max-w-[520px] md:text-[40px] md:leading-tight">
+          <p className="mt-2.5 text-[22px] font-extrabold leading-snug md:mt-3 md:max-w-[520px] md:text-[40px] md:leading-tight">
             <span className="md:hidden">الوحدات والطلبات والأرقام، من جوالك</span>
             <span className="hidden md:inline">الوحدات، الطلبات، والأرقام، في مكان واحد</span>
           </p>
@@ -54,9 +54,9 @@ export function LoginPage() {
         </p>
       </aside>
 
-      <main className="flex flex-1 flex-col justify-between px-5 pb-6 pt-7 md:items-center md:justify-center md:px-12">
-        <form noValidate onSubmit={submit} className="flex flex-col gap-4 md:w-full md:max-w-[486px] md:border-interactive md:bg-paper md:p-8" aria-labelledby={`${id}-h`}>
-          <h1 id={`${id}-h`} className="text-[22px] font-extrabold md:text-[24px]">
+      <main className="flex flex-1 flex-col justify-between px-5 pb-6 pt-6 md:items-center md:justify-center md:px-12">
+        <form noValidate onSubmit={submit} className="flex flex-col gap-3.5 md:w-full md:max-w-[486px] md:gap-4 md:border-interactive md:bg-paper md:p-8" aria-labelledby={`${id}-h`}>
+          <h1 id={`${id}-h`} className="text-[22px] font-extrabold leading-[normal] md:text-[24px]">
             تسجيل الدخول
           </h1>
           {error && (
@@ -68,7 +68,7 @@ export function LoginPage() {
               </span>
             </div>
           )}
-          <label className="flex flex-col gap-2 text-[12px] font-bold text-muted">
+          <label className="flex flex-col gap-1.5 text-[12px] font-bold leading-[normal] text-muted">
             البريد الإلكتروني
             <input
               type="email"
@@ -81,7 +81,7 @@ export function LoginPage() {
               className={cx(field, "text-right")}
             />
           </label>
-          <label className="flex flex-col gap-2 text-[12px] font-bold text-muted">
+          <label className="flex flex-col gap-1.5 text-[12px] font-bold leading-[normal] text-muted">
             كلمة المرور
             <span className={cx("flex h-[52px] items-stretch bg-paper", error ? "border-error" : "border-interactive")}>
               <input
@@ -105,15 +105,15 @@ export function LoginPage() {
               </button>
             </span>
           </label>
-          <label className="flex min-h-11 items-center gap-3 text-[13px]">
+          <label className="-my-2.5 flex min-h-11 items-center gap-2.5 text-[13px]">
             <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} className="size-[18px] accent-ink" />
             <span className="md:hidden">تذكرني 30 يوماً</span>
             <span className="hidden md:inline">تذكرني على هذا الجهاز 30 يوماً</span>
           </label>
-          <button type="submit" className="cut-m motion-hover h-14 bg-ink text-[16px] font-extrabold text-paper hover:bg-ink-2">
+          <button type="submit" className="cut-m motion-hover h-[54px] bg-ink md:h-14 text-[16px] font-extrabold text-paper hover:bg-ink-2">
             دخول
           </button>
-          <button type="button" onClick={() => toast("يصلك رابط على البريد", { kind: "info" })} className="self-start py-2 text-[13px] font-bold text-gold-text hover:text-ink hover:underline">
+          <button type="button" onClick={() => toast("يصلك رابط على البريد", { kind: "info" })} className="-my-2 self-start py-2 text-[13px] font-bold text-gold-text hover:text-ink hover:underline">
             <span className="md:hidden">نسيت كلمة المرور؟</span>
             <span className="hidden md:inline">نسيت كلمة المرور؟ يصلك رابط على البريد</span>
           </button>
