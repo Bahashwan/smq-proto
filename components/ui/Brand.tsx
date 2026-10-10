@@ -39,11 +39,13 @@ export function Lockup({ tone = "goldmark-white", height = 36, lang = "ar", deco
   const h = Math.max(24, height);
   const w = Math.round((f.width / f.height) * h);
   const hClass = HEIGHT_CLASS[h];
+  // eslint-disable-next-line @next/next/no-img-element -- static export, brand PNGs are served as they are
   return <img src={f.src} width={w} height={h} alt={decorative ? "" : lang === "en" ? BRAND_EN : BRAND_AR} className={cx("block shrink-0 w-auto", hClass, className)} style={hClass ? undefined : { height: h, width: "auto" }} />;
 }
 
 /** The gold mark alone (favicon, scrolled header, watermark) */
 export function LogoMark({ size = 28, decorative = true, className, lang = "ar" }: { size?: number; decorative?: boolean; className?: string; lang?: "ar" | "en" }) {
   const w = Math.round((logoMarkGold.width / logoMarkGold.height) * size);
+  // eslint-disable-next-line @next/next/no-img-element -- static export, brand PNGs are served as they are
   return <img src={logoMarkGold.src} width={w} height={size} alt={decorative ? "" : lang === "en" ? BRAND_EN : BRAND_AR} className={cx("block shrink-0", className)} style={{ height: size, width: "auto" }} />;
 }

@@ -2,10 +2,10 @@
 // Bottom sheet (Results-Filters-M, map pin cards, phone drawers): ink scrim, paper panel with the cut on its top
 // line-end corner, 200ms motion, focus trap, Esc and scrim close, body scroll locked. Centred dialog on desktop
 // when `desktop="dialog"`.
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useRef, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { cx } from "@/lib/format";
-import { useFocusTrap, usePresence, useScrollLock } from "./hooks";
+import { useFocusTrap, useMounted, usePresence, useScrollLock } from "./hooks";
 
 export interface BottomSheetProps {
   open: boolean;
@@ -30,8 +30,7 @@ export interface BottomSheetProps {
 export function BottomSheet({ open, onClose, title, actions, children, desktop = "sheet", size = "auto", closeLabel = "إغلاق", portal = true, labelledBy, className, footer }: BottomSheetProps) {
   const [mounted, shown] = usePresence(open, 200);
   const panel = useRef<HTMLDivElement>(null);
-  const [canPortal, setCanPortal] = useState(false);
-  useEffect(() => setCanPortal(true), []);
+  const canPortal = useMounted();
   useFocusTrap(panel, open, onClose);
   useScrollLock(open);
   if (!mounted) return null;

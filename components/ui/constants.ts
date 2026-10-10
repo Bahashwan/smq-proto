@@ -1,25 +1,29 @@
-// Literal copy and links shared by the public shell (header, menu, footer). Values are verbatim from the
-// HeaderFooter / EN boards; `data/settings` can override the contact and licence fields through props.
-import { WA_NUMBER } from "@/lib/format";
+// Copy and links shared by the public shell (header, menu, footer). Contact details and the licences come from
+// data/settings (the site settings fixture); the nav labels are verbatim from the HeaderFooter / EN boards.
+import { settings } from "@/data/settings";
 
 export const BRAND_AR = "إس إم كيو العقارية";
 export const BRAND_EN = "SMQ Real Estate";
 export const BRAND_SHORT = "SMQ العقارية";
 
-export const PHONE_DISPLAY = "0556607779";
-export const PHONE_TEL = "+966556607779";
-export const PHONE_EN = "+966 55 660 7779";
-export const WA_DISPLAY = "0559997929";
-export const WA_URL = `https://wa.me/${WA_NUMBER}`;
-export const EMAIL = "info@smqre.com";
-export const ADDRESS_AR = "شارع السيدة خديجة، حي الفيصلية، جدة 23441";
-export const HOURS_AR = "السبت إلى الخميس، 9 ص إلى 6 م";
+/** "0556607779" */
+export const PHONE_DISPLAY = settings.phone;
+/** "+966556607779" */
+export const PHONE_TEL = `+966${settings.phone.replace(/^0/, "")}`;
+export const PHONE_EN = `+966 ${settings.phone.slice(1, 3)} ${settings.phone.slice(3, 6)} ${settings.phone.slice(6)}`;
+/** "0559997929" */
+export const WA_DISPLAY = `0${settings.whatsapp.number.slice(3)}`;
+export const WA_URL = `https://wa.me/${settings.whatsapp.number}`;
+export const EMAIL = settings.email;
+export const ADDRESS_AR = settings.office.addressAr;
+/** «السبت إلى الخميس، 9 ص إلى 6 م» */
+export const HOURS_AR = `${settings.hours.days}، ${settings.hours.from} إلى ${settings.hours.to}`;
 export const TAGLINE_AR = "شريكك الموثوق في عالم العقارات. مكتب تسويق واستثمار عقاري في جدة.";
 export const HANDLE = "@smq_re";
 export const SITE = "smq-re.com";
 export const COPYRIGHT_YEAR = 2026;
 
-export const LICENCE = { rega: "1200040135", cr: "7029797433" };
+export const LICENCE = settings.licence;
 
 export interface NavItem {
   label: string;

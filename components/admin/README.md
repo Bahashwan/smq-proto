@@ -58,5 +58,6 @@ Toasts are not duplicated here: fire `useStore().toast(text, { action })` from `
 ## Notes
 
 - Money: `<Price value={n} />` from `components/ui/Price.tsx` inside cells; the table itself never formats money.
-- Numbers on screen come from `/data` selectors; `sample.ts` feeds only the styleguide.
+- Numbers on screen come from `/data` selectors; `sample.ts` feeds only the styleguide and itself reads `data/units.ts` (`units`, `importPreview`).
+- `components/ui` landed after this library was written: `AdminButton` / `AdminField` are the admin-sized equivalents of the public `Button` / `TextField` (32–40px rows, Excel / admin / tbc / computed sources); `Mark` from `@/components/ui` renders `[للتأكيد]` inside admin copy.
 - Brand images are imported from `design/brand/*.png` (static imports), so nothing was written to `public/`.

@@ -124,7 +124,7 @@ All fields: label 11/600 muted (gold when focused or in error), control 48px wit
 | Export | Props |
 |---|---|
 | `Header` | `variant?: "ar" \| "en"` · `showEn?` (the language switch: only on `/`, `/units`, `/units/[code]` and their `/en` twins) · `transparent?` (overlay the hero until scrolled) · `switchHref?` (computed from the path when omitted) · `active?` (force the active nav item) · `demo?: "default" \| "scrolled"` + `withMenu?` (QA) · `className?`. Sticky 72px ink bar (64px on the phone); after 120px: 56px, mark + «SMQ العقارية», phone → icon, 2px gold rule; on the phone it hides on scroll down and returns on scroll up. The menu button and `?menu=1` open the ink sheet from the top (links of the HeaderFooter board, واتساب / اتصال / EN, Esc, focus trap) |
-| `Footer` | `variant?: "ar" \| "en"` · `compact?` (the results / unit footer) · `settings?: {phone?, whatsapp?, email?, addressAr?, hoursAr?, licence?: {rega, cr}}` (pass `data/settings` values; board literals by default) · `links?: NavItem[]` · `className?` · always carries «ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433» and the © line |
+| `Footer` | `variant?: "ar" \| "en"` · `compact?` (the results / unit footer) · `settings?: {phone?, whatsapp?, email?, addressAr?, hoursAr?, licence?: {rega, cr}}` (overrides; the defaults already come from `data/settings`) · `links?: NavItem[]` · `className?` · always carries «ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433» and the © line |
 | `LicenceLine` | `variant?` · `licence?: {rega, cr}` · `className?` |
 | `EnHtmlAttrs` | no props · sets `<html lang="en" dir="ltr">` before paint (inline script) and on mount, restores `ar` / `rtl` on unmount. Use inside the `/en` wrapper `<div dir="ltr" lang="en" className="font-latin">` |
 | `Container` | `children` · `as?` · `className?` · `container-smq` |
@@ -146,7 +146,7 @@ All fields: label 11/600 muted (gold when focused or in error), control 48px wit
 
 - Icons (24-unit, currentColor, `size?`, `title?`, `className?`): `WhatsAppIcon`, `ArrowIcon` (points to the line end, mirrors in LTR), `BackArrowIcon`, `ChevronDownIcon`, `PhoneIcon`, `MenuIcon`, `CloseIcon`, `CheckIcon`, `SocialIcon({ id })`.
 - Hooks: `useFocusTrap(ref, active, onClose?)`, `useScrollLock(active)`, `useMounted()`, `useVisitorCode()` (SMQ-XXXXX after hydration), `usePresence(open, leaveMs)`.
-- Constants (`constants.ts`): `NAV_AR`, `MENU_AR`, `FOOTER_COMPACT_AR`, `NAV_EN`, `SOCIAL`, `PHONE_DISPLAY`, `PHONE_TEL`, `PHONE_EN`, `WA_DISPLAY`, `WA_URL`, `EMAIL`, `ADDRESS_AR`, `HOURS_AR`, `TAGLINE_AR`, `HANDLE`, `SITE`, `LICENCE`, `BRAND_AR`, `BRAND_EN`, `BRAND_SHORT`, `COPYRIGHT_YEAR`, `FEATURE_LABELS` (unit feature flag → chip copy), `isExternalHref(href)`.
+- Constants (`constants.ts`, contact and licence values read from `data/settings`): `NAV_AR`, `MENU_AR`, `FOOTER_COMPACT_AR`, `NAV_EN`, `SOCIAL`, `PHONE_DISPLAY`, `PHONE_TEL`, `PHONE_EN`, `WA_DISPLAY`, `WA_URL`, `EMAIL`, `ADDRESS_AR`, `HOURS_AR`, `TAGLINE_AR`, `HANDLE`, `SITE`, `LICENCE`, `BRAND_AR`, `BRAND_EN`, `BRAND_SHORT`, `COPYRIGHT_YEAR`, `FEATURE_LABELS` (unit feature flag → chip copy), `isExternalHref(href)`.
 
 ## Notes for page agents
 

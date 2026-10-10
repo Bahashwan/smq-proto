@@ -1,6 +1,6 @@
 "use client";
 // Small client hooks shared by the overlay components (sheet, menu) and the cards.
-import { useEffect, useRef, useState, type RefObject } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type RefObject } from "react";
 import { visitorCode } from "@/lib/format";
 
 const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -59,33 +59,49 @@ export function useScrollLock(active: boolean) {
   }, [active]);
 }
 
+const noop = () => () => {};
+
 /** true after hydration; lets a component render its server default first */
 export function useMounted(): boolean {
-  const [m, setM] = useState(false);
-  useEffect(() => setM(true), []);
-  return m;
+  return useSyncExternalStore(
+    noop,
+    () => true,
+    () => false,
+  );
 }
 
 /** The visitor reference code (SMQ-XXXXX) once the browser is available; the server placeholder before. */
 export function useVisitorCode(): string {
-  const [code, setCode] = useState("SMQ-XXXXX");
-  useEffect(() => setCode(visitorCode()), []);
-  return code;
+  return useSyncExternalStore(
+    noop,
+    () => visitorCode(),
+    () => "SMQ-XXXXX",
+  );
 }
 
-/** Mounted-then-shown flag for enter/leave transitions. Returns [mounted, shown]. */
+type Phase = "closed" | "enter" | "open" | "leave";
+
+/** Mounted-then-shown flags for enter/leave transitions. Returns [mounted, shown]. */
 export function usePresence(open: boolean, leaveMs = 200): [boolean, boolean] {
-  const [mounted, setMounted] = useState(open);
-  const [shown, setShown] = useState(false);
+  const [phase, setPhase] = useState<Phase>(open ? "open" : "closed");
   useEffect(() => {
     if (open) {
-      setMounted(true);
-      const a = requestAnimationFrame(() => requestAnimationFrame(() => setShown(true)));
-      return () => cancelAnimationFrame(a);
+      let b = 0;
+      const a = requestAnimationFrame(() => {
+        setPhase((p) => (p === "open" ? p : "enter"));
+        b = requestAnimationFrame(() => setPhase("open"));
+      });
+      return () => {
+        cancelAnimationFrame(a);
+        cancelAnimationFrame(b);
+      };
     }
-    setShown(false);
-    const t = window.setTimeout(() => setMounted(false), leaveMs);
-    return () => window.clearTimeout(t);
+    const a = requestAnimationFrame(() => setPhase((p) => (p === "closed" ? p : "leave")));
+    const t = window.setTimeout(() => setPhase("closed"), leaveMs + 16);
+    return () => {
+      cancelAnimationFrame(a);
+      window.clearTimeout(t);
+    };
   }, [open, leaveMs]);
-  return [mounted, shown];
+  return [phase !== "closed", phase === "open"];
 }

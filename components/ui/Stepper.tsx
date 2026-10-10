@@ -1,7 +1,7 @@
 "use client";
 // Budget stepper and slider · Components sheet §3 and the B-Hero finder. The stepper moves 50,000 up to a million
 // then 100,000; the slider moves 10,000; the field accepts typing and formats on blur.
-import { useEffect, useId, useState } from "react";
+import { useId, useState } from "react";
 import { cx, fmtNum } from "@/lib/format";
 import { RiyalSign } from "./RiyalSign";
 
@@ -38,8 +38,11 @@ export interface StepperProps {
 export function Stepper({ value, onChange, min = BUDGET_MIN, max = BUDGET_MAX, step, label = "الميزانية", decLabel, incLabel, size = "m", sign, onGold, id, className }: StepperProps) {
   const auto = useId();
   const fid = id ?? `stepper-${auto}`;
-  const [text, setText] = useState(fmtNum(value));
-  useEffect(() => setText(fmtNum(value)), [value]);
+  // the typed text follows the prop whenever the value changes from outside (chips, slider)
+  const [draft, setDraft] = useState({ value, text: fmtNum(value) });
+  if (draft.value !== value) setDraft({ value, text: fmtNum(value) });
+  const text = draft.text;
+  const setText = (t: string) => setDraft({ value, text: t });
   const clamp = (n: number) => Math.min(max, Math.max(min, n));
   const dec = () => onChange(clamp(value - (step ?? budgetStep(value, -1))));
   const inc = () => onChange(clamp(value + (step ?? budgetStep(value, 1))));

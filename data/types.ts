@@ -650,7 +650,8 @@ export interface CopyField {
 export interface PageSection {
   key: string;
   titleAr: string;
-  visible: boolean;
+  visible: boolean; // on the public page (Home-D)
+  visibleDraft?: boolean; // in the editor's unsaved draft (Admin-PageEditor-D) when it differs
   fields: CopyField[];
   noteAr?: string;
 }

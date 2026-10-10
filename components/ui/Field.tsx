@@ -152,10 +152,8 @@ export type TextAreaProps = Shared & TextareaHTMLAttributes<HTMLTextAreaElement>
 export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function TextArea({ label, hint, error, required, state, wrapperClassName, trailing, id, className, disabled, rows = 4, maxLength, counter = true, onChange, value, defaultValue, ...rest }, ref) {
   const auto = useId();
   const fid = id ?? `f-${auto}`;
-  const [count, setCount] = useState(String(value ?? defaultValue ?? "").length);
-  useEffect(() => {
-    if (value !== undefined) setCount(String(value).length);
-  }, [value]);
+  const [internal, setInternal] = useState(String(defaultValue ?? "").length);
+  const count = value !== undefined ? String(value).length : internal;
   const counterNode = maxLength && counter ? <span className="text-caption font-semibold text-muted tnum" dir="ltr">{`${count} / ${maxLength}`}</span> : trailing;
   return (
     <FieldShell id={fid} label={label} hint={hint} error={error} required={required} disabled={disabled} state={state} className={wrapperClassName} trailing={counterNode}>
@@ -171,7 +169,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(function 
         aria-describedby={error ? `${fid}-error` : hint ? `${fid}-hint` : undefined}
         aria-required={required || undefined}
         onChange={(e) => {
-          setCount(e.target.value.length);
+          setInternal(e.target.value.length);
           onChange?.(e);
         }}
         className={cx(fieldControlClass({ error: !!error, disabled, state }), "h-auto py-3 leading-relaxed resize-y", className)}

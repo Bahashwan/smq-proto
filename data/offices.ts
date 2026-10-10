@@ -1,22 +1,14 @@
 // The 12 alliance members in abjad order (Admin-AllianceMembers-D, Admin-AllianceMember-D, Alliance-D).
 // Ledger: gave = offersGiven + requestsGiven («أعطى»), received = requestsReceived («استقبل»); the net is computed
 // by ledgerNet() in selectors. مكتب ل is suspended («بلا رد 30 يوماً»): it keeps its records but leaves the directory,
-// the coverage counts and the routing. Office names are the design's placeholders.
+// the coverage counts and the routing. Office names are the design's placeholders; avgReplyMinutes 0 = «بلا رد».
 import type { Office, OfficeLedger, Sector } from "./types";
 
 export const ABJAD = ["أ", "ب", "ج", "د", "هـ", "و", "ز", "ح", "ط", "ي", "ك", "ل", "م", "ن", "س", "ع", "ف", "ص", "ق", "ر", "ش", "ت", "ث", "خ", "ذ", "ض", "ظ", "غ"];
 
 const LAUNCH = "2026-10-01"; // «منذ أكتوبر 2026»
 
-function office(
-  n: number,
-  sector: Sector,
-  districts: string[],
-  specialties: string[],
-  expiresOn: string,
-  ledger: OfficeLedger,
-  extra: Partial<Office> = {},
-): Office {
+function office(n: number, sector: Sector, districts: string[], specialties: string[], expiresOn: string, ledger: OfficeLedger, extra: Partial<Office> = {}): Office {
   const letter = ABJAD[n - 1];
   return {
     id: `office-${String(n).padStart(2, "0")}`,
@@ -41,11 +33,6 @@ function office(
 }
 
 export const offices: Office[] = [
-  office("1" as unknown as number, "north", [], [], "", { offersGiven: 0, requestsGiven: 0, dealsClosed: 0, requestsReceived: 0, replied: 0, avgReplyMinutes: 0 }),
-];
-// (replaced below: the array literal above keeps the type narrow while the real list is built with numbers)
-offices.length = 0;
-offices.push(
   office(1, "north", ["obhur-north", "shati", "mohammadiyah"], ["فلل", "عماير سكنية", "أراضي مطورة"], "2027-06-30", { offersGiven: 7, requestsGiven: 3, dealsClosed: 1, requestsReceived: 9, replied: 8, avgReplyMinutes: 100 }, {
     ownerName: "عبدالعزيز",
     phoneMasked: "+966 5X XXX 7710",
@@ -72,7 +59,7 @@ offices.push(
     inDirectory: false,
     joinedThisMonth: false,
   }),
-);
+];
 
 export function officeById(id: string): Office | undefined {
   return offices.find((o) => o.id === id);

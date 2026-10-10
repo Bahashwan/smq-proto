@@ -8,7 +8,7 @@ import type { ApplicationStatus, ApprovalStatus, LeadStatus, MarketerStage, Refe
 export interface Toast {
   id: number;
   text: string;
-  kind?: "ok" | "info";
+  kind?: "ok" | "info" | "error" | "loading";
   action?: { label: string; href: string };
 }
 

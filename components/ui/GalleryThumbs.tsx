@@ -5,6 +5,7 @@
 import Link from "next/link";
 import { cx, bathsLabel } from "@/lib/format";
 import type { ImageTier } from "@/data/types";
+import { SlotImage } from "./ImageSlot";
 
 export interface GalleryThumbItem {
   slotId: string;
@@ -70,7 +71,7 @@ export function GalleryThumbs({ items, active, onSelect, tier, planHref, planLab
               isActive ? "border-2 border-ink" : "border border-line hover:border-ink",
             )}
           >
-            {it.src ? <img src={it.src} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" /> : null}
+            {it.src ? <SlotImage src={it.src} /> : null}
             {!isActive && <span className="relative leading-none">{it.short ?? it.label}</span>}
           </button>
         );

@@ -53,6 +53,12 @@ export interface ImageSlotProps {
 const RATIO: Record<SlotRatio, string> = { "3:2": "aspect-[3/2]", "16:9": "aspect-[16/9]", "4:5": "aspect-[4/5]", "1:1": "aspect-square", "21:9": "aspect-[21/9]", "2:3": "aspect-[2/3]" };
 const CUT: Record<SlotCut, string> = { none: "", img: "cut-img", "img-l": "cut-img-l", xl: "cut-xl" };
 
+/** Plain <img> for slot files (static export: files are served as they are, no optimizer) */
+export function SlotImage({ src, alt = "", sold, className }: { src: string; alt?: string; sold?: boolean; className?: string }) {
+  // eslint-disable-next-line @next/next/no-img-element -- static export, no image optimizer
+  return <img src={src} alt={alt} className={cx("absolute inset-0 w-full h-full object-cover", sold && "img-sold", className)} loading="lazy" />;
+}
+
 /** The neutral placeholder drawing (skyline strokes); tone follows the tier */
 export function PlaceholderDrawing({ tone = "slot", className }: { tone?: "slot" | "ink"; className?: string }) {
   return (
@@ -115,7 +121,7 @@ export function ImageSlot({ slotId, tier, ratio, src, realSrc, alt = "", unit, l
   if (tier === "real") {
     return (
       <Tag className={cx(base, "bg-ink-2")} data-slot={slotId} data-tier={tier}>
-        {file ? <img src={file} alt={alt} className={cx("absolute inset-0 w-full h-full object-cover", sold && "img-sold")} loading="lazy" /> : <PlaceholderDrawing tone="ink" className={cx(sold && "opacity-35")} />}
+        {file ? <SlotImage src={file} alt={alt} sold={sold} /> : <PlaceholderDrawing tone="ink" className={cx(sold && "opacity-35")} />}
         {children}
       </Tag>
     );
@@ -123,7 +129,7 @@ export function ImageSlot({ slotId, tier, ratio, src, realSrc, alt = "", unit, l
 
   return (
     <Tag className={cx(base, sold ? "bg-sand" : "bg-slot")} data-slot={slotId} data-tier={tier}>
-      {file ? <img src={file} alt={alt} className={cx("absolute inset-0 w-full h-full object-cover", sold && "img-sold")} loading="lazy" /> : <PlaceholderDrawing tone="slot" className={cx(sold && "opacity-35")} />}
+      {file ? <SlotImage src={file} alt={alt} sold={sold} /> : <PlaceholderDrawing tone="slot" className={cx(sold && "opacity-35")} />}
       {label && !sold && <IllustrativeLabel lang={lang} size={compact ? "s" : "m"} className={cx("absolute z-[1]", compact ? "bottom-1.5 start-1.5" : "bottom-3 start-3")} />}
       {!sold && idLine}
       {children}

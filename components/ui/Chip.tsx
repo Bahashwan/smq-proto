@@ -40,7 +40,7 @@ export function Chip({ active, href, onClick, disabled, size = "m", cut, onColou
   );
   if (href && !disabled) {
     return isExternalHref(href) ? (
-      <a href={href} className={cls} aria-pressed={active} aria-current={active ? "true" : undefined} {...aria}>
+      <a href={href} className={cls} aria-current={active ? "true" : undefined} {...aria}>
         {children}
       </a>
     ) : (
