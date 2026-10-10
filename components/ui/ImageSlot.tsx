@@ -70,7 +70,6 @@ export function GeneratedPicture({ slotId, alt = "", sold, sizes = "(min-width: 
     <picture className="absolute inset-0 block" style={{ backgroundImage: `url(${f.blur})`, backgroundSize: "cover", backgroundPosition: "center" }}>
       <source type="image/avif" srcSet={set("avif")} sizes={sizes} />
       <source type="image/webp" srcSet={set("webp")} sizes={sizes} />
-      {/* eslint-disable-next-line @next/next/no-img-element -- static export, files are pre-sized */}
       <img src={fallback} alt={alt} width={f.width} height={f.height} loading="lazy" decoding="async" className={cx("absolute inset-0 w-full h-full object-cover", sold && "img-sold")} />
     </picture>
   );

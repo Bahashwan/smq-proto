@@ -28,73 +28,50 @@ Single source of truth for where the build stands, so that work can continue fro
 
 ## Status
 
-Legend: `[ ]` not started · `[~]` in progress · `[x]` done and pushed · `[v]` shown to the client and accepted · `[!]` blocked
+Legend: `[ ]` not started · `[~]` in progress or partial · `[x]` done and pushed · `[v]` shown to the client and accepted · `[!]` blocked
+
+Snapshot on 2026-10-10: every board is built. `npm run build` exports 266 pages to `out/`; `npm run coverage` finds every one of the 117 page boards registered and every registered route in the export; the smoke QA (`npm run qa`) passes on all 129 screens of the export; `npm run qa:tours` loads all 17 tour steps with the overlay; `npm run qa:flows` passes the buyer, alliance and owner journeys end to end. `npx tsc --noEmit` is clean; `npm run lint` has 0 errors and 7 React Compiler warnings (deliberate, see working notes). Nothing has been shown to the client yet.
 
 Phase 0 · Planning
-- [x] Read all 130 boards and the README (2026-10-09); outlines in `docs/boards/`
-- [x] Route table and plan: `docs/route-map.md` (pushed, PR #1)
+- [x] Boards read, outlines in `docs/boards/`, route table and plan in `docs/route-map.md`, token names and data model written
 - [x] Client OK: on 2026-10-10 the owner wrote «develop the full prototype do all phases», taken as the OK on the route table and the six decisions
-- [x] Research: AI Gateway flux-3-image API → `docs/notes/ai-gateway.md`
-- [x] Maps decision received 2026-10-10 (keyless embeds + schematic SVGs, no map library) → folded into `docs/BRIEF.md` and `docs/route-map.md`
-- [x] Token names (`docs/tokens.md`) and data model (`docs/data-model.md`) written
 
 Phase 1 · Tokens, shell, shared components
-- [x] Next.js app scaffold as above (static export, noindex meta + `vercel.json` header + `robots.txt`, `npm run shots` harness) · `npm run build` exports cleanly
-- [x] `styles/tokens.css` with every `--smq-*` token from Tokens.html, names per `docs/tokens.md`; cuts and hexagons as utilities (`app/globals.css` `@theme` + `@utility`); motion tokens; reduced-motion rule
-- [x] Fonts: Noto Kufi Arabic variable (self-hosted from `@fontsource-variable`) as the default; Noto Sans on `[dir=ltr]`. Western digits, `tabular-nums` from the root
-- [x] Riyal sign component (`components/ui/RiyalSign.tsx`, `Price.tsx`)
-- [x] CSS treatments: `img-sold` / `img-desaturated` utilities in `app/globals.css`
-- [x] Shared components from Components.html / Components2.html / Components3.html → `components/ui` (31 files), `components/admin` (32, with `AdminShell`), `components/alliance` (26), each with a README listing exports and a styleguide section at `/demo/components`. Built from the sheets (buttons, chips, segmented, tabs, fields with gold error, stepper, badges, price band, rows, accordion, breadcrumb, image slots with the three tiers, toast, compare bar, data table row, field group, switch, drag handle, status pills, file upload, AR/EN tab, save bar, drawer, dialog, door card, district multi-select, hex district cell, FAL badge, ledger bar, stage line, request card, referral receipt, board column)
-- [x] Header (72 → 56 scrolled, mobile menu sheet `?menu=1`), footer, `Mark` chip, «صورة تعبيرية» label in `ImageSlot`; `components/map`: `SchematicMap`, `PinPicker`, `MapEmbed` (keyless embed, lazy, schematic placeholder, frame on the container, iframe never clipped)
-- [x] `/data` fixtures, exactly the file list in `docs/data-model.md` (`units`, `projects`, `districts`, `offices`, `applications`, `requests`, `referrals`, `marketers`, `approvals`, `leads`, `visitors`, `analytics`, `content`, `settings`, `media` (32 slots), plus `types.ts` and `selectors.ts`); `data/selectors.ts` for every computed number
-- [x] In-memory client store (`lib/store.ts`, `smq.store`) + presenter state (`lib/presenter.tsx`, `smq.presenter`, URL parameters override) + client location store (`lib/location.ts`)
-- [x] `/demo/components` styleguide for QA (four sections: ui, map, admin, alliance)
+- [x] Next 16 static-export scaffold, `styles/tokens.css` + Tailwind v4 `@theme`, self-hosted Noto Kufi Arabic and Noto Sans, noindex everywhere
+- [x] `data/` fixtures and 96 selectors (`data/README.md`); `lib/` location, presenter, store, formatting, URL helpers
+- [x] `components/ui`, `components/admin` (with `AdminShell`), `components/alliance`, `components/map` (schematic map, pin picker, keyless embed); each has a README and a section on `/demo/components`
 
 Phase 2 · Public explorer
-- [ ] `/` home (finder with live count, project card, price guide, services, founder typographic card, FAQ, contact block with keyless embed)
-- [ ] `/units` results (URL filters, sort, compare, sold strip, load-more), filters sheet, `?skeleton=1`, empty state with computed loosen suggestions and the alliance bridge, `/alliance/request/sent?req=REQ-2026-0412`
-- [ ] `/units/map` interactive schematic SVG map (pins with computed counts, sheet / side card, zoom buttons)
-- [ ] `/guide`
-- [ ] `/projects`, `/projects/garden-rawdah` (keyless embed at الروضة centre + «الموقع تقريبي [للتأكيد]»)
-- [ ] `/units/[code]` (available / `?ustatus=reserved` / sold / roof), `/gallery`, `/plan` (schematic SVG plan), three image tiers (`?tier=`)
-- [ ] `/compare` (3 / one / empty)
-- [ ] Screenshots at 390 and 1440 against the boards, fixes, shown to the client
+- [x] `/` home (Claude), `/units` + filters sheet + skeletons + empty state with the alliance bridge, `/alliance/request/sent`, `/units/map`, `/en/units` (G2)
+- [x] `/units/[code]` in every state and tier, `/gallery`, `/plan`, `/compare` three / one / empty, `/en/units/[code]` (G3)
+- [x] `/guide`, `/projects`, `/projects/[slug]` with the project embed, `/contact` + error + `?offline=1`, `/contact/sent` (G4)
 
 Phase 3 · Remaining public pages
-- [ ] `/services`, `/add` (three steps, building variant, `/add/sent`), `/about` (+ `?proof=1`), `/contact` (+ sent, error, `?offline=1`; keyless office embed at street level), `/privacy`, 404, `/en`, `/en/units`, `/en/units/[code]`
-- [ ] Screenshots, fixes, shown
+- [x] `/services`, `/about` + `?proof=1`, `/privacy`, 404, `/en` (G1)
+- [x] `/add`, `/add/details` (apartment and building), `/add/contact`, `/add/sent` (G5)
 
 Phase 4 · تعاون معنا, alliance, forms
-- [ ] `/collaborate`, `/alliance` (12 members; `?members=0`; honeycomb fill animation), `/alliance/apply` (3 steps, sent, status via `?app=`), `/marketers` (+ sent)
-- [ ] Screenshots, fixes, shown
+- [x] `/collaborate`, `/marketers`, `/marketers/sent` (G5)
+- [x] `/alliance` (+ `?members=0`), `/alliance/apply` three steps, `/sent`, `/status/[id]` (+ `?app=`) (G6)
 
-Phase 5 · Member and marketer pages (390 only, phone column on desktop)
-- [ ] `/member/[token]` ledger, `/requests/[id]` (`?mreq=`), `/referrals/[id]`, `/report`; `/m/[token]`; `/r/[name]` client redirect with attribution (`smq.ref`, 30 days)
-- [ ] Screenshots, fixes, shown
+Phase 5 · Member and marketer pages
+- [x] `/member/[token]` ledger, `/requests/[id]` (+ `?mreq=`), `/referrals/[id]`, `/report`; `/m/[token]`; `/r/[name]` (G6)
 
 Phase 6 · Admin
-- [ ] Shell (sidebar, phone tabs, bell dropdown, toasts), `/admin/login` (+ `?error=1`)
-- [ ] Overview, approvals (role checklist, approve in memory), units + Excel import panel (`?import=1`), unit editor (delete dialog), projects + project editor (SVG pin picker), leads (drawer / sheet, manual status), analytics, visitors (drawer), `?empty=1` states
-- [ ] Content hub, page editor with live preview, FAQ, partners, testimonials, lists, site settings (SVG pin picker), SEO, media (generated = تعبيرية), needs-confirmation list, users (`?wa=manual`)
-- [ ] Marketers + detail; alliance room: overview (+ phone), applications, members + member, radar with district drawer, requests (pick offer → create REF in memory), referrals (dispute, stage update), report, settings
-- [ ] Screenshots, fixes, shown
+- [x] Login, overview (desktop and phone), approvals with the role checklist, units + Excel import + editor + delete dialog, projects + editor with the pin picker, leads, analytics, visitors (G7)
+- [x] Content hub, page editor with live preview, FAQ, partners, testimonials, lists, site settings, SEO, media, needs-confirmation, users (G8)
+- [x] Marketers board + detail; alliance room overview, applications, members + member file, radar, requests (creates REF-2026-0117), referrals, report, settings (G9)
 
 Phase 7 · Presenter and tours
-- [x] `/demo` screen map grouped by the `docs/route-map.md` sections with every registered state deep-linked (groups fill `lib/screens/<group>.ts` as they land); presenter bar (`Shift+P`, `?demo=1`) with every switch; `[للتأكيد]` chip toggle (`marks`); `/demo/contact-sheet`
-- [x] Tours: buyer, owner, alliance request (`lib/tours.ts`, `components/presenter/TourOverlay.tsx`: overlay card with next / previous over the real routes, `?tour=<id>&step=<n>`; the step routes exist once their page groups land)
+- [x] Presenter bar with every switch, `/demo` screen map with all 129 screens and the tours, `/demo/components`, `/demo/contact-sheet`
+- [x] Tours: buyer, owner (building variant through to the approval), alliance request (empty state through to the member's ledger); the tour card avoids the admin work area and collapses
 
-Phase 8 · Images (script only, never at request time)
-- [x] `scripts/images/manifest.ts` from Shots.html (31 slots: id, aspect ratio, group exterior / interior / editorial / brand, prompt in English prefixed by the shared look «ضوء جدة الصباحي» rendered in English, the palette, and the exclusions)
-- [x] `scripts/images/generate.ts` (AI SDK 7, `bfl/flux-3-image`, `resolution: '2k'`, reference images via `prompt.images`, running cost printed from the catalog price, hard stop at $15, skips slots in `picks.json` unless `--force`)
-- [~] Anchors first: IMG-PRJ-ROWDAH-EXT, IMG-UNIT-APT-3BR-LIVING, IMG-ED-BALAD-RAWASHEEN, IMG-ED-CORNICHE-DAWN generated (two candidates each, $0.40) and picked provisionally by Claude (`scripts/images/picks.json`, reasons in `scripts/images/rejections.md`); the owner confirms or swaps them on `/demo/contact-sheet`. Raw candidates live in `public/images/_candidates/` and the picked masters in `public/images/<slot>/source.png` (both git-ignored, stripped from `out/` by the postbuild step); only the converted AVIF/WebP and `public/images/manifest.json` are committed
-- [ ] Rest of the slots with the approved exterior + interior as references, two candidates each at 2048 class; reject people, text, signage, plates, non-Jeddah skylines, warped architecture (noted in `scripts/images/rejections.md`)
-- [ ] Outputs: `public/images/<slot>/<slot>-{640,1280,2048}.{avif,webp}` + a blur placeholder; the chosen file's model, prompt and seed recorded in `scripts/images/picks.json` (seed is read from `providerMetadata` when the provider returns one; otherwise the request id is stored)
-- [ ] IMG-HERO-BRAND with the logo reference `design/brand/logo-mark-gold.png`; composite the real mark in CSS/SVG if the generated mark is distorted
-- [ ] Fallback `google/gemini-nano-banana-2.1` via `generateText` + `result.files` when flux fails for a slot
+Phase 8 · Images
+- [x] Scripts: manifest (shared look, palette, exclusions, INLAND rule), generate (references, running cost, $15 stop, fallback), pick, convert (AVIF/WebP + blur), postbuild cleanup
+- [~] 12 of 32 slots converted and live: eight editorial shots, the inland project exterior, balcony, smart-home detail, brand hero (real mark composited). **Blocked: the AI Gateway credit ran out at $2.85.** The other 20 slots show the designed placeholder with «صورة تعبيرية» until the account is topped up (commands under Next action)
 
 Phase 9 · Link previews and icons
-- [x] `/og/*` routes (`app/og/home`, `app/og/project/[slug]`, `app/og/unit/[code]`) screenshotted to `/public/og/*.png` with `npm run og`; `openGraph.images` wired on `/` (project and unit pages wire theirs when their groups land)
-- [x] favicon.svg, favicon-16/32.png, apple-touch-icon.png, icon-512.png, icon-512-maskable.png, manifest.webmanifest (`npm run icons`)
+- [x] `/og/home`, `/og/project/[slug]`, `/og/unit/[code]` rendered to `public/og/*.png` and wired (OG-Home is the site default); favicon and app icons per the Icons board
 
 ## Decision log
 
@@ -110,15 +87,22 @@ Phase 9 · Link previews and icons
 | 2026-10-10 | Application ALL-2026-0038 is مكتب م للعقارات on every screen (apply prefill, success, status, admin applications): the boards write مكتب أ, which is already member `office-01`, and approving it would create a duplicate member | Claude, resolves the board collision |
 | 2026-10-10 | `District.comingSoon` = the Admin-Lists-D set (أبحر الشمالية، الشاطئ، المحمدية); the Guide's «قريباً» chips are computed as every district without a live guide, so الفيصلية shows قريباً there as on Guide-D | Claude, resolves the board mismatch |
 | 2026-10-10 | Foundation built by five parallel agents (fixtures, public UI, admin UI + shell, alliance UI, maps); their board-vs-build notes live in each library's README «Known differences» and in this file's working notes | Claude |
+| 2026-10-10 | Image prompts for project, unit and brand slots carry an INLAND rule: no sea through windows or behind the buildings (Unit-Tier-Gen-M «لا إطلالات حقيقية مزعومة»); editorial shots may show the sea | Claude, after reviewing the first run |
+| 2026-10-10 | Provisional image picks by Claude (`scripts/images/picks.json`, reasons in `scripts/images/rejections.md`); the client confirms or swaps them | Claude |
+| 2026-10-10 | The brand hero composites the real gold mark in the photo's quiet upper-left quarter (the generated facade carries no readable mark) | Shots board rule |
+| 2026-10-10 | Alliance hero: four offices (ج، و، ط، ك) joined this month; launch day marks أبحر الشمالية، المحمدية، الصفا، النعيم «مطلوب» (fixtures follow the boards) | Claude, from Alliance-D and Alliance-Launch-M |
+| 2026-10-10 | The owner tour opens the building variant at every step (`?type=building`) and ends on `/admin/approvals/2026-1042` | Claude |
+| 2026-10-10 | Header between 1024 and 1439 px: phone icon instead of the number and a tighter nav so nothing overflows; 1440 matches the boards | Claude, from the G4 report |
 | 2026-10-10 | Presenter switches are one URL parameter each (`members`, `tier`, `ustatus`, `app`, `mreq`, `wa`, `skeleton`, `marks`, `proof`, `offline`, `empty`, `error`, `tour`+`step`); storage keys `smq.presenter`, `smq.compare`, `smq.ref`, `smq.store` | Claude, table in `docs/route-map.md` |
 
 ## Open questions for the client
 
-1. OK on the route table and the six decisions in `docs/route-map.md`? (blocking, answered in chat)
-2. Google's own "Embed a map" code for the office (to replace the coordinate-built embed URL) — later.
-3. Real photos for `/public/real`, if any — later.
-4. Anchor image approval, then candidate picks — at Phase 8.
-5. Rotate `AI_GATEWAY_API_KEY` after the image phase (it was pasted in chat).
+1. Review the prototype (start at `/demo`; the three tours walk the main journeys) and say what to change.
+2. Top up the Vercel AI Gateway (about $3 covers the remaining 20 image slots), or say to keep the placeholders.
+3. Confirm or swap the provisional image picks on `/demo/contact-sheet` (reasons in `scripts/images/rejections.md`).
+4. Google's own «Embed a map» code for the office (the embed is built from the coordinates until then).
+5. Real photos for `/public/real/<slot>.jpg`, if any (the real tier picks them up automatically).
+6. Rotate `AI_GATEWAY_API_KEY` after the image phase (it was pasted in chat).
 
 ## Working notes
 
@@ -133,10 +117,18 @@ Phase 9 · Link previews and icons
 - Known foundation gaps noted by the agents: hexagon borders are real clip-path rings (the boards fake them with box-shadow); 10px board captions render at the 11px token minimum; `StageBoard` has no drag-and-drop between columns; the honeycomb fill animation was verified only under reduced motion; `AdminButton`/`AdminField` are admin-sized local equivalents of `Button`/`TextField`; the schematic map's lat/lng fit is approximate (pins by district slug never depend on it).
 - Sessions and limits: the cloud session's subagents hit the account usage limit at 02:00 UTC on 2026-10-10 (resets 04:10 UTC); the data agent had finished writing before it stopped.
 
+- Known differences from the boards, kept on purpose (each page group's full list is in its agent report, summarised here):
+  - Numbers computed from the ten real units win over the boards' illustrative ones: the finder count at 700,000 is 6, the empty state for الفيصلية needs four loosenings (+2, +1), YS-A has 5 similar available units (board 4), RZ-A is the lowest per m² among apartments (board «ثاني أقل»), the map shows one project with 6 matches, budget chips 2/5/6/6/8.
+  - Alliance and admin numbers follow the fixtures (ledgers, open approvals 4, mean reply 3 س 19 د, radar order by its formula, 33 districts not 30). مكتب ل is suspended, so the directory shows 11 cards.
+  - Type sizes snap to the tokens (10px board captions render at 11px; card titles at text-h3), cuts snap to the 60° tokens (boards sometimes draw 52×30 or 40×23), hexagon outlines are real rings (the boards' box-shadow rings only show top and bottom lines).
+  - The DistrictMultiSelect opens as a sheet on the phone, the stage boards have no drag between columns, the hub door cards have no arrow slot, alliance pages use the shared header (with the menu button).
+  - Changes made in the admin live in the session store: results, unit, member and admin pages follow them; the statically rendered home and project pages keep the fixture counts.
+  - There are no owner listings in the fixtures (the ten units are the only real inventory), so the map's owner pin is hidden and `/projects` computes its owner group from the radar fixture.
+- QA tooling: `npm run qa` (smoke over every screen; `--base=` to test the export served with `npx serve out -l 3001`), `npm run qa:tours`, `npm run qa:flows`, `npx tsx scripts/qa/errors.ts <url>` (full console and hydration errors of one page), `npm run coverage`.
+
 ## Next action
 
-Page groups are being built by agents in three waves (A: G2, G3 then G7 · B: G1, G4 then G8 · C: G5, G6 then G9), each brief in `docs/briefs/page-groups.md` plus the resume note «continue from the partial files in your area». If a session stops mid-way: `git status` shows what the agents left; commit it, then re-run the missing groups from their briefs (each agent lists its area first and finishes what is there). After every group: `npx tsc --noEmit`, `npm run lint`, `npm run build` (postbuild strips image working files), commit with the shots, update this file, push.
-
-Images: 12 of the 32 slots have converted photos (`public/images/manifest.json`): eight editorial shots, the inland project exterior, the balcony, the smart-home detail and the brand hero (real mark composited in CSS). The first project and unit run showed the sea through every window, which breaks the boards' «لا إطلالات حقيقية مزعومة» rule, so those candidates were rejected and the prompts gained an INLAND clause. **The AI Gateway credit ran out at $2.85** («A positive credit balance is required»): top up the Vercel AI Gateway, then run `set -a && . ./.env.local && set +a && npm run images -- --anchors` (regenerates IMG-UNIT-APT-3BR-LIVING, the interior anchor), pick it (`npx tsx scripts/images/pick.ts --slot=IMG-UNIT-APT-3BR-LIVING --candidate=1`), then `npm run images -- --parallel=3` for the remaining slots, pick each on `/demo/contact-sheet`, and `npm run images:convert`. Until then those slots show the designed placeholder with «صورة تعبيرية». Reasons for every rejection: `scripts/images/rejections.md`.
-
-Dev server for agents: one shared `next dev` on :3000. In the cloud session a watchdog script kept it alive; locally just run `npm run dev` once.
+1. Show the client: run `npm run dev` (or `npm run build && npx serve out`), open `/demo`, run the three tours, and collect feedback. Mark accepted sections `[v]` above.
+2. Images: once the Vercel AI Gateway is topped up, run `set -a && . ./.env.local && set +a && npm run images -- --anchors` (regenerates the interior anchor IMG-UNIT-APT-3BR-LIVING), pick it with `npx tsx scripts/images/pick.ts --slot=IMG-UNIT-APT-3BR-LIVING --candidate=1`, then `npm run images -- --parallel=3`, pick each slot on `/demo/contact-sheet`, `npm run images:convert`, rebuild and re-shoot (`npm run shots`). Reject anything that shows the sea from a project or unit, people, text, plates or warped architecture.
+3. Deploy when the client wants a link: `npm run build`, then deploy `out/` to Vercel (noindex headers are in `vercel.json`).
+4. After any change: `npx tsc --noEmit`, `npm run lint`, `npm run build`, `npm run coverage`, `npm run qa -- --base=http://localhost:3001` against `npx serve out -l 3001`, commit with the shots, update this file, push.
