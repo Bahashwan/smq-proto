@@ -80,12 +80,12 @@ Phase 6 · Admin
 - [ ] Screenshots, fixes, shown
 
 Phase 7 · Presenter and tours
-- [ ] `/demo` screen map grouped by the `docs/route-map.md` sections (the `design/preview/index.html` numbering) with every state deep-linked; presenter bar (`Shift+P`, `?demo=1`) with all switches of the parameter table in `docs/route-map.md`; `[للتأكيد]` chip toggle (`marks`)
-- [ ] Tours: buyer, owner (`/add/sent?no=2026-1042` → `/admin/approvals/2026-1042`), alliance request (overlay with next / previous over real routes)
+- [x] `/demo` screen map grouped by the `docs/route-map.md` sections with every registered state deep-linked (groups fill `lib/screens/<group>.ts` as they land); presenter bar (`Shift+P`, `?demo=1`) with every switch; `[للتأكيد]` chip toggle (`marks`); `/demo/contact-sheet`
+- [x] Tours: buyer, owner, alliance request (`lib/tours.ts`, `components/presenter/TourOverlay.tsx`: overlay card with next / previous over the real routes, `?tour=<id>&step=<n>`; the step routes exist once their page groups land)
 
 Phase 8 · Images (script only, never at request time)
-- [ ] `scripts/images/manifest.ts` from Shots.html (31 slots: id, aspect ratio, group exterior / interior / editorial / brand, prompt in English prefixed by the shared look «ضوء جدة الصباحي» rendered in English, the palette, and the exclusions)
-- [ ] `scripts/images/generate.ts` (AI SDK 7, `bfl/flux-3-image`, `resolution: '2k'`, reference images via `prompt.images`, running cost printed from the catalog price, hard stop at $15, skips slots in `picks.json` unless `--force`)
+- [x] `scripts/images/manifest.ts` from Shots.html (31 slots: id, aspect ratio, group exterior / interior / editorial / brand, prompt in English prefixed by the shared look «ضوء جدة الصباحي» rendered in English, the palette, and the exclusions)
+- [x] `scripts/images/generate.ts` (AI SDK 7, `bfl/flux-3-image`, `resolution: '2k'`, reference images via `prompt.images`, running cost printed from the catalog price, hard stop at $15, skips slots in `picks.json` unless `--force`)
 - [ ] Anchors first: IMG-PRJ-ROWDAH-EXT, IMG-UNIT-APT-3BR-LIVING, IMG-ED-BALAD-RAWASHEEN, IMG-ED-CORNICHE-DAWN, two candidates each on `/demo/contact-sheet`; the client picks in chat; the picks go into the decision log. Raw candidates and every intermediate render go to `scripts/images/out/` (git-ignored, read by the contact sheet in dev); only the picked, converted files are written to `public/images/`
 - [ ] Rest of the slots with the approved exterior + interior as references, two candidates each at 2048 class; reject people, text, signage, plates, non-Jeddah skylines, warped architecture (noted in `scripts/images/rejections.md`)
 - [ ] Outputs: `public/images/<slot>/<slot>-{640,1280,2048}.{avif,webp}` + a blur placeholder; the chosen file's model, prompt and seed recorded in `scripts/images/picks.json` (seed is read from `providerMetadata` when the provider returns one; otherwise the request id is stored)
@@ -93,8 +93,8 @@ Phase 8 · Images (script only, never at request time)
 - [ ] Fallback `google/gemini-nano-banana-2.1` via `generateText` + `result.files` when flux fails for a slot
 
 Phase 9 · Link previews and icons
-- [ ] `/og/*` routes screenshotted to `/public/og/*.png` with Playwright (`npm run og`); metadata wired
-- [ ] favicon.svg, favicon-32.png, apple-touch-icon.png, icon-512.png, icon-512-maskable.png
+- [x] `/og/*` routes (`app/og/home`, `app/og/project/[slug]`, `app/og/unit/[code]`) screenshotted to `/public/og/*.png` with `npm run og`; `openGraph.images` wired on `/` (project and unit pages wire theirs when their groups land)
+- [x] favicon.svg, favicon-16/32.png, apple-touch-icon.png, icon-512.png, icon-512-maskable.png, manifest.webmanifest (`npm run icons`)
 
 ## Decision log
 

@@ -8,7 +8,10 @@ import { homeFaq, proofNumbers } from "@/data/content";
 import { settings } from "@/data/settings";
 import { fmtNum, fmtDate, waLink } from "@/lib/format";
 
-export const metadata = { title: "إس إم كيو العقارية · وحدات بأسعار معلنة في جدة" };
+export const metadata = {
+  title: "إس إم كيو العقارية · وحدات بأسعار معلنة في جدة",
+  openGraph: { title: "شقق وفلل روف بأسعار معلنة في جدة", description: "ابدأ من ميزانيتك. لا «اتصل للسعر».", images: [{ url: "/og/home.png", width: 1200, height: 630 }] },
+};
 
 const SERVICES = [
   { n: "01", title: "شراء العقارات", text: "نفلتر السوق على ميزانيتك ونرافقك حتى الإفراغ.", href: "/services#buy" },
