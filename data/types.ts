@@ -569,6 +569,7 @@ export interface ReportSlice {
   offices: number;
   officeIds?: string[];
   supplyAr?: string; // «0 وحدة» · «1 وحدة من مالك»
+  needsMembers?: boolean; // one office is not enough for the demand: «1 · يحتاج أعضاء» (Member-Report-D)
 }
 
 export interface AllianceReport {

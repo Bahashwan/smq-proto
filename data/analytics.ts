@@ -232,7 +232,7 @@ export const allianceReports: AllianceReport[] = [
       { labelAr: "الصفا · شقق 4 غرف حتى 700k", sessions: 204, offices: 1, officeIds: ["office-05"], supplyAr: "1 وحدة من مالك" },
       { labelAr: "الفيصلية · شقق 4 غرف حتى 450k", sessions: 141, offices: 1, officeIds: ["office-09"], supplyAr: "0 وحدة" },
       { labelAr: "المحمدية · شقق 3 غرف 700k إلى 1M", sessions: 96, offices: 2, officeIds: ["office-04", "office-12"], supplyAr: "0 وحدة" },
-      { labelAr: "النعيم · عماير سكنية بدخل 3 إلى 6M", sessions: 61, offices: 1, officeIds: ["office-06"], supplyAr: "1 عرض قيد المراجعة" },
+      { labelAr: "النعيم · عماير سكنية بدخل 3 إلى 6M", sessions: 61, offices: 1, officeIds: ["office-06"], supplyAr: "1 عرض قيد المراجعة", needsMembers: true },
     ],
     wordAr: "الطلب على 4 غرف في الصفا والفيصلية يسبق العرض للشهر الثاني. من يملك عرضاً هناك فليرسله عاماً من صفحته.",
     sections: [

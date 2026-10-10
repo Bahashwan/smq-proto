@@ -167,7 +167,7 @@ export function MemberReport({ officeId }: { officeId: string }) {
                   <td className="px-4 py-3.5 font-extrabold">{o.labelAr}</td>
                   <td className="px-4 py-3.5 tnum">{fmtNum(o.sessions)}</td>
                   <td className="px-4 py-3.5">{o.supplyAr}</td>
-                  <td className={cx("px-4 py-3.5", o.offices === 0 && "font-extrabold text-gold-text")}>{o.offices === 0 ? "يحتاج أعضاء" : `${o.offices} · ${covering(o.officeIds)}`}</td>
+                  <td className={cx("px-4 py-3.5", (o.offices === 0 || o.needsMembers) && "font-extrabold text-gold-text")}>{o.offices === 0 ? "يحتاج أعضاء" : o.needsMembers ? `${o.offices} · يحتاج أعضاء` : `${o.offices} · ${covering(o.officeIds)}`}</td>
                 </tr>
               ))}
             </tbody>
