@@ -239,7 +239,7 @@ function MapView({
         </div>
       )}
 
-      {legend && <span className={cx("text-caption absolute bottom-4 start-4 z-[2] bg-paper font-bold", phone ? "max-w-[calc(100%-32px)] px-2 py-[3px]" : "max-w-[calc(100%-92px)] px-[10px] py-1")}>{legend}</span>}
+      {legend && <span className={cx("text-caption absolute bottom-4 start-4 z-[2] bg-paper font-bold", phone ? (showZoom || onLocate ? "max-w-[calc(100%-88px)] px-2 py-[3px]" : "max-w-[calc(100%-32px)] px-2 py-[3px]") : "max-w-[calc(100%-92px)] px-[10px] py-1")}>{legend}</span>}
 
       {children}
     </div>

@@ -255,7 +255,7 @@ export function MapPage() {
           <div className={cx("hidden min-h-0 md:flex md:flex-col", RULE_E)}>
             <SideList pin={selected} overrides={r.overrides} filters={r.filters} />
           </div>
-          <SchematicMap variant="phone" pins={pins} selectedId={selected?.id ?? null} onSelect={select} regionLabel="جدة · شمال وسط" showZoom={false} className="min-h-[260px] flex-1 md:hidden" />
+          <SchematicMap variant="phone" pins={pins} selectedId={selected?.id ?? null} onSelect={select} regionLabel="جدة · شمال وسط" className="min-h-[260px] flex-1 md:hidden" />
           <SchematicMap
             variant="desktop"
             pins={pins}
