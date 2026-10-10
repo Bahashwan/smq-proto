@@ -95,10 +95,11 @@ export function LeadsPage() {
   const lastAnswered = all.filter((l) => effectiveLeadStatus(l, ov) === "answered").sort((a, b) => (a.at < b.at ? 1 : -1))[0];
   const emptyBlock = (
     <EmptyState
+      icon="gold"
       title="لا طلبات بلا رد"
       text={lastAnswered ? `كل الطلبات الواردة مُعلَّمة. آخر طلب وصل ${agoLabel(lastAnswered.at)}${lastAnswered.team ? ` وردّت عليه ${lastAnswered.team}` : ""}.` : "كل الطلبات الواردة مُعلَّمة."}
       action={
-        <button type="button" onClick={() => setStatus("answered")} className="text-[12px] font-extrabold text-gold-text underline hover:text-ink">
+        <button type="button" onClick={() => setStatus("answered")} className="text-[12px] font-extrabold text-gold-text no-underline hover:underline hover:text-ink">
           عرض «تم الرد» {counts.answered}
         </button>
       }

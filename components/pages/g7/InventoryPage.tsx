@@ -273,9 +273,14 @@ export function InventoryPage() {
           text="ارفع ملف Excel بالنماذج والأسعار، أو أضف وحدة يدوياً. الموقع يعرض «قريباً» في النتائج حتى تُنشر أول وحدة."
           action={
             <div className="flex flex-wrap justify-center gap-2">
-              <AdminButton variant="ink" size="md" onClick={openImport}>
+              {/* the board draws a plain ink rectangle here (no cut) */}
+              <button
+                type="button"
+                onClick={openImport}
+                className="inline-flex h-10 items-center justify-center whitespace-nowrap bg-ink px-4 text-label font-extrabold text-paper motion-hover transition-colors hover:bg-ink-2"
+              >
                 استيراد Excel
-              </AdminButton>
+              </button>
               <AdminLinkButton href="/admin/units/new" variant="outline" size="md">
                 + وحدة يدوياً
               </AdminLinkButton>

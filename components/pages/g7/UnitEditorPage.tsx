@@ -477,7 +477,7 @@ export function UnitEditorPage({ slug }: { slug?: string }) {
           safeAlternative={
             <button
               type="button"
-              className="font-bold text-gold-text underline hover:text-ink"
+              className="font-bold text-gold-text no-underline hover:underline hover:text-ink"
               onClick={() => {
                 setDel(false);
                 set("hidden", true);

@@ -56,7 +56,7 @@ export function Dialog({ open, onClose, title, children, confirmLabel, cancelLab
         aria-labelledby={titleId}
         onKeyDown={(e) => trapTab(e, panel.current)}
         style={{ maxWidth: width }}
-        className="relative flex w-full flex-col gap-3.5 border-interactive border-t-[6px] border-t-gold bg-paper px-[22px] pb-[18px] pt-5"
+        className="relative flex w-full flex-col gap-3.5 border-[1.5px] border-ink border-t-[6px] border-t-gold bg-paper px-[22px] pb-[18px] pt-5"
       >
         <span id={titleId} className={cx("font-extrabold leading-tight", destructive ? "text-h3" : "text-[15px]")}>
           {title}
@@ -84,9 +84,10 @@ export function Dialog({ open, onClose, title, children, confirmLabel, cancelLab
           </label>
         )}
         <div className="mt-1 flex flex-wrap items-center gap-2.5">
-          <AdminButton variant="ink" size="sm" onClick={onConfirm} disabled={disabled} data-autofocus={needsCode ? undefined : true} className="disabled:bg-ink disabled:text-paper disabled:opacity-40">
+          {/* the board's disabled confirm: ink at 40% with white words and no cut (AdminButton's sand disabled state would hide it) */}
+          <button type="button" onClick={onConfirm} disabled={disabled} data-autofocus={needsCode ? undefined : true} className="inline-flex h-10 items-center justify-center px-4 bg-ink text-paper text-label font-extrabold motion-hover transition-colors hover:bg-ink-2 disabled:cursor-default disabled:opacity-40 disabled:hover:bg-ink">
             {confirmLabel}
-          </AdminButton>
+          </button>
           <AdminButton variant="outline" size="sm" onClick={onClose}>
             {cancelLabel}
           </AdminButton>

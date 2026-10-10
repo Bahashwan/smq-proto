@@ -76,7 +76,8 @@ Phase 9 · Link previews and icons
 
 Phase 10 · Board review round
 - [x] Shared gaps from the build reports closed: header `waText` + `menu` (alliance flow boards: logo + WhatsApp «التحالف», no menu; marketer pages «مسوّق»), menu rows at the board's 67px, desktop skeleton card with the hexagon badge, the hub's large door with the CTA arrow, inline phone district picker + typed search, admin counters and bell shared by every admin page (`components/admin/live.ts`), PageHeader `inlineActions`, CompareToggle `label`, gold breadcrumb links, live home counts, data (`districtsCount` from the fixture, `reservationDays` in settings, SEO variables as on Admin-SEO-D, marketer `lastVisitAt`)
-- [~] Review and fix per page group with `docs/briefs/board-review.md` (pair sheets, copy check, fixes in the group's files, shared needs to the orchestrator): G1, G2, G3, G6 done and pushed with their shared needs; G4 and G5 running; G7, G8, G9 next
+- [x] Review and fix per page group with `docs/briefs/board-review.md` (pair sheets, copy check, fixes in the group's files, shared needs to the orchestrator): all nine groups done and pushed, each with its shared needs (G8 last: the dialog's gold top rule and a visible disabled confirm, the leads empty state with the gold hexagon, plain text actions, the inventory empty state's uncut «استيراد Excel»)
+- [ ] Final pass: production build, coverage, smoke on the export, tours, flows, copy check, page shots
 
 ## Decision log
 
@@ -137,7 +138,7 @@ Phase 10 · Board review round
 ## Next action
 
 1. Show the client: run `npm run dev` (or `npm run build && npx serve out`), open `/demo`, run the three tours, and collect feedback. Mark accepted sections `[v]` above.
-2. Finish the board review round: G7, G8, G9 with `docs/briefs/board-review.md` (two agents at a time), commit each group, fix the shared needs they report, then step 5.
+2. Final pass after the review round: step 5 on the production export, re-shoot every page, record the results here.
 3. Images: once the Vercel AI Gateway is topped up, run `set -a && . ./.env.local && set +a && npm run images -- --anchors` (regenerates the interior anchor IMG-UNIT-APT-3BR-LIVING), pick it with `npx tsx scripts/images/pick.ts --slot=IMG-UNIT-APT-3BR-LIVING --candidate=1`, then `npm run images -- --parallel=3`, pick each slot on `/demo/contact-sheet`, `npm run images:convert`, rebuild and re-shoot (`npm run shots`). Reject anything that shows the sea from a project or unit, people, text, plates or warped architecture.
 4. Deploy when the client wants a link: `npm run build`, then deploy `out/` to Vercel (noindex headers are in `vercel.json`).
 5. After any change: `npx tsc --noEmit`, `npm run lint`, `npm run build`, `npm run coverage`, `npm run qa -- --base=http://localhost:3001` against `npx serve out -l 3001`, commit with the shots, update this file, push.
