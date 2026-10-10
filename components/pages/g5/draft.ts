@@ -278,17 +278,19 @@ export function step1Summary(d: AddDraft): { strong: string; rest: string } {
   const who = RELATION_WORD[RELATION_ROLE[d.relation] ?? "other"];
   return { strong: `${d.type} ${purposeLabel(d.purpose)}`, rest: [placeLine(d), who].filter(Boolean).join(" · ") };
 }
+/** keep a number and its unit on one line («120 م²», «3 غرف») */
+const nb = (s: string) => s.replace(/ /g, "\u00a0");
 /** the step-3 summary: «عمارة سكنية للبيع» · «حي النعيم، جدة · 8 وحدات · دخل 312,000 سنوياً · السعر المطلوب» + price */
 export function step2Summary(d: AddDraft): { strong: string; rest: string; price: string } {
   const parts = [placeLine(d)];
   if (isBuilding(d.type)) {
-    if (d.units) parts.push(plural(d.units, UNITS));
+    if (d.units) parts.push(nb(plural(d.units, UNITS)));
     if (d.hasIncome === "yes" && toNum(d.income)) parts.push(`دخل ${fmtNum(toNum(d.income))} سنوياً`);
   } else if (isLand(d.type)) {
-    if (toNum(d.area)) parts.push(`${fmtArea(toNum(d.area))} م²`);
+    if (toNum(d.area)) parts.push(nb(`${fmtArea(toNum(d.area))} م²`));
   } else {
-    if (d.beds) parts.push(bedsLabel(d.beds));
-    if (toNum(d.area)) parts.push(`${fmtArea(toNum(d.area))} م²`);
+    if (d.beds) parts.push(nb(bedsLabel(d.beds)));
+    if (toNum(d.area)) parts.push(nb(`${fmtArea(toNum(d.area))} م²`));
   }
   parts.push("السعر المطلوب");
   return { strong: `${d.type} ${purposeLabel(d.purpose)}`, rest: parts.join(" · "), price: toNum(d.price) ? fmtNum(toNum(d.price)) : "—" };

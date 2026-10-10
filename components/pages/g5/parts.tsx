@@ -251,7 +251,7 @@ export function StepBar({ current, query = "", className }: { current: 1 | 2 | 3
           <li key={label} className="flex flex-col gap-2" aria-current={on ? "step" : undefined}>
             <span aria-hidden className={cx("h-1", done ? "bg-ink" : on ? "bg-gold" : "bg-slot")} />
             {done ? (
-              <Link href={STEP_HREFS[i] + query} className="self-start no-underline hover:underline">
+              <Link href={STEP_HREFS[i] + query} className="relative self-start no-underline after:absolute after:-inset-y-3 after:inset-x-0 after:content-[''] hover:underline">
                 {text}
               </Link>
             ) : (

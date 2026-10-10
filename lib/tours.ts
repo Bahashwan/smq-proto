@@ -32,9 +32,9 @@ export const TOURS: Tour[] = [
     intro: "عمارة بدخل: من الإضافة حتى الاعتماد في لوحة الإدارة.",
     steps: [
       { route: "/collaborate", title: "تعاون معنا", text: "ثلاثة أبواب: أضف عقارك، التحالف، المسوّقون.", highlight: "main" },
-      { route: "/add", title: "الخطوة 1 · العقار", text: "اختر «عمارة سكنية» وحدد الموقع بالدبوس أو بلصق رابط خرائط.", highlight: "main" },
+      { route: "/add?type=building", title: "الخطوة 1 · العقار", text: "اختر «عمارة سكنية» وحدد الموقع بالدبوس أو بلصق رابط خرائط.", highlight: "main" },
       { route: "/add/details?type=building", title: "الخطوة 2 · الدخل", text: "سعر المتر على البناء والأرض والعائد الإجمالي تُحسب وأنت تكتب.", highlight: "main" },
-      { route: "/add/contact", title: "الخطوة 3 · التواصل", text: "الوكيل يرفق الوكالة. الخطأ في رقم الجوال يظهر بالذهبي ولا يضيع النص.", highlight: "main" },
+      { route: "/add/contact?type=building", title: "الخطوة 3 · التواصل", text: "الوكيل يرفق الوكالة. الخطأ في رقم الجوال يظهر بالذهبي ولا يضيع النص.", highlight: "main" },
       { route: "/add/sent?no=2026-1042", title: "وصل الطلب", text: "رقم الطلب يُنسخ ويُرسل على واتساب.", highlight: "main" },
       { route: "/admin/approvals/2026-1042", title: "الاعتماد", text: "قائمة التحقق حسب الدور؛ «اعتماد ونشر» ينشئ الوحدة في الذاكرة ويظهر توست.", highlight: "main" },
     ],
