@@ -30,7 +30,7 @@ Single source of truth for where the build stands, so that work can continue fro
 
 Legend: `[ ]` not started · `[~]` in progress or partial · `[x]` done and pushed · `[v]` shown to the client and accepted · `[!]` blocked
 
-Snapshot on 2026-10-10: every board is built. `npm run build` exports 266 pages to `out/`; `npm run coverage` finds every one of the 117 page boards registered and every registered route in the export; the smoke QA (`npm run qa`) passes on all 129 screens of the export; `npm run qa:tours` loads all 17 tour steps with the overlay; `npm run qa:flows` passes the buyer, alliance and owner journeys end to end. `npx tsc --noEmit` is clean; `npm run lint` has 0 errors and 7 React Compiler warnings (deliberate, see working notes). Nothing has been shown to the client yet.
+Snapshot on 2026-10-10, after the board review round: every board is built and reviewed against its page. `npm run build` exports 266 pages to `out/`; `npm run coverage` finds all 121 registered boards (130 boards minus 13 reference sheets, plus component boards with a screen) and every registered route in the export; the smoke QA (`npm run qa`) passes on all 131 screens of the export; `npm run qa:tours` loads all 17 tour steps with the overlay; `npm run qa:flows` passes the buyer, alliance and owner journeys end to end; `npm run qa:copy` flags 485 board strings (down from 513), every one reviewed: other states of multi-state boards, designer annotations, numbers computed from the ten units, the board conflicts in the decision log, and the EN switch hidden where a page has no English (brief). `npx tsc --noEmit` is clean; `npm run lint` has 0 errors and 7 React Compiler warnings (deliberate, see working notes). 26 of 32 image slots are live. Nothing has been shown to the client yet.
 
 Phase 0 · Planning
 - [x] Boards read, outlines in `docs/boards/`, route table and plan in `docs/route-map.md`, token names and data model written
@@ -63,7 +63,7 @@ Phase 6 · Admin
 - [x] Marketers board + detail; alliance room overview, applications, members + member file, radar, requests (creates REF-2026-0117), referrals, report, settings (G9)
 
 Phase 7 · Presenter and tours
-- [x] Presenter bar with every switch, `/demo` screen map with all 129 screens and the tours, `/demo/components`, `/demo/contact-sheet`
+- [x] Presenter bar with every switch, `/demo` screen map with all 131 screens and the tours, `/demo/components`, `/demo/contact-sheet`
 - [x] Tours: buyer, owner (building variant through to the approval), alliance request (empty state through to the member's ledger); the tour card avoids the admin work area and collapses
 
 Phase 8 · Images
@@ -77,7 +77,7 @@ Phase 9 · Link previews and icons
 Phase 10 · Board review round
 - [x] Shared gaps from the build reports closed: header `waText` + `menu` (alliance flow boards: logo + WhatsApp «التحالف», no menu; marketer pages «مسوّق»), menu rows at the board's 67px, desktop skeleton card with the hexagon badge, the hub's large door with the CTA arrow, inline phone district picker + typed search, admin counters and bell shared by every admin page (`components/admin/live.ts`), PageHeader `inlineActions`, CompareToggle `label`, gold breadcrumb links, live home counts, data (`districtsCount` from the fixture, `reservationDays` in settings, SEO variables as on Admin-SEO-D, marketer `lastVisitAt`)
 - [x] Review and fix per page group with `docs/briefs/board-review.md` (pair sheets, copy check, fixes in the group's files, shared needs to the orchestrator): all nine groups done and pushed, each with its shared needs (G8 last: the dialog's gold top rule and a visible disabled confirm, the leads empty state with the gold hexagon, plain text actions, the inventory empty state's uncut «استيراد Excel»)
-- [ ] Final pass: production build, coverage, smoke on the export, tours, flows, copy check, page shots
+- [x] Final pass on the production export: coverage, smoke (131 screens, 0 issues), tours, flows, copy check (`docs/qa/copy.json`), every page re-shot to `docs/shots/`
 
 ## Decision log
 
@@ -107,7 +107,7 @@ Phase 10 · Board review round
 ## Open questions for the client
 
 1. Review the prototype (start at `/demo`; the three tours walk the main journeys) and say what to change.
-2. Top up the Vercel AI Gateway (about $3 covers the remaining 20 image slots), or say to keep the placeholders.
+2. Top up the Vercel AI Gateway to generate the five slots still on placeholders (Rowdah parking, the open kitchen, three detail shots), or say to keep them. The founder slot waits for a real photo.
 3. Confirm or swap the provisional image picks on `/demo/contact-sheet` (reasons in `scripts/images/rejections.md`).
 4. Google's own «Embed a map» code for the office (the embed is built from the coordinates until then).
 5. Real photos for `/public/real/<slot>.jpg`, if any (the real tier picks them up automatically).
@@ -130,15 +130,14 @@ Phase 10 · Board review round
   - Numbers computed from the ten real units win over the boards' illustrative ones: the finder count at 700,000 is 6, the empty state for الفيصلية needs four loosenings (+2, +1), YS-A has 5 similar available units (board 4), RZ-A is the lowest per m² among apartments (board «ثاني أقل»), the map shows one project with 6 matches, budget chips 2/5/6/6/8.
   - Alliance and admin numbers follow the fixtures (ledgers, open approvals 4, mean reply 3 س 19 د, radar order by its formula, 33 districts not 30). مكتب ل is suspended, so the directory shows 11 cards.
   - Type sizes snap to the tokens (10px board captions render at 11px; card titles at text-h3), cuts snap to the 60° tokens (boards sometimes draw 52×30 or 40×23), hexagon outlines are real rings (the boards' box-shadow rings only show top and bottom lines).
-  - The DistrictMultiSelect opens as a sheet on the phone, the stage boards have no drag between columns, the hub door cards have no arrow slot, alliance pages use the shared header (with the menu button).
+  - The stage boards have no drag between columns. The DistrictMultiSelect opens as a sheet on the phone except in the apply flow, which keeps it inline as its boards draw it. The phone footer's link list is labelled «الصفحات» for screen readers (Home-M writes «روابط», Home-D «الصفحات»; one component serves both). The desktop add flow follows the phone boards' city and district fields (جدة or «مدينة أخرى», the district list), where Add-D draws three cities and a free district field.
   - Changes made in the admin live in the session store: results, unit, member and admin pages follow them; the statically rendered home and project pages keep the fixture counts.
   - There are no owner listings in the fixtures (the ten units are the only real inventory), so the map's owner pin is hidden and `/projects` computes its owner group from the radar fixture.
 - QA tooling: `npm run qa` (smoke over every screen; `--base=` to test the export served with `npx serve out -l 3001`), `npm run qa:tours`, `npm run qa:flows`, `npx tsx scripts/qa/errors.ts <url>` (full console and hydration errors of one page), `npm run coverage`.
 
 ## Next action
 
-1. Show the client: run `npm run dev` (or `npm run build && npx serve out`), open `/demo`, run the three tours, and collect feedback. Mark accepted sections `[v]` above.
-2. Final pass after the review round: step 5 on the production export, re-shoot every page, record the results here.
-3. Images: once the Vercel AI Gateway is topped up, run `set -a && . ./.env.local && set +a && npm run images -- --anchors` (regenerates the interior anchor IMG-UNIT-APT-3BR-LIVING), pick it with `npx tsx scripts/images/pick.ts --slot=IMG-UNIT-APT-3BR-LIVING --candidate=1`, then `npm run images -- --parallel=3`, pick each slot on `/demo/contact-sheet`, `npm run images:convert`, rebuild and re-shoot (`npm run shots`). Reject anything that shows the sea from a project or unit, people, text, plates or warped architecture.
-4. Deploy when the client wants a link: `npm run build`, then deploy `out/` to Vercel (noindex headers are in `vercel.json`).
-5. After any change: `npx tsc --noEmit`, `npm run lint`, `npm run build`, `npm run coverage`, `npm run qa -- --base=http://localhost:3001` against `npx serve out -l 3001`, commit with the shots, update this file, push.
+1. Show the client: run `npm run dev` (or `npm run build && npx serve out`), open `/demo`, run the three tours, and collect feedback. Mark accepted sections `[v]` above. Apply the feedback per page group, then step 4.
+2. Images: once the Vercel AI Gateway is topped up, run `set -a && . ./.env.local && set +a && npm run images -- --parallel=3` (only slots without a pick run, so the five placeholders), pick each slot on `/demo/contact-sheet`, `npm run images:convert`, rebuild and re-shoot (`npm run shots`). To replace one of the cropped re-uses with a fresh image, add `--only=<slot> --force`. Reject anything that shows the sea from a project or unit, people, text, plates or warped architecture.
+3. Deploy when the client wants a link: `npm run build`, then deploy `out/` to Vercel (noindex headers are in `vercel.json`).
+4. After any change: `npx tsc --noEmit`, `npm run lint`, `npm run build`, `npm run coverage`, `npm run qa -- --base=http://localhost:3001` against `npx serve out -l 3001`, commit with the shots, update this file, push. A build with `SMQ_DIST_DIR` set writes the export into that folder instead of `out/`: move it to `out/` and run `node scripts/postbuild.mjs`.
