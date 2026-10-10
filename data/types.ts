@@ -284,6 +284,8 @@ export type LeadStatus = "unanswered" | "answered" | "closed";
 
 export interface Lead {
   id: string;
+  /** visitor reference code shown in WhatsApp messages, e.g. SMQ-8F3A2 */
+  code?: string;
   kind: LeadKind;
   title: string;
   detail: string;

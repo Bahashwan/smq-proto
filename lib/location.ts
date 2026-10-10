@@ -56,9 +56,8 @@ export function useQuery(): URLSearchParams {
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }
 
-let cachedPath = "";
 function getPath() {
-  return (cachedPath = window.location.pathname);
+  return window.location.pathname;
 }
 function getServerPath() {
   return "";

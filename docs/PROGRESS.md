@@ -33,22 +33,22 @@ Legend: `[ ]` not started · `[~]` in progress · `[x]` done and pushed · `[v]`
 Phase 0 · Planning
 - [x] Read all 130 boards and the README (2026-10-09); outlines in `docs/boards/`
 - [x] Route table and plan: `docs/route-map.md` (pushed, PR #1)
-- [!] **Client OK on the route table and the six decisions** at the end of `docs/route-map.md` (the seventh item there is a note, not a decision). Nothing is built until this arrives in chat.
+- [x] Client OK: on 2026-10-10 the owner wrote «develop the full prototype do all phases», taken as the OK on the route table and the six decisions
 - [x] Research: AI Gateway flux-3-image API → `docs/notes/ai-gateway.md`
 - [x] Maps decision received 2026-10-10 (keyless embeds + schematic SVGs, no map library) → folded into `docs/BRIEF.md` and `docs/route-map.md`
 - [x] Token names (`docs/tokens.md`) and data model (`docs/data-model.md`) written
 
 Phase 1 · Tokens, shell, shared components
-- [ ] Next.js app scaffold as above (static export, noindex meta + `vercel.json` header + `robots.txt`, `npm run shots` harness)
-- [ ] `styles/tokens.css` with every `--smq-*` token from Tokens.html, names per `docs/tokens.md`; cuts and hexagons as utilities; motion tokens; reduced-motion rule
-- [ ] Fonts: Noto Kufi Arabic (400/600/700/800) as the default; Noto Sans only on `/en*`. Western digits everywhere (`lang` + no Arabic-Indic shaping), `font-variant-numeric: tabular-nums` on every number
-- [ ] Riyal sign component (inline SVG, 0.75em, currentColor, 0.25em gap; placeholder path in `docs/tokens.md`)
-- [ ] CSS treatments: `.is-sold` / `.is-desaturated` image rules (grayscale + ink veil) live in CSS, never baked into the image files
-- [ ] Shared components from Components.html / Components2.html / Components3.html (buttons, chips, segmented, tabs, fields with gold error, stepper, badges, price band, rows, accordion, breadcrumb, image slots with the three tiers, toast, compare bar, data table row, field group, switch, drag handle, status pills, file upload, AR/EN tab, save bar, drawer, dialog, door card, district multi-select, hex district cell, FAL badge, ledger bar, stage line, request card, referral receipt, board column)
-- [ ] Header (72 → 56 scrolled, mobile menu sheet), footer, `[للتأكيد]` chip, «صورة تعبيرية» label, keyless map embed container (frame on the container, iframe never clipped, logo and controls visible, lazy with schematic placeholder)
-- [ ] `/data` fixtures, exactly the file list in `docs/data-model.md` (`units`, `projects`, `districts`, `offices`, `applications`, `requests`, `referrals`, `marketers`, `approvals`, `leads`, `visitors`, `analytics`, `content`, `settings`, `media` (32 slots), plus `types.ts` and `selectors.ts`); `data/selectors.ts` for every computed number
-- [ ] In-memory client store (`smq.store`) + presenter state (`smq.presenter`, URL parameters override)
-- [ ] `/demo/components` styleguide for QA
+- [x] Next.js app scaffold as above (static export, noindex meta + `vercel.json` header + `robots.txt`, `npm run shots` harness) · `npm run build` exports cleanly
+- [x] `styles/tokens.css` with every `--smq-*` token from Tokens.html, names per `docs/tokens.md`; cuts and hexagons as utilities (`app/globals.css` `@theme` + `@utility`); motion tokens; reduced-motion rule
+- [x] Fonts: Noto Kufi Arabic variable (self-hosted from `@fontsource-variable`) as the default; Noto Sans on `[dir=ltr]`. Western digits, `tabular-nums` from the root
+- [x] Riyal sign component (`components/ui/RiyalSign.tsx`, `Price.tsx`)
+- [x] CSS treatments: `img-sold` / `img-desaturated` utilities in `app/globals.css`
+- [x] Shared components from Components.html / Components2.html / Components3.html → `components/ui` (31 files), `components/admin` (32, with `AdminShell`), `components/alliance` (26), each with a README listing exports and a styleguide section at `/demo/components`. Built from the sheets (buttons, chips, segmented, tabs, fields with gold error, stepper, badges, price band, rows, accordion, breadcrumb, image slots with the three tiers, toast, compare bar, data table row, field group, switch, drag handle, status pills, file upload, AR/EN tab, save bar, drawer, dialog, door card, district multi-select, hex district cell, FAL badge, ledger bar, stage line, request card, referral receipt, board column)
+- [x] Header (72 → 56 scrolled, mobile menu sheet `?menu=1`), footer, `Mark` chip, «صورة تعبيرية» label in `ImageSlot`; `components/map`: `SchematicMap`, `PinPicker`, `MapEmbed` (keyless embed, lazy, schematic placeholder, frame on the container, iframe never clipped)
+- [x] `/data` fixtures, exactly the file list in `docs/data-model.md` (`units`, `projects`, `districts`, `offices`, `applications`, `requests`, `referrals`, `marketers`, `approvals`, `leads`, `visitors`, `analytics`, `content`, `settings`, `media` (32 slots), plus `types.ts` and `selectors.ts`); `data/selectors.ts` for every computed number
+- [x] In-memory client store (`lib/store.ts`, `smq.store`) + presenter state (`lib/presenter.tsx`, `smq.presenter`, URL parameters override) + client location store (`lib/location.ts`)
+- [x] `/demo/components` styleguide for QA (four sections: ui, map, admin, alliance)
 
 Phase 2 · Public explorer
 - [ ] `/` home (finder with live count, project card, price guide, services, founder typographic card, FAQ, contact block with keyless embed)
@@ -109,6 +109,7 @@ Phase 9 · Link previews and icons
 | 2026-10-10 | Owner tour request number is 2026-1042 (the building request the Admin-Approvals-D board opens); the apartment success screen uses 2026-1043 | Claude, resolves the board mismatch |
 | 2026-10-10 | Application ALL-2026-0038 is مكتب م للعقارات on every screen (apply prefill, success, status, admin applications): the boards write مكتب أ, which is already member `office-01`, and approving it would create a duplicate member | Claude, resolves the board collision |
 | 2026-10-10 | `District.comingSoon` = the Admin-Lists-D set (أبحر الشمالية، الشاطئ، المحمدية); the Guide's «قريباً» chips are computed as every district without a live guide, so الفيصلية shows قريباً there as on Guide-D | Claude, resolves the board mismatch |
+| 2026-10-10 | Foundation built by five parallel agents (fixtures, public UI, admin UI + shell, alliance UI, maps); their board-vs-build notes live in each library's README «Known differences» and in this file's working notes | Claude |
 | 2026-10-10 | Presenter switches are one URL parameter each (`members`, `tier`, `ustatus`, `app`, `mreq`, `wa`, `skeleton`, `marks`, `proof`, `offline`, `empty`, `error`, `tour`+`step`); storage keys `smq.presenter`, `smq.compare`, `smq.ref`, `smq.store` | Claude, table in `docs/route-map.md` |
 
 ## Open questions for the client
@@ -127,7 +128,11 @@ Phase 9 · Link previews and icons
 - WhatsApp: `https://wa.me/966559997929?text=…` with the designed prefilled messages and a visitor reference code `SMQ-XXXXX`.
 - The results-map provider note on the boards is dropped; everything else on the boards is copied verbatim, annotations excluded.
 - Board outlines: `docs/boards/*.txt`, generated by `scripts/design/board-outline.py` (tag, inline style summary, copy). Enough for layout and copy; open the HTML for exact SVG paths.
+- Build agents follow `docs/BUILD-CONTRACTS.md` (ownership table, verification). Briefs for everything not yet built: `docs/briefs/page-groups.md`.
+- Lint: the React Compiler rules `set-state-in-effect`, `refs`, `immutability` are warnings (hydration-time state init and pointer refs are deliberate). `npm run build` does not run eslint; run `npm run lint` separately.
+- Known foundation gaps noted by the agents: hexagon borders are real clip-path rings (the boards fake them with box-shadow); 10px board captions render at the 11px token minimum; `StageBoard` has no drag-and-drop between columns; the honeycomb fill animation was verified only under reduced motion; `AdminButton`/`AdminField` are admin-sized local equivalents of `Button`/`TextField`; the schematic map's lat/lng fit is approximate (pins by district slug never depend on it).
+- Sessions and limits: the cloud session's subagents hit the account usage limit at 02:00 UTC on 2026-10-10 (resets 04:10 UTC); the data agent had finished writing before it stopped.
 
 ## Next action
 
-Wait for the client's OK on `docs/route-map.md` (table + six decisions). Then start Phase 1 (scaffold per "Intended scaffold", tokens per `docs/tokens.md`, shared components, fixtures per `docs/data-model.md`), push, and continue with Phase 2.
+Phase 1 is complete and pushed (`npm run build` exports, `npx tsc --noEmit` and `npm run lint` are clean). Build the page groups from `docs/briefs/page-groups.md` (G1 shell → G2 results → G3 unit/compare → G4 places → G5 forms → G6 alliance/member → G7 admin core → G8 admin content → G9 marketers/alliance room → presenter and tours → images → OG), two to five groups in parallel as subagents, each registering its screens in `lib/screens/<group>.ts`, shooting pages beside the board renders, and reporting gaps. After each group: `npx tsc --noEmit`, `npm run lint`, `npm run build`, commit with the shots, update this file, push.
