@@ -52,16 +52,16 @@ export function MemberLedger({ officeId }: { officeId: string }) {
     <PhoneColumn className="bg-cream">
       <div className="min-h-dvh bg-cream text-ink">
         <MemberHeader subtitle="صفحة عضو · بلا دخول" action={<HeaderLink href={`/member/${officeId}/report`}>تقرير الشهر</HeaderLink>} />
-        <main className="flex flex-col gap-6 px-4 py-5">
-          <section className="flex items-start gap-3.5">
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center bg-ink text-[20px] font-extrabold text-gold hex-flat">{office.letter}</span>
-            <div className="flex min-w-0 flex-col gap-1.5">
+        <main className="flex flex-col gap-4.5 px-4 pt-5 pb-6">
+          <section className="flex items-center gap-3">
+            <span className="flex h-13 w-13 shrink-0 items-center justify-center bg-ink text-[20px] font-extrabold text-gold hex-flat">{office.letter}</span>
+            <div className="flex min-w-0 flex-1 flex-col gap-0.5">
               <h1 className="text-[20px] font-extrabold">{office.fullName}</h1>
-              <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-caption text-muted">
-                <FalBadge suspended={suspended} />
-                {suspended ? `موقوف منذ ${office.suspendedOn ? fmtDate(office.suspendedOn) : ""} · ${office.suspendedReason ?? ""}` : `سارية حتى ${fmtDate(office.licence.expiresOn)} · عضو منذ ${monthYear(office.memberSince)}`}
+              <span className="flex items-center gap-2 text-caption font-normal text-muted">
+                <FalBadge suspended={suspended} className="shrink-0" />
+                <span className="min-w-0">{suspended ? `موقوف منذ ${office.suspendedOn ? fmtDate(office.suspendedOn) : ""} · ${office.suspendedReason ?? ""}` : `سارية حتى ${fmtDate(office.licence.expiresOn)} · عضو منذ ${monthYear(office.memberSince)}`}</span>
               </span>
-              <span className="text-caption leading-relaxed text-muted">
+              <span className="text-caption font-normal leading-relaxed text-muted">
                 يغطي: {office.districts.map(districtAr).join("، ")} · {office.specialties.join("، ")}
               </span>
             </div>
@@ -96,14 +96,14 @@ export function MemberLedger({ officeId }: { officeId: string }) {
             {openSorted.map((r, i) => {
               const sentAt = r.sentTo.find((s) => s.officeId === officeId)?.sentAt ?? r.createdAt;
               return (
-                <Link key={r.id} href={`/member/${officeId}/requests/${r.id}`} className="relative flex items-center justify-between gap-3 bg-paper px-3.5 py-3 text-ink no-underline hover:bg-sand" style={{ border: "1.5px solid var(--smq-ink)" }}>
+                <Link key={r.id} href={`/member/${officeId}/requests/${r.id}`} className={cx("relative flex items-center justify-between gap-2.5 bg-paper px-3 py-2.5 text-ink no-underline hover:bg-sand", i === 0 && "ps-4")} style={{ border: "1.5px solid var(--smq-ink)" }}>
                   {i === 0 && <span aria-hidden className="absolute -inset-y-[1.5px] -start-[1.5px] w-[5px] bg-gold" />}
-                  <span className="flex min-w-0 flex-col gap-1">
-                    <b className="text-[14px] font-extrabold tnum">
+                  <span className="flex min-w-0 flex-col gap-px">
+                    <b className="text-[13px] font-extrabold tnum">
                       {districtAr(r.districtSlug)} · {r.typeLabelAr ?? r.type}
                       {budget(r.budgetMin, r.budgetMax) && ` · ${budget(r.budgetMin, r.budgetMax)}`}
                     </b>
-                    <small className="text-caption text-muted">
+                    <small className="text-caption font-normal text-muted">
                       وصل {whenLabel(sentAt)} · ينتهي بعد {expiresInLabel(r.expiresAt)}
                     </small>
                   </span>
@@ -124,12 +124,12 @@ export function MemberLedger({ officeId }: { officeId: string }) {
               const stage = effectiveReferralStage(r, stages);
               const closed = stage === "transfer" || stage === "failed";
               return (
-                <Link key={r.id} href={`/member/${officeId}/referrals/${r.id}`} className={cx("flex items-center justify-between gap-3 bg-paper px-3.5 py-3 no-underline hover:bg-sand", closed ? "text-muted" : "text-ink")} style={{ border: "1.5px solid var(--smq-ink)" }}>
-                  <span className="flex min-w-0 flex-col gap-1">
-                    <b dir="ltr" className="self-start text-[14px] font-extrabold text-ink tnum">
+                <Link key={r.id} href={`/member/${officeId}/referrals/${r.id}`} className={cx("flex items-center justify-between gap-2.5 bg-paper px-3 py-2.5 no-underline hover:bg-sand", closed ? "text-muted" : "text-ink")} style={{ border: "1.5px solid var(--smq-ink)" }}>
+                  <span className="flex min-w-0 flex-col gap-px">
+                    <b dir="ltr" className="self-start text-[13px] font-extrabold text-ink tnum">
                       {r.id}
                     </b>
-                    <small className="text-caption leading-relaxed">{referralLine(r, officeId, stage)}</small>
+                    <small className="text-caption font-normal leading-relaxed text-muted">{referralLine(r, officeId, stage)}</small>
                   </span>
                   <StagePill stage={stage} className="shrink-0 text-[11px]" />
                 </Link>

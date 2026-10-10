@@ -135,10 +135,10 @@ export function MemberRequest({ officeId, requestId }: { officeId: string; reque
                 </div>
               </section>
               <div className="grid grid-cols-2 gap-2.5">
-                <a href="#offer" className="inline-flex h-12 items-center justify-center bg-ink px-3 text-[14px] font-extrabold text-paper no-underline cut-m hover:bg-ink-2">
+                <a href="#offer" className="inline-flex h-13 items-center justify-center bg-ink px-3 text-[14px] font-extrabold text-paper no-underline cut-m hover:bg-ink-2">
                   عندي عرض مطابق
                 </a>
-                <button type="button" onClick={sayNone} className="inline-flex h-12 items-center justify-center bg-paper px-3 text-[14px] font-bold text-ink hover:bg-sand" style={{ border: "1.5px solid var(--smq-ink)" }}>
+                <button type="button" onClick={sayNone} className="inline-flex h-13 items-center justify-center bg-paper px-3 text-[14px] font-bold text-ink hover:bg-sand" style={{ border: "1.5px solid var(--smq-ink)" }}>
                   لا يوجد حالياً
                 </button>
               </div>

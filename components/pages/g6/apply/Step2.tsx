@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { allianceSettings, coverageBySector, districtBySlug, districts, HOURS_LABELS, type Office, type Sector } from "@/data";
 import { ErrorSummary, ErrorText, RadioGroup } from "@/components/ui";
 import { DistrictMultiSelect, HexGrid, SECTOR_LABELS, SECTOR_ORDER, type HexCellProps } from "@/components/alliance";
-import { maskedLicence } from "../data";
+import { applyFixture, maskedLicence } from "../data";
 import { ApplyShell, CheckTile, FormCard, GroupLabel, MainButton, StepNav } from "./parts";
 import { errorsTitle, step2Errors, updateDraft, useApplyDraft } from "./draft";
 
@@ -43,7 +43,8 @@ export function ApplyStep2() {
   const errors = d.attempted[2] ? step2Errors(d) : {};
   const list = Object.keys(errors).map((k) => ({ id: `apply-${k}`, label: LABELS[k] ?? k }));
   const role = d.role.replace(/ العقاري$/, "");
-  const district = districtBySlug(d.district)?.ar;
+  // step 1 cannot be passed without a district; a deep link straight to this step echoes the application's own
+  const district = districtBySlug(d.district || applyFixture().districtSlug)?.ar;
   const toggle = <T extends string>(arr: T[], v: T, on: boolean) => (on ? [...arr.filter((x) => x !== v), v] : arr.filter((x) => x !== v));
 
   const next = () => {
@@ -106,16 +107,19 @@ export function ApplyStep2() {
             </div>
             {errors.sectors && <ErrorText>{errors.sectors}</ErrorText>}
           </fieldset>
-          <div className="grid gap-5 md:grid-cols-2 md:items-start md:gap-6">
-            <div id="apply-districts" tabIndex={-1} className="outline-none">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:items-start md:gap-6">
+            {/* min-w-0: the search input's intrinsic width (size 20 in Noto Kufi) must not widen the phone column */}
+            <div id="apply-districts" tabIndex={-1} className="min-w-0 outline-none">
               <DistrictMultiSelect
                 districts={districts}
                 value={d.districts}
                 onChange={(v) => updateDraft({ districts: v })}
-                label="الأحياء التي يغطيها المكتب"
+                label={<GroupLabel>الأحياء التي يغطيها المكتب</GroupLabel>}
                 error={errors.districts ? true : undefined}
                 note="قائمة ثابتة لا نص حر: الطلبات تُوجَّه بالحي، فلا بد أن تتطابق الأسماء."
                 sheetTitle="الأحياء التي يغطيها المكتب"
+                phone="inline"
+                initialQuery="الن"
               />
             </div>
             <div className="hidden md:block">

@@ -22,11 +22,11 @@ export function useApplication() {
 
 function StepHex({ n, tone }: { n: number; tone: "gold" | "outline" }) {
   return tone === "gold" ? (
-    <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-gold text-[12px] font-extrabold text-ink hex-flat tnum">{n}</span>
+    <span className="flex h-7 w-7 shrink-0 items-center justify-center bg-gold text-[12px] font-extrabold text-ink hex-flat tnum">{n}</span>
   ) : (
-    <span className="relative flex h-8 w-8 shrink-0 items-center justify-center text-[12px] font-extrabold tnum">
+    <span className="relative flex h-7 w-7 shrink-0 items-center justify-center text-[12px] font-extrabold tnum">
       <span className="absolute inset-0 flex">
-        <HexDot size={32} tone="paper" border="ink" />
+        <HexDot size={28} tone="paper" border="ink" />
       </span>
       <span className="relative">{n}</span>
     </span>
@@ -66,7 +66,7 @@ export function ApplySent() {
         <div className="flex flex-col gap-2 bg-ink px-5 py-5 text-paper cut-l">
           <span className="text-[12px] font-bold text-on-ink-muted">رقم الطلب</span>
           <div className="flex items-center justify-between gap-3">
-            <span dir="ltr" className="text-[30px] leading-none font-extrabold tnum">
+            <span dir="ltr" className="text-[30px] leading-none font-extrabold tracking-[0.04em] tnum">
               {a.id}
             </span>
             <button type="button" onClick={copy} aria-label={`نسخ رقم الطلب ${a.id}`} className="inline-flex h-11 shrink-0 items-center px-3 text-[12px] font-extrabold text-paper hover:bg-ink-2" style={{ border: "1.5px solid var(--smq-paper)" }}>
@@ -83,7 +83,7 @@ export function ApplySent() {
             { k: "التحقق من الرخصة:", v: "في موقع الهيئة، يدوياً، خلال يومي عمل. قد نطلب صورة الرخصة." },
             { k: "موثّق:", v: `شارة «رخصة فال موثّقة»، صفحة العضو والميزان، وأول الطلبات في ${joinAnd(a.districts.map(districtAr))}.` },
           ].map((s, i) => (
-            <li key={s.k} className="flex items-start gap-3 py-3 text-[13px] leading-relaxed" style={i > 0 ? { borderTop: "1px solid var(--smq-line)" } : undefined}>
+            <li key={s.k} className="flex items-start gap-3 py-2.5 text-[13px] leading-[1.6]" style={i > 0 ? { borderTop: "1px solid var(--smq-line)" } : undefined}>
               <StepHex n={i + 1} tone={i === 0 ? "gold" : "outline"} />
               <span>
                 <strong className="font-extrabold">{s.k}</strong> {s.v}

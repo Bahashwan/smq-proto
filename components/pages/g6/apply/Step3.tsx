@@ -7,7 +7,7 @@ import { Checkbox, ErrorSummary, ErrorText, RadioGroup, TextArea } from "@/compo
 import { DistrictMultiSelect, Tbc, daysLabel } from "@/components/alliance";
 import { useStore } from "@/lib/store";
 import { APPLY_ID } from "../data";
-import { ApplyShell, CharterSheet, Counter, FormCard, MainButton, StepNav, useSheet } from "./parts";
+import { ApplyShell, CharterSheet, Counter, FormCard, GroupLabel, MainButton, StepNav, useSheet } from "./parts";
 import { errorsTitle, resetDraft, step1Errors, step2Errors, step3Errors, updateDraft, useApplyDraft } from "./draft";
 
 const LABELS: Record<string, string> = { want: "ماذا تريدون من التحالف", add: "ماذا ستضيفون للتحالف", charter: "أوافق على ميثاق التحالف" };
@@ -76,13 +76,13 @@ export function ApplyStep3() {
               onChange={(v) => updateDraft({ elsewhere: v })}
             />
             {d.elsewhere === "yes" && (
-              <div className="relative flex flex-col gap-1 bg-cream px-3.5 py-3.5" style={{ border: "1.5px solid var(--smq-ink)" }}>
-                <span aria-hidden className="absolute -inset-y-[1.5px] -start-[1.5px] w-[5px] bg-gold" />
+              <div className="relative flex flex-col gap-1 bg-cream p-3 ps-4" style={{ border: "1.5px solid var(--smq-ink)" }}>
+                <span aria-hidden className="absolute -inset-y-[1.5px] -start-[1.5px] w-1.5 bg-gold" />
                 <DistrictMultiSelect
                   districts={districts}
                   value={d.elsewhereDistricts}
                   onChange={(v) => updateDraft({ elsewhereDistricts: v })}
-                  label="أي أحياء؟"
+                  label={<GroupLabel>أي أحياء؟</GroupLabel>}
                   placeholder="أضف حياً"
                   inlineList={false}
                   sheetTitle="أي أحياء؟"

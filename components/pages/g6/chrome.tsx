@@ -10,7 +10,7 @@ import { cx } from "@/lib/format";
 export function AllianceBand({ text, textD, link }: { text: ReactNode; textD?: ReactNode; link: { label: string; href: string } }) {
   return (
     <div className="bg-gold text-ink">
-      <div className="container-smq flex min-h-[33px] items-center justify-between gap-1.5 py-1.5 text-[11px] font-extrabold md:min-h-8 md:gap-3 md:text-[12px]">
+      <div className="container-smq flex min-h-[33px] items-center justify-between gap-0.5 py-1.5 text-[11px] font-extrabold md:min-h-8 md:gap-3 md:text-[12px]">
         <span className={cx(textD ? "md:hidden" : undefined)}>{text}</span>
         {textD && <span className="hidden md:inline">{textD}</span>}
         <Link href={link.href} className="relative shrink-0 whitespace-nowrap py-1 text-ink no-underline after:absolute after:-inset-x-1 after:-inset-y-2.5 after:content-[''] hover:underline">
@@ -28,30 +28,30 @@ export function AllianceFooter() {
   return (
     <footer className="bg-ink text-[12px] text-on-ink-muted">
       {/* phone */}
-      <div className="flex flex-col gap-4 px-5 pt-8 pb-6 md:hidden">
-        <Lockup tone="white" height={28} className="self-start" />
+      <div className="flex flex-col gap-4 px-4 pt-7 pb-6 md:hidden">
+        <Lockup tone="white" height={32} className="self-start" />
         <span className="leading-relaxed">{ALLIANCE_LINE}</span>
-        <nav aria-label="روابط التحالف" className="flex flex-wrap gap-x-5 gap-y-1">
+        <nav aria-label="روابط التحالف" className="flex flex-wrap gap-x-4">
           {[
             { label: "تعاون معنا", href: "/collaborate" },
             { label: "انضم كمسوّق", href: "/marketers" },
             { label: "أضف عقارك", href: "/add" },
             { label: "الخصوصية", href: "/privacy" },
           ].map((l) => (
-            <Link key={l.href} href={l.href} className="inline-flex min-h-11 items-center text-[13px] text-paper no-underline hover:underline">
+            <Link key={l.href} href={l.href} className="inline-flex min-h-11 items-center text-[12px] text-paper no-underline hover:underline">
               {l.label}
             </Link>
           ))}
         </nav>
-        <span className="border-t border-ink-2 pt-4 text-[11px] leading-relaxed">
+        <span className="border-t border-ink-2 pt-3 text-[11px] leading-relaxed">
           ترخيص الهيئة العامة للعقار {LICENCE.rega} · السجل التجاري {LICENCE.cr}
           <br />© {COPYRIGHT_YEAR} إس إم كيو العقارية
         </span>
       </div>
       {/* desktop */}
-      <div className="hidden md:block">
+      <div className="hidden pt-7 pb-6 md:block">
         <div className="container-smq">
-          <div className="flex items-center justify-between gap-10 border-t border-ink-2 py-7">
+          <div className="flex items-center justify-between gap-10 border-t border-ink-2 pt-5">
             <Lockup tone="white" height={32} />
             <span className="max-w-[760px] leading-relaxed">
               {ALLIANCE_LINE.replace(/\.$/, "")} · ترخيص فال {LICENCE.rega} · السجل التجاري {LICENCE.cr} · © {COPYRIGHT_YEAR}
@@ -72,9 +72,9 @@ export function ShortFooter({ line, lineD, className }: { line?: ReactNode; line
         <Lockup tone="white" height={28} className="self-start" />
         <span>{line ?? base}</span>
       </div>
-      <div className="hidden md:block">
+      <div className="hidden pt-7 pb-6 md:block">
         <div className="container-smq">
-          <div className="flex items-center justify-between gap-10 border-t border-ink-2 py-7 text-[12px]">
+          <div className="flex items-center justify-between gap-10 border-t border-ink-2 pt-5 text-[12px]">
             <Lockup tone="white" height={32} />
             <span>{lineD ?? `${base} · السجل التجاري ${LICENCE.cr}`}</span>
           </div>
@@ -84,12 +84,13 @@ export function ShortFooter({ line, lineD, className }: { line?: ReactNode; line
   );
 }
 
-/** Two small hexagons, gold then ink-2: the member pages' mark. */
-export function MemberMark({ size = 16 }: { size?: number }) {
+/** Small hexagons, gold then ink-2: the member pages' mark (two on the phone boards, three on Member-Report-D). */
+export function MemberMark({ size = 16, count = 2 }: { size?: number; count?: 2 | 3 }) {
   return (
-    <span className="flex shrink-0 items-center gap-0.5" aria-hidden>
+    <span className={cx("flex shrink-0 items-center", size > 16 ? "gap-[3px]" : "gap-0.5")} aria-hidden>
       <HexDot size={size} tone="gold" />
       <HexDot size={size} tone="ink2" />
+      {count === 3 && <HexDot size={size} tone="ink2" />}
     </span>
   );
 }

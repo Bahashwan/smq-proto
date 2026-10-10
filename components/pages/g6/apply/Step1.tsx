@@ -112,6 +112,7 @@ export function ApplyStep1() {
               onChange={(v) => updateDraft({ pin: v })}
               height={110}
               gridSize={24}
+              showRoads={false}
               pinSize="s"
               ariaLabel="موقع المكتب على الخريطة"
             />

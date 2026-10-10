@@ -13,6 +13,8 @@ import { goldRows, latestPublished } from "../data";
 
 /** Slices under this many sessions never reach members (reportSlices, design/README). */
 const REPORT_MIN = 20;
+/** Member-Report-M lists the four largest gaps; the desktop table lists every visible one. */
+const PHONE_GAPS = 4;
 
 function previousMonth(r: AllianceReport): string | undefined {
   const prev = allianceReports.filter((x) => x.id < r.id).sort((a, b) => (a.id < b.id ? 1 : -1))[0];
@@ -21,7 +23,7 @@ function previousMonth(r: AllianceReport): string | undefined {
 
 function Block({ title, sub, children, className }: { title: string; sub?: string; children: ReactNode; className?: string }) {
   return (
-    <section className={cx("flex flex-col gap-2 bg-paper px-4 py-4 border-interactive md:px-5 md:py-5", className)}>
+    <section className={cx("flex flex-col gap-1.5 bg-paper p-3.5 border-interactive md:gap-2 md:p-4.5", className)}>
       <div className="flex items-baseline justify-between gap-3 pb-1">
         <h2 className="text-[17px] font-extrabold md:text-[18px]">{title}</h2>
         {sub && <span className="text-caption text-muted">{sub}</span>}
@@ -35,7 +37,7 @@ function Bars({ rows, report, kind }: { rows: PctRow[]; report: AllianceReport; 
   const gold = goldRows(rows, report, kind);
   const max = Math.max(...rows.map((r) => r.pct), 1);
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-1.5 md:gap-2">
       {rows.map((r) => (
         <ReportBarRow key={r.key} label={r.labelAr} pct={r.pct} max={max} tone={r.key === "other" ? "muted" : gold.has(r.key) ? "gold" : "ink"} />
       ))}
@@ -62,9 +64,9 @@ export function MemberReport({ officeId }: { officeId: string }) {
       <MemberHeader className="md:hidden" subtitle="للأعضاء · بلا دخول" action={<HeaderLink href={`/member/${officeId}`}>الميزان</HeaderLink>} />
       {/* desktop header */}
       <header className="hidden bg-ink text-paper md:block">
-        <div className="container-smq flex items-center justify-between gap-6 py-4">
+        <div className="container-smq flex min-h-16 items-center justify-between gap-6 py-2.5">
           <div className="flex items-center gap-3">
-            <MemberMark size={22} />
+            <MemberMark size={22} count={3} />
             <span className="flex flex-col">
               <span className="text-[15px] font-extrabold">تحالف مكاتب جدة العقارية</span>
               <span className="text-caption text-on-ink-muted">تقرير الطلب الشهري · للأعضاء · يُفتح من رابط واتساب بلا دخول</span>
@@ -82,8 +84,8 @@ export function MemberReport({ officeId }: { officeId: string }) {
       </header>
 
       <section className="bg-ink text-paper [clip-path:polygon(0_0,100%_0,100%_100%,40px_100%,0_calc(100%-23px))] md:[clip-path:polygon(0_0,100%_0,100%_100%,120px_100%,0_calc(100%-69px))]">
-        <div className="container-smq grid gap-6 pt-6 pb-10 md:grid-cols-[minmax(0,1fr)_520px] md:items-center md:gap-10 md:pt-10 md:pb-24">
-          <div className="flex flex-col gap-2.5 md:gap-3">
+        <div className="container-smq grid gap-6 pt-5.5 pb-6 md:grid-cols-[minmax(0,1fr)_520px] md:items-end md:gap-10 md:pt-9 md:pb-18">
+          <div className="flex flex-col gap-2 md:gap-2.5">
             <span className="text-[12px] font-bold text-gold md:text-[13px]">
               <span className="md:hidden">تقرير الطلب الشهري · {report.monthAr}</span>
               <span className="hidden md:inline">
@@ -91,14 +93,14 @@ export function MemberReport({ officeId }: { officeId: string }) {
               </span>
             </span>
             <h1 className="text-[24px] leading-tight font-extrabold md:text-[40px]">ماذا بحث عنه مشترو جدة هذا الشهر</h1>
-            <p className="text-[12px] leading-relaxed text-on-ink-muted md:text-[14px]">
+            <p className="text-[12px] leading-relaxed text-on-ink-muted md:max-w-[620px] md:text-[14px]">
               <span className="md:hidden">أرقام مجمّعة من {sessions} جلسة بحث على SMQ وطلبات التحالف. لا أسماء، لا أرقام، لا أفراد. الأرقام توضيحية.</span>
               <span className="hidden md:inline">أرقام مجمّعة من {sessions} جلسة بحث على SMQ وطلبات التحالف. لا أسماء، لا أرقام، لا أفراد. أي شريحة أقل من {REPORT_MIN} جلسة لا تُعرض. كل الأرقام في هذا التصميم توضيحية.</span>
             </p>
           </div>
           <div className="hidden grid-cols-3 gap-2.5 md:grid">
             {tiles.map((t, i) => (
-              <div key={t.label} className={cx("flex flex-col gap-1 px-4 py-5", i === 2 ? "bg-gold text-ink cut-s" : "text-paper")} style={i === 2 ? undefined : { border: "1.5px solid var(--smq-ink-2)" }}>
+              <div key={t.label} className={cx("flex flex-col gap-0.5 p-3.5", i === 2 ? "bg-gold text-ink cut-s" : "text-paper")} style={i === 2 ? undefined : { border: "1.5px solid var(--smq-ink-2)" }}>
                 <span className={cx("text-caption", i === 2 ? "text-on-gold-muted" : "text-on-ink-muted")}>{t.label}</span>
                 <span className="text-[28px] leading-tight font-extrabold tnum">{t.value}</span>
                 {t.note && <span className={cx("text-caption", i === 2 ? "text-on-gold-muted" : "text-on-ink-muted")}>{t.note}</span>}
@@ -108,13 +110,13 @@ export function MemberReport({ officeId }: { officeId: string }) {
         </div>
       </section>
 
-      <main className="container-smq flex flex-col gap-4 py-5 md:gap-5 md:py-8">
+      <main className="container-smq flex flex-col gap-5 pt-5 pb-6 md:py-8">
         <div className="grid grid-cols-3 gap-2 md:hidden">
           {tiles.map((t, i) => (
             <ReportTile key={t.label} label={t.label} value={t.value} note={t.note} tone={i === 2 ? "ink" : "paper"} />
           ))}
         </div>
-        <div className="grid gap-4 md:grid-cols-[1.2fr_1fr_1fr] md:gap-4">
+        <div className="grid gap-3 md:grid-cols-[1.2fr_1fr_1fr] md:gap-4">
           <Block title="بالحي" sub="حصة الجلسات · الذهبي: لا عرض يكفي">
             <Bars rows={report.byDistrict} report={report} kind="district" />
           </Block>
@@ -128,12 +130,12 @@ export function MemberReport({ officeId }: { officeId: string }) {
         </div>
 
         {/* phone: the opportunities as numbered rows */}
-        <section className="flex flex-col gap-2 pt-2 md:hidden">
+        <section className="flex flex-col gap-2 md:hidden">
           <div className="flex items-baseline justify-between gap-3">
             <h2 className="text-[18px] font-extrabold">حيث وجد الطلب لا عرض</h2>
             <span className="text-caption text-muted">فرص الأعضاء</span>
           </div>
-          {visible.map((o, i) => (
+          {visible.slice(0, PHONE_GAPS).map((o, i) => (
             <ReportGapRow key={o.labelAr} n={i + 1} title={o.labelAr} note={`${fmtNum(o.sessions)} جلسة · ${o.supplyAr ?? ""}${i === 0 ? " على SMQ" : ""} · ${officesCount(o.offices)} ${o.offices === 1 ? "يغطيه" : "تغطيه"}`} />
           ))}
         </section>
@@ -157,9 +159,9 @@ export function MemberReport({ officeId }: { officeId: string }) {
               {visible.map((o, i) => (
                 <tr key={o.labelAr} className="border-t border-line">
                   <td className="px-4 py-3.5">
-                    <span className="relative inline-block h-7 w-7 bg-gold hex-flat align-middle">
+                    <span className="relative inline-block h-[34px] w-[34px] bg-gold hex-flat align-middle">
                       <span className="absolute inset-0.5 bg-paper hex-flat" />
-                      <span className="absolute inset-0 flex items-center justify-center text-[11px] font-extrabold tnum">{i + 1}</span>
+                      <span className="absolute inset-0 flex items-center justify-center text-[13px] font-extrabold tnum">{i + 1}</span>
                     </span>
                   </td>
                   <td className="px-4 py-3.5 font-extrabold">{o.labelAr}</td>

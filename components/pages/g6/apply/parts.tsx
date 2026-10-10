@@ -16,7 +16,7 @@ export function ApplyShell({ band = "طلب الانضمام", bandD = "طلب �
       <AllianceBand text={`مبادرة من SMQ · ${band}`} textD={`مبادرة من SMQ · ${bandD}`} link={{ label: "عن التحالف ←", href: "/alliance" }} />
       <Header active="/collaborate" waText={waText} menu={false} />
       <main className="flex-1">
-        <div className={cx("container-smq py-6 md:py-8", aside ? "md:grid md:grid-cols-[minmax(0,1fr)_300px] md:items-start md:gap-8 lg:grid-cols-[minmax(0,1fr)_360px]" : wide ? "" : "md:max-w-[760px]")}>
+        <div className={cx("container-smq pt-6 pb-7 md:pt-8 md:pb-16", aside ? "md:grid md:grid-cols-[minmax(0,1fr)_300px] md:items-start md:gap-8 lg:grid-cols-[minmax(0,1fr)_360px]" : wide ? "" : "md:max-w-[760px]")}>
           <div className="min-w-0">{children}</div>
           {aside && <aside className="mt-6 flex flex-col gap-4 md:sticky md:top-20 md:mt-0">{aside}</aside>}
         </div>
@@ -84,8 +84,8 @@ export function GroupLabel({ children, required, note, id }: { children: ReactNo
 /** Bordered checkbox tile; checked = ink with the box in gold. */
 export function CheckTile({ label, checked, onChange, name }: { label: string; checked: boolean; onChange: (v: boolean) => void; name?: string }) {
   return (
-    <label className={cx("inline-flex min-h-11 cursor-pointer items-center gap-2.5 px-3.5 text-[14px] font-bold has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-gold", checked ? "bg-ink text-paper" : "bg-paper text-ink")} style={{ border: "1.5px solid var(--smq-ink)" }}>
-      <input type="checkbox" name={name} checked={checked} onChange={(e) => onChange(e.target.checked)} className={cx("m-0 size-[18px] shrink-0", checked ? "accent-gold" : "accent-ink")} />
+    <label className={cx("inline-flex h-10 cursor-pointer items-center gap-1.5 px-3 text-[13px] font-bold has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-gold md:h-[42px] md:px-3.5", checked ? "bg-ink text-paper" : "bg-paper text-ink")} style={{ border: "1.5px solid var(--smq-ink)" }}>
+      <input type="checkbox" name={name} checked={checked} onChange={(e) => onChange(e.target.checked)} className={cx("m-0 size-4 shrink-0", checked ? "accent-gold" : "accent-ink")} />
       {label}
     </label>
   );

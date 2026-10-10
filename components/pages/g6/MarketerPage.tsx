@@ -128,7 +128,7 @@ export function MarketerPage({ token }: { token: string }) {
             <div className="flex items-center gap-4">
               <QrPlaceholder seed={m.slug} />
               <div className="flex min-w-0 flex-1 flex-col gap-2.5">
-                <span dir="ltr" className="text-end text-[13px] font-bold break-all">
+                <span dir="ltr" className="text-end font-mono text-[13px] font-bold break-all">
                   {link}
                 </span>
                 <button type="button" onClick={copy} className="inline-flex h-11 items-center justify-center bg-gold px-3 text-[13px] font-extrabold text-ink cut-s hover:bg-gold-hover">

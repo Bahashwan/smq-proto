@@ -38,7 +38,10 @@ export const DRAFT_KEY = "smq.allianceApply";
 export const DRAFT_DAYS = 7;
 const TTL = DRAFT_DAYS * 24 * 3600 * 1000;
 
-/** Step 1 as AllianceApply-Step1-M shows it (name typed, licence half typed, link pasted), steps 2–3 from the application. */
+/**
+ * Step 1 as AllianceApply-Step1-M shows it (name typed, licence half typed, district not chosen yet «اختر الحي», link
+ * pasted), steps 2–3 from the application.
+ */
 export function initialDraft(): ApplyDraft {
   const a = applyFixture();
   return {
@@ -47,7 +50,7 @@ export function initialDraft(): ApplyDraft {
     applicantName: "",
     phone: "",
     role: a.applicantRole,
-    district: a.districtSlug,
+    district: "",
     mapsMode: "link",
     mapsLink: a.mapsLink ?? "",
     pin: null,

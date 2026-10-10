@@ -16,7 +16,7 @@ function Steps({ view, onInk }: { view: StatusView; onInk?: boolean }) {
   const words = view === "rejected" ? [APPLICATION_STEPS[0], "لم يُوثَّق", APPLICATION_STEPS[2]] : [...APPLICATION_STEPS];
   const current = view === "review" ? 1 : view === "verified" ? 2 : 1;
   return (
-    <ol className="grid grid-cols-3 gap-2" aria-label="مراحل الطلب">
+    <ol className="grid grid-cols-3" aria-label="مراحل الطلب">
       {words.map((w, i) => {
         const done = i < current;
         const now = i === current && view !== "rejected";
@@ -37,9 +37,9 @@ function Rows({ rows, onInk }: { rows: { k: string; v: ReactNode }[]; onInk?: bo
   return (
     <div className="flex flex-col">
       {rows.map((r, i) => (
-        <div key={r.k} className={cx("flex items-center justify-between gap-3 py-3 text-[13px]", i > 0 && (onInk ? "border-t border-ink-2" : "border-t border-line"))}>
+        <div key={r.k} className={cx("flex items-center justify-between gap-2.5 py-2 text-[12px]", i > 0 && (onInk ? "border-t border-ink-2" : "border-t border-line"))}>
           <span className={onInk ? "text-on-ink-muted" : "text-muted"}>{r.k}</span>
-          <span className="text-end font-extrabold tnum">{r.v}</span>
+          <span className="text-end font-bold tnum">{r.v}</span>
         </div>
       ))}
     </div>
@@ -77,7 +77,8 @@ export function ApplicationStatus({ id }: { id: string }) {
         </div>
 
         {view === "review" && (
-          <section className="flex flex-col gap-4 bg-paper px-4 py-4 border-interactive md:px-6 md:py-5" aria-label="قيد المراجعة">
+          <section className="relative flex flex-col gap-3 bg-paper p-4 ps-5 border-interactive md:px-6 md:py-5 md:ps-7" aria-label="قيد المراجعة">
+            <span aria-hidden className="absolute -inset-y-[1.5px] -start-[1.5px] w-1.5 bg-gold" />
             <div className="flex items-center justify-between gap-3">
               <span className="text-[16px] font-extrabold">{a.officeName}</span>
               <AlliancePill tone="gold-outline" className="text-[11px]">
@@ -95,14 +96,14 @@ export function ApplicationStatus({ id }: { id: string }) {
             <p className="text-[12px] leading-relaxed text-ink-2">
               نتحقق من رخصة فال <span className="tnum">{maskedLicence(a.licence)}</span> في موقع الهيئة. إن احتجنا صورة الرخصة أو السجل سنراسلك على واتساب.
             </p>
-            <a href={waLink(a.id)} target="_blank" rel="noopener" className="inline-flex h-12 items-center justify-center px-4 text-[13px] font-extrabold text-ink no-underline hover:bg-sand" style={{ border: "1.5px solid var(--smq-ink)" }}>
+            <a href={waLink(a.id)} target="_blank" rel="noopener" className="inline-flex h-11 items-center justify-center px-4 text-[13px] font-extrabold text-ink no-underline hover:bg-sand" style={{ border: "1.5px solid var(--smq-ink)" }}>
               أضف مستنداً عبر واتساب
             </a>
           </section>
         )}
 
         {view === "verified" && (
-          <section className="flex flex-col gap-4 bg-ink px-4 py-5 text-paper cut-l md:px-6" aria-label="موثّق">
+          <section className="flex flex-col gap-3 bg-ink p-4 text-paper cut-l md:px-6 md:py-5" aria-label="موثّق">
             <div className="flex items-center justify-between gap-3">
               <span className="text-[16px] font-extrabold">{a.officeName}</span>
               <FalBadge onInk />
@@ -128,7 +129,7 @@ export function ApplicationStatus({ id }: { id: string }) {
         )}
 
         {view === "rejected" && (
-          <section className="flex flex-col gap-4 bg-paper px-4 py-4 border-interactive md:px-6 md:py-5" aria-label="مرفوض">
+          <section className="flex flex-col gap-3 bg-paper p-4 border-interactive md:px-6 md:py-5" aria-label="مرفوض">
             <div className="flex items-center justify-between gap-3">
               <span className="text-[16px] font-extrabold">{a.officeName}</span>
               <AlliancePill tone="outline" className="text-[11px]">
@@ -149,11 +150,11 @@ export function ApplicationStatus({ id }: { id: string }) {
                 { k: "يمكن إعادة التقديم", v: "نعم، فوراً" },
               ]}
             />
-            <div className="grid grid-cols-[1.2fr_1fr] gap-2.5">
-              <Link href="/alliance/apply" className="inline-flex h-12 items-center justify-center bg-ink px-3 text-[13px] font-extrabold text-paper no-underline cut-s hover:bg-ink-2">
+            <div className="grid grid-cols-2 gap-2">
+              <Link href="/alliance/apply" className="inline-flex h-11 items-center justify-center bg-ink px-3 text-[13px] font-extrabold text-paper no-underline cut-s hover:bg-ink-2">
                 صحّح وأعد الإرسال
               </Link>
-              <a href={waLink(a.id)} target="_blank" rel="noopener" className="inline-flex h-12 items-center justify-center px-3 text-[13px] font-bold text-ink no-underline hover:bg-sand" style={{ border: "1.5px solid var(--smq-ink)" }}>
+              <a href={waLink(a.id)} target="_blank" rel="noopener" className="inline-flex h-11 items-center justify-center px-3 text-[13px] font-bold text-ink no-underline hover:bg-sand" style={{ border: "1.5px solid var(--smq-ink)" }}>
                 واتساب
               </a>
             </div>

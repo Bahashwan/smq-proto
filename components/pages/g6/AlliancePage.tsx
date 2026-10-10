@@ -43,14 +43,14 @@ function Hero({ launch, counts }: { launch: boolean; counts: ReturnType<typeof a
       <div className="pointer-events-none absolute top-4 -end-3 opacity-90 md:hidden">
         {launch ? <Honeycomb animate align="start" columns={3} size={40} gap={3} rowGap={3} cells={launchCells} /> : <Honeycomb animate align="start" columns={3} size={40} gap={3} rowGap={3} cells={tones} />}
       </div>
-      <div className="container-smq grid gap-8 pt-7 pb-14 md:grid-cols-[minmax(0,1fr)_520px] md:items-center md:pt-16 md:pb-28">
+      <div className="container-smq grid gap-8 pt-7 pb-7.5 md:grid-cols-[minmax(0,1fr)_520px] md:items-center md:pt-12 md:pb-21">
         <div className="relative z-10 flex max-w-[240px] flex-col gap-3 md:max-w-none md:gap-4">
           <span className="text-[12px] font-bold text-gold md:text-[13px]">
             <span className="whitespace-nowrap md:hidden">{eyebrow}</span>
             <span className="hidden md:inline">{eyebrowD}</span>
           </span>
           <h1 className="text-[30px] leading-[1.15] font-extrabold md:text-[48px]">تحالف مكاتب جدة العقارية</h1>
-          <p className="text-[14px] leading-relaxed text-on-ink-muted md:text-[17px]">
+          <p className="text-[14px] leading-relaxed text-on-ink-muted md:max-w-[560px] md:text-[17px]">
             <span className="md:hidden">مكاتب مرخّصة تمرّر طلبات المشترين وعروض العقارات بينها، لتقفل الصفقات أسرع، وكل تعارف مسجّل.</span>
             <span className="hidden md:inline">{launch ? "مكاتب مرخّصة تمرّر طلبات المشترين وعروض العقارات بينها، لتقفل الصفقات أسرع، وكل تعارف مسجّل." : "مكاتب مرخّصة تمرّر طلبات المشترين وعروض العقارات بينها، لتقفل الصفقات أسرع، وكل تعارف مسجّل في سجل إحالة يحمي حصة كل طرف."}</span>
           </p>
@@ -63,7 +63,7 @@ function Hero({ launch, counts }: { launch: boolean; counts: ReturnType<typeof a
             )}
           </div>
         </div>
-        <div className="hidden md:flex md:flex-col md:items-center md:gap-3">
+        <div className="hidden md:flex md:flex-col md:items-center md:gap-3 md:justify-self-end">
           {launch ? (
             <Honeycomb animate align="start" columns={3} size={84} gap={5} rowGap={5} cells={launchCells} />
           ) : (
@@ -83,20 +83,20 @@ const STEPS: { t: string; m: string; d: string }[] = [
 ];
 
 function StepHex({ n }: { n: number }) {
-  return <span className="flex h-9 w-9 shrink-0 items-center justify-center bg-gold text-[14px] font-extrabold text-ink hex-flat tnum">{n}</span>;
+  return <span className="flex h-9 w-9 shrink-0 items-center justify-center bg-gold text-[14px] font-extrabold text-ink hex-flat tnum md:h-10 md:w-10 md:text-[15px]">{n}</span>;
 }
 
 function HowItWorks() {
   return (
-    <section className="container-smq py-9 md:py-14">
+    <section className="container-smq py-6 md:pt-10 md:pb-9">
       <h2 className="text-[18px] font-extrabold md:text-[26px]">كيف يعمل، في أربع خطوات</h2>
-      <ol className="mt-5 flex flex-col md:mt-7 md:grid md:grid-cols-4 md:gap-4">
+      <ol className="mt-1.5 flex flex-col md:mt-4 md:grid md:grid-cols-4 md:gap-3.5">
         {STEPS.map((s, i) => (
-          <li key={s.t} className={cx("flex items-start gap-3.5 py-3.5 md:flex-col md:gap-3 md:bg-paper md:px-5 md:pt-5 md:pb-6 md:border-interactive", i > 0 && "border-t border-line md:border-t-0")}>
+          <li key={s.t} className={cx("flex items-start gap-3 py-3 md:flex-col md:gap-2 md:bg-paper md:p-4.5 md:border-interactive", i > 0 && "border-t border-line md:border-t-0")}>
             <StepHex n={i + 1} />
             <span className="flex flex-col gap-1">
               <b className="text-[14px] font-extrabold md:text-[16px]">{s.t}</b>
-              <span className="text-[13px] leading-relaxed text-muted">
+              <span className="text-[12px] leading-[1.6] text-muted md:text-[13px] md:leading-[1.65]">
                 <span className="md:hidden">{s.m}</span>
                 <span className="hidden md:inline">{s.d}</span>
               </span>
@@ -120,11 +120,11 @@ function CharterRows({ framed }: { framed?: boolean }) {
     },
   ];
   return (
-    <div className={cx("flex flex-col", framed && "bg-paper px-4 border-interactive")}>
+    <div className={cx("flex flex-col", framed && "bg-paper border-interactive")}>
       {rows.map((r, i) => (
-        <div key={r.k} className={cx("flex items-start justify-between gap-4 py-3.5 text-[13px]", i > 0 && "border-t border-line")}>
+        <div key={r.k} className={cx("flex items-start justify-between gap-3 text-[13px]", framed ? "px-3.5 py-3" : "py-2.5", i > 0 && "border-t border-line")}>
           <span className="shrink-0 text-muted">{r.k}</span>
-          <strong className="max-w-[60%] text-start font-extrabold text-gold-text md:max-w-[58%]">
+          <strong className={cx("text-end font-extrabold text-gold-text", r.d != null && "max-w-[180px] md:max-w-[220px]")}>
             {r.d ? (
               <>
                 <span className="md:hidden">{r.m}</span>
@@ -152,11 +152,11 @@ function CharterLink({ onOpen }: { onOpen: () => void }) {
 function Values({ onCharter }: { onCharter: () => void }) {
   return (
     <>
-      <section className="container-smq grid gap-4 md:grid-cols-[1fr_1fr_1.1fr] md:items-stretch md:gap-4 md:pb-14">
-        <div className="relative flex flex-col gap-3 bg-paper px-5 py-5 border-interactive md:order-1 md:px-6 md:py-6">
+      <section className="container-smq grid gap-4 md:grid-cols-[1fr_1fr_1.1fr] md:items-stretch md:gap-4 md:pb-10">
+        <div className="relative flex flex-col gap-2 bg-paper p-4 ps-5 border-interactive md:order-1 md:gap-2.5 md:px-6 md:py-6 md:ps-7">
           <span aria-hidden className="absolute -inset-y-[1.5px] -start-[1.5px] w-[6px] bg-gold" />
           <span className="text-[14px] font-extrabold md:text-[18px]">ماذا يحصل عليه العضو</span>
-          <ul className="flex list-disc flex-col gap-1.5 ps-5 text-[13px] leading-relaxed text-ink-2 md:text-[14px]">
+          <ul className="flex list-disc flex-col ps-4 text-[13px] leading-[1.8] text-ink-2 md:ps-4.5 md:text-[14px] md:leading-[1.9]">
             <li>طلبات مشترين في الأحياء التي يغطيها</li>
             <li>
               <span className="md:hidden">تقرير طلب شهري: ماذا يبحث عنه مشترو جدة بالحي والميزانية والغرف</span>
@@ -166,22 +166,22 @@ function Values({ onCharter }: { onCharter: () => void }) {
             <li>سجل إحالة يحمي حصته طوال فترة الحماية</li>
           </ul>
         </div>
-        <div className="flex flex-col gap-3 bg-ink px-5 py-5 text-paper cut-l md:order-2 md:px-6 md:py-6">
+        <div className="flex flex-col gap-2 bg-ink p-4 text-paper cut-l md:order-2 md:gap-2.5 md:px-6 md:py-6">
           <span className="text-[14px] font-extrabold text-gold md:text-[18px]">ماذا يقدّم العضو</span>
-          <ul className="flex list-disc flex-col gap-1.5 ps-5 text-[13px] leading-relaxed text-on-ink-muted md:text-[14px]">
+          <ul className="flex list-disc flex-col ps-4 text-[13px] leading-[1.8] text-on-ink-muted md:ps-4.5 md:text-[14px] md:leading-[1.9]">
             <li>عروضه، بعقود وساطة موثّقة أو مباشرة من المُلّاك</li>
             <li>طلباته التي لا يغطيها</li>
             <li>رداً سريعاً على ما يصله: الميزان يحسب الوقت</li>
           </ul>
         </div>
-        <div id="charter" className="hidden scroll-mt-20 flex-col gap-1 bg-paper px-6 py-6 border-interactive md:order-3 md:flex">
+        <div id="charter" className="hidden scroll-mt-20 flex-col gap-1 bg-paper p-5.5 border-interactive md:order-3 md:flex">
           <span className="text-[18px] font-extrabold">ملخّص الميثاق</span>
           <CharterRows />
           <CharterLink onOpen={onCharter} />
         </div>
       </section>
       {/* phone: the charter summary is its own section */}
-      <section className="container-smq flex flex-col gap-3 pt-9 pb-5 md:hidden" id="charter-m">
+      <section className="container-smq flex flex-col gap-2.5 pt-6 md:hidden" id="charter-m">
         <h2 className="text-[18px] font-extrabold">ملخّص الميثاق</h2>
         <CharterRows framed />
         <CharterLink onOpen={onCharter} />
@@ -204,8 +204,8 @@ function Coverage({ launch, counts, children }: { launch: boolean; counts: Retur
   const legend = launch ? `0 مكاتب · الذهبي: نحتاجه أولاً` : `${officesWord(counts.members)} · ${sectorsLabel(counts.sectors)} · الأسود: يغطيه أعضاء`;
   return (
     <section className="bg-paper" style={{ borderBlock: "1.5px solid var(--smq-ink)" }}>
-      <div className="container-smq grid gap-10 py-8 md:grid-cols-[1.15fr_1fr] md:gap-12 md:py-12">
-        <div className="flex min-w-0 flex-col gap-4">
+      <div className="container-smq grid gap-10 pt-5.5 pb-6 md:grid-cols-[1.15fr_1fr] md:gap-12 md:py-9">
+        <div className="flex min-w-0 flex-col gap-3.5 md:gap-4">
           <div className="flex items-baseline justify-between gap-3">
             <h2 className="text-[18px] font-extrabold md:text-[26px]">
               <span className="md:hidden">تغطية جدة</span>
@@ -272,21 +272,21 @@ function LaunchGrid({ required }: { required: string[] }) {
 function Directory({ launch, counts, desktop }: { launch: boolean; counts: ReturnType<typeof allianceCounts>; desktop?: boolean }) {
   const list = launch ? [] : offices.filter((o) => o.status === "active" && o.inDirectory);
   return (
-    <div className="flex flex-col gap-4">
+    <div className={cx("flex flex-col", desktop ? "gap-4" : "gap-2.5")}>
       <div className="flex items-baseline justify-between gap-3">
         <h2 className={cx("font-extrabold", desktop ? "text-[22px]" : "text-[18px]")}>دليل الأعضاء</h2>
         {!launch && <span className="text-caption text-muted md:text-[12px]">{counts.members} · يظهر من اختار الظهور</span>}
       </div>
       {launch ? (
         <DirectoryEmpty
-          className="py-8"
+          className="py-6.5"
           text={
             <MarkedText text="يظهر هنا اسم المكتب وحيّه وتخصصه وشارة «رخصة فال موثّقة»، باختيار المكتب. المكاتب المؤسِّسة تحمل وسم «مؤسِّس» دائماً [للتأكيد]." />
           }
         />
       ) : (
         <>
-          <div className={cx("grid gap-2", desktop && "grid-cols-2")}>
+          <div className={cx("grid", desktop ? "grid-cols-2 gap-2" : "gap-1.5")}>
             {list.map((o) => (
               <MemberCard key={o.id} office={o} district={directoryDistrict(o)} badge={!desktop} className="min-h-[68px]" />
             ))}
@@ -308,8 +308,8 @@ function Directory({ launch, counts, desktop }: { launch: boolean; counts: Retur
 function Cta({ launch }: { launch: boolean }) {
   if (launch) {
     return (
-      <section className="container-smq py-8 md:py-12">
-        <div className="flex flex-col gap-3 bg-gold px-5 py-6 text-ink cut-l md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-8 md:px-8 md:py-9">
+      <section className="container-smq py-6 md:py-12">
+        <div className="flex flex-col gap-2.5 bg-gold px-4.5 py-5 text-ink cut-l md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-8 md:px-8 md:py-9">
           <div className="flex flex-col gap-2">
             <span className="text-[20px] leading-snug font-extrabold md:text-[26px]">{importedCount()} مكتباً سجّلت في نموذج قوقل سابقاً</span>
             <span className="text-[13px] leading-relaxed text-on-gold-muted md:text-[14px]">نقلنا طلباتكم ونتحقق من الرخص الآن. سجّلتَ من قبل؟ لا تعد التسجيل، تابع الحالة برقم جوالك.</span>
@@ -327,8 +327,8 @@ function Cta({ launch }: { launch: boolean }) {
     );
   }
   return (
-    <section className="container-smq py-8 md:py-10">
-      <div className="flex flex-col gap-3 bg-gold px-5 py-6 text-ink [clip-path:polygon(0_0,calc(100%-16px)_0,100%_28px,100%_100%,0_100%)] md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-8 md:px-8 md:py-9 md:[clip-path:polygon(0_0,calc(100%-28px)_0,100%_48px,100%_100%,0_100%)]">
+    <section className="container-smq pt-7 pb-8 md:pt-10 md:pb-14">
+      <div className="flex flex-col gap-2.5 bg-gold px-4.5 py-5 text-ink [clip-path:polygon(0_0,calc(100%-16px)_0,100%_28px,100%_100%,0_100%)] md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-6 md:px-8 md:py-7 md:[clip-path:polygon(0_0,calc(100%-28px)_0,100%_48px,100%_100%,0_100%)]">
         <div className="flex flex-col gap-2">
           <span className="text-[20px] leading-snug font-extrabold md:text-[26px]">مكتبك مرخّص وتغطي حياً نحتاجه؟</span>
           <span className="text-[13px] leading-relaxed text-on-gold-muted md:text-[14px]">
@@ -382,12 +382,12 @@ export function AlliancePage() {
         <Hero launch={launch} counts={counts} />
         {!launch && <HowItWorks />}
         {!launch && <Values onCharter={() => setCharterOpen(true)} />}
-        <div className="pt-6 md:pt-0">
+        <div className={cx(launch ? "pt-6" : "pt-7", "md:pt-0")}>
           <Coverage launch={launch} counts={counts}>
             <Directory launch={launch} counts={counts} desktop />
           </Coverage>
         </div>
-        <section className="container-smq pt-9 md:hidden">
+        <section className="container-smq pt-6 md:hidden">
           <Directory launch={launch} counts={counts} />
         </section>
         <Cta launch={launch} />
