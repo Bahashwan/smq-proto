@@ -15,7 +15,8 @@
     "icons": "tsx scripts/icons/build.ts",
     "images": "tsx scripts/images/generate.ts",
     "images:convert": "tsx scripts/images/convert.ts",
-    "postbuild": "node scripts/postbuild.mjs"
+    "postbuild": "node scripts/postbuild.mjs",
+    "coverage": "tsx scripts/check-coverage.ts"
   },
   "dependencies": {
     "@fontsource-variable/noto-kufi-arabic": "^5.3.0",
