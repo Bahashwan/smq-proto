@@ -1,0 +1,69 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Projects-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <section {background=#F3F1EB; clip-path=polygon(0 0, 100% 0, 100% 100%, 120px 100%, 0 calc(100% - 69px))}>
+        <div>
+          <div>
+            <span {font-size=13px; font-weight=700; color=#8A6C1E}> "آخر تحديث 2026/10/01"
+            <h1 {font-size=40px; font-weight=800}> "الخصوصية، بالعربي الواضح"
+          <p {font-size=14px}> "صفحة قصيرة لأن ما نجمعه قليل. لا حسابات على الموقع، ولا نبيع بياناتك لأحد."
+      <main {display=grid; grid-template-columns=260px minmax(0, 1fr)}>
+        <nav aria-label=محتويات الصفحة {position=sticky}>
+          <span {font-size=12px; font-weight=800; color=#5E5A52}> "في هذه الصفحة"
+          <a href=#c1> "ما نجمعه"
+          <a href=#c2> "ما نحسبه بلا أسماء"
+          <a href=#c3> "لماذا نستخدمه"
+          <a href=#c4> "مع من نشاركه"
+          <a href=#c5> "كم نحتفظ به"
+          <a href=#c6> "الكوكيز"
+          <a href=#c7> "حقوقك"
+          <div {border=1.5px solid #141311; font-size=13px}>
+            <span {font-weight=800}> "تواصل بخصوص الخصوصية"
+            <a href=mailto:info@smqre.com {font-weight=700; text-decoration=none}> "info@smqre.com"
+            <a href=https://wa.me/966559997929 {font-weight=700; text-decoration=none}> "واتساب"
+        <div>
+          <div>
+            <h2> "ما نجمعه"
+            <p> "رقم جوالك واسمك فقط حين تكتبهما أنت: في نموذج التواصل، أو «نبّهني»، أو «أضف عقارك». ضغطة واتساب أو اتصال لا تعطينا رقمك؛ نسجّل أنها حدثت ومن أي صفحة، برمز مثل SMQ-8F3A2 لنعرف أي وحدة سألت عنها حين تراسلنا."
+          <div>
+            <h2> "ما نحسبه بلا أسماء"
+            <p> "ما يبحث عنه الزوار: الميزانيات والأحياء والغرف، والصفحات الأكثر زيارة. أرقام مجمّعة تساعدنا على معرفة ما ينقص السوق، ولا تُربط بشخص. ننشر بعضها في دليل الأسعار كاتجاهات، لا كأفراد."
+          <div>
+            <h2> "لماذا نستخدمه"
+            <p> "للرد عليك، ولنرسل لك ما طلبته فقط: سعر مشروع عند إطلاقه، أو وحدة تطابق «نبّهني». رسالة واحدة لكل طلب، وتوقف الرسائل بكلمة «توقف» على واتساب."
+          <div>
+            <h2> "مع من نشاركه"
+            <p> "لا أحد خارج فريق SMQ، إلا مزوّد واتساب بزنس لإرسال الرسائل، ومزوّد الاستضافة لتخزينها. لا إعلانات مدفوعة تُبنى على بياناتك. المُلّاك: رقمك لا يظهر على الموقع أبداً؛ المشترون يراسلوننا نحن ونعرّفكم ببعض بعد الفرز."
+          <div>
+            <h2> "كم نحتفظ به"
+            <p> "طلبات التواصل سنتين من آخر رسالة، ثم تُحذف. سجلات التصفح المجمّعة 13 شهراً. تستطيع طلب حذف بياناتك في أي وقت برسالة واتساب أو بريد، ونؤكد الحذف خلال 7 أيام."
+          <div>
+            <h2> "الكوكيز"
+            <p> "كوكي واحدة تحفظ ميزانيتك ومقارنتك على جهازك 7 أيام، وأخرى للغة. لا كوكيز تتبّع من أطراف ثالثة، ولذلك لا شريط موافقة على الكوكيز."
+          <div>
+            <h2> "حقوقك"
+            <p> "تعرف ما عندنا عنك، تصحّحه، تحذفه، أو توقف الرسائل. نُطبّق نظام حماية البيانات الشخصية السعودي، وجهة الشكوى الهيئة السعودية للبيانات والذكاء الاصطناعي [للتأكيد مع المستشار القانوني]."
+          <p {font-size=13px; color=#5E5A52}> "شركة إس إم كيو للاستثمار والتسويق العقاري · السجل التجاري 7029797433 · ترخيص فال 1200040135 · حي الروضة، جدة. هذه الصفحة تحمل noindex ولا تظهر في نتائج البحث."
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span>
+            "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية ·"
+            <a href=Privacy-D.html {color=#B48F2E}> "الخصوصية"

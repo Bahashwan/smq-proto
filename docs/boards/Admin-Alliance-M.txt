@@ -1,0 +1,99 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/logo-mark-gold.png alt=>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "الإدارة"
+        <div>
+          <button type=button aria-label=الإشعارات، 5 جديدة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+            <span {position=absolute; background=#B48F2E; color=#141311; font-size=10px; font-weight=800}> "5"
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+        <a href=Admin-M.html {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "نظرة عامة"
+        <a href=Admin-M.html {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "الموافقات 3"
+        <a href=Admin-Leads-M.html {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "الواردة 12"
+        <a href=#alliance {font-size=13px; font-weight=800; text-decoration=none; color=#141311}> "التحالف 5"
+        <a href=#units {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "الوحدات"
+      <section>
+        <div>
+          <h1 {font-size=22px; font-weight=800}> "التحالف · اليوم"
+          <span {font-size=12px; color=#5E5A52}> "5 إجراءات"
+        <div {display=grid; grid-template-columns=repeat(4, 1fr); font-size=11px}>
+          <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <b {font-size=18px}> "12"
+            "عضواً"
+          <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <b {font-size=18px}> "7"
+            "مفتوحة"
+          <div {background=#FFFFFF; border=1.5px solid #B48F2E}>
+            <b {font-size=18px; color=#8A6C1E}> "5"
+            "عروض تنتظر"
+          <div {background=#141311; color=#FFFFFF}>
+            <b {font-size=18px; color=#B48F2E}> "3"
+            "إحالات"
+        <p {font-size=11px; color=#5E5A52}> "كل قرار هنا بضغطة من الجوال. التفاصيل الكاملة على سطح المكتب."
+      <section>
+        <div>
+          <div>
+            <span> "عرض وصل · قبل 3 ساعات"
+            <span {background=#B48F2E}> "قرار"
+          <b> "REQ-0412 · الفيصلية · شقة 4 غرف"
+          <p>
+            "مكتب ط عرض"
+            <strong> "440,000"
+            "· 165 م² · عقد وساطة موثّق. الطلب من زائر بلا نتائج، ميزانيته 450,000."
+          <div>
+            <button type=button> "اعرض على المشتري"
+            <button type=button> "ارفض مع سبب"
+        <div>
+          <div>
+            <span> "طلب انضمام · أمس"
+            <span {border=1.5px solid #B48F2E; color=#8A6C1E}> "تحقق الرخصة"
+          <b> "مكتب أ للعقارات · أبحر الشمالية"
+          <p> "فال 1200XXXXXX · مالك المكتب · 3 أحياء · 10 عروض. افتح موقع الهيئة، طابق الاسم، ثم أكّد."
+          <div>
+            <a href=#rega> "افتح موقع الهيئة"
+            <button type=button> "تم التحقق · اعتمد"
+        <div>
+          <div>
+            <span> "لم يُرسل · الوضع اليدوي"
+            <span {border=1.5px solid #141311}> "واتساب"
+          <b> "REQ-0414 · المحمدية · شقة 3 غرف"
+          <p> "أُرسل لمكتب د يدوياً. المكتب الثاني (ل) موقوف، فلا يُرسل له. لا مكتب آخر يغطي المحمدية."
+          <div>
+            <a href=https://wa.me/966500000000?text=REQ-0414> "أرسل على واتساب · مكتب د (إعادة)"
+            <button type=button> "تجاوز"
+        <div>
+          <div>
+            <span> "نزاع · 4 أيام"
+            <span {background=#141311; color=#FFFFFF}> "إحالة"
+          <b> "REF-2026-0098 · مكتب أ ومكتب ج"
+          <p> "مكتب ج يطلب «لم تتم»؛ مكتب أ لم يردّ. الحماية 70 يوماً باقية. القرار يحتاج سطح المكتب."
+          <div>
+            <a href=https://wa.me/966500000001?text=REF-2026-0098> "راسل مكتب أ"
+            <a href=Admin-AllianceReferrals-D.html> "افصل من سطح المكتب"
+        <div>
+          <div>
+            <span> "الرادار · 30 يوماً"
+            <span {border=1.5px solid #B48F2E; color=#8A6C1E}> "فرصة"
+          <b> "أبحر الشمالية · 318 جلسة · 0 وحدة"
+          <p> "فلل 1.5 إلى 2.5M. مكتبان يغطيانه: أ، ك. أرسل طلباً مجمّعاً من بحوث الزوار بلا أي بيانات شخصية."
+          <div>
+            <button type=button> "أرسل للمكاتب"
+            <a href=Admin-AllianceRadar-D.html> "الرادار الكامل"
+      <section>
+        <span {font-size=13px; font-weight=800}> "آخر ما حدث"
+        <div {background=#FFFFFF; border=1.5px solid #141311; font-size=12px}>
+          <div>
+            <span {color=#5E5A52}> "10:42"
+            <span> "مكتب ط أرسل عرضاً على REQ-0412"
+          <div>
+            <span {color=#5E5A52}> "09:10"
+            <span> "أُرسل REQ-0415 لمكتبَي أ وك تلقائياً"
+          <div>
+            <span {color=#5E5A52}> "أمس"
+            <span> "نورة أنشأت REF-2026-0117 · معاينة الخميس"
+        <a href=Admin-Alliance-D.html {font-size=12px; font-weight=800; text-decoration=none}> "غرفة التحالف الكاملة على سطح المكتب ←"

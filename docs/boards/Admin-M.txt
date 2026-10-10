@@ -1,0 +1,177 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/logo-mark-gold.png alt=>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "الإدارة"
+        <div>
+          <button type=button aria-label=الإشعارات، 3 جديدة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+            <span {position=absolute; background=#B48F2E; color=#141311; font-size=10px; font-weight=800}> "3"
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+        <a href=#overview {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "نظرة عامة"
+        <a href=#approvals {font-size=13px; font-weight=800; text-decoration=none; color=#141311}> "الموافقات 3"
+        <a href=Admin-Leads-M.html {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "الواردة 12"
+        <a href=#units {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "الوحدات"
+        <a href=#stats {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "البحث"
+        <a href=#visitors {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "الزوار"
+        <a href=Admin-Alliance-M.html {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "التحالف 5"
+      <section {display=grid; grid-template-columns=repeat(2, minmax(0, 1fr))}>
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <span {font-size=11px; font-weight=700; color=#5E5A52}> "زوار اليوم"
+          <span {font-size=24px; font-weight=800}> "212"
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <span {font-size=11px; font-weight=700; color=#5E5A52}> "واتساب اليوم"
+          <span {font-size=24px; font-weight=800}>
+            "17"
+            <span {font-size=12px; font-weight=700; color=#8A6C1E}> "· 5 بلا رد"
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+          <span {font-size=11px; font-weight=700; color=#C9C2B3}> "بانتظار موافقتك"
+          <span {font-size=24px; font-weight=800; color=#B48F2E}> "3"
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <span {font-size=11px; font-weight=700; color=#5E5A52}> "الوحدات"
+          <span {font-size=24px; font-weight=800}>
+            "8"
+            <span {font-size=12px; font-weight=600; color=#5E5A52}> "/ 10"
+      <section>
+        <div>
+          <h1 {font-size=18px; font-weight=800}> "طلبات إضافة عقار"
+          <span {font-size=11px; color=#5E5A52}> "لا تُنشر قبل موافقتك"
+        <article {background=#FFFFFF; border=1.5px solid #141311}>
+          <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr)); height=120px}>
+            <div {background=#E9E5DB}>
+            <div {display=grid}>
+              <div {background=#E9E5DB}>
+              <div {background=#E9E5DB; font-size=11px; font-weight=700}> "+1"
+          <div>
+            <div>
+              <span {font-size=16px; font-weight=800}> "شقة 3 غرف · الروضة"
+              <span {font-size=11px; font-weight=700; background=#B48F2E}> "جديد · 26 س"
+            <span {font-size=13px; font-weight=800}>
+              "620,000"
+              <span {font-size=11px; font-weight=600; color=#5E5A52}> "· 120 م² · 5,167 للمتر · +7% عن الحي"
+            <span {font-size=12px; color=#5E5A52}> "محمد العمري · 0559…XX · مؤجرة حتى مارس"
+          <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+            <a href=Admin-Approvals-D.html {font-size=13px; font-weight=800; color=#141311; text-decoration=none; background=#B48F2E}> "مراجعة واعتماد"
+            <a href=https://wa.me/966559000000 {font-size=13px; font-weight=700; color=#141311; text-decoration=none}> "واتساب المالك"
+            <button type=button {font-size=13px; font-weight=700; border=0; background=#FFFFFF; color=#5E5A52}> "رفض"
+        <article {background=#FFFFFF; border=1.5px solid #141311}>
+          <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr)); height=120px}>
+            <div {background=#E9E5DB}>
+            <div {display=grid}>
+              <div {background=#E9E5DB}>
+              <div {background=#E9E5DB; font-size=11px; font-weight=700}> "+6"
+          <div>
+            <div>
+              <span {font-size=16px; font-weight=800}> "فيلا 5 غرف · أبحر الشمالية"
+              <span {font-size=11px; font-weight=700; background=#B48F2E}> "جديد · 9 س"
+            <span {font-size=13px; font-weight=800}>
+              "2,400,000"
+              <span {font-size=11px; font-weight=600; color=#5E5A52}> "· 480 م² · 5,000 للمتر · لا مرجع في الحي"
+            <span {font-size=12px; color=#5E5A52}> "أحمد الغامدي · 0556…XX · 970 بحثاً عن هذا الحي بلا نتيجة"
+          <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+            <a href=Admin-Approvals-D.html {font-size=13px; font-weight=800; color=#141311; text-decoration=none; background=#B48F2E}> "مراجعة واعتماد"
+            <a href=https://wa.me/966556000000 {font-size=13px; font-weight=700; color=#141311; text-decoration=none}> "واتساب المالك"
+            <button type=button {font-size=13px; font-weight=700; border=0; background=#FFFFFF; color=#5E5A52}> "رفض"
+        <article {background=#FFFFFF; border=1.5px solid #D4CFC4}>
+          <div>
+            <div>
+              <span {font-size=16px; font-weight=800}> "أرض 600 م² · الفيصلية"
+              <span {font-size=11px; font-weight=700; border=1.5px solid #141311}> "بانتظار صور"
+            <span {font-size=13px; font-weight=800}>
+              "1,100,000"
+              <span {font-size=11px; font-weight=600; color=#5E5A52}> "· 1,833 للمتر"
+            <span {font-size=12px; color=#5E5A52}> "سارة باخشوين · طُلبت صور إضافية قبل ساعتين · تذكير تلقائي بعد 48 ساعة"
+      <section>
+        <div>
+          <h2 {font-size=18px; font-weight=800}> "واردة بلا رد"
+          <a href=Admin-Leads-M.html {font-size=12px; font-weight=700; text-decoration=none}> "الكل 12 · علّم كمردود من التفاصيل"
+        <a href=https://wa.me/966559000021 {background=#FFFFFF; border=1.5px solid #141311; text-decoration=none; color=#141311}>
+          <span>
+            <span {font-size=14px; font-weight=800}> "واتساب · نموذج D روز"
+            <span {font-size=11px; color=#5E5A52}> "سناب شات · ميزانية 500 ألف · قبل 14 د"
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+        <a href=#x {background=#FFFFFF; border=1.5px solid #141311; text-decoration=none; color=#141311}>
+          <span>
+            <span {font-size=14px; font-weight=800}> "نموذج تواصل · استشارة"
+            <span {font-size=11px; color=#5E5A52}> "«أبيع أم أنتظر؟» · الفيصلية · قبل ساعة"
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+      <section>
+        <div>
+          <h2 {font-size=18px; font-weight=800}> "تغيير حالة وحدة"
+          <a href=Admin-Inventory-D.html {font-size=12px; font-weight=700; text-decoration=none}> "كل الوحدات"
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <div>
+            <span>
+              <span {font-size=14px; font-weight=800}> "D · روز"
+              <span {font-size=11px; color=#5E5A52}> "459,000 · 312 مشاهدة هذا الأسبوع"
+            <select aria-label=حالة D روز {font-size=12px; font-weight=700; border=1.5px solid #B48F2E; background=#FFFFFF}>
+              <option> "متاح"
+              <option> "محجوز"
+              <option> "مباع"
+          <div>
+            <span>
+              <span {font-size=14px; font-weight=800}> "B · ياسمين"
+              <span {font-size=11px; color=#5E5A52}> "555,000 · 77 مشاهدة"
+            <select aria-label=حالة B ياسمين {font-size=12px; font-weight=700; border=1.5px solid #B48F2E; background=#FFFFFF}>
+              <option> "متاح"
+              <option> "محجوز"
+              <option> "مباع"
+          <div>
+            <span>
+              <span {font-size=14px; font-weight=800}> "A · روز"
+              <span {font-size=11px; color=#5E5A52}> "690,000 · 184 مشاهدة"
+            <select aria-label=حالة A روز {font-size=12px; font-weight=700; border=1.5px solid #B48F2E; background=#FFFFFF}>
+              <option> "متاح"
+              <option> "محجوز"
+              <option> "مباع"
+      <section>
+        <div>
+          <h2 {font-size=18px; font-weight=800}> "ماذا يبحثون · 7 أيام"
+          <a href=Admin-Analytics-D.html {font-size=12px; font-weight=700; text-decoration=none}> "التفاصيل"
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <div aria-label=توزيع الميزانيات، الذروة 600 إلى 700 ألف>
+            <span {background=#141311}>
+            <span {background=#141311}>
+            <span {background=#141311}>
+            <span {background=#B48F2E}>
+            <span {background=#141311}>
+            <span {background=#141311}>
+            <span {background=#141311}>
+          <div {font-size=9px; color=#5E5A52}>
+            <span> "<400"
+            <span> "500"
+            <span> "600"
+            <span {font-weight=800; color=#141311}> "700"
+            <span> "850"
+            <span> "مليون"
+            <span> "+"
+          <div {font-size=12px}>
+            <span>
+              <span> "الحي الأكثر طلباً بلا وحدات"
+              <strong {color=#8A6C1E}> "أبحر الشمالية · 19%"
+            <span>
+              <span> "بحث بلا نتائج"
+              <strong> "19%"
+            <span>
+              <span> "ذروة البحث"
+              <strong> "9 إلى 11 مساءً"
+      <section>
+        <div>
+          <h2 {font-size=18px; font-weight=800}> "الزوار · 7 أيام"
+          <a href=Admin-Visitors-D.html {font-size=12px; font-weight=700; text-decoration=none}> "التفاصيل"
+        <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <span {font-size=18px; font-weight=800}> "1,284"
+            <span {font-size=10px; color=#5E5A52}> "زائر"
+          <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <span {font-size=18px; font-weight=800}> "86%"
+            <span {font-size=10px; color=#5E5A52}> "جوال"
+          <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <span {font-size=18px; font-weight=800}> "34%"
+            <span {font-size=10px; color=#5E5A52}> "من سناب شات"

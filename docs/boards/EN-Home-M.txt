@@ -1,0 +1,134 @@
+<html lang=en dir=ltr>
+  <body>
+    <div dir=ltr {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=EN-Home-M.html aria-label=SMQ Real Estate, home {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=SMQ Real Estate>
+        <div>
+          <a href=Home-M.html lang=ar aria-label=العربية {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "عربي"
+          <a href=https://wa.me/966559997929 aria-label=Chat on WhatsApp {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=Menu {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 52px) 100%, 0 100%)}>
+        <div {position=absolute; background=#3A3630; opacity=.35}>
+        <span {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF; color=#141311}> "Illustrative image"
+        <span {font-size=12px; font-weight=700; color=#B48F2E}> "SMQ Real Estate · Jeddah"
+        <h1 {font-size=30px; font-weight=800}> "Real prices. Real units. No "call for price"."
+        <p {font-size=14px; color=#C9C2B3}> "Start from your budget and see only what fits it, with the full price on every card."
+        <a href=#budget {background=#B48F2E; color=#141311; font-size=15px; font-weight=800; text-decoration=none}> "Start from your budget"
+      <section>
+        <h2 {font-size=20px; font-weight=800}> "What's your budget?"
+        <div>
+          <span {font-size=34px; font-weight=800}>
+            "700,000"
+            <span {font-size=14px; font-weight=600; color=#5E5A52}> "SAR"
+          <span {font-size=12px; color=#5E5A52}> "7 units fit"
+        <div {background=#E9E5DB}>
+          <span {position=absolute; background=#141311}>
+          <span {position=absolute; background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+        <div>
+          <button type=button {border=1.5px solid #141311; background=#FFFFFF; font-size=12px; font-weight=700}> "Up to 500k"
+          <button type=button {border=1.5px solid #141311; background=#FFFFFF; font-size=12px; font-weight=700}> "Up to 600k"
+          <button type=button {border=1.5px solid #141311; background=#141311; color=#FFFFFF; font-size=12px; font-weight=800}> "Up to 700k"
+          <button type=button {border=1.5px solid #141311; background=#FFFFFF; font-size=12px; font-weight=700}> "Up to 1M"
+        <div {display=grid; grid-template-columns=1fr 1fr}>
+          <label {font-size=11px; font-weight=600; color=#5E5A52}>
+            "Bedrooms"
+            <select {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+              <option> "Any"
+              <option selected=None> "2 or more"
+              <option> "3"
+          <label {font-size=11px; font-weight=600; color=#5E5A52}>
+            "District"
+            <select {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+              <option selected=None> "All of Jeddah"
+              <option> "Al Rawdah"
+              <option> "Al Safa"
+        <a href=EN-Card-M.html {background=#141311; color=#FFFFFF; font-size=15px; font-weight=800; text-decoration=none}>
+          "Show 7 units"
+          <svg svg >
+        <span {font-size=11px; color=#5E5A52}> "Full unit price. Real estate transaction tax and registration fees are calculated separately."
+      <section>
+        <div>
+          <h2 {font-size=20px; font-weight=800}> "Current project"
+          <a href=Projects-M.html {font-size=12px; font-weight=700; text-decoration=none}> "All projects"
+        <article {border=1.5px solid #141311}>
+          <div {height=170px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% calc(100% - 62px), calc(100% - 36px) 100%, 0 100%)}>
+            <span {position=absolute; background=#B48F2E; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              "8"
+              <br> "left"
+            <span {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "Illustrative image"
+          <div>
+            <span {font-size=11px; font-weight=700; color=#8A6C1E}> "Al Rawdah · Rose and Yasmin buildings"
+            <span {font-size=20px; font-weight=800}> "Garden Al Rawdah"
+            <span {font-size=12px; color=#5E5A52}> "10 models · 8 available, 2 sold · 2BR, 3BR and roof villas · delivery Q2 2027 [TBC]"
+          <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+            <span>
+              <span {font-size=10px; color=#5E5A52}> "From"
+              <span {font-size=15px; font-weight=800}> "459,000"
+            <span>
+              <span {font-size=10px; color=#5E5A52}> "3BR"
+              <span {font-size=15px; font-weight=800}> "690,000"
+            <span>
+              <span {font-size=10px; color=#5E5A52}> "Per m² from"
+              <span {font-size=15px; font-weight=800}> "3,819"
+      <section {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% 100%, 16px 100%, 0 calc(100% - 28px))}>
+        <span {font-size=12px; font-weight=700; color=#B48F2E}> "Price guide · Al Rawdah"
+        <div {font-size=13px}>
+          <span> "2-bedroom apartments"
+          <strong> "459 to 555k · 5 of 7"
+        <div {font-size=13px}>
+          <span> "3-bedroom apartment"
+          <strong> "690,000 · one model"
+        <div {font-size=13px}>
+          <span> "Roof villas"
+          <strong> "1.6 to 1.65M · 2 of 2"
+        <span {font-size=11px; color=#C9C2B3}> "Computed from available units only, updated whenever a unit sells."
+        <a href=Guide-M.html {font-size=13px; font-weight=800; color=#B48F2E; text-decoration=none}> "Full price guide →"
+      <section>
+        <h2 {font-size=20px; font-weight=800}> "What we do"
+        <div>
+          <a href=Services-M.html {text-decoration=none; color=#141311}>
+            <span {background=#B48F2E; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "01"
+            <span>
+              <span {font-size=15px; font-weight=700}> "Buying"
+              <span {font-size=12px; color=#5E5A52}> "We filter the market on your budget and stay with you to the deed transfer"
+          <a href=Services-M.html {text-decoration=none; color=#141311}>
+            <span {background=#B48F2E; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "02"
+            <span>
+              <span {font-size=15px; font-weight=700}> "Selling"
+              <span {font-size=12px; color=#5E5A52}> "Realistic valuation, photography, marketing to ready buyers"
+          <a href=Services-M.html {text-decoration=none; color=#141311}>
+            <span {background=#B48F2E; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "03"
+            <span>
+              <span {font-size=15px; font-weight=700}> "Investment"
+              <span {font-size=12px; color=#5E5A52}> "Opportunities studied by the numbers, not the promises"
+          <a href=Services-M.html {text-decoration=none; color=#141311}>
+            <span {background=#B48F2E; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "04"
+            <span>
+              <span {font-size=15px; font-weight=700}> "Training"
+              <span {font-size=12px; color=#5E5A52}> "Real estate marketing courses, 2000+ graduates [TBC]"
+          <a href=Add-Step1-M.html {text-decoration=none; color=#141311}>
+            <span {background=#141311; color=#FFFFFF; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "05"
+            <span>
+              <span {font-size=15px; font-weight=700}> "List your property"
+              <span {font-size=12px; color=#5E5A52}> "Free for owners. Three steps, two minutes, we verify and publish"
+      <section {border=1.5px solid #141311}>
+        <h2 {font-size=18px; font-weight=800}> "Talk to us"
+        <span {font-size=13px; color=#3A3630}> "Saturday to Thursday, 9 am to 6 pm Jeddah time. WhatsApp is fastest."
+        <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; font-size=15px; font-weight=800; text-decoration=none}>
+          <svg svg > "WhatsApp us"
+        <a href=tel:+966556607779 {font-size=14px; font-weight=700; text-decoration=none}> "+966 55 660 7779"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=SMQ Real Estate>
+        <div>
+          <a href=EN-Card-M.html {color=#FFFFFF; text-decoration=none}> "Properties"
+          <a href=Guide-M.html {color=#FFFFFF; text-decoration=none}> "Price guide"
+          <a href=Services-M.html {color=#FFFFFF; text-decoration=none}> "Services"
+          <a href=About-M.html {color=#FFFFFF; text-decoration=none}> "About"
+          <a href=Contact-M.html {color=#FFFFFF; text-decoration=none}> "Contact"
+          <a href=Privacy-M.html {color=#FFFFFF; text-decoration=none}> "Privacy"
+        <span {font-size=11px}>
+          "REGA licence 1200040135 · CR 7029797433"
+          <br> "© 2026 SMQ Real Estate · English pages fall back to Arabic where a translation is missing"

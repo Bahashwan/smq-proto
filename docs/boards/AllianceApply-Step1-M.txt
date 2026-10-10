@@ -1,0 +1,106 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <div {background=#B48F2E; color=#141311; font-size=11px; font-weight=800}>
+        <span> "مبادرة من SMQ · طلب الانضمام"
+        <a href=Alliance-M.html {color=#141311; text-decoration=none}> "عن التحالف ←"
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <a href=https://wa.me/966559997929?text=%D8%A7%D9%84%D8%AA%D8%AD%D8%A7%D9%84%D9%81 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <svg svg >
+      <section>
+        <h1 {font-size=24px; font-weight=800}> "انضمام مكتبك إلى التحالف"
+        <p {font-size=12px; color=#5E5A52}>
+          "ثلاث خطوات، 5 دقائق. الحقول بعلامة"
+          <span> "*"
+          "مطلوبة. يُحفظ ما تكتبه على هذا الجوال 7 أيام."
+      <section {border=1.5px solid #141311; background=#FFFFFF}>
+        <div>
+          <h2 {font-size=16px; font-weight=800}> "المكتب ومقدم الطلب"
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "الخطوة 1 من 3"
+        <ol aria-label=خطوات النموذج {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <li>
+            <span {background=#B48F2E}>
+            <span {font-size=11px; font-weight=800}> "المكتب ومقدم الطلب"
+          <li>
+            <span {background=#E9E5DB}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "التغطية والتخصص"
+          <li>
+            <span {background=#E9E5DB}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "ما عندكم وما تحتاجون"
+        <form>
+          <label>
+            "اسم المكتب العقاري"
+            <span> "*"
+            <input type=text value=مكتب أ للعقارات placeholder=كما في الرخصة>
+          <label>
+            "رقم رخصة فال للمكتب"
+            <span> "*"
+            <input type=text value=1200 placeholder=10 أرقام>
+            <span {font-weight=600}> "نتحقق منها يدوياً في موقع الهيئة العامة للعقار."
+          <label>
+            "الاسم الكريم"
+            <span> "*"
+            <input type=text value= placeholder=اسم مقدم الطلب>
+          <label>
+            "رقم التواصل"
+            <span> "*"
+            <input type=tel value= placeholder=05XXXXXXXX>
+            <span {font-weight=600}> "واتساب. تصل عليه الطلبات ورابط صفحة العضو."
+          <fieldset {border=0}>
+            <legend {font-size=11px; font-weight=600; color=#5E5A52}>
+              "صفة مقدم الطلب"
+              <span> "*"
+            <div>
+              <label>
+                <input type=radio checked=None> "مالك المكتب العقاري"
+              <label>
+                <input type=radio> "مدير"
+              <label>
+                <input type=radio> "موظف"
+              <label>
+                <input type=radio> "أخرى"
+          <label>
+            "حي المكتب"
+            <span> "*"
+            <select>
+              <option selected=None disabled=None> "اختر الحي"
+              <optgroup>
+                <option> "أبحر الشمالية"
+                <option> "الشاطئ"
+                <option> "المحمدية"
+                <option> "النهضة"
+              <optgroup>
+                <option> "الروضة"
+                <option> "الصفا"
+                <option> "النعيم"
+                <option> "الزهراء"
+                <option> "السلامة"
+              <optgroup>
+                <option> "السامر"
+                <option> "الحرازات"
+              <optgroup>
+                <option> "الحمراء"
+                <option> "البلد"
+              <optgroup>
+                <option> "الفيصلية"
+                <option> "المنتزهات"
+          <div>
+            "موقع المكتب على خرائط قوقل"
+            <span> "*"
+            <div {border=1.5px solid #141311}>
+              <button type=button {border=0; font-size=12px; font-weight=800; background=#141311; color=#FFFFFF}> "ألصق رابطاً"
+              <button type=button {border=0; font-size=12px; font-weight=700; background=#FFFFFF; color=#141311}> "ضع دبوساً"
+            <input type=url value=https://maps.app.goo.gl/ placeholder=https://maps.app.goo.gl/…>
+            <div {background=#E9E5DB; border=1.5px solid #141311}>
+              <span {position=absolute}>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "معاينة الرابط · الدبوس يُضبط من الرابط تلقائياً"
+          <button type=button {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+            "التالي: التغطية والتخصص"
+            <svg svg >
+      <p {font-size=11px; color=#5E5A52}> "بياناتك تصل لفريق SMQ فقط للتحقق. اسم المكتب والحي والتخصص يظهران في الدليل بعد موافقتك في الخطوة 3."
+      <footer {background=#141311; color=#C9C2B3; font-size=11px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <span> "تحالف مكاتب جدة العقارية · مبادرة من إس إم كيو · ترخيص فال 1200040135"

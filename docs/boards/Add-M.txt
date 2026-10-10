@@ -1,0 +1,139 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 30px))}>
+        <span {font-size=12px; font-weight=700; color=#3D3010}> "خدمة مجانية للمُلّاك"
+        <h1 {font-size=34px; font-weight=800}> "أضف عقارك"
+        <p {font-size=14px; color=#3D3010}> "نموذج من ثلاث خطوات يأخذ دقيقتين. بعدها نتواصل معك خلال 24 ساعة، نصور، وننشر لعملاء جاهزين."
+      <section>
+        <h2 {font-size=18px; font-weight=800}> "كيف يسير الأمر"
+        <div>
+          <span {background=#141311; color=#FFFFFF; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "1"
+          <span>
+            <span {font-size=15px; font-weight=800}> "أدخل بيانات العقار"
+            <span {font-size=12px; color=#5E5A52}> "النوع، الموقع، المساحة، السعر الذي تريده، وصور من جوالك."
+        <div>
+          <span {border=1.5px solid #141311; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "2"
+          <span>
+            <span {font-size=15px; font-weight=800}> "نتواصل معك"
+            <span {font-size=12px; color=#5E5A52}> "خلال 24 ساعة عمل، بتقييم أولي وسعر المتر في حيّك."
+        <div>
+          <span {border=1.5px solid #141311; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "3"
+          <span>
+            <span {font-size=15px; font-weight=800}> "تصوير احترافي"
+            <span {font-size=12px; color=#5E5A52}> "نرسل فريق تصوير لتوثيق عقارك، بلا تكلفة عليك."
+        <div>
+          <span {border=1.5px solid #141311; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "4"
+          <span>
+            <span {font-size=15px; font-weight=800}> "نشر وتسويق"
+            <span {font-size=12px; color=#5E5A52}> "نعرضه على منصتنا وقنواتنا، ونفرز المشترين قبل أن يصلوا إليك."
+      <section>
+        <a href=https://wa.me/966559997929?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A5%D8%B6%D8%A7%D9%81%D8%A9%20%D8%B9%D9%82%D8%A7%D8%B1%D9%8A {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+          <span>
+            <span {font-size=14px; font-weight=800}> "تفضّل واتساب؟"
+            <span {font-size=12px; color=#5E5A52}> "أرسل الصك والصور والسعر مباشرة ونكمل الباقي."
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+      <section {border=1.5px solid #141311}>
+        <div>
+          <h2 {font-size=16px; font-weight=800}> "بيانات العقار"
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "الخطوة 3 من 3"
+        <ol aria-label=خطوات النموذج {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <li>
+            <span {background=#141311}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "النوع والموقع ✓"
+          <li>
+            <span {background=#141311}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "التفاصيل والسعر ✓"
+          <li>
+            <span {background=#B48F2E}>
+            <span {font-size=11px; font-weight=800}> "الصور وبياناتك"
+        <div {background=#F3F1EB; font-size=12px}>
+          <span>
+            <strong> "شقة"
+            "· حي الروضة، جدة · 3 غرف · 120 م² · السعر المطلوب"
+            <strong> "620,000"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "تعديل"
+        <form>
+          <div>
+            <label {font-size=13px; font-weight=700}>
+              "صور العقار"
+              <span {font-weight=500; color=#5E5A52}> "(حتى 10، من جوالك يكفي)"
+            <label {border=1.5px dashed #141311; background=#F8F7F4}>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <svg svg >
+              <span {font-size=13px; font-weight=700}> "اضغط لاختيار الصور أو التقطها الآن"
+              <span {font-size=11px; color=#5E5A52}> "JPG أو PNG · حتى 10 ميجابايت للصورة"
+            <input type=file {position=absolute}>
+            <div {display=grid; grid-template-columns=repeat(4, minmax(0, 1fr))}>
+              <div {background=#E9E5DB}>
+                <button type=button aria-label=حذف الصورة 1 {position=absolute; border=0; background=#141311; color=#FFFFFF; font-size=14px}> "×"
+                <span {position=absolute; font-size=9px; font-weight=700; background=#B48F2E}> "الغلاف"
+              <div {background=#E9E5DB}>
+                <button type=button aria-label=حذف الصورة 2 {position=absolute; border=0; background=#141311; color=#FFFFFF; font-size=14px}> "×"
+              <div {background=#E9E5DB}>
+                <button type=button aria-label=حذف الصورة 3 {position=absolute; border=0; background=#141311; color=#FFFFFF; font-size=14px}> "×"
+              <div {border=1px solid #D4CFC4; font-size=11px; color=#5E5A52}> "+7 متاحة"
+          <fieldset {border=0}>
+            <legend {font-size=13px; font-weight=700}>
+              "صفتك في العرض"
+              <span {color=#8A6C1E}> "*"
+            <div {display=grid; grid-template-columns=repeat(4, minmax(0, 1fr))}>
+              <label {border=1.5px solid #141311; background=#141311; color=#FFFFFF; font-size=12px; font-weight=800}>
+                <input type=radio checked=None {position=absolute}> "مالك"
+              <label {border=1.5px solid #141311; font-size=12px; font-weight=700; color=#141311}>
+                <input type=radio {position=absolute}> "وكيل"
+              <label {border=1.5px solid #141311; font-size=12px; font-weight=700; color=#141311}>
+                <input type=radio {position=absolute}> "مسوّق"
+              <label {border=1.5px solid #141311; font-size=12px; font-weight=700; color=#141311}>
+                <input type=radio {position=absolute}> "أخرى"
+            <span {font-size=11px; color=#5E5A52}> "المالك: الصك في الخطوة 2. الوكيل: صورة الوكالة. المسوّق: رقم رخصة فال وعقد وساطة موثّق."
+          <div>
+            <span {font-size=13px; font-weight=700}> "بياناتك"
+            <label {font-size=11px; font-weight=600; color=#5E5A52}>
+              "الاسم الكامل"
+              <input type=text value=محمد العمري {font-size=15px; font-weight=600; color=#141311; border=1.5px solid #141311}>
+            <label {font-size=11px; font-weight=600; color=#5E5A52}>
+              "رقم الجوال (واتساب)"
+              <input type=tel placeholder=05XXXXXXXX {font-size=15px; font-weight=600; color=#141311; border=1.5px solid #B48F2E; background=#FFFDF6}>
+            <span {font-size=11px; color=#8A6C1E}> "سنرسل عليه رسالة تأكيد. الرقم مطلوب."
+            <label {font-size=11px; font-weight=600; color=#5E5A52}>
+              "البريد الإلكتروني (اختياري)"
+              <input type=email {font-size=15px; font-weight=600; color=#141311; border=1.5px solid #141311}>
+            <div {font-size=11px; font-weight=600; color=#5E5A52}>
+              "التوقيت المناسب للتواصل"
+              <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+                <label {border=1.5px solid #141311; background=#141311; color=#FFFFFF; font-size=12px; font-weight=800}>
+                  <input type=radio checked=None {position=absolute}> "صباحاً"
+                <label {border=1.5px solid #141311; font-size=12px; font-weight=700; color=#141311}>
+                  <input type=radio {position=absolute}> "مساءً"
+                <label {border=1.5px solid #141311; font-size=12px; font-weight=700; color=#141311}>
+                  <input type=radio {position=absolute}> "أي وقت"
+            <label {font-size=12px; color=#5E5A52}>
+              <input type=checkbox checked=None> "أوافق على تواصل SMQ معي بخصوص هذا العقار، وأقر أني المالك أو مفوّض عنه."
+          <div>
+            <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "السابق"
+            <button type=submit {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+              "أرسل الطلب"
+              <svg svg >
+      <p {font-size=11px; color=#5E5A52}> "بعد الإرسال تظهر شاشة تأكيد برقم الطلب، ورسالة واتساب تلقائية بنفس الرقم خلال دقائق."
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=Results-M.html {color=#FFFFFF; text-decoration=none}> "العقارات"
+          <a href=Guide-M.html {color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+          <a href=Services-M.html {color=#FFFFFF; text-decoration=none}> "الخدمات"
+          <a href=About-M.html {color=#FFFFFF; text-decoration=none}> "من نحن"
+          <a href=Contact-M.html {color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

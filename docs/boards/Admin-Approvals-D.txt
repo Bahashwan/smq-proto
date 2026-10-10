@@ -1,0 +1,219 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; color=#5E5A52}>
+            <a href=Admin-Approvals-D.html {text-decoration=none}> "طلبات الموافقة"
+            <span> "/"
+            <span {color=#141311; font-weight=700}> "طلب 2026-1042"
+          <div>
+            <a href=#x {width=220px; background=#141311; color=#FFFFFF; text-decoration=none; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}>
+              <span {font-size=13px; font-weight=800}> "شقة 3 غرف · الروضة"
+              <span {font-size=11px; color=#C9C2B3}> "620,000 · منذ 26 ساعة"
+            <a href=#x {width=220px; background=#FFFFFF; border=1.5px solid #141311; color=#141311; text-decoration=none}>
+              <span {font-size=13px; font-weight=800}> "فيلا 5 غرف · أبحر الشمالية"
+              <span {font-size=11px; color=#5E5A52}> "2,400,000 · منذ 9 ساعات"
+            <a href=#x {width=220px; background=#FFFFFF; border=1.5px solid #141311; color=#141311; text-decoration=none}>
+              <span {font-size=13px; font-weight=800}> "أرض 600 م² · الفيصلية"
+              <span {font-size=11px; color=#5E5A52}> "1,100,000 · بانتظار صور"
+            <span {font-size=12px; color=#5E5A52}> "+ 14 طلباً مغلقاً هذا الشهر: 9 منشورة، 3 مرفوضة، 2 منسحبة"
+          <div>
+            <section {background=#FFFFFF; border=1.5px solid #141311}>
+              <div>
+                <div>
+                  <h1 {font-size=24px; font-weight=800}> "عمارة سكنية بدخل · حي النعيم · 4,800,000"
+                  <span {font-size=12px; color=#5E5A52}>
+                    "طلب رقم 2026-1042 · وصل الخميس 8 أكتوبر، 21:14 · من الجوال"
+                    <span {font-size=11px; font-weight=800; border=1.5px solid #141311; color=#141311}> "صفة مقدم العرض: وكيل"
+                    <span {font-size=11px; font-weight=700; color=#8A6C1E}> "التواصل صباحاً"
+                <span {font-size=12px; font-weight=800; background=#B48F2E}> "بانتظار المراجعة"
+              <div>
+                <span {font-size=12px; font-weight=700; color=#5E5A52}> "صور المالك · 3 · اضغط للتكبير، اسحب لإعادة الترتيب، الأولى هي الغلاف"
+                <div {display=grid; grid-template-columns=2fr 1fr 1fr}>
+                  <div {height=220px; background=#E9E5DB}>
+                    <span {position=absolute; font-size=10px; font-weight=700; background=#B48F2E}> "الغلاف"
+                    <span {position=absolute; font-size=10px; background=#FFFFFF}> "IMG_4412.jpg · 2.1 MB"
+                  <div>
+                    <div {background=#E9E5DB}>
+                    <div {background=#E9E5DB}>
+                  <div>
+                    <button type=button {border=1.5px dashed #141311; background=#F8F7F4; font-size=12px; font-weight=700}> "+ رفع صور الفريق"
+                    <button type=button {border=1.5px solid #141311; background=#FFFFFF; font-size=12px; font-weight=700}> "طلب صور إضافية من المالك"
+              <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(260px, 100%), 1fr))}>
+                <div>
+                  <span {font-size=12px; font-weight=800}> "كما أدخلها المالك"
+                  <div {font-size=13px}>
+                    <span {color=#5E5A52}> "النوع · الغرض"
+                    <span {font-weight=700}> "عمارة سكنية · للبيع"
+                  <div {font-size=13px}>
+                    <span {color=#5E5A52}> "المدينة · الحي"
+                    <span {font-weight=700}> "جدة · النعيم"
+                  <div {font-size=13px}>
+                    <span {color=#5E5A52}> "الوحدات · الأدوار"
+                    <span {font-weight=700}> "8 · 4"
+                  <div {font-size=13px}>
+                    <span {color=#5E5A52}> "الأرض · البناء"
+                    <span {font-weight=700}> "625 · 1,480 م²"
+                  <div {font-size=13px}>
+                    <span {color=#5E5A52}> "السعر المطلوب"
+                    <span {font-weight=800; font-size=15px}> "4,800,000"
+                  <div {font-size=13px}>
+                    <span {color=#5E5A52}> "يوجد دخل · العمر"
+                    <span {font-weight=700}> "نعم · 6 إلى 10 سنوات"
+                  <div {font-size=13px}>
+                    <span {color=#5E5A52}> "الدخل السنوي · المؤجّر"
+                    <span {font-weight=800}> "312,000 · 7 من 8 · عقود موثّقة"
+                  <div {font-size=13px}>
+                    <span {color=#5E5A52}> "ملاحظات المالك"
+                    <span> "«العمارة مؤجّرة بالكامل عدا شقة الدور الأرضي، عقود إيجار موثّقة، مصعد وخزان وموقف لكل شقة. الوكالة مرفقة.»"
+                <div>
+                  <span {font-size=12px; font-weight=800; color=#8A6C1E}> "ما سيُنشر · حقول الإدارة"
+                  <label {font-size=12px; color=#5E5A52}>
+                    "المشروع"
+                    <select {font-size=12px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                      <option> "بلا مشروع · عقار فردي"
+                      <option> "جاردن الروضة"
+                  <label {font-size=12px; color=#5E5A52}>
+                    "كود النموذج"
+                    <input type=text value=IND-BLD-02 {font-size=12px; font-weight=700; color=#141311; border=1.5px solid #141311; width=180px}>
+                  <label {font-size=12px; color=#5E5A52}>
+                    "السعر المنشور"
+                    <input type=text value=4,800,000 {font-size=13px; font-weight=800; color=#141311; border=1.5px solid #141311; width=180px}>
+                  <div {font-size=12px; color=#5E5A52}>
+                    "سعر المتر (يُحسب)"
+                    <span {font-weight=800; color=#141311}> "3,243 على البناء · 7,680 على الأرض"
+                  <div {font-size=12px; color=#5E5A52}>
+                    "العائد السنوي الإجمالي (يُحسب)"
+                    <span {font-weight=800; color=#141311}>
+                      <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "6.5% · 312,000 ÷ 4,800,000"
+                  <label {font-size=12px; color=#5E5A52}>
+                    "الحالة عند النشر"
+                    <select {font-size=12px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                      <option> "متاح"
+                      <option> "محجوز"
+                  <label {font-size=12px; color=#5E5A52}>
+                    "الاتجاه · ارتفاع السقف"
+                    <span>
+                      <input type=text placeholder=الاتجاه {font-size=12px; font-weight=700; color=#141311; border=1.5px solid #141311}>
+                      <input type=text placeholder=م {font-size=12px; font-weight=700; color=#141311; border=1.5px solid #141311}>
+                  <div>
+                    <label {font-size=12px; font-weight=600}>
+                      <input type=checkbox> "غرفة خادمة"
+                    <label {font-size=12px; font-weight=600}>
+                      <input type=checkbox> "غرفة سائق"
+                    <label {font-size=12px; font-weight=600}>
+                      <input type=checkbox checked=None> "بلكونة"
+                    <label {font-size=12px; font-weight=600}>
+                      <input type=checkbox> "سمارت هوم"
+                    <label {font-size=12px; font-weight=600}>
+                      <input type=checkbox checked=None> "موقف"
+                  <label {font-size=12px; color=#5E5A52}>
+                    "الوصف المنشور (يُحرره المدير)"
+                    <textarea {font-size=12px; color=#141311; border=1.5px solid #141311}> "عمارة سكنية في حي النعيم، 8 وحدات على 4 أدوار، أرض 625 م² وبناء 1,480 م²، دخل سنوي 312,000 ريال بعقود موثّقة، إشغال 7 من 8. مصعد ومواقف وخزان."
+              <div>
+                <div>
+                  <span {font-size=12px; font-weight=800}> "قائمة التحقق قبل النشر · تتغيّر مع صفة مقدم العرض"
+                  <div aria-label=الصفة {border=1.5px solid #141311; font-size=11px; font-weight=800}>
+                    <span {color=#5E5A52}> "مالك"
+                    <span {background=#141311; color=#FFFFFF}> "وكيل"
+                    <span {color=#5E5A52}> "مسوّق"
+                <label {font-size=13px}>
+                  <input type=checkbox checked=None> "الوكالة الشرعية مرفقة وسارية، واسم الموكِّل يطابق مالك الصك"
+                  <span {font-size=11px; font-weight=700; color=#8A6C1E}> "خاص بالوكيل"
+                <label {font-size=13px}>
+                  <input type=checkbox checked=None> "رقم الصك مطابق للعقار وللمالك في الوكالة"
+                <label {font-size=13px}>
+                  <input type=checkbox> "عقود الإيجار موثّقة في إيجار والدخل المعلن يطابقها (للعمائر بدخل)"
+                <label {font-size=13px}>
+                  <input type=checkbox> "الصور من فريق SMQ أو موافق عليها (3 صور على الأقل)"
+                <label {font-size=13px}>
+                  <input type=checkbox> "اتفاقية التسويق موقّعة من الوكيل بصفته"
+                <div {display=grid; grid-template-columns=1fr 1fr 1fr; font-size=11px; color=#5E5A52}>
+                  <div {background=#F8F7F4; border=1px solid #D4CFC4}>
+                    <strong {color=#141311}> "مالك:"
+                    "الصك باسمه، والرقم في الطلب يطابق رقم المالك في الصك."
+                  <div {background=#F3F1EB; border=1.5px solid #141311}>
+                    <strong {color=#141311}> "وكيل:"
+                    "الوكالة الشرعية سارية وتشمل البيع، مع الصك."
+                  <div {background=#F8F7F4; border=1px solid #D4CFC4}>
+                    <strong {color=#141311}> "مسوّق:"
+                    "رخصة فال سارية وعقد وساطة موثّق في موقع الهيئة، مع الصك."
+            <aside>
+              <section {background=#FFFFFF; border=1.5px solid #141311}>
+                <span {font-size=12px; font-weight=800}> "مقدم العرض · وكيل"
+                <span {font-size=16px; font-weight=800}> "عبدالرحمن الزهراني"
+                <span {font-size=13px}> "0559 XXX XXX"
+                <span {font-size=12px; color=#5E5A52}> "طلب واحد سابق · لا شكاوى"
+                <div>
+                  <a href=https://wa.me/966559997929?text=%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%B7%D9%84%D8%A8%D9%83%202026-1042 {background=#B48F2E; color=#141311; text-decoration=none; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "واتساب المالك"
+                  <a href=tel:+966559000000 {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=12px; font-weight=700}> "اتصال"
+              <section {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 14px) 0, 100% 24px, 100% 100%, 0 100%)}>
+                <span {font-size=12px; font-weight=800; color=#B48F2E}> "القرار"
+                <button type=button disabled=None {font-size=14px; font-weight=800; border=0; background=#3A3630; color=#8A8478}> "اعتماد ونشر · بقي بندان في التحقق"
+                <button type=button {font-size=13px; font-weight=700; border=1.5px solid #FFFFFF; background=transparent; color=#FFFFFF}> "طلب تعديل من المالك"
+                <button type=button {font-size=13px; font-weight=700; border=1.5px solid #3A3630; background=transparent; color=#C9C2B3}> "رفض الطلب"
+                <label {font-size=11px; color=#C9C2B3}>
+                  "سبب الرفض أو التعديل (يصل المالك على واتساب)"
+                  <select {font-size=12px; font-weight=700; color=#141311; border=0; background=#FFFFFF}>
+                    <option> "اختر سبباً"
+                    <option> "السعر أعلى من السوق بشكل كبير"
+                    <option> "الصور غير كافية"
+                    <option> "لم نتمكن من تأكيد الملكية"
+                    <option> "خارج نطاق تغطيتنا"
+                    <option> "مكرر"
+                <span {font-size=11px; color=#C9C2B3}> "لا تظهر أي وحدة على الموقع قبل الاعتماد. الاعتماد يُنشئ الوحدة بحالة «متاح» ويرسل رابطها للمالك."
+              <section {background=#FFFFFF; border=1.5px solid #141311}>
+                <span {font-size=12px; font-weight=800}> "سجل الطلب"
+                <div {font-size=12px}>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                  <span>
+                    <strong> "سعود"
+                    "فتح الطلب وبدأ التحقق"
+                    <br>
+                    <span {color=#5E5A52}> "اليوم 10:40"
+                <div {font-size=12px}>
+                  <span {background=#141311; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                  <span>
+                    "رسالة للمالك: «استلمنا طلبك، نتواصل خلال 24 ساعة» ·"
+                    <strong {color=#8A6C1E}> "أُرسلت تلقائياً"
+                    "(واتساب بزنس متصل)"
+                    <br>
+                    <span {color=#5E5A52}> "الخميس 21:15"
+                <div {font-size=12px}>
+                  <span {border=1.5px solid #141311; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                  <span>
+                    <span> "الوضع اليدوي (واتساب بزنس غير متصل): الرسالة جاهزة ولم تُرسل بعد"
+                    <a href=https://wa.me/966559000000?text=%D8%A7%D8%B3%D8%AA%D9%84%D9%85%D9%86%D8%A7%20%D8%B7%D9%84%D8%A8%D9%83 {background=#B48F2E; color=#141311; text-decoration=none; font-size=12px; font-weight=800}> "أرسل على واتساب"
+                <div {font-size=12px}>
+                  <span {background=#141311; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                  <span>
+                    "المالك أرسل الطلب من صفحة «أضف عقارك»"
+                    <br>
+                    <span {color=#5E5A52}> "الخميس 21:14 · جوال · سناب شات"

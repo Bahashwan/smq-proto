@@ -1,0 +1,44 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <main>
+        <div>
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <h1 {font-size=28px; font-weight=800}> "وصلنا طلبك"
+          <p {font-size=14px; color=#3A3630}> "شقة للبيع في حي الروضة بسعر 620,000 ريال. سنراجع الصك والصور ونتواصل معك على واتساب خلال 24 ساعة عمل."
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+          <span {font-size=12px; font-weight=700; color=#C9C2B3}> "رقم الطلب · احفظه للمتابعة"
+          <div>
+            <span {font-size=30px; font-weight=800}> "2026-1043"
+            <button type=button {font-size=12px; font-weight=800; border=1.5px solid #FFFFFF; background=transparent; color=#FFFFFF}> "نسخ"
+          <span {font-size=11px; color=#C9C2B3}> "أُرسلت رسالة واتساب بنفس الرقم إلى 05X XXX 4821"
+        <ol>
+          <li>
+            <span {background=#B48F2E; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "1"
+            <span {font-size=13px}>
+              <strong> "الآن:"
+              "الطلب عند فريق المراجعة. لا يظهر على الموقع بعد."
+          <li>
+            <span {border=1.5px solid #141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "2"
+            <span {font-size=13px}>
+              <strong> "خلال 24 ساعة عمل:"
+              "نتصل أو نراسلك بتقييم أولي وموعد تصوير."
+          <li>
+            <span {border=1.5px solid #141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "3"
+            <span {font-size=13px}>
+              <strong> "بعد الموافقة:"
+              "يُنشر بوسم «من مالك» وبسعر معلن، ونرسل لك رابطه."
+        <div>
+          <a href=https://wa.me/966559997929?text=%D8%B7%D9%84%D8%A8%202026-1043 {background=#B48F2E; color=#141311; font-size=15px; font-weight=800; text-decoration=none; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+            <svg svg > "أضف الصك أو صوراً عبر واتساب"
+          <a href=Home-M.html {border=1.5px solid #141311; color=#141311; font-size=14px; font-weight=700; text-decoration=none}> "العودة إلى الرئيسية"

@@ -1,0 +1,80 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section>
+        <span {font-size=12px; font-weight=700; color=#8A6C1E}> "من نحن"
+        <h1 {font-size=30px; font-weight=800}> "شركة استثمار وتسويق عقاري، تبدأ من الأرقام"
+        <p {font-size=14px; color=#5E5A52}> "SMQ شركة متخصصة في الاستثمار والتسويق العقاري، تأسست على يد المستشار العقاري سعود معيض، لتقديم حلول عقارية احترافية قائمة على فهم عميق للسوق السعودي."
+        <p {font-size=14px; color=#5E5A52}> "نؤمن أن العقار قرار استثماري يتطلب تحليلاً دقيقاً ورؤية واضحة. بالمعرفة السوقية والتخطيط المدروس والتنفيذ المحترف، نمكّن عملاءنا من قرارات واثقة وقيمة مستدامة على المدى الطويل."
+      <figure {height=240px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% calc(100% - 62px), calc(100% - 36px) 100%, 0 100%)}>
+        <svg svg  {position=absolute; opacity=0.55}>
+        <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية · البلد، جدة"
+        <span {position=absolute; font-size=10px; color=#5E5A52; background=#FFFFFF}> "IMG-ED-BALAD-RAWASHEEN · 16:10"
+      <section {background=#F3F1EB}>
+        <span {font-size=12px; font-weight=700; color=#8A6C1E}> "المؤسس"
+        <div>
+          <div {width=150px; height=188px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% calc(100% - 36px), calc(100% - 21px) 100%, 0 100%)}>
+            <span {font-size=10px; font-weight=600; color=#5E5A52}>
+              "صورة المؤسس"
+              <br> "فعلية فقط، لا تُولَّد"
+              <br> "IMG-FOUNDER · 4:5"
+          <div>
+            <h2 {font-size=28px; font-weight=800}> "سعود معيض"
+            <span {font-size=13px; color=#5E5A52}> "خبير ومستشار عقاري · مؤسس SMQ"
+            <span>
+              <span {font-size=32px; font-weight=800}> "+2000"
+              <span {font-size=12px; color=#5E5A52}> "متدرب في برامجه"
+        <p {font-size=14px}> "خبرة واسعة في السوق العقاري السعودي، وعشرات الاستشارات التي ساعدت مستثمرين ورواد أعمال على قرارات ناجحة. درّب وأهّل أكثر من 2000 متدرب في برامج تجمع بين الجانب العملي والخبرة المهنية. أسلوبه عملي ومركّز على النتائج."
+      <section>
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 14px) 0, 100% 24px, 100% 100%, 0 100%)}>
+          <span {font-size=12px; font-weight=700; color=#B48F2E}> "رؤيتنا"
+          <p {font-size=14px}> "أن نكون من الجهات الرائدة في القطاع العقاري بالمملكة، بحلول استثمارية وتسويقية ذكية، وتنفيذ فعّال، وخيارات موثوقة تلبي تطلعات المستثمرين."
+        <div {border=1.5px solid #141311}>
+          <span {font-size=12px; font-weight=700; color=#8A6C1E}> "رسالتنا"
+          <p {font-size=14px}> "حلول عقارية قائمة على الفهم العميق للسوق، وخبرة تُقدَّم بدقة واحتراف، لتمكين عملائنا من قرارات استثمارية وتسويقية مدروسة عبر خدمات استشارية وتنفيذية متكاملة."
+      <section>
+        <h2 {font-size=20px; font-weight=800}> "ثلاثة مرتكزات"
+        <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <div>
+            <span {background=#B48F2E; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "التسويق"
+            <span {font-size=11px; color=#5E5A52}> "نعرض الوحدة لمن يبحث عنها فعلاً"
+          <div>
+            <span {background=#141311; color=#FFFFFF; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "الجودة"
+            <span {font-size=11px; color=#5E5A52}> "معلومة مؤكدة قبل أن تُنشر"
+          <div>
+            <span {background=#B48F2E; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "السرعة"
+            <span {font-size=11px; color=#5E5A52}> "رد خلال ساعات العمل، لا أيام"
+      <section>
+        <span {font-size=12px; font-weight=700; color=#8A6C1E}> "مرخصون ومنظمون"
+        <div {display=grid; grid-template-columns=repeat(2, minmax(0, 1fr))}>
+          <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+            <span {font-size=10px; font-weight=600; color=#C9C2B3}> "ترخيص الهيئة العامة للعقار"
+            <span {font-size=16px; font-weight=800}> "1200040135"
+          <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+            <span {font-size=10px; font-weight=600; color=#C9C2B3}> "السجل التجاري"
+            <span {font-size=16px; font-weight=800}> "7029797433"
+        <p {font-size=11px; color=#5E5A52}> "خيارات التمويل مع البنوك تُعرض هنا فقط بعد تأكيد العميل للشراكات."
+      <section {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 20px))}>
+        <span {font-size=18px; font-weight=800}> "اسأل سعود مباشرة"
+        <span {font-size=13px; color=#3D3010}> "سؤال واحد على واتساب يكفي لتعرف إن كنا الجهة المناسبة لك."
+        <a href=https://wa.me/966559997929 {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=800}> "واتساب 0559997929"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=Results-M.html {color=#FFFFFF; text-decoration=none}> "العقارات"
+          <a href=Guide-M.html {color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+          <a href=Services-M.html {color=#FFFFFF; text-decoration=none}> "الخدمات"
+          <a href=Hub-M.html {color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+          <a href=Contact-M.html {color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

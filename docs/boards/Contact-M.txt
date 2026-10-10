@@ -1,0 +1,90 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section>
+        <span {font-size=12px; font-weight=700; color=#8A6C1E}> "تواصل معنا"
+        <h1 {font-size=30px; font-weight=800}> "أسرع طريق: واتساب"
+        <p {font-size=13px; color=#5E5A52}> "نرد خلال ساعات العمل، السبت إلى الخميس من 9 ص إلى 6 م. خارجها تصلك رسالة تلقائية ونعود إليك أول الدوام."
+        <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=17px; font-weight=800; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+          <span>
+            <svg svg > "واتساب"
+          <span {font-size=16px}> "0559997929"
+        <div {display=grid; grid-template-columns=repeat(2, minmax(0, 1fr))}>
+          <a href=tel:+966556607779 {border=1.5px solid #141311; color=#141311; text-decoration=none}>
+            <span {font-size=11px; color=#5E5A52}> "اتصال"
+            <span {font-size=15px; font-weight=800}> "0556607779"
+          <a href=mailto:info@smqre.com {border=1.5px solid #141311; color=#141311; text-decoration=none}>
+            <span {font-size=11px; color=#5E5A52}> "البريد"
+            <span {font-size=13px; font-weight=800}> "info@smqre.com"
+      <section>
+        <div {font-size=13px}>
+          <span {color=#5E5A52}> "ساعات العمل"
+          <span {font-weight=700}>
+            "السبت إلى الخميس"
+            <br> "9 ص إلى 6 م"
+        <div {font-size=13px}>
+          <span {color=#5E5A52}> "العنوان"
+          <span {font-weight=700}>
+            "شارع السيدة خديجة"
+            <br> "حي الفيصلية، جدة 23441"
+        <div {font-size=13px}>
+          <span {color=#5E5A52}> "الجمعة"
+          <span {font-weight=700}> "مغلق · واتساب يستقبل الرسائل"
+      <section>
+        <div {height=220px; background=#E9E5DB; border=1.5px solid #141311}>
+          <svg svg  {position=absolute; opacity=0.6}>
+          <span {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "خريطة Google · مكبّرة على الشارع، لا على المدينة"
+          <div>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+            <span {font-size=11px; font-weight=700; background=#141311; color=#FFFFFF}> "مكتب SMQ · شارع السيدة خديجة"
+        <a href=https://maps.google.com/?q=SMQ+Real+Estate+Jeddah {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=13px; font-weight=700}> "افتح الاتجاهات في الخرائط"
+      <section {border=1.5px solid #141311}>
+        <div>
+          <h2 {font-size=16px; font-weight=800}> "أو اترك رسالة"
+          <span {font-size=12px; color=#5E5A52}> "ثلاثة حقول فقط، ونرد على واتساب."
+        <form>
+          <label {font-size=11px; font-weight=600; color=#5E5A52}>
+            "الاسم"
+            <input type=text {font-size=15px; font-weight=600; color=#141311; border=1.5px solid #141311}>
+          <label {font-size=11px; font-weight=600; color=#5E5A52}>
+            "رقم الجوال (واتساب)"
+            <input type=tel placeholder=05XXXXXXXX {font-size=15px; font-weight=600; color=#141311; border=1.5px solid #141311}>
+          <label {font-size=11px; font-weight=600; color=#5E5A52}>
+            "رسالتك"
+            <textarea placeholder=مثال: أبحث عن شقة 3 غرف في الروضة حتى 700 ألف {font-size=14px; color=#141311; border=1.5px solid #141311}>
+          <button type=submit {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+            "أرسل الرسالة"
+            <svg svg >
+      <section>
+        <span {font-size=12px; font-weight=700; color=#5E5A52}> "تابعنا @smq_re"
+        <div>
+          <a href=https://instagram.com/smq_re aria-label=إنستغرام {border=1.5px solid #141311; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <a href=https://tiktok.com/@smq_re aria-label=تيك توك {border=1.5px solid #141311; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <a href=https://snapchat.com/add/smq_re aria-label=سناب شات {border=1.5px solid #141311; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <a href=https://x.com/smq_re aria-label=إكس {border=1.5px solid #141311; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <a href=https://youtube.com/@smq_re aria-label=يوتيوب {border=1.5px solid #141311; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=Results-M.html {color=#FFFFFF; text-decoration=none}> "العقارات"
+          <a href=Guide-M.html {color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+          <a href=Services-M.html {color=#FFFFFF; text-decoration=none}> "الخدمات"
+          <a href=Hub-M.html {color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+          <a href=About-M.html {color=#FFFFFF; text-decoration=none}> "من نحن"
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

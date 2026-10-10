@@ -1,0 +1,120 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 30px))}>
+        <span {font-size=12px; font-weight=700; color=#3D3010}> "خدمة مجانية للمُلّاك"
+        <h1 {font-size=30px; font-weight=800}> "أضف عقارك"
+        <p {font-size=13px; color=#3D3010}> "ثلاث خطوات، دقيقتان. يمكنك التوقف والعودة لاحقاً من نفس الجوال."
+      <section {border=1.5px solid #141311}>
+        <div>
+          <h2 {font-size=16px; font-weight=800}> "النوع والموقع"
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "الخطوة 1 من 3"
+        <ol aria-label=خطوات النموذج {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <li>
+            <span {background=#B48F2E}>
+            <span {font-size=11px; font-weight=800}> "النوع والموقع"
+          <li>
+            <span {background=#E9E5DB}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "التفاصيل والسعر"
+          <li>
+            <span {background=#E9E5DB}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "الصور وبياناتك"
+        <form>
+          <fieldset {border=0}>
+            <legend {font-size=13px; font-weight=700}> "نوع العقار"
+            <div>
+              <label>
+                <input type=radio checked=None>
+                <span {border=2px solid currentColor}> "شقة"
+              <label>
+                <input type=radio>
+                <span {background=currentColor; clip-path=polygon(0 100%, 50% 0, 100% 100%)}> "فيلا"
+              <label>
+                <input type=radio>
+                <span {background=currentColor; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "فيلا روف"
+              <label>
+                <input type=radio> "دور"
+              <label>
+                <input type=radio> "عمارة سكنية"
+              <label>
+                <input type=radio> "عمارة تجارية"
+              <label>
+                <input type=radio> "أرض"
+              <label>
+                <input type=radio> "محل أو مكتب"
+              <label>
+                <input type=radio> "مستودع"
+          <fieldset {border=0}>
+            <legend {font-size=13px; font-weight=700}> "الغرض"
+            <div {grid-template-columns=1fr 1fr}>
+              <label>
+                <input type=radio checked=None> "للبيع"
+              <label>
+                <input type=radio> "للإيجار"
+          <div>
+            <span {font-size=13px; font-weight=700}> "الموقع"
+            <label>
+              "المدينة"
+              <select>
+                <option> "جدة"
+                <option> "مدينة أخرى (نتواصل معك)"
+            <label>
+              "الحي"
+              <select>
+                <option> "الروضة"
+                <option> "الصفا"
+                <option> "النعيم"
+                <option> "أبحر الشمالية"
+                <option> "الشاطئ"
+                <option> "المحمدية"
+                <option> "حي آخر"
+            <label>
+              "أقرب شارع أو معلم (اختياري)"
+              <input type=text value=شارع الأمير سلطان، قرب الحديقة>
+            <div {height=150px; background=#E9E5DB; border=1.5px solid #141311}>
+              <span {position=absolute}>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <button type=button {position=absolute; font-size=11px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "موقعي الحالي"
+              <span {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "اختياري · اسحب الدبوس"
+          <fieldset {border=0}>
+            <legend {font-size=13px; font-weight=700}> "صلتك بالعقار"
+            <div>
+              <label>
+                <input type=radio checked=None> "المالك"
+              <label>
+                <input type=radio> "مفوّض"
+              <label>
+                <input type=radio> "وسيط"
+            <span {font-size=11px; color=#5E5A52}> "الوسيط يرفق رقم ترخيص فال في الخطوة 3. لا نعرض عقاراً بلا صك أو تفويض."
+          <div>
+            <button type=button {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+              "التالي: التفاصيل والسعر"
+              <svg svg >
+      <section>
+        <a href=https://wa.me/966559997929?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A5%D8%B6%D8%A7%D9%81%D8%A9%20%D8%B9%D9%82%D8%A7%D8%B1%D9%8A {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+          <span>
+            <span {font-size=13px; font-weight=800}> "تفضّل واتساب؟"
+            <span {font-size=11px; color=#5E5A52}> "أرسل الصك والصور والسعر مباشرة ونكمل الباقي."
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=Results-M.html {color=#FFFFFF; text-decoration=none}> "العقارات"
+          <a href=Guide-M.html {color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+          <a href=Services-M.html {color=#FFFFFF; text-decoration=none}> "الخدمات"
+          <a href=About-M.html {color=#FFFFFF; text-decoration=none}> "من نحن"
+          <a href=Contact-M.html {color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <a href=Privacy-M.html {color=#FFFFFF; text-decoration=none}> "الخصوصية"
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

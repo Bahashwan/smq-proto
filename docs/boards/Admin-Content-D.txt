@@ -1,0 +1,172 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "المحتوى والأسئلة"
+              <span {font-size=13px; color=#5E5A52}> "كل نص على الموقع يُحرَّر من هنا. الحقول الموسومة [للتأكيد] تبقى كما هي حتى يؤكدها سعود"
+            <a href=Admin-Pieces-D.html {border=1.5px solid #B48F2E; background=#FFFDF6; color=#141311; text-decoration=none; font-size=13px; font-weight=800}>
+              <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "11 عنصراً بانتظار التأكيد"
+          <div {font-size=12px; font-weight=700; color=#5E5A52}>
+            <span>
+              <span {background=#141311; color=#FFFFFF; font-size=11px}> "منشور"
+              "يظهر على الموقع"
+            <span>
+              <span {border=1.5px solid #141311; color=#141311; font-size=11px}> "مسودة"
+              "تغييرات غير منشورة"
+            <span>
+              <span {border=1.5px solid #B48F2E; background=#FFFDF6; color=#8A6C1E; font-size=11px}> "يحتاج تأكيداً"
+              "فيه حقل [للتأكيد] أو [مسودة إجابة]"
+          <section>
+            <h2 {font-size=16px; font-weight=800}> "الصفحات"
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 0.9fr 160px; font-size=11px; font-weight=800; color=#5E5A52}>
+                <span> "الصفحة"
+                <span> "الأقسام"
+                <span> "آخر تعديل"
+                <span> "الحالة"
+                <span>
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 0.9fr 160px; font-size=13px}>
+                <span {font-weight=800}>
+                  "الرئيسية"
+                  <span {font-weight=600; color=#5E5A52}> "/"
+                <span> "الهيرو · الباحث · دليل الأسعار · المشاريع · الأسئلة"
+                <span> "أمس · نورة"
+                <span>
+                  <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "مسودة"
+                <a href=Admin-PageEditor-D.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=12px; font-weight=800}> "تحرير"
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 0.9fr 160px; font-size=13px}>
+                <span {font-weight=800}>
+                  "من نحن"
+                  <span {font-weight=600; color=#5E5A52}> "/about"
+                <span> "القصة · المؤسس · الشركاء · آراء العملاء"
+                <span> "قبل 4 أيام · سعود"
+                <span>
+                  <span {border=1.5px solid #B48F2E; background=#FFFDF6; color=#8A6C1E; font-size=11px; font-weight=800}> "يحتاج تأكيداً"
+                <a href=Admin-PageEditor-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=12px; font-weight=800}> "تحرير"
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 0.9fr 160px; font-size=13px}>
+                <span {font-weight=800}>
+                  "الخدمات"
+                  <span {font-weight=600; color=#5E5A52}> "/services"
+                <span> "للمشترين · للمُلّاك · للمطورين · التدريب"
+                <span> "قبل أسبوع · نورة"
+                <span>
+                  <span {background=#141311; color=#FFFFFF; font-size=11px; font-weight=800}> "منشور"
+                <a href=Admin-PageEditor-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=12px; font-weight=800}> "تحرير"
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 0.9fr 160px; font-size=13px}>
+                <span {font-weight=800}>
+                  "دليل الأسعار"
+                  <span {font-weight=600; color=#5E5A52}> "/guide"
+                <span> "مقدمة · القاعدة · الجداول (تلقائية)"
+                <span> "قبل أسبوع · نورة"
+                <span>
+                  <span {background=#141311; color=#FFFFFF; font-size=11px; font-weight=800}> "منشور"
+                <a href=Admin-PageEditor-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=12px; font-weight=800}> "تحرير"
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 0.9fr 160px; font-size=13px}>
+                <span {font-weight=800}>
+                  "أضف عقارك"
+                  <span {font-weight=600; color=#5E5A52}> "/add"
+                <span> "مقدمة · الخطوات · شاشة النجاح"
+                <span> "قبل أسبوعين · سعود"
+                <span>
+                  <span {background=#141311; color=#FFFFFF; font-size=11px; font-weight=800}> "منشور"
+                <a href=Admin-PageEditor-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=12px; font-weight=800}> "تحرير"
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 0.9fr 160px; font-size=13px}>
+                <span {font-weight=800}>
+                  "تواصل"
+                  <span {font-weight=600; color=#5E5A52}> "/contact"
+                <span> "الوسائل · النموذج · الموقع"
+                <span> "قبل أسبوعين · سعود"
+                <span>
+                  <span {background=#141311; color=#FFFFFF; font-size=11px; font-weight=800}> "منشور"
+                <a href=Admin-PageEditor-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=12px; font-weight=800}> "تحرير"
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 0.9fr 160px; font-size=13px}>
+                <span {font-weight=800}>
+                  "الخصوصية"
+                  <span {font-weight=600; color=#5E5A52}> "/privacy"
+                <span> "نص واحد"
+                <span> "قبل شهر · سعود"
+                <span>
+                  <span {border=1.5px solid #B48F2E; background=#FFFDF6; color=#8A6C1E; font-size=11px; font-weight=800}> "يحتاج تأكيداً"
+                <a href=Admin-PageEditor-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=12px; font-weight=800}> "تحرير"
+          <section>
+            <h2 {font-size=16px; font-weight=800}> "الكتل المشتركة والقوائم"
+            <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(300px, 100%), 1fr))}>
+              <a href=Admin-FAQ-D.html {background=#FFFFFF; border=1.5px solid #141311; color=#141311; text-decoration=none}>
+                <span>
+                  <span {font-size=16px; font-weight=800}> "الأسئلة الشائعة"
+                  <span {border=1.5px solid #B48F2E; background=#FFFDF6; color=#8A6C1E; font-size=11px; font-weight=800}> "يحتاج تأكيداً"
+                <span {font-size=12px; color=#5E5A52}> "12 سؤالاً · 9 منشورة · 3 [مسودة إجابة]"
+              <a href=Admin-Partners-D.html {background=#FFFFFF; border=1.5px solid #141311; color=#141311; text-decoration=none}>
+                <span>
+                  <span {font-size=16px; font-weight=800}> "الشركاء والتمويل"
+                  <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "مسودة"
+                <span {font-size=12px; color=#5E5A52}> "5 شعارات · 0 ظاهرة · كتلة «من نحن» مخفية حتى يظهر شعار"
+              <a href=Admin-Testimonials-D.html {background=#FFFFFF; border=1.5px solid #141311; color=#141311; text-decoration=none}>
+                <span>
+                  <span {font-size=16px; font-weight=800}> "آراء العملاء والأرقام"
+                  <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "مسودة"
+                <span {font-size=12px; color=#5E5A52}> "2 رأيان منشوران من 3 مطلوبة · الكتلة مخفية · 4 أرقام إثبات"
+              <a href=Admin-Lists-D.html {background=#FFFFFF; border=1.5px solid #141311; color=#141311; text-decoration=none}>
+                <span>
+                  <span {font-size=16px; font-weight=800}> "القوائم"
+                  <span {background=#141311; color=#FFFFFF; font-size=11px; font-weight=800}> "منشور"
+                <span {font-size=12px; color=#5E5A52}> "الأحياء 14 (3 قريباً) · المدن 1 · أنواع الوحدات 3 · الميزانيات 6 · أسباب الرفض 5"
+              <a href=Admin-SiteSettings-D.html {background=#FFFFFF; border=1.5px solid #141311; color=#141311; text-decoration=none}>
+                <span>
+                  <span {font-size=16px; font-weight=800}> "إعدادات الموقع"
+                  <span {border=1.5px solid #B48F2E; background=#FFFDF6; color=#8A6C1E; font-size=11px; font-weight=800}> "يحتاج تأكيداً"
+                <span {font-size=12px; color=#5E5A52}> "واتساب · الهاتف · العنوان · الساعات · الرقم الضريبي [للتأكيد] · قوالب الرسائل"
+              <a href=Admin-SEO-D.html {background=#FFFFFF; border=1.5px solid #141311; color=#141311; text-decoration=none}>
+                <span>
+                  <span {font-size=16px; font-weight=800}> "عناوين البحث والمعاينة"
+                  <span {background=#141311; color=#FFFFFF; font-size=11px; font-weight=800}> "منشور"
+                <span {font-size=12px; color=#5E5A52}> "8 صفحات · عنوان ووصف لكل منها · صور المعاينة 1200×630"
+              <a href=Admin-Media-D.html {background=#FFFFFF; border=1.5px solid #141311; color=#141311; text-decoration=none}>
+                <span>
+                  <span {font-size=16px; font-weight=800}> "الصور"
+                  <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "مسودة"
+                <span {font-size=12px; color=#5E5A52}> "31 خانة من قائمة اللقطات · 4 فعلية · 27 تعبيرية أو طباعية"
+          <section>
+            <h2 {font-size=16px; font-weight=800}> "آخر التغييرات"
+            <ul {background=#FFFFFF; border=1.5px solid #141311; font-size=13px}>
+              <li>
+                <span {color=#5E5A52}> "أمس 11:20"
+                <span> "نورة عدّلت عنوان الهيرو في الرئيسية (مسودة، لم تُنشر)"
+                <a href=Admin-PageEditor-D.html {font-weight=700; text-decoration=none}> "افتح"
+              <li>
+                <span {color=#5E5A52}> "قبل 4 أيام"
+                <span> "سعود نشر قسم «القصة» في من نحن"
+                <a href=About-D.html {font-weight=700; text-decoration=none}> "معاينة"
+              <li>
+                <span {color=#5E5A52}> "قبل أسبوع"
+                <span> "نورة أضافت سؤالاً جديداً «هل ضريبة التصرفات مشمولة؟» بإجابة [مسودة إجابة]"
+                <a href=Admin-FAQ-D.html {font-weight=700; text-decoration=none}> "افتح"

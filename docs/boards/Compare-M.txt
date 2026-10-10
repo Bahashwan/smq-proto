@@ -1,0 +1,127 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section>
+        <div>
+          <h1 {font-size=26px; font-weight=800}> "قارن 3 وحدات"
+          <a href=Results-M.html {font-size=12px; font-weight=700; text-decoration=none}> "عودة للنتائج"
+        <p {font-size=12px; color=#5E5A52}> "المعيّن الذهبي يشير إلى الأفضل في الصف: أقل سعر، أقل سعر للمتر، أكبر مساحة. اسحب الجدول أفقياً."
+      <section>
+        <table {font-size=13px}>
+          <thead>
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "الوحدة"
+              <th {width=150px; font-weight=400}>
+                <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 22px 100%, 0 calc(100% - 38px))}>
+                  <span {position=absolute; background=#B48F2E; font-size=9px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                <div>
+                  <span>
+                    <span {font-size=14px; font-weight=800}> "نموذج D"
+                    <span {font-size=10px; color=#5E5A52}> "روز · جاردن الروضة"
+                  <button type=button aria-label=إزالة من المقارنة {border=1px solid #D4CFC4; background=#FFFFFF; font-size=14px}> "×"
+              <th {width=150px; font-weight=400}>
+                <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 22px 100%, 0 calc(100% - 38px))}>
+                  <span {position=absolute; background=#B48F2E; font-size=9px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                <div>
+                  <span>
+                    <span {font-size=14px; font-weight=800}> "نموذج D"
+                    <span {font-size=10px; color=#5E5A52}> "ياسمين · جاردن الروضة"
+                  <button type=button aria-label=إزالة من المقارنة {border=1px solid #D4CFC4; background=#FFFFFF; font-size=14px}> "×"
+              <th {width=150px; font-weight=400}>
+                <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 22px 100%, 0 calc(100% - 38px))}>
+                  <span {position=absolute; background=#B48F2E; font-size=9px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                <div>
+                  <span>
+                    <span {font-size=14px; font-weight=800}> "نموذج C"
+                    <span {font-size=10px; color=#5E5A52}> "روز · جاردن الروضة"
+                  <button type=button aria-label=إزالة من المقارنة {border=1px solid #D4CFC4; background=#FFFFFF; font-size=14px}> "×"
+          <tbody>
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "السعر"
+              <td {font-size=16px; font-weight=800}>
+                <span>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "459,000"
+              <td {font-size=16px; font-weight=800}>
+                <span>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "459,000"
+              <td {font-size=16px; font-weight=800}> "510,000"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "للمتر"
+              <td {font-weight=700}> "5,557"
+              <td {font-weight=700}>
+                <span>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "5,451"
+              <td {font-weight=700}> "6,347"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "المساحة"
+              <td {font-weight=700}> "82.60 م²"
+              <td {font-weight=700}>
+                <span>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "84.20 م²"
+              <td {font-weight=700}> "80.35 م²"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "الغرف · الحمامات"
+              <td> "2 · 2"
+              <td> "2 · 2"
+              <td> "2 · 2"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "العمارة · الطابق"
+              <td> "روز · 2"
+              <td> "ياسمين · 2"
+              <td> "روز · 3"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "الاتجاه"
+              <td> "شرقي"
+              <td> "غربي"
+              <td> "شمالي"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "بلكونة"
+              <td {color=#5E5A52}> "لا"
+              <td {color=#5E5A52}> "لا"
+              <td {font-weight=800}> "نعم"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "غرفة خادمة"
+              <td {color=#5E5A52}> "لا"
+              <td {color=#5E5A52}> "لا"
+              <td {color=#5E5A52}> "لا"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "سمارت هوم"
+              <td {font-weight=800}> "نعم"
+              <td {font-weight=800}> "نعم"
+              <td {font-weight=800}> "نعم"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "التسليم"
+              <td> "الربع 2 · 2027"
+              <td> "الربع 2 · 2027"
+              <td> "الربع 2 · 2027"
+            <tr>
+              <th {position=sticky; background=#FFFFFF; font-size=11px; font-weight=700; color=#5E5A52}> "آخر تحديث"
+              <td {font-size=11px; color=#5E5A52}> "2026/10/01"
+              <td {font-size=11px; color=#5E5A52}> "2026/10/01"
+              <td {font-size=11px; color=#5E5A52}> "2026/10/01"
+            <tr>
+              <th {position=sticky; background=#FFFFFF}>
+              <td>
+                <a href=https://wa.me/966559997929?text=RZ-D {background=#B48F2E; color=#141311; text-decoration=none; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "واتساب"
+              <td>
+                <a href=https://wa.me/966559997929?text=YS-D {background=#B48F2E; color=#141311; text-decoration=none; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "واتساب"
+              <td>
+                <a href=https://wa.me/966559997929?text=RZ-C {background=#B48F2E; color=#141311; text-decoration=none; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "واتساب"
+      <section {background=#F3F1EB}>
+        <span {font-size=15px; font-weight=800}> "محتار بين الثلاث؟"
+        <span {font-size=12px; color=#5E5A52}> "أرسل المقارنة كما هي، ونرد عليك برأينا المهني في أيها يناسب ميزانيتك وطريقة سكنك."
+        <a href=https://wa.me/966559997929?text=%D8%A3%D9%82%D8%A7%D8%B1%D9%86%20%D8%A8%D9%8A%D9%86%20RZ-D%20%D9%88YS-D%20%D9%88RZ-C {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "أرسل المقارنة على واتساب"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

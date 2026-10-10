@@ -1,0 +1,28 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <main>
+        <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <svg svg >
+        <h1 {font-size=28px; font-weight=800}> "وصلتنا رسالتك"
+        <p {font-size=14px; color=#3A3630}> "شكراً خالد. نرد خلال ساعات العمل، السبت إلى الخميس من 9 صباحاً إلى 6 مساءً. الآن الساعة 9:05 مساءً، فالرد غداً في أول ساعة عمل."
+        <div {border=1.5px solid #141311}>
+          <span {font-size=12px; font-weight=800}> "ما أرسلته"
+          <span {font-size=13px; color=#3A3630}> "«أبحث عن شقة 3 غرف بميزانية 700 ألف، هل يمكن زيارة يوم السبت؟»"
+          <span {font-size=12px; color=#5E5A52}> "الرد على 05X XXX 0000 · واتساب أو اتصال، كما اخترت"
+        <div {background=#F3F1EB; font-size=12px}>
+          <span {font-weight=800}> "مستعجل؟"
+          <span> "واتساب أسرع من النموذج خارج ساعات العمل: الرسائل تصل الفريق على الجوال."
+        <div>
+          <a href=https://wa.me/966559997929?text=%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A8%D8%A7%D8%B9%D8%B4%D9%86%20%D8%8C%20%D8%B4%D9%82%D8%A9%203%20%D8%BA%D8%B1%D9%81%20%D8%AD%D8%AA%D9%89%20700%20%D8%A3%D9%84%D9%81 {background=#B48F2E; color=#141311; font-size=15px; font-weight=800; text-decoration=none; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+            <svg svg > "أكمل على واتساب برسالتك نفسها"
+          <a href=Results-M.html {border=1.5px solid #141311; color=#141311; font-size=14px; font-weight=700; text-decoration=none}> "شقق 3 غرف حتى 700 ألف · وحدة واحدة"

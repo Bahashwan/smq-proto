@@ -1,0 +1,54 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl aria-label=معرض صور نموذج A {height=900px; background=#141311; color=#FFFFFF}>
+      <div>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=>
+          <span>
+            <span {font-size=16px; font-weight=800}> "شقة نموذج A · RZ-A · جاردن الروضة"
+            <span {font-size=12px; color=#C9C2B3}> "3 من 7 · الصالة · 3 غرف · 147 م² · 690,000"
+        <div>
+          <div {border=1.5px solid #FFFFFF; font-size=12px; font-weight=800}>
+            <button type=button {border=0; background=#FFFFFF; color=#141311}> "الصور 7"
+            <button type=button {border=0; background=transparent; color=#FFFFFF}> "المخطط"
+            <button type=button {border=0; background=transparent; color=#FFFFFF}> "جولة 360 [للتأكيد]"
+          <button type=button aria-label=مشاركة {border=1.5px solid #5E5A52; background=transparent; color=#FFFFFF}>
+            <svg svg >
+          <button type=button aria-label=إغلاق {border=1.5px solid #FFFFFF; background=transparent; color=#FFFFFF; font-size=20px; font-weight=800}> "×"
+      <div {display=grid; grid-template-columns=minmax(0, 1fr) 320px}>
+        <figure {background=#3A3630}>
+          <div {position=absolute; background=#E9E5DB}>
+            <svg svg  {position=absolute; opacity=.55}>
+          <figcaption {position=absolute; font-size=12px; font-weight=700; background=#FFFFFF; color=#141311}> "صورة تعبيرية · لا تمثّل التشطيب النهائي"
+          <span {position=absolute; font-size=11px; color=#141311; background=#FFFFFF}> "IMG-UNIT-APT-3BR-LIVING · 2400×1600"
+          <button type=button aria-label=السابقة {position=absolute; border=0; background=#141311; color=#FFFFFF}>
+            <svg svg >
+          <button type=button aria-label=التالية {position=absolute; border=0; background=#141311; color=#FFFFFF}>
+            <svg svg >
+          <span {position=absolute; font-size=11px; font-weight=700; color=#FFFFFF; background=#141311}> "الأسهم ← → للتنقل · Esc للإغلاق · انقر للتكبير"
+        <aside>
+          <div {font-size=12px; font-weight=800; color=#C9C2B3}> "كل الصور"
+          <div {display=grid; grid-template-columns=1fr 1fr}>
+            <button type=button>
+              <span> "الواجهة"
+            <button type=button>
+              <span> "المدخل"
+            <button type=button {border=2px solid #B48F2E}>
+              <span {font-weight=800}> "الصالة"
+            <button type=button>
+              <span> "المطبخ"
+            <button type=button>
+              <span> "النوم الرئيسية"
+            <button type=button>
+              <span> "الحمام"
+            <button type=button>
+              <span> "الشرفة"
+            <button type=button {background=#F3F1EB}>
+              <span> "المخطط"
+          <div>
+            <div>
+              <span {font-size=12px; color=#C9C2B3}> "السعر"
+              <span {font-size=22px; font-weight=800}> "690,000"
+            <a href=https://wa.me/966559997929?text=RZ-A {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "اسأل عن نموذج A"
+            <a href=Unit-D.html {font-size=12px; font-weight=700}> "العودة إلى صفحة الوحدة"

@@ -1,0 +1,56 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl aria-label=مخطط نموذج A {width=390px; height=844px; background=#FFFFFF; color=#141311}>
+      <div>
+        <div>
+          <span {font-size=14px; font-weight=800}> "مخطط نموذج A · RZ-A"
+          <span {font-size=11px; color=#5E5A52}> "147 م² · 3 غرف · 3 حمامات · مخطط توضيحي من المطوّر [للتأكيد]"
+        <button type=button aria-label=إغلاق {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=18px; font-weight=800}> "×"
+      <div>
+        <div aria-label=طريقة العرض {border=1.5px solid #141311}>
+          <button type=button {border=0; font-size=12px; font-weight=800; background=#141311; color=#FFFFFF}> "مع الأبعاد"
+          <button type=button {border=0; font-size=12px; font-weight=700; background=#FFFFFF; color=#141311}> "بلا أبعاد"
+        <span {font-size=11px; color=#5E5A52}> "اضغط غرفة لرؤية مساحتها"
+      <div {border=1.5px solid #141311; background=#F8F7F4}>
+        <span {position=absolute}>
+        <svg svg  {position=absolute}>
+        <div>
+          "الصالة والمجلس"
+          <small> "42.0 م² [للتأكيد]"
+        <div>
+          "غرفة النوم الرئيسية"
+          <small> "22.5 م²"
+        <div>
+          "المطبخ"
+          <small> "مفتوح [للتأكيد]"
+        <div>
+          "حمام رئيسي"
+          <small> "5.2 م²"
+        <div>
+          "غرفة نوم 2"
+          <small> "14.8 م²"
+        <div>
+          "غرفة نوم 3"
+          <small> "13.6 م²"
+        <div>
+          "حمام"
+          <small> "3.9"
+        <div>
+          "غ. خادمة"
+          <small> "6.0"
+        <span {position=absolute; font-size=9px; font-weight=700; background=#FFFFFF}> "الذهبي: نوافذ · الأبيض: المدخل · الرمادي: الشرفة"
+        <span aria-label=الشمال {position=absolute; background=#FFFFFF; border=1.5px solid #141311; font-size=10px; font-weight=800}> "ش"
+        <div {position=absolute}>
+          <button type=button aria-label=تكبير {border=1.5px solid #141311; background=#FFFFFF; font-size=18px; font-weight=800}> "+"
+          <button type=button aria-label=تصغير {border=1.5px solid #141311; background=#FFFFFF; font-size=18px; font-weight=800}> "−"
+      <div>
+        <div {background=#F3F1EB; font-size=12px}>
+          <span>
+            <strong> "الصالة والمجلس"
+            "· 42.0 م² · نافذتان شماليتان"
+          <span {font-size=11px; color=#8A6C1E; font-weight=700}> "[للتأكيد]"
+        <div>
+          <a href=#pdf {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=13px; font-weight=800}>
+            <svg svg > "المخطط PDF"
+          <a href=https://wa.me/966559997929?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%AE%D8%B7%D8%B7%20RZ-A%20%D8%A8%D8%A7%D9%84%D8%A3%D8%A8%D8%B9%D8%A7%D8%AF {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "اطلب المخطط المعماري"
+        <span {font-size=10px; color=#5E5A52}> "المساحات تقريبية من مخطط المطوّر، والمساحة الموثّقة في الصك هي المرجع. فيلا الروف تعرض مخططين بتبويب «الدور الأول · السطح»."

@@ -1,0 +1,125 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=1440px; background=#F8F7F4; color=#141311}>
+      <div>
+        <span {font-size=12px; font-weight=700; color=#5E5A52}> "الهيدر · سطح المكتب · 72px · الشعار: المعيّن الذهبي + النص الأبيض · واتساب هو الزر الوحيد الملوّن"
+        <header {background=#141311; color=#FFFFFF}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=#x {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "العقارات"
+            <a href=#x {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "دليل الأسعار"
+            <a href=#x {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none; background=#3A3630}> "المشاريع (hover)"
+            <a href=#x {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=#x {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=#x {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+        <span {font-size=11px; color=#5E5A52}> "عند التمرير: الهيدر يبقى ثابتاً بارتفاع 56px، يختفي رقم الهاتف ويبقى واتساب. نسخة EN: نفس البنية بـ dir=ltr، الشعار يبقى يميناً في RTL ويساراً في LTR."
+      <div {display=grid; grid-template-columns=390px 390px 1fr}>
+        <div>
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "الهيدر · الجوال · 64px"
+          <header {background=#141311; color=#FFFFFF}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+            <div>
+              <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+              <a href=https://wa.me/966559997929 aria-label=واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <svg svg >
+              <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+                <svg svg >
+        <div>
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "القائمة مفتوحة · ورقة من الأعلى"
+          <div {background=#141311; color=#FFFFFF}>
+            <div>
+              <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+              <button type=button aria-label=إغلاق {border=0; background=transparent; color=#FFFFFF; font-size=26px}> "×"
+            <nav aria-label=القائمة>
+              <a href=#x {font-size=20px; font-weight=800; color=#FFFFFF; text-decoration=none}> "العقارات"
+              <a href=#x {font-size=20px; font-weight=800; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+              <a href=#x {font-size=20px; font-weight=800; color=#FFFFFF; text-decoration=none}> "جاردن الروضة"
+              <a href=#x {font-size=20px; font-weight=800; color=#FFFFFF; text-decoration=none}> "الخدمات"
+              <a href=Hub-M.html {font-size=20px; font-weight=800; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+              <a href=#x {font-size=20px; font-weight=800; color=#FFFFFF; text-decoration=none}> "من نحن"
+              <a href=#x {font-size=20px; font-weight=800; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+              <div>
+                <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=15px; font-weight=800; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}> "واتساب"
+                <a href=tel:+966556607779 {border=1.5px solid #FFFFFF; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=700}> "اتصال"
+                <a href=#en {border=1.5px solid #3A3630; color=#FFFFFF; text-decoration=none; font-size=13px; font-weight=700}> "EN"
+        <div>
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "استخدام الشعار"
+          <div {display=grid; grid-template-columns=repeat(2, minmax(0, 1fr))}>
+            <div>
+              <div {background=#141311}>
+                <img src=assets/lockup-goldmark-white.png alt=>
+              <span {font-size=11px; color=#5E5A52}> "الهيدر: معيّن ذهبي + نص أبيض"
+            <div>
+              <div {background=#141311}>
+                <img src=assets/lockup-white.png alt=>
+              <span {font-size=11px; color=#5E5A52}> "الفوتر والمواد الداكنة: أبيض كامل"
+            <div>
+              <div {background=#FFFFFF; border=1px solid #D4CFC4}>
+                <img src=assets/lockup-goldmark-ink.png alt=>
+              <span {font-size=11px; color=#5E5A52}> "الأسطح الفاتحة: معيّن ذهبي + نص أسود"
+            <div>
+              <div {background=#B48F2E}>
+                <img src=assets/lockup-ink.png alt=>
+              <span {font-size=11px; color=#5E5A52}> "على الذهبي: أسود كامل. لا يُستخدم المعيّن الذهبي على ذهبي"
+            <div>
+              <div {background=#FFFFFF; border=1px solid #D4CFC4}>
+                <img src=assets/logo-mark-gold.png alt=>
+                <img src=assets/logo-mark-gold.png alt=>
+              <span {font-size=11px; color=#5E5A52}> "المعيّن وحده: الأيقونة، favicon، العلامة المائية (بشفافية 8 إلى 12%)"
+            <div>
+              <div {background=#FFFFFF; border=1px solid #D4CFC4}>
+                <img src=assets/wordmark-ink.png alt=>
+              <span {font-size=11px; color=#5E5A52}> "النص وحده: نادراً، في الوثائق والفواتير"
+          <span {font-size=11px; color=#5E5A52}> "الحد الأدنى لارتفاع الشعار الكامل 24px. المسافة الآمنة حوله = ارتفاع المعيّن ÷ 2. لا يُدوَّر ولا يُلوَّن بغير الذهبي والأسود والأبيض."
+      <div>
+        <span {font-size=12px; font-weight=700; color=#5E5A52}> "الفوتر الكامل · 4 أعمدة · الترخيص والسجل التجاري في كل صفحة"
+        <footer {background=#141311; color=#FFFFFF}>
+          <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 1fr}>
+            <div>
+              <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+              <p {font-size=13px; color=#C9C2B3}> "شريكك الموثوق في عالم العقارات. مكتب تسويق واستثمار عقاري في جدة."
+              <div>
+                <a href=https://instagram.com/smq_re aria-label=إنستغرام {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <a href=https://tiktok.com/@smq_re aria-label=تيك توك {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <a href=https://x.com/smq_re aria-label=إكس {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <a href=https://snapchat.com/add/smq_re aria-label=سناب شات {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <a href=https://youtube.com/@smq_re aria-label=يوتيوب {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <span {font-size=12px; color=#C9C2B3}> "@smq_re"
+            <nav aria-label=الصفحات {font-size=14px}>
+              <span {font-size=12px; font-weight=700; color=#C9C2B3}> "الصفحات"
+              <a href=#x {color=#FFFFFF; text-decoration=none}> "العقارات"
+              <a href=#x {color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+              <a href=#x {color=#FFFFFF; text-decoration=none}> "جاردن الروضة"
+              <a href=#x {color=#FFFFFF; text-decoration=none}> "الخدمات"
+              <a href=Hub-D.html {color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+              <a href=#x {color=#FFFFFF; text-decoration=none}> "من نحن"
+              <a href=#x {color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+            <div {font-size=14px; color=#C9C2B3}>
+              <span {font-size=12px; font-weight=700}> "تواصل"
+              <span {color=#FFFFFF}> "0559997929 (واتساب)"
+              <span {color=#FFFFFF}> "0556607779"
+              <span {color=#FFFFFF}> "info@smqre.com"
+              <span> "شارع السيدة خديجة، حي الفيصلية، جدة 23441"
+              <span> "السبت إلى الخميس، 9 ص إلى 6 م"
+            <div {font-size=14px; color=#C9C2B3}>
+              <span {font-size=12px; font-weight=700}> "مرخصون ومنظمون"
+              <span>
+                <span {font-size=11px}> "ترخيص الهيئة العامة للعقار"
+                <span {color=#FFFFFF; font-weight=700}> "1200040135"
+              <span>
+                <span {font-size=11px}> "السجل التجاري"
+                <span {color=#FFFFFF; font-weight=700}> "7029797433"
+          <div {font-size=12px; color=#C9C2B3}>
+            <span> "© 2026 إس إم كيو العقارية. جميع الحقوق محفوظة."
+            <span> "smq-re.com"

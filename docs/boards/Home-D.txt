@@ -1,0 +1,304 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Project-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <section {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(480px, 100%), 1fr))}>
+        <div>
+          <span {font-size=13px; font-weight=700; color=#8A6C1E}> "مكتب تسويق واستثمار عقاري · جدة"
+          <h1 {font-size=64px; font-weight=800}> "نقودك بثقة نحو القرار العقاري الصحيح"
+          <p {font-size=17px; color=#5E5A52}> "وحدات حقيقية بأسعارها وسعر المتر، ودليل أسعار لكل حي، ومستشار يرد عليك على واتساب. لا حسابات، لا وعود، أرقام أولاً."
+          <div>
+            <a href=#finder {background=#B48F2E; color=#141311; text-decoration=none; font-size=16px; font-weight=800; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+              "ابحث بميزانيتك"
+              <svg svg >
+            <a href=https://wa.me/966559997929 {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=16px; font-weight=700}>
+              <svg svg > "كلّمنا على واتساب"
+          <div {font-size=13px; color=#5E5A52}>
+            <span>
+              <strong {color=#141311; font-size=18px}> "8"
+              "وحدات متاحة الآن"
+            <span>
+              <strong {color=#141311; font-size=18px}> "+2000"
+              "متدرب مع المؤسس"
+            <span>
+              "مرخصون من الهيئة العامة للعقار ·"
+              <span> "1200040135"
+        <figure {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% calc(100% - 83px), calc(100% - 48px) 100%, 0 100%)}>
+          <svg svg  {position=absolute; opacity=0.55}>
+          <img src=assets/logo-mark-gold.png alt= {position=absolute; opacity=0.9}>
+          <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+          <span {position=absolute; font-size=10px; color=#5E5A52; background=#FFFFFF}> "IMG-HERO-BRAND · 1:1 · الشعار داخل الصورة مسموح"
+      <section {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(480px, 100%), 1fr))}>
+        <div {background=#B48F2E; color=#141311; clip-path=polygon(0 0, 100% 0, 100% 100%, 64px 100%, 0 calc(100% - 37px))}>
+          <p {font-size=13px; font-weight=700; color=#3D3010}> "ابدأ من هنا"
+          <h2 {font-size=56px; font-weight=800}> "كم ميزانيتك؟"
+          <p {font-size=15px; color=#3D3010}> "نعرض الوحدات المتاحة فعلاً في جدة، بأسعارها وسعر المتر، ثم نجلس معك على واتساب."
+          <div>
+            <button type=button aria-label=أنقص الميزانية 50,000 {border=0; background=#141311; color=#FFFFFF; font-size=28px; font-weight=700; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "−"
+            <div>
+              <svg svg aria-label=ريال سعودي {color=#141311}>
+              <label {position=absolute}> "الميزانية بالريال"
+              <input type=text value=700,000 {border=0; background=transparent; font-size=52px; font-weight=800; color=#141311}>
+            <button type=button aria-label=زد الميزانية 50,000 {border=0; background=#141311; color=#FFFFFF; font-size=28px; font-weight=700; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "+"
+          <div>
+            <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=transparent; color=#141311}> "500 ألف"
+            <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#141311; color=#FFFFFF}> "700 ألف"
+            <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=transparent; color=#141311}> "مليون"
+            <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=transparent; color=#141311}> "2 مليون"
+          <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(180px, 100%), 1fr))}>
+            <button type=button {font-size=15px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}>
+              <span>
+                <span {font-size=10px; font-weight=500; color=#5E5A52}> "الحي"
+                <span> "الروضة"
+              <svg svg >
+            <button type=button {font-size=15px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}>
+              <span>
+                <span {font-size=10px; font-weight=500; color=#5E5A52}> "الغرف"
+                <span> "الكل"
+              <svg svg >
+          <a href=Results-D.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=17px; font-weight=700; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+            <span> "اعرض الوحدات الست"
+            <svg svg >
+        <div>
+          <figure {position=absolute; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% calc(100% - 62px), calc(100% - 36px) 100%, 0 100%)}>
+            <svg svg  {position=absolute; opacity=0.55}>
+            <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+            <span {position=absolute; font-size=10px; color=#5E5A52; background=#FFFFFF}> "IMG-ED-ROWDAH-TREES · 4:5"
+          <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+            <div>
+              <span {font-size=56px; font-weight=800; color=#B48F2E}> "6"
+              <span {font-size=12px; font-weight=600}> "وحدات متاحة"
+            <div>
+              <span {font-size=13px; color=#C9C2B3}> "حتى 700,000 في حي الروضة"
+              <span>
+                <span {font-size=13px; color=#C9C2B3}> "تبدأ من"
+                <span {font-size=28px; font-weight=800}> "459,000"
+              <span {font-size=13px; color=#C9C2B3}> "غرفتان إلى 3 غرف · 80 إلى 147 م² · 4,694 إلى 6,347 للمتر"
+      <section>
+        <div>
+          <h2 {font-size=32px; font-weight=800}> "المشروع الحالي"
+          <a href=Project-D.html {font-size=14px; font-weight=700; text-decoration=none}> "كل التفاصيل والنماذج"
+        <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(420px, 100%), 1fr)); border=1.5px solid #141311}>
+          <figure {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 48px 100%, 0 calc(100% - 83px))}>
+            <svg svg  {position=absolute; opacity=0.55}>
+            <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+            <span {position=absolute; font-size=10px; color=#5E5A52; background=#FFFFFF}> "IMG-PRJ-ROWDAH-EXT · 16:9"
+          <div>
+            <span {font-size=13px; font-weight=700; color=#8A6C1E}> "حي الروضة، جدة · قيد الإنشاء"
+            <span {font-size=36px; font-weight=800}> "جاردن الروضة"
+            <span {font-size=15px; color=#5E5A52}> "عمارتان، روز وياسمين. عشرة نماذج: شقق من غرفتين إلى 3 غرف بين 80 و147 م²، وفيلتان روف بخمس غرف."
+            <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+              <div>
+                <span {font-size=22px; font-weight=800}> "459,000"
+                <span {font-size=11px; color=#5E5A52}> "تبدأ من"
+              <div>
+                <span {font-size=22px; font-weight=800}>
+                  "8"
+                  <span {font-size=13px; font-weight=600; color=#5E5A52}> "من 10"
+                <span {font-size=11px; color=#5E5A52}> "وحدات متاحة"
+              <div>
+                <span {font-size=22px; font-weight=800}> "3,819"
+                <span {font-size=11px; color=#5E5A52}> "أقل سعر للمتر"
+            <div>
+              <span {font-size=12px; font-weight=600; border=1px solid #D4CFC4}> "موقف خاص"
+              <span {font-size=12px; font-weight=600; border=1px solid #D4CFC4}> "دخول ذكي"
+              <span {font-size=12px; font-weight=600; border=1px solid #D4CFC4}> "سمارت هوم"
+            <a href=Project-D.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=700; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              "صفحة المشروع"
+              <svg svg >
+      <section {background=#F3F1EB}>
+        <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(380px, 100%), 1fr))}>
+          <div>
+            <span {font-size=13px; font-weight=700; color=#8A6C1E}> "دليل الأسعار"
+            <h2 {font-size=32px; font-weight=800}> "ماذا تدفع في الروضة؟"
+            <p {font-size=15px; color=#5E5A52}> "أرقام من وحداتنا المدرجة، لا من إعلانات السوق. تتحدث مع كل وحدة جديدة، والتاريخ مكتوب تحت الجدول."
+            <a href=Guide-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=14px; font-weight=700}>
+              "الدليل الكامل لكل الأحياء"
+              <svg svg >
+          <div>
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 1fr; font-size=12px; font-weight=700; color=#5E5A52}>
+                <span> "النوع"
+                <span> "يبدأ من"
+                <span> "النطاق المعتاد"
+                <span> "للمتر"
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 1fr}>
+                <span {font-size=15px; font-weight=700}> "شقة غرفتين"
+                <span {font-size=18px; font-weight=800}> "459,000"
+                <span {font-size=13px; color=#5E5A52}> "459 إلى 555 ألف"
+                <span {font-size=13px; color=#5E5A52}> "4,748 إلى 6,347"
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 1fr}>
+                <span {font-size=15px; font-weight=700}> "شقة 3 غرف"
+                <span {font-size=18px; font-weight=800}> "690,000"
+                <span {font-size=13px; color=#5E5A52}> "نموذج واحد متاح"
+                <span {font-size=13px; color=#5E5A52}> "4,694"
+              <div {display=grid; grid-template-columns=1.4fr 1fr 1fr 1fr}>
+                <span {font-size=15px; font-weight=700}> "فيلا روف 5 غرف"
+                <span {font-size=18px; font-weight=800}> "1,600,000"
+                <span {font-size=13px; color=#5E5A52}> "1.60 إلى 1.65 مليون"
+                <span {font-size=13px; color=#5E5A52}> "3,819 إلى 4,015"
+            <span {font-size=12px; color=#5E5A52}> "حي الروضة، جدة · 10 وحدات مدرجة · تحديث 2026/10/01"
+      <section>
+        <h2 {font-size=32px; font-weight=800}> "ماذا نفعل"
+        <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(220px, 100%), 1fr))}>
+          <a href=Services-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {background=#B48F2E; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "01"
+            <span {font-size=18px; font-weight=800}> "شراء العقارات"
+            <span {font-size=13px; color=#5E5A52}> "نفلتر السوق على ميزانيتك ونرافقك حتى الإفراغ."
+          <a href=Services-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {background=#B48F2E; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "02"
+            <span {font-size=18px; font-weight=800}> "بيع العقارات"
+            <span {font-size=13px; color=#5E5A52}> "تقييم واقعي، تصوير، وتسويق لعملاء جاهزين."
+          <a href=Services-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {background=#B48F2E; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "03"
+            <span {font-size=18px; font-weight=800}> "الاستثمار العقاري"
+            <span {font-size=13px; color=#5E5A52}> "فرص مدروسة بالأرقام، لا بالوعود."
+          <a href=Services-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {background=#B48F2E; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "04"
+            <span {font-size=18px; font-weight=800}> "الاستشارات العقارية"
+            <span {font-size=13px; color=#5E5A52}> "جلسة واحدة توفر عليك سنوات من التجربة."
+          <a href=Add-D.html {background=#141311; color=#FFFFFF; text-decoration=none; clip-path=polygon(0 0, calc(100% - 14px) 0, 100% 24px, 100% 100%, 0 100%)}>
+            <span {background=#B48F2E; color=#141311; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "05"
+            <span {font-size=18px; font-weight=800}> "أضف عقارك"
+            <span {font-size=13px; color=#C9C2B3}> "تملك وحدة؟ نسوقها لك مجاناً حتى البيع."
+      <section {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(300px, 100%), 1fr))}>
+        <div>
+          <div {width=200px; height=250px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% calc(100% - 42px), calc(100% - 24px) 100%, 0 100%)}>
+            <span {font-size=11px; font-weight=600; color=#5E5A52}>
+              "صورة المؤسس"
+              <br> "فعلية فقط، لا تُولَّد"
+              <br> "IMG-FOUNDER · 4:5"
+          <div>
+            <span {font-size=13px; font-weight=700; color=#8A6C1E}> "المؤسس"
+            <span {font-size=32px; font-weight=800}> "سعود معيض"
+            <span {font-size=15px; color=#5E5A52}> "خبير ومستشار عقاري"
+            <span>
+              <span {font-size=36px; font-weight=800}> "+2000"
+              <span {font-size=13px; color=#5E5A52}> "متدرب في برامجه ودوراته المتخصصة"
+            <p {font-size=15px}> "نؤمن أن العقار قرار استثماري يتطلب تحليلاً دقيقاً ورؤية واضحة. لذلك نعرض الأرقام أولاً، ثم نجلس معك."
+            <a href=About-D.html {font-size=14px; font-weight=700; text-decoration=none}> "قصة SMQ ومنهجها"
+        <div>
+          <span {font-size=13px; font-weight=700; color=#8A6C1E}> "مرخصون ومنظمون"
+          <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+            <span {font-size=11px; font-weight=600; color=#C9C2B3}> "ترخيص الهيئة العامة للعقار"
+            <span {font-size=22px; font-weight=800}> "1200040135"
+          <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+            <span {font-size=11px; font-weight=600; color=#C9C2B3}> "السجل التجاري"
+            <span {font-size=22px; font-weight=800}> "7029797433"
+      <section {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(360px, 100%), 1fr))}>
+        <div>
+          <h2 {font-size=32px; font-weight=800}> "أسئلة تصلنا كثيراً"
+          <p {font-size=15px; color=#5E5A52}> "لم تجد سؤالك؟ اكتبه لنا على واتساب."
+        <div>
+          <details>
+            <summary {font-size=17px; font-weight=700}>
+              "كيف أسجل اهتمامي بوحدة؟"
+              <span {background=#B48F2E; font-size=18px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "−"
+            <p {font-size=14px; color=#5E5A52}> "اضغط «واتساب» على أي وحدة، تصلنا رسالة باسم المشروع والنموذج، ونرد عليك برقم مستشار خلال ساعات العمل. لا حاجة لإنشاء حساب."
+          <details>
+            <summary {font-size=17px; font-weight=700}>
+              "هل الأسعار المعروضة نهائية؟"
+              <span {border=1.5px solid #141311; font-size=18px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "+"
+            <p {font-size=14px; color=#5E5A52}> "[مسودة إجابة، للتأكيد من العميل]"
+          <details>
+            <summary {font-size=17px; font-weight=700}>
+              "ما مناطق التغطية؟"
+              <span {border=1.5px solid #141311; font-size=18px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "+"
+            <p {font-size=14px; color=#5E5A52}> "[مسودة إجابة، للتأكيد من العميل]"
+          <details>
+            <summary {font-size=17px; font-weight=700}>
+              "هل تقدمون خدمات ما بعد البيع؟"
+              <span {border=1.5px solid #141311; font-size=18px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "+"
+            <p {font-size=14px; color=#5E5A52}> "[مسودة إجابة، للتأكيد من العميل]"
+          <details>
+            <summary {font-size=17px; font-weight=700}>
+              "ما الاستشارات العقارية المتوفرة؟"
+              <span {border=1.5px solid #141311; font-size=18px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "+"
+            <p {font-size=14px; color=#5E5A52}> "[مسودة إجابة، للتأكيد من العميل]"
+      <section {background=#F3F1EB}>
+        <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(380px, 100%), 1fr))}>
+          <div>
+            <h2 {font-size=32px; font-weight=800}> "كلّمنا الآن"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=17px; font-weight=800; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+              <span>
+                <svg svg > "واتساب"
+              <span {font-size=16px}> "0559997929"
+            <a href=tel:+966556607779 {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=16px; font-weight=700; background=#FFFFFF}>
+              <span> "اتصال"
+              <span> "0556607779"
+            <div {display=grid; grid-template-columns=repeat(2, minmax(0, 1fr))}>
+              <div>
+                <span {font-size=12px; font-weight=700; color=#5E5A52}> "ساعات العمل"
+                <span {font-size=14px; font-weight=600}>
+                  "السبت إلى الخميس"
+                  <br> "9 ص إلى 6 م"
+              <div>
+                <span {font-size=12px; font-weight=700; color=#5E5A52}> "المكتب"
+                <span {font-size=14px; font-weight=600}> "شارع السيدة خديجة، حي الفيصلية، جدة 23441"
+          <div {background=#E9E5DB; border=1.5px solid #141311}>
+            <svg svg  {position=absolute; opacity=0.6}>
+            <span {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "خريطة Google بموقع المكتب"
+            <div>
+              <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+              <span {font-size=12px; font-weight=700; background=#141311; color=#FFFFFF}> "مكتب SMQ · حي الفيصلية"
+      <footer {background=#141311; color=#FFFFFF}>
+        <div>
+          <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(220px, 100%), 1fr))}>
+            <div>
+              <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+              <p {font-size=13px; color=#C9C2B3}> "شريكك الموثوق في عالم العقارات. مكتب تسويق واستثمار عقاري في جدة."
+              <div>
+                <a href=https://instagram.com/smq_re aria-label=إنستغرام {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <a href=https://tiktok.com/@smq_re aria-label=تيك توك {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <a href=https://x.com/smq_re aria-label=إكس {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <a href=https://snapchat.com/add/smq_re aria-label=سناب شات {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <a href=https://youtube.com/@smq_re aria-label=يوتيوب {border=1px solid #3A3630; color=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <span {font-size=12px; color=#C9C2B3}> "@smq_re"
+            <nav aria-label=الصفحات {font-size=14px}>
+              <span {font-size=12px; font-weight=700; color=#C9C2B3}> "الصفحات"
+              <a href=Results-D.html {color=#FFFFFF; text-decoration=none}> "العقارات"
+              <a href=Guide-D.html {color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+              <a href=Project-D.html {color=#FFFFFF; text-decoration=none}> "جاردن الروضة"
+              <a href=Services-D.html {color=#FFFFFF; text-decoration=none}> "الخدمات"
+              <a href=Hub-D.html {color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+              <a href=About-D.html {color=#FFFFFF; text-decoration=none}> "من نحن"
+              <a href=Contact-D.html {color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+            <div {font-size=14px; color=#C9C2B3}>
+              <span {font-size=12px; font-weight=700}> "تواصل"
+              <a href=https://wa.me/966559997929 {color=#FFFFFF; text-decoration=none}> "0559997929 (واتساب)"
+              <a href=tel:+966556607779 {color=#FFFFFF; text-decoration=none}> "0556607779"
+              <a href=mailto:info@smqre.com {color=#FFFFFF; text-decoration=none}> "info@smqre.com"
+              <span> "شارع السيدة خديجة، حي الفيصلية، جدة 23441"
+              <span> "السبت إلى الخميس، 9 ص إلى 6 م"
+            <div {font-size=14px; color=#C9C2B3}>
+              <span {font-size=12px; font-weight=700}> "مرخصون ومنظمون"
+              <span>
+                <span {font-size=11px}> "ترخيص الهيئة العامة للعقار"
+                <span {color=#FFFFFF; font-weight=700}> "1200040135"
+              <span>
+                <span {font-size=11px}> "السجل التجاري"
+                <span {color=#FFFFFF; font-weight=700}> "7029797433"
+          <div {font-size=12px; color=#C9C2B3}>
+            <span> "© 2026 إس إم كيو العقارية. جميع الحقوق محفوظة."
+            <span> "smq-re.com"

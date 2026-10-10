@@ -1,0 +1,131 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Project-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <section>
+        <div>
+          <div>
+            <h1 {font-size=36px; font-weight=800}> "قارن 3 وحدات"
+            <p {font-size=14px; color=#5E5A52}> "المعيّن الذهبي يشير إلى الأفضل في الصف: أقل سعر، أقل سعر للمتر، أكبر مساحة."
+          <div>
+            <a href=Results-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=13px; font-weight=700}> "عودة للنتائج"
+            <a href=https://wa.me/966559997929?text=%D8%A3%D9%82%D8%A7%D8%B1%D9%86%20%D8%A8%D9%8A%D9%86%20RZ-D%20%D9%88YS-D%20%D9%88RZ-C {background=#141311; color=#FFFFFF; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "أرسل المقارنة على واتساب"
+        <div {border=1.5px solid #141311}>
+          <table {font-size=14px}>
+            <thead>
+              <tr>
+                <th {width=200px; font-size=12px; font-weight=700; color=#5E5A52}> "الوحدة"
+                <th {font-weight=400}>
+                  <div {height=150px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 52px))}>
+                    <span {position=absolute; background=#B48F2E; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                    <span {position=absolute; font-size=9px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                  <div>
+                    <a href=Unit-D.html {text-decoration=none; color=#141311}>
+                      <span {font-size=18px; font-weight=800}> "نموذج D · روز"
+                      <span {font-size=12px; color=#5E5A52}> "جاردن الروضة · حي الروضة"
+                    <button type=button aria-label=إزالة من المقارنة {border=1px solid #D4CFC4; background=#FFFFFF; font-size=16px}> "×"
+                <th {font-weight=400}>
+                  <div {height=150px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 52px))}>
+                    <span {position=absolute; background=#B48F2E; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                    <span {position=absolute; font-size=9px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                  <div>
+                    <a href=Unit-D.html {text-decoration=none; color=#141311}>
+                      <span {font-size=18px; font-weight=800}> "نموذج D · ياسمين"
+                      <span {font-size=12px; color=#5E5A52}> "جاردن الروضة · حي الروضة"
+                    <button type=button aria-label=إزالة من المقارنة {border=1px solid #D4CFC4; background=#FFFFFF; font-size=16px}> "×"
+                <th {font-weight=400}>
+                  <div {height=150px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 52px))}>
+                    <span {position=absolute; background=#B48F2E; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                    <span {position=absolute; font-size=9px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                  <div>
+                    <a href=Unit-D.html {text-decoration=none; color=#141311}>
+                      <span {font-size=18px; font-weight=800}> "نموذج C · روز"
+                      <span {font-size=12px; color=#5E5A52}> "جاردن الروضة · حي الروضة"
+                    <button type=button aria-label=إزالة من المقارنة {border=1px solid #D4CFC4; background=#FFFFFF; font-size=16px}> "×"
+            <tbody>
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "السعر"
+                <td {font-size=22px; font-weight=800}>
+                  <span>
+                    <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "459,000"
+                <td {font-size=22px; font-weight=800}>
+                  <span>
+                    <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "459,000"
+                <td {font-size=22px; font-weight=800}> "510,000"
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "سعر المتر"
+                <td {font-weight=700}> "5,557"
+                <td {font-weight=700}>
+                  <span>
+                    <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "5,451"
+                <td {font-weight=700}> "6,347"
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "المساحة"
+                <td {font-weight=700}> "82.60 م²"
+                <td {font-weight=700}>
+                  <span>
+                    <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "84.20 م²"
+                <td {font-weight=700}> "80.35 م²"
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "الغرف · الحمامات"
+                <td> "2 · 2"
+                <td> "2 · 2"
+                <td> "2 · 2"
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "العمارة · الطابق · الاتجاه"
+                <td> "روز · 2 · شرقي"
+                <td> "ياسمين · 2 · غربي"
+                <td> "روز · 3 · شمالي"
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "بلكونة"
+                <td {color=#5E5A52}> "لا"
+                <td {color=#5E5A52}> "لا"
+                <td {font-weight=800}> "نعم"
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "غرفة خادمة · غرفة سائق"
+                <td {color=#5E5A52}> "لا · لا"
+                <td {color=#5E5A52}> "لا · لا"
+                <td {color=#5E5A52}> "لا · لا"
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "سمارت هوم · موقف"
+                <td {font-weight=800}> "نعم · نعم"
+                <td {font-weight=800}> "نعم · نعم"
+                <td {font-weight=800}> "نعم · نعم"
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "التسليم · شهادة الإشغال"
+                <td> "الربع 2 · 2027 · بعد التسليم"
+                <td> "الربع 2 · 2027 · بعد التسليم"
+                <td> "الربع 2 · 2027 · بعد التسليم"
+              <tr>
+                <th {font-size=12px; font-weight=700; color=#5E5A52; background=#F8F7F4}> "آخر تحديث"
+                <td {font-size=12px; color=#5E5A52}> "2026/10/01"
+                <td {font-size=12px; color=#5E5A52}> "2026/10/01"
+                <td {font-size=12px; color=#5E5A52}> "2026/10/01"
+              <tr>
+                <th {background=#F8F7F4}>
+                <td>
+                  <a href=https://wa.me/966559997929?text=RZ-D {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "اسأل عن هذه الوحدة"
+                <td>
+                  <a href=https://wa.me/966559997929?text=YS-D {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "اسأل عن هذه الوحدة"
+                <td>
+                  <a href=https://wa.me/966559997929?text=RZ-C {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "اسأل عن هذه الوحدة"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span> "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية"

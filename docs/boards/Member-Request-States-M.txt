@@ -1,0 +1,76 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <span>
+            <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span>
+            <span {font-size=12px; font-weight=800}> "تحالف مكاتب جدة"
+            <span {font-size=10px; color=#C9C2B3}> "صفحة عضو · مكتب أ للعقارات · بلا دخول"
+        <a href=Member-Ledger-M.html {font-size=11px; font-weight=800; color=#B48F2E; text-decoration=none}> "الميزان"
+      <span> "الحالة · انتهى الطلب قبل الرد"
+      <section {border=1.5px solid #D4CFC4; background=#FFFFFF; color=#5E5A52}>
+        <div {background=#F3F1EB}>
+          <span>
+            <span {font-size=11px; font-weight=700}> "طلب في حي تغطيه"
+            <h1 {font-size=18px; font-weight=800; color=#141311}> "الصفا · شقة غرفتين"
+          <span {font-size=11px; font-weight=800; border=1.5px solid #5E5A52}> "منتهٍ"
+        <div>
+          <div>
+            <div>
+              <small> "الميزانية"
+              <b> "حتى 520,000"
+            <div>
+              <small> "الغرف"
+              <b> "2"
+            <div>
+              <small> "انتهى"
+              <b> "أمس 18:00"
+          <div {border=2px solid #B48F2E; background=#FFFDF6; font-size=12px; color=#141311}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+            <span>
+              <strong> "انتهت مهلة الرد (3 أيام)."
+              "الطلب أُغلق أو ذهب لمكتب آخر. الردود المتأخرة لا تُحسب، ويُسجَّل «بلا رد» في الميزان."
+          <div>
+            <button type=button disabled=None {border=0; background=#E9E5DB; color=#8A8478; font-size=13px; font-weight=800}> "عندي عرض مطابق"
+            <a href=Member-Ledger-M.html {border=1.5px solid #141311; color=#141311; font-size=13px; font-weight=700; text-decoration=none}> "الطلبات المفتوحة · 2"
+          <span {font-size=11px}> "عندكم عرض يناسبه مستقبلاً؟ أرسلوه كعرض عام من صفحة الميزان، وسيُطابَق مع الطلبات القادمة."
+      <span> "الحالة · مُجاب · عرضكم عند SMQ"
+      <section {border=1.5px solid #141311; background=#FFFFFF}>
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 14px))}>
+          <span>
+            <span {font-size=11px; font-weight=700; color=#B48F2E}> "طلب في حي تغطيه"
+            <h2 {font-size=18px; font-weight=800}> "الفيصلية · شقة 4 غرف"
+          <span {font-size=11px; font-weight=800; background=#B48F2E; color=#141311}> "مُجاب"
+        <div>
+          <div>
+            <div>
+              <small> "الميزانية"
+              <b> "حتى 450,000"
+            <div>
+              <small> "الغرف"
+              <b> "4"
+            <div>
+              <small> "ردّيتم"
+              <b> "اليوم 10:42"
+          <div {border=1.5px solid #141311}>
+            <span {font-size=12px; font-weight=800}> "عرضكم"
+            <span {font-size=13px}>
+              "شقة · 165 م² ·"
+              <strong> "440,000"
+              "· عقد وساطة موثّق · «الدور الثاني، واجهة شمالية، بناء 2021»."
+            <span {font-size=11px; color=#5E5A52}> "رُدّ خلال 1 ساعة و12 دقيقة من الإرسال · يُحسب في الميزان"
+          <div {font-size=12px; color=#3A3630}>
+            <span>
+              <span {background=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "العرض عند SMQ · يُعرض على المشتري اليوم"
+            <span>
+              <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "إن وافق: سجل إحالة برقم، ثم تعارف"
+            <span>
+              <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "إن رفض: تصلكم رسالة بالسبب إن ذُكر"
+          <div>
+            <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=700}> "عدّل العرض"
+            <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=700}> "اسحب العرض"
+          <span {font-size=11px; color=#5E5A52}> "التعديل والسحب متاحان حتى يُنشأ سجل الإحالة. بعدها يصبح العرض جزءاً من السجل."
+      <p {font-size=11px; color=#5E5A52}> "كل طلب يعيش 3 أيام عمل افتراضياً [للتأكيد]. سرعة الرد تُحسب ضمن ساعات دوامكم المسجّلة فقط."

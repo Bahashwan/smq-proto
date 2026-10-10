@@ -1,0 +1,458 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; font-weight=700; color=#5E5A52}>
+            <a href=Admin-Content-D.html {text-decoration=none}> "المحتوى والأسئلة"
+            "› الصور"
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "الصور"
+              <span {font-size=13px; color=#5E5A52}> "32 خانة: 31 من قائمة اللقطات (تُولَّد أو تُصوَّر) وخانة المؤسس (رفع فقط). كل خانة لها طبقة: فعلية، رندر، تعبيرية، طباعي. الوسم «صورة تعبيرية» إجباري على التعبيرية والرندر"
+            <div>
+              <button type=button {border=1.5px solid #141311; background=#141311; color=#FFFFFF; font-size=12px; font-weight=800}> "الكل 32"
+              <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=12px; font-weight=700}> "فعلية 4"
+              <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=12px; font-weight=700}> "رندر 3"
+              <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=12px; font-weight=700}> "تعبيرية 21"
+              <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=12px; font-weight=700}> "طباعي 3"
+              <button type=button {border=1.5px solid #B48F2E; background=#FFFDF6; color=#8A6C1E; font-size=12px; font-weight=700}> "فارغة 1"
+          <div {font-size=11px; font-weight=700; color=#5E5A52; background=#FFFFFF; border=1.5px solid #141311}>
+            <span>
+              <span {background=#141311; color=#FFFFFF; font-size=9px; font-weight=800}> "فعلية"
+              "صورة حقيقية من الموقع أو المصوّر، بلا وسم"
+            <span>
+              <span {background=#B48F2E; color=#141311; font-size=9px; font-weight=800}> "رندر"
+              "من المطوّر، وسم «صورة تعبيرية» إجباري"
+            <span>
+              <span {background=#FFFFFF; color=#141311; font-size=9px; font-weight=800}> "تعبيرية"
+              "مولّدة، وسم إجباري، لا أشخاص ولا شعارات"
+            <span>
+              <span {background=#F3F1EB; color=#141311; font-size=9px; font-weight=800}> "طباعي"
+              "بلا صورة: رقم أو حرف على خلفية"
+            <span> "رفع صورة فعلية يستبدل التعبيرية ويطفئ الوسم تلقائياً"
+          <h2>
+            "الهوية والهيرو"
+            <span> "خانة واحدة · الشعار مسموح هنا فقط"
+          <div {display=grid; grid-template-columns=repeat(6, minmax(0, 1fr))}>
+            <div {border=2px solid #B48F2E}>
+              <div {background=#141311}>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+                <img src=assets/lockup-goldmark-white.png alt= {position=absolute}>
+              <div>
+                <span> "IMG-HERO-BRAND"
+                <span> "هيرو الرئيسية · 2400×1350 · يُولَّد عبر البوابة"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+          <h2>
+            "تحريري · جدة"
+            <span> "9 خانات · الصفحات العامة والفراغات"
+          <div {display=grid; grid-template-columns=repeat(6, minmax(0, 1fr))}>
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-ED-CORNICHE-DAWN"
+                <span> "كورنيش جدة عند الفجر"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-ED-CORNICHE-WALK"
+                <span> "ممشى الكورنيش، بلا أشخاص"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span {background=#141311; color=#FFFFFF}> "فعلية"
+              <div>
+                <span> "IMG-ED-BALAD-RAWASHEEN"
+                <span> "رواشين البلد · تصوير سعود 2025"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-ED-BALAD-ALLEY"
+                <span> "زقاق في البلد"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span {background=#141311; color=#FFFFFF}> "فعلية"
+              <div>
+                <span> "IMG-ED-BALAD-CORAL-DETAIL"
+                <span> "تفصيل حجر منقبي"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-ED-NORTH-STREET"
+                <span> "شارع سكني في شمال جدة"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-ED-NORTH-VILLAS"
+                <span> "فلل شمال جدة"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-ED-SEA-HAZE"
+                <span> "ضباب البحر الأحمر"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-ED-ROWDAH-TREES"
+                <span> "أشجار حي الروضة"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+          <h2>
+            "المشروع · جاردن الروضة"
+            <span> "6 خانات · من المطوّر حين تتوفر"
+          <div {display=grid; grid-template-columns=repeat(6, minmax(0, 1fr))}>
+            <div>
+              <div {background=#C9C2B3}>
+                <span> "صورة تعبيرية"
+                <span {background=#B48F2E}> "رندر"
+              <div>
+                <span> "IMG-PRJ-ROWDAH-EXT"
+                <span> "واجهة المشروع · رندر المطوّر"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div {background=#C9C2B3}>
+                <span> "صورة تعبيرية"
+                <span {background=#B48F2E}> "رندر"
+              <div>
+                <span> "IMG-PRJ-BLDG-ROSE-FACADE"
+                <span> "واجهة عمارة روز"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div {background=#C9C2B3}>
+                <span> "صورة تعبيرية"
+                <span {background=#B48F2E}> "رندر"
+              <div>
+                <span> "IMG-PRJ-BLDG-YASMIN-FACADE"
+                <span> "واجهة عمارة ياسمين"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span {background=#141311; color=#FFFFFF}> "فعلية"
+              <div>
+                <span> "IMG-PRJ-ROWDAH-ENTRANCE"
+                <span> "مدخل الموقع · تصوير 2026-09"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-PRJ-ROWDAH-LOBBY"
+                <span> "البهو"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span {background=#141311; color=#FFFFFF}> "فعلية"
+              <div>
+                <span> "IMG-PRJ-ROWDAH-PARKING"
+                <span> "المواقف · تصوير 2026-09"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+          <h2>
+            "الوحدات"
+            <span> "12 خانة · تُربط بالنماذج في محرر الوحدة"
+          <div {display=grid; grid-template-columns=repeat(6, minmax(0, 1fr))}>
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-APT-2BR-LIVING"
+                <span> "صالة شقة غرفتين · B, C, D"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-APT-2BR-BEDROOM"
+                <span> "غرفة نوم شقة غرفتين"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-APT-3BR-LIVING"
+                <span> "صالة شقة 3 غرف · RZ-A"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-APT-3BR-MASTER"
+                <span> "غرفة رئيسية 3 غرف"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-APT-KITCHEN-OPEN"
+                <span> "مطبخ مفتوح"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-APT-KITCHEN-CLOSED"
+                <span> "مطبخ مغلق"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-APT-BALCONY"
+                <span> "شرفة"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-APT-BATH"
+                <span> "حمام"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-MAID-ROOM"
+                <span> "غرفة خادمة"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-ROOF-TERRACE"
+                <span> "تراس فيلا الروف · RF"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-ROOF-LIVING"
+                <span> "صالة فيلا الروف"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span> "صورة تعبيرية"
+                <span {background=#FFFFFF}> "تعبيرية"
+              <div>
+                <span> "IMG-UNIT-SMARTHOME-DETAIL"
+                <span> "تفصيل لوحة سمارت هوم"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+          <h2>
+            "تفاصيل وطباعي والمؤسس"
+            <span> "4 خانات"
+          <div {display=grid; grid-template-columns=repeat(6, minmax(0, 1fr))}>
+            <div>
+              <div>
+                <span {font-size=26px; font-weight=800; color=#B48F2E}> "3"
+                <span {position=absolute; background=#F3F1EB}> "طباعي"
+              <div>
+                <span> "IMG-DET-STAIR-LIGHT"
+                <span> "بديل طباعي: رقم الغرف"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span {font-size=22px; font-weight=800; color=#FFFFFF}> "م²"
+                <span {position=absolute; background=#F3F1EB}> "طباعي"
+              <div>
+                <span> "IMG-DET-MATERIALS-FLATLAY"
+                <span> "بديل طباعي: المساحة"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div>
+              <div>
+                <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <span {position=absolute; background=#F3F1EB}> "طباعي"
+              <div>
+                <span> "IMG-DET-WINDOW-SHADOW"
+                <span> "بديل طباعي: الحالة"
+              <div>
+                <span>
+                  "الوسم"
+                  <span>
+                <button type=button> "استبدال"
+            <div {border=2px dashed #B48F2E}>
+              <div {background=#FFFDF6}>
+                <svg svg >
+                <span {font-size=10px; font-weight=800}> "رفع فقط · لا توليد"
+              <div>
+                <span> "IMG-FOUNDER"
+                <span> "المؤسس سعود معيض · صورة حقيقية من المصوّر"
+              <div>
+                <span {color=#8A6C1E}> "فارغة · «من نحن» تعرض بطاقة طباعية حتى الرفع"
+                <button type=button> "رفع"

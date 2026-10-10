@@ -1,0 +1,29 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section>
+        <h1 {font-size=26px; font-weight=800}> "المقارنة"
+        <p {font-size=13px; color=#5E5A52}> "لا وحدات بعد. تُحفظ المقارنة على هذا الجوال 7 أيام، بلا حساب."
+      <main>
+        <div>
+          <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+        <h2 {font-size=20px; font-weight=800}> "قارن حتى 3 وحدات جنباً إلى جنب"
+        <p {font-size=13px; color=#5E5A52}> "السعر، سعر المتر، المساحة، الغرف، الطابق، التسليم، وضريبة التصرفات. اضغط «قارن» على أي بطاقة في النتائج."
+        <div>
+          <a href=Results-M.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=15px; font-weight=800; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}> "اعرض الوحدات المتاحة · 8"
+          <a href=Guide-M.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=14px; font-weight=700}> "أو ابدأ من دليل الأسعار"
+        <div {background=#F3F1EB; font-size=12px}>
+          <span {font-weight=800}> "مقارنة سريعة جاهزة"
+          <a href=Compare-M.html {font-weight=700; text-decoration=none}> "شقق الغرفتين الأربع المتاحة ←"
+          <a href=Compare-M.html {font-weight=700; text-decoration=none}> "فيلتا الروف: روز وياسمين ←"

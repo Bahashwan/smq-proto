@@ -1,0 +1,50 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=358px; background=#F8F7F4; color=#141311}>
+      <article {background=#FFFFFF; border=1px solid #141311; clip-path=polygon(0 0, calc(100% - 14px) 0, 100% 24px, 100% 100%, 0 100%)}>
+        <div>
+          <a href=#project {font-size=12px; font-weight=600; text-decoration=none; color=#141311}>
+            "جاردن الروضة"
+            <span {color=#8A8478; font-weight=400}> "·"
+            "عمارة روز"
+          <span {font-size=12px; font-weight=600; color=#141311}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "متاح"
+        <figure {height=176px; background=#E9E5DB}>
+          <svg svg  {position=absolute; opacity=0.55}>
+          <figcaption {font-size=11px; font-weight=500; color=#141311; background=#F8F7F4; border=1px solid #141311}> "صورة تعبيرية"
+          <span {font-size=11px; color=#5E5A52; background=#F8F7F4}> "IMG-UNIT-APT-3BR · 16:9"
+        <div>
+          <h3 {font-size=19px; font-weight=700}>
+            "شقة نموذج A"
+            <span {font-weight=400; color=#5E5A52}> "· 3 غرف"
+          <p {font-size=13px; color=#5E5A52}> "حي الروضة، جدة · الطابق الثالث · واجهة شمالية"
+          <div>
+            <div>
+              <svg svg aria-label=ريال سعودي {color=#B48F2E}>
+              <span {font-size=30px; font-weight=600}> "690,000"
+            <span {font-size=13px; color=#5E5A52}>
+              <span {font-weight=600; color=#141311}> "4,694"
+              "/ م²"
+        <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <div>
+            <span {font-size=18px; font-weight=600}> "147"
+            <span {font-size=11px; color=#5E5A52}> "م²"
+          <div>
+            <span {font-size=18px; font-weight=600}> "3"
+            <span {font-size=11px; color=#5E5A52}> "غرف نوم"
+          <div>
+            <span {font-size=18px; font-weight=600}> "3"
+            <span {font-size=11px; color=#5E5A52}> "حمامات"
+        <div {font-size=12px; color=#5E5A52}>
+          <span> "غرفة خادمة"
+          <span> "بلكونة"
+          <span> "سمارت هوم"
+          <span> "تسليم الربع الثاني 2027"
+        <div>
+          <a href=https://wa.me/966559997929?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B4%D9%82%D8%A9%20%D9%86%D9%85%D9%88%D8%B0%D8%AC%20A%20%D9%81%D9%8A%20%D8%AC%D8%A7%D8%B1%D8%AF%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%B6%D8%A9 {background=#B48F2E; color=#141311; text-decoration=none; font-size=15px; font-weight=600}>
+            <svg svg >
+            <span> "اسأل عن هذه الوحدة"
+          <label {font-size=13px; font-weight=500}>
+            <input type=checkbox aria-label=أضف إلى المقارنة>
+            <span> "قارن"
+      <p {font-size=11px; color=#8A8478}> "آخر تحديث 2026/10/01"

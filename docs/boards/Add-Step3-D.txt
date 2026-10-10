@@ -1,0 +1,141 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Projects-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <section {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 120px 100%, 0 calc(100% - 69px))}>
+        <div>
+          <div>
+            <span {font-size=13px; font-weight=700; color=#3D3010}>
+              "خدمة مجانية للمُلّاك ·"
+              <a href=Hub-D.html {color=#3D3010}> "تعاون معنا"
+              "› أضف عقارك"
+            <h1 {font-size=40px; font-weight=800}> "أضف عقارك"
+          <span {font-size=14px; color=#3D3010}> "الخطوة الأخيرة. بعد الإرسال يظهر رقم الطلب هنا وفي رسالة واتساب."
+      <main {display=grid; grid-template-columns=minmax(0, 1fr) 340px}>
+        <section {border=1.5px solid #141311}>
+          <div>
+            <h2 {font-size=20px; font-weight=800}> "الصور وبياناتك"
+            <span {font-size=13px; font-weight=700; color=#5E5A52}> "الخطوة 3 من 3"
+          <ol aria-label=خطوات النموذج {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+            <li>
+              <span {background=#141311}>
+              <span {font-size=12px; font-weight=700; color=#5E5A52}> "النوع والموقع ✓"
+            <li>
+              <span {background=#141311}>
+              <span {font-size=12px; font-weight=700; color=#5E5A52}> "التفاصيل والسعر ✓"
+            <li>
+              <span {background=#B48F2E}>
+              <span {font-size=12px; font-weight=800}> "الصور وبياناتك"
+          <div {background=#F3F1EB; font-size=13px}>
+            <span>
+              <strong> "عمارة سكنية للبيع"
+              "· حي النعيم، جدة · 8 وحدات · دخل 312,000 سنوياً · السعر المطلوب"
+              <strong> "4,800,000"
+            <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "تعديل"
+          <form>
+            <div>
+              <label {font-size=14px; font-weight=800}>
+                "صور العقار"
+                <span {font-weight=500; color=#5E5A52; font-size=12px}> "(حتى 10، من الجوال يكفي)"
+              <div {display=grid; grid-template-columns=220px 1fr}>
+                <label {border=1.5px dashed #141311; background=#F8F7F4}>
+                  <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                    <svg svg >
+                  <span {font-size=13px; font-weight=700}> "اسحب الصور هنا أو اختر"
+                  <span {font-size=11px; color=#5E5A52}> "JPG أو PNG · حتى 10 ميجابايت"
+                <input type=file {position=absolute}>
+                <div {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr))}>
+                  <div {background=#E9E5DB}>
+                    <button type=button aria-label=حذف الصورة 1 {position=absolute; border=0; background=#141311; color=#FFFFFF; font-size=14px}> "×"
+                    <span {position=absolute; font-size=9px; font-weight=700; background=#B48F2E}> "الغلاف"
+                  <div {background=#E9E5DB}>
+                    <button type=button aria-label=حذف الصورة 2 {position=absolute; border=0; background=#141311; color=#FFFFFF; font-size=14px}> "×"
+                  <div {background=#E9E5DB}>
+                    <button type=button aria-label=حذف الصورة 3 {position=absolute; border=0; background=#141311; color=#FFFFFF; font-size=14px}> "×"
+                  <div {background=#E9E5DB}>
+                    <button type=button aria-label=حذف الصورة 4 {position=absolute; border=0; background=#141311; color=#FFFFFF; font-size=14px}> "×"
+                  <div {border=1px solid #D4CFC4; font-size=11px; color=#5E5A52}> "+6 متاحة"
+                  <span {font-size=11px; color=#5E5A52}> "الصورة الأولى هي الغلاف. اسحب لإعادة الترتيب. صور الأشخاص تُحذف قبل النشر."
+            <fieldset {border=0}>
+              <legend {font-size=14px; font-weight=800}>
+                "صفتك في العرض"
+                <span {color=#8A6C1E}> "*"
+              <div>
+                <label>
+                  <input type=radio> "مالك"
+                <label>
+                  <input type=radio checked=None> "وكيل"
+                <label>
+                  <input type=radio> "مسوّق"
+                <label>
+                  <input type=radio> "أخرى"
+              <div {display=grid; grid-template-columns=1fr 1fr; border=1.5px solid #141311; background=#F8F7F4}>
+                <label>
+                  "صورة الوكالة الشرعية"
+                  <span {border=1.5px dashed #141311; background=#FFFFFF; font-size=13px; font-weight=700; color=#141311}>
+                    <svg svg > "ارفع PDF أو صورة"
+                <label>
+                  "رقم الوكالة (اختياري)"
+                  <input type=text placeholder=من ناجز>
+                <span {font-size=12px; color=#5E5A52}> "المالك يرفق الصك في الخطوة 2. المسوّق يرفق رقم رخصة فال وعقد وساطة موثّقاً."
+            <div {display=grid; grid-template-columns=1fr 1fr}>
+              <label>
+                "الاسم الكامل"
+                <span {color=#8A6C1E}> "*"
+                <input type=text value=عبدالرحمن الزهراني>
+              <label>
+                "رقم الجوال (واتساب)"
+                <span {color=#8A6C1E}> "*"
+                <input type=tel value=05XXXXXXXX {border=2px solid #B48F2E; background=#FFFDF6}>
+                <span {color=#141311; font-weight=700}>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "الرقم غير مكتمل. 10 أرقام تبدأ بـ 05."
+              <label>
+                "البريد الإلكتروني (اختياري)"
+                <input type=email>
+              <div>
+                "التوقيت المناسب للتواصل"
+                <div {grid-template-columns=1fr 1fr 1fr}>
+                  <label>
+                    <input type=radio checked=None> "صباحاً"
+                  <label>
+                    <input type=radio> "مساءً"
+                  <label>
+                    <input type=radio> "أي وقت"
+            <label {font-size=13px; color=#3A3630}>
+              <input type=checkbox checked=None> "أوافق على تواصل SMQ معي بخصوص هذا العقار، وأقر أني المالك أو مفوّض عنه، وأن المعلومات صحيحة."
+              <a href=Privacy-D.html> "سياسة الخصوصية"
+            <div>
+              <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "السابق"
+              <button type=submit {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+                "أرسل الطلب"
+                <svg svg >
+        <aside {position=sticky}>
+          <div {border=1.5px solid #141311; font-size=13px}>
+            <span {font-size=12px; font-weight=800}> "ماذا يحدث بعد الإرسال"
+            <span> "1 · رقم طلب فوري ورسالة واتساب بنفس الرقم"
+            <span> "2 · مراجعة الصك أو الوكالة خلال 24 ساعة عمل"
+            <span> "3 · موعد تصوير بلا تكلفة"
+            <span> "4 · نشر بوسم «من مالك» وبسعر معلن"
+          <div {background=#F3F1EB; font-size=12px; color=#3A3630}>
+            <span {font-weight=800; color=#141311}> "رقمك لا يظهر على الموقع"
+            <span> "يصل فقط لفريق SMQ. المشترون يراسلوننا نحن، ونعرّفكم ببعض بعد الفرز."
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span> "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية"

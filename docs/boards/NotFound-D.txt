@@ -1,0 +1,38 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Project-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <main {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(420px, 100%), 1fr))}>
+        <div>
+          <span {font-size=160px; font-weight=800; color=#B48F2E}> "404"
+          <h1 {font-size=40px; font-weight=800}>
+            "هذه الصفحة غير موجودة."
+            <br> "الوحدات موجودة."
+          <p {font-size=16px; color=#5E5A52}> "ربما تغيّر الرابط أو بيعت الوحدة. ابدأ من ميزانيتك وسنعرض لك ما هو متاح الآن."
+          <div>
+            <a href=Results-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=14px; font-weight=700}> "حتى 500 ألف"
+            <a href=Results-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=14px; font-weight=700}> "حتى 700 ألف"
+            <a href=Results-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=14px; font-weight=700}> "حتى مليون"
+            <a href=Home-D.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "الصفحة الرئيسية"
+        <div>
+          <img src=assets/logo-mark-gold.png alt= {opacity=0.12}>
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span> "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية"

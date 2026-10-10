@@ -1,0 +1,350 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "غرفة التحالف · الأعضاء"
+              <span {font-size=13px; color=#5E5A52}> "12 عضواً موثّقاً · الميزان: ما أعطى (ذهبي) مقابل ما استقبل (أسود) · سرعة الرد ضمن ساعات الدوام"
+            <div>
+              <input type=search placeholder=ابحث باسم المكتب أو الحي aria-label=بحث {font-size=13px; border=1.5px solid #141311; background=#FFFFFF; width=240px}>
+              <select aria-label=الجهة {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "كل الجهات"
+                <option> "شمال"
+                <option> "وسط"
+                <option> "شرق"
+                <option> "غرب"
+                <option> "جنوب"
+              <button type=button> "تصدير CSV"
+          <nav aria-label=أقسام غرفة التحالف>
+            <a href=Admin-Alliance-D.html> "نظرة عامة"
+            <a href=Admin-AllianceApplications-D.html>
+              "طلبات الانضمام"
+              <i> "4"
+            <a href=Admin-AllianceMembers-D.html>
+              "الأعضاء"
+              <i> "12"
+            <a href=Admin-AllianceRadar-D.html> "الرادار"
+            <a href=Admin-AllianceRequests-D.html>
+              "الطلبات والمطابقات"
+              <i> "5"
+            <a href=Admin-AllianceReferrals-D.html>
+              "الإحالات والصفقات"
+              <i> "3"
+            <a href=Admin-AllianceReport-D.html> "التقرير الشهري"
+            <a href=Admin-AllianceSettings-D.html> "الميثاق والإعدادات"
+          <table>
+            <thead>
+              <tr>
+                <th> "المكتب"
+                <th> "الجهة"
+                <th> "الأحياء"
+                <th> "التخصص"
+                <th> "الرخصة"
+                <th> "الميزان · أعطى / استقبل"
+                <th> "متوسط الرد"
+                <th>
+            <tbody>
+              <tr>
+                <td>
+                  <strong> "مكتب أ"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "شمال"
+                <td>
+                  <span> "أبحر الشمالية"
+                  <span> "الشاطئ"
+                  <span> "المحمدية"
+                <td>
+                  <span> "فلل"
+                  <span> "عماير سكنية"
+                  <span> "أراضي مطورة"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/06/30"
+                <td>
+                  <span>
+                    <i> "10"
+                    <b> "9"
+                <td>
+                  <strong> "1 س 40 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب ب"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "وسط"
+                <td>
+                  <span> "الروضة"
+                <td>
+                  <span> "شقق"
+                  <span> "عماير سكنية"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/02/14"
+                <td>
+                  <span>
+                    <i> "4"
+                    <b> "12"
+                <td>
+                  <strong> "3 س 05 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب ج"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "شمال"
+                <td>
+                  <span> "الشاطئ"
+                <td>
+                  <span> "شقق"
+                  <span> "مكاتب"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/09/01"
+                <td>
+                  <span>
+                    <i> "6"
+                    <b> "6"
+                <td>
+                  <strong> "2 س 20 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب د"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "شمال"
+                <td>
+                  <span> "المحمدية"
+                <td>
+                  <span> "فلل"
+                  <span> "منتجعات وشاليهات"
+                <td>
+                  <span> "تنتهي بعد 24 يوماً"
+                  <br>
+                  <span {color=#8A6C1E; font-weight=700}> "2026/11/03 · ذُكِّر"
+                <td>
+                  <span>
+                    <i> "3"
+                    <b> "5"
+                <td>
+                  <strong> "4 س 50 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب هـ"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "وسط"
+                <td>
+                  <span> "الصفا"
+                <td>
+                  <span> "شقق"
+                  <span> "عماير تجارية"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/04/22"
+                <td>
+                  <span>
+                    <i> "5"
+                    <b> "8"
+                <td>
+                  <strong> "1 س 55 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب و"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "وسط"
+                <td>
+                  <span> "النعيم"
+                <td>
+                  <span> "عماير سكنية"
+                  <span> "أراضي خام"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/01/10"
+                <td>
+                  <span>
+                    <i> "2"
+                    <b> "4"
+                <td>
+                  <strong> "6 س 10 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب ز"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "شرق"
+                <td>
+                  <span> "السامر"
+                <td>
+                  <span> "شقق"
+                  <span> "فلل"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/08/08"
+                <td>
+                  <span>
+                    <i> "3"
+                    <b> "3"
+                <td>
+                  <strong> "2 س 40 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب ح"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "غرب"
+                <td>
+                  <span> "الحمراء"
+                <td>
+                  <span> "مكاتب"
+                  <span> "عماير تجارية"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/05/19"
+                <td>
+                  <span>
+                    <i> "8"
+                    <b> "2"
+                <td>
+                  <strong> "1 س 10 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب ط"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "جنوب"
+                <td>
+                  <span> "الفيصلية"
+                <td>
+                  <span> "شقق"
+                  <span> "مستودعات"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/03/30"
+                <td>
+                  <span>
+                    <i> "4"
+                    <b> "3"
+                <td>
+                  <strong> "1 س 12 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب ي"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "وسط"
+                <td>
+                  <span> "الروضة"
+                <td>
+                  <span> "أراضي مطورة"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/07/07"
+                <td>
+                  <span>
+                    <i> "1"
+                    <b> "7"
+                <td>
+                  <strong {color=#8A6C1E}> "9 س 30 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr>
+                <td>
+                  <strong> "مكتب ك"
+                  <br>
+                  <span {color=#5E5A52}> "منذ أكتوبر 2026"
+                <td> "شمال"
+                <td>
+                  <span> "أبحر الشمالية"
+                <td>
+                  <span> "فلل"
+                <td>
+                  <span> "موثّقة"
+                  <br>
+                  <span {color=#5E5A52}> "حتى 2027/10/12"
+                <td>
+                  <span>
+                    <i> "7"
+                    <b> "6"
+                <td>
+                  <strong> "2 س 00 د"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+              <tr {color=#5E5A52}>
+                <td>
+                  <strong {color=#141311}> "مكتب ل"
+                  <br> "موقوف 2026/10/05"
+                <td> "شمال"
+                <td>
+                  <span> "المحمدية"
+                <td>
+                  <span> "شقق"
+                  <span> "صناعية"
+                <td>
+                  <span> "موقوف"
+                  <br> "بلا رد 30 يوماً"
+                <td>
+                  <span>
+                    <i {background=#D4CFC4}> "1"
+                    <b {background=#D4CFC4}> "8"
+                <td>
+                  <strong> "بلا رد"
+                <td>
+                  <a href=Admin-AllianceMember-D.html> "الملف"
+          <span {font-size=12px; color=#5E5A52}> "الميزان يرتّب من يستقبل أولاً حين يغطي الحي أكثر من مكتب: المعطي أكثر يتقدّم. الأسماء مواضع للتصميم (مكتب أ، ب). مكتب ل موقوف لانعدام الرد 30 يوماً وفق الميثاق [للتأكيد]؛ لا يظهر في الدليل ولا يستقبل طلبات."

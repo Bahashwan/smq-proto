@@ -1,0 +1,311 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "ماذا يبحث الزوار"
+              <span {font-size=13px; color=#5E5A52}> "كل عملية بحث بالميزانية والفلاتر تُسجَّل بلا بيانات شخصية · 30 يوماً · 8,420 بحثاً من 5,112 زائراً"
+            <div>
+              <div aria-label=الفترة {border=1.5px solid #141311}>
+                <button type=button {font-size=12px; font-weight=700; border=0; background=#FFFFFF}> "7 أيام"
+                <button type=button {font-size=12px; font-weight=700; border=0; background=#141311; color=#FFFFFF}> "30 يوماً"
+                <button type=button {font-size=12px; font-weight=700; border=0; background=#FFFFFF}> "90 يوماً"
+              <select aria-label=المصدر {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "كل المصادر"
+                <option> "سناب شات"
+                <option> "تيك توك"
+                <option> "واتساب"
+                <option> "إنستغرام"
+                <option> "قوقل"
+                <option> "مباشر"
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "تصدير CSV"
+          <section {background=#FFFFFF; border=1.5px solid #141311}>
+            <h2 {font-size=16px; font-weight=800}> "القمع · من الزيارة إلى واتساب"
+            <div {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr)); height=120px}>
+              <div>
+                <span {font-size=12px; font-weight=800}> "5,112 · 100%"
+                <span {background=#141311}>
+              <div>
+                <span {font-size=12px; font-weight=800}> "3,580 · 70%"
+                <span {background=#141311}>
+              <div>
+                <span {font-size=12px; font-weight=800}> "2,046 · 40%"
+                <span {background=#141311}>
+              <div>
+                <span {font-size=12px; font-weight=800}> "614 · 12%"
+                <span {background=#141311}>
+              <div>
+                <span {font-size=12px; font-weight=800; color=#8A6C1E}> "389 · 7.6%"
+                <span {background=#B48F2E}>
+            <div {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr)); font-size=11px; color=#5E5A52}>
+              <span> "زيارة"
+              <span> "بحث بالميزانية"
+              <span> "فتح وحدة"
+              <span> "مقارنة أو ثانية وحدة"
+              <span> "نقرة واتساب أو اتصال"
+            <span {font-size=12px; color=#5E5A52}> "أكبر تسرب بين البحث وفتح الوحدة: 43% من الباحثين لم يفتحوا أي وحدة. 44% منهم كانت نتيجتهم صفر."
+          <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(400px, 100%), 1fr))}>
+            <section {background=#FFFFFF; border=1.5px solid #141311}>
+              <div>
+                <h2 {font-size=16px; font-weight=800}> "الميزانيات المبحوثة"
+                <span {font-size=11px; color=#5E5A52}> "الوسيط 650 ألف · المتوسط 712 ألف"
+              <div aria-label=توزيع الميزانيات، النسب: 6، 14، 22، 27، 15، 8، 8 {height=150px}>
+                <div>
+                  <span {background=#141311}>
+                <div>
+                  <span {background=#141311}>
+                <div>
+                  <span {background=#141311}>
+                <div>
+                  <span {font-size=11px; font-weight=800}> "27%"
+                  <span {background=#B48F2E}>
+                <div>
+                  <span {background=#141311}>
+                <div>
+                  <span {background=#141311}>
+                <div>
+                  <span {background=#141311}>
+              <div {font-size=10px; color=#5E5A52}>
+                <span> "<400"
+                <span> "400 إلى 500"
+                <span> "500 إلى 600"
+                <span {font-weight=800; color=#141311}> "600 إلى 700"
+                <span> "700 إلى 850"
+                <span> "850 إلى مليون"
+                <span> ">مليون"
+              <div {background=#F3F1EB; font-size=12px}>
+                <strong> "فجوة المعروض:"
+                "16% يبحثون بين 850 ألف ومليون ولا توجد وحدة في هذا النطاق (أقرب وحدة: 690 ألف ثم 1.6 مليون)."
+            <section {background=#FFFFFF; border=1.5px solid #141311}>
+              <div>
+                <h2 {font-size=16px; font-weight=800}> "الأحياء المطلوبة مقابل المعروض"
+                <span {font-size=11px; color=#5E5A52}> "الذهبي = طلب بلا وحدات"
+              <div>
+                <div {display=grid; grid-template-columns=110px 1fr 100px; font-size=13px}>
+                  <span {font-weight=700}> "الروضة"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {font-size=12px; color=#5E5A52}> "38% · 10 وحدات"
+                <div {display=grid; grid-template-columns=110px 1fr 100px; font-size=13px}>
+                  <span {font-weight=700}> "أبحر الشمالية"
+                  <div {background=#F3F1EB}>
+                    <span {background=#B48F2E}>
+                  <span {font-size=12px; color=#5E5A52}> "19% · 0"
+                <div {display=grid; grid-template-columns=110px 1fr 100px; font-size=13px}>
+                  <span {font-weight=700}> "الفيصلية"
+                  <div {background=#F3F1EB}>
+                    <span {background=#B48F2E}>
+                  <span {font-size=12px; color=#5E5A52}> "14% · 0"
+                <div {display=grid; grid-template-columns=110px 1fr 100px; font-size=13px}>
+                  <span {font-weight=700}> "الشاطئ"
+                  <div {background=#F3F1EB}>
+                    <span {background=#B48F2E}>
+                  <span {font-size=12px; color=#5E5A52}> "11% · 0"
+                <div {display=grid; grid-template-columns=110px 1fr 100px; font-size=13px}>
+                  <span {font-weight=700}> "النعيم"
+                  <div {background=#F3F1EB}>
+                    <span {background=#B48F2E}>
+                  <span {font-size=12px; color=#5E5A52}> "6% · 0"
+                <div {display=grid; grid-template-columns=110px 1fr 100px; font-size=13px}>
+                  <span {font-weight=700}> "كل جدة"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {font-size=12px; color=#5E5A52}> "12%"
+              <span {font-size=12px; color=#5E5A52}> "أبحر الشمالية هي أول حي يستحق مشروعاً ثانياً بالأرقام: 970 بحثاً في 30 يوماً بلا نتيجة واحدة."
+            <section {background=#FFFFFF; border=1.5px solid #141311}>
+              <h2 {font-size=16px; font-weight=800}> "الغرف والنوع والمميزات"
+              <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+                <div {font-size=12px}>
+                  <span {font-weight=700; color=#5E5A52}> "الغرف"
+                  <div {display=grid; grid-template-columns=36px 1fr 36px}>
+                    <span> "الكل"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "31%"
+                  <div {display=grid; grid-template-columns=36px 1fr 36px}>
+                    <span> "2"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "24%"
+                  <div {display=grid; grid-template-columns=36px 1fr 36px}>
+                    <span {font-weight=800}> "3"
+                    <div {background=#F3F1EB}>
+                      <span {background=#B48F2E}>
+                    <span {color=#5E5A52}> "33%"
+                  <div {display=grid; grid-template-columns=36px 1fr 36px}>
+                    <span> "4"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "9%"
+                  <div {display=grid; grid-template-columns=36px 1fr 36px}>
+                    <span> "5+"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "3%"
+                <div {font-size=12px}>
+                  <span {font-weight=700; color=#5E5A52}> "نوع الوحدة"
+                  <div {display=grid; grid-template-columns=50px 1fr 36px}>
+                    <span {font-weight=800}> "شقة"
+                    <div {background=#F3F1EB}>
+                      <span {background=#B48F2E}>
+                    <span {color=#5E5A52}> "74%"
+                  <div {display=grid; grid-template-columns=50px 1fr 36px}>
+                    <span> "فيلا"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "14%"
+                  <div {display=grid; grid-template-columns=50px 1fr 36px}>
+                    <span> "روف"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "8%"
+                  <div {display=grid; grid-template-columns=50px 1fr 36px}>
+                    <span> "دوبلكس"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "4%"
+                <div {font-size=12px}>
+                  <span {font-weight=700; color=#5E5A52}> "مفاتيح المميزات المفعّلة"
+                  <div {display=grid; grid-template-columns=64px 1fr 36px}>
+                    <span {font-weight=800}> "بلكونة"
+                    <div {background=#F3F1EB}>
+                      <span {background=#B48F2E}>
+                    <span {color=#5E5A52}> "41%"
+                  <div {display=grid; grid-template-columns=64px 1fr 36px}>
+                    <span> "خادمة"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "29%"
+                  <div {display=grid; grid-template-columns=64px 1fr 36px}>
+                    <span> "سمارت"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "18%"
+                  <div {display=grid; grid-template-columns=64px 1fr 36px}>
+                    <span> "سائق"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "12%"
+                  <div {display=grid; grid-template-columns=64px 1fr 36px}>
+                    <span> "سطح"
+                    <div {background=#F3F1EB}>
+                      <span {background=#141311}>
+                    <span {color=#5E5A52}> "7%"
+            <section {background=#FFFFFF; border=1.5px solid #141311}>
+              <div>
+                <h2 {font-size=16px; font-weight=800}> "عمليات بحث بلا نتائج · الأكثر تكراراً"
+                <span {font-size=11px; color=#5E5A52}> "1,573 بحثاً · 19%"
+              <div {font-size=13px}>
+                <div {display=grid; grid-template-columns=1fr 70px 110px}>
+                  <span> "أبحر الشمالية · شقة · 3 غرف · حتى 700 ألف"
+                  <span {font-weight=800}> "412"
+                  <span {font-size=11px; color=#5E5A52}> "تخفيف: الحي"
+                <div {display=grid; grid-template-columns=1fr 70px 110px}>
+                  <span> "الروضة · شقة · 4 غرف · أي ميزانية"
+                  <span {font-weight=800}> "287"
+                  <span {font-size=11px; color=#5E5A52}> "تخفيف: الغرف"
+                <div {display=grid; grid-template-columns=1fr 70px 110px}>
+                  <span> "الفيصلية · أي نوع · حتى 500 ألف"
+                  <span {font-weight=800}> "231"
+                  <span {font-size=11px; color=#5E5A52}> "تخفيف: الحي"
+                <div {display=grid; grid-template-columns=1fr 70px 110px}>
+                  <span> "الروضة · شقة · حتى 420 ألف"
+                  <span {font-weight=800}> "196"
+                  <span {font-size=11px; color=#5E5A52}> "تخفيف: الميزانية"
+                <div {display=grid; grid-template-columns=1fr 70px 110px}>
+                  <span> "الروضة · شقة · 3 غرف · غرفة سائق"
+                  <span {font-weight=800}> "148"
+                  <span {font-size=11px; color=#5E5A52}> "تخفيف: السائق"
+              <span {font-size=12px; color=#5E5A52}> "62% من هؤلاء ضغطوا أحد اقتراحات التخفيف، و9% أرسلوا طلباً على واتساب."
+            <section {background=#FFFFFF; border=1.5px solid #141311}>
+              <h2 {font-size=16px; font-weight=800}> "كيف يتصفحون"
+              <div {display=grid; grid-template-columns=repeat(2, minmax(0, 1fr)); font-size=12px}>
+                <div>
+                  <span {font-weight=700; color=#5E5A52}> "الترتيب المستخدم"
+                  <span>
+                    <span> "السعر، الأقل أولاً (افتراضي)"
+                    <strong> "71%"
+                  <span>
+                    <span> "سعر المتر"
+                    <strong> "13%"
+                  <span>
+                    <span> "المساحة"
+                    <strong> "11%"
+                  <span>
+                    <span> "التسليم"
+                    <strong> "5%"
+                <div>
+                  <span {font-weight=700; color=#5E5A52}> "العرض والأدوات"
+                  <span>
+                    <span> "شبكة"
+                    <strong> "88%"
+                  <span>
+                    <span> "خريطة"
+                    <strong> "12%"
+                  <span>
+                    <span> "استخدموا المقارنة"
+                    <strong> "12%"
+                  <span>
+                    <span> "فتحوا دليل الأسعار"
+                    <strong> "23%"
+              <span {font-size=12px; font-weight=700; color=#5E5A52}> "ساعات البحث · حسب توقيت جدة"
+              <div aria-label=توزيع عمليات البحث على ساعات اليوم، الذروة بين 9 و11 مساءً>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#141311}>
+                <span {background=#B48F2E}>
+                <span {background=#B48F2E}>
+                <span {background=#B48F2E}>
+                <span {background=#141311}>
+              <div {font-size=10px; color=#5E5A52}>
+                <span> "0"
+                <span> "6"
+                <span> "12"
+                <span> "18"
+                <span {font-weight=800; color=#141311}> "21 إلى 23 الذروة"
+              <span {font-size=12px; color=#5E5A52}> "41% من نقرات واتساب تصل خارج ساعات العمل. الرد التلقائي المسائي مهم."

@@ -1,0 +1,314 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=1440px; background=#FFFFFF; color=#141311}>
+      <div>
+        <h1 {font-size=32px; font-weight=800}> "ورقة المكونات 2 · مكونات الإدارة"
+        <span {font-size=12px; color=#5E5A52}> "تكمل ورقة المكونات الأولى · نفس الرموز: لا زوايا، لا ظلال، لا تدرّجات، الخطأ بالذهبي، الحالة بالشكل والكلمة"
+      <section>
+        <h2> "1 · صف جدول البيانات"
+        <div {border=1.5px solid #141311}>
+          <div {background=#F3F1EB; font-size=11px; font-weight=800; color=#5E5A52}>
+            <span>
+              <input type=checkbox aria-label=تحديد الكل>
+            <span> "الرمز ↕"
+            <span> "الوحدة"
+            <span> "السعر ↓"
+            <span> "الحالة"
+            <span>
+          <div>
+            <span>
+              <input type=checkbox aria-label=تحديد>
+            <span {font-weight=800}> "RZ-A"
+            <span> "روز · شقة · 3 غرف · 147.00 م²"
+            <span {font-weight=800}> "690,000"
+            <span>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+            <a href=Admin-UnitEditor-D.html {font-size=12px; font-weight=800; text-decoration=none}> "تحرير"
+            <span> "default"
+          <div {background=#F8F7F4}>
+            <span>
+              <input type=checkbox aria-label=تحديد>
+            <span {font-weight=800}> "RZ-B"
+            <span> "روز · شقة · غرفتان · 116.90 م²"
+            <span {font-weight=800}> "555,000"
+            <span>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+            <a href=Admin-UnitEditor-D.html {font-size=12px; font-weight=800; text-decoration=none}> "تحرير"
+            <span> "hover · خلفية كريمية"
+          <div {background=#F3F1EB}>
+            <span>
+              <input type=checkbox checked=None aria-label=تحديد>
+            <span {font-weight=800}> "YS-A"
+            <span> "ياسمين · شقة · غرفتان · 109.35 م²"
+            <span {font-weight=800}> "555,000"
+            <span>
+              <span {background=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "مباع"
+            <a href=Admin-UnitEditor-D.html {font-size=12px; font-weight=800; text-decoration=none}> "تحرير"
+            <span> "selected · شريط ذهبي يمين"
+          <div>
+            <span>
+              <input type=checkbox aria-label=تحديد>
+            <span {font-weight=800}> "YS-B"
+            <span> "ياسمين · شقة · غرفتان · 106.05 م²"
+            <span {font-weight=800}> "555,000"
+            <span>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+            <a href=Admin-UnitEditor-D.html {font-size=12px; font-weight=800; text-decoration=none}> "تحرير"
+            <span> "focus (لوحة المفاتيح)"
+          <div {background=#FFFDF6}>
+            <span>
+              <input type=checkbox aria-label=تحديد>
+            <span {font-weight=800}> "RZ-C"
+            <span> "روز · شقة · غرفتان · 80.35 م²"
+            <span {font-weight=800; color=#8A6C1E}>
+              "499,000"
+              <span {font-size=11px; font-weight=600}> "كان 510,000"
+            <span>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+            <a href=Admin-UnitEditor-D.html {font-size=12px; font-weight=800; text-decoration=none}> "تحرير"
+            <span> "changed · معاينة الاستيراد"
+          <div {color=#5E5A52}>
+            <span>
+              <input type=checkbox disabled=None aria-label=تحديد>
+            <span {font-weight=800}> "RZ-D"
+            <span> "روز · شقة · غرفتان · 82.60 م² · مخفية من الموقع"
+            <span {font-weight=800}> "459,000"
+            <span>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+            <a href=Admin-UnitEditor-D.html {font-size=12px; font-weight=800; text-decoration=none}> "تحرير"
+            <span> "hidden · نص باهت، الحالة تبقى بالشكل"
+      <div {display=grid; grid-template-columns=1fr 1fr}>
+        <section>
+          <h2> "2 · مجموعة حقول"
+          <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <header {background=#F3F1EB; font-size=14px; font-weight=800}>
+              "السعر"
+              <span {font-size=11px; font-weight=700; color=#5E5A52}> "3 حقول · 1 للتأكيد"
+            <div {display=grid; grid-template-columns=1fr 1fr}>
+              <label>
+                "من Excel"
+                <input value=690,000 {border=1px solid #B48F2E; background=#F3F1EB}>
+                <span {font-weight=600}> "يُستبدل عند الاستيراد"
+              <label>
+                "إدارة فقط"
+                <input value=الثالث {border=1.5px solid #141311}>
+              <label>
+                "للتأكيد"
+                <input value=غير محدد [للتأكيد] {border=1px solid #B48F2E; background=#FFFDF6}>
+                <span {font-weight=600; color=#8A6C1E}> "يبقى بالوسم على الموقع"
+              <label>
+                "محسوب"
+                <input value=4,694 / م² {border=1.5px solid #D4CFC4; background=#F8F7F4; color=#5E5A52}>
+                <span {font-weight=600}> "لا يُحرَّر"
+              <label>
+                "خطأ"
+                <input value=690.000,00 {border=2px solid #B48F2E; background=#FFFDF6}>
+                <span {color=#141311}>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "اكتب الرقم بالأرقام الغربية بلا فواصل عشرية: 690000"
+        <section>
+          <div>
+            <h2> "3 · المفتاح"
+            <div {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr))}>
+              <div>
+                <span> "on"
+                <span>
+              <div>
+                <span> "off"
+                <span>
+              <div>
+                <span> "focus"
+                <span>
+              <div>
+                <span> "disabled"
+                <span>
+              <div>
+                <span> "with label"
+                <span {font-size=12px; font-weight=700}>
+                  "ظاهر"
+                  <span>
+            <span> "المقبض سداسي: ذهبي يسار = مفعّل، أسود يمين = مطفأ. الكلمة بجانب المفتاح إجبارية إذا لم يكن له عنوان."
+          <div>
+            <h2> "4 · مقبض السحب"
+            <div {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr))}>
+              <div>
+                <span> "default"
+                <span {color=#5E5A52}>
+                  <svg svg >
+              <div>
+                <span> "hover"
+                <span {color=#141311; background=#F3F1EB}>
+                  <svg svg >
+              <div>
+                <span> "dragging"
+                <span {color=#141311; background=#B48F2E}>
+                  <svg svg >
+              <div>
+                <span> "drop target"
+                <span {border=1.5px dashed #141311; background=#F3F1EB}>
+                  <span {position=absolute; background=#B48F2E}>
+          <div>
+            <h2> "5 · حبّة الحالة"
+            <div>
+              <span {background=#141311; color=#FFFFFF}> "منشور"
+              <span {border=1.5px solid #141311}> "مسودة"
+              <span {border=1.5px solid #B48F2E; background=#FFFDF6; color=#8A6C1E}> "يحتاج تأكيداً"
+              <span {border=1.5px solid #B48F2E; color=#8A6C1E}> "بلا رد"
+              <span {background=#141311; color=#FFFFFF}> "تم الرد"
+              <span {border=1.5px solid #5E5A52; color=#5E5A52}> "مغلق"
+              <span {border=1.5px solid #141311}> "بانتظار الموافقة"
+              <span {background=#B48F2E; color=#141311}> "3"
+              <span {background=#F3F1EB}> "من Excel"
+              <span {border=1px solid #D4CFC4; font-weight=600}> "مخفية"
+            <span> "حالات الوحدة (متاح، محجوز، مباع) لا تُكتب كحبّة؛ تبقى سداسياً مع الكلمة كما في الورقة الأولى."
+      <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+        <section>
+          <h2> "6 · رفع ملف"
+          <div>
+            <div>
+              <span> "empty"
+              <div {border=1.5px dashed #141311; background=#F8F7F4; font-size=12px; font-weight=700}>
+                <svg svg > "اسحب صورة أو"
+                <span {color=#8A6C1E}> "اختر ملفاً"
+                <span {font-size=10px; font-weight=600; color=#5E5A52}> "JPG أو PNG · حتى 10 MB · 2400 عرضاً على الأقل"
+            <div>
+              <span> "drag over"
+              <div {border=2px solid #B48F2E; background=#FFFDF6; font-size=12px; font-weight=800}> "أفلت هنا"
+            <div>
+              <span> "uploading 64%"
+              <div {border=1.5px solid #141311; font-size=12px; font-weight=700}>
+                <span>
+                  <span> "rz-a-living.jpg"
+                  <span> "64%"
+                <span {background=#E9E5DB}>
+                  <span {position=absolute; background=#B48F2E}>
+            <div>
+              <span> "done · tier chosen"
+              <div {border=1.5px solid #141311; font-size=12px; font-weight=700}>
+                <span {background=#3A3630}>
+                <span>
+                  "rz-a-living.jpg · 2400×1600"
+                  <span {font-size=10px; font-weight=600; color=#5E5A52}> "فعلية · الوسم مطفأ تلقائياً"
+                <button type=button {font-size=11px}> "إزالة"
+            <div>
+              <span> "error"
+              <div {border=2px solid #B48F2E; background=#FFFDF6; font-size=12px; font-weight=700}>
+                <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "الصورة 1200 عرضاً فقط. نحتاج 2400 على الأقل للهيرو."
+        <section>
+          <h2> "7 · تبويب العربية / English"
+          <div>
+            <div>
+              <span> "default · AR active"
+              <div {border=1.5px solid #141311}>
+                <button type=button> "العربية"
+                <button type=button> "English"
+            <div>
+              <span> "EN active · LTR fields below"
+              <div {border=1.5px solid #141311}>
+                <button type=button> "العربية"
+                <button type=button> "English"
+            <div>
+              <span> "EN has empty fields"
+              <div {border=1.5px solid #141311}>
+                <button type=button> "العربية"
+                <button type=button>
+                  "English"
+                  <span {font-size=10px; border=1.5px solid #B48F2E; color=#8A6C1E}> "4 فارغة"
+            <div>
+              <span> "focus"
+              <div {border=1.5px solid #141311}>
+                <button type=button> "العربية"
+                <button type=button> "English"
+            <span> "التبويب يبدّل لغة الحقول في المحرر كله، لا لغة اللوحة. النص الإنجليزي الفارغ يرث العربي على الموقع مع وسم «EN missing» في اللوحة فقط."
+        <section>
+          <h2> "8 · شريط الحفظ"
+          <div>
+            <div>
+              <span> "clean"
+              <div {background=#141311; color=#FFFFFF; font-size=12px; font-weight=700}>
+                <span {color=#C9C2B3}> "لا تغييرات غير محفوظة"
+                <button type=button disabled=None {border=0; background=#3A3630; color=#C9C2B3; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "حفظ"
+            <div>
+              <span> "dirty"
+              <div {background=#141311; color=#FFFFFF; font-size=12px; font-weight=700}>
+                <span>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "3 حقول غير محفوظة"
+                <span>
+                  <button type=button {border=1.5px solid #C9C2B3; background=transparent; color=#FFFFFF; font-size=12px; font-weight=700}> "تجاهل"
+                  <button type=button {border=1.5px solid #FFFFFF; background=#FFFFFF; color=#141311; font-size=12px; font-weight=800}> "مسودة"
+                  <button type=button {border=0; background=#B48F2E; color=#141311; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "نشر"
+            <div>
+              <span> "saving"
+              <div {background=#141311; color=#FFFFFF; font-size=12px; font-weight=700}>
+                <span>
+                  <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "يُحفظ…"
+                <button type=button disabled=None {border=0; background=#3A3630; color=#C9C2B3; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "نشر"
+            <div>
+              <span> "just published"
+              <div {background=#141311; color=#FFFFFF; font-size=12px; font-weight=700}>
+                <span>
+                  <span {background=#B48F2E; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                    <svg svg > "نُشر الآن ·"
+                  <a href=#x {color=#B48F2E}> "افتح"
+                <button type=button {border=1.5px solid #C9C2B3; background=transparent; color=#FFFFFF; font-size=12px; font-weight=700}> "تراجع"
+            <div>
+              <span> "error"
+              <div {background=#141311; color=#FFFFFF; font-size=12px; font-weight=700}>
+                <span {color=#B48F2E}>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "لم يُحفظ: حقل السعر فارغ"
+                <button type=button {border=0; background=#B48F2E; color=#141311; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "اذهب للحقل"
+      <div {display=grid; grid-template-columns=1.3fr 1fr 1fr}>
+        <section>
+          <h2> "9 · الدُّرج الجانبي"
+          <div {height=300px; background=#E9E5DB; border=1.5px solid #D4CFC4}>
+            <div {position=absolute; background=#3A3630; opacity=.5}>
+            <aside aria-label=تفاصيل الطلب {position=absolute; background=#FFFFFF}>
+              <header {font-size=13px; font-weight=800}>
+                "تفاصيل الطلب SMQ-8F3A2"
+                <button type=button aria-label=إغلاق {border=1.5px solid #141311; background=#FFFFFF; font-size=15px; font-weight=800}> "×"
+              <div {font-size=12px; color=#3A3630}> "المحتوى يتدرّج من اليمين، يُفتح من صف الجدول، ويُغلق بـ Esc أو بالنقر على التعتيم أو بالزر. العرض 420 إلى 520 على سطح المكتب، وملء الشاشة على الجوال كورقة سفلية."
+              <footer>
+                <button type=button {border=0; background=#B48F2E; color=#141311; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "علّم كمردود"
+                <button type=button> "إغلاق"
+          <span> "يفتح من اليسار لأن المحتوى يمتد يميناً في RTL: الصف الذي أتى منه يبقى مرئياً."
+        <section>
+          <h2> "10 · الحوار"
+          <div {height=300px; background=#3A3630}>
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <span {font-size=15px; font-weight=800}> "تغيير الحالة إلى «مباع»؟"
+              <p {font-size=12px; color=#3A3630}> "تختفي YS-B من النتائج ودليل الأسعار فوراً. تبقى في صفحة المشروع بوسم «مباع»."
+              <label>
+                "تاريخ البيع"
+                <input value=2026-10-10>
+              <div>
+                <button type=button {border=0; background=#141311; color=#FFFFFF; font-size=12px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "تأكيد البيع"
+                <button type=button> "إلغاء"
+          <span> "حدّ ذهبي علوي 6px يميّزه عن الدُّرج. المدمّر يطلب كتابة الرمز (القطع الصغيرة، 3)."
+        <section>
+          <h2> "11 · التوست"
+          <div>
+            <div>
+              <span> "success"
+              <div {background=#141311; color=#FFFFFF; font-size=12px; font-weight=700}>
+                <span {background=#B48F2E; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg >
+                <span> "حُفظت الوحدة"
+                <span> "×"
+            <div>
+              <span> "info + undo"
+              <div {background=#141311; color=#FFFFFF; font-size=12px; font-weight=700}>
+                <span>
+                  "حُذف السؤال ·"
+                  <span {color=#B48F2E}> "تراجع"
+                <span> "×"
+            <div>
+              <span> "error"
+              <div {background=#FFFDF6; border=2px solid #B48F2E; font-size=12px; font-weight=700}>
+                <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                <span> "لم يُحفظ"
+                <span {color=#8A6C1E}> "أعد"
+            <div>
+              <span> "loading (persistent)"
+              <div {background=#141311; color=#FFFFFF; font-size=12px; font-weight=700}>
+                <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <span> "يستورد 10 صفوف…"
+          <span> "يظهر أسفل يسار الشاشة، واحد في كل مرة، 6 ثوانٍ، بلا حركة سوى ظهور واختفاء."

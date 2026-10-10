@@ -1,0 +1,129 @@
+<html lang=en dir=ltr>
+  <body>
+    <div dir=ltr {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=EN-Home-M.html aria-label=SMQ Real Estate, home {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=SMQ Real Estate>
+        <div>
+          <a href=Unit-M.html lang=ar aria-label=العربية {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "عربي"
+          <a href=https://wa.me/966559997929 aria-label=Chat on WhatsApp {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=Menu {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <nav aria-label=Breadcrumb {font-size=11px; color=#5E5A52}>
+        <a href=EN-Card-M.html {text-decoration=none}> "Jeddah"
+        <span> "/"
+        <a href=Guide-M.html {text-decoration=none}> "Al Rawdah"
+        <span> "/"
+        <a href=Project-M.html {text-decoration=none}> "Garden Al Rawdah"
+        <span> "/"
+        <span {color=#141311; font-weight=700}> "Model A · Rose"
+      <section>
+        <div>
+          <figure {height=240px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% calc(100% - 72px), calc(100% - 42px) 100%, 0 100%)}>
+            <svg svg  {position=absolute; opacity=0.55}>
+            <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "Illustrative image"
+          <span {position=absolute; background=#B48F2E; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "For sale"
+        <div {display=grid; grid-template-columns=repeat(4, minmax(0, 1fr))}>
+          <button type=button aria-label=Living room {border=2px solid #141311; background=#E9E5DB}>
+          <button type=button aria-label=Kitchen {border=1px solid #D4CFC4; background=#E9E5DB; font-size=9px; color=#5E5A52}> "Kitchen"
+          <button type=button aria-label=Bedroom {border=1px solid #D4CFC4; background=#E9E5DB; font-size=9px; color=#5E5A52}> "Bedroom"
+          <a href=Unit-Plan-M.html {border=1px solid #D4CFC4; background=#F3F1EB; text-decoration=none; font-size=9px; font-weight=700; color=#141311}> "Floor plan"
+      <section>
+        <a href=Project-M.html {font-size=12px; font-weight=700; text-decoration=none}> "Garden Al Rawdah · Rose building · Al Rawdah"
+        <h1 {font-size=30px; font-weight=800}> "Apartment, model A"
+        <p {font-size=13px; color=#5E5A52}> "3 bedrooms · 3 bathrooms · 147 m² · 3rd floor [TBC] · north facing"
+        <span {font-size=11px; color=#5E5A52}> "Updated 2026/10/01 · model code RZ-A"
+      <section {background=#141311; color=#FFFFFF; clip-path=polygon(16px 0, 100% 0, 100% 100%, 0 100%, 0 28px)}>
+        <div>
+          <span>
+            <span {font-size=36px; font-weight=800}> "690,000"
+            <span {font-size=13px; font-weight=600; color=#C9C2B3}> "SAR"
+          <span>
+            <span {font-size=18px; font-weight=800; color=#B48F2E}> "4,694"
+            <span {font-size=11px; color=#C9C2B3}> "per m²"
+        <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <div>
+            <span {font-size=14px; font-weight=800}> "For sale"
+            <span {font-size=10px; color=#C9C2B3}> "Unit status"
+          <div>
+            <span {font-size=14px; font-weight=800}> "Q2 2027"
+            <span {font-size=10px; color=#C9C2B3}> "Expected delivery"
+          <div>
+            <span {font-size=14px; font-weight=800}> "Under construction"
+            <span {font-size=10px; color=#C9C2B3}> "Project status"
+      <section>
+        <div>
+          <h2> "The unit"
+          <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+            <div>
+              <b> "147"
+              <small> "m²"
+            <div>
+              <b> "3"
+              <small> "bedrooms"
+            <div>
+              <b> "3"
+              <small> "bathrooms"
+          <div>
+            <span> "Model code"
+            <span> "RZ-A"
+          <div>
+            <span> "Type"
+            <span> "Apartment"
+          <div>
+            <span> "Floor"
+            <span> "3rd [TBC]"
+          <div>
+            <span> "Ad licence number"
+            <span> "[optional]"
+          <div>
+            <span> "Orientation"
+            <span> "North [TBC]"
+        <div>
+          <h2> "Price"
+          <div>
+            <span> "Price"
+            <span {font-weight=800; font-size=15px}> "690,000 SAR"
+          <div>
+            <span> "Per m²"
+            <span> "4,694 SAR"
+          <div>
+            <span> "Real estate transaction tax"
+            <span> "[included / excluded, TBC]"
+          <div>
+            <span> "In the district"
+            <span> "The only 3-bedroom model"
+        <div>
+          <h2> "Features"
+          <div {display=grid; grid-template-columns=repeat(2, minmax(0, 1fr))}>
+            <div>
+              <span> "Maid's room"
+              <span {font-weight=800}> "Yes"
+            <div>
+              <span> "Driver's room"
+              <span {color=#5E5A52}> "No"
+            <div>
+              <span> "Balcony"
+              <span {font-weight=800}> "Yes"
+            <div>
+              <span> "Smart home"
+              <span {font-weight=800}> "Yes"
+            <div>
+              <span> "Kitchen"
+              <span> "[TBC]"
+            <div>
+              <span> "Private parking"
+              <span {font-weight=800}> "Yes"
+      <div {position=sticky; background=#FFFFFF}>
+        <a href=https://wa.me/966559997929?text=Asking%20about%20model%20A%2C%20Rose%2C%20Garden%20Al%20Rawdah%20(RZ-A) {background=#B48F2E; color=#141311; text-decoration=none; font-size=15px; font-weight=800; clip-path=polygon(12px 0, 100% 0, 100% 100%, 0 100%, 0 21px)}>
+          <span>
+            <svg svg > "Ask about model A"
+          <span {font-size=10px; font-weight=600; color=#3D3010}> "Prefilled: RZ-A"
+        <label {border=1.5px solid #141311; font-size=12px; font-weight=700}>
+          <input type=checkbox aria-label=Add to compare> "Compare"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=SMQ Real Estate>
+        <span {font-size=11px}>
+          "REGA licence 1200040135 · CR 7029797433"
+          <br> "© 2026 SMQ Real Estate"

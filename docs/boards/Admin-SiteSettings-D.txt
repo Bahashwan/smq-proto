@@ -1,0 +1,174 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; font-weight=700; color=#5E5A52}>
+            <a href=Admin-Content-D.html {text-decoration=none}> "المحتوى والأسئلة"
+            "› إعدادات الموقع"
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "إعدادات الموقع"
+              <span {font-size=13px; color=#5E5A52}> "بيانات التواصل والتراخيص والعبارات التي تتكرر في الرأس والتذييل وصفحات الوحدات. تُحفظ مرة وتظهر في كل مكان"
+            <div aria-label=اللغة {border=1.5px solid #141311; background=#FFFFFF}>
+              <button type=button {border=0; font-size=13px; font-weight=800; background=#141311; color=#FFFFFF}> "العربية"
+              <button type=button {border=0; font-size=13px; font-weight=700; background=#FFFFFF; color=#141311}> "English"
+          <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(440px, 100%), 1fr))}>
+            <section>
+              <header> "التواصل"
+              <div {grid-template-columns=1fr 1fr}>
+                <label>
+                  "رقم واتساب (الزر الأساسي في كل الصفحات)"
+                  <input value=+966 55 999 7929>
+                  <span> "يُستخدم في wa.me وفي الرسائل المعبّأة"
+                <label>
+                  "هاتف الاتصال"
+                  <input value=+966 55 660 7779>
+                <label>
+                  "البريد"
+                  <input value=info@smqre.com>
+                <label>
+                  "البريد لتنبيهات الطلبات"
+                  <input value=leads@smqre.com>
+                  <span> "يستقبل نسخة من كل طلب وارد"
+                <label>
+                  "العنوان"
+                  <input value=حي الروضة، شارع الأمير سلطان، جدة 23433>
+                <label>
+                  "ساعات العمل"
+                  <input value=السبت إلى الخميس · 9 ص إلى 6 م>
+                <label>
+                  "نص خارج ساعات العمل"
+                  <input value=نرد في أول ساعة عمل>
+            <section>
+              <header> "التراخيص والهوية"
+              <div {grid-template-columns=1fr 1fr}>
+                <label>
+                  "اسم الشركة (كما في التذييل)"
+                  <input value=شركة إس إم كيو للاستثمار والتسويق العقاري>
+                <label>
+                  "السجل التجاري"
+                  <input value=7029797433>
+                <label>
+                  "ترخيص فال (الهيئة العامة للعقار)"
+                  <input value=1200040135>
+                  <span> "يظهر في التذييل وصفحة الوحدة"
+                <label>
+                  "الرقم الضريبي"
+                  <input value=[للتأكيد]>
+                <label>
+                  "العبارة التعريفية (الرأس والمعاينات)"
+                  <input value=شركة استثمار وتسويق عقاري، تبدأ من الأرقام>
+                <label>
+                  "عبارة التذييل"
+                  <input value=أسعار معلنة، وحدات حقيقية، رد خلال ساعات العمل.>
+            <section>
+              <header>
+                "الحسابات الاجتماعية"
+                <span> "تظهر في التذييل إذا كان الرابط غير فارغ"
+              <div {grid-template-columns=1fr 1fr}>
+                <label>
+                  "إكس"
+                  <input value=https://x.com/smqre>
+                <label>
+                  "إنستغرام"
+                  <input value=https://instagram.com/smqre>
+                <label>
+                  "سناب شات"
+                  <input value= placeholder=فارغ · لا يظهر>
+                <label>
+                  "تيك توك"
+                  <input value= placeholder=فارغ · لا يظهر>
+                <label>
+                  "لينكدإن"
+                  <input value=https://linkedin.com/company/smqre>
+                <label>
+                  "خرائط قوقل (المكتب)"
+                  <input value=https://maps.app.goo.gl/xxxx>
+            <section>
+              <header> "موقع المكتب على الخريطة"
+              <div {grid-template-columns=1fr 1fr}>
+                <label>
+                  "خط العرض"
+                  <input value=21.5720>
+                <label>
+                  "خط الطول"
+                  <input value=39.1650>
+                <div {height=150px; background=#E9E5DB; border=1.5px solid #141311}>
+                  <span {position=absolute}>
+                  <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <span {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "اسحب الدبوس أو أدخل الإحداثيات · الخريطة الحقيقية تُحمَّل من المزوّد عند البناء"
+            <section>
+              <header>
+                "قوالب رسائل واتساب"
+                <span> "المتغيرات بين أقواس تُستبدل تلقائياً. الرمز {code} يربط الضغطة بالمحادثة في الطلبات الواردة"
+              <div {grid-template-columns=1fr 1fr 1fr}>
+                <label>
+                  "من صفحة وحدة"
+                  <textarea> "مرحباً، أسأل عن الوحدة {unit_code} في {project} بسعر {price} ريال. رمزي: {code}"
+                  <span> "مثال: مرحباً، أسأل عن الوحدة RZ-A في جاردن الروضة بسعر 690,000 ريال. رمزي: SMQ-8F3A2"
+                <label>
+                  "من النتائج أو دليل الأسعار"
+                  <textarea> "مرحباً، أبحث عن {type} بميزانية {budget} ريال في {district}. رمزي: {code}"
+                <label>
+                  "من الرأس أو التذييل (عام)"
+                  <textarea> "مرحباً، أريد الاستفسار عن وحداتكم. رمزي: {code}"
+                <label>
+                  "تأكيد استلام عقار مالك (يُرسل من الفريق)"
+                  <textarea> "وصلنا طلبك رقم {request_no}. سنراجع الصك والصور ونرد خلال يومي عمل."
+                <label>
+                  "قبول عقار مالك"
+                  <textarea> "تمت الموافقة على عقارك {request_no}. أصبح معروضاً على {unit_url} بسعر {price} ريال."
+                <label>
+                  "رفض عقار مالك"
+                  <textarea> "شكراً لك. لم نتمكن من عرض عقارك {request_no} للسبب: {reason}. يمكنك تعديل الطلب وإعادة إرساله."
+            <section>
+              <header> "مفاتيح عامة"
+              <div {grid-template-columns=1fr 1fr 1fr}>
+                <label {border=1.5px solid #D4CFC4; font-size=13px; font-weight=700}>
+                  <span>
+                    "إظهار الوحدات المباعة في النتائج"
+                    <span> "مطفأ: تظهر في صفحة المشروع فقط"
+                  <span>
+                <label {border=1.5px solid #D4CFC4; font-size=13px; font-weight=700}>
+                  <span>
+                    "وسم «صورة تعبيرية» على الصور المولّدة"
+                    <span> "لا يُطفأ إلا بصلاحية مدير"
+                  <span>
+                <label {border=1.5px solid #D4CFC4; font-size=13px; font-weight=700}>
+                  <span>
+                    "استقبال عقارات المُلّاك"
+                    <span> "مطفأ: صفحة «أضف عقارك» تعرض رسالة إيقاف مؤقت"
+                  <span>
+          <div aria-label=شريط الحفظ {position=sticky; background=#141311; color=#FFFFFF}>
+            <span {font-size=13px; font-weight=700}>
+              <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "حقل واحد بوسم [للتأكيد] (الرقم الضريبي) · لا تغييرات غير محفوظة"
+            <div>
+              <a href=HeaderFooter.html {border=1.5px solid #FFFFFF; color=#FFFFFF; text-decoration=none; font-size=13px; font-weight=700}> "معاينة الرأس والتذييل"
+              <button type=button disabled=None {border=0; background=#3A3630; color=#C9C2B3; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "حفظ"

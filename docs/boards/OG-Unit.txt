@@ -1,0 +1,19 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=1200px; height=630px; background=#FFFFFF; color=#141311}>
+      <div {position=absolute; width=700px; height=630px}>
+        <span {font-size=18px; font-weight=700; color=#8A6C1E}>
+          <span {background=#B48F2E; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+          "جاردن الروضة · عمارة روز · حي الروضة"
+        <span {font-size=54px; font-weight=800}> "شقة 3 غرف · 147 م²"
+        <span>
+          <svg svg aria-label=ريال سعودي {color=#B48F2E}>
+          <span {font-size=96px; font-weight=800}> "690,000"
+        <span {font-size=22px; color=#3A3630}> "4,694 ريال للمتر · 3 حمامات · الطابق الثالث · تسليم الربع 2 · 2027"
+      <div {position=absolute; width=500px; height=630px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, calc(100% - 140px) 100%, 0 100%)}>
+        <svg svg  {position=absolute; opacity=.5}>
+        <span {position=absolute; font-size=14px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+      <div {position=absolute; background=#141311; color=#FFFFFF}>
+        <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <span {font-size=16px; font-weight=700; color=#C9C2B3}> "smq-re.com/units/rz-a · RZ-A"
+      <span {position=absolute; font-size=12px; font-weight=700; color=#5E5A52}> "OG-Unit · 1200×630 · قالب: محجوز = سداسي أبيض، مباع = سداسي أسود مع «بيعت»"

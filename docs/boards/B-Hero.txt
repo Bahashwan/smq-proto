@@ -1,0 +1,62 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=#top aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none; color=#FFFFFF}>
+          <img src=assets/logo-mark-gold.png alt=>
+          <span {font-size=16px; font-weight=800}> "SMQ"
+        <div>
+          <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+      <section {background=#B48F2E; color=#141311; clip-path=polygon(0 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 30px))}>
+        <p {font-size=12px; font-weight=700; color=#3D3010}> "نقودك بثقة نحو القرار العقاري الصحيح"
+        <h1 {font-size=40px; font-weight=800}> "كم ميزانيتك؟"
+        <div>
+          <button type=button aria-label=أنقص الميزانية 50,000 {border=0; background=#141311; color=#FFFFFF; font-size=26px; font-weight=700; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "−"
+          <div>
+            <svg svg aria-label=ريال سعودي {color=#141311}>
+            <label {position=absolute}> "الميزانية بالريال"
+            <input type=text value=600,000 {border=0; background=transparent; font-size=40px; font-weight=800; color=#141311}>
+          <button type=button aria-label=زد الميزانية 50,000 {border=0; background=#141311; color=#FFFFFF; font-size=26px; font-weight=700; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "+"
+        <div>
+          <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=transparent; color=#141311}> "450 ألف"
+          <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#141311; color=#FFFFFF}> "600 ألف"
+          <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=transparent; color=#141311}> "800 ألف"
+          <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=transparent; color=#141311}> "1.5 مليون"
+      <section>
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+          <div>
+            <span {font-size=44px; font-weight=800; color=#B48F2E}> "9"
+            <span {font-size=12px; font-weight=600}> "وحدات متاحة"
+          <div>
+            <span {font-size=12px; color=#C9C2B3}> "ضمن ميزانيتك في حي الروضة"
+            <span>
+              <span {font-size=12px; color=#C9C2B3}> "تبدأ من"
+              <span {font-size=22px; font-weight=800; color=#FFFFFF}> "459,000"
+            <span {font-size=12px; color=#C9C2B3}> "غرفتان إلى 3 غرف · 80 إلى 147 م²"
+        <div {display=grid; grid-template-columns=repeat(2, minmax(0, 1fr))}>
+          <button type=button {font-size=14px; font-weight=600; border=1.5px solid #141311; background=#FFFFFF; color=#141311}>
+            <span>
+              <span {font-size=10px; font-weight=500; color=#5E5A52}> "الحي"
+              <span> "الروضة"
+            <svg svg >
+          <button type=button {font-size=14px; font-weight=600; border=1.5px solid #141311; background=#FFFFFF; color=#141311}>
+            <span>
+              <span {font-size=10px; font-weight=500; color=#5E5A52}> "الغرف"
+              <span> "2 إلى 3"
+            <svg svg >
+        <a href=#results {background=#141311; color=#FFFFFF; text-decoration=none; font-size=16px; font-weight=700; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+          <span> "اعرض الوحدات التسع"
+          <svg svg >
+      <section>
+        <div>
+          <h2 {font-size=14px; font-weight=800}> "المشروع الحالي"
+          <a href=#project {font-size=12px; font-weight=700; text-decoration=none; color=#8A6C1E}> "كل التفاصيل"
+        <div {border=1.5px solid #141311}>
+          <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 22px 100%, 0 calc(100% - 38px))}>
+            <span {font-size=9px; font-weight=600; background=#FFFFFF}> "صورة تعبيرية"
+          <div>
+            <span {font-size=16px; font-weight=800}> "جاردن الروضة"
+            <span {font-size=12px; color=#5E5A52}> "عمارتان: روز وياسمين · 12 نموذجاً"
+            <span {font-size=12px; color=#5E5A52}> "موقف خاص · دخول ذكي · سمارت هوم"

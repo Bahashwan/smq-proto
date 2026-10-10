@@ -1,0 +1,129 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/logo-mark-gold.png alt=>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "الإدارة"
+        <div>
+          <button type=button aria-label=الإشعارات، 3 جديدة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+            <span {position=absolute; background=#B48F2E; color=#141311; font-size=10px; font-weight=800}> "3"
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+        <a href=Admin-M.html {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "نظرة عامة"
+        <a href=Admin-M.html {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "الموافقات 3"
+        <a href=#leads {font-size=13px; font-weight=800; text-decoration=none; color=#141311}> "الواردة 12"
+        <a href=#units {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "الوحدات"
+        <a href=#stats {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "البحث"
+        <a href=Admin-Alliance-M.html {font-size=13px; font-weight=700; text-decoration=none; color=#5E5A52}> "التحالف 5"
+      <section>
+        <div>
+          <h1 {font-size=22px; font-weight=800}> "الطلبات الواردة"
+          <span {font-size=12px; color=#5E5A52}> "139 طلباً · آخر 90 يوماً"
+        <div aria-label=الحالة {border=1.5px solid #141311; background=#FFFFFF}>
+          <button type=button {border=0; font-size=13px; font-weight=800; background=#141311; color=#FFFFFF}> "بلا رد 12"
+          <button type=button {border=0; font-size=13px; font-weight=700; background=#FFFFFF; color=#141311}> "تم الرد 41"
+          <button type=button {border=0; font-size=13px; font-weight=700; background=#FFFFFF; color=#141311}> "مغلق 86"
+        <div>
+          <button type=button {border=1.5px solid #141311; background=#141311; color=#FFFFFF; font-size=12px; font-weight=700}> "الكل"
+          <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=12px; font-weight=700}> "واتساب 61"
+          <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=12px; font-weight=700}> "اتصال 28"
+          <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=12px; font-weight=700}> "نموذج 22"
+          <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=12px; font-weight=700}> "نبّهني 19"
+          <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=12px; font-weight=700}> "عقارات المُلّاك 9"
+        <p {font-size=12px; color=#5E5A52}> "الموقع لا يعرف إن رددتم. حين تردّون على طلب، اضغطوا «علّم كمردود»."
+      <ul>
+        <li {background=#FFFFFF; border=1.5px solid #141311}>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}>
+              <svg svg > "ضغطة واتساب · 14:22"
+            <span {font-size=11px; font-weight=800; border=1.5px solid #B48F2E; color=#8A6C1E}> "بلا رد"
+          <span {font-size=17px; font-weight=800}> "SMQ-8F3A2"
+          <span {font-size=13px}>
+            "من صفحة"
+            <a href=Unit-M.html {font-weight=700; text-decoration=none}> "RZ-A · روز · 690,000"
+            "· الرمز نفسه في أول رسالته على واتساب"
+          <div>
+            <button type=button {border=0; background=#B48F2E; color=#141311; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "علّم كمردود"
+            <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=700}> "التفاصيل"
+        <li {background=#FFFFFF; border=1.5px solid #141311}>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "نموذج تواصل · أمس 21:05"
+            <span {font-size=11px; font-weight=800; border=1.5px solid #B48F2E; color=#8A6C1E}> "بلا رد"
+          <span {font-size=17px; font-weight=800}> "خالد باعشن"
+          <a href=tel:+966550000000 {font-size=14px; font-weight=700; text-decoration=none}> "+966 55 000 0000"
+          <p {font-size=13px; color=#3A3630}> "«أبحث عن شقة 3 غرف بميزانية 700 ألف، هل يمكن زيارة يوم السبت؟»"
+          <div>
+            <a href=https://wa.me/966550000000 {background=#B48F2E; color=#141311; font-size=13px; font-weight=800; text-decoration=none; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "رد على واتساب"
+            <a href=tel:+966550000000 aria-label=اتصال {border=1.5px solid #141311; color=#141311; background=#FFFFFF}>
+              <svg svg >
+            <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=700}> "علّم كمردود"
+        <li {background=#FFFFFF; border=1.5px solid #141311}>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "عقار مالك · أمس 18:40"
+            <span {font-size=11px; font-weight=800; border=1.5px solid #141311; color=#141311}> "بانتظار الموافقة"
+          <span {font-size=17px; font-weight=800}> "طلب رقم 2026-1042"
+          <span {font-size=13px}> "عمارة سكنية بدخل · حي النعيم · 8 وحدات · 4,800,000 · وكيل · 4 صور"
+          <div>
+            <a href=Admin-M.html {border=1.5px solid #141311; color=#141311; font-size=13px; font-weight=800; text-decoration=none; background=#FFFFFF}> "افتح في الموافقات"
+        <li {background=#FFFFFF; border=1.5px solid #141311}>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "ضغطة اتصال · أمس 16:12"
+            <span {font-size=11px; font-weight=800; border=1.5px solid #B48F2E; color=#8A6C1E}> "بلا رد"
+          <span {font-size=17px; font-weight=800}> "v-77b04"
+          <span {font-size=13px; color=#3A3630}> "زائر بلا رقم. ضغط «اتصال» من دليل الأسعار بعد 3 دقائق من التصفح. يُغلق تلقائياً بعد 7 أيام إن لم يُعلَّم."
+          <div>
+            <button type=button {border=0; background=#B48F2E; color=#141311; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "علّم كمردود"
+            <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=700}> "إغلاق"
+        <li {background=#FFFFFF; border=1.5px solid #141311}>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "نبّهني · قبل يومين"
+            <span {font-size=11px; font-weight=800; border=1.5px solid #B48F2E; color=#8A6C1E}> "بلا رد"
+          <span {font-size=17px; font-weight=800}> "ريم الزهراني"
+          <a href=tel:+966560000000 {font-size=14px; font-weight=700; text-decoration=none}> "+966 56 000 0000"
+          <span {font-size=13px}> "تنتظر شقة غرفتين حتى 520 ألفاً في أبحر الشمالية. لا وحدة مطابقة الآن."
+          <div>
+            <a href=https://wa.me/966560000000 {background=#B48F2E; color=#141311; font-size=13px; font-weight=800; text-decoration=none; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "رد على واتساب"
+            <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=700}> "علّم كمردود"
+        <li {background=#FFFFFF; border=1.5px solid #D4CFC4}>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "نموذج تواصل · قبل 3 أيام"
+            <span {font-size=11px; font-weight=800; background=#141311; color=#FFFFFF}> "تم الرد"
+          <span {font-size=16px; font-weight=800}> "عبدالله الغامدي"
+          <span {font-size=12px; color=#5E5A52}> "ردّت نورة · زيارة محجوزة الخميس 4 م"
+        <li {background=#F3F1EB; border=1.5px solid #D4CFC4}>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "ضغطة واتساب · قبل أسبوعين"
+            <span {font-size=11px; font-weight=800; border=1.5px solid #5E5A52; color=#5E5A52}> "مغلق · اشترى"
+          <span {font-size=16px; font-weight=800}> "SMQ-2C91E"
+          <span {font-size=12px; color=#5E5A52}> "YS-A · ياسمين · بيعت 2026-09-28"
+      <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=14px; font-weight=700}> "عرض 132 طلباً أقدم"
+      <section aria-label=تفاصيل الطلب SMQ-8F3A2 {background=#FFFFFF}>
+        <div>
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "ورقة التفاصيل · تُفتح من «التفاصيل»"
+          <button type=button aria-label=إغلاق {border=1.5px solid #141311; background=#FFFFFF; font-size=16px; font-weight=800}> "×"
+        <div>
+          <span {font-size=20px; font-weight=800}> "SMQ-8F3A2"
+          <span {font-size=11px; font-weight=800; border=1.5px solid #B48F2E; color=#8A6C1E}> "بلا رد"
+        <p {font-size=12px; color=#5E5A52}> "لا رقم جوال: الزائر ضغط واتساب ولم يملأ نموذجاً. ابحثوا عن الرمز في محادثات واتساب بزنس."
+        <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=700}> "انسخ SMQ-8F3A2 للبحث في واتساب"
+        <div>
+          <span {font-size=12px; font-weight=800}> "مسار الزائر"
+          <ol {font-size=13px; color=#3A3630}>
+            <li> "الرئيسية · ميزانية 700 ألف · 3 غرف"
+            <li> "النتائج · 2 وحدة"
+            <li> "RZ-A روز · 1 د 40 ث"
+            <li> "ضغط واتساب من RZ-A"
+        <div>
+          <span {font-size=12px; font-weight=800}> "ملاحظات الفريق"
+          <div {background=#F8F7F4; font-size=13px}> "نورة · أمس: «أرسلت المخطط، ينتظر رأي الزوجة.»"
+          <textarea placeholder=أضف ملاحظة… {font-size=13px; border=1.5px solid #141311; background=#FFFFFF}>
+        <div>
+          <span {font-size=12px; font-weight=800}> "الحالة اليدوية"
+          <div aria-label=الحالة {border=1.5px solid #141311; background=#FFFFFF}>
+            <button type=button {border=0; font-size=13px; font-weight=800; background=#141311; color=#FFFFFF}> "بلا رد"
+            <button type=button {border=0; font-size=13px; font-weight=700; background=#FFFFFF; color=#141311}> "تم الرد"
+            <button type=button {border=0; font-size=13px; font-weight=700; background=#FFFFFF; color=#141311}> "مغلق"
+          <button type=button {border=0; background=#B48F2E; color=#141311; font-size=15px; font-weight=800; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}> "علّم كمردود"

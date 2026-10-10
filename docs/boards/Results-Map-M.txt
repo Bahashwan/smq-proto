@@ -1,0 +1,62 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#E9E5DB; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <div {background=#FFFFFF}>
+        <div>
+          <span {font-size=14px; font-weight=800}> "8 وحدات · حتى 700 ألف"
+          <div aria-label=طريقة العرض {border=1.5px solid #141311}>
+            <a href=Results-M.html {font-size=12px; font-weight=700; color=#141311; text-decoration=none}> "قائمة"
+            <span {font-size=12px; font-weight=800; background=#141311; color=#FFFFFF}> "خريطة"
+        <div>
+          <a href=Results-Filters-M.html {border=1.5px solid #141311; background=#141311; color=#FFFFFF; font-size=12px; font-weight=800; text-decoration=none}>
+            <svg svg > "الفلاتر · 3"
+          <span {border=1.5px solid #141311; font-size=12px; font-weight=700}> "حتى 700,000 ×"
+          <span {border=1.5px solid #141311; font-size=12px; font-weight=700}> "غرفتان أو أكثر ×"
+          <span {border=1.5px solid #141311; font-size=12px; font-weight=700}> "متاح فقط ×"
+      <div aria-label=خريطة النتائج>
+        <span {position=absolute}>
+        <svg svg  {position=absolute}>
+        <span {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "جدة · شمال وسط"
+        <span {position=absolute; font-size=11px; font-weight=700; color=#5E5A52}> "الروضة"
+        <span {position=absolute; font-size=11px; font-weight=700; color=#5E5A52}> "الصفا"
+        <span {position=absolute; font-size=11px; font-weight=700; color=#5E5A52}> "أبحر الشمالية"
+        <span {position=absolute; font-size=11px; font-weight=700; color=#5E5A52}> "النعيم"
+        <a href=#p-rawdah>
+          <span {font-size=15px}> "7"
+          <span> "جاردن الروضة"
+        <a href=#p-safa>
+          <span {background=#FFFFFF}> "1"
+          <span> "من مالك · الصفا"
+        <a href=#p-obhur>
+          <span {background=#FFFFFF; color=#5E5A52; font-size=10px}> "قريباً"
+          <span> "مشروع أبحر"
+        <button type=button aria-label=موقعي {position=absolute; border=1.5px solid #141311; background=#FFFFFF}>
+          <svg svg >
+        <span {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "السداسي الذهبي: متاح · الأبيض: من مالك أو قريباً · الرقم: الوحدات المطابقة"
+      <section aria-label=جاردن الروضة {background=#FFFFFF}>
+        <span {background=#D4CFC4}>
+        <div>
+          <figure {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 22px 100%, 0 calc(100% - 38px))}>
+            <figcaption {position=absolute; font-size=9px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+          <div>
+            <span {font-size=11px; font-weight=700; color=#8A6C1E}> "الروضة · تسليم الربع 2 · 2027 [للتأكيد]"
+            <a href=Project-M.html {font-size=17px; font-weight=800; text-decoration=none; color=#141311}> "جاردن الروضة"
+            <span {font-size=12px; color=#5E5A52}> "7 وحدات مطابقة من 8 متاحة · غرفتان و3 غرف · فيلا روف"
+            <span {font-size=12px; color=#5E5A52}>
+              "من"
+              <strong {font-size=18px; color=#141311}> "459,000"
+              "إلى"
+              <strong {color=#141311}> "690,000"
+        <div>
+          <a href=Results-M.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "اعرض الوحدات السبع"
+          <a href=https://wa.me/966559997929?text=%D8%AC%D8%A7%D8%B1%D8%AF%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%B6%D8%A9 aria-label=واتساب {background=#B48F2E; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >

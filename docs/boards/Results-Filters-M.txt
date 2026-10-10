@@ -1,0 +1,112 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#FFFFFF; color=#141311}>
+      <div {position=absolute; background=#141311; opacity=0.55}>
+      <div {position=absolute; background=#141311}>
+      <div aria-label=الفلاتر {position=absolute; height=760px; background=#FFFFFF; clip-path=polygon(0 0, calc(100% - 24px) 0, 100% 42px, 100% 100%, 0 100%)}>
+        <div>
+          <h2 {font-size=18px; font-weight=800}> "الفلاتر"
+          <div>
+            <button type=button {font-size=13px; font-weight=700; border=0; background=transparent; color=#8A6C1E; text-decoration=underline}> "مسح الكل"
+            <a href=Results-M.html aria-label=إغلاق {color=#141311; text-decoration=none; font-size=24px}> "×"
+        <div>
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "الروضة"
+            <span aria-label=إزالة> "×"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "حتى 700,000"
+            <span aria-label=إزالة> "×"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "شقق"
+            <span aria-label=إزالة> "×"
+        <form>
+          <fieldset {border=0}>
+            <legend {font-size=12px; font-weight=700; color=#5E5A52}> "الموقع"
+            <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "المدينة"
+                <select {font-size=13px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                  <option> "جدة"
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "الحي"
+                <select {font-size=13px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#F3F1EB}>
+                  <option> "الروضة"
+                  <option> "الكل"
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "المشروع"
+                <select {font-size=13px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                  <option> "الكل"
+                  <option> "جاردن الروضة"
+          <fieldset {border=0}>
+            <legend {font-size=12px; font-weight=700; color=#5E5A52}> "نوع الوحدة"
+            <div>
+              <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#141311; color=#FFFFFF}> "شقة"
+              <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "فيلا روف"
+              <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "فيلا"
+              <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "دوبلكس"
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "الغرف"
+            <div aria-label=عدد الغرف {border=1.5px solid #141311}>
+              <button type=button {font-size=14px; font-weight=700; border=0; background=#141311; color=#FFFFFF}> "الكل"
+              <button type=button {font-size=14px; font-weight=700; border=0; background=#FFFFFF; color=#141311}> "2"
+              <button type=button {font-size=14px; font-weight=700; border=0; background=#FFFFFF; color=#141311}> "3"
+              <button type=button {font-size=14px; font-weight=700; border=0; background=#FFFFFF; color=#141311}> "4"
+              <button type=button {font-size=14px; font-weight=700; border=0; background=#FFFFFF; color=#141311}> "5+"
+          <fieldset {border=0}>
+            <legend {font-size=12px; font-weight=700; color=#5E5A52}> "السعر بالريال"
+            <div {display=grid; grid-template-columns=1fr auto 1fr}>
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "من"
+                <input type=text value=300,000 {font-size=15px; font-weight=800; color=#141311; border=1.5px solid #141311}>
+              <span {color=#5E5A52}> "إلى"
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "إلى"
+                <input type=text value=700,000 {font-size=15px; font-weight=800; color=#141311; border=1.5px solid #141311; background=#F3F1EB}>
+            <div>
+              <div {position=absolute; background=#D4CFC4}>
+              <div {position=absolute; background=#141311}>
+              <button type=button aria-label=الحد الأدنى {position=absolute; border=0; background=#141311; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+              <button type=button aria-label=الحد الأعلى {position=absolute; border=0; background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+          <fieldset {border=0}>
+            <legend {font-size=12px; font-weight=700; color=#5E5A52}> "المساحة م²"
+            <div {display=grid; grid-template-columns=1fr auto 1fr}>
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "من"
+                <input type=text placeholder=80 {font-size=15px; font-weight=800; color=#141311; border=1.5px solid #141311}>
+              <span {color=#5E5A52}> "إلى"
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "إلى"
+                <input type=text placeholder=420 {font-size=15px; font-weight=800; color=#141311; border=1.5px solid #141311}>
+          <fieldset {border=0}>
+            <legend {font-size=12px; font-weight=700; color=#5E5A52}> "حالة المشروع والتسليم"
+            <div>
+              <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#141311; color=#FFFFFF}> "الكل"
+              <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "جاهز"
+              <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "قيد الإنشاء"
+            <label {font-size=10px; font-weight=600; color=#5E5A52}>
+              "التسليم قبل"
+              <select {font-size=13px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "بدون تحديد"
+                <option> "نهاية 2026"
+                <option> "منتصف 2027"
+                <option> "نهاية 2027"
+          <fieldset {border=0}>
+            <legend {font-size=12px; font-weight=700; color=#5E5A52}> "المميزات"
+            <label {font-size=14px; font-weight=600}>
+              "غرفة خادمة"
+              <input type=checkbox>
+            <label {font-size=14px; font-weight=600}>
+              "غرفة سائق"
+              <input type=checkbox>
+            <label {font-size=14px; font-weight=600}>
+              "بلكونة"
+              <input type=checkbox checked=None>
+            <label {font-size=14px; font-weight=600}>
+              "سطح خاص"
+              <input type=checkbox>
+            <label {font-size=14px; font-weight=600}>
+              "سمارت هوم"
+              <input type=checkbox>
+        <div {background=#FFFFFF}>
+          <a href=Results-M.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=15px; font-weight=800; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+            "اعرض 6 وحدات"
+            <svg svg >

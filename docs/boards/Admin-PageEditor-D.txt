@@ -1,0 +1,188 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "ن"
+          "نورة · محررة"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; font-weight=700; color=#5E5A52}>
+            <a href=Admin-Content-D.html {text-decoration=none}> "المحتوى والأسئلة"
+            "› الصفحات › الرئيسية"
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}>
+                "الرئيسية"
+                <span {font-size=14px; font-weight=600; color=#5E5A52}> "/"
+              <span {font-size=13px; color=#5E5A52}> "حقول مرتّبة حسب أقسام الصفحة. الأرقام (الأسعار، عدد الوحدات) تُحسب من الوحدات ولا تُكتب هنا"
+            <div aria-label=اللغة {border=1.5px solid #141311; background=#FFFFFF}>
+              <button type=button {border=0; font-size=13px; font-weight=800; background=#141311; color=#FFFFFF}> "العربية"
+              <button type=button {border=0; font-size=13px; font-weight=700; background=#FFFFFF; color=#141311}>
+                "English"
+                <span {font-size=10px; font-weight=800; border=1.5px solid #B48F2E; color=#8A6C1E}> "4 حقول فارغة"
+          <div>
+            <div>
+              <section>
+                <header>
+                  <span>
+                    <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "1 · الهيرو"
+                  <span {font-size=12px; font-weight=700}>
+                    "ظاهر"
+                    <span aria-label=إظهار القسم>
+                <div>
+                  <label>
+                    "السطر العلوي"
+                    <input value=إس إم كيو العقارية · جدة>
+                  <label>
+                    "العنوان"
+                    <textarea> "بيتك في جدة، بالأرقام أولاً"
+                    <span {font-weight=600; color=#8A6C1E}> "غير محفوظ · كان: «شقتك في جدة تبدأ من رقم»"
+                  <label>
+                    "الفقرة"
+                    <textarea> "وحدات حقيقية بأسعار معلنة، من غير «اتصل للسعر». ابدأ من ميزانيتك وسنعرض لك ما يناسبها فقط."
+                  <div {display=grid; grid-template-columns=1fr 1fr}>
+                    <label>
+                      "زر أساسي (نص)"
+                      <input value=ابدأ من ميزانيتك>
+                    <label>
+                      "زر أساسي (الوجهة)"
+                      <select>
+                        <option> "الباحث في نفس الصفحة"
+                        <option> "النتائج"
+                        <option> "واتساب"
+                  <label>
+                    "صورة الهيرو"
+                    <span {border=1.5px dashed #141311; background=#F8F7F4}>
+                      <span {background=#E9E5DB; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}>
+                      <span {font-size=12px; color=#3A3630}> "IMG-HERO-BRAND · تعبيرية · 2400×1350 · يُسمح بالشعار في هذه الخانة فقط"
+                      <a href=Admin-Media-D.html {font-size=12px; font-weight=800; text-decoration=none}> "استبدال"
+              <section>
+                <header>
+                  <span> "2 · الباحث بالميزانية"
+                  <span {font-size=12px; font-weight=700}>
+                    "ظاهر"
+                    <span aria-label=إظهار القسم>
+                <div>
+                  <label>
+                    "عنوان القسم"
+                    <input value=كم ميزانيتك؟>
+                  <label>
+                    "نص المساعدة تحت المنزلق"
+                    <input value=السعر الكامل للوحدة. ضريبة التصرفات وتكاليف التسجيل تُحسب على حدة.>
+                  <div {display=grid; grid-template-columns=1fr 1fr}>
+                    <label>
+                      "الحد الأدنى للمنزلق"
+                      <input value=300,000>
+                    <label>
+                      "الحد الأعلى"
+                      <input value=2,000,000>
+                  <p {font-size=12px; color=#5E5A52}>
+                    "القيم الافتراضية للميزانية تُدار من"
+                    <a href=Admin-Lists-D.html {font-weight=700; text-decoration=none}> "القوائم › الميزانيات"
+                    "."
+              <section>
+                <header>
+                  <span> "3 · دليل الأسعار (معاينة)"
+                  <span {font-size=12px; font-weight=700}>
+                    "ظاهر"
+                    <span aria-label=إظهار القسم>
+                <div>
+                  <label>
+                    "العنوان"
+                    <input value=الأسعار الحقيقية، قبل أن تتصل>
+                  <label>
+                    "الفقرة"
+                    <textarea> "الأرقام تُحسب من الوحدات المتاحة الآن، وتتغير كلما بيعت وحدة."
+              <section>
+                <header>
+                  <span> "4 · لماذا إس إم كيو"
+                  <span {font-size=12px; font-weight=700}>
+                    "ظاهر"
+                    <span aria-label=إظهار القسم>
+                <div>
+                  <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+                    <label>
+                      "نقطة 1"
+                      <input value=سعر معلن لكل وحدة>
+                    <label>
+                      "نقطة 2"
+                      <input value=رد خلال ساعات العمل>
+                    <label>
+                      "نقطة 3"
+                      <input value=+2000 متدرب [للتأكيد]>
+                  <p {font-size=12px; color=#8A6C1E; font-weight=700}> "النقطة 3 موسومة [للتأكيد]: تبقى بالوسم على الموقع حتى يؤكدها مدير."
+              <section>
+                <header>
+                  <span> "5 · الأسئلة الشائعة (مختارات)"
+                  <span {font-size=12px; font-weight=700}>
+                    "مخفي"
+                    <span aria-label=إظهار القسم>
+                <div>
+                  <p {font-size=13px; color=#5E5A52}>
+                    "تظهر أول 4 أسئلة منشورة من"
+                    <a href=Admin-FAQ-D.html {font-weight=700; text-decoration=none}> "الأسئلة الشائعة"
+                    ". القسم مخفي الآن لأن 3 أسئلة فيها [مسودة إجابة]."
+            <aside aria-label=معاينة حية {position=sticky}>
+              <div>
+                <span {font-size=12px; font-weight=800}> "معاينة حية · المسودة"
+                <div {border=1.5px solid #141311; background=#FFFFFF; font-size=11px; font-weight=800}>
+                  <button type=button {border=0; background=#141311; color=#FFFFFF}> "390"
+                  <button type=button {border=0; background=#FFFFFF; color=#141311}> "1440"
+              <div {border=1.5px solid #141311; background=#FFFFFF}>
+                <div {background=#141311; color=#FFFFFF}>
+                  <img src=assets/lockup-goldmark-white.png alt=>
+                  <span {border=1.5px solid #FFFFFF}>
+                <div {height=190px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 50px 100%, 0 calc(100% - 86px))}>
+                  <span {position=absolute; font-size=9px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                <div>
+                  <span {font-size=10px; font-weight=700; color=#8A6C1E}> "إس إم كيو العقارية · جدة"
+                  <span {font-size=22px; font-weight=800}> "بيتك في جدة، بالأرقام أولاً"
+                  <span {font-size=12px; color=#3A3630}> "وحدات حقيقية بأسعار معلنة، من غير «اتصل للسعر». ابدأ من ميزانيتك وسنعرض لك ما يناسبها فقط."
+                  <span {background=#B48F2E; color=#141311; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "ابدأ من ميزانيتك"
+                <div {background=#F3F1EB}>
+                  <span {font-size=16px; font-weight=800}> "كم ميزانيتك؟"
+                  <span {background=#141311}>
+                    <span {position=absolute; background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <span {font-size=10px; color=#5E5A52}> "السعر الكامل للوحدة. ضريبة التصرفات وتكاليف التسجيل تُحسب على حدة."
+              <span {font-size=11px; color=#5E5A52}> "الإطار الذهبي يحدّد الحقل الذي تحرّره الآن. المعاينة تعرض المسودة لا النسخة المنشورة."
+          <div aria-label=شريط الحفظ {position=sticky; background=#141311; color=#FFFFFF}>
+            <span {font-size=13px; font-weight=700}>
+              <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "تغييرات غير محفوظة في حقل واحد · آخر نشر قبل 6 أيام بواسطة سعود"
+            <div>
+              <button type=button {border=1.5px solid #C9C2B3; background=transparent; color=#FFFFFF; font-size=13px; font-weight=700}> "تجاهل"
+              <a href=Home-D.html {border=1.5px solid #FFFFFF; color=#FFFFFF; text-decoration=none; font-size=13px; font-weight=700}> "معاينة في الموقع"
+              <button type=button {border=1.5px solid #FFFFFF; background=#FFFFFF; color=#141311; font-size=13px; font-weight=800}> "حفظ كمسودة"
+              <button type=button {border=0; background=#B48F2E; color=#141311; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "نشر"
+          <div {background=#F3F1EB}>
+            <span {font-size=12px; font-weight=800; color=#5E5A52}> "الحالة الثانية للشريط · بعد النشر مباشرة (تبقى 6 ثوانٍ ثم تعود لـ «لا تغييرات غير محفوظة»)"
+            <div {background=#141311; color=#FFFFFF}>
+              <span {font-size=13px; font-weight=700}>
+                <span {background=#B48F2E; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <svg svg > "نُشرت الرئيسية الآن · نورة · 14:31 ·"
+                <a href=Home-D.html {color=#B48F2E; font-weight=800}> "افتح الصفحة"
+              <div>
+                <button type=button {border=1.5px solid #C9C2B3; background=transparent; color=#FFFFFF; font-size=13px; font-weight=700}> "تراجع عن النشر"
+                <button type=button disabled=None {border=0; background=#3A3630; color=#C9C2B3; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "منشور"

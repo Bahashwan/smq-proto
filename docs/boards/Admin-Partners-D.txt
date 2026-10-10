@@ -1,0 +1,161 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; font-weight=700; color=#5E5A52}>
+            <a href=Admin-Content-D.html {text-decoration=none}> "المحتوى والأسئلة"
+            "› الشركاء والتمويل"
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "الشركاء والتمويل"
+              <span {font-size=13px; color=#5E5A52}> "الشعارات تُرفع من ملفات الشركاء الرسمية فقط، لا تُولَّد. كتلة «شركاؤنا وجهات التمويل» في صفحة من نحن تظهر فقط إذا كان شعار واحد على الأقل مرئياً"
+            <button type=button {border=0; background=#141311; color=#FFFFFF; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "+ شريك"
+          <div {border=2px solid #B48F2E; background=#FFFDF6; font-size=13px}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+            <span>
+              <strong> "الكتلة مخفية على الموقع الآن."
+              "5 شركاء مُدخلون، كلهم بوضع «مخفي» حتى تصل الموافقات الكتابية على استخدام الشعارات [للتأكيد]. فعّل أي شعار وستظهر الكتلة فوراً."
+          <div {border=1.5px solid #141311}>
+            <div {display=grid; grid-template-columns=36px 120px 1fr 140px 1fr 90px 90px; font-size=11px; font-weight=800; color=#5E5A52; background=#F3F1EB}>
+              <span>
+              <span> "الشعار"
+              <span> "الاسم"
+              <span> "النوع"
+              <span> "الرابط"
+              <span> "مرئي"
+              <span>
+            <div>
+              <span aria-label=اسحب>
+                <svg svg >
+              <span>
+                "شعار PNG"
+                <br> "الهيئة العامة للعقار"
+              <span {font-weight=800}>
+                "الهيئة العامة للعقار"
+                <span {font-size=11px; font-weight=600; color=#5E5A52}> "ترخيص فال رقم [للتأكيد]"
+              <select>
+                <option selected=None> "جهة تنظيمية"
+                <option> "بنك"
+                <option> "مطوّر"
+                <option> "أخرى"
+              <input value=https://rega.gov.sa {font-size=12px; border=1.5px solid #141311}>
+              <span aria-label=مرئي>
+              <button type=button> "استبدال"
+            <div>
+              <span aria-label=اسحب>
+                <svg svg >
+              <span>
+                "شعار PNG"
+                <br> "بنك 1"
+              <span {font-weight=800}>
+                "بنك شريك 1"
+                <span {font-size=11px; font-weight=600; color=#5E5A52}> "الاسم يُدخل بعد توقيع الاتفاقية [للتأكيد]"
+              <select>
+                <option> "جهة تنظيمية"
+                <option selected=None> "بنك"
+                <option> "مطوّر"
+                <option> "أخرى"
+              <input value= placeholder=https:// {font-size=12px; border=1.5px solid #141311}>
+              <span aria-label=مرئي>
+              <button type=button> "استبدال"
+            <div>
+              <span aria-label=اسحب>
+                <svg svg >
+              <span>
+                "شعار PNG"
+                <br> "بنك 2"
+              <span {font-weight=800}>
+                "بنك شريك 2"
+                <span {font-size=11px; font-weight=600; color=#5E5A52}> "[للتأكيد]"
+              <select>
+                <option> "جهة تنظيمية"
+                <option selected=None> "بنك"
+                <option> "مطوّر"
+                <option> "أخرى"
+              <input value= placeholder=https:// {font-size=12px; border=1.5px solid #141311}>
+              <span aria-label=مرئي>
+              <button type=button> "استبدال"
+            <div>
+              <span aria-label=اسحب>
+                <svg svg >
+              <span>
+                "شعار PNG"
+                <br> "المطوّر"
+              <span {font-weight=800}>
+                "مطوّر جاردن الروضة"
+                <span {font-size=11px; font-weight=600; color=#5E5A52}> "[للتأكيد]"
+              <select>
+                <option> "جهة تنظيمية"
+                <option> "بنك"
+                <option selected=None> "مطوّر"
+                <option> "أخرى"
+              <input value= placeholder=https:// {font-size=12px; border=1.5px solid #141311}>
+              <span aria-label=مرئي>
+              <button type=button> "استبدال"
+            <div>
+              <span aria-label=اسحب>
+                <svg svg >
+              <span {border=1.5px dashed #141311; color=#141311}>
+                "ارفع PNG أو SVG"
+                <br> "بخلفية شفافة"
+              <span {font-weight=800}>
+                "برنامج سكني"
+                <span {font-size=11px; font-weight=600; color=#5E5A52}> "لا شعار بعد"
+              <select>
+                <option> "جهة تنظيمية"
+                <option> "بنك"
+                <option> "مطوّر"
+                <option selected=None> "أخرى"
+              <input value=https://sakani.sa {font-size=12px; border=1.5px solid #141311}>
+              <span aria-label=مرئي، معطّل بلا شعار {opacity=.5}>
+              <button type=button> "حذف"
+          <span {font-size=12px; color=#5E5A52}> "قواعد: الشعار ملف حقيقي من الشريك، ارتفاعه 40px على الموقع، تدرّج رمادي بلا ألوان، لا يُظهر «مرئي» ما دام الشعار فارغاً. ترتيب الصفوف هو ترتيب الظهور."
+          <section>
+            <div>
+              <h2 {font-size=16px; font-weight=800}> "معاينة كتلة «من نحن»"
+              <span {font-size=12px; color=#5E5A52}> "كما ستظهر لو فُعّلت 3 شعارات"
+            <div {display=grid; grid-template-columns=1fr 1fr}>
+              <div {background=#FFFFFF; border=1.5px solid #141311}>
+                <span {font-size=11px; font-weight=800; color=#8A6C1E}> "الحالة: 3 مرئية"
+                <span {font-size=18px; font-weight=800}> "شركاؤنا وجهات التمويل"
+                <span {font-size=12px; color=#3A3630}> "نعمل مع بنوك مرخّصة وجهات تنظيمية. الموافقة على التمويل بيد البنك، ونحن نجهّز الملف."
+                <div>
+                  <span {background=#E9E5DB; font-size=10px; font-weight=800; color=#5E5A52}> "شعار 1"
+                  <span {background=#E9E5DB; font-size=10px; font-weight=800; color=#5E5A52}> "شعار 2"
+                  <span {width=120px; background=#E9E5DB; font-size=10px; font-weight=800; color=#5E5A52}> "شعار 3"
+              <div {background=#FFFFFF; border=1.5px dashed #141311}>
+                <span {font-size=11px; font-weight=800; color=#8A6C1E}> "الحالة الحالية: 0 مرئية"
+                <span {font-size=14px; font-weight=800}> "الكتلة لا تُرسم أصلاً"
+                <span {font-size=12px; color=#5E5A52}> "لا عنوان، لا مكان فارغ. قسم «آراء العملاء» يرتفع ليأخذ مكانها، وتختفي هذه الملاحظة من لوحة الإدارة أيضاً حين يصبح شعار واحد مرئياً."
+          <div aria-label=شريط الحفظ {position=sticky; background=#141311; color=#FFFFFF}>
+            <span {font-size=13px; font-weight=700; color=#C9C2B3}> "لا تغييرات غير محفوظة"
+            <div>
+              <a href=About-D.html {border=1.5px solid #FFFFFF; color=#FFFFFF; text-decoration=none; font-size=13px; font-weight=700}> "معاينة من نحن"
+              <button type=button disabled=None {border=0; background=#3A3630; color=#C9C2B3; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "حفظ"

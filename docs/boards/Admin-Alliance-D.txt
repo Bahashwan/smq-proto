@@ -1,0 +1,195 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}>
+                <span>
+                  <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                  <span {background=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "غرفة التحالف"
+              <span {font-size=13px; color=#5E5A52}> "تحالف مكاتب جدة العقارية · كل ما يدخل ويخرج بين المكاتب يمر من هنا · الأرقام توضيحية"
+            <div>
+              <a href=Admin-AllianceRequests-D.html> "+ طلب من الفريق"
+              <a href=Alliance-D.html> "الصفحة العامة"
+          <nav aria-label=أقسام غرفة التحالف>
+            <a href=Admin-Alliance-D.html> "نظرة عامة"
+            <a href=Admin-AllianceApplications-D.html>
+              "طلبات الانضمام"
+              <i> "4"
+            <a href=Admin-AllianceMembers-D.html>
+              "الأعضاء"
+              <i> "12"
+            <a href=Admin-AllianceRadar-D.html> "الرادار"
+            <a href=Admin-AllianceRequests-D.html>
+              "الطلبات والمطابقات"
+              <i> "5"
+            <a href=Admin-AllianceReferrals-D.html>
+              "الإحالات والصفقات"
+              <i> "3"
+            <a href=Admin-AllianceReport-D.html> "التقرير الشهري"
+            <a href=Admin-AllianceSettings-D.html> "الميثاق والإعدادات"
+          <div {display=grid; grid-template-columns=repeat(6, minmax(0, 1fr))}>
+            <a href=Admin-AllianceMembers-D.html>
+              <small> "الأعضاء الموثّقون"
+              <b> "12"
+              <span> "5 جهات · 11 حياً"
+            <a href=Admin-AllianceApplications-D.html>
+              <small> "طلبات انضمام تنتظر"
+              <b> "4"
+              <span> "+37 من استيراد قوقل"
+            <a href=Admin-AllianceRequests-D.html>
+              <small> "طلبات مفتوحة"
+              <b> "7"
+              <span> "3 من زوار بلا نتائج"
+            <a href=Admin-AllianceRequests-D.html>
+              <small> "مطابقات تنتظر قراراً"
+              <b> "5"
+              <span> "وصلت عروض"
+            <a href=Admin-AllianceReferrals-D.html>
+              <small> "إحالات جارية"
+              <b> "3"
+              <span> "1 معاينة · 2 تفاوض"
+            <a href=Admin-AllianceReferrals-D.html {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <small {color=#C9C2B3}> "صفقات أُغلقت"
+              <b {color=#B48F2E}> "2"
+              <span {color=#C9C2B3}> "منذ الإطلاق · 3.9M"
+          <div {display=grid; grid-template-columns=1.2fr 1fr}>
+            <section>
+              <header>
+                "يحتاج قراراً اليوم"
+                <span {font-size=11px; font-weight=700; color=#5E5A52}> "مرتّب بالأقدم"
+              <div>
+                <span {background=#B48F2E}> "عرض"
+                <span>
+                  <strong> "REQ-2026-0412 · الفيصلية · شقة 4 غرف"
+                  <small> "وصل عرض من مكتب ط (440,000، عقد موثّق) قبل 3 ساعات · ينتظر عرضه على المشتري"
+                <a href=Admin-AllianceRequests-D.html> "افتح المطابقة"
+              <div>
+                <span {background=#FFFFFF}> "طلب"
+                <span>
+                  <strong> "ALL-2026-0038 · مكتب أ للعقارات"
+                  <small> "انضمام · أبحر الشمالية · يحتاج تحقق الرخصة في موقع الهيئة"
+                <a href=Admin-AllianceApplications-D.html> "راجع"
+              <div>
+                <span {background=#FFFFFF}> "واتساب"
+                <span>
+                  <strong> "طلبان لم يُرسلا · الوضع اليدوي"
+                  <small> "انقطع واتساب بزنس 40 دقيقة أمس · أُرسل للمكاتب يدوياً؟"
+                <a href=Admin-AllianceRequests-D.html> "أرسل الآن"
+              <div>
+                <span {background=#141311; color=#FFFFFF}> "نزاع"
+                <span>
+                  <strong> "REF-2026-0098 · مكتب أ ومكتب ج"
+                  <small> "مكتب ج يطلب تعديل المرحلة إلى «لم تتم» · مكتب أ لم يردّ منذ 4 أيام"
+                <a href=Admin-AllianceReferrals-D.html> "افتح السجل"
+              <div>
+                <span {background=#F3F1EB}> "تقرير"
+                <span>
+                  <strong> "تقرير أكتوبر"
+                  <small> "يُولَّد 2026/11/01 · 3 شرائح تحت 20 جلسة ستُخفى"
+                <a href=Admin-AllianceReport-D.html> "معاينة"
+            <section>
+              <header>
+                "الرادار · طلب بلا عرض"
+                <a href=Admin-AllianceRadar-D.html {font-size=12px; font-weight=800; text-decoration=none}> "الكامل ←"
+              <div>
+                <div>
+                  <span {background=#FFFFFF}>
+                    "أبحر الشمالية"
+                    <br> "318"
+                  <span {background=#FFFFFF}>
+                    "الصفا"
+                    <br> "204"
+                  <span {background=#FFFFFF}>
+                    "الفيصلية"
+                    <br> "141"
+                  <span {background=#141311; color=#FFFFFF}>
+                    "الروضة"
+                    <br> "1,060"
+                  <span {background=#FFFFFF; color=#5E5A52}>
+                    "النعيم"
+                    <br> "433"
+                <div {font-size=11px; color=#5E5A52}>
+                  <span> "ذهبي: طلب بلا وحدات SMQ، يغطيه أعضاء"
+                  <span> "أسود: لدينا وحدات"
+                <div {font-size=12px}>
+                  <div>
+                    <span> "أبحر الشمالية · فلل 1.5 إلى 2.5M"
+                    <strong>
+                      "2 مكاتب ·"
+                      <a href=Admin-AllianceRadar-D.html> "أرسل"
+                  <div>
+                    <span> "الصفا · شقق 4 غرف"
+                    <strong>
+                      "1 مكتب ·"
+                      <a href=Admin-AllianceRadar-D.html> "أرسل"
+                  <div>
+                    <span> "النعيم · عماير بدخل"
+                    <strong {color=#8A6C1E}> "لا أعضاء"
+          <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+            <section>
+              <header> "سرعة الرد · 30 يوماً"
+              <div {font-size=12px}>
+                <div>
+                  <span> "متوسط التحالف"
+                  <strong> "2 س 10 د"
+                <div>
+                  <span> "أسرع عضو · مكتب أ"
+                  <strong> "1 س 40 د"
+                <div>
+                  <span> "بلا رد خلال المهلة"
+                  <strong {color=#8A6C1E}> "4 من 31"
+                <div>
+                  <span> "«لا يوجد» صريح"
+                  <strong> "12"
+            <section>
+              <header> "قنوات الإرسال"
+              <div {font-size=12px}>
+                <div>
+                  <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "واتساب بزنس متصل · 27 إرسالاً تلقائياً هذا الشهر"
+                <div>
+                  <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "4 إرسالات يدوية «أرسل على واتساب» أثناء الانقطاع"
+                <span {color=#5E5A52}> "كل طلب يحمل رابطاً خاصاً بالمكتب؛ الرد يصل من الرابط لا من الرسالة."
+            <section>
+              <header> "آخر الأحداث"
+              <div {font-size=12px}>
+                <div>
+                  <span {color=#5E5A52}> "10:42"
+                  <span> "مكتب ط أرسل عرضاً على REQ-0412"
+                <div>
+                  <span {color=#5E5A52}> "09:10"
+                  <span> "أُرسل REQ-0415 لمكتبَي أ وك تلقائياً"
+                <div>
+                  <span {color=#5E5A52}> "أمس"
+                  <span> "نورة أنشأت REF-2026-0117"
+                <div>
+                  <span {color=#5E5A52}> "أمس"
+                  <span> "وصل طلب انضمام ALL-2026-0038"

@@ -1,0 +1,95 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section>
+        <span {font-size=12px; font-weight=700; color=#8A6C1E}> "دليل الأسعار"
+        <h1 {font-size=28px; font-weight=800}> "كم يكلف السكن في جدة؟"
+        <p {font-size=13px; color=#5E5A52}> "أرقام من وحداتنا المدرجة فعلاً، لا من إعلانات السوق. «يبدأ من» والنطاقات من الوحدات المتاحة فقط، والعدّاد يقول كم متاحاً من المدرج."
+      <nav aria-label=الأحياء>
+        <a href=#rowdah {background=#141311; color=#FFFFFF; font-size=13px; font-weight=700; text-decoration=none}>
+          "الروضة"
+          <span {font-size=11px; color=#B48F2E}> "10"
+        <span {border=1.5px solid #D4CFC4; color=#5E5A52; font-size=13px; font-weight=700}>
+          "الفيصلية"
+          <span {font-size=11px}> "قريباً"
+        <span {border=1.5px solid #D4CFC4; color=#5E5A52; font-size=13px; font-weight=700}>
+          "أبحر الشمالية"
+          <span {font-size=11px}> "قريباً"
+      <section>
+        <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr)); background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+          <div>
+            <span {font-size=22px; font-weight=800; color=#B48F2E}> "459"
+            <span {font-size=10px; color=#C9C2B3}> "ألف ريال، يبدأ من"
+          <div>
+            <span {font-size=22px; font-weight=800}> "3,819"
+            <span {font-size=10px; color=#C9C2B3}> "إلى 6,347 للمتر"
+          <div>
+            <span {font-size=22px; font-weight=800}>
+              "8"
+              <span {font-size=12px; color=#C9C2B3; font-weight=600}> "/ 10"
+            <span {font-size=10px; color=#C9C2B3}> "متاحة الآن"
+        <h2 {font-size=16px; font-weight=800}> "حسب عدد الغرف"
+        <div {border=1.5px solid #141311}>
+          <div {display=grid; grid-template-columns=1.2fr 1fr 1.2fr; font-size=11px; font-weight=700; color=#5E5A52}>
+            <span> "الغرف"
+            <span> "يبدأ من"
+            <span> "النطاق المعتاد"
+          <a href=Results-M.html {display=grid; grid-template-columns=1.2fr 1fr 1.2fr; text-decoration=none; color=#141311}>
+            <span {font-size=15px; font-weight=700}> "غرفتان"
+            <span {font-size=17px; font-weight=800}> "459,000"
+            <span {font-size=12px; color=#5E5A52}> "459 إلى 555 ألف · 5 متاحة من 7"
+          <a href=Results-M.html {display=grid; grid-template-columns=1.2fr 1fr 1.2fr; text-decoration=none; color=#141311}>
+            <span {font-size=15px; font-weight=700}> "3 غرف"
+            <span {font-size=17px; font-weight=800}> "690,000"
+            <span {font-size=12px; color=#5E5A52}> "نموذج واحد · 1 من 1"
+          <a href=Results-M.html {display=grid; grid-template-columns=1.2fr 1fr 1.2fr; text-decoration=none; color=#141311}>
+            <span {font-size=15px; font-weight=700}> "5 غرف"
+            <span {font-size=17px; font-weight=800}> "1,600,000"
+            <span {font-size=12px; color=#5E5A52}> "1.60 إلى 1.65 مليون · 2 من 2"
+        <h2 {font-size=16px; font-weight=800}> "حسب نوع الوحدة"
+        <div {border=1.5px solid #141311}>
+          <div {display=grid; grid-template-columns=1.2fr 1fr 1.2fr; font-size=11px; font-weight=700; color=#5E5A52}>
+            <span> "النوع"
+            <span> "للمتر من"
+            <span> "المساحات"
+          <div {display=grid; grid-template-columns=1.2fr 1fr 1.2fr}>
+            <span {font-size=15px; font-weight=700}> "شقة"
+            <span {font-size=17px; font-weight=800}> "4,694"
+            <span {font-size=12px; color=#5E5A52}> "80 إلى 147 م²"
+          <div {display=grid; grid-template-columns=1.2fr 1fr 1.2fr}>
+            <span {font-size=15px; font-weight=700}> "فيلا روف"
+            <span {font-size=17px; font-weight=800}> "3,819"
+            <span {font-size=12px; color=#5E5A52}> "411 إلى 419 م²"
+        <h2 {font-size=16px; font-weight=800}> "حسب المشروع"
+        <a href=Project-M.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+          <span>
+            <span {font-size=15px; font-weight=800}> "جاردن الروضة"
+            <span {font-size=12px; color=#5E5A52}> "عمارتا روز وياسمين · 10 نماذج · تسليم الربع 2 · 2027"
+          <span>
+            <span {font-size=16px; font-weight=800}> "459,000"
+            <span {font-size=11px; color=#5E5A52}> "يبدأ من"
+        <p {font-size=11px; color=#5E5A52}> "آخر تحديث 2026/10/01 · الأسعار بالريال السعودي شاملة ما يذكر في صفحة كل وحدة. سعر المتر = السعر ÷ المساحة الصافية للوحدة."
+      <section {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 20px))}>
+        <span {font-size=18px; font-weight=800}> "لم تجد حيك؟"
+        <span {font-size=13px; color=#3D3010}> "أرسل ميزانيتك والحي الذي تفضله، ونرد عليك بما نعرفه عن السوق هناك خلال ساعات العمل."
+        <a href=https://wa.me/966559997929 {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=800}> "أرسل طلبك على واتساب"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=Results-M.html {color=#FFFFFF; text-decoration=none}> "العقارات"
+          <a href=Services-M.html {color=#FFFFFF; text-decoration=none}> "الخدمات"
+          <a href=Hub-M.html {color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+          <a href=About-M.html {color=#FFFFFF; text-decoration=none}> "من نحن"
+          <a href=Contact-M.html {color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

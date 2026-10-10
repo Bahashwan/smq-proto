@@ -1,0 +1,257 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; color=#5E5A52}>
+            <a href=Admin-Inventory-D.html {text-decoration=none}> "الوحدات"
+            <span> "/"
+            <a href=Admin-ProjectEditor-D.html {text-decoration=none}> "جاردن الروضة"
+            <span> "/"
+            <span {color=#141311; font-weight=700}> "RZ-A"
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "شقة نموذج A · عمارة روز"
+              <span {font-size=13px; color=#5E5A52}> "RZ-A · منشور ومتاح · آخر تحديث 2026/10/01 من Excel · 184 مشاهدة و9 نقرات واتساب هذا الأسبوع"
+            <div>
+              <span {font-size=12px; border=1px solid #D4CFC4; background=#FFFFFF}>
+                <span {background=#F3F1EB; border=1px solid #B48F2E}> "من Excel، يُستبدل عند الاستيراد"
+                <span {background=#FFFFFF; border=1.5px solid #141311}> "إدارة فقط"
+              <a href=Unit-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=12px; font-weight=700}> "معاينة الصفحة العامة"
+          <div>
+            <form>
+              <fieldset {border=1.5px solid #141311; background=#FFFFFF}>
+                <legend>
+                <div {font-size=15px; font-weight=800}>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "الموقع"
+                <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(200px, 100%), 1fr))}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "المدينة"
+                    <span {font-weight=500}> "· Excel"
+                    <input type=text value=جدة {font-size=14px; font-weight=700; color=#141311; border=1px solid #B48F2E; background=#F3F1EB}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "الحي"
+                    <span {font-weight=500}> "· Excel"
+                    <input type=text value=الروضة {font-size=14px; font-weight=700; color=#141311; border=1px solid #B48F2E; background=#F3F1EB}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "رقم المشروع"
+                    <span {font-weight=500}> "· Excel"
+                    <input type=text value=RWD-01 {font-size=14px; font-weight=700; color=#141311; border=1px solid #B48F2E; background=#F3F1EB}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "العمارة"
+                    <span {font-weight=500}> "· إدارة"
+                    <select {font-size=14px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                      <option> "روز"
+                      <option> "ياسمين"
+              <fieldset {border=1.5px solid #141311; background=#FFFFFF}>
+                <legend>
+                <div {font-size=15px; font-weight=800}>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "الوحدة"
+                <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(160px, 100%), 1fr))}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "كود النموذج"
+                    <span {font-weight=500}> "· Excel، مفتاح"
+                    <input type=text value=RZ-A {font-size=14px; font-weight=800; color=#141311; border=1px solid #B48F2E; background=#F3F1EB}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "نوع الوحدة"
+                    <span {font-weight=500}> "· Excel"
+                    <input type=text value=شقة {font-size=14px; font-weight=700; color=#141311; border=1px solid #B48F2E; background=#F3F1EB}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "عدد الغرف"
+                    <span {font-weight=500}> "· Excel"
+                    <input type=text value=3 {font-size=14px; font-weight=700; color=#141311; border=1px solid #B48F2E; background=#F3F1EB}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "الحمامات"
+                    <span {font-weight=500}> "· إدارة"
+                    <input type=text value=3 {font-size=14px; font-weight=700; color=#141311; border=1.5px solid #141311}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "المساحة م²"
+                    <span {font-weight=500}> "· Excel"
+                    <input type=text value=147.00 {font-size=14px; font-weight=700; color=#141311; border=1px solid #B48F2E; background=#F3F1EB}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "مساحة السطح م²"
+                    <span {font-weight=500}> "· Excel"
+                    <input type=text value=0 {font-size=14px; font-weight=700; color=#141311; border=1px solid #B48F2E; background=#F3F1EB}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "الاتجاه"
+                    <span {font-weight=500}> "· Excel"
+                    <span {font-weight=500; color=#8A6C1E}> "[للتأكيد]"
+                    <input type=text value=شمالي {font-size=14px; font-weight=700; color=#141311; border=1px solid #B48F2E; background=#FFFDF6}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "ارتفاع السقف م"
+                    <span {font-weight=500}> "· Excel"
+                    <span {font-weight=500; color=#8A6C1E}> "[للتأكيد]"
+                    <input type=text value=3.20 {font-size=14px; font-weight=700; color=#141311; border=1px solid #B48F2E; background=#FFFDF6}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "الطابق"
+                    <span {font-weight=500}> "· إدارة"
+                    <input type=text value=3 {font-size=14px; font-weight=700; color=#141311; border=1.5px solid #141311}>
+              <fieldset {border=1.5px solid #141311; background=#FFFFFF}>
+                <legend>
+                <div {font-size=15px; font-weight=800}>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "السعر"
+                <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(200px, 100%), 1fr))}>
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "السعر بالريال"
+                    <span {font-weight=500}> "· Excel"
+                    <input type=text value=690,000 {font-size=18px; font-weight=800; color=#141311; border=1px solid #B48F2E; background=#F3F1EB}>
+                  <div {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "سعر المتر (يُحسب)"
+                    <span {font-size=18px; font-weight=800; color=#141311; border=1px dashed #D4CFC4}> "4,694"
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "ضريبة التصرفات العقارية"
+                    <span {font-weight=500}> "· إدارة"
+                    <select {font-size=13px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                      <option> "غير محدد [للتأكيد]"
+                      <option> "شامل الضريبة"
+                      <option> "غير شامل الضريبة"
+                  <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                    "رقم ترخيص الإعلان (اختياري)"
+                    <span {font-weight=500}> "· إدارة"
+                    <input type=text placeholder=رقم رخصة الإعلان من الهيئة {font-size=13px; color=#141311; border=1.5px solid #141311}>
+              <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(300px, 100%), 1fr))}>
+                <fieldset {border=1.5px solid #141311; background=#FFFFFF}>
+                  <legend>
+                  <div {font-size=15px; font-weight=800}>
+                    <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "المميزات"
+                    <span {font-size=11px; font-weight=500; color=#5E5A52}> "· Excel"
+                  <div>
+                    <label {font-size=13px; font-weight=600}>
+                      "غرفة عاملة/خادمة"
+                      <input type=checkbox checked=None>
+                    <label {font-size=13px; font-weight=600}>
+                      "غرفة سائق"
+                      <input type=checkbox>
+                    <label {font-size=13px; font-weight=600}>
+                      "بلكونة"
+                      <input type=checkbox checked=None>
+                    <label {font-size=13px; font-weight=600}>
+                      "سمارت هوم"
+                      <input type=checkbox checked=None>
+                    <label {font-size=13px; font-weight=600}>
+                      "نوع المطبخ"
+                      <select {font-size=12px; font-weight=700; border=1px solid #B48F2E; background=#FFFDF6}>
+                        <option> "[للتأكيد]"
+                        <option> "مفتوح"
+                        <option> "مغلق"
+                    <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                      "مميزات جوهرية أخرى"
+                      <input type=text value=دخول ذكي للعمارة · أبواب مرتفعة {font-size=13px; border=1px solid #B48F2E; background=#F3F1EB}>
+                    <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                      "مميزات إضافية أخرى"
+                      <input type=text placeholder=[للتأكيد] {font-size=13px; border=1px solid #B48F2E; background=#FFFDF6}>
+                <fieldset {border=1.5px solid #141311; background=#FFFFFF}>
+                  <legend>
+                  <div {font-size=15px; font-weight=800}>
+                    <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "الضمانات"
+                    <span {font-size=11px; font-weight=500; color=#5E5A52}> "· Excel، أو تُورَّث من المشروع"
+                  <div>
+                    <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                      "الضمانات"
+                      <input type=text placeholder=[للتأكيد] · فارغ = يُورَّث من المشروع {font-size=13px; border=1px solid #B48F2E; background=#FFFDF6}>
+                    <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                      "نوع التأمين"
+                      <input type=text placeholder=[للتأكيد] {font-size=13px; border=1px solid #B48F2E; background=#FFFDF6}>
+                    <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                      "شهادة الإشغال"
+                      <select {font-size=12px; font-weight=700; border=1px solid #B48F2E; background=#F3F1EB}>
+                        <option> "بعد التسليم (من المشروع)"
+                        <option> "صادرة"
+              <fieldset {border=1.5px solid #141311; background=#FFFFFF}>
+                <legend>
+                <div>
+                  <span {font-size=15px; font-weight=800}>
+                    "الصور والمخطط"
+                    <span {font-size=11px; font-weight=500; color=#5E5A52}> "· إدارة"
+                  <span {font-size=11px; color=#5E5A52}> "رفع صورة فعلية يستبدل التعبيرية ويزيل الوسم تلقائياً"
+                <div {display=grid; grid-template-columns=repeat(auto-fill, minmax(140px, 1fr))}>
+                  <div {background=#E9E5DB}>
+                    <span {position=absolute; font-size=9px; font-weight=700; background=#B48F2E}> "الغلاف"
+                    <span {position=absolute; font-size=9px; font-weight=700; background=#FFFFFF}> "تعبيرية · الصالة"
+                  <div {background=#E9E5DB}>
+                    <span {position=absolute; font-size=9px; font-weight=700; background=#FFFFFF}> "تعبيرية · المطبخ"
+                  <div {background=#E9E5DB}>
+                    <span {position=absolute; font-size=9px; font-weight=700; background=#FFFFFF}> "تعبيرية · غرفة النوم"
+                  <div {background=#F3F1EB; font-size=11px; font-weight=700}> "المخطط 2D · PDF"
+                  <label {border=1.5px dashed #141311; font-size=12px; font-weight=700}>
+                    "+ رفع"
+                    <input type=file {position=absolute}>
+            <aside>
+              <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 14px) 0, 100% 24px, 100% 100%, 0 100%)}>
+                <span {font-size=12px; font-weight=800; color=#B48F2E}>
+                  "الحالة"
+                  <span {font-weight=500; color=#C9C2B3}> "· Excel أو يدوي، الأحدث يفوز"
+                <div aria-label=حالة الوحدة {border=1.5px solid #3A3630}>
+                  <button type=button {font-size=13px; font-weight=800; border=0; background=#B48F2E; color=#141311}> "متاح"
+                  <button type=button {font-size=13px; font-weight=700; border=0; background=transparent; color=#FFFFFF}> "محجوز"
+                  <button type=button {font-size=13px; font-weight=700; border=0; background=transparent; color=#FFFFFF}> "مباع"
+                <label {font-size=11px; color=#C9C2B3}>
+                  "محجوز حتى (يعود متاحاً تلقائياً بعدها)"
+                  <input type=date disabled=None {font-size=13px; border=0; background=#3A3630; color=#8A8478}>
+                <label {font-size=11px; color=#C9C2B3}>
+                  "تاريخ البيع (يظهر «بيعت في» على البطاقة)"
+                  <input type=date disabled=None {font-size=13px; border=0; background=#3A3630; color=#8A8478}>
+                <label {font-size=13px; font-weight=700}>
+                  "إخفاء من الموقع"
+                  <span {background=#3A3630}>
+                    <input type=checkbox aria-label=إخفاء من الموقع {position=absolute; opacity=0}>
+                    <span {position=absolute; background=#C9C2B3; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <span {font-size=11px; color=#C9C2B3}> "مخفية = لا تظهر في النتائج ولا في جدول المشروع ولا في دليل الأسعار."
+              <div {background=#FFFFFF; border=1.5px solid #141311; font-size=12px}>
+                <span {font-weight=800}> "النشر"
+                <span>
+                  <span {color=#5E5A52}> "الحالة"
+                  <strong> "منشورة"
+                <span>
+                  <span {color=#5E5A52}> "آخر تحديث على الموقع"
+                  <strong> "2026/10/01"
+                <span>
+                  <span {color=#5E5A52}> "الرابط"
+                  <a href=Unit-D.html {font-weight=700}> "/units/rz-a"
+              <div {background=#FFFFFF; border=1.5px solid #141311; font-size=12px}>
+                <span {font-weight=800}> "سجل التغييرات"
+                <span>
+                  <strong> "استيراد Excel"
+                  "· السعر 680,000 → 690,000 · 2026/10/01"
+                <span>
+                  <strong> "نورة"
+                  "· أضافت الطابق والحمامات · 2026/09/28"
+                <span>
+                  <strong> "استيراد Excel"
+                  "· أُنشئت الوحدة بحالة مخفي · 2026/09/12"
+                <span>
+                  <strong> "سعود"
+                  "· نشر الوحدة · 2026/09/13"
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #D4CFC4; background=#FFFFFF; color=#5E5A52}> "حذف الوحدة نهائياً"
+      <div {position=sticky; background=#141311; color=#FFFFFF}>
+        <span {font-size=13px}>
+          <span {background=#C9C2B3; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "لا تغييرات غير محفوظة"
+        <div>
+          <button type=button disabled=None {font-size=13px; font-weight=700; border=1.5px solid #3A3630; background=transparent; color=#8A8478}> "حفظ كمسودة"
+          <button type=button disabled=None {font-size=13px; font-weight=800; border=0; background=#3A3630; color=#8A8478}> "حفظ ونشر"

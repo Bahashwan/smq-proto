@@ -1,0 +1,36 @@
+<html lang=en dir=ltr>
+  <body>
+    <div dir=ltr {width=390px; background=#F8F7F4; color=#141311}>
+      <span {font-size=11px; font-weight=700; color=#5E5A52}> "Result card, LTR. Cuts mirror to the bottom-right; the status hexagon moves to the top-left; price band and actions keep their order."
+      <article {border=1.5px solid #141311; background=#FFFFFF}>
+        <div>
+          <figure {height=170px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% calc(100% - 62px), calc(100% - 36px) 100%, 0 100%)}>
+            <svg svg  {position=absolute; opacity=0.55}>
+            <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "Illustrative image"
+          <span {position=absolute; background=#B48F2E; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "For sale"
+          <span {position=absolute; background=#141311; color=#FFFFFF; font-size=11px; font-weight=700; clip-path=polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0 100%)}> "Rose building"
+        <div>
+          <a href=EN-Unit-M.html {text-decoration=none; color=#141311}>
+            <span {font-size=18px; font-weight=800}> "Apartment, model A"
+            <span {font-size=12px; color=#5E5A52}> "3 bed · 3 bath · 147 m²"
+          <span {font-size=11px; color=#5E5A52}> "Delivery Q2 2027"
+        <div {background=#141311; color=#FFFFFF}>
+          <span>
+            <span {font-size=24px; font-weight=800}> "690,000"
+            <span {font-size=12px; font-weight=600; color=#C9C2B3}> "SAR"
+          <span {font-size=12px; color=#C9C2B3}>
+            <strong {color=#B48F2E; font-size=14px}> "4,694"
+            "per m²"
+        <div>
+          <a href=https://wa.me/966559997929?text=Asking%20about%20RZ-A%20Garden%20Al%20Rawdah {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 17px)}>
+            <svg svg > "WhatsApp"
+          <label {border=1.5px solid #141311; font-size=13px; font-weight=700; background=#FFFFFF}>
+            <input type=checkbox aria-label=Add to compare>
+            <span> "Compare"
+      <div {display=grid; grid-template-columns=1fr 1fr 1fr; font-size=11px; font-weight=700}>
+        <span>
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "For sale"
+        <span>
+          <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "Reserved"
+        <span>
+          <span {background=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "Sold"

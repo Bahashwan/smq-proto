@@ -1,0 +1,49 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Unit-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <div {background=#F3F1EB; font-size=11px; font-weight=700}>
+        <span {background=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "الطبقة 1 · صورة فعلية · بعد التصوير الاحترافي · لا وسم"
+      <section>
+        <div>
+          <figure {height=240px; background=#3A3630; clip-path=polygon(0 0, 100% 0, 100% 100%, 42px 100%, 0 calc(100% - 72px))}>
+            <span {position=absolute; background=linear-gradient(0deg, #3A3630 0%, #3A3630 100%)}>
+            <svg svg  {position=absolute; opacity=.9}>
+            <figcaption {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "IMG-UNIT-APT-3BR-LIVING · فعلية · 2026-11"
+          <span {position=absolute; background=#B48F2E; color=#141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+        <div {display=grid; grid-template-columns=repeat(4, minmax(0, 1fr))}>
+          <button type=button aria-label=الصالة {border=2px solid #141311; background=#3A3630}>
+          <button type=button aria-label=المطبخ {border=1px solid #D4CFC4; background=#5E5A52; font-size=9px; color=#FFFFFF}> "المطبخ"
+          <button type=button aria-label=غرفة النوم {border=1px solid #D4CFC4; background=#5E5A52; font-size=9px; color=#FFFFFF}> "النوم"
+          <a href=Unit-Plan-M.html aria-label=المخطط {border=1px solid #D4CFC4; background=#F3F1EB; text-decoration=none; font-size=9px; font-weight=700; color=#141311}> "المخطط"
+      <section>
+        <a href=Project-M.html {font-size=12px; font-weight=700; text-decoration=none}> "جاردن الروضة · عمارة روز · حي الروضة"
+        <h1 {font-size=30px; font-weight=800}> "شقة نموذج A"
+        <p {font-size=13px; color=#5E5A52}> "3 غرف نوم · 3 حمامات · 147 م² · الطابق الثالث [للتأكيد]"
+        <span {font-size=11px; color=#5E5A52}> "آخر تحديث 2026/11/02 · كود النموذج RZ-A · 7 صور فعلية"
+      <section {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+        <div>
+          <span>
+            <svg svg aria-label=ريال سعودي {color=#B48F2E}>
+            <span {font-size=36px; font-weight=800}> "690,000"
+          <span>
+            <span {font-size=18px; font-weight=800; color=#B48F2E}> "4,694"
+            <span {font-size=11px; color=#C9C2B3}> "للمتر المربع"
+      <section>
+        <h2 {font-size=14px; font-weight=800}> "قواعد هذه الطبقة"
+        <ul {font-size=12px; color=#3A3630}>
+          <li> "صورة من المصوّر أو فريق SMQ، بلا تعديل في الهندسة أو الأثاث."
+          <li> "لا وسم «صورة تعبيرية». يظهر رمز اللقطة وتاريخ التصوير فقط عند الضغط المطوّل."
+          <li> "رفعها في لوحة الإدارة يستبدل التعبيرية ويطفئ الوسم تلقائياً في كل الصفحات."
+          <li> "لا أشخاص في الصورة. إن ظهروا تُحذف الصورة قبل النشر."
+      <div>
+        <a href=https://wa.me/966559997929?text=RZ-A {background=#B48F2E; color=#141311; text-decoration=none; font-size=15px; font-weight=800; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+          <svg svg > "اسأل عن نموذج A"

@@ -1,0 +1,333 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "غرفة التحالف · الرادار"
+              <span {font-size=13px; color=#5E5A52}> "لكل حي: ما بحث عنه الزوار (30 يوماً)، ما لدى SMQ، ومن يغطيه من الأعضاء. الذهبي هو الفرصة: طلب بلا وحدات لنا ويغطيه أعضاء"
+            <div>
+              <select aria-label=المدة {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "آخر 30 يوماً"
+                <option> "آخر 90 يوماً"
+              <button type=button> "تصدير CSV"
+          <nav aria-label=أقسام غرفة التحالف>
+            <a href=Admin-Alliance-D.html> "نظرة عامة"
+            <a href=Admin-AllianceApplications-D.html>
+              "طلبات الانضمام"
+              <i> "4"
+            <a href=Admin-AllianceMembers-D.html>
+              "الأعضاء"
+              <i> "12"
+            <a href=Admin-AllianceRadar-D.html> "الرادار"
+            <a href=Admin-AllianceRequests-D.html>
+              "الطلبات والمطابقات"
+              <i> "5"
+            <a href=Admin-AllianceReferrals-D.html>
+              "الإحالات والصفقات"
+              <i> "3"
+            <a href=Admin-AllianceReport-D.html> "التقرير الشهري"
+            <a href=Admin-AllianceSettings-D.html> "الميثاق والإعدادات"
+          <div {display=grid; grid-template-columns=minmax(0, 1fr) 380px}>
+            <section>
+              <header>
+                "شبكة الأحياء"
+                <div>
+                  <span>
+                    <i {background=#FFFFFF}> "بلا طلب"
+                  <span>
+                    <i {background=#F3F1EB}> "طلب"
+                  <span>
+                    <i {background=#FFFFFF}> "طلب بلا عرض"
+                  <span>
+                    <i {background=#141311}> "يغطيه أعضاء"
+              <div>
+                <span {font-size=11px; font-weight=800; color=#8A6C1E}> "شمال جدة"
+                <div>
+                  <button type=button>
+                    "أبحر الشمالية"
+                    <small> "318 · 0 وحدة · 2 مكاتب"
+                  <button type=button>
+                    "الشاطئ"
+                    <small> "186 · 0 · 2 مكاتب"
+                  <button type=button>
+                    "ذهبان"
+                    <small> "12"
+                  <button type=button>
+                    "المحمدية"
+                    <small> "96 · 0 · 2 مكاتب"
+                  <button type=button>
+                    "النهضة"
+                    <small> "44 · 0 · لا أعضاء"
+                  <button type=button>
+                    "البساتين"
+                    <small> "18"
+                <span {font-size=11px; font-weight=800; color=#8A6C1E}> "وسط جدة"
+                <div>
+                  <button type=button>
+                    "الروضة"
+                    <small> "1,060 · 8 وحدات · 2"
+                  <button type=button>
+                    "الصفا"
+                    <small> "204 · 1 · 1 مكتب"
+                  <button type=button>
+                    "النعيم"
+                    <small> "433 · 0 · 1 عرض"
+                  <button type=button>
+                    "الزهراء"
+                    <small> "71 · 0 · لا أعضاء"
+                  <button type=button>
+                    "السلامة"
+                    <small> "9"
+                  <button type=button>
+                    "الخالدية"
+                    <small> "15"
+                <span {font-size=11px; font-weight=800; color=#8A6C1E}> "شرق جدة"
+                <div>
+                  <button type=button>
+                    "الحرازات"
+                    <small> "58 · 0 · لا أعضاء"
+                  <button type=button>
+                    "السامر"
+                    <small> "39 · 0 · 1 مكتب"
+                  <button type=button>
+                    "الرحاب"
+                    <small> "7"
+                  <button type=button>
+                    "الأجاويد"
+                    <small> "11"
+                  <button type=button>
+                    "بريمان"
+                    <small> "4"
+                  <button type=button>
+                    "الواحة"
+                    <small> "6"
+                <span {font-size=11px; font-weight=800; color=#8A6C1E}> "غرب جدة"
+                <div>
+                  <button type=button>
+                    "الحمراء"
+                    <small> "52 · 0 · 1 مكتب"
+                  <button type=button>
+                    "البلد"
+                    <small> "14"
+                  <button type=button>
+                    "الأندلس"
+                    <small> "22"
+                  <button type=button>
+                    "الرويس"
+                    <small> "8"
+                  <button type=button>
+                    "الشرفية"
+                    <small> "19"
+                  <button type=button>
+                    "البغدادية"
+                    <small> "5"
+                <span {font-size=11px; font-weight=800; color=#8A6C1E}> "جنوب جدة"
+                <div>
+                  <button type=button>
+                    "الفيصلية"
+                    <small> "141 · 0 · 1 مكتب"
+                  <button type=button>
+                    "المنتزهات"
+                    <small> "16"
+                  <button type=button>
+                    "الجامعة"
+                    <small> "21"
+                  <button type=button>
+                    "السنابل"
+                    <small> "3"
+                  <button type=button>
+                    "قويزة"
+                    <small> "9"
+                  <button type=button>
+                    "الكوثر"
+                    <small> "13"
+                <span {font-size=11px; color=#5E5A52}> "الخلية: الحي · جلسات البحث · وحدات SMQ المتاحة · المكاتب التي تغطيه. انقر خلية لتفتح الدُّرج."
+            <aside aria-label=أبحر الشمالية>
+              <header>
+                <span> "أبحر الشمالية · شمال جدة"
+                <button type=button aria-label=إغلاق {border=1.5px solid #141311; background=#FFFFFF; font-size=14px; font-weight=800}> "×"
+              <div>
+                <div {border=2px solid #B48F2E; background=#FFFDF6; font-size=12px; font-weight=700}>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "طلب قوي، لا وحدات لنا، ومكتبان يغطيانه"
+                <div>
+                  <span {font-size=12px; font-weight=800}> "الطلب · 30 يوماً"
+                  <div>
+                    <span> "جلسات بحث"
+                    <span> "318 · +22% عن الشهر السابق"
+                  <div>
+                    <span> "الميزانية الوسيطة"
+                    <span> "1,900,000"
+                  <div>
+                    <span> "الأكثر طلباً"
+                    <span> "فلل · 5 غرف"
+                  <div>
+                    <span> "ضغطات واتساب بلا نتيجة"
+                    <span> "41"
+                <div>
+                  <span {font-size=12px; font-weight=800}> "ما لدى SMQ"
+                  <div>
+                    <span> "وحدات متاحة"
+                    <span {color=#8A6C1E}> "0 · مشروع أبحر قريباً [للتأكيد]"
+                <div>
+                  <span {font-size=12px; font-weight=800}> "الأعضاء الذين يغطيه"
+                  <div {border=1.5px solid #141311; font-size=12px}>
+                    <span>
+                      <strong> "مكتب أ"
+                      "· فلل، أراضي · رد 1 س 40 د"
+                    <span {font-weight=800; color=#8A6C1E}> "الأول"
+                  <div {border=1.5px solid #141311; font-size=12px}>
+                    <span>
+                      <strong> "مكتب ك"
+                      "· فلل · رد 2 س 00 د"
+                    <span {font-weight=800}> "الثاني"
+                <div>
+                  <span {font-size=12px; font-weight=800}> "طلبات مفتوحة هنا · 2"
+                  <a href=Admin-AllianceRequests-D.html {background=#F3F1EB; font-size=12px; text-decoration=none; color=#141311}>
+                    <span> "REQ-0415 · فيلا حتى 2.2M"
+                    <span {font-weight=800}> "أُرسل · بلا رد"
+                  <a href=Admin-AllianceRequests-D.html {background=#F3F1EB; font-size=12px; text-decoration=none; color=#141311}>
+                    <span> "REQ-0403 · أرض حتى 1.5M"
+                    <span {font-weight=800}> "وصلت عروض"
+                <button type=button {font-size=13px}> "أرسل للمكاتب · 41 زائراً بلا نتيجة"
+                <span {font-size=11px; color=#5E5A52}> "«أرسل للمكاتب» ينشئ طلباً مجمّعاً من بحوث الزوار (الشريحة والميزانية فقط) ويرسله للمكتبين، بلا أي بيانات زوار."
+          <section>
+            <header>
+              "الأحياء مرتّبة بالفرصة"
+              <span {font-size=11px; font-weight=700; color=#5E5A52}> "الفرصة = جلسات × (1 إن لا وحدات لنا) × (يغطيه أعضاء)"
+            <table>
+              <thead>
+                <tr>
+                  <th> "#"
+                  <th> "الحي"
+                  <th> "جلسات"
+                  <th> "الميزانية الوسيطة"
+                  <th> "الغرف الأكثر"
+                  <th> "وحدات SMQ"
+                  <th> "أعضاء يغطونه"
+                  <th> "طلبات مفتوحة"
+                  <th>
+              <tbody>
+                <tr {background=#FFFDF6}>
+                  <td> "1"
+                  <td>
+                    <strong> "أبحر الشمالية"
+                  <td> "318"
+                  <td> "1,900,000"
+                  <td> "5 (فلل)"
+                  <td {color=#8A6C1E; font-weight=800}> "0"
+                  <td> "2 · أ، ك"
+                  <td> "2"
+                  <td>
+                    <a href=Admin-AllianceRequests-D.html> "أرسل للمكاتب"
+                <tr {background=#FFFDF6}>
+                  <td> "2"
+                  <td>
+                    <strong> "الصفا"
+                  <td> "204"
+                  <td> "680,000"
+                  <td> "4"
+                  <td {color=#8A6C1E; font-weight=800}> "1 من مالك"
+                  <td> "1 · هـ"
+                  <td> "1"
+                  <td>
+                    <a href=Admin-AllianceRequests-D.html> "أرسل للمكاتب"
+                <tr {background=#FFFDF6}>
+                  <td> "3"
+                  <td>
+                    <strong> "الفيصلية"
+                  <td> "141"
+                  <td> "440,000"
+                  <td> "4"
+                  <td {color=#8A6C1E; font-weight=800}> "0"
+                  <td> "1 · ط"
+                  <td> "1"
+                  <td>
+                    <a href=Admin-AllianceRequests-D.html> "أرسل للمكاتب"
+                <tr {background=#FFFDF6}>
+                  <td> "4"
+                  <td>
+                    <strong> "المحمدية"
+                  <td> "96"
+                  <td> "850,000"
+                  <td> "3"
+                  <td {color=#8A6C1E; font-weight=800}> "0"
+                  <td> "2 · د، (ل موقوف)"
+                  <td> "0"
+                  <td>
+                    <a href=Admin-AllianceRequests-D.html> "أرسل للمكاتب"
+                <tr>
+                  <td> "5"
+                  <td>
+                    <strong> "النعيم"
+                  <td> "433"
+                  <td> "720,000"
+                  <td> "3"
+                  <td> "0 · عرض بدخل قيد المراجعة"
+                  <td {color=#8A6C1E; font-weight=800}> "1 · و (عماير فقط)"
+                  <td> "0"
+                  <td>
+                    <a href=Admin-AllianceApplications-D.html> "يحتاج أعضاء"
+                <tr>
+                  <td> "6"
+                  <td>
+                    <strong> "الروضة"
+                  <td> "1,060"
+                  <td> "620,000"
+                  <td> "2"
+                  <td {font-weight=800}> "8"
+                  <td> "2 · ب، ي"
+                  <td> "0"
+                  <td>
+                    <span {font-size=11px; color=#5E5A52}> "نغطيه بأنفسنا"
+                <tr>
+                  <td> "7"
+                  <td>
+                    <strong> "الشاطئ"
+                  <td> "186"
+                  <td> "1,100,000"
+                  <td> "3"
+                  <td> "0"
+                  <td> "2 · أ، ج"
+                  <td> "1"
+                  <td>
+                    <a href=Admin-AllianceRequests-D.html> "أرسل للمكاتب"
+                <tr>
+                  <td> "8"
+                  <td>
+                    <strong> "النهضة"
+                  <td> "44"
+                  <td> "560,000"
+                  <td> "2"
+                  <td> "0"
+                  <td {color=#8A6C1E; font-weight=800}> "لا أعضاء"
+                  <td> "0"
+                  <td>
+                    <a href=Admin-AllianceApplications-D.html> "يحتاج أعضاء"

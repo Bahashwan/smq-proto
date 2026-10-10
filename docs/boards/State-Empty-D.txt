@@ -1,0 +1,93 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Project-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <section>
+        <h1 {font-size=36px; font-weight=800}> "الوحدات في جدة"
+        <div>
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "الفيصلية"
+            <span aria-label=إزالة> "×"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "حتى 450,000"
+            <span aria-label=إزالة> "×"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "4 غرف"
+            <span aria-label=إزالة> "×"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "غرفة سائق"
+            <span aria-label=إزالة> "×"
+          <button type=button {font-size=12px; font-weight=700; border=0; background=transparent; color=#8A6C1E; text-decoration=underline}> "مسح الكل"
+      <section {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(380px, 100%), 1fr))}>
+        <div {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 64px 100%, 0 calc(100% - 37px))}>
+          <span {font-size=96px; font-weight=800}> "0"
+          <h2 {font-size=28px; font-weight=800}> "لا توجد وحدة تطابق كل الفلاتر"
+          <p {font-size=15px; color=#3D3010}>
+            "القيد الذي يحذف أكثر النتائج هو"
+            <strong> "الحي"
+            ". لا نملك وحدات مدرجة في الفيصلية بعد، لكن لدينا 10 في الروضة."
+        <div>
+          <span {font-size=13px; font-weight=700; color=#5E5A52}> "جرّب تخفيف قيد واحد"
+          <a href=Results-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {font-size=16px; font-weight=700}> "كل أحياء جدة بدل الفيصلية"
+            <span {font-size=13px; font-weight=800; background=#141311; color=#B48F2E}> "+6 وحدات"
+          <a href=Results-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {font-size=16px; font-weight=700}> "حتى 560,000 بدل 450,000"
+            <span {font-size=13px; font-weight=800; background=#141311; color=#B48F2E}> "+4 وحدات"
+          <a href=Results-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {font-size=16px; font-weight=700}> "3 غرف بدل 4"
+            <span {font-size=13px; font-weight=800; background=#141311; color=#B48F2E}> "+2 وحدة"
+          <div {background=#F3F1EB}>
+            <span>
+              <span {font-size=16px; font-weight=800}> "أو أرسل لنا طلبك"
+              <span {font-size=12px; color=#5E5A52}> "نراسلك عندما تُدرج وحدة تناسب طلبك."
+            <a href=https://wa.me/966559997929?text=%D8%A3%D8%A8%D8%AD%D8%AB%20%D8%B9%D9%86%204%20%D8%BA%D8%B1%D9%81%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%81%D9%8A%D8%B5%D9%84%D9%8A%D8%A9 {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "أرسل طلبك على واتساب"
+      <section>
+        <div {display=grid; grid-template-columns=380px minmax(0, 1fr); border=1.5px solid #141311; background=#FFFFFF}>
+          <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0)}>
+            <span>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {font-size=12px; font-weight=700; color=#B48F2E}> "مبادرة من SMQ · تحالف مكاتب جدة"
+            <h2 {font-size=22px; font-weight=800}> "مكاتب مرخصة في تحالف جدة تغطي هذا الحي"
+            <p {font-size=13px; color=#C9C2B3}> "مكتب واحد موثّق يغطي الفيصلية. اترك طلبك ونمرّره له عبر SMQ. رقمك لا يصل لأي مكتب؛ نحن من يعرّفكم ببعض ونسجّل التعارف."
+            <a href=Alliance-D.html {font-size=12px; font-weight=700; color=#B48F2E}> "ما التحالف؟ ←"
+          <form>
+            <div aria-label=طلبك كما سيُرسل>
+              <span {font-size=12px; font-weight=700; color=#5E5A52}> "طلبك كما سيُرسل:"
+              <span {background=#F3F1EB; font-size=13px; font-weight=700}> "الفيصلية"
+              <span {background=#F3F1EB; font-size=13px; font-weight=700}> "حتى 450,000"
+              <span {background=#F3F1EB; font-size=13px; font-weight=700}> "4 غرف"
+              <span {background=#F3F1EB; font-size=13px; font-weight=700}> "شقة"
+              <a href=Results-D.html {font-size=12px; font-weight=700; text-decoration=none}> "تعديل"
+            <div {display=grid; grid-template-columns=1fr 1fr 180px}>
+              <label {font-size=12px; font-weight=600; color=#5E5A52}>
+                "الاسم"
+                <input type=text placeholder=اسمك {font-size=14px; font-weight=600; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+              <label {font-size=12px; font-weight=600; color=#5E5A52}>
+                "الجوال"
+                <input type=tel placeholder=05XXXXXXXX {font-size=14px; font-weight=600; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+              <button type=submit {font-size=14px; font-weight=800; border=0; background=#B48F2E; color=#141311; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "أرسل الطلب للتحالف"
+            <label {font-size=13px; color=#141311; border=1.5px solid #141311; background=#F8F7F4}>
+              <input type=checkbox> "أوافق على أن تمرّر SMQ طلبي (الحي والميزانية والغرف فقط) إلى مكاتب عقارية مرخّصة أعضاء في التحالف. اسمي ورقمي يبقيان عند SMQ."
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span> "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية"

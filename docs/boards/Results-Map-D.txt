@@ -1,0 +1,139 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {height=1000px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Projects-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <div {background=#FFFFFF}>
+        <div>
+          <div>
+            <span {font-size=16px; font-weight=800}> "8 وحدات في مشروعين"
+            <span {background=#141311; color=#FFFFFF}> "الميزانية: حتى 700,000 ×"
+            <span> "غرفتان أو أكثر ×"
+            <span> "متاح فقط ×"
+            <span> "+ الحي"
+            <span> "+ النوع"
+            <a href=Results-D.html {font-size=12px; font-weight=700}> "مسح الكل"
+          <div>
+            <label {font-size=12px; font-weight=700}>
+              "ترتيب"
+              <select {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "الأقل سعراً للمتر"
+                <option> "الأقل سعراً"
+                <option> "الأكبر مساحة"
+            <div aria-label=طريقة العرض {border=1.5px solid #141311}>
+              <a href=Results-D.html {font-size=12px; font-weight=700; color=#141311; text-decoration=none}> "قائمة"
+              <span {font-size=12px; font-weight=800; background=#141311; color=#FFFFFF}> "خريطة"
+      <div {display=grid; grid-template-columns=420px minmax(0, 1fr)}>
+        <aside aria-label=الوحدات في المشروع المحدد {background=#F8F7F4}>
+          <div {background=#FFFFFF}>
+            <span {font-size=14px; font-weight=800}> "جاردن الروضة · 7 مطابقة"
+            <a href=Project-D.html {font-size=12px; font-weight=700; text-decoration=none}> "صفحة المشروع"
+          <div>
+            <a href=Unit-D.html>
+              <figure>
+              <span>
+                <span {font-size=14px; font-weight=800}> "RZ-D · شقة · روز"
+                <span {font-size=11px; color=#5E5A52}> "غرفتان · 2 حمام · 82.60 م²"
+                <span {font-size=16px; font-weight=800}>
+                  "459,000"
+                  <span {font-size=11px; font-weight=600; color=#5E5A52}> "5,557 للمتر"
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <a href=Unit-D.html>
+              <figure>
+              <span>
+                <span {font-size=14px; font-weight=800}> "YS-D · شقة · ياسمين"
+                <span {font-size=11px; color=#5E5A52}> "غرفتان · 2 حمام · 84.20 م²"
+                <span {font-size=16px; font-weight=800}>
+                  "459,000"
+                  <span {font-size=11px; font-weight=600; color=#5E5A52}> "5,451 للمتر"
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <a href=Unit-D.html>
+              <figure>
+              <span>
+                <span {font-size=14px; font-weight=800}> "RZ-C · شقة · روز"
+                <span {font-size=11px; color=#5E5A52}> "غرفتان · 2 حمام · 80.35 م²"
+                <span {font-size=16px; font-weight=800}>
+                  "510,000"
+                  <span {font-size=11px; font-weight=600; color=#5E5A52}> "6,347 للمتر"
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <a href=Unit-D.html>
+              <figure>
+              <span>
+                <span {font-size=14px; font-weight=800}> "RZ-B · شقة · روز"
+                <span {font-size=11px; color=#5E5A52}> "غرفتان · 3 حمامات · 116.90 م²"
+                <span {font-size=16px; font-weight=800}>
+                  "555,000"
+                  <span {font-size=11px; font-weight=600; color=#5E5A52}> "4,748 للمتر"
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <a href=Unit-D.html>
+              <figure>
+              <span>
+                <span {font-size=14px; font-weight=800}> "YS-B · شقة · ياسمين"
+                <span {font-size=11px; color=#5E5A52}> "غرفتان · 3 حمامات · 106.05 م²"
+                <span {font-size=16px; font-weight=800}>
+                  "555,000"
+                  <span {font-size=11px; font-weight=600; color=#5E5A52}> "5,233 للمتر"
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <a href=Unit-D.html>
+              <figure>
+              <span>
+                <span {font-size=14px; font-weight=800}> "RZ-A · شقة · روز"
+                <span {font-size=11px; color=#5E5A52}> "3 غرف · 3 حمامات · 147.00 م²"
+                <span {font-size=16px; font-weight=800}>
+                  "690,000"
+                  <span {font-size=11px; font-weight=600; color=#5E5A52}> "4,694 للمتر"
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {font-size=11px; color=#5E5A52}> "و1 وحدة أخرى · فيلتا الروف خارج الميزانية (1.6 و1.65 مليون)"
+        <div aria-label=خريطة النتائج {background=#E9E5DB}>
+          <span {position=absolute}>
+          <svg svg  {position=absolute}>
+          <span {position=absolute; font-size=13px; font-weight=700; color=#5E5A52}> "الروضة"
+          <span {position=absolute; font-size=13px; font-weight=700; color=#5E5A52}> "الصفا"
+          <span {position=absolute; font-size=13px; font-weight=700; color=#5E5A52}> "أبحر الشمالية"
+          <span {position=absolute; font-size=13px; font-weight=700; color=#5E5A52}> "النعيم"
+          <span {position=absolute; font-size=13px; font-weight=700; color=#5E5A52}> "الشاطئ"
+          <a href=#p-rawdah>
+            <span {font-size=17px}> "7"
+            <span> "جاردن الروضة"
+          <a href=#p-safa>
+            <span {background=#FFFFFF}> "1"
+            <span> "من مالك · الصفا"
+          <a href=#p-obhur>
+            <span {background=#FFFFFF; color=#5E5A52; font-size=11px}> "قريباً"
+            <span> "مشروع أبحر"
+          <section aria-label=جاردن الروضة {position=absolute; width=360px; background=#FFFFFF; border=1.5px solid #141311}>
+            <span {position=absolute; background=#141311; clip-path=polygon(50% 0, 100% 100%, 0 100%)}>
+            <figure {height=130px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 52px))}>
+              <figcaption {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+            <div>
+              <span {font-size=11px; font-weight=700; color=#8A6C1E}> "الروضة · تسليم الربع 2 · 2027 [للتأكيد]"
+              <a href=Project-D.html {font-size=18px; font-weight=800; text-decoration=none; color=#141311}> "جاردن الروضة"
+              <span {font-size=12px; color=#5E5A52}> "7 وحدات مطابقة من 8 متاحة · عمارتان · غرفتان و3 غرف وفيلا روف"
+              <span {font-size=12px; color=#5E5A52}>
+                "من"
+                <strong {font-size=20px; color=#141311}> "459,000"
+                "إلى"
+                <strong {color=#141311}> "690,000"
+            <div>
+              <a href=Results-D.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "اعرض الوحدات السبع"
+              <a href=https://wa.me/966559997929?text=%D8%AC%D8%A7%D8%B1%D8%AF%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%B6%D8%A9 aria-label=واتساب {background=#B48F2E; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <svg svg >
+          <div {position=absolute}>
+            <button type=button aria-label=تكبير {border=1.5px solid #141311; background=#FFFFFF; font-size=20px; font-weight=800}> "+"
+            <button type=button aria-label=تصغير {border=1.5px solid #141311; background=#FFFFFF; font-size=20px; font-weight=800}> "−"
+          <span {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "السداسي الذهبي: متاح · الأبيض: من مالك أو قريباً · الرقم: الوحدات المطابقة · الخريطة الحقيقية من المزوّد عند البناء"

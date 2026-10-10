@@ -1,0 +1,77 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Projects-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <main {display=grid; grid-template-columns=minmax(0, 1.1fr) minmax(0, 0.9fr)}>
+        <div>
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <h1 {font-size=40px; font-weight=800}> "وصلنا طلبك"
+          <p {font-size=16px; color=#3A3630}> "عمارة سكنية للبيع في حي النعيم، 8 وحدات، بسعر 4,800,000 ريال. سنراجع الوكالة والعقود ونتواصل معك صباحاً على واتساب خلال 24 ساعة عمل."
+          <ol {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+            <li {border=1.5px solid #141311}>
+              <span {background=#B48F2E; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "1"
+              <span {font-size=13px; font-weight=800}> "الآن"
+              <span {font-size=12px; color=#5E5A52}> "عند فريق المراجعة. لا يظهر على الموقع بعد."
+            <li {border=1.5px solid #D4CFC4}>
+              <span {border=1.5px solid #141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "2"
+              <span {font-size=13px; font-weight=800}> "خلال 24 ساعة عمل"
+              <span {font-size=12px; color=#5E5A52}> "تقييم أولي بالعائد وسعر المتر، وموعد تصوير."
+            <li {border=1.5px solid #D4CFC4}>
+              <span {border=1.5px solid #141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "3"
+              <span {font-size=13px; font-weight=800}> "بعد الموافقة"
+              <span {font-size=12px; color=#5E5A52}> "نشر بوسم «من مالك» وبسعر معلن، ورابط يصلك."
+          <div>
+            <a href=https://wa.me/966559997929?text=%D8%B7%D9%84%D8%A8%202026-1044 {background=#B48F2E; color=#141311; font-size=15px; font-weight=800; text-decoration=none; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+              <svg svg > "أضف الوكالة أو العقود عبر واتساب"
+            <a href=Home-D.html {border=1.5px solid #141311; color=#141311; font-size=14px; font-weight=700; text-decoration=none}> "العودة إلى الرئيسية"
+        <aside>
+          <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 20px) 0, 100% 35px, 100% 100%, 0 100%)}>
+            <span {font-size=13px; font-weight=700; color=#C9C2B3}> "رقم الطلب · احفظه للمتابعة"
+            <div>
+              <span {font-size=44px; font-weight=800}> "2026-1044"
+              <button type=button {font-size=13px; font-weight=800; border=1.5px solid #FFFFFF; background=transparent; color=#FFFFFF}> "نسخ"
+            <span {font-size=12px; color=#C9C2B3}> "أُرسلت رسالة واتساب بنفس الرقم إلى 05X XXX 2210. اذكر الرقم في أي تواصل."
+          <div {border=1.5px solid #141311; font-size=13px}>
+            <span {font-size=12px; font-weight=800}> "ملخص ما أرسلت"
+            <span>
+              <span {color=#5E5A52}> "النوع"
+              <span> "عمارة سكنية · للبيع"
+            <span>
+              <span {color=#5E5A52}> "الموقع"
+              <span> "حي النعيم، جدة"
+            <span>
+              <span {color=#5E5A52}> "الوحدات والدخل"
+              <span> "8 · 312,000 سنوياً"
+            <span>
+              <span {color=#5E5A52}> "السعر المطلوب"
+              <span> "4,800,000 · قابل للتفاوض قليلاً"
+            <span>
+              <span {color=#5E5A52}> "صفتك"
+              <span> "وكيل · وكالة مرفقة"
+            <span>
+              <span {color=#5E5A52}> "الصور"
+              <span> "4"
+            <span>
+              <span {color=#5E5A52}> "التواصل"
+              <span> "صباحاً"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span> "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية"

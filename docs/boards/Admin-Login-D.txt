@@ -1,0 +1,29 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#141311; color=#141311}>
+      <div {color=#FFFFFF}>
+        <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <span {font-size=13px; font-weight=700; color=#B48F2E}> "لوحة الإدارة"
+          <span {font-size=40px; font-weight=800}> "الوحدات، الطلبات، والأرقام، في مكان واحد"
+          <span {font-size=13px; color=#C9C2B3}> "للفريق فقط. لا تسجيل جديد من هنا؛ الحسابات تُنشأ من «الإعدادات والمستخدمون»."
+        <span {font-size=12px; color=#C9C2B3}> "© 2026 إس إم كيو العقارية · ترخيص الهيئة العامة للعقار 1200040135"
+      <div {background=#F8F7F4}>
+        <form {background=#FFFFFF; border=1.5px solid #141311}>
+          <h1 {font-size=24px; font-weight=800}> "تسجيل الدخول"
+          <div {border=2px solid #B48F2E; background=#FFFDF6; font-size=13px}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+            <span> "البريد أو كلمة المرور غير صحيحة. بقيت محاولتان قبل إيقاف الحساب 15 دقيقة."
+          <label {font-size=12px; font-weight=700; color=#5E5A52}>
+            "البريد الإلكتروني"
+            <input type=email value=saud@smqre.com {font-size=15px; font-weight=600; color=#141311; border=2px solid #B48F2E}>
+          <label {font-size=12px; font-weight=700; color=#5E5A52}>
+            "كلمة المرور"
+            <span {border=2px solid #B48F2E}>
+              <input type=password value=•••••••••• {font-size=15px; font-weight=600; color=#141311; border=0}>
+              <button type=button aria-label=إظهار كلمة المرور {border=0; background=#FFFFFF}>
+                <svg svg >
+          <label {font-size=13px}>
+            <input type=checkbox checked=None> "تذكرني على هذا الجهاز 30 يوماً"
+          <button type=submit {font-size=16px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}> "دخول"
+          <a href=#reset {font-size=13px; font-weight=700; text-decoration=none}> "نسيت كلمة المرور؟ يصلك رابط على البريد"

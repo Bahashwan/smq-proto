@@ -1,0 +1,89 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929?text=%D9%85%D8%B3%D9%88%D9%91%D9%82 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section {background=#F3F1EB; clip-path=polygon(0 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 30px))}>
+        <span {font-size=12px; font-weight=700; color=#8A6C1E}>
+          <a href=Hub-M.html {text-decoration=none}> "تعاون معنا"
+          "› للأفراد"
+        <h1 {font-size=30px; font-weight=800}> "انضم كمسوّق"
+        <p {font-size=13px; color=#3A3630}> "سوّق وحدات SMQ برابطك الخاص. كل زيارة وضغطة واتساب تُحسب لك، والعمولة مكتوبة قبل أن تبدأ."
+      <section>
+        <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+          <div {border=1.5px solid #141311}>
+            <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {font-size=13px; font-weight=800}> "رابط متابَع"
+            <span {font-size=11px; color=#5E5A52}> "ورمز QR باسمك"
+          <div {border=1.5px solid #141311}>
+            <span {background=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {font-size=13px; font-weight=800}> "أرقامك"
+            <span {font-size=11px; color=#5E5A52}> "زيارات، واتساب، طلبات"
+          <div {border=1.5px solid #141311}>
+            <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {font-size=13px; font-weight=800}> "عمولة"
+            <span {font-size=11px; color=#8A6C1E}> "النسبة [للتأكيد]"
+        <div {background=#141311; color=#FFFFFF; font-size=12px; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "smq-re.com/r/your-name"
+          <span {color=#C9C2B3}> "مثال الرابط"
+        <p {font-size=12px; color=#5E5A52}> "كيف يعمل: تنشر رابطك، الزائر يصل إلى وحدة ويضغط واتساب، الطلب يُنسب لك في لوحة SMQ، وإن أُغلقت الصفقة تُحسب عمولتك. لا تتعامل مع المشتري مباشرة إلا إذا طلب فريق SMQ ذلك."
+      <section {border=1.5px solid #141311}>
+        <div>
+          <h2 {font-size=16px; font-weight=800}> "طلب الانضمام"
+          <span> "الحقول [للتأكيد] حتى يصل النموذج الحقيقي"
+        <form>
+          <label>
+            "الاسم"
+            <input type=text placeholder=الاسم الكامل>
+          <label>
+            "رقم الجوال (واتساب)"
+            <input type=tel placeholder=05XXXXXXXX>
+          <label>
+            "رقم رخصة فال إن وجدت"
+            <input type=text placeholder=اختياري، يرفع أولويتك>
+          <div>
+            "الأحياء التي تعرفها"
+            <div>
+              <span> "الروضة ×"
+              <span> "الصفا ×"
+            <div {border=1.5px solid #141311; background=#FFFFFF}>
+              <svg svg >
+              <span {font-size=13px; color=#5E5A52}> "أضف حياً من القائمة"
+          <label>
+            "سنوات الخبرة"
+            <select>
+              <option> "أقل من سنة"
+              <option selected=None> "1 إلى 3"
+              <option> "3 إلى 5"
+              <option> "أكثر من 5"
+          <label>
+            "حسابات التواصل"
+            <input type=text placeholder=إكس، إنستغرام، سناب: اسم المستخدم>
+          <label>
+            "نبذة"
+            <textarea placeholder=سطران: أين تسوّق وكيف>
+          <label>
+            "سيرة ذاتية (اختياري)"
+            <span {border=1.5px dashed #141311; background=#F8F7F4; font-size=13px; font-weight=700; color=#141311}>
+              <svg svg > "PDF حتى 5 MB"
+          <label {font-size=12px; color=#3A3630}>
+            <input type=checkbox> "أوافق على تواصل SMQ معي، وعلى شروط التسويق والعمولة [للتأكيد] عند قبولي."
+          <button type=submit {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}> "أرسل الطلب"
+          <span {font-size=11px; color=#5E5A52}> "بعد الإرسال: رقم طلب، ثم مقابلة قصيرة على واتساب أو اتصال خلال أسبوع. عند القبول تصلك صفحتك ورابطك."
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=Hub-M.html {color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+          <a href=Alliance-M.html {color=#FFFFFF; text-decoration=none}> "التحالف"
+          <a href=Add-Step1-M.html {color=#FFFFFF; text-decoration=none}> "أضف عقارك"
+          <a href=Privacy-M.html {color=#FFFFFF; text-decoration=none}> "الخصوصية"
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

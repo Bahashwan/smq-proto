@@ -3,3 +3,9 @@ Thumbs.db
 node_modules/
 .env
 .env.*
+!.env.example
+.next/
+out/
+scripts/images/out/
+test-results/
+playwright-report/

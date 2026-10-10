@@ -1,0 +1,81 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section>
+        <h1 {font-size=26px; font-weight=800}> "الوحدات في جدة"
+        <p {font-size=13px; color=#5E5A52}>
+          <strong {color=#141311}> "0"
+          "وحدات ضمن فلاترك"
+      <section>
+        <div>
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "الفيصلية"
+            <span aria-label=إزالة> "×"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "حتى 450,000"
+            <span aria-label=إزالة> "×"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "4 غرف"
+            <span aria-label=إزالة> "×"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+            "غرفة سائق"
+            <span aria-label=إزالة> "×"
+      <section>
+        <div {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 23px))}>
+          <span {font-size=44px; font-weight=800}> "0"
+          <h2 {font-size=20px; font-weight=800}> "لا توجد وحدة تطابق كل الفلاتر"
+          <p {font-size=13px; color=#3D3010}>
+            "القيد الذي يحذف أكثر النتائج هو"
+            <strong> "الحي"
+            ". لا نملك وحدات مدرجة في الفيصلية بعد."
+        <div>
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "جرّب تخفيف قيد واحد"
+          <a href=Results-M.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {font-size=14px; font-weight=700}> "كل أحياء جدة بدل الفيصلية"
+            <span {font-size=12px; font-weight=800; background=#141311; color=#B48F2E}> "+6"
+          <a href=Results-M.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {font-size=14px; font-weight=700}> "حتى 560,000 بدل 450,000"
+            <span {font-size=12px; font-weight=800; background=#141311; color=#B48F2E}> "+4"
+          <a href=Results-M.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <span {font-size=14px; font-weight=700}> "3 غرف بدل 4"
+            <span {font-size=12px; font-weight=800; background=#141311; color=#B48F2E}> "+2"
+          <button type=button {font-size=13px; font-weight=700; border=0; background=transparent; color=#8A6C1E; text-decoration=underline}> "مسح كل الفلاتر"
+        <div {background=#F3F1EB}>
+          <span {font-size=15px; font-weight=800}> "أو أرسل لنا طلبك"
+          <span {font-size=12px; color=#5E5A52}> "نحفظ ميزانيتك وحيّك وعدد الغرف، ونراسلك عندما تُدرج وحدة تناسبها."
+          <a href=https://wa.me/966559997929?text=%D8%A3%D8%A8%D8%AD%D8%AB%20%D8%B9%D9%86%204%20%D8%BA%D8%B1%D9%81%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%81%D9%8A%D8%B5%D9%84%D9%8A%D8%A9%20%D8%AD%D8%AA%D9%89%20450%2C000 {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "أرسل طلبك على واتساب"
+      <section {border=1.5px solid #141311; background=#FFFFFF}>
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 14px))}>
+          <span>
+            <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span>
+            <span {font-size=11px; font-weight=700; color=#B48F2E}> "مبادرة من SMQ · تحالف مكاتب جدة"
+            <h2 {font-size=15px; font-weight=800}> "مكاتب مرخصة في تحالف جدة تغطي هذا الحي"
+        <form>
+          <p {font-size=12px; color=#3A3630}> "مكتب واحد موثّق يغطي الفيصلية. اترك طلبك ونمرّره له عبر SMQ. رقمك لا يصل لأي مكتب؛ نحن من يعرّفكم ببعض."
+          <div aria-label=طلبك كما سيُرسل>
+            <span {background=#F3F1EB; font-size=12px; font-weight=700}> "الفيصلية"
+            <span {background=#F3F1EB; font-size=12px; font-weight=700}> "حتى 450,000"
+            <span {background=#F3F1EB; font-size=12px; font-weight=700}> "4 غرف"
+            <span {background=#F3F1EB; font-size=12px; font-weight=700}> "شقة"
+            <a href=Results-Filters-M.html {font-size=12px; font-weight=700; text-decoration=none}> "تعديل"
+          <div {display=grid; grid-template-columns=1fr 1fr}>
+            <label {font-size=11px; font-weight=600; color=#5E5A52}>
+              "الاسم"
+              <input type=text placeholder=اسمك {font-size=14px; font-weight=600; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+            <label {font-size=11px; font-weight=600; color=#5E5A52}>
+              "الجوال"
+              <input type=tel placeholder=05XXXXXXXX {font-size=14px; font-weight=600; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+          <label {font-size=12px; color=#141311; border=1.5px solid #141311; background=#F8F7F4}>
+            <input type=checkbox> "أوافق على أن تمرّر SMQ طلبي (الحي والميزانية والغرف فقط) إلى مكاتب عقارية مرخّصة أعضاء في التحالف. اسمي ورقمي يبقيان عند SMQ."
+          <button type=submit {font-size=14px; font-weight=800; border=0; background=#B48F2E; color=#141311; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "أرسل الطلب للتحالف"

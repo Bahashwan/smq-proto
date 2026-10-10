@@ -1,0 +1,90 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section {background=#F3F1EB; clip-path=polygon(0 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 30px))}>
+        <span {font-size=12px; font-weight=700; color=#8A6C1E}> "لمن يعمل مع SMQ، لا لمن يشتري منها"
+        <h1 {font-size=32px; font-weight=800}> "تعاون معنا"
+        <p {font-size=13px; color=#3A3630}> "ثلاثة أبواب بحسب من أنت. كل باب يقول لمن هو، ماذا تحصل عليه، ماذا نحتاج منك، وكم يأخذ من وقتك."
+      <a href=Add-Step1-M.html {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(0 0, calc(100% - 20px) 0, 100% 35px, 100% 100%, 0 100%)}>
+        <span {font-size=12px; font-weight=700; color=#3D3010}> "01 · للمُلّاك"
+        <span {font-size=26px; font-weight=800}> "عندك عقار؟"
+        <span {font-size=13px; color=#3D3010}> "نعرضه بسعر معلن لمشترين جاهزين، بعد تحقق وتصوير، بلا تكلفة عليك."
+        <div>
+          <b> "تحصل على"
+          <span> "تقييم أولي، تصوير مجاني، صفحة بسعر واضح، وفرز المشترين قبل أن يصلوك"
+          <b> "نحتاج منك"
+          <span> "الصك أو التفويض، صور من الجوال، رقم واتساب"
+          <b> "الوقت"
+          <span> "دقيقتان للنموذج · رد خلال 24 ساعة عمل"
+        <span {background=#141311; color=#FFFFFF; font-size=13px; font-weight=800}>
+          "أضف عقارك"
+          <svg svg >
+      <a href=Alliance-M.html {background=#141311; color=#FFFFFF; text-decoration=none}>
+        <span {position=absolute; display=grid; grid-template-columns=repeat(3, 34px); opacity=.5}>
+          <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span>
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span>
+        <span {font-size=12px; font-weight=700; color=#B48F2E}> "02 · للمكاتب المرخّصة · مبادرة من SMQ"
+        <span {font-size=26px; font-weight=800}> "عندك مكتب عقاري؟"
+        <span {font-size=13px; color=#C9C2B3}> "تحالف مكاتب جدة العقارية: نمرّر طلبات المشترين وعروض العقارات بين المكاتب لنقفل الصفقات أسرع، وكل تعارف مسجّل."
+        <div {color=#FFFFFF}>
+          <b {color=#B48F2E}> "تحصل على"
+          <span> "طلبات مشترين في أحيائك، تقرير طلب شهري، مكان في دليل الأعضاء، وسجل إحالة يحمي حصتك"
+          <b {color=#B48F2E}> "نحتاج منك"
+          <span> "رخصة فال، عروضك، طلباتك، ورداً سريعاً"
+          <b {color=#B48F2E}> "الوقت"
+          <span> "5 دقائق للطلب · توثيق الرخصة خلال يومي عمل"
+        <span {background=#B48F2E; color=#141311; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}>
+          "اعرف عن التحالف"
+          <svg svg >
+      <a href=Marketer-M.html {border=1.5px solid #141311; color=#141311; text-decoration=none; background=#FFFFFF}>
+        <span>
+          <span {font-size=12px; font-weight=700; color=#8A6C1E}> "03 · للأفراد"
+          <span {font-size=10px; font-weight=700; border=1.5px solid #B48F2E; color=#8A6C1E}> "الحقول [للتأكيد]"
+        <span {font-size=26px; font-weight=800}> "مسوّق عقاري؟"
+        <span {font-size=13px; color=#3A3630}> "سوّق وحداتنا برابطك الخاص. كل زيارة وضغطة واتساب تُحسب لك، والعمولة مكتوبة قبل أن تبدأ."
+        <div {background=#F3F1EB; font-size=12px; font-weight=700}>
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "smq-re.com/r/your-name"
+        <div>
+          <b> "تحصل على"
+          <span> "رابط متابَع ورمز QR، صفحة بأرقامك، وعمولة على كل صفقة تُنسب لك [للتأكيد]"
+          <b> "نحتاج منك"
+          <span> "اسمك وجوالك، رخصة فال إن وُجدت، الأحياء التي تعرفها"
+          <b> "الوقت"
+          <span> "3 دقائق · مقابلة قصيرة خلال أسبوع"
+        <span {border=1.5px solid #141311; font-size=13px; font-weight=800}>
+          "انضم كمسوّق"
+          <svg svg >
+      <p {font-size=12px; color=#5E5A52}>
+        "لست أياً من الثلاثة وتريد شراء وحدة؟"
+        <a href=Results-M.html {font-weight=700}> "ابدأ من ميزانيتك"
+        ". مطوّر وتريد تسويق مشروعك؟"
+        <a href=https://wa.me/966559997929?text=%D9%85%D8%B7%D9%88%D9%91%D8%B1 {font-weight=700}> "راسلنا على واتساب"
+        "."
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=Results-M.html {color=#FFFFFF; text-decoration=none}> "العقارات"
+          <a href=Guide-M.html {color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+          <a href=Services-M.html {color=#FFFFFF; text-decoration=none}> "الخدمات"
+          <a href=Hub-M.html {color=#B48F2E; text-decoration=none}> "تعاون معنا"
+          <a href=About-M.html {color=#FFFFFF; text-decoration=none}> "من نحن"
+          <a href=Contact-M.html {color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

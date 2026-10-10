@@ -1,0 +1,176 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; font-weight=700; color=#5E5A52}>
+            <a href=Admin-Alliance-D.html {text-decoration=none}> "غرفة التحالف"
+            "›"
+            <a href=Admin-AllianceMembers-D.html {text-decoration=none}> "الأعضاء"
+            "› مكتب أ"
+          <div>
+            <div>
+              <span {background=#141311; color=#B48F2E; font-size=22px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "أ"
+              <div>
+                <h1 {font-size=28px; font-weight=800}>
+                  "مكتب أ للعقارات"
+                  <span {font-size=11px; font-weight=800; background=#F3F1EB}>
+                    <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "رخصة فال موثّقة"
+                <span {font-size=13px; color=#5E5A52}> "عضو منذ 2026/10/12 · شمال جدة · مالك المكتب عبدالعزيز · دوام واحد · ظاهر في الدليل"
+            <div>
+              <a href=Member-Ledger-M.html> "صفحة العضو كما يراها"
+              <button type=button> "راسل على واتساب"
+              <button type=button> "إيقاف العضوية"
+          <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+            <section>
+              <header> "الرخصة والبيانات"
+              <div>
+                <div>
+                  <span> "رقم فال"
+                  <span> "1200XXXXXX"
+                <div>
+                  <span> "تحقق"
+                  <span> "2026/10/12 · نورة · موقع الهيئة"
+                <div>
+                  <span> "تنتهي"
+                  <span> "2027/06/30 · تذكير قبل 30 يوماً"
+                <div>
+                  <span> "التواصل"
+                  <span> "+966 5X XXX 7710"
+                <div>
+                  <span> "موقع المكتب"
+                  <span>
+                    <a href=#maps> "خرائط قوقل ←"
+                <div>
+                  <span> "الميثاق"
+                  <span> "النسخة 1.0 · 2026/10/11"
+            <section>
+              <header>
+                "التغطية"
+                <button type=button {font-size=11px}> "تعديل"
+              <div>
+                <div>
+                  <span {background=#141311; color=#FFFFFF}> "أبحر الشمالية"
+                  <span {background=#141311; color=#FFFFFF}> "الشاطئ"
+                  <span {background=#141311; color=#FFFFFF}> "المحمدية"
+                  <span {background=#FFFFFF; color=#8A6C1E}>
+                    "البساتين"
+                    <br> "مطلوب"
+                <div {font-size=11px}>
+                  <span {border=1px solid #D4CFC4}> "فلل"
+                  <span {border=1px solid #D4CFC4}> "عماير سكنية"
+                  <span {border=1px solid #D4CFC4}> "أراضي مطورة"
+                <span {font-size=11px; color=#5E5A52}> "يشترك مع مكتب ك في أبحر الشمالية ومع مكتب ج في الشاطئ. الميزان يرتّبهما."
+            <section>
+              <header> "الميزان · منذ الانضمام"
+              <div {display=grid; grid-template-columns=1fr 1fr}>
+                <div>
+                  <span {font-size=11px; font-weight=800; color=#8A6C1E}> "أعطى"
+                  <div>
+                    <div>
+                      <span> "عروض"
+                      <strong> "7"
+                    <div>
+                      <span {background=#B48F2E}>
+                  <div>
+                    <div>
+                      <span> "طلبات"
+                      <strong> "3"
+                    <div>
+                      <span {background=#B48F2E}>
+                  <div>
+                    <div>
+                      <span> "صفقات"
+                      <strong> "1"
+                    <div>
+                      <span {background=#B48F2E}>
+                <div>
+                  <span {font-size=11px; font-weight=800}> "استقبل"
+                  <div>
+                    <div>
+                      <span> "طلبات"
+                      <strong> "9"
+                    <div>
+                      <span {background=#141311}>
+                  <div>
+                    <div>
+                      <span> "ردّ"
+                      <strong> "8"
+                    <div>
+                      <span {background=#141311}>
+                  <div>
+                    <div>
+                      <span> "متوسط الرد"
+                      <strong> "1 س 40 د"
+                    <div>
+                      <span {background=#141311}>
+                <span {font-size=11px; color=#5E5A52}> "صافٍ: معطٍ · 10 مقابل 9 · ترتيبه في أبحر الشمالية: الأول"
+          <div {display=grid; grid-template-columns=1.4fr 1fr}>
+            <section>
+              <header> "سجل الإحالات والطلبات"
+              <div {font-size=11px; font-weight=800; color=#5E5A52; background=#F8F7F4}>
+                <span> "الرقم"
+                <span> "الملخّص"
+                <span> "الطرف الآخر"
+                <span> "المرحلة"
+              <div>
+                <span {font-weight=800}> "REF-2026-0117"
+                <span> "الفيصلية · شقة 440,000 · عرضه على طلب SMQ"
+                <span> "SMQ"
+                <span {background=#B48F2E}> "معاينة"
+              <div {background=#FFFDF6}>
+                <span {font-weight=800}> "REF-2026-0098"
+                <span> "الشاطئ · فيلا 1,850,000 · طلبه، عرض مكتب ج"
+                <span> "مكتب ج"
+                <span {background=#141311; color=#FFFFFF}> "تفاوض · نزاع"
+              <div>
+                <span {font-weight=800}> "REF-2026-0061"
+                <span> "أبحر الشمالية · فيلا 2,050,000 · عرضه على طلب مكتب ك"
+                <span> "مكتب ك"
+                <span {border=1.5px solid #141311}> "إفراغ"
+              <div>
+                <span {font-weight=800}> "REQ-2026-0415"
+                <span> "أبحر الشمالية · فيلا حتى 2,200,000 · وُجّه له اليوم"
+                <span> "زائر SMQ"
+                <span {border=1.5px solid #B48F2E; color=#8A6C1E}> "بلا رد"
+              <div>
+                <span {font-weight=800}> "REQ-2026-0409"
+                <span> "المحمدية · أرض حتى 1,500,000 · ردّ «لا يوجد» خلال 50 د"
+                <span> "مكتب د"
+                <span {border=1.5px solid #141311}> "مغلق"
+            <section>
+              <header> "ملاحظات الفريق"
+              <div {font-size=12px}>
+                <div {background=#F8F7F4}> "نورة · 2026/10/12: «رد سريع، عروضهم موثّقة فعلاً. مؤسِّس مرشّح.»"
+                <div {background=#F8F7F4}> "سعود · 2026/10/18: «نزاع REF-0098 مع مكتب ج: سمعنا الطرفين، ننتظر رد أ.»"
+                <textarea placeholder=أضف ملاحظة… {font-size=13px; border=1.5px solid #141311; background=#FFFFFF}>
+                <div>
+                  <span {font-weight=800}> "الإيقاف"
+                  <span {color=#5E5A52}> "يُوقف العضو عند: تخطّي سجل إحالة، أو رخصة منتهية، أو بلا رد 30 يوماً [للتأكيد]. الإيقاف يخفيه من الدليل والرادار ويُبقي سجلاته، ويُرسل له السبب."
+                  <button type=button> "إيقاف العضوية مع السبب"

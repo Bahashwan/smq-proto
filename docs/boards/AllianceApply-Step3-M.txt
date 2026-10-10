@@ -1,0 +1,89 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <div {background=#B48F2E; color=#141311; font-size=11px; font-weight=800}>
+        <span> "مبادرة من SMQ · طلب الانضمام"
+        <a href=Alliance-M.html {color=#141311; text-decoration=none}> "عن التحالف ←"
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <a href=https://wa.me/966559997929?text=%D8%A7%D9%84%D8%AA%D8%AD%D8%A7%D9%84%D9%81 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <svg svg >
+      <section {border=1.5px solid #141311; background=#FFFFFF}>
+        <div>
+          <h2 {font-size=16px; font-weight=800}> "ما عندكم وما تحتاجون"
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "الخطوة 3 من 3"
+        <ol aria-label=خطوات النموذج {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <li>
+            <span {background=#141311}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "المكتب ✓"
+          <li>
+            <span {background=#141311}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "التغطية ✓"
+          <li>
+            <span {background=#B48F2E}>
+            <span {font-size=11px; font-weight=800}> "ما عندكم وما تحتاجون"
+        <form>
+          <span {font-size=13px; font-weight=800}> "العروض التي لديكم الآن"
+          <div {display=grid; grid-template-columns=1fr 1fr}>
+            <div>
+              "عدد العروض من الملاك مباشرة"
+              <div>
+                <button type=button aria-label=أقل> "−"
+                <span> "6"
+                <button type=button aria-label=أكثر> "+"
+            <div>
+              "عدد العروض بعقود وساطة موثقة في موقع الهيئة"
+              <div>
+                <button type=button aria-label=أقل> "−"
+                <span> "4"
+                <button type=button aria-label=أكثر> "+"
+          <div {background=#F3F1EB; font-size=13px}>
+            <span> "إجمالي العروض المتاحة"
+            <strong {font-size=18px}> "10"
+          <fieldset {border=0}>
+            <legend {font-size=13px; font-weight=800}> "هل لديكم طلبات في أحياء أخرى؟"
+            <div>
+              <label>
+                <input type=radio checked=None> "نعم"
+              <label>
+                <input type=radio> "لا"
+            <div {border=1.5px solid #141311; background=#F8F7F4}>
+              "أي أحياء؟"
+              <div>
+                <span> "الروضة ×"
+                <span> "الصفا ×"
+              <div {border=1.5px solid #141311; background=#FFFFFF}>
+                <svg svg >
+                <span {font-size=13px; color=#5E5A52}> "أضف حياً"
+              <span {font-weight=600}> "هذه الطلبات تُرسل لمن يغطي تلك الأحياء بعد التوثيق مباشرة."
+          <label>
+            "ماذا تريدون من التحالف"
+            <span> "*"
+            <textarea placeholder=مثال: طلبات مشترين جادّين في أبحر، وتقرير عن أسعار المتر> "طلبات مشترين جادّين في أبحر الشمالية والشاطئ، وشريك موثوق للطلبات التي تخرج عن نطاقنا."
+          <label>
+            "ماذا ستضيفون للتحالف"
+            <span> "*"
+            <textarea placeholder=مثال: 10 عروض فلل بعقود وساطة> "10 عروض فلل وأراضٍ في شمال جدة، 4 منها بعقود وساطة موثّقة، ورد خلال ساعة في وقت الدوام."
+          <label>
+            "ملاحظات"
+            <textarea placeholder=اختياري>
+          <label {font-size=12px; color=#141311}>
+            <input type=checkbox checked=None> "أوافق على ظهور اسم المكتب والحي والتخصص في دليل الأعضاء بعد التوثيق (اختياري)."
+          <label {font-size=12px; color=#141311; border=1.5px solid #141311; background=#F8F7F4}>
+            <input type=checkbox>
+            <span>
+              <strong>
+                "أوافق على ميثاق التحالف"
+                <span> "*"
+              ": تقسيم العمولة 50 / 50، حماية الإحالة 90 يوماً، والإخراج عند تخطّي سجل إحالة أو انتهاء الرخصة أو انعدام الرد 30 يوماً [للتأكيد]."
+              <a href=Alliance-M.html> "النص الكامل"
+              "."
+          <div>
+            <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "السابق"
+            <button type=submit {font-size=15px; font-weight=800; border=0; background=#B48F2E; color=#141311; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+              "أرسل طلب الانضمام"
+              <svg svg >
+      <footer {background=#141311; color=#C9C2B3; font-size=11px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <span> "تحالف مكاتب جدة العقارية · مبادرة من إس إم كيو · ترخيص فال 1200040135"

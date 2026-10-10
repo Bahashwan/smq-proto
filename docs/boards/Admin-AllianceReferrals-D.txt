@@ -1,0 +1,288 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "غرفة التحالف · الإحالات والصفقات"
+              <span {font-size=13px; color=#5E5A52}> "كل سجل إحالة: المرحلة، القيمة، التقسيم، أيام الحماية المتبقية، وعلم النزاع. التقسيم والحماية افتراضيان من الميثاق [للتأكيد]"
+            <div>
+              <select aria-label=المرحلة {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "كل المراحل"
+                <option> "تعارف"
+                <option> "معاينة"
+                <option> "تفاوض"
+                <option> "إفراغ"
+                <option> "لم تتم"
+              <label {border=1.5px solid #141311; background=#FFFFFF; font-size=12px; font-weight=700}>
+                <input type=checkbox> "النزاعات فقط"
+              <button type=button> "تصدير CSV"
+          <nav aria-label=أقسام غرفة التحالف>
+            <a href=Admin-Alliance-D.html> "نظرة عامة"
+            <a href=Admin-AllianceApplications-D.html>
+              "طلبات الانضمام"
+              <i> "4"
+            <a href=Admin-AllianceMembers-D.html>
+              "الأعضاء"
+              <i> "12"
+            <a href=Admin-AllianceRadar-D.html> "الرادار"
+            <a href=Admin-AllianceRequests-D.html>
+              "الطلبات والمطابقات"
+              <i> "5"
+            <a href=Admin-AllianceReferrals-D.html>
+              "الإحالات والصفقات"
+              <i> "3"
+            <a href=Admin-AllianceReport-D.html> "التقرير الشهري"
+            <a href=Admin-AllianceSettings-D.html> "الميثاق والإعدادات"
+          <div {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr))}>
+            <div>
+              <small> "سجلات جارية"
+              <b> "3"
+            <div>
+              <small> "قيمة الصفقات الجارية"
+              <b> "4,690,000"
+            <div>
+              <small> "أُفرغت منذ الإطلاق"
+              <b> "2 · 3,900,000"
+            <div>
+              <small> "نزاعات مفتوحة"
+              <b> "1"
+            <div {background=#141311; color=#FFFFFF}>
+              <small {color=#C9C2B3}> "عمولة التحالف المقدّرة"
+              <b {color=#B48F2E}> "[للتأكيد]"
+          <table>
+            <thead>
+              <tr>
+                <th> "السجل"
+                <th> "الطلب والعرض"
+                <th> "المكتبان"
+                <th> "المرحلة"
+                <th> "القيمة"
+                <th> "التقسيم"
+                <th> "الحماية المتبقية"
+                <th> "نزاع"
+                <th>
+            <tbody>
+              <tr>
+                <td>
+                  <strong> "REF-2026-0117"
+                  <br>
+                  <span {color=#5E5A52}> "2026/10/10"
+                <td>
+                  "الفيصلية · شقة 4 غرف"
+                  <br>
+                  <span {color=#5E5A52}> "عرض 165 م² · موثّق"
+                <td> "SMQ ↔ مكتب ط"
+                <td>
+                  <span>
+                    <i>
+                    <i>
+                    <i>
+                    <i>
+                  <span {font-size=11px; font-weight=700}> "معاينة · الخميس"
+                <td>
+                  <strong> "440,000"
+                <td> "50 / 50 [للتأكيد]"
+                <td>
+                  <span>
+                    <b>
+                      <span> "90 من 90"
+                <td>
+                <td>
+                  <a href=Member-Referral-M.html> "افتح"
+              <tr {background=#FFFDF6}>
+                <td>
+                  <strong> "REF-2026-0098"
+                  <br>
+                  <span {color=#5E5A52}> "2026/09/21"
+                <td>
+                  "الشاطئ · فيلا"
+                  <br>
+                  <span {color=#5E5A52}> "عرض 420 م² · مباشر من المالك"
+                <td> "مكتب أ ↔ مكتب ج"
+                <td>
+                  <span>
+                    <i>
+                    <i>
+                    <i>
+                    <i>
+                  <span {font-size=11px; font-weight=700}> "تفاوض"
+                <td>
+                  <strong> "1,850,000"
+                <td> "50 / 50 [للتأكيد]"
+                <td>
+                  <span>
+                    <b>
+                      <span> "70 من 90"
+                <td>
+                  <span> "نزاع · 4 أيام"
+                <td>
+                  <button type=button {background=#141311; color=#FFFFFF}> "افصل"
+              <tr>
+                <td>
+                  <strong> "REF-2026-0104"
+                  <br>
+                  <span {color=#5E5A52}> "2026/09/28"
+                <td>
+                  "الروضة · أرض مطورة"
+                  <br>
+                  <span {color=#5E5A52}> "عرض 600 م² · موثّق"
+                <td> "مكتب أ ↔ مكتب ي"
+                <td>
+                  <span>
+                    <i>
+                    <i>
+                    <i>
+                    <i>
+                  <span {font-size=11px; font-weight=700}> "تفاوض"
+                <td>
+                  <strong> "2,400,000"
+                <td> "50 / 50 [للتأكيد]"
+                <td>
+                  <span>
+                    <b>
+                      <span> "77 من 90"
+                <td>
+                <td>
+                  <a href=Member-Referral-M.html> "افتح"
+              <tr {color=#5E5A52}>
+                <td>
+                  <strong {color=#141311}> "REF-2026-0061"
+                  <br> "2026/08/14"
+                <td>
+                  "أبحر الشمالية · فيلا"
+                  <br> "عرض 480 م² · موثّق"
+                <td> "مكتب ك ↔ مكتب أ"
+                <td>
+                  <span>
+                    <i>
+                    <i>
+                    <i>
+                    <i>
+                  <span {font-size=11px; font-weight=700; color=#141311}> "إفراغ · 2026/09/30"
+                <td>
+                  <strong {color=#141311}> "2,050,000"
+                <td> "50 / 50"
+                <td> "انتهت بالإفراغ"
+                <td>
+                <td>
+                  <a href=Member-Referral-M.html> "افتح"
+              <tr {color=#5E5A52}>
+                <td>
+                  <strong {color=#141311}> "REF-2026-0049"
+                  <br> "2026/08/02"
+                <td>
+                  "الصفا · شقة 3 غرف"
+                  <br> "عرض 130 م² · موثّق"
+                <td> "SMQ ↔ مكتب هـ"
+                <td>
+                  <span>
+                    <i>
+                    <i>
+                    <i>
+                    <i>
+                  <span {font-size=11px; font-weight=700; color=#141311}> "إفراغ · 2026/09/12"
+                <td>
+                  <strong {color=#141311}> "1,850,000"
+                <td> "50 / 50"
+                <td> "انتهت بالإفراغ"
+                <td>
+                <td>
+                  <a href=Member-Referral-M.html> "افتح"
+              <tr {color=#5E5A52}>
+                <td>
+                  <strong {color=#141311}> "REF-2026-0033"
+                  <br> "2026/07/19"
+                <td>
+                  "المحمدية · شقة غرفتين"
+                  <br> "عرض 95 م² · مباشر"
+                <td> "مكتب د ↔ مكتب ب"
+                <td>
+                  <span>
+                    <i>
+                    <i>
+                    <i>
+                    <i>
+                  <span {font-size=11px; font-weight=700; color=#141311}> "لم تتم · المشتري انسحب"
+                <td> "520,000"
+                <td> "لا عمولة"
+                <td> "أُغلقت"
+                <td>
+                <td>
+                  <a href=Member-Referral-M.html> "افتح"
+          <section {display=grid; grid-template-columns=1fr 1fr}>
+            <div {background=#FFFFFF; border=2px solid #B48F2E}>
+              <div {background=#FFFDF6; font-size=14px; font-weight=800}>
+                <span>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "نزاع · REF-2026-0098"
+                <span {font-size=11px; color=#8A6C1E}> "مفتوح منذ 4 أيام"
+              <div {font-size=12px}>
+                <div {background=#F8F7F4}>
+                  <strong> "مكتب ج:"
+                  "«المشتري عاد إلينا مباشرة بعد المعاينة وطلب إنهاء الصفقة عبرنا دون مكتب أ. نطلب تحويل المرحلة إلى لم تتم.»"
+                <div {background=#F8F7F4}>
+                  <strong> "مكتب أ:"
+                  "لم يردّ منذ 4 أيام (ذُكِّر مرتين على واتساب)."
+                <span {color=#5E5A52}> "الميثاق: التعارف مسجّل 2026/09/21، والحماية 90 يوماً تشمل أي صفقة على نفس العقار مع نفس المشتري [للتأكيد]. تخطّي السجل سبب للإخراج."
+                <div>
+                  <button type=button {background=#141311; color=#FFFFFF; font-size=12px}> "أبقِ السجل والتقسيم"
+                  <button type=button {font-size=12px}> "عدّل التقسيم"
+                  <button type=button {font-size=12px}> "حوّل إلى «لم تتم»"
+                  <button type=button {font-size=12px}> "راسل الطرفين"
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <div {background=#F3F1EB; font-size=14px; font-weight=800}> "تحديث مرحلة سجل"
+              <div {font-size=12px}>
+                <div {display=grid; grid-template-columns=1fr 1fr}>
+                  <label {font-weight=600; color=#5E5A52}>
+                    "السجل"
+                    <select {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                      <option> "REF-2026-0117 · معاينة"
+                      <option> "REF-2026-0098 · تفاوض"
+                      <option> "REF-2026-0104 · تفاوض"
+                  <label {font-weight=600; color=#5E5A52}>
+                    "المرحلة الجديدة"
+                    <select {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                      <option> "تعارف"
+                      <option> "معاينة"
+                      <option selected=None> "تفاوض"
+                      <option> "إفراغ"
+                      <option> "لم تتم"
+                  <label {font-weight=600; color=#5E5A52}>
+                    "القيمة النهائية (عند الإفراغ)"
+                    <input type=text placeholder=ريال {font-size=13px; font-weight=700; border=1.5px solid #141311}>
+                  <label {font-weight=600; color=#5E5A52}>
+                    "تأكيد الطرفين"
+                    <span>
+                      <label>
+                        <input type=checkbox checked=None> "المكتب 1"
+                      <label>
+                        <input type=checkbox> "المكتب 2"
+                <button type=button {background=#B48F2E; border=0; font-size=13px; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "حدّث وأرسل للمكتبين"
+                <span {color=#5E5A52}> "كل تحديث يُسجَّل باسم من حدّثه ويُرسل نسخة من السجل المحدّث للمكتبين على واتساب."

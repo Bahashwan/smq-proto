@@ -1,0 +1,187 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "ن"
+          "نورة · محررة"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "غرفة التحالف · الطلبات والمطابقات"
+              <span {font-size=13px; color=#5E5A52}> "كل طلب يحمل مصدره. يُرسل لمن يغطي الحي مرتّبين بالميزان، وتصل عروضهم هنا، وSMQ تختار العرض وتنشئ سجل الإحالة"
+            <div>
+              <span {font-size=11px; font-weight=700}>
+                <span> "زائر بلا نتائج"
+                <span> "فريق SMQ"
+                <span> "مكتب عضو"
+              <button type=button> "+ طلب من الفريق"
+          <nav aria-label=أقسام غرفة التحالف>
+            <a href=Admin-Alliance-D.html> "نظرة عامة"
+            <a href=Admin-AllianceApplications-D.html>
+              "طلبات الانضمام"
+              <i> "4"
+            <a href=Admin-AllianceMembers-D.html>
+              "الأعضاء"
+              <i> "12"
+            <a href=Admin-AllianceRadar-D.html> "الرادار"
+            <a href=Admin-AllianceRequests-D.html>
+              "الطلبات والمطابقات"
+              <i> "5"
+            <a href=Admin-AllianceReferrals-D.html>
+              "الإحالات والصفقات"
+              <i> "3"
+            <a href=Admin-AllianceReport-D.html> "التقرير الشهري"
+            <a href=Admin-AllianceSettings-D.html> "الميثاق والإعدادات"
+          <section {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr))}>
+            <div>
+              <header>
+                <span> "جديد"
+                <span> "2"
+              <a href=#r>
+                <span> "زائر بلا نتائج"
+                <b> "REQ-0418 · النهضة · شقة غرفتين"
+                <small> "حتى 560,000 · قبل 20 د · لا أعضاء يغطون النهضة"
+                <span {font-size=11px}> "أقرب تغطية: الشاطئ، مكتب ج"
+              <a href=#r>
+                <span> "مكتب عضو · مكتب أ"
+                <b> "REQ-0417 · الروضة · أرض مطورة"
+                <small> "حتى 2,500,000 · أمس · يغطيه ب، ي"
+            <div>
+              <header>
+                <span> "أُرسل"
+                <span> "2"
+              <a href=#r>
+                <span> "زائر بلا نتائج"
+                <b> "REQ-0415 · أبحر الشمالية · فيلا"
+                <small> "حتى 2,200,000 · أُرسل اليوم 09:10 لـ أ، ك · تلقائي · بلا رد بعد"
+              <a href=#r>
+                <span> "فريق SMQ"
+                <b> "REQ-0414 · المحمدية · شقة 3 غرف"
+                <small> "700k إلى 1M · أُرسل يدوياً لمكتب د أثناء الانقطاع · 1 لم يُرسل"
+                <span {font-size=11px}> "أرسل على واتساب · مكتب ل موقوف"
+            <div>
+              <header>
+                <span> "وصلت عروض"
+                <span> "2"
+              <a href=#r>
+                <span> "زائر بلا نتائج"
+                <b> "REQ-0412 · الفيصلية · شقة 4 غرف"
+                <small> "حتى 450,000 · عرض من مكتب ط 440,000 موثّق · ينتظر قرار"
+              <a href=#r>
+                <span> "مكتب عضو · مكتب هـ"
+                <b> "REQ-0403 · أبحر الشمالية · أرض"
+                <small> "حتى 1,500,000 · عرضان من أ وك · ينتظر رد المشتري"
+            <div>
+              <header>
+                <span> "تعارف"
+                <span> "1"
+              <a href=Admin-AllianceReferrals-D.html>
+                <span> "فريق SMQ"
+                <b> "REQ-0398 · الشاطئ · فيلا"
+                <small> "REF-2026-0098 · أ ومكتب ج · تفاوض"
+            <div>
+              <header>
+                <span> "مغلق"
+                <span> "24"
+              <a href=#r {color=#5E5A52}>
+                <span> "زائر بلا نتائج"
+                <b {color=#141311}> "REQ-0401 · الصفا · شقة 4 غرف"
+                <small> "انتهى بلا عروض · 3 أيام · أُخبر الزائر"
+              <a href=Admin-AllianceReferrals-D.html {color=#5E5A52}>
+                <span> "مكتب عضو · مكتب ك"
+                <b {color=#141311}> "REQ-0377 · أبحر الشمالية · فيلا"
+                <small> "REF-0061 · أُفرغت 2026/09/30 · 2,050,000"
+          <section>
+            <header>
+              <span>
+                "REQ-2026-0412 · الفيصلية · شقة 4 غرف · حتى 450,000"
+                <span> "زائر بلا نتائج · 2026/10/09 · 21:40"
+              <div>
+                <button type=button> "أرسل لمكتب إضافي"
+                <button type=button> "أغلق الطلب"
+            <div {display=grid; grid-template-columns=1fr 1.6fr}>
+              <div {font-size=12px}>
+                <span {font-weight=800}> "الطلب"
+                <div>
+                  <span {background=#F3F1EB}> "الفيصلية"
+                  <span {background=#F3F1EB}> "شقة"
+                  <span {background=#F3F1EB}> "4 غرف"
+                  <span {background=#F3F1EB}> "حتى 450,000"
+                  <span {background=#F3F1EB}> "خلال 3 أشهر"
+                <span {color=#5E5A52}>
+                  "المشتري: زائر ترك اسمه ورقمه في النتائج الفارغة ووافق على التمرير. بياناته في"
+                  <a href=Admin-Leads-D.html> "الطلبات الواردة"
+                  "فقط ولا تُرسل لأي مكتب."
+                <span {font-weight=800}> "أُرسل إلى · مرتّبين بالميزان"
+                <div>
+                  <div {border=1.5px solid #141311}>
+                    <span>
+                      <strong> "1 · مكتب ط"
+                      <br>
+                      <span {color=#5E5A52}> "يغطي الفيصلية · ميزان 4/3 · رد 1 س 12 د"
+                    <span {background=#B48F2E}> "ردّ بعرض"
+                  <div {border=1px solid #D4CFC4; color=#5E5A52}>
+                    <span>
+                      <strong {color=#141311}> "لا مكتب ثانٍ"
+                      <br> "لا عضو آخر يغطي الفيصلية"
+                    <a href=Admin-AllianceApplications-D.html {font-size=11px; font-weight=800}> "ادعُ مكتباً"
+                <div {background=#F8F7F4; font-size=11px}>
+                  <span {font-weight=800}> "وضع الإرسال"
+                  <span>
+                    <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "أُرسل تلقائياً عبر واتساب بزنس · 2026/10/09 21:41"
+                  <span {color=#5E5A52}>
+                    <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "عند الانقطاع يظهر هنا زر «أرسل على واتساب» لكل مكتب بضغطة واحدة، كما في REQ-0414"
+              <div>
+                <div {font-size=12px; font-weight=800}>
+                  <span> "العروض الواردة · 1"
+                  <span {color=#5E5A52; font-weight=700}> "اختر عرضاً لإنشاء سجل الإحالة"
+                <div {font-size=11px; font-weight=800; color=#5E5A52; background=#F8F7F4}>
+                  <span>
+                  <span> "المكتب"
+                  <span> "العرض"
+                  <span> "ملاحظة"
+                  <span>
+                <div {background=#FFFDF6}>
+                  <input type=radio checked=None aria-label=اختر عرض مكتب ط>
+                  <span>
+                    <strong> "مكتب ط"
+                    <br>
+                    <span {color=#5E5A52}> "ردّ خلال 1 س 12 د"
+                  <span>
+                    <strong> "440,000"
+                    "· 165 م²"
+                    <br>
+                    <span {background=#F3F1EB}> "عقد وساطة موثّق"
+                  <span {color=#3A3630}> "«الدور الثاني، واجهة شمالية، بناء 2021، جاهزة للسكن»"
+                  <button type=button> "أنشئ سجل إحالة"
+                <div {font-size=12px; color=#5E5A52}>
+                  <span>
+                    <strong {color=#141311}> "ما يحدث عند «أنشئ سجل إحالة»:"
+                    "يُنشأ REF برقم وتاريخ ومرحلة «تعارف»، يُرسل للمكتب وللمشتري عبر SMQ، وتبدأ فترة الحماية. المشتري يُعرض عليه العرض أولاً؛ إن رفض يُسجَّل السبب ويبقى الطلب مفتوحاً."
+                  <div>
+                    <button type=button> "اعرض على المشتري أولاً"
+                    <button type=button> "ارفض العرض مع سبب"

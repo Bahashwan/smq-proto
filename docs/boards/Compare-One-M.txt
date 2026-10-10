@@ -1,0 +1,69 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section>
+        <h1 {font-size=26px; font-weight=800}> "المقارنة"
+        <p {font-size=13px; color=#5E5A52}> "وحدة واحدة في المقارنة. أضف ثانية أو ثالثة لترى الفروق جنباً إلى جنب."
+      <section {display=grid; grid-template-columns=1fr 1fr}>
+        <article {border=1.5px solid #141311}>
+          <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 42px))}>
+            <span {position=absolute; background=#B48F2E; font-size=9px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+            <button type=button aria-label=إزالة من المقارنة {position=absolute; border=0; background=#141311; color=#FFFFFF; font-size=14px}> "×"
+          <div>
+            <span {font-size=14px; font-weight=800}> "نموذج A · روز"
+            <span {font-size=11px; color=#5E5A52}> "RZ-A · 3 غرف · 147 م²"
+          <div {background=#141311; color=#FFFFFF; font-size=16px; font-weight=800}> "690,000"
+        <a href=Results-M.html {border=1.5px dashed #141311; text-decoration=none; color=#141311}>
+          <span {background=#F3F1EB; font-size=22px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "+"
+          <span {font-size=13px; font-weight=800}> "أضف وحدة ثانية"
+          <span {font-size=11px; color=#5E5A52}> "من النتائج، اضغط «قارن» على أي بطاقة"
+      <section>
+        <h2 {font-size=15px; font-weight=800}> "يُقارَن عادةً مع"
+        <div>
+          <div {border=1.5px solid #141311}>
+            <span {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 24px))}>
+            <span>
+              <span {font-size=13px; font-weight=800}> "نموذج B · روز · غرفتان · 116.90 م²"
+              <span {font-size=11px; color=#5E5A52}> "555,000 · 4,748 للمتر · أقل بـ 135,000"
+            <button type=button {border=1.5px solid #141311; background=#FFFFFF; font-size=12px; font-weight=800}> "قارن"
+          <div {border=1.5px solid #141311}>
+            <span {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 24px))}>
+            <span>
+              <span {font-size=13px; font-weight=800}> "نموذج B · ياسمين · غرفتان · 106.05 م²"
+              <span {font-size=11px; color=#5E5A52}> "555,000 · 5,233 للمتر"
+            <button type=button {border=1.5px solid #141311; background=#FFFFFF; font-size=12px; font-weight=800}> "قارن"
+      <section {border=1.5px solid #141311}>
+        <div {background=#141311; color=#FFFFFF; font-size=13px; font-weight=800}> "نموذج A بالأرقام"
+        <div>
+          <span> "السعر"
+          <span> "690,000"
+        <div>
+          <span> "سعر المتر"
+          <span> "4,694"
+        <div>
+          <span> "المساحة"
+          <span> "147 م²"
+        <div>
+          <span> "الغرف · الحمامات"
+          <span> "3 · 3"
+        <div>
+          <span> "الطابق"
+          <span> "الثالث [للتأكيد]"
+        <div>
+          <span> "ضريبة التصرفات"
+          <span> "[للتأكيد]"
+        <div>
+          <span> "التسليم"
+          <span> "الربع 2 · 2027"
+      <div>
+        <a href=https://wa.me/966559997929?text=RZ-A {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}> "اسأل عن نموذج A"
+        <a href=Unit-M.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=13px; font-weight=700}> "صفحة الوحدة"

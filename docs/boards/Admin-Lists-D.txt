@@ -1,0 +1,231 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; font-weight=700; color=#5E5A52}>
+            <a href=Admin-Content-D.html {text-decoration=none}> "المحتوى والأسئلة"
+            "› القوائم"
+          <div>
+            <h1 {font-size=28px; font-weight=800}> "القوائم"
+            <span {font-size=13px; color=#5E5A52}> "القيم التي تملأ الفلاتر والنماذج. التغيير هنا ينعكس على الموقع فوراً بعد الحفظ، ولا يغيّر الوحدات القائمة"
+          <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(380px, 100%), 1fr))}>
+            <section>
+              <header>
+                <h2>
+                  "الأحياء"
+                  <span> "14 · 3 قريباً"
+                <span> "تظهر في فلتر الحي وفي «أضف عقارك»"
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "الروضة"
+                  <span> "· 10 وحدات"
+                <span> "قريباً"
+                <span aria-label=قريباً>
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "الصفا"
+                  <span> "· 1 من مالك"
+                <span> "قريباً"
+                <span aria-label=قريباً>
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "النعيم"
+                  <span> "· 0"
+                <span> "قريباً"
+                <span aria-label=قريباً>
+              <div {background=#FFFDF6}>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "أبحر الشمالية"
+                  <span> "· مشروع مسودة"
+                <span {color=#8A6C1E}> "قريباً"
+                <span aria-label=قريباً>
+              <div {background=#FFFDF6}>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "الشاطئ"
+                  <span> "· 0"
+                <span {color=#8A6C1E}> "قريباً"
+                <span aria-label=قريباً>
+              <div {background=#FFFDF6}>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "المحمدية"
+                  <span> "· 0"
+                <span {color=#8A6C1E}> "قريباً"
+                <span aria-label=قريباً>
+              <div>
+                <span> "و8 أحياء أخرى بلا وحدات (تظهر في «أضف عقارك» فقط)"
+              <div>
+                <input placeholder=حي جديد aria-label=حي جديد>
+                <button type=button> "أضف"
+            <div>
+              <section>
+                <header>
+                  <h2>
+                    "المدن"
+                    <span> "1"
+                  <span> "مدينة واحدة الآن، الفلتر مخفي حتى تُضاف ثانية"
+                <div>
+                  <span> "جدة"
+                  <span> "افتراضية"
+                <div>
+                  <input placeholder=مدينة جديدة aria-label=مدينة جديدة>
+                  <button type=button> "أضف"
+              <section>
+                <header>
+                  <h2>
+                    "أنواع الوحدات"
+                    <span> "3"
+                  <span> "الاسم والجمع والأيقونة (شكل)"
+                <div>
+                  <span aria-label=اسحب>
+                    <svg svg >
+                  <span>
+                    "شقة"
+                    <span> "· شقق · 8"
+                  <span {border=2px solid #141311}>
+                <div>
+                  <span aria-label=اسحب>
+                    <svg svg >
+                  <span>
+                    "فيلا روف"
+                    <span> "· فلل روف · 2"
+                  <span {background=#141311; clip-path=polygon(0 100%, 50% 0, 100% 100%)}>
+                <div>
+                  <span aria-label=اسحب>
+                    <svg svg >
+                  <span>
+                    "فيلا"
+                    <span> "· فلل · 0 · تظهر في أضف عقارك فقط"
+                  <span {background=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <div>
+                  <input placeholder=نوع جديد aria-label=نوع جديد>
+                  <button type=button> "أضف"
+            <section>
+              <header>
+                <h2>
+                  "الميزانيات المقترحة"
+                  <span> "6"
+                <span> "أزرار تحت المنزلق، بالريال"
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "حتى 500 ألف"
+                  <span> "· 500,000 · 3 وحدات"
+                <span aria-label=ظاهر>
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "حتى 600 ألف"
+                  <span> "· 600,000 · 6"
+                <span aria-label=ظاهر>
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "حتى 700 ألف"
+                  <span> "· 700,000 · 7 · الأكثر استخداماً"
+                <span aria-label=ظاهر>
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "حتى مليون"
+                  <span> "· 1,000,000 · 7"
+                <span aria-label=ظاهر>
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "حتى 1.7 مليون"
+                  <span> "· 1,700,000 · 8"
+                <span aria-label=ظاهر>
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span>
+                  "أكثر من 2 مليون"
+                  <span> "· 0 وحدات · مخفي"
+                <span aria-label=ظاهر>
+              <div>
+                <input placeholder=قيمة بالريال aria-label=قيمة جديدة>
+                <button type=button> "أضف"
+            <section>
+              <header>
+                <h2>
+                  "أسباب رفض عقار مالك"
+                  <span> "5"
+                <span> "تُرسل للمالك على واتساب مع الرفض"
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span> "صك غير مطابق للمعلومات"
+                <span> "12 مرة"
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span> "السعر أعلى من السوق بأكثر من 20%"
+                <span> "7"
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span> "صور غير كافية أو غير واضحة"
+                <span> "5"
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span> "خارج نطاق عملنا (مدينة أخرى أو تجاري)"
+                <span> "3"
+              <div>
+                <span aria-label=اسحب>
+                  <svg svg >
+                <span> "لم نتمكن من التواصل مع المالك"
+                <span> "2"
+              <div>
+                <input placeholder=سبب جديد aria-label=سبب جديد>
+                <button type=button> "أضف"
+          <div aria-label=شريط الحفظ {position=sticky; background=#141311; color=#FFFFFF}>
+            <span {font-size=13px; font-weight=700}>
+              <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "تغييرات غير محفوظة: 3 أحياء وُسمت «قريباً»"
+            <div>
+              <button type=button {border=1.5px solid #C9C2B3; background=transparent; color=#FFFFFF; font-size=13px; font-weight=700}> "تجاهل"
+              <button type=button {border=0; background=#B48F2E; color=#141311; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "حفظ ونشر"

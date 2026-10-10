@@ -1,0 +1,108 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <span>
+            <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span>
+            <span {font-size=12px; font-weight=800}> "تحالف مكاتب جدة"
+            <span {font-size=10px; color=#C9C2B3}> "صفحة عضو · بلا دخول"
+        <a href=Member-Report-M.html {font-size=11px; font-weight=800; color=#B48F2E; text-decoration=none}> "تقرير الشهر"
+      <section>
+        <span {background=#141311; color=#B48F2E; font-size=20px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "أ"
+        <div>
+          <h1 {font-size=20px; font-weight=800}> "مكتب أ للعقارات"
+          <span {font-size=11px; color=#5E5A52}>
+            <span {font-weight=800; background=#F3F1EB; color=#141311}>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "رخصة فال موثّقة"
+            "سارية حتى 2027/06/30 · عضو منذ أكتوبر 2026"
+          <span {font-size=11px; color=#5E5A52}> "يغطي: أبحر الشمالية، الشاطئ، المحمدية · فلل، عماير سكنية، أراضي مطورة"
+      <section {border=1.5px solid #141311; background=#FFFFFF}>
+        <div>
+          <h2> "الميزان · منذ الانضمام"
+          <span {font-size=11px; color=#5E5A52}> "أعطى مقابل استقبل"
+        <div {display=grid; grid-template-columns=1fr 1fr}>
+          <div>
+            <span {font-size=11px; font-weight=800; color=#8A6C1E}> "أعطى"
+            <div>
+              <div>
+                <span> "عروض قدّمها"
+                <strong> "7"
+              <div>
+                <span {background=#B48F2E}>
+            <div>
+              <div>
+                <span> "طلبات أرسلها"
+                <strong> "3"
+              <div>
+                <span {background=#B48F2E}>
+            <div>
+              <div>
+                <span> "صفقات أُغلقت"
+                <strong> "1"
+              <div>
+                <span {background=#B48F2E}>
+          <div>
+            <span {font-size=11px; font-weight=800}> "استقبل"
+            <div>
+              <div>
+                <span> "طلبات وُجّهت له"
+                <strong> "9"
+              <div>
+                <span {background=#141311}>
+            <div>
+              <div>
+                <span> "ردّ عليها"
+                <strong> "8"
+              <div>
+                <span {background=#141311}>
+            <div>
+              <div>
+                <span> "متوسط الرد"
+                <strong> "1 س 40 د"
+              <div>
+                <span {background=#141311}>
+        <div {background=#F3F1EB; font-size=12px}>
+          <span> "صافي الميزان"
+          <span {font-weight=800}>
+            <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "معطٍ أكثر مما يستقبل · 10 مقابل 9"
+        <span {font-size=11px; color=#5E5A52}> "الميزان يرتّب من يستقبل الطلبات أولاً حين يغطي الحي أكثر من مكتب. الرد السريع و«لا يوجد» الصريح يُحسبان لك؛ الصمت يُحسب عليك."
+      <section>
+        <div>
+          <h2> "طلبات مفتوحة في أحيائك"
+          <span {font-size=11px; color=#5E5A52}> "2"
+        <a href=Member-Request-M.html>
+          <span>
+            <b> "أبحر الشمالية · فيلا · حتى 2,200,000"
+            <small> "وصل اليوم 09:10 · ينتهي بعد يومين و20 ساعة"
+          <span {border=1.5px solid #B48F2E; color=#8A6C1E}> "بلا رد"
+        <a href=Member-Request-M.html>
+          <span>
+            <b> "المحمدية · أرض مطورة · حتى 1,500,000"
+            <small> "وصل أمس · ينتهي بعد يوم و3 ساعات"
+          <span {border=1.5px solid #B48F2E; color=#8A6C1E}> "بلا رد"
+      <section>
+        <div>
+          <h2> "سجلات الإحالة"
+          <span {font-size=11px; color=#5E5A52}> "3"
+        <a href=Member-Referral-M.html>
+          <span>
+            <b> "REF-2026-0117"
+            <small> "الفيصلية · شقة 440,000 · مع SMQ · معاينة الخميس"
+          <span {background=#B48F2E; color=#141311}> "معاينة"
+        <a href=Member-Referral-M.html>
+          <span>
+            <b> "REF-2026-0098"
+            <small> "الشاطئ · فيلا 1,850,000 · مع مكتب ج · الحماية حتى 2026/12/20"
+          <span {background=#141311; color=#FFFFFF}> "تفاوض"
+        <a href=Member-Referral-M.html {color=#5E5A52}>
+          <span>
+            <b {color=#141311}> "REF-2026-0061"
+            <small> "أبحر الشمالية · فيلا 2,050,000 · مع مكتب ك · أُفرغت 2026/09/30"
+          <span {border=1.5px solid #141311; color=#141311}> "إفراغ"
+      <section {display=grid; grid-template-columns=1fr 1fr}>
+        <button type=button {border=0; background=#141311; color=#FFFFFF; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "+ عرض عام"
+        <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=700}> "+ طلب في حي آخر"
+        <span {font-size=11px; color=#5E5A52}> "العرض العام يُطابَق مع الطلبات القادمة في حيّه. الطلب في حي آخر يُرسل لمن يغطيه ويُحسب لك في «أعطى»."

@@ -1,0 +1,278 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Project-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <section>
+        <div>
+          <div>
+            <h1 {font-size=36px; font-weight=800}> "الوحدات في جدة"
+            <p {font-size=14px; color=#5E5A52}>
+              <strong {color=#141311}> "6"
+              "متاحة و"
+              <strong {color=#141311}> "2"
+              "مباعة ضمن فلاترك · تحديث 2026/10/01"
+          <div>
+            <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}>
+              <span>
+                <span {font-weight=500; color=#5E5A52}> "الترتيب:"
+                "السعر، الأقل أولاً"
+              <svg svg >
+            <div aria-label=طريقة العرض {border=1.5px solid #141311}>
+              <button type=button {font-size=13px; font-weight=700; border=0; background=#141311; color=#FFFFFF}>
+                <svg svg > "شبكة"
+              <a href=Results-Map-D.html {font-size=13px; font-weight=700; background=#FFFFFF; color=#141311; text-decoration=none}>
+                <svg svg > "خريطة"
+      <section>
+        <form aria-label=الفلاتر {border=1.5px solid #141311}>
+          <div>
+            <span {font-size=15px; font-weight=800}>
+              "الفلاتر"
+              <span {background=#B48F2E; color=#141311; font-size=11px}> "3"
+            <button type=button {font-size=12px; font-weight=700; border=0; background=transparent; color=#8A6C1E; text-decoration=underline}> "مسح الكل"
+          <div>
+            <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+              "الروضة"
+              <span aria-label=إزالة> "×"
+            <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+              "حتى 700,000"
+              <span aria-label=إزالة> "×"
+            <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#F3F1EB; color=#141311}>
+              "شقق"
+              <span aria-label=إزالة> "×"
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "الموقع"
+            <label {font-size=10px; font-weight=600; color=#5E5A52}>
+              "المدينة"
+              <select {font-size=13px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "جدة"
+            <label {font-size=10px; font-weight=600; color=#5E5A52}>
+              "الحي"
+              <select {font-size=13px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#F3F1EB}>
+                <option> "الروضة"
+            <label {font-size=10px; font-weight=600; color=#5E5A52}>
+              "المشروع"
+              <select {font-size=13px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "الكل"
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "نوع الوحدة"
+            <div>
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#141311; color=#FFFFFF}> "شقة"
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "فيلا روف"
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "فيلا"
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "دوبلكس"
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "الغرف"
+            <div aria-label=عدد الغرف {border=1.5px solid #141311}>
+              <button type=button {font-size=13px; font-weight=700; border=0; background=#141311; color=#FFFFFF}> "الكل"
+              <button type=button {font-size=13px; font-weight=700; border=0; background=#FFFFFF; color=#141311}> "2"
+              <button type=button {font-size=13px; font-weight=700; border=0; background=#FFFFFF; color=#141311}> "3"
+              <button type=button {font-size=13px; font-weight=700; border=0; background=#FFFFFF; color=#141311}> "4"
+              <button type=button {font-size=13px; font-weight=700; border=0; background=#FFFFFF; color=#141311}> "5+"
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "السعر بالريال"
+            <div {display=grid; grid-template-columns=1fr 1fr}>
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "من"
+                <input type=text value=300,000 {font-size=14px; font-weight=800; color=#141311; border=1.5px solid #141311}>
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "إلى"
+                <input type=text value=700,000 {font-size=14px; font-weight=800; color=#141311; border=1.5px solid #141311; background=#F3F1EB}>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "المساحة م²"
+            <div {display=grid; grid-template-columns=1fr 1fr}>
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "من"
+                <input type=text placeholder=80 {font-size=14px; font-weight=800; color=#141311; border=1.5px solid #141311}>
+              <label {font-size=10px; font-weight=600; color=#5E5A52}>
+                "إلى"
+                <input type=text placeholder=420 {font-size=14px; font-weight=800; color=#141311; border=1.5px solid #141311}>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "حالة المشروع"
+            <div>
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#141311; color=#FFFFFF}> "الكل"
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "جاهز"
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "قيد الإنشاء"
+            <label {font-size=10px; font-weight=600; color=#5E5A52}>
+              "التسليم قبل"
+              <select {font-size=13px; font-weight=700; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "بدون تحديد"
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "المميزات"
+            <label {font-size=13px; font-weight=600}>
+              "غرفة خادمة"
+              <input type=checkbox>
+            <label {font-size=13px; font-weight=600}>
+              "غرفة سائق"
+              <input type=checkbox>
+            <label {font-size=13px; font-weight=600}>
+              "بلكونة"
+              <input type=checkbox>
+            <label {font-size=13px; font-weight=600}>
+              "سطح خاص"
+              <input type=checkbox>
+            <label {font-size=13px; font-weight=600}>
+              "سمارت هوم"
+              <input type=checkbox>
+        <div>
+          <div>
+            <a href=Project-D.html {text-decoration=none; color=#141311}>
+              <span {font-size=18px; font-weight=800}> "جاردن الروضة"
+              <span {font-size=12px; color=#5E5A52}> "حي الروضة · عمارتا روز وياسمين · قيد الإنشاء · تسليم الربع 2 · 2027"
+            <span {font-size=12px; font-weight=700; background=#F3F1EB}> "8 من 10 متاحة"
+          <div {display=grid; grid-template-columns=repeat(auto-fill, minmax(min(280px, 100%), 1fr))}>
+            <article {border=1.5px solid #141311}>
+              <div>
+                <figure {height=160px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+                  <svg svg  {position=absolute; opacity=0.55}>
+                  <figcaption {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                <span {position=absolute; background=#B48F2E; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                <span {position=absolute; background=#141311; color=#FFFFFF; font-size=11px; font-weight=700; clip-path=polygon(14px 0, 100% 0, 100% 100%, 0 100%)}> "عمارة روز"
+              <a href=Unit-D.html {text-decoration=none; color=#141311}>
+                <span {font-size=17px; font-weight=800}> "شقة نموذج D"
+                <span {font-size=12px; color=#5E5A52}> "غرفتان · 2 حمام · 82.60 م²"
+              <div {background=#141311; color=#FFFFFF}>
+                <span {font-size=22px; font-weight=800}> "459,000"
+                <span {font-size=11px; color=#C9C2B3}>
+                  <strong {color=#B48F2E; font-size=13px}> "5,557"
+                  "للمتر"
+              <div>
+                <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "واتساب"
+                <label {border=1.5px solid #141311; font-size=12px; font-weight=700; background=#F3F1EB}>
+                  <input type=checkbox checked=None aria-label=في المقارنة> "قارن"
+            <article {border=1.5px solid #141311}>
+              <div>
+                <figure {height=160px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+                  <svg svg  {position=absolute; opacity=0.55}>
+                  <figcaption {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                <span {position=absolute; background=#B48F2E; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                <span {position=absolute; background=#141311; color=#FFFFFF; font-size=11px; font-weight=700; clip-path=polygon(14px 0, 100% 0, 100% 100%, 0 100%)}> "عمارة ياسمين"
+              <a href=Unit-D.html {text-decoration=none; color=#141311}>
+                <span {font-size=17px; font-weight=800}> "شقة نموذج D"
+                <span {font-size=12px; color=#5E5A52}> "غرفتان · 2 حمام · 84.20 م²"
+              <div {background=#141311; color=#FFFFFF}>
+                <span {font-size=22px; font-weight=800}> "459,000"
+                <span {font-size=11px; color=#C9C2B3}>
+                  <strong {color=#B48F2E; font-size=13px}> "5,451"
+                  "للمتر"
+              <div>
+                <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "واتساب"
+                <label {border=1.5px solid #141311; font-size=12px; font-weight=700; background=#F3F1EB}>
+                  <input type=checkbox checked=None aria-label=في المقارنة> "قارن"
+            <article {border=1.5px solid #141311}>
+              <div>
+                <figure {height=160px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+                  <svg svg  {position=absolute; opacity=0.55}>
+                  <figcaption {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                <span {position=absolute; background=#B48F2E; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                <span {position=absolute; background=#141311; color=#FFFFFF; font-size=11px; font-weight=700; clip-path=polygon(14px 0, 100% 0, 100% 100%, 0 100%)}> "عمارة روز"
+              <a href=Unit-D.html {text-decoration=none; color=#141311}>
+                <span {font-size=17px; font-weight=800}> "شقة نموذج C"
+                <span {font-size=12px; color=#5E5A52}> "غرفتان · 2 حمام · 80.35 م² · بلكونة"
+              <div {background=#141311; color=#FFFFFF}>
+                <span {font-size=22px; font-weight=800}> "510,000"
+                <span {font-size=11px; color=#C9C2B3}>
+                  <strong {color=#B48F2E; font-size=13px}> "6,347"
+                  "للمتر"
+              <div>
+                <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "واتساب"
+                <label {border=1.5px solid #141311; font-size=12px; font-weight=700}>
+                  <input type=checkbox aria-label=أضف إلى المقارنة> "قارن"
+            <article {border=1.5px solid #141311}>
+              <div>
+                <figure {height=160px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+                  <svg svg  {position=absolute; opacity=0.55}>
+                  <figcaption {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                <span {position=absolute; background=#B48F2E; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                <span {position=absolute; background=#141311; color=#FFFFFF; font-size=11px; font-weight=700; clip-path=polygon(14px 0, 100% 0, 100% 100%, 0 100%)}> "عمارة روز"
+              <a href=Unit-D.html {text-decoration=none; color=#141311}>
+                <span {font-size=17px; font-weight=800}> "شقة نموذج B"
+                <span {font-size=12px; color=#5E5A52}> "غرفتان · 3 حمامات · 116.90 م²"
+              <div {background=#141311; color=#FFFFFF}>
+                <span {font-size=22px; font-weight=800}> "555,000"
+                <span {font-size=11px; color=#C9C2B3}>
+                  <strong {color=#B48F2E; font-size=13px}> "4,748"
+                  "للمتر"
+              <div>
+                <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "واتساب"
+                <label {border=1.5px solid #141311; font-size=12px; font-weight=700}>
+                  <input type=checkbox aria-label=أضف إلى المقارنة> "قارن"
+            <article {border=1.5px solid #141311}>
+              <div>
+                <figure {height=160px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+                  <svg svg  {position=absolute; opacity=0.55}>
+                  <figcaption {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                <span {position=absolute; background=#B48F2E; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                <span {position=absolute; background=#141311; color=#FFFFFF; font-size=11px; font-weight=700; clip-path=polygon(14px 0, 100% 0, 100% 100%, 0 100%)}> "عمارة ياسمين"
+              <a href=Unit-D.html {text-decoration=none; color=#141311}>
+                <span {font-size=17px; font-weight=800}> "شقة نموذج B"
+                <span {font-size=12px; color=#5E5A52}> "غرفتان · 3 حمامات · 106.05 م²"
+              <div {background=#141311; color=#FFFFFF}>
+                <span {font-size=22px; font-weight=800}> "555,000"
+                <span {font-size=11px; color=#C9C2B3}>
+                  <strong {color=#B48F2E; font-size=13px}> "5,233"
+                  "للمتر"
+              <div>
+                <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "واتساب"
+                <label {border=1.5px solid #141311; font-size=12px; font-weight=700}>
+                  <input type=checkbox aria-label=أضف إلى المقارنة> "قارن"
+            <article {border=1.5px solid #141311}>
+              <div>
+                <figure {height=160px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+                  <svg svg  {position=absolute; opacity=0.55}>
+                  <figcaption {position=absolute; font-size=10px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                <span {position=absolute; background=#B48F2E; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+                <span {position=absolute; background=#141311; color=#FFFFFF; font-size=11px; font-weight=700; clip-path=polygon(14px 0, 100% 0, 100% 100%, 0 100%)}> "عمارة روز"
+              <a href=Unit-D.html {text-decoration=none; color=#141311}>
+                <span {font-size=17px; font-weight=800}> "شقة نموذج A"
+                <span {font-size=12px; color=#5E5A52}> "3 غرف · 3 حمامات · 147 م² · غرفة خادمة"
+              <div {background=#141311; color=#FFFFFF}>
+                <span {font-size=22px; font-weight=800}> "690,000"
+                <span {font-size=11px; color=#C9C2B3}>
+                  <strong {color=#B48F2E; font-size=13px}> "4,694"
+                  "للمتر"
+              <div>
+                <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "واتساب"
+                <label {border=1.5px solid #141311; font-size=12px; font-weight=700}>
+                  <input type=checkbox aria-label=أضف إلى المقارنة> "قارن"
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "مباعة، للمرجع فقط"
+            <span {background=#D4CFC4}>
+          <div {display=grid; grid-template-columns=repeat(auto-fill, minmax(min(280px, 100%), 1fr))}>
+            <article {border=1.5px solid #D4CFC4; color=#5E5A52}>
+              <span {background=#141311; color=#FFFFFF; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "مباع"
+              <span>
+                <span {font-size=15px; font-weight=800; color=#141311}> "شقة نموذج A · ياسمين"
+                <span {font-size=12px}> "غرفتان · 109.35 م² · بيعت 2026/09"
+              <span {font-size=16px; font-weight=800; text-decoration=line-through}> "555,000"
+            <article {border=1.5px solid #D4CFC4; color=#5E5A52}>
+              <span {background=#141311; color=#FFFFFF; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "مباع"
+              <span>
+                <span {font-size=15px; font-weight=800; color=#141311}> "شقة نموذج C · ياسمين"
+                <span {font-size=12px}> "غرفتان · 84.10 م² · بيعت 2026/08"
+              <span {font-size=16px; font-weight=800; text-decoration=line-through}> "459,000"
+      <div {position=sticky; background=#141311; color=#FFFFFF}>
+        <div>
+          <span {font-size=14px}>
+            <span>
+              <strong {color=#B48F2E}> "2"
+              "من 3 في المقارنة"
+            <span {font-size=12px; color=#C9C2B3}> "نموذج D روز · نموذج D ياسمين"
+          <a href=Compare-D.html {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "قارن الآن"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span> "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية"

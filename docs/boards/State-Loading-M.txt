@@ -1,0 +1,48 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section>
+        <h1 {font-size=26px; font-weight=800}> "الوحدات في جدة"
+        <p {font-size=13px; color=#5E5A52}>
+          <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "نبحث في الوحدات المتاحة…"
+      <section>
+        <div>
+          <span {background=#E9E5DB}>
+          <span {background=#E9E5DB}>
+          <span {background=#E9E5DB}>
+        <div>
+          <span {background=#F3F1EB}>
+          <span {background=#F3F1EB}>
+          <span {background=#F3F1EB}>
+      <section>
+        <div>
+          <span {width=150px; background=#E9E5DB}>
+          <span {background=#F3F1EB}>
+        <div {border=1.5px solid #D4CFC4}>
+          <div {height=170px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+          <div>
+            <span {width=140px; background=#E9E5DB}>
+            <span {width=200px; background=#F3F1EB}>
+          <div {background=#F3F1EB}>
+            <span {background=#E9E5DB}>
+            <span {background=#E9E5DB}>
+          <div>
+            <span {background=#F3F1EB}>
+            <span {background=#F3F1EB}>
+        <div {border=1.5px solid #D4CFC4}>
+          <div {height=170px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+          <div>
+            <span {width=120px; background=#E9E5DB}>
+            <span {width=180px; background=#F3F1EB}>
+          <div {background=#F3F1EB}>
+            <span {background=#E9E5DB}>
+            <span {background=#E9E5DB}>

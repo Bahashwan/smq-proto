@@ -1,0 +1,228 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Project-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <section>
+        <nav aria-label=المسار {font-size=13px; color=#5E5A52}>
+          <a href=Results-D.html {text-decoration=none}> "جدة"
+          <span> "/"
+          <a href=Guide-D.html {text-decoration=none}> "الروضة"
+          <span> "/"
+          <a href=Project-D.html {text-decoration=none}> "جاردن الروضة"
+          <span> "/"
+          <span {color=#141311; font-weight=700}> "نموذج A · عمارة روز"
+        <div>
+          <div>
+            <div>
+              <figure {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 56px 100%, 0 calc(100% - 97px))}>
+                <svg svg  {position=absolute; opacity=0.55}>
+                <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+                <span {position=absolute; font-size=10px; color=#5E5A52; background=#FFFFFF}> "IMG-UNIT-APT-3BR-LIVING · 16:10"
+              <span {position=absolute; background=#B48F2E; color=#141311; font-size=14px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+            <div {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr))}>
+              <button type=button aria-label=الصالة {border=2px solid #141311; background=#E9E5DB; font-size=11px; font-weight=700; color=#141311}> "الصالة"
+              <button type=button aria-label=المطبخ {border=1px solid #D4CFC4; background=#E9E5DB; font-size=11px; color=#5E5A52}> "المطبخ"
+              <button type=button aria-label=غرفة النوم الرئيسية {border=1px solid #D4CFC4; background=#E9E5DB; font-size=11px; color=#5E5A52}> "غرفة النوم"
+              <button type=button aria-label=البلكونة {border=1px solid #D4CFC4; background=#E9E5DB; font-size=11px; color=#5E5A52}> "البلكونة"
+              <button type=button aria-label=المخطط {border=1px solid #D4CFC4; background=#F3F1EB; font-size=11px; font-weight=700; color=#141311}> "المخطط 2D"
+          <aside>
+            <a href=Project-D.html {font-size=13px; font-weight=700; text-decoration=none}> "جاردن الروضة · عمارة روز · حي الروضة"
+            <h1 {font-size=40px; font-weight=800}> "شقة نموذج A"
+            <p {font-size=14px; color=#5E5A52}> "3 غرف نوم · 3 حمامات · 147 م² · الطابق الثالث · واجهة شمالية"
+            <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+              <div>
+                <span>
+                  <svg svg aria-label=ريال سعودي {color=#B48F2E}>
+                  <span {font-size=40px; font-weight=800}> "690,000"
+                <span>
+                  <span {font-size=20px; font-weight=800; color=#B48F2E}> "4,694"
+                  <span {font-size=11px; color=#C9C2B3}> "للمتر المربع"
+              <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+                <div>
+                  <span {font-size=14px; font-weight=800}> "متاح"
+                  <span {font-size=10px; color=#C9C2B3}> "حالة الوحدة"
+                <div>
+                  <span {font-size=14px; font-weight=800}> "الربع 2 · 2027"
+                  <span {font-size=10px; color=#C9C2B3}> "التسليم"
+                <div>
+                  <span {font-size=14px; font-weight=800}> "قيد الإنشاء"
+                  <span {font-size=10px; color=#C9C2B3}> "المشروع"
+            <a href=https://wa.me/966559997929?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B4%D9%82%D8%A9%20%D9%86%D9%85%D9%88%D8%B0%D8%AC%20A%20%D8%B9%D9%85%D8%A7%D8%B1%D8%A9%20%D8%B1%D9%88%D8%B2%20%D9%81%D9%8A%20%D8%AC%D8%A7%D8%B1%D8%AF%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%B6%D8%A9%20(RZ-A) {background=#B48F2E; color=#141311; text-decoration=none; font-size=16px; font-weight=800; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+              <span>
+                <svg svg > "اسأل عن نموذج A"
+              <span {font-size=11px; font-weight=600; color=#3D3010}> "رسالة جاهزة: جاردن الروضة · RZ-A"
+            <div>
+              <label {border=1.5px solid #141311; font-size=13px; font-weight=700}>
+                <input type=checkbox aria-label=أضف إلى المقارنة> "أضف للمقارنة"
+              <a href=tel:+966556607779 {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=13px; font-weight=700}> "اتصال 0556607779"
+            <span {font-size=12px; color=#5E5A52}> "آخر تحديث 2026/10/01 · كود النموذج RZ-A · ساعات العمل: السبت إلى الخميس، 9 ص إلى 6 م"
+      <section {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(340px, 100%), 1fr))}>
+        <div>
+          <h2 {font-size=18px; font-weight=800}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "الموقع"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "المدينة"
+            <span {font-weight=700}> "جدة"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "الحي"
+            <span {font-weight=700}> "الروضة"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "المشروع"
+            <a href=Project-D.html {font-weight=700}> "جاردن الروضة · RWD-01"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "العمارة"
+            <span {font-weight=700}> "روز"
+        <div>
+          <h2 {font-size=18px; font-weight=800}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "الوحدة"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "كود النموذج"
+            <span {font-weight=700}> "RZ-A"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "نوع الوحدة"
+            <span {font-weight=700}> "شقة"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "الطابق"
+            <span {font-weight=700}> "الثالث [للتأكيد]"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "رقم ترخيص الإعلان"
+            <span {font-weight=700}> "[اختياري]"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "عدد الغرف"
+            <span {font-weight=700}> "3 غرف نوم · 3 حمامات"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "المساحة"
+            <span {font-weight=700}> "147.00 م²"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "مساحة السطح"
+            <span {font-weight=700}> "لا يوجد"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "الاتجاه"
+            <span {font-weight=700}> "شمالي [للتأكيد]"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "ارتفاع السقف"
+            <span {font-weight=700}> "3.20 م [للتأكيد]"
+        <div>
+          <h2 {font-size=18px; font-weight=800}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "السعر"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "السعر"
+            <span {font-weight=800; font-size=16px}> "690,000 ريال"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "سعر المتر"
+            <span {font-weight=700}> "4,694 ريال"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "ضريبة التصرفات العقارية"
+            <span {font-weight=700}> "[شامل / غير شامل]"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "قياساً بالحي"
+            <span {font-weight=700}> "النموذج الوحيد بثلاث غرف · ثاني أقل سعر للمتر بين الشقق"
+        <div>
+          <h2 {font-size=18px; font-weight=800}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "المميزات"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "غرفة خادمة"
+            <span {font-weight=800}> "نعم"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "غرفة سائق"
+            <span {font-weight=700; color=#5E5A52}> "لا"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "بلكونة"
+            <span {font-weight=800}> "نعم"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "نوع المطبخ"
+            <span {font-weight=700}> "[للتأكيد]"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "سمارت هوم"
+            <span {font-weight=800}> "نعم"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "مميزات جوهرية أخرى"
+            <span {font-weight=700}> "دخول ذكي · موقف خاص"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "مميزات إضافية"
+            <span {font-weight=700}> "[للتأكيد]"
+        <div>
+          <h2 {font-size=18px; font-weight=800}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "الضمانات"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "الضمانات"
+            <span {font-weight=700}> "[للتأكيد من المطوّر]"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "نوع التأمين"
+            <span {font-weight=700}> "[للتأكيد]"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "شهادة الإشغال"
+            <span {font-weight=700}> "بعد التسليم"
+        <div>
+          <h2 {font-size=18px; font-weight=800}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "الحالة"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "حالة الوحدة"
+            <span {font-weight=800}>
+              <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "متاح"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "حالة المشروع"
+            <span {font-weight=700}> "قيد الإنشاء"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "تاريخ التسليم المتوقع"
+            <span {font-weight=700}> "الربع الثاني 2027"
+          <div {font-size=14px}>
+            <span {color=#5E5A52}> "تاريخ آخر تحديث"
+            <span {font-weight=700}> "2026/10/01"
+      <section>
+        <div>
+          <h2 {font-size=24px; font-weight=800}> "نماذج أخرى في جاردن الروضة"
+          <a href=Project-D.html {font-size=13px; font-weight=700; text-decoration=none}> "كل النماذج العشرة"
+        <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(220px, 100%), 1fr))}>
+          <a href=Unit-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 28px 100%, 0 calc(100% - 48px))}>
+            <div>
+              <span {font-size=15px; font-weight=800}> "نموذج B · روز"
+              <span {font-size=12px; color=#5E5A52}> "غرفتان · 116.90 م²"
+            <div {background=#141311; color=#FFFFFF}>
+              <span {font-size=16px; font-weight=800}> "555,000"
+              <span {font-size=11px; color=#B48F2E}> "4,748 /م²"
+          <a href=Unit-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 28px 100%, 0 calc(100% - 48px))}>
+            <div>
+              <span {font-size=15px; font-weight=800}> "نموذج C · روز"
+              <span {font-size=12px; color=#5E5A52}> "غرفتان · 80.35 م²"
+            <div {background=#141311; color=#FFFFFF}>
+              <span {font-size=16px; font-weight=800}> "510,000"
+              <span {font-size=11px; color=#B48F2E}> "6,347 /م²"
+          <a href=Unit-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 28px 100%, 0 calc(100% - 48px))}>
+            <div>
+              <span {font-size=15px; font-weight=800}> "نموذج D · روز"
+              <span {font-size=12px; color=#5E5A52}> "غرفتان · 82.60 م²"
+            <div {background=#141311; color=#FFFFFF}>
+              <span {font-size=16px; font-weight=800}> "459,000"
+              <span {font-size=11px; color=#B48F2E}> "5,557 /م²"
+          <a href=Unit-D.html {border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 28px 100%, 0 calc(100% - 48px))}>
+            <div>
+              <span {font-size=15px; font-weight=800}> "فيلا روف · روز"
+              <span {font-size=12px; color=#5E5A52}> "5 غرف · 411 م²"
+            <div {background=#141311; color=#FFFFFF}>
+              <span {font-size=16px; font-weight=800}> "1,650,000"
+              <span {font-size=11px; color=#B48F2E}> "4,015 /م²"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span> "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية"

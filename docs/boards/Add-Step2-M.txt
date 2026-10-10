@@ -1,0 +1,143 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 30px))}>
+        <span {font-size=12px; font-weight=700; color=#3D3010}> "خدمة مجانية للمُلّاك"
+        <h1 {font-size=30px; font-weight=800}> "أضف عقارك"
+      <section {border=1.5px solid #141311}>
+        <div>
+          <h2 {font-size=16px; font-weight=800}> "التفاصيل والسعر"
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "الخطوة 2 من 3"
+        <ol aria-label=خطوات النموذج {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <li>
+            <span {background=#141311}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "النوع والموقع ✓"
+          <li>
+            <span {background=#B48F2E}>
+            <span {font-size=11px; font-weight=800}> "التفاصيل والسعر"
+          <li>
+            <span {background=#E9E5DB}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "الصور وبياناتك"
+        <div {background=#F3F1EB; font-size=12px}>
+          <span>
+            <strong> "شقة للبيع"
+            "· حي الروضة، جدة · المالك"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "تعديل"
+        <form>
+          <div {display=grid; grid-template-columns=1fr 1fr}>
+            <div>
+              "غرف النوم"
+              <div aria-label=غرف النوم>
+                <button type=button aria-label=أقل> "−"
+                <span> "3"
+                <button type=button aria-label=أكثر> "+"
+            <div>
+              "الحمامات"
+              <div aria-label=الحمامات>
+                <button type=button aria-label=أقل> "−"
+                <span> "2"
+                <button type=button aria-label=أكثر> "+"
+            <label>
+              "المساحة (م²)"
+              <input type=text value=120>
+            <label>
+              "الطابق"
+              <select>
+                <option> "أرضي"
+                <option> "الأول"
+                <option> "الثاني"
+                <option selected=None> "الثالث"
+                <option> "الرابع أو أعلى"
+                <option> "روف"
+            <label>
+              "عمر البناء"
+              <select>
+                <option> "جديد (لم يُسكن)"
+                <option selected=None> "1 إلى 5 سنوات"
+                <option> "6 إلى 10"
+                <option> "أكثر من 10"
+            <label>
+              "حالة الإشغال"
+              <select>
+                <option> "شاغرة"
+                <option selected=None> "أسكن فيها"
+                <option> "مؤجّرة"
+          <div>
+            <span {font-size=13px; font-weight=700}>
+              "المميزات"
+              <span {font-weight=500; color=#5E5A52}> "(اختر ما ينطبق)"
+            <div>
+              <label>
+                <input type=checkbox checked=None> "موقف خاص"
+              <label>
+                <input type=checkbox checked=None> "مصعد"
+              <label>
+                <input type=checkbox> "غرفة خادمة"
+              <label>
+                <input type=checkbox> "غرفة سائق"
+              <label>
+                <input type=checkbox checked=None> "مطبخ راكب"
+              <label>
+                <input type=checkbox> "مكيفات راكبة"
+              <label>
+                <input type=checkbox> "شرفة"
+              <label>
+                <input type=checkbox> "سمارت هوم"
+              <label>
+                <input type=checkbox> "مدخلان"
+          <div>
+            <label {font-size=13px; font-weight=700; color=#141311}> "السعر المطلوب (ريال)"
+            <div {border=1.5px solid #141311}>
+              <input type=text value=620,000 {border=0; font-size=18px; font-weight=800; color=#141311}>
+              <span {font-size=12px; font-weight=700; color=#5E5A52}>
+                <svg svg aria-label=ريال سعودي>
+            <div {background=#F3F1EB; font-size=12px}>
+              <span>
+                <span> "سعر المتر المطلوب"
+                <strong> "5,167"
+              <span>
+                <span> "نطاق المتر للمتاح في الروضة الآن"
+                <strong> "3,819 إلى 6,347"
+              <span {background=#E9E5DB}>
+                <span {position=absolute; background=#141311}>
+                <span {position=absolute; background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {color=#5E5A52}> "سعرك داخل النطاق. هذا للمعلومة فقط، التقييم النهائي بعد الزيارة."
+          <fieldset {border=0}>
+            <legend {font-size=13px; font-weight=700}> "هل السعر قابل للتفاوض؟"
+            <div>
+              <label>
+                <input type=radio checked=None> "نعم، قليلاً"
+              <label>
+                <input type=radio> "لا"
+              <label>
+                <input type=radio> "أفضل عرض"
+          <label>
+            "رقم الصك (اختياري الآن، مطلوب قبل النشر)"
+            <input type=text placeholder=يبدأ بـ 3 أو 9 · 12 رقماً>
+          <div>
+            <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "السابق"
+            <button type=button {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+              "التالي: الصور وبياناتك"
+              <svg svg >
+      <p {font-size=11px; color=#5E5A52}> "يُحفظ ما أدخلته على هذا الجوال 7 أيام. لا يُنشر شيء قبل تأكيد فريقنا."
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=Results-M.html {color=#FFFFFF; text-decoration=none}> "العقارات"
+          <a href=Guide-M.html {color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+          <a href=Services-M.html {color=#FFFFFF; text-decoration=none}> "الخدمات"
+          <a href=About-M.html {color=#FFFFFF; text-decoration=none}> "من نحن"
+          <a href=Contact-M.html {color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <a href=Privacy-M.html {color=#FFFFFF; text-decoration=none}> "الخصوصية"
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

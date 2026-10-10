@@ -1,0 +1,220 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "غرفة التحالف · التقرير الشهري"
+              <span {font-size=13px; color=#5E5A52}> "يُولَّد تلقائياً من بحوث الزوار وطلبات التحالف. معاينة، ثم نشر وإرسال للأعضاء الموثّقين كلهم بالتساوي"
+            <div>
+              <select aria-label=الشهر {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "أكتوبر 2026 · مسودة"
+                <option> "سبتمبر 2026 · نُشر"
+                <option> "أغسطس 2026 · نُشر"
+          <nav aria-label=أقسام غرفة التحالف>
+            <a href=Admin-Alliance-D.html> "نظرة عامة"
+            <a href=Admin-AllianceApplications-D.html>
+              "طلبات الانضمام"
+              <i> "4"
+            <a href=Admin-AllianceMembers-D.html>
+              "الأعضاء"
+              <i> "12"
+            <a href=Admin-AllianceRadar-D.html> "الرادار"
+            <a href=Admin-AllianceRequests-D.html>
+              "الطلبات والمطابقات"
+              <i> "5"
+            <a href=Admin-AllianceReferrals-D.html>
+              "الإحالات والصفقات"
+              <i> "3"
+            <a href=Admin-AllianceReport-D.html> "التقرير الشهري"
+            <a href=Admin-AllianceSettings-D.html> "الميثاق والإعدادات"
+          <div {display=grid; grid-template-columns=360px minmax(0, 1fr)}>
+            <div>
+              <section>
+                <header>
+                  "أكتوبر 2026"
+                  <span {font-size=11px; font-weight=800; border=1.5px solid #141311}> "مسودة · حتى اليوم 10"
+                <div>
+                  <div>
+                    <span> "جلسات حتى الآن"
+                    <span> "1,613"
+                  <div>
+                    <span> "شرائح تحت 20 جلسة"
+                    <span {color=#8A6C1E}> "3 · ستُخفى"
+                  <div>
+                    <span> "أحياء جديدة في التقرير"
+                    <span> "النهضة، الحرازات"
+                  <div>
+                    <span> "يُولَّد نهائياً"
+                    <span> "2026/11/01 · 06:00"
+                  <div>
+                    <span> "المستلمون"
+                    <span> "11 عضواً موثّقاً (ل موقوف)"
+              <section>
+                <header> "الأقسام المضمّنة"
+                <div {font-size=13px}>
+                  <label>
+                    <span> "بالحي"
+                    <span>
+                  <label>
+                    <span> "بشريحة الميزانية"
+                    <span>
+                  <label>
+                    <span> "بعدد الغرف"
+                    <span>
+                  <label>
+                    <span> "حيث وجد الطلب لا عرض"
+                    <span>
+                  <label>
+                    <span> "سرعة رد الأعضاء (بالاسم)"
+                    <span>
+                  <span {font-size=11px; color=#5E5A52}> "أسماء الأعضاء لا تُنشر في التقرير افتراضياً؛ كل عضو يرى ترتيبه في صفحته فقط."
+              <section>
+                <header>
+                  "كلمة الشهر"
+                  <span {font-size=11px; font-weight=700; color=#5E5A52}> "اختياري · 300 حرف"
+                <div>
+                  <textarea {font-size=13px; border=1.5px solid #141311; background=#FFFFFF}> "الطلب على 4 غرف في الصفا والفيصلية يسبق العرض للشهر الثاني. من يملك عرضاً هناك فليرسله عاماً من صفحته."
+              <div>
+                <button type=button {font-size=14px}> "انشر وأرسل للأعضاء · 11"
+                <div>
+                  <button type=button> "احفظ المسودة"
+                  <a href=Member-Report-D.html> "افتح كما يراه العضو"
+                <span {font-size=11px; color=#5E5A52}> "النشر يرسل رابط التقرير على واتساب لكل عضو موثّق، ويثبّت نسخة لا تتغيّر. التعديل بعد النشر ينشئ نسخة 2 ويُعلم الأعضاء."
+            <section>
+              <header>
+                "معاينة · كما سيصل"
+                <span {font-size=11px; font-weight=700; color=#5E5A52}> "1440 · الجوال من نفس البيانات"
+              <div {background=#F8F7F4}>
+                <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% 100%, 60px 100%, 0 calc(100% - 35px))}>
+                  <span {font-size=11px; font-weight=700; color=#B48F2E}> "أكتوبر 2026 · مسودة"
+                  <span {font-size=24px; font-weight=800}> "ماذا بحث عنه مشترو جدة هذا الشهر"
+                  <span {font-size=12px; color=#C9C2B3}> "1,613 جلسة حتى اليوم · لا أسماء، لا أرقام · شرائح أقل من 20 جلسة لا تُعرض"
+                <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+                  <div {background=#FFFFFF; border=1.5px solid #141311}>
+                    <span {font-size=11px; font-weight=800}> "بالحي"
+                    <div>
+                      <span> "الروضة"
+                      <div>
+                        <span>
+                      <strong> "21%"
+                    <div>
+                      <span> "أبحر الشمالية"
+                      <div>
+                        <span>
+                      <strong> "18%"
+                    <div>
+                      <span> "الصفا"
+                      <div>
+                        <span>
+                      <strong> "14%"
+                    <div>
+                      <span> "النعيم"
+                      <div>
+                        <span>
+                      <strong> "9%"
+                    <div>
+                      <span> "النهضة"
+                      <div>
+                        <span>
+                      <strong> "4%"
+                  <div {background=#FFFFFF; border=1.5px solid #141311}>
+                    <span {font-size=11px; font-weight=800}> "بشريحة الميزانية"
+                    <div>
+                      <span> "حتى 500k"
+                      <div>
+                        <span>
+                      <strong> "20%"
+                    <div>
+                      <span> "500 إلى 700k"
+                      <div>
+                        <span>
+                      <strong> "29%"
+                    <div>
+                      <span> "700k إلى 1M"
+                      <div>
+                        <span>
+                      <strong> "21%"
+                    <div>
+                      <span> "1 إلى 1.5M"
+                      <div>
+                        <span>
+                      <strong> "13%"
+                    <div>
+                      <span> "1.5 إلى 2.5M"
+                      <div>
+                        <span>
+                      <strong> "12%"
+                  <div {background=#FFFFFF; border=1.5px solid #141311}>
+                    <span {font-size=11px; font-weight=800}> "بعدد الغرف"
+                    <div>
+                      <span> "غرفتان"
+                      <div>
+                        <span>
+                      <strong> "34%"
+                    <div>
+                      <span> "3 غرف"
+                      <div>
+                        <span>
+                      <strong> "42%"
+                    <div>
+                      <span> "4 غرف"
+                      <div>
+                        <span>
+                      <strong> "19%"
+                    <div>
+                      <span> "5 فأكثر"
+                      <div>
+                        <span>
+                      <strong> "5%"
+                <div {background=#FFFFFF; border=1.5px solid #141311}>
+                  <div {font-size=12px; font-weight=800}> "حيث وجد الطلب لا عرض"
+                  <div {display=grid; grid-template-columns=1fr 1fr; font-size=12px}>
+                    <div>
+                      <span> "أبحر الشمالية · فلل 1.5 إلى 2.5M"
+                      <strong> "128 · 2 مكاتب"
+                    <div>
+                      <span> "الصفا · شقق 4 غرف"
+                      <strong> "84 · 1 مكتب"
+                    <div>
+                      <span> "الفيصلية · شقق 4 غرف"
+                      <strong> "51 · 1 مكتب"
+                    <div>
+                      <span> "النهضة · شقق غرفتين"
+                      <strong {color=#8A6C1E}> "44 · لا أعضاء"
+                    <div {color=#5E5A52}>
+                      <span> "المحمدية · 3 غرف"
+                      <strong> "18 · أقل من 20، يُخفى"
+                    <div {color=#5E5A52}>
+                      <span> "الحرازات · فلل"
+                      <strong> "16 · أقل من 20، يُخفى"
+                <div {background=#FFFFFF; border=1.5px solid #141311; font-size=12px}>
+                  <strong> "كلمة الشهر:"
+                  "الطلب على 4 غرف في الصفا والفيصلية يسبق العرض للشهر الثاني. من يملك عرضاً هناك فليرسله عاماً من صفحته."

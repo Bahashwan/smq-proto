@@ -1,0 +1,164 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "المسوّقون"
+              <span {font-size=13px; color=#5E5A52}> "من «انضم كمسوّق». يتقدّم المسوّق عبر المراحل باليد؛ النشط يملك رابطاً متابَعاً وتُنسب إليه الطلبات"
+            <div>
+              <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=700}> "تصدير CSV"
+              <a href=Admin-AllianceSettings-D.html {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=13px; font-weight=700}> "النموذج: مفتوح · خياراته"
+              <button type=button {border=0; background=#141311; color=#FFFFFF; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "+ مسوّق يدوياً"
+          <div {display=grid; grid-template-columns=repeat(4, minmax(0, 1fr))}>
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <span {font-size=11px; color=#5E5A52}> "نشطون"
+              <span {font-size=26px; font-weight=800}> "4"
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <span {font-size=11px; color=#5E5A52}> "زيارات من روابطهم · 30 يوماً"
+              <span {font-size=26px; font-weight=800}> "1,284"
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <span {font-size=11px; color=#5E5A52}> "طلبات منسوبة"
+              <span {font-size=26px; font-weight=800}> "19"
+            <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <span {font-size=11px; color=#C9C2B3}> "صفقات قيد التفاوض"
+              <span {font-size=26px; font-weight=800; color=#B48F2E}> "1"
+          <section {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr))}>
+            <div>
+              <header>
+                <span> "جديد"
+                <span> "2"
+              <a href=Admin-MarketerDetail-D.html>
+                <span>
+                  <span> "ر"
+                  <b> "ريان الغامدي"
+                <small> "اليوم 09:40 · الروضة، الصفا · 1 إلى 3 سنوات · بلا رخصة"
+              <a href=Admin-MarketerDetail-D.html>
+                <span>
+                  <span> "ل"
+                  <b> "لمى الحارثي"
+                <small> "أمس · أبحر الشمالية · 3 إلى 5 سنوات · فال 1200XXXXXX"
+            <div>
+              <header>
+                <span> "مقابلة"
+                <span> "1"
+              <a href=Admin-MarketerDetail-D.html>
+                <span>
+                  <span> "م"
+                  <b> "محمد الشهري"
+                <small> "مقابلة الأحد 11 ص · واتساب · نورة"
+            <div>
+              <header>
+                <span> "مقبول"
+                <span> "1"
+              <a href=Admin-MarketerDetail-D.html>
+                <span>
+                  <span> "س"
+                  <b> "سارة باجابر"
+                <small> "قُبلت 2026/10/07 · بانتظار إنشاء الرابط"
+                <span {background=#F3F1EB; font-size=11px; font-weight=800}> "أنشئ الرابط وفعّل"
+            <div>
+              <header>
+                <span> "نشط"
+                <span> "4"
+              <a href=Admin-MarketerDetail-D.html>
+                <span>
+                  <span {background=#B48F2E; color=#141311}> "ع"
+                  <b> "عبدالله الحربي · MK-07"
+                <small> "smq-re.com/r/abdullah"
+                <span>
+                  <span> "412 زيارة"
+                  <span> "37 واتساب"
+                  <span> "6 طلبات"
+              <a href=Admin-MarketerDetail-D.html>
+                <span>
+                  <span> "ن"
+                  <b> "نواف العتيبي · MK-03"
+                <small> "smq-re.com/r/nawaf"
+                <span>
+                  <span> "388 زيارة"
+                  <span> "21 واتساب"
+                  <span> "5 طلبات"
+              <a href=Admin-MarketerDetail-D.html>
+                <span>
+                  <span> "ه"
+                  <b> "هند القرشي · MK-05"
+                <small> "smq-re.com/r/hind"
+                <span>
+                  <span> "301 زيارة"
+                  <span> "19 واتساب"
+                  <span> "5 طلبات"
+              <a href=Admin-MarketerDetail-D.html>
+                <span>
+                  <span> "ف"
+                  <b> "فهد المالكي · MK-02"
+                <small> "smq-re.com/r/fahad"
+                <span>
+                  <span> "183 زيارة"
+                  <span> "8 واتساب"
+                  <span> "3 طلبات"
+            <div>
+              <header>
+                <span> "موقوف"
+                <span> "1"
+              <a href=Admin-MarketerDetail-D.html {color=#5E5A52}>
+                <span>
+                  <span {background=#5E5A52}> "خ"
+                  <b {color=#141311}> "خالد العمودي · MK-01"
+                <small> "أُوقف 2026/09/20 · أعلن أسعاراً غير المعلنة · الرابط معطّل"
+              <div {border=1.5px dashed #D4CFC4; font-size=11px; color=#5E5A52}> "الإيقاف يعطّل الرابط فوراً ويُبقي الطلبات المنسوبة سابقاً في السجل."
+          <section {background=#FFFFFF; border=1.5px solid #141311}>
+            <div {background=#F3F1EB; font-size=14px; font-weight=800}>
+              "آخر الطلبات المنسوبة لمسوّقين"
+              <span {font-size=11px; font-weight=700; color=#5E5A52}> "تظهر أيضاً في الطلبات الواردة بوسم «عبر مسوّق»"
+            <div {display=grid; grid-template-columns=120px 1fr 1fr 1fr 110px; font-size=11px; font-weight=800; color=#5E5A52}>
+              <span> "الوقت"
+              <span> "المسوّق"
+              <span> "الوحدة · القناة"
+              <span> "الحالة في الواردة"
+              <span> "الرمز"
+            <div {display=grid; grid-template-columns=120px 1fr 1fr 1fr 110px; font-size=13px}>
+              <span> "أمس 19:02"
+              <span> "عبدالله الحربي · MK-07"
+              <span> "RZ-B · واتساب"
+              <span {font-weight=800}> "تم الرد"
+              <span {font-weight=700}> "SMQ-91B2C"
+            <div {display=grid; grid-template-columns=120px 1fr 1fr 1fr 110px; font-size=13px}>
+              <span> "قبل 3 أيام"
+              <span> "عبدالله الحربي · MK-07"
+              <span> "RZ-A · واتساب"
+              <span {font-weight=800; color=#8A6C1E}> "زيارة محجوزة"
+              <span {font-weight=700}> "SMQ-4F10A"
+            <div {display=grid; grid-template-columns=120px 1fr 1fr 1fr 110px; font-size=13px}>
+              <span> "قبل 4 أيام"
+              <span> "هند القرشي · MK-05"
+              <span> "YS-B · اتصال"
+              <span {font-weight=700; color=#5E5A52}> "بلا رد"
+              <span {font-weight=700}> "v-77c12"

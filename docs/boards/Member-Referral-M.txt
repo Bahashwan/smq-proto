@@ -1,0 +1,82 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <span>
+            <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span>
+            <span {font-size=12px; font-weight=800}> "تحالف مكاتب جدة"
+            <span {font-size=10px; color=#C9C2B3}> "سجل إحالة · يُفتح من رابط واتساب للمكتبين"
+        <button type=button aria-label=مشاركة أو طباعة {border=1.5px solid #5E5A52; background=transparent; color=#FFFFFF}>
+          <svg svg >
+      <article {background=#FFFFFF; border=1.5px solid #141311}>
+        <div>
+          <div>
+            <span {font-size=11px; font-weight=700; color=#8A6C1E}> "سجل إحالة · تحالف مكاتب جدة العقارية"
+            <h1 {font-size=24px; font-weight=800}> "REF-2026-0117"
+          <img src=assets/logo-mark-gold.png alt=>
+        <div>
+          <div>
+            <span> "التاريخ والوقت"
+            <span> "2026/10/10 · 14:35 · توقيت جدة"
+          <div>
+            <span> "أنشأه"
+            <span> "فريق SMQ · نورة"
+          <div>
+            <span> "مرجع الطلب"
+            <span> "REQ-2026-0412"
+          <span> "المكتبان"
+          <div {display=grid; grid-template-columns=1fr 24px 1fr}>
+            <div {background=#F3F1EB}>
+              <span {font-size=10px; color=#5E5A52}> "صاحب الطلب"
+              <span {font-size=14px; font-weight=800}> "SMQ العقارية"
+              <span {font-size=10px; color=#5E5A52}> "فال 1200040135"
+            <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <div {background=#F3F1EB}>
+              <span {font-size=10px; color=#5E5A52}> "صاحب العرض"
+              <span {font-size=14px; font-weight=800}> "مكتب أ للعقارات"
+              <span {font-size=10px; color=#5E5A52}> "فال 1200XXXXXX · موثّقة"
+          <span> "الطلب"
+          <div>
+            <span> "ملخّص"
+            <span> "شقة · 4 غرف · الفيصلية · حتى 450,000"
+          <div>
+            <span> "المصدر"
+            <span> "زائر SMQ بلا نتائج"
+          <span> "العرض"
+          <div>
+            <span> "ملخّص"
+            <span> "شقة · 165 م² · 440,000 ريال"
+          <div>
+            <span> "عقد الوساطة"
+            <span> "موثّق في موقع الهيئة"
+          <div>
+            <span> "أُرسل العرض"
+            <span> "2026/10/10 · 10:42"
+          <span> "الاتفاق"
+          <div>
+            <span> "تقسيم العمولة"
+            <span {color=#8A6C1E}> "50 / 50 [للتأكيد]"
+          <div>
+            <span> "فترة الحماية"
+            <span {color=#8A6C1E}> "90 يوماً حتى 2027/01/08 [للتأكيد]"
+          <div>
+            <span> "الميثاق"
+            <span> "النسخة 1.0 · وافق عليه المكتبان"
+        <div>
+          <span {font-size=12px; font-weight=800}> "المرحلة"
+          <div>
+            <span> "تعارف"
+            <span> "معاينة"
+            <span> "تفاوض"
+            <span> "إفراغ"
+            <span> "لم تتم"
+          <span {font-size=11px; color=#5E5A52}> "التعارف 2026/10/10 · المعاينة محجوزة الخميس 4 م. تُحدَّث المرحلة من فريق SMQ بعد تأكيد المكتبين."
+        <div {background=#141311; color=#C9C2B3; font-size=10px}>
+          <span> "هذا السجل مرجع التحالف للعمولة وفترة الحماية. التعديل بعلم المكتبين فقط."
+          <span {font-weight=800; color=#B48F2E}> "REF-2026-0117"
+      <div>
+        <button type=button {border=1.5px solid #141311; background=#FFFFFF; color=#141311; font-size=13px; font-weight=800}> "حفظ PDF"
+        <a href=https://wa.me/966559997929?text=REF-2026-0117 {background=#B48F2E; color=#141311; font-size=13px; font-weight=800; text-decoration=none; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "اعتراض أو تحديث"

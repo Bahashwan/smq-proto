@@ -1,0 +1,40 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl aria-label=معرض صور نموذج A {width=390px; height=844px; background=#141311; color=#FFFFFF}>
+      <div>
+        <div>
+          <span {font-size=14px; font-weight=800}> "شقة نموذج A · RZ-A"
+          <span {font-size=11px; color=#C9C2B3}> "3 من 7 · الصالة"
+        <div>
+          <button type=button aria-label=مشاركة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+          <button type=button aria-label=إغلاق {border=1.5px solid #FFFFFF; background=transparent; color=#FFFFFF; font-size=18px; font-weight=800}> "×"
+      <figure {background=#3A3630}>
+        <div {position=absolute; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 0 100%)}>
+          <svg svg  {position=absolute; opacity=.55}>
+        <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF; color=#141311}> "صورة تعبيرية · لا تمثّل التشطيب النهائي"
+        <span {position=absolute; font-size=10px; color=#141311; background=#FFFFFF}> "IMG-UNIT-APT-3BR-LIVING"
+        <button type=button aria-label=السابقة {position=absolute; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 calc(100% - 14px), 8px 100%)}>
+          <svg svg >
+        <button type=button aria-label=التالية {position=absolute; border=0; background=#141311; color=#FFFFFF}>
+          <svg svg >
+        <span {position=absolute; font-size=10px; font-weight=700; color=#FFFFFF; background=#141311}> "قرّب بإصبعين · اسحب للتالي"
+      <div>
+        <div>
+          <span {background=#5E5A52; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#5E5A52; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#5E5A52; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#5E5A52; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#5E5A52; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#5E5A52; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+        <div>
+          <button type=button aria-label=الواجهة {border=1px solid #5E5A52; background=#E9E5DB; font-size=9px; color=#141311}> "الواجهة"
+          <button type=button aria-label=المدخل {border=1px solid #5E5A52; background=#E9E5DB; font-size=9px; color=#141311}> "المدخل"
+          <button type=button aria-label=الصالة {border=2px solid #B48F2E; background=#E9E5DB; font-size=9px; font-weight=800; color=#141311}> "الصالة"
+          <button type=button aria-label=المطبخ {border=1px solid #5E5A52; background=#E9E5DB; font-size=9px; color=#141311}> "المطبخ"
+          <button type=button aria-label=غرفة النوم {border=1px solid #5E5A52; background=#E9E5DB; font-size=9px; color=#141311}> "النوم"
+          <button type=button aria-label=الحمام {border=1px solid #5E5A52; background=#E9E5DB; font-size=9px; color=#141311}> "الحمام"
+          <a href=Unit-Plan-M.html aria-label=المخطط {border=1px solid #B48F2E; background=#F3F1EB; text-decoration=none; font-size=9px; font-weight=800; color=#141311}> "المخطط"
+        <a href=https://wa.me/966559997929?text=RZ-A {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+          <svg svg > "اسأل عن هذه الوحدة · 690,000"

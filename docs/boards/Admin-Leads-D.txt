@@ -1,0 +1,149 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}>
+            <span> "الطلبات الواردة"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "12"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "الطلبات الواردة"
+              <span {font-size=13px; color=#5E5A52}> "قائمة واحدة لكل ما يصل: رسائل التواصل، نقرات واتساب والاتصال، طلبات «أبلغني»، وطلبات المُلّاك · الحالة تُغيَّر يدوياً"
+            <div>
+              <label {background=#FFFFFF; border=1.5px solid #141311; font-size=13px}>
+                <input type=search placeholder=اسم، رمز، وحدة {width=180px; border=0; font-size=13px}>
+              <select aria-label=النوع {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                <option> "كل الأنواع"
+                <option> "واتساب"
+                <option> "اتصال"
+                <option> "نموذج تواصل"
+                <option> "أبلغني"
+                <option> "إضافة عقار"
+              <div aria-label=الحالة {border=1.5px solid #141311}>
+                <button type=button {font-size=12px; font-weight=700; border=0; background=#141311; color=#FFFFFF}> "بلا رد 12"
+                <button type=button {font-size=12px; font-weight=700; border=0; background=#FFFFFF}> "تم الرد 41"
+                <button type=button {font-size=12px; font-weight=700; border=0; background=#FFFFFF}> "مغلق 86"
+          <div>
+            <section {background=#FFFFFF; border=1.5px solid #141311}>
+              <div {display=grid; grid-template-columns=120px 1.6fr 1fr 110px 90px; font-size=11px; font-weight=700; color=#5E5A52}>
+                <span> "النوع"
+                <span> "الطلب"
+                <span> "من"
+                <span> "الحالة"
+                <span> "الوقت"
+              <a href=#l1 {display=grid; grid-template-columns=120px 1.6fr 1fr 110px 90px; text-decoration=none; color=#141311; background=#F3F1EB; font-size=13px}>
+                <span {font-weight=700}>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "واتساب"
+                <span>
+                  <span {font-weight=800}> "نموذج D · روز · 459,000"
+                  <span {font-size=11px; color=#5E5A52}> "الرمز SMQ-8F3A2 · من بطاقة الوحدة · ميزانية 500 ألف"
+                <span {color=#5E5A52}> "سناب شات · جوال · جدة"
+                <span>
+                  <span {font-size=11px; font-weight=700; background=#B48F2E}> "بلا رد"
+                <span {color=#5E5A52}> "قبل 14 د"
+              <a href=#l2 {display=grid; grid-template-columns=120px 1.6fr 1fr 110px 90px; text-decoration=none; color=#141311; font-size=13px}>
+                <span {font-weight=700}> "نموذج تواصل"
+                <span>
+                  <span {font-weight=800}> "«أبيع أم أنتظر؟» · الفيصلية"
+                  <span {font-size=11px; color=#5E5A52}> "خالد باعشن · 0553 XXX XXX · استشارة"
+                <span {color=#5E5A52}> "قوقل · سطح مكتب · جدة"
+                <span>
+                  <span {font-size=11px; font-weight=700; background=#B48F2E}> "بلا رد"
+                <span {color=#5E5A52}> "قبل ساعة"
+              <a href=#l3 {display=grid; grid-template-columns=120px 1.6fr 1fr 110px 90px; text-decoration=none; color=#141311; font-size=13px}>
+                <span {font-weight=700}> "اتصال"
+                <span>
+                  <span {font-weight=800}> "نقرة اتصال · فيلا روف ياسمين"
+                  <span {font-size=11px; color=#5E5A52}> "v-77b04 · عائد ×3 · من المقارنة"
+                <span {color=#5E5A52}> "مباشر · سطح مكتب · جدة"
+                <span>
+                  <span {font-size=11px; font-weight=700; background=#B48F2E}> "بلا رد"
+                <span {color=#5E5A52}> "قبل ساعة"
+              <a href=#l4 {display=grid; grid-template-columns=120px 1.6fr 1fr 110px 90px; text-decoration=none; color=#141311; font-size=13px}>
+                <span {font-weight=700}> "إضافة عقار"
+                <span>
+                  <span {font-weight=800}> "شقة 3 غرف · الروضة · 620,000"
+                  <span {font-size=11px; color=#5E5A52}> "عبدالرحمن الزهراني (وكيل) · طلب 2026-1042 · في المراجعة"
+                <span {color=#5E5A52}> "سناب شات · جوال · جدة"
+                <span>
+                  <span {font-size=11px; font-weight=700; border=1.5px solid #141311}> "تم الرد"
+                <span {color=#5E5A52}> "أمس"
+              <a href=#l5 {display=grid; grid-template-columns=120px 1.6fr 1fr 110px 90px; text-decoration=none; color=#141311; font-size=13px}>
+                <span {font-weight=700}> "أبلغني"
+                <span>
+                  <span {font-weight=800}> "مشابه لنموذج A ياسمين (مباع)"
+                  <span {font-size=11px; color=#5E5A52}> "ريم الزهراني · 0556 XXX XXX · غرفتان حتى 560 ألف"
+                <span {color=#5E5A52}> "واتساب · جوال · مكة"
+                <span>
+                  <span {font-size=11px; font-weight=700; border=1.5px solid #141311}> "تم الرد"
+                <span {color=#5E5A52}> "أمس"
+              <a href=#l6 {display=grid; grid-template-columns=120px 1.6fr 1fr 110px 90px; text-decoration=none; color=#5E5A52; font-size=13px}>
+                <span {font-weight=700}> "واتساب"
+                <span>
+                  <span {font-weight=800; color=#141311}> "نموذج B · روز · 555,000"
+                  <span {font-size=11px}> "SMQ-A10F9 · أتى من رابط واتساب مباشر"
+                <span> "واتساب · جوال · جدة"
+                <span>
+                  <span {font-size=11px; font-weight=700; background=#141311; color=#FFFFFF}> "مغلق · اشترى"
+                <span> "2026/10/02"
+              <div {font-size=12px; color=#5E5A52}>
+                <span> "1 إلى 6 من 139"
+                <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "التالي"
+            <aside {background=#FFFFFF; border=1.5px solid #141311}>
+              <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+                <span {font-size=11px; color=#C9C2B3}> "واتساب · من بطاقة الوحدة · قبل 14 دقيقة"
+                <span {font-size=18px; font-weight=800}> "نموذج D · روز · 459,000"
+                <span {font-size=12px; color=#C9C2B3}>
+                  "الرمز المرجعي"
+                  <strong {color=#B48F2E}> "SMQ-8F3A2"
+                  "· ابحث عنه في محادثات واتساب لتعرف من راسلك"
+              <div>
+                <button type=button {font-size=13px; font-weight=800; border=0; background=#B48F2E; color=#141311; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "علّم كمردود"
+                <button type=button {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "إغلاق"
+              <div {font-size=12px}>
+                <span {font-weight=800}> "مسار الزائر"
+                <span> "الرئيسية من إعلان سناب شات (الروضة) · 21:40"
+                <span> "بحث 450 ثم 500 ألف · الروضة · غرفتان · 21:41"
+                <span> "فتح D روز (94 ث)، D ياسمين، C روز · 21:42"
+                <span> "مقارنة D روز مع D ياسمين · 21:45"
+                <span {font-weight=700}> "نقرة واتساب من بطاقة D روز · 21:46 · خارج ساعات العمل"
+              <div>
+                <span {font-size=12px; font-weight=800}> "ملاحظات الفريق"
+                <div {background=#F3F1EB; font-size=12px}>
+                  <span> "وصلتني رسالته على واتساب 22:05، يسأل عن التقسيط. أرسلت له جدول الدفعات."
+                  <span {font-size=11px; color=#5E5A52}> "نورة · اليوم 22:10"
+                <textarea placeholder=أضف ملاحظة {font-size=12px; border=1.5px solid #141311}>
+                <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "حفظ الملاحظة"
+              <div {font-size=12px}>
+                <span {font-weight=800}> "الحالة"
+                <div aria-label=حالة الطلب {border=1.5px solid #141311}>
+                  <button type=button {font-size=12px; font-weight=800; border=0; background=#B48F2E}> "بلا رد"
+                  <button type=button {font-size=12px; font-weight=700; border=0; background=#FFFFFF}> "تم الرد"
+                  <button type=button {font-size=12px; font-weight=700; border=0; background=#FFFFFF}> "مغلق"
+                <span {font-size=11px; color=#5E5A52}> "الموقع لا يستطيع معرفة ما إذا كان الرد قد حدث على واتساب. الفريق يغيّر الحالة يدوياً. عند الإغلاق، اختر السبب: اشترى، لم يرد، غير مناسب."

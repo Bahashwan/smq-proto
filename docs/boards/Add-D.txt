@@ -1,0 +1,106 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Project-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=#en aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <section {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(420px, 100%), 1fr))}>
+        <div {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 64px 100%, 0 calc(100% - 37px))}>
+          <span {font-size=13px; font-weight=700; color=#3D3010}> "خدمة مجانية للمُلّاك"
+          <h1 {font-size=52px; font-weight=800}> "أضف عقارك"
+          <p {font-size=15px; color=#3D3010}> "نموذج من ثلاث خطوات يأخذ دقيقتين. بعدها نتواصل معك خلال 24 ساعة، نصور، وننشر لعملاء جاهزين."
+          <a href=https://wa.me/966559997929?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A5%D8%B6%D8%A7%D9%81%D8%A9%20%D8%B9%D9%82%D8%A7%D8%B1%D9%8A {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=800}>
+            <svg svg > "تفضّل واتساب؟ أرسل الصك والصور مباشرة"
+        <div {border=1.5px solid #141311}>
+          <div>
+            <span {background=#141311; color=#FFFFFF; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "1"
+            <span>
+              <span {font-size=16px; font-weight=800}> "أدخل بيانات العقار"
+              <span {font-size=13px; color=#5E5A52}> "النوع، الموقع، المساحة، السعر الذي تريده، وصور من جوالك."
+          <div>
+            <span {border=1.5px solid #141311; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "2"
+            <span>
+              <span {font-size=16px; font-weight=800}> "نتواصل معك"
+              <span {font-size=13px; color=#5E5A52}> "خلال 24 ساعة عمل، بتقييم أولي وسعر المتر في حيّك."
+          <div>
+            <span {border=1.5px solid #141311; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "3"
+            <span>
+              <span {font-size=16px; font-weight=800}> "تصوير احترافي"
+              <span {font-size=13px; color=#5E5A52}> "نرسل فريق تصوير لتوثيق عقارك، بلا تكلفة عليك."
+          <div>
+            <span {border=1.5px solid #141311; font-size=15px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "4"
+            <span>
+              <span {font-size=16px; font-weight=800}> "نشر وتسويق"
+              <span {font-size=13px; color=#5E5A52}> "نعرضه على منصتنا وقنواتنا، ونفرز المشترين قبل أن يصلوا إليك."
+      <section>
+        <ol aria-label=خطوات النموذج {border=1.5px solid #141311}>
+          <li {background=#141311; color=#FFFFFF}>
+            <span {background=#B48F2E; color=#141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "1"
+            <span {font-size=14px; font-weight=800}> "النوع والموقع"
+          <li {color=#5E5A52}>
+            <span {border=1.5px solid #D4CFC4; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "2"
+            <span {font-size=14px; font-weight=700}> "التفاصيل والسعر"
+          <li {color=#5E5A52}>
+            <span {border=1.5px solid #D4CFC4; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "3"
+            <span {font-size=14px; font-weight=700}> "الصور وبياناتك"
+          <li {font-size=12px; color=#5E5A52}> "نحفظ تقدمك تلقائياً. تستطيع العودة لاحقاً من نفس الجهاز."
+        <form {border=1.5px solid #141311}>
+          <div>
+            <h2 {font-size=20px; font-weight=800}> "النوع والموقع"
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "الخطوة 1 من 3"
+          <div>
+            <div>
+              <span {font-size=13px; font-weight=700}> "نوع العقار"
+              <div>
+                <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#141311; color=#FFFFFF}> "شقة"
+                <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "فيلا"
+                <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "فيلا روف"
+                <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "دوبلكس"
+                <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "أرض"
+                <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "عمارة"
+            <div>
+              <span {font-size=13px; font-weight=700}> "الغرض"
+              <div aria-label=الغرض {border=1.5px solid #141311}>
+                <button type=button {font-size=14px; font-weight=700; border=0; background=#141311; color=#FFFFFF}> "للبيع"
+                <button type=button {font-size=14px; font-weight=700; border=0; background=#FFFFFF; color=#141311}> "للإيجار"
+            <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(200px, 100%), 1fr))}>
+              <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                "المدينة"
+                <select {font-size=15px; font-weight=600; color=#141311; border=1.5px solid #141311; background=#FFFFFF}>
+                  <option> "جدة"
+                  <option> "مكة المكرمة"
+                  <option> "الرياض"
+              <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                "الحي"
+                <input type=text value=الروضة {font-size=15px; font-weight=600; color=#141311; border=1.5px solid #141311}>
+              <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                "الشارع أو أقرب معلم (اختياري)"
+                <input type=text placeholder=مثال: قرب حديقة الروضة {font-size=15px; font-weight=600; color=#141311; border=1.5px solid #141311}>
+            <div>
+              <span {font-size=13px; font-weight=700}> "الموقع على الخريطة (اختياري)"
+              <div {height=180px; background=#E9E5DB; border=1.5px solid #141311}>
+                <svg svg  {position=absolute; opacity=0.6}>
+                <span {font-size=12px; font-weight=700; background=#FFFFFF; border=1.5px solid #141311}> "اضغط لتحديد الموقع أو اسحب الدبوس"
+          <div {background=#F8F7F4}>
+            <span {font-size=12px; color=#5E5A52}> "الحقول المطلوبة: النوع، الغرض، المدينة، الحي."
+            <button type=submit {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+              "التالي: التفاصيل والسعر"
+              <svg svg >
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span> "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية"

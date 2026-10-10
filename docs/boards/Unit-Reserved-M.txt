@@ -1,0 +1,129 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Unit-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <nav aria-label=المسار {font-size=11px; color=#5E5A52}>
+        <a href=Results-M.html {text-decoration=none}> "جدة"
+        <span> "/"
+        <a href=Guide-M.html {text-decoration=none}> "الروضة"
+        <span> "/"
+        <a href=Project-M.html {text-decoration=none}> "جاردن الروضة"
+        <span> "/"
+        <span {color=#141311; font-weight=700}> "نموذج D · ياسمين"
+      <div {border=1.5px solid #141311; background=#F8F7F4; font-size=12px}>
+        <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+        <span>
+          <strong> "محجوزة حتى 24 أكتوبر 2026."
+          "عربون مدفوع والسعر مثبّت للحاجز. إن لم يُكمل، تعود للعرض هنا وتصلك رسالة إن سجّلت في قائمة الانتظار."
+      <section>
+        <div>
+          <figure {height=240px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 42px 100%, 0 calc(100% - 72px))}>
+            <svg svg  {position=absolute; opacity=0.55}>
+            <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+            <span {position=absolute; font-size=10px; color=#5E5A52; background=#FFFFFF}> "IMG-UNIT-APT-2BR-LIVING · 3:2"
+          <span {position=absolute; background=#FFFFFF; color=#141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "محجوز"
+      <section>
+        <a href=Project-M.html {font-size=12px; font-weight=700; text-decoration=none}> "جاردن الروضة · عمارة ياسمين · حي الروضة"
+        <h1 {font-size=30px; font-weight=800}> "شقة نموذج D"
+        <p {font-size=13px; color=#5E5A52}> "غرفتان · 2 حمامات · 84.20 م² · الطابق الثاني [للتأكيد]"
+        <span {font-size=11px; color=#5E5A52}> "آخر تحديث 2026/10/10 · كود النموذج YS-D"
+      <section {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+        <div>
+          <span>
+            <svg svg aria-label=ريال سعودي {color=#B48F2E}>
+            <span {font-size=36px; font-weight=800}> "459,000"
+          <span>
+            <span {font-size=18px; font-weight=800; color=#B48F2E}> "5,451"
+            <span {font-size=11px; color=#C9C2B3}> "للمتر المربع"
+        <div {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <div>
+            <span {font-size=14px; font-weight=800}>
+              <span {background=#FFFFFF; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "محجوز"
+            <span {font-size=10px; color=#C9C2B3}> "حتى 2026/10/24"
+          <div>
+            <span {font-size=14px; font-weight=800}> "الربع 2 · 2027"
+            <span {font-size=10px; color=#C9C2B3}> "التسليم المتوقع"
+          <div>
+            <span {font-size=14px; font-weight=800}> "قيد الإنشاء"
+            <span {font-size=10px; color=#C9C2B3}> "حالة المشروع"
+      <section>
+        <div>
+          <h2> "الحالة"
+          <div>
+            <span> "حالة الوحدة"
+            <span {font-weight=800}>
+              <span {background=#FFFFFF; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "محجوز"
+          <div>
+            <span> "محجوزة حتى"
+            <span> "2026/10/24 · 14 يوماً من العربون"
+          <div>
+            <span> "ماذا يعني؟"
+            <span {font-weight=600}> "قد تعود للعرض. سجّل في قائمة الانتظار بلا التزام."
+          <div>
+            <span> "آخر تحديث"
+            <span> "2026/10/10"
+        <div>
+          <h2> "السعر"
+          <div>
+            <span> "السعر"
+            <span {font-weight=800; font-size=15px}> "459,000 ريال"
+          <div>
+            <span> "سعر المتر"
+            <span> "5,451 ريال"
+          <div>
+            <span> "ضريبة التصرفات العقارية"
+            <span> "[شامل / غير شامل، للتأكيد]"
+        <div>
+          <h2> "الوحدة"
+          <div>
+            <span> "كود النموذج"
+            <span> "YS-D"
+          <div>
+            <span> "الطابق"
+            <span> "الثاني [للتأكيد]"
+          <div>
+            <span> "رقم ترخيص الإعلان"
+            <span> "[اختياري]"
+          <div>
+            <span> "الاتجاه"
+            <span> "غربي [للتأكيد]"
+      <section>
+        <div>
+          <h2 {font-size=18px; font-weight=800}> "متاح الآن بنفس الغرف"
+          <a href=Results-M.html {font-size=12px; font-weight=700; text-decoration=none}> "كل المتاح"
+        <div>
+          <a href=Unit-M.html {width=200px; border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 42px))}>
+            <div>
+              <span {font-size=14px; font-weight=800}> "نموذج D · روز"
+              <span {font-size=11px; color=#5E5A52}> "غرفتان · 82.60 م² · متاح"
+            <div {background=#141311; color=#FFFFFF}>
+              <span {font-size=15px; font-weight=800}> "459,000"
+              <span {font-size=10px; color=#B48F2E}> "5,557 /م²"
+          <a href=Unit-M.html {width=200px; border=1.5px solid #141311; text-decoration=none; color=#141311}>
+            <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 42px))}>
+            <div>
+              <span {font-size=14px; font-weight=800}> "نموذج C · روز"
+              <span {font-size=11px; color=#5E5A52}> "غرفتان · 80.35 م² · متاح"
+            <div {background=#141311; color=#FFFFFF}>
+              <span {font-size=15px; font-weight=800}> "510,000"
+              <span {font-size=10px; color=#B48F2E}> "6,347 /م²"
+      <div {position=sticky; background=#FFFFFF}>
+        <a href=https://wa.me/966559997929?text=%D9%82%D8%A7%D8%A6%D9%85%D8%A9%20%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1%20YS-D {background=#B48F2E; color=#141311; text-decoration=none; font-size=15px; font-weight=800; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+          <span>
+            <svg svg > "سجّلني في قائمة الانتظار"
+          <span {font-size=10px; font-weight=600; color=#3D3010}> "رسالة جاهزة: YS-D"
+        <a href=Results-M.html {border=1.5px solid #141311; font-size=12px; font-weight=700; text-decoration=none; color=#141311}> "المتاح"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

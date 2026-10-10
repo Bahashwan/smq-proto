@@ -1,0 +1,21 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=1200px; height=630px; background=#F8F7F4; color=#141311; display=grid; grid-template-columns=640px 560px}>
+      <div {background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0)}>
+        <svg svg  {position=absolute; opacity=.5}>
+        <span {position=absolute; font-size=14px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+        <div {position=absolute; width=120px; background=#F8F7F4; clip-path=polygon(0 0, 100% 100%, 0 100%)}>
+      <div>
+        <div>
+          <span {font-size=18px; font-weight=700; color=#8A6C1E}> "حي الروضة، جدة · قيد الإنشاء"
+          <span {font-size=60px; font-weight=800}> "جاردن الروضة"
+          <span {font-size=20px; color=#3A3630}> "8 وحدات متاحة · شقق غرفتين و3 غرف وفيلتا روف"
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 22px) 0, 100% 38px, 100% 100%, 0 100%)}>
+          <span {font-size=14px; color=#C9C2B3}> "أسعار معلنة من"
+          <span>
+            <span {font-size=44px; font-weight=800}> "459,000"
+            <span {font-size=18px; color=#C9C2B3}> "إلى 1,650,000 ريال"
+        <div>
+          <img src=assets/lockup-goldmark-ink.png alt=إس إم كيو العقارية>
+          <span {font-size=16px; font-weight=700; color=#5E5A52}> "smq-re.com/projects/garden-rawdah"
+      <span {position=absolute; font-size=12px; font-weight=700; color=#5E5A52}> "OG-Project · 1200×630 · قالب: الصورة من غلاف المشروع، الأرقام من الوحدات المتاحة"

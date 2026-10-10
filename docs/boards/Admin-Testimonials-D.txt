@@ -1,0 +1,130 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; font-weight=700; color=#5E5A52}>
+            <a href=Admin-Content-D.html {text-decoration=none}> "المحتوى والأسئلة"
+            "› آراء العملاء والأرقام"
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "آراء العملاء والأرقام"
+              <span {font-size=13px; color=#5E5A52}> "كتلة الآراء في «من نحن» تظهر فقط حين تكون 3 آراء منشورة على الأقل. الآراء نصوص حقيقية بموافقة صاحبها، بلا صور أشخاص"
+            <button type=button {border=0; background=#141311; color=#FFFFFF; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "+ رأي"
+          <div {border=2px solid #B48F2E; background=#FFFDF6}>
+            <div aria-label=2 من 3 منشورة>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {font-size=13px}>
+              <strong> "2 من 3 آراء منشورة · الكتلة مخفية على الموقع."
+              "نشر رأي واحد إضافي يُظهر كتلة «ماذا يقول عملاؤنا» في من نحن تلقائياً."
+            <a href=About-D.html {font-size=12px; font-weight=800; text-decoration=none}> "معاينة من نحن"
+          <section>
+            <h2 {font-size=16px; font-weight=800}> "الآراء"
+            <div {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(300px, 100%), 1fr))}>
+              <article>
+                <header>
+                  <span> "أحمد ع. · مشترٍ · RZ-C · 2026-07"
+                  <span>
+                    "منشور"
+                    <span aria-label=منشور>
+                <p> "«السعر اللي شفته في الموقع هو اللي دفعته. ما حد قال لي اتصل للسعر.»"
+                <footer>
+                  <span {color=#5E5A52}> "موافقة كتابية: نعم · واتساب 2026-07-14"
+                  <button type=button> "تحرير"
+              <article>
+                <header>
+                  <span> "م. الحربي · مشترية · YS-C · 2026-08"
+                  <span>
+                    "منشور"
+                    <span aria-label=منشور>
+                <p> "«جهّزوا ملف التمويل كامل، وزرت الشقة مرتين قبل ما أحجز.»"
+                <footer>
+                  <span {color=#5E5A52}> "موافقة كتابية: نعم · بريد 2026-08-02"
+                  <button type=button> "تحرير"
+              <article>
+                <header>
+                  <span> "خ. باعشن · مشترٍ محتمل · 2026-10"
+                  <span>
+                    <span {font-size=11px; font-weight=800; border=1.5px solid #141311}> "مسودة"
+                    <span aria-label=غير منشور، بلا موافقة {opacity=.5}>
+                <p {color=#5E5A52}> "«ردّوا عليّ في نفس اليوم وأعطوني كل الأرقام قبل الزيارة.»"
+                <footer>
+                  <span {color=#8A6C1E; font-weight=700}> "موافقة كتابية: لا. النشر معطّل حتى تُسجَّل الموافقة"
+                  <button type=button> "سجّل الموافقة"
+              <article {border=1.5px dashed #141311}>
+                <span {font-size=14px; font-weight=800}> "+ رأي جديد"
+                <span {font-size=12px; color=#5E5A52}> "الاسم بالأحرف الأولى أو كما يفضّل العميل، رمز الوحدة إن وُجد، النص، ومصدر الموافقة."
+          <section>
+            <div>
+              <h2 {font-size=16px; font-weight=800}> "أرقام الإثبات"
+              <span {font-size=12px; color=#5E5A52}> "تظهر في «من نحن» وفي «لماذا إس إم كيو». الرقم والوصف يُكتبان هنا، وأي رقم لم يُؤكَّد يبقى بوسم [للتأكيد] على الموقع"
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <div {display=grid; grid-template-columns=160px 1fr 1fr 110px 90px; font-size=11px; font-weight=800; color=#5E5A52; background=#F3F1EB}>
+                <span> "الرقم"
+                <span> "الوصف"
+                <span> "المصدر"
+                <span> "مرئي"
+                <span>
+              <div {display=grid; grid-template-columns=160px 1fr 1fr 110px 90px; font-size=13px}>
+                <label>
+                  <input value=+2000 متدرب {background=#FFFDF6}>
+                <label>
+                  <input value=تخرّجوا من دوراتنا في التسويق العقاري>
+                <span {color=#8A6C1E; font-weight=700}> "[للتأكيد] · سجلات التدريب 2021 إلى 2026"
+                <span aria-label=مرئي>
+                <button type=button> "أكّد"
+              <div {display=grid; grid-template-columns=160px 1fr 1fr 110px 90px; font-size=13px}>
+                <label>
+                  <input value=10 نماذج {background=#F3F1EB}>
+                <label>
+                  <input value=وحدات بأسعار معلنة في جاردن الروضة>
+                <span {color=#5E5A52}> "تلقائي من الوحدات (لا يُحرَّر)"
+                <span aria-label=مرئي>
+                <span>
+              <div {display=grid; grid-template-columns=160px 1fr 1fr 110px 90px; font-size=13px}>
+                <label>
+                  <input value=خلال ساعات العمل>
+                <label>
+                  <input value=نرد على واتساب، السبت إلى الخميس 9 إلى 6>
+                <span {color=#5E5A52}> "إعدادات الموقع › الساعات"
+                <span aria-label=مرئي>
+                <button type=button> "تحرير"
+              <div {display=grid; grid-template-columns=160px 1fr 1fr 110px 90px; font-size=13px}>
+                <label>
+                  <input value=منذ 2019 {background=#FFFDF6}>
+                <label>
+                  <input value=سنة تأسيس الشركة>
+                <span {color=#8A6C1E; font-weight=700}> "[للتأكيد] · السجل التجاري"
+                <span aria-label=مرئي>
+                <button type=button> "أكّد"
+          <div aria-label=شريط الحفظ {position=sticky; background=#141311; color=#FFFFFF}>
+            <span {font-size=13px; font-weight=700; color=#C9C2B3}> "لا تغييرات غير محفوظة"
+            <button type=button disabled=None {border=0; background=#3A3630; color=#C9C2B3; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "حفظ"

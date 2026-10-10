@@ -1,0 +1,132 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=11px; font-weight=700; background=#B48F2E; color=#141311}> "صفحة مسوّق"
+        <a href=https://wa.me/966559997929?text=%D9%85%D8%B3%D9%88%D9%91%D9%82%20MK-07 aria-label=تواصل مع فريق SMQ {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <svg svg >
+      <section>
+        <span {font-size=12px; font-weight=700; color=#8A6C1E}> "مسوّق معتمد · MK-07 · منذ سبتمبر 2026"
+        <h1 {font-size=24px; font-weight=800}> "أهلاً عبدالله"
+        <span {font-size=12px; color=#5E5A52}> "تُفتح هذه الصفحة من رابطك الخاص في واتساب، بلا دخول. لا تشاركها؛ شارك رابط التسويق أدناه."
+      <section {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+        <span {font-size=12px; font-weight=700; color=#B48F2E}> "رابطك المتابَع"
+        <div>
+          <div aria-label=رمز QR لرابطك {background=#FFFFFF}>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+            <span>
+          <div>
+            <span {font-size=13px; font-weight=700}> "smq-re.com/r/abdullah"
+            <button type=button {border=0; background=#B48F2E; color=#141311; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "نسخ الرابط"
+            <button type=button {border=1.5px solid #FFFFFF; background=transparent; color=#FFFFFF; font-size=12px; font-weight=700}> "حفظ QR كصورة"
+        <span {font-size=11px; color=#C9C2B3}> "أي صفحة على الموقع تُفتح من هذا الرابط تُنسب لك 30 يوماً، حتى لو عاد الزائر لاحقاً من قوقل."
+      <section {display=grid; grid-template-columns=1fr 1fr 1fr}>
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <span {font-size=11px; color=#5E5A52}> "زيارات"
+          <span {font-size=28px; font-weight=800}> "412"
+          <span {font-size=10px; color=#5E5A52}> "آخر 30 يوماً"
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <span {font-size=11px; color=#5E5A52}> "ضغطات واتساب"
+          <span {font-size=28px; font-weight=800}> "37"
+          <span {font-size=10px; color=#5E5A52}> "9% من الزيارات"
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+          <span {font-size=11px; color=#C9C2B3}> "طلبات منسوبة"
+          <span {font-size=28px; font-weight=800; color=#B48F2E}> "6"
+          <span {font-size=10px; color=#C9C2B3}> "1 زيارة محجوزة"
+      <section>
+        <span {font-size=13px; font-weight=800}> "آخر الطلبات المنسوبة لك"
+        <div {border=1.5px solid #141311; background=#FFFFFF; font-size=12px}>
+          <div>
+            <span> "أمس · RZ-B · واتساب"
+            <span {font-weight=800}> "تم الرد"
+          <div>
+            <span> "قبل 3 أيام · RZ-A · واتساب"
+            <span {font-weight=800; color=#8A6C1E}> "زيارة الخميس"
+          <div>
+            <span> "قبل أسبوع · دليل الأسعار · اتصال"
+            <span {font-weight=700; color=#5E5A52}> "مغلق"
+        <span {font-size=11px; color=#5E5A52}> "تظهر الوحدة والقناة والحالة فقط. لا أسماء ولا أرقام مشترين؛ فريق SMQ يتولّى التواصل."
+      <section {background=#F3F1EB; font-size=12px}>
+        <span {font-weight=800}> "العمولة"
+        <span> "تُحسب عند الإفراغ على الصفقات المنسوبة لك بنسبة [للتأكيد]. صفقة واحدة قيد التفاوض الآن (RZ-A)."

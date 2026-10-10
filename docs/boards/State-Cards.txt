@@ -1,0 +1,53 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=800px; background=#F8F7F4; color=#141311; display=grid; grid-template-columns=repeat(2, minmax(0, 1fr))}>
+      <div>
+        <span {font-size=12px; font-weight=700; color=#5E5A52}> "محجوز · البطاقة تبقى كاملة، الصورة بلون كامل، الشارة بإطار، واتساب يتحول إلى «أبلغني إن أُلغي الحجز»"
+        <article {border=1.5px solid #141311; background=#FFFFFF}>
+          <div>
+            <figure {height=170px; background=#E9E5DB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+              <svg svg  {position=absolute; opacity=0.55}>
+              <figcaption {position=absolute; font-size=11px; font-weight=700; background=#FFFFFF}> "صورة تعبيرية"
+            <span {position=absolute; background=#FFFFFF; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {background=#FFFFFF; border=0; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "محجوز"
+            <span {position=absolute; background=#141311; color=#FFFFFF; font-size=11px; font-weight=700; clip-path=polygon(14px 0, 100% 0, 100% 100%, 0 100%)}> "عمارة ياسمين"
+          <div>
+            <a href=Unit-M.html {text-decoration=none; color=#141311}>
+              <span {font-size=18px; font-weight=800}> "شقة نموذج B"
+              <span {font-size=12px; color=#5E5A52}> "غرفتان · 3 حمامات · 106.05 م²"
+            <span {font-size=11px; color=#5E5A52}> "محجوز حتى 2026/10/20"
+          <div {background=#3A3630; color=#FFFFFF}>
+            <span>
+              <svg svg aria-label=ريال سعودي {color=#C9C2B3}>
+              <span {font-size=24px; font-weight=800}> "555,000"
+            <span {font-size=12px; color=#C9C2B3}>
+              <strong {color=#FFFFFF; font-size=14px}> "5,233"
+              "للمتر"
+          <div>
+            <a href=https://wa.me/966559997929?text=YS-B {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=13px; font-weight=800}> "أبلغني إن أُلغي الحجز"
+            <label {border=1.5px solid #D4CFC4; font-size=13px; font-weight=700; color=#5E5A52}>
+              <input type=checkbox disabled=None aria-label=غير متاح للمقارنة> "قارن"
+      <div>
+        <span {font-size=12px; font-weight=700; color=#5E5A52}> "مباع · البطاقة تنكمش، الصورة باهتة، السعر مشطوب للمرجع، شارة سوداء، واتساب يتحول إلى «أبلغني عند توفر مشابه»"
+        <article aria-label=شقة نموذج A، عمارة ياسمين، مباعة {border=1.5px solid #D4CFC4; color=#5E5A52; background=#FFFFFF}>
+          <div>
+            <figure {height=120px; background=#F3F1EB; clip-path=polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))}>
+              <svg svg  {position=absolute; opacity=0.35}>
+            <span {position=absolute; background=#141311; color=#FFFFFF; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "مباع"
+          <div>
+            <span>
+              <span {font-size=16px; font-weight=800; color=#141311}> "شقة نموذج A · ياسمين"
+              <span {font-size=12px}> "غرفتان · 3 حمامات · 109.35 م²"
+            <span>
+              <span {font-size=18px; font-weight=800; text-decoration=line-through}> "555,000"
+              <span {font-size=11px}> "بيعت 2026/09"
+          <a href=https://wa.me/966559997929?text=YS-A {border=1.5px solid #141311; color=#141311; text-decoration=none; font-size=13px; font-weight=700}> "أبلغني عند توفر مشابه"
+        <span {font-size=12px; font-weight=700; color=#5E5A52}> "الشارات الثلاث"
+        <div>
+          <span {background=#B48F2E; color=#141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متاح"
+          <span {background=#FFFFFF; color=#141311; font-size=11px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "محجوز"
+          <span {background=#141311; color=#FFFFFF; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "مباع"
+          <span {font-size=11px; color=#5E5A52}>
+            "ذهبي مملوء = متاح"
+            <br> "أبيض بإطار = محجوز"
+            <br> "أسود = مباع"

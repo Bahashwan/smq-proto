@@ -1,0 +1,75 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <div {background=#B48F2E; color=#141311; font-size=11px; font-weight=800}>
+        <span> "مبادرة من SMQ · تنطلق الآن"
+        <a href=Hub-M.html {color=#141311; text-decoration=none}> "تعاون معنا ←"
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <a href=https://wa.me/966559997929?text=%D8%A7%D9%84%D8%AA%D8%AD%D8%A7%D9%84%D9%81 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <svg svg >
+      <section {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 30px))}>
+        <div {position=absolute}>
+          <div>
+            <span {background=transparent}>
+            <span {background=transparent}>
+            <span {background=transparent}>
+          <div>
+            <span {background=transparent}>
+            <span {background=#B48F2E}>
+            <span {background=transparent}>
+          <div>
+            <span {background=transparent}>
+            <span {background=transparent}>
+            <span {background=transparent}>
+        <span {font-size=12px; font-weight=700; color=#B48F2E}> "يوم الإطلاق · الخلية الأولى SMQ، والباقي لكم"
+        <h1 {font-size=30px; font-weight=800}> "تحالف مكاتب جدة العقارية"
+        <p {font-size=14px; color=#C9C2B3}> "مكاتب مرخّصة تمرّر طلبات المشترين وعروض العقارات بينها، لتقفل الصفقات أسرع، وكل تعارف مسجّل."
+        <a href=AllianceApply-Step1-M.html {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "كن من المكاتب المؤسِّسة"
+      <section {background=#FFFFFF}>
+        <div>
+          <h2> "تغطية جدة"
+          <span {font-size=11px; color=#5E5A52}> "0 مكاتب · الذهبي: نحتاجه أولاً"
+        <div>
+          <span {font-size=11px; font-weight=800; color=#8A6C1E}> "شمال جدة"
+          <div>
+            <span>
+              "أبحر الشمالية"
+              <small> "مطلوب"
+            <span> "الشاطئ"
+            <span> "ذهبان"
+            <span>
+              "المحمدية"
+              <small> "مطلوب"
+            <span> "النهضة"
+          <span {font-size=11px; font-weight=800; color=#8A6C1E}> "وسط جدة"
+          <div>
+            <span> "الروضة"
+            <span>
+              "الصفا"
+              <small> "مطلوب"
+            <span>
+              "النعيم"
+              <small> "مطلوب"
+            <span> "الزهراء"
+            <span> "السلامة"
+          <span {font-size=11px; font-weight=800; color=#8A6C1E}> "شرق، غرب، جنوب"
+          <div>
+            <span> "السامر"
+            <span> "الحرازات"
+            <span> "الحمراء"
+            <span> "البلد"
+            <span> "الفيصلية"
+        <span {font-size=11px; color=#5E5A52}> "الأحياء الذهبية هي حيث يبحث مشترو SMQ اليوم ولا وحدات لدينا فيها. أول مكتب يغطيها يستقبل طلباتها من أول يوم."
+      <section>
+        <h2> "دليل الأعضاء"
+        <div {border=1.5px dashed #141311; background=#FFFFFF}>
+          <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {font-size=15px; font-weight=800}> "الدليل يبدأ بأول مكتب موثّق"
+          <span {font-size=12px; color=#5E5A52}> "يظهر هنا اسم المكتب وحيّه وتخصصه وشارة «رخصة فال موثّقة»، باختيار المكتب. المكاتب المؤسِّسة تحمل وسم «مؤسِّس» دائماً [للتأكيد]."
+      <section {background=#B48F2E; color=#141311; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+        <span {font-size=20px; font-weight=800}> "37 مكتباً سجّلت في نموذج قوقل سابقاً"
+        <span {font-size=13px; color=#3D3010}> "نقلنا طلباتكم ونتحقق من الرخص الآن. سجّلتَ من قبل؟ لا تعد التسجيل، تابع الحالة برقم جوالك."
+        <a href=AllianceApply-Status-M.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=14px; font-weight=800}> "تابع حالة طلبك"
+        <a href=AllianceApply-Step1-M.html {font-size=12px; font-weight=700; color=#141311}> "مكتب جديد؟ سجّل من هنا"

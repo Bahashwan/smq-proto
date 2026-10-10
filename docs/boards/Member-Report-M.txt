@@ -1,0 +1,155 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <span>
+            <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span>
+            <span {font-size=12px; font-weight=800}> "تحالف مكاتب جدة"
+            <span {font-size=10px; color=#C9C2B3}> "للأعضاء · بلا دخول"
+        <a href=Member-Ledger-M.html {font-size=11px; font-weight=800; color=#B48F2E; text-decoration=none}> "الميزان"
+      <section {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0 calc(100% - 23px))}>
+        <span {font-size=12px; font-weight=700; color=#B48F2E}> "تقرير الطلب الشهري · سبتمبر 2026"
+        <h1 {font-size=24px; font-weight=800}> "ماذا بحث عنه مشترو جدة هذا الشهر"
+        <p {font-size=12px; color=#C9C2B3}> "أرقام مجمّعة من 4,812 جلسة بحث على SMQ وطلبات التحالف. لا أسماء، لا أرقام، لا أفراد. الأرقام توضيحية."
+      <section {display=grid; grid-template-columns=1fr 1fr 1fr}>
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <span {font-size=10px; color=#5E5A52}> "جلسات بحث"
+          <span {font-size=22px; font-weight=800}> "4,812"
+          <span {font-size=10px; color=#5E5A52}> "+12% عن أغسطس"
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <span {font-size=10px; color=#5E5A52}> "الميزانية الوسيطة"
+          <span {font-size=22px; font-weight=800}> "640k"
+          <span {font-size=10px; color=#5E5A52}> "ريال"
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}>
+          <span {font-size=10px; color=#C9C2B3}> "طلب بلا عرض"
+          <span {font-size=22px; font-weight=800; color=#B48F2E}> "31%"
+          <span {font-size=10px; color=#C9C2B3}> "من الجلسات"
+      <section {background=#FFFFFF; border=1.5px solid #141311}>
+        <div>
+          <h2> "بالحي"
+          <span {font-size=10px; color=#5E5A52}> "حصة الجلسات · الذهبي: لا عرض يكفي"
+        <div>
+          <span> "الروضة"
+          <div>
+            <span>
+          <strong> "22%"
+        <div>
+          <span> "أبحر الشمالية"
+          <div>
+            <span>
+          <strong> "17%"
+        <div>
+          <span> "الصفا"
+          <div>
+            <span>
+          <strong> "13%"
+        <div>
+          <span> "النعيم"
+          <div>
+            <span>
+          <strong> "9%"
+        <div>
+          <span> "الشاطئ"
+          <div>
+            <span>
+          <strong> "8%"
+        <div>
+          <span> "المحمدية"
+          <div>
+            <span>
+          <strong> "7%"
+        <div>
+          <span> "الفيصلية"
+          <div>
+            <span>
+          <strong> "6%"
+        <div>
+          <span> "أخرى"
+          <div>
+            <span {background=#C9C2B3}>
+          <strong> "18%"
+      <section {background=#FFFFFF; border=1.5px solid #141311}>
+        <h2> "بشريحة الميزانية"
+        <div>
+          <span> "حتى 500k"
+          <div>
+            <span>
+          <strong> "19%"
+        <div>
+          <span> "500 إلى 700k"
+          <div>
+            <span>
+          <strong> "28%"
+        <div>
+          <span> "700k إلى 1M"
+          <div>
+            <span>
+          <strong> "21%"
+        <div>
+          <span> "1 إلى 1.5M"
+          <div>
+            <span>
+          <strong> "14%"
+        <div>
+          <span> "1.5 إلى 2.5M"
+          <div>
+            <span>
+          <strong> "12%"
+        <div>
+          <span> "أكثر من 2.5M"
+          <div>
+            <span>
+          <strong> "6%"
+      <section {background=#FFFFFF; border=1.5px solid #141311}>
+        <h2> "بعدد الغرف"
+        <div>
+          <span> "غرفتان"
+          <div>
+            <span>
+          <strong> "36%"
+        <div>
+          <span> "3 غرف"
+          <div>
+            <span>
+          <strong> "42%"
+        <div>
+          <span> "4 غرف"
+          <div>
+            <span>
+          <strong> "17%"
+        <div>
+          <span> "5 فأكثر"
+          <div>
+            <span>
+          <strong> "5%"
+      <section>
+        <div>
+          <h2> "حيث وجد الطلب لا عرض"
+          <span {font-size=10px; color=#5E5A52}> "فرص الأعضاء"
+        <div>
+          <span> "1"
+          <span>
+            <b {font-size=13px}> "أبحر الشمالية · فلل 1.5 إلى 2.5M"
+            <small {font-size=11px; color=#5E5A52}> "318 جلسة · 0 وحدة على SMQ · 2 مكاتب تغطيه"
+        <div>
+          <span> "2"
+          <span>
+            <b {font-size=13px}> "الصفا · شقق 4 غرف حتى 700k"
+            <small {font-size=11px; color=#5E5A52}> "204 جلسة · 1 وحدة من مالك · 1 مكتب يغطيه"
+        <div>
+          <span> "3"
+          <span>
+            <b {font-size=13px}> "الفيصلية · شقق 4 غرف حتى 450k"
+            <small {font-size=11px; color=#5E5A52}> "141 جلسة · 0 وحدة · 1 مكتب يغطيه"
+        <div>
+          <span> "4"
+          <span>
+            <b {font-size=13px}> "المحمدية · شقق 3 غرف 700k إلى 1M"
+            <small {font-size=11px; color=#5E5A52}> "96 جلسة · 0 وحدة · 2 مكاتب تغطيه"
+      <section {background=#F3F1EB; font-size=11px; color=#3A3630}>
+        <span {font-weight=800; color=#141311}> "عن هذه الأرقام"
+        <span> "جلسة البحث: زيارة غيّرت فلتراً واحداً على الأقل. «لا عرض» يعني لا وحدة متاحة على SMQ تطابق الفلاتر. لا تُعرض أي بيانات لأقل من 20 جلسة لحماية الخصوصية. يصدر التقرير أول كل شهر لكل الأعضاء بالتساوي."
+        <span {color=#8A6C1E; font-weight=700}> "كل الأرقام في هذا التصميم توضيحية."

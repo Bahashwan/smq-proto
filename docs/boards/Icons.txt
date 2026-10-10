@@ -1,0 +1,59 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=800px; height=400px; background=#FFFFFF; color=#141311}>
+      <div>
+        <h1 {font-size=20px; font-weight=800}> "الأيقونة المفضلة وأيقونة التطبيق"
+        <span {font-size=11px; color=#5E5A52}> "من العلامة الذهبية فقط، بلا نص · لا زوايا دائرية في المصدر؛ النظام يقصّها بنفسه"
+      <div>
+        <div>
+          <div {width=160px; height=160px; background=#141311}>
+            <img src=assets/logo-mark-gold.png alt=>
+          <small>
+            "أيقونة التطبيق · 1024×1024"
+            <br> "العلامة الذهبية على أسود · هامش 20%"
+        <div>
+          <div {width=160px; height=160px; background=#B48F2E}>
+            <span {background=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <img src=assets/logo-mark-gold.png alt=>
+          <small>
+            "بديل ذهبي · للمواضع التي يمنع فيها الأسود"
+            <br> "العلامة داخل سداسي أسود"
+        <div>
+          <div>
+            <div>
+              <span {background=#141311}>
+                <img src=assets/logo-mark-gold.png alt=>
+              <small> "64"
+            <div>
+              <span {background=#141311}>
+                <img src=assets/logo-mark-gold.png alt=>
+              <small> "32"
+            <div>
+              <span {background=#141311}>
+                <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <small> "16"
+          <small>
+            "الأيقونة المفضلة · SVG بخلفية أسود"
+            <br> "عند 16px تُبسَّط إلى سداسي ذهبي صلب لأن تفاصيل العلامة تذوب"
+        <div>
+          <div {background=#F3F1EB; border=1px solid #D4CFC4; font-size=12px; width=220px}>
+            <span {background=#141311}>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <span {font-weight=700}> "شقق وفلل روف بأسعار معلنة في جدة · SMQ"
+          <div>
+            <div>
+              <span {background=#141311; clip-path=inset(0 round 12px)}>
+                <img src=assets/logo-mark-gold.png alt=>
+              <small> "iOS"
+            <div>
+              <span {background=#141311; clip-path=circle(50%)}>
+                <img src=assets/logo-mark-gold.png alt=>
+              <small> "Android"
+            <div>
+              <span {background=#141311; clip-path=inset(0 round 12px)}>
+                <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <small> "مُقنَّع"
+          <small>
+            "تبويب المتصفح وشاشة الجوال · القصّ من النظام، المصدر مربّع حاد"
+            <br> "maskable: السداسي الصلب في المنطقة الآمنة 80%"
+      <span {font-size=11px; color=#5E5A52}> "الملفات: favicon.svg · favicon-32.png · apple-touch-icon.png 180 · icon-512.png · icon-512-maskable.png · ألوان ثابتة #141311 و#B48F2E بلا تدرّج"

@@ -1,0 +1,192 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+          <span {font-size=12px; font-weight=700; color=#C9C2B3}> "قطع صغيرة · حالات عابرة ومشتركة بين الصفحات"
+        <span {font-size=13px; font-weight=700}>
+          <button type=button aria-label=الإشعارات، 3 جديدة {border=0; background=#3A3630; color=#FFFFFF}>
+            <svg svg >
+            <span {position=absolute; background=#B48F2E; color=#141311; font-size=10px; font-weight=800}> "3"
+          <span>
+            <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+            "سعود · مدير"
+      <main {display=grid; grid-template-columns=380px 1fr 1fr}>
+        <section>
+          <span>
+            "1 · قائمة الإشعارات"
+            <small> "تنسدل من الجرس · 380 عرضاً · آخر 7 أيام"
+          <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <span {position=absolute; background=#141311; clip-path=polygon(50% 0, 100% 100%, 0 100%)}>
+            <div {font-size=13px; font-weight=800}>
+              "الإشعارات"
+              <button type=button {border=0; background=transparent; font-size=12px; font-weight=700; color=#8A6C1E}> "علّم الكل كمقروء"
+            <div>
+              <span>
+              <span>
+                <strong> "عقار مالك جديد"
+                "رقم 2026-1042، عمارة سكنية بدخل في النعيم بسعر 4,800,000 · وكيل"
+                <span>
+                  "قبل 25 دقيقة ·"
+                  <a href=Admin-Approvals-D.html {font-weight=700}> "افتح الموافقات"
+            <div>
+              <span>
+              <span>
+                <strong> "3 طلبات بلا رد"
+                "تجاوزت 24 ساعة"
+                <span>
+                  "قبل ساعة ·"
+                  <a href=Admin-Leads-D.html {font-weight=700}> "الطلبات الواردة"
+            <div>
+              <span>
+              <span>
+                <strong> "انقطع اتصال واتساب بزنس"
+                "وتحوّلت اللوحة إلى الوضع اليدوي ثم عاد الاتصال"
+                <span>
+                  "قبل 40 دقيقة ·"
+                  <a href=Admin-Users-D.html {font-weight=700}> "الإعدادات"
+            <div>
+              <span>
+              <span>
+                "نورة حفظت مسودة في الرئيسية › الهيرو"
+                <span> "أمس 17:40"
+            <div>
+              <span>
+              <span>
+                "استيراد Excel اكتمل: 10 صفوف، لا تغييرات"
+                <span> "قبل 4 أيام"
+            <div>
+              <span>
+              <span>
+                "تنبيه «نبّهني» تطابق: ريم الزهراني تنتظر غرفتين حتى 520 ألفاً، ولا وحدة مطابقة بعد"
+                <span> "قبل يومين"
+            <a href=Admin-Overview-D.html {font-size=12px; font-weight=800; text-decoration=none; background=#F3F1EB}> "كل الإشعارات"
+          <span {font-size=11px; color=#5E5A52}> "يُشعَر المديرون بكل شيء، والمحررون بما يخص المحتوى والطلبات الواردة فقط. لا إشعارات بريدية إلا لعقار مالك جديد وانقطاع واتساب."
+        <section>
+          <span>
+            "2 · قائمة «يحتاج تأكيداً»"
+            <small> "تجمع كل [للتأكيد] و[مسودة إجابة] من كل الصفحات · للمدير فقط · تُفتح من زر المحتوى والأسئلة"
+          <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <div {display=grid; grid-template-columns=1fr 1.6fr 150px 200px; font-size=11px; font-weight=800; color=#5E5A52; background=#F3F1EB}>
+              <span> "الحقل"
+              <span> "القيمة الحالية"
+              <span> "أين يظهر"
+              <span>
+            <div {display=grid; grid-template-columns=1fr 1.6fr 150px 200px; font-size=13px}>
+              <span {font-weight=800}> "موعد التسليم · جاردن الروضة"
+              <span {color=#8A6C1E; font-weight=700}> "الربع 2 · 2027 [للتأكيد]"
+              <span {font-size=12px}> "المشروع، الوحدات، SEO"
+              <div>
+                <button type=button {font-size=12px}> "تعديل"
+                <button type=button {font-size=12px}> "أكّد وأزل الوسم"
+            <div {display=grid; grid-template-columns=1fr 1.6fr 150px 200px; font-size=13px}>
+              <span {font-weight=800}> "ضريبة التصرفات · كل الوحدات"
+              <span {color=#8A6C1E; font-weight=700}> "غير محدد [للتأكيد]"
+              <span {font-size=12px}> "صفحة الوحدة × 10"
+              <div>
+                <button type=button {font-size=12px}> "تعديل"
+                <button type=button {font-size=12px}> "أكّد وأزل الوسم"
+            <div {display=grid; grid-template-columns=1fr 1.6fr 150px 200px; font-size=13px}>
+              <span {font-weight=800}> "الطابق · RZ-A"
+              <span {color=#8A6C1E; font-weight=700}> "الثالث [للتأكيد]"
+              <span {font-size=12px}> "صفحة الوحدة"
+              <div>
+                <button type=button {font-size=12px}> "تعديل"
+                <button type=button {font-size=12px}> "أكّد وأزل الوسم"
+            <div {display=grid; grid-template-columns=1fr 1.6fr 150px 200px; font-size=13px}>
+              <span {font-weight=800}> "الضمانات والتأمين · المشروع"
+              <span {color=#8A6C1E; font-weight=700}> "هيكلي 10 سنوات، كهروميكانيكي سنة [للتأكيد]"
+              <span {font-size=12px}> "المشروع، الوحدات، سؤال شائع"
+              <div>
+                <button type=button {font-size=12px}> "تعديل"
+                <button type=button {font-size=12px}> "أكّد وأزل الوسم"
+            <div {display=grid; grid-template-columns=1fr 1.6fr 150px 200px; font-size=13px}>
+              <span {font-weight=800}> "+2000 متدرب · أرقام الإثبات"
+              <span {color=#8A6C1E; font-weight=700}> "+2000 متدرب [للتأكيد]"
+              <span {font-size=12px}> "من نحن، الرئيسية"
+              <div>
+                <button type=button {font-size=12px}> "تعديل"
+                <button type=button {font-size=12px}> "أكّد وأزل الوسم"
+            <div {display=grid; grid-template-columns=1fr 1.6fr 150px 200px; font-size=13px}>
+              <span {font-weight=800}> "الرقم الضريبي · إعدادات الموقع"
+              <span {color=#8A6C1E; font-weight=700}> "[للتأكيد]"
+              <span {font-size=12px}> "التذييل، صفحة الوحدة"
+              <div>
+                <button type=button {font-size=12px}> "تعديل"
+                <button type=button disabled=None {font-size=12px; opacity=.4}> "أكّد (الحقل فارغ)"
+            <div {display=grid; grid-template-columns=1fr 1.6fr 150px 200px; font-size=13px}>
+              <span {font-weight=800}> "3 أسئلة شائعة"
+              <span {color=#8A6C1E; font-weight=700}> "[مسودة إجابة] × 3"
+              <span {font-size=12px}> "الوحدة، المشروع"
+              <div>
+                <a href=Admin-FAQ-D.html {font-size=12px; text-decoration=none}> "افتح الأسئلة"
+            <div {display=grid; grid-template-columns=1fr 1.6fr 150px 200px; font-size=13px}>
+              <span {font-weight=800}> "سنة التأسيس · أرقام الإثبات"
+              <span {color=#8A6C1E; font-weight=700}> "منذ 2019 [للتأكيد] · مخفي"
+              <span {font-size=12px}> "من نحن (مخفي)"
+              <div>
+                <button type=button {font-size=12px}> "تعديل"
+                <button type=button {font-size=12px}> "أكّد وأزل الوسم"
+          <span {font-size=11px; color=#5E5A52}> "11 عنصراً. «أكّد وأزل الوسم» يحذف الوسم من كل مكان يظهر فيه الحقل في خطوة واحدة ويسجّل في سجل الإجراءات. محرر يرى القائمة للقراءة فقط مع زر «اطلب التأكيد»."
+        <section>
+          <span>
+            "3 · حوار تأكيد الحذف"
+            <small> "يطلب كتابة الرمز"
+          <div {background=#3A3630}>
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <span {font-size=18px; font-weight=800}> "حذف الوحدة RZ-C نهائياً؟"
+              <p {font-size=13px; color=#3A3630}> "تختفي من الموقع فوراً، وتُحذف صورها وسجلّ تغييراتها، ويتحوّل رابطها إلى صفحة 404. 2 طلبان واردان مرتبطان بها سيبقيان بلا وحدة. لا يمكن التراجع."
+              <label {font-size=12px; font-weight=700; color=#5E5A52}>
+                "اكتب"
+                <span {color=#141311}> "RZ-C"
+                "للتأكيد"
+                <input value=RZ- {font-size=15px; font-weight=700; border=2px solid #B48F2E; background=#FFFDF6}>
+              <div>
+                <button type=button disabled=None {opacity=.4}> "احذف RZ-C"
+                <button type=button> "إلغاء"
+                <span {font-size=11px; color=#5E5A52}>
+                  "البديل الآمن:"
+                  <a href=Admin-UnitEditor-D.html {font-weight=700}> "إخفاء من الموقع"
+          <span {font-size=11px; color=#5E5A52}> "نفس الحوار لحذف مشروع (يكتب رقم المشروع) وسؤال ومستخدم (بلا كتابة، زر الحذف مفعّل مباشرة). الزر الأساسي أسود لا ذهبي: الذهبي لا يُستخدم لإجراء مدمّر."
+        <section>
+          <span>
+            "4 · حالات فارغة"
+            <small> "لا وحدات · لا طلبات"
+          <div>
+            <div {background=#FFFFFF; border=1.5px dashed #141311}>
+              <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {font-size=16px; font-weight=800}> "لا وحدات بعد"
+              <span {font-size=13px; color=#5E5A52}> "ارفع ملف Excel بالنماذج والأسعار، أو أضف وحدة يدوياً. الموقع يعرض «قريباً» في النتائج حتى تُنشر أول وحدة."
+              <div>
+                <button type=button> "استيراد Excel"
+                <a href=Admin-UnitEditor-D.html {text-decoration=none}> "+ وحدة يدوياً"
+            <div {background=#FFFFFF; border=1.5px dashed #141311}>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {font-size=16px; font-weight=800}> "لا طلبات بلا رد"
+              <span {font-size=13px; color=#5E5A52}> "كل الطلبات الواردة مُعلَّمة. آخر طلب وصل قبل 3 ساعات وردّت عليه نورة."
+              <a href=Admin-Leads-D.html {font-size=12px; font-weight=800; text-decoration=none}> "عرض «تم الرد» 41"
+        <section>
+          <span>
+            "5 · تنبيهات مؤقتة (توست)"
+            <small> "أسفل يسار الشاشة · 6 ثوانٍ · بلا ظل"
+          <div>
+            <div {background=#141311; color=#FFFFFF; font-size=13px; font-weight=700}>
+              <span {background=#B48F2E; color=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <svg svg >
+              <span>
+                "حُفظت الوحدة RZ-A ·"
+                <a href=Unit-D.html {color=#B48F2E}> "معاينة"
+              <button type=button aria-label=إغلاق {border=0; background=transparent; color=#FFFFFF; font-size=16px}> "×"
+            <div {background=#141311; color=#FFFFFF; font-size=13px; font-weight=700}>
+              <span>
+                "حُذف السؤال ·"
+                <button type=button {border=0; background=transparent; color=#B48F2E; font-weight=800}> "تراجع"
+                "خلال 8 ثوانٍ"
+              <button type=button aria-label=إغلاق {border=0; background=transparent; color=#FFFFFF; font-size=16px}> "×"
+            <div {background=#FFFDF6; color=#141311; border=2px solid #B48F2E; font-size=13px; font-weight=700}>
+              <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+              <span> "لم يُحفظ: انقطع الاتصال. تغييراتك محفوظة محلياً وسنعيد المحاولة."
+              <button type=button {border=0; background=transparent; color=#8A6C1E; font-weight=800}> "أعد الآن"
+          <span {font-size=11px; color=#5E5A52}> "ثلاث حالات فقط: نجاح (شريط ذهبي)، معلومة مع تراجع (شريط أبيض)، خطأ (إطار ذهبي على كريمي كما في النماذج). لا أخضر ولا أحمر في أي مكان."

@@ -1,0 +1,44 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#F8F7F4; color=#141311}>
+      <div {background=#B48F2E; color=#141311; font-size=11px; font-weight=800}>
+        <span> "مبادرة من SMQ · طلب الانضمام"
+        <a href=Alliance-M.html {color=#141311; text-decoration=none}> "عن التحالف ←"
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <a href=https://wa.me/966559997929?text=%D8%A7%D9%84%D8%AA%D8%AD%D8%A7%D9%84%D9%81 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <svg svg >
+      <main>
+        <div>
+          <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+        <h1 {font-size=26px; font-weight=800}> "وصل طلب مكتب أ للعقارات"
+        <p {font-size=13px; color=#3A3630}> "نتحقق من رخصة فال 1200XXXXXX في موقع الهيئة يدوياً خلال يومي عمل. بعد التوثيق تصلك رسالة واتساب برابط صفحة العضو وأول طلبات أحيائك."
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+          <span {font-size=12px; font-weight=700; color=#C9C2B3}> "رقم الطلب"
+          <div>
+            <span {font-size=30px; font-weight=800}> "ALL-2026-0038"
+            <button type=button {font-size=12px; font-weight=800; border=1.5px solid #FFFFFF; background=transparent; color=#FFFFFF}> "نسخ"
+          <span {font-size=11px; color=#C9C2B3}> "أُرسلت رسالة واتساب بنفس الرقم ورابط صفحة الحالة إلى 05X XXX 7710"
+        <ol>
+          <li>
+            <span {background=#B48F2E; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "1"
+            <span {font-size=13px}>
+              <strong> "قيد المراجعة:"
+              "الطلب عند فريق التحالف. لا شيء يظهر في الدليل بعد."
+          <li>
+            <span {border=1.5px solid #141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "2"
+            <span {font-size=13px}>
+              <strong> "التحقق من الرخصة:"
+              "في موقع الهيئة، يدوياً، خلال يومي عمل. قد نطلب صورة الرخصة."
+          <li>
+            <span {border=1.5px solid #141311; font-size=12px; font-weight=800; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "3"
+            <span {font-size=13px}>
+              <strong> "موثّق:"
+              "شارة «رخصة فال موثّقة»، صفحة العضو والميزان، وأول الطلبات في أبحر الشمالية والشاطئ والمحمدية."
+        <div>
+          <a href=AllianceApply-Status-M.html {background=#B48F2E; color=#141311; font-size=15px; font-weight=800; text-decoration=none; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}> "صفحة حالة الطلب"
+          <a href=Alliance-M.html {border=1.5px solid #141311; color=#141311; font-size=14px; font-weight=700; text-decoration=none}> "العودة إلى صفحة التحالف"

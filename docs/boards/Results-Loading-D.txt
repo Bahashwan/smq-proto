@@ -1,0 +1,118 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+            <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=14px; font-weight=700; color=#B48F2E; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "دليل الأسعار"
+            <a href=Projects-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 {font-size=14px; font-weight=600; color=#FFFFFF; text-decoration=none}> "0556607779"
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <section>
+        <div>
+          <div>
+            <h1 {font-size=36px; font-weight=800}> "الوحدات في جدة"
+            <p {font-size=14px; color=#5E5A52}>
+              <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "نحسب الوحدات ضمن فلاترك…"
+          <div>
+            <span {width=200px}>
+            <span {width=180px}>
+      <section aria-label=جارٍ تحميل النتائج>
+        <aside {border=1.5px solid #141311}>
+          <span {font-size=16px; font-weight=800}> "الفلاتر"
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "الميزانية"
+            <span {background=#D4CFC4}>
+            <span>
+              <span>
+              <span>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "الغرف"
+            <span {display=grid; grid-template-columns=repeat(4, 1fr)}>
+              <span>
+              <span>
+              <span>
+              <span>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "النوع"
+            <span>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "الحي"
+            <span>
+          <div>
+            <span {font-size=12px; font-weight=700; color=#5E5A52}> "الحالة"
+            <span>
+              <span>
+              <span>
+          <span {background=#D4CFC4}>
+        <div>
+          <div>
+            <span {width=160px}>
+            <span {width=120px}>
+          <div {display=grid; grid-template-columns=repeat(auto-fill, minmax(min(280px, 100%), 1fr))}>
+            <div>
+              <div>
+                <span>
+              <div>
+                <span>
+                <span>
+              <div>
+                <span {background=#D4CFC4}>
+            <div>
+              <div>
+                <span>
+              <div>
+                <span>
+                <span>
+              <div>
+                <span {background=#D4CFC4}>
+            <div>
+              <div>
+                <span>
+              <div>
+                <span>
+                <span>
+              <div>
+                <span {background=#D4CFC4}>
+            <div>
+              <div>
+                <span>
+              <div>
+                <span>
+                <span>
+              <div>
+                <span {background=#D4CFC4}>
+            <div>
+              <div>
+                <span>
+              <div>
+                <span>
+                <span>
+              <div>
+                <span {background=#D4CFC4}>
+            <div>
+              <div>
+                <span>
+              <div>
+                <span>
+                <span>
+              <div>
+                <span {background=#D4CFC4}>
+          <p {font-size=12px; color=#5E5A52}>
+            "قواعد الهيكل: الرأس والعناوين والفلاتر حقيقية فوراً، والأرقام فقط تنتظر. نبضة واحدة 1.4 ثانية بلا حركة أفقية. إن تجاوز التحميل 6 ثوانٍ يظهر نص «الاتصال بطيء،"
+            <a href=Results-D.html> "أعد المحاولة"
+            "أو تواصل على واتساب» تحت العنوان بدل الهيكل."
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <div>
+          <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+          <span> "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433 · © 2026 إس إم كيو العقارية"

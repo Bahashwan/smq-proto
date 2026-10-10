@@ -1,0 +1,152 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section {background=#B48F2E; clip-path=polygon(0 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 30px))}>
+        <span {font-size=12px; font-weight=700; color=#3D3010}>
+          "خدمة مجانية للمُلّاك ·"
+          <a href=Hub-M.html {color=#3D3010}> "تعاون معنا"
+        <h1 {font-size=30px; font-weight=800}> "أضف عقارك"
+      <section {border=1.5px solid #141311}>
+        <div>
+          <h2 {font-size=16px; font-weight=800}> "التفاصيل والسعر"
+          <span {font-size=12px; font-weight=700; color=#5E5A52}> "الخطوة 2 من 3"
+        <ol aria-label=خطوات النموذج {display=grid; grid-template-columns=repeat(3, minmax(0, 1fr))}>
+          <li>
+            <span {background=#141311}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "النوع والموقع ✓"
+          <li>
+            <span {background=#B48F2E}>
+            <span {font-size=11px; font-weight=800}> "التفاصيل والسعر"
+          <li>
+            <span {background=#E9E5DB}>
+            <span {font-size=11px; font-weight=700; color=#5E5A52}> "الصور وبياناتك"
+        <div {background=#F3F1EB; font-size=12px}>
+          <span>
+            <strong> "عمارة سكنية للبيع"
+            "· حي النعيم، جدة · وكيل"
+          <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "تعديل"
+        <form>
+          <div {display=grid; grid-template-columns=1fr 1fr}>
+            <label>
+              "مساحة الأرض (م²)"
+              <input type=text value=625>
+            <label>
+              "مساحة البناء (م²)"
+              <input type=text value=1,480>
+            <label>
+              "عدد الأدوار"
+              <select>
+                <option> "2"
+                <option> "3"
+                <option selected=None> "4"
+                <option> "5 أو أكثر"
+            <div>
+              "عدد الوحدات"
+              <div aria-label=عدد الوحدات>
+                <button type=button aria-label=أقل> "−"
+                <span> "8"
+                <button type=button aria-label=أكثر> "+"
+            <label>
+              "عمر العقار"
+              <select>
+                <option> "جديد (لم يُسكن)"
+                <option> "1 إلى 5 سنوات"
+                <option selected=None> "6 إلى 10"
+                <option> "أكثر من 10"
+            <label>
+              "عرض الشارع"
+              <select>
+                <option> "15 م"
+                <option selected=None> "20 م"
+                <option> "25 م"
+                <option> "30 م أو أكثر"
+          <fieldset {border=0}>
+            <legend {font-size=13px; font-weight=700}> "هل يوجد دخل؟"
+            <div>
+              <label>
+                <input type=radio checked=None> "نعم، مؤجّرة"
+              <label>
+                <input type=radio> "لا"
+            <div {border=1.5px solid #141311; background=#F8F7F4}>
+              <label>
+                "الدخل السنوي (ريال)"
+                <input type=text value=312,000>
+              <div {display=grid; grid-template-columns=1fr 1fr}>
+                <label>
+                  "الوحدات المؤجّرة الآن"
+                  <input type=text value=7 من 8>
+                <label>
+                  "عقود الإيجار"
+                  <select>
+                    <option selected=None> "موثّقة في إيجار"
+                    <option> "غير موثّقة"
+                    <option> "مختلطة"
+              <span {font-size=11px; color=#5E5A52}> "العائد يُحسب تلقائياً من الدخل والسعر ويظهر لفريقنا فقط عند المراجعة."
+          <div>
+            <span {font-size=13px; font-weight=700}> "المميزات"
+            <div>
+              <label>
+                <input type=checkbox checked=None> "مصعد"
+              <label>
+                <input type=checkbox checked=None> "مواقف"
+              <label>
+                <input type=checkbox> "سكن سائقين"
+              <label>
+                <input type=checkbox checked=None> "خزان مياه"
+              <label>
+                <input type=checkbox> "غرفة حراسة"
+              <label>
+                <input type=checkbox> "محلات بالدور الأرضي"
+              <label>
+                <input type=checkbox> "عدادات مستقلة"
+              <label>
+                <input type=checkbox> "واجهتان"
+          <div>
+            <label {font-size=13px; font-weight=700; color=#141311}> "السعر المطلوب (ريال)"
+            <div {border=1.5px solid #141311}>
+              <input type=text value=4,800,000 {border=0; font-size=18px; font-weight=800; color=#141311}>
+              <span>
+                <svg svg aria-label=ريال سعودي>
+            <div {background=#F3F1EB; font-size=12px}>
+              <span>
+                <span> "سعر المتر على البناء"
+                <strong> "3,243"
+              <span>
+                <span> "سعر المتر على الأرض"
+                <strong> "7,680"
+              <span>
+                <span> "العائد السنوي الإجمالي"
+                <strong> "6.5%"
+              <span {color=#5E5A52}> "للمعلومة فقط. التقييم النهائي بعد الزيارة ومراجعة العقود."
+          <fieldset {border=0}>
+            <legend {font-size=13px; font-weight=700}> "قابل للتفاوض؟"
+            <div {grid-template-columns=repeat(3, 1fr)}>
+              <label>
+                <input type=radio checked=None> "قليلاً"
+              <label>
+                <input type=radio> "لا"
+              <label>
+                <input type=radio> "أفضل عرض"
+          <label>
+            "رقم الصك (اختياري الآن، مطلوب قبل النشر)"
+            <input type=text placeholder=يبدأ بـ 3 أو 9 · 12 رقماً>
+          <div>
+            <button type=button {font-size=14px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF; color=#141311}> "السابق"
+            <button type=button {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}>
+              "التالي: الصور وبياناتك"
+              <svg svg >
+      <p {font-size=11px; color=#5E5A52}> "هذه النسخة تظهر حين يكون النوع «عمارة سكنية» أو «عمارة تجارية». الشقق والفلل تعرض الغرف والحمامات بدل الوحدات والدخل."
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

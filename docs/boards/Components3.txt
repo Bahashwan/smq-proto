@@ -1,0 +1,352 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=1440px; background=#FFFFFF; color=#141311}>
+      <div>
+        <h1 {font-size=32px; font-weight=800}> "ورقة المكونات 3 · التحالف وتعاون معنا"
+        <span {font-size=12px; color=#5E5A52}> "تكمل الورقتين 1 و2 · السداسي هو شكل التحالف: خلية = مكتب أو حي · الحالة بالشكل والكلمة، لا بالألوان"
+      <section>
+        <h2> "1 · بطاقة الباب (تعاون معنا)"
+        <div {display=grid; grid-template-columns=repeat(4, minmax(0, 1fr))}>
+          <div>
+            <span> "owners · gold block, big cut"
+            <a href=#d {background=#B48F2E; clip-path=polygon(0 0, calc(100% - 20px) 0, 100% 35px, 100% 100%, 0 100%)}>
+              <span {font-size=11px; font-weight=700; color=#3D3010}> "01 · للمُلّاك"
+              <b> "عندك عقار؟"
+              <span {color=#3D3010}> "لمن · ماذا تحصل · ماذا نحتاج · الوقت"
+              <span {background=#141311; color=#FFFFFF; font-weight=800}> "أضف عقارك"
+          <div>
+            <span> "offices · ink, honeycomb"
+            <a href=#d {background=#141311; color=#FFFFFF}>
+              <span {position=absolute; opacity=.6}>
+                <span {background=#3A3630; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {font-size=11px; font-weight=700; color=#B48F2E}> "02 · للمكاتب · مبادرة من SMQ"
+              <b> "عندك مكتب عقاري؟"
+              <span {color=#C9C2B3}> "لمن · ماذا تحصل · ماذا نحتاج · الوقت"
+              <span {background=#B48F2E; color=#141311; font-weight=800; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "اعرف عن التحالف"
+          <div>
+            <span> "marketers · outlined, link motif"
+            <a href=#d {border=1.5px solid #141311}>
+              <span {font-size=11px; font-weight=700; color=#8A6C1E}> "03 · للأفراد"
+              <b> "مسوّق عقاري؟"
+              <span {background=#F3F1EB; font-size=11px; font-weight=700}> "smq-re.com/r/you"
+              <span {border=1.5px solid #141311; font-weight=800}> "انضم كمسوّق"
+          <div>
+            <span> "hover · gold rule appears right"
+            <a href=#d {border=1.5px solid #141311}>
+              <span {font-size=11px; font-weight=700; color=#8A6C1E}> "03 · للأفراد"
+              <b> "مسوّق عقاري؟"
+              <span> "hover: شريط ذهبي 6px يمين، لا ظل ولا حركة. focus: إطار ذهبي 2px خارجي. الأبواب الثلاثة مختلفة عمداً: المادة (ذهب، أسود، إطار) تقول من أنت قبل أن تقرأ."
+      <div {display=grid; grid-template-columns=1fr 1fr}>
+        <section>
+          <h2> "2 · اختيار الأحياء المتعدد"
+          <div {display=grid; grid-template-columns=1fr 1fr}>
+            <div>
+              <span> "selected tags · search · grouped list"
+              <div>
+                <span>
+                  "أبحر الشمالية"
+                  <b aria-label=إزالة> "×"
+                <span>
+                  "الشاطئ"
+                  <b aria-label=إزالة> "×"
+              <div {border=1.5px solid #141311; background=#FFFFFF}>
+                <svg svg >
+                <span {font-size=14px; font-weight=600}> "الن"
+                <span {background=#B48F2E}>
+              <div {border=1.5px solid #141311; background=#FFFFFF}>
+                <span {font-size=11px; font-weight=800; color=#8A6C1E}> "شمال جدة"
+                <label>
+                  <input type=checkbox> "النهضة"
+                <span {font-size=11px; font-weight=800; color=#8A6C1E}> "وسط جدة"
+                <label {background=#F3F1EB}>
+                  <input type=checkbox> "النعيم"
+                  <span {font-size=10px; color=#5E5A52}> "· focus"
+                <label>
+                  <input type=checkbox> "النزهة"
+            <div>
+              <div>
+                <span> "empty"
+                <div {border=1.5px solid #141311; background=#FFFFFF; font-size=13px; color=#5E5A52}>
+                  <svg svg > "ابحث عن حي"
+              <div>
+                <span> "no match"
+                <div {border=1.5px solid #141311; background=#FFFFFF; font-size=12px; color=#5E5A52}>
+                  "لا حي بهذا الاسم. الأحياء من قائمة ثابتة؛"
+                  <a href=#x> "اطلب إضافة حي"
+                  "."
+              <div>
+                <span> "error · required"
+                <div {border=2px solid #B48F2E; background=#FFFDF6; font-size=13px; color=#5E5A52}> "اختر حياً واحداً على الأقل"
+              <div>
+                <span> "disabled"
+                <div {border=1.5px solid #D4CFC4; background=#F8F7F4; font-size=13px; color=#8A8478}> "اختر الجهة أولاً"
+              <span> "القائمة مجموعة بالجهة ومرتّبة أبجدياً داخلها. الوسم الأسود المختار بعلامة × ذهبية. على الجوال تفتح كورقة سفلية بملء الشاشة."
+        <section>
+          <h2> "3 · خلية الحي السداسية"
+          <div {display=grid; grid-template-columns=repeat(5, minmax(0, 1fr))}>
+            <div>
+              <span> "no demand"
+              <span {background=#FFFFFF; color=#5E5A52}>
+                "ذهبان"
+                <small> "12"
+            <div>
+              <span> "demand"
+              <span {background=#F3F1EB}>
+                "النهضة"
+                <small> "44 · لا أعضاء"
+            <div>
+              <span> "demand, no supply"
+              <span {background=#FFFFFF}>
+                "الصفا"
+                <small {color=#8A6C1E}> "204 · 1 مكتب"
+            <div>
+              <span> "covered by members"
+              <span {background=#141311; color=#FFFFFF}>
+                "الروضة"
+                <small {color=#B48F2E}> "1,060 · 2"
+            <div>
+              <span> "selected"
+              <span {background=#FFFFFF}>
+                "أبحر الشمالية"
+                <small {color=#8A6C1E}> "318 · 2"
+          <div>
+            <span {background=#FFFFFF; color=#5E5A52}> "A"
+            <span {background=#141311; color=#FFFFFF}> "B"
+            <span {background=#FFFFFF}> "C"
+            <span> "الشبكة: صف ثم صف مُزاح نصف خلية (margin-right 50% من العرض)، فجوة 5px، 6 خلايا في الصف على سطح المكتب و5 على الجوال. الخلية زر على سطح المكتب تفتح الدُّرج؛ على الصفحة العامة ليست زراً."
+          <span> "الحالات بالحدّ لا باللون: بلا طلب رمادي 1.5px · طلب أسود 1.5px على كريمي · طلب بلا عرض ذهبي 2.5px · يغطيه أعضاء أسود مصمت. النص داخل الخلية سطران: الاسم ثم رقم أو رقمان."
+      <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+        <section>
+          <h2> "4 · شارة «رخصة فال موثّقة»"
+          <div>
+            <div>
+              <span> "default"
+              <span> "رخصة فال موثّقة"
+            <div>
+              <span> "with expiry (admin)"
+              <span> "رخصة فال موثّقة · حتى 2027/06/30"
+            <div>
+              <span> "expiring · 30 days"
+              <span {border=1.5px solid #B48F2E; background=#FFFDF6; color=#8A6C1E}> "تنتهي بعد 24 يوماً"
+            <div>
+              <span> "not verified (admin only)"
+              <span {background=#FFFFFF; border=1.5px solid #141311}> "بانتظار التحقق"
+            <div>
+              <span> "suspended (admin only)"
+              <span {color=#5E5A52}> "موقوف"
+            <div>
+              <span> "on ink"
+              <span {background=#141311}>
+                <span {background=#FFFFFF}> "رخصة فال موثّقة"
+          <span> "السداسي الذهبي الصغير هو العلامة. على الصفحة العامة تظهر الحالة الموثّقة فقط؛ غير الموثّق لا يظهر أصلاً. لا تُستخدم الشارة لأي شيء غير رخصة فال."
+        <section>
+          <h2> "5 · شريط الميزان · أعطى واستقبل"
+          <div {display=grid; grid-template-columns=1fr 1fr; border=1.5px solid #141311; background=#FFFFFF}>
+            <div>
+              <span {font-size=11px; font-weight=800; color=#8A6C1E}> "أعطى"
+              <div>
+                <div>
+                  <span> "عروض"
+                  <strong> "7"
+                <div>
+                  <span {background=#B48F2E}>
+              <div>
+                <div>
+                  <span> "طلبات"
+                  <strong> "3"
+                <div>
+                  <span {background=#B48F2E}>
+            <div>
+              <span {font-size=11px; font-weight=800}> "استقبل"
+              <div>
+                <div>
+                  <span> "طلبات"
+                  <strong> "9"
+                <div>
+                  <span {background=#141311}>
+              <div>
+                <div>
+                  <span> "ردّ"
+                  <strong> "8"
+                <div>
+                  <span {background=#141311}>
+          <div>
+            <div>
+              <span> "compact (table cell) · giver"
+              <span {font-size=11px; font-weight=700}>
+                <i {background=#B48F2E}> "10"
+                <b {background=#141311}> "9"
+            <div>
+              <span> "compact · taker"
+              <span {font-size=11px; font-weight=700}>
+                <i {background=#B48F2E}> "2"
+                <b {background=#141311}> "12"
+            <div>
+              <span> "compact · suspended"
+              <span {font-size=11px; font-weight=700; color=#5E5A52}>
+                <i {background=#D4CFC4}> "1"
+                <b {background=#D4CFC4}> "8"
+            <div>
+              <span> "empty · new member"
+              <span {font-size=11px; font-weight=700; color=#5E5A52}>
+                <i> "بلا بيانات بعد"
+          <span> "الذهبي دائماً «أعطى»، الأسود «استقبل». المقياس نسبي لأعلى قيمة في البطاقة. الصافي كلمة لا لون: «معطٍ» أو «مستقبِل» أو «متوازن»."
+        <section>
+          <h2> "6 · خط المرحلة"
+          <div {border=1.5px solid #141311; background=#FFFFFF}>
+            <div>
+              <span> "referral · at معاينة"
+              <div>
+                <span> "تعارف"
+                <span> "معاينة"
+                <span> "تفاوض"
+                <span> "إفراغ"
+                <span> "لم تتم"
+            <div>
+              <span> "referral · closed إفراغ"
+              <div>
+                <span> "تعارف"
+                <span> "معاينة"
+                <span> "تفاوض"
+                <span {color=#141311; font-weight=800}> "إفراغ"
+                <span> "لم تتم"
+            <div>
+              <span> "referral · لم تتم"
+              <div>
+                <span> "تعارف"
+                <span> "معاينة"
+                <span {color=#141311; font-weight=800}> "لم تتم"
+                <span> "تفاوض"
+                <span> "إفراغ"
+            <div>
+              <span> "application · 3 steps"
+              <div>
+                <span> "وصل الطلب"
+                <span> "التحقق من الرخصة"
+                <span> "موثّق"
+            <div>
+              <span> "compact (table) · 4 cells"
+              <span>
+                <i {background=#141311; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <i {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <i {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <i {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+              <span {font-size=11px; font-weight=700}> "معاينة"
+          <span> "منجز أسود، الحالي ذهبي، القادم رمادي مفرّغ، «لم تتم» أبيض بحدّ أسود 2px ويحتل مكان المرحلة التي توقفت عندها. دائماً مع الكلمة تحته."
+      <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+        <section>
+          <h2> "7 · بطاقة الطلب"
+          <div>
+            <div>
+              <span> "board card · visitor source · needs action"
+              <div>
+                <span> "زائر بلا نتائج"
+                <b> "REQ-0412 · الفيصلية · شقة 4 غرف"
+                <small> "حتى 450,000 · وصل عرض · ينتظر قرار"
+            <div>
+              <span> "staff source"
+              <div>
+                <span> "فريق SMQ"
+                <b> "REQ-0414 · المحمدية · شقة 3 غرف"
+                <small> "700k إلى 1M · أُرسل يدوياً"
+            <div>
+              <span> "member source · selected"
+              <div>
+                <span> "مكتب عضو · مكتب أ"
+                <b> "REQ-0417 · الروضة · أرض مطورة"
+                <small> "حتى 2,500,000"
+            <div>
+              <span> "closed"
+              <div {color=#5E5A52}>
+                <span> "زائر بلا نتائج"
+                <b {color=#141311}> "REQ-0401 · الصفا · شقة 4 غرف"
+                <small> "انتهى بلا عروض"
+            <div>
+              <span> "member view (phone) · summary only"
+              <div {background=#FFFFFF; border=1.5px solid #141311}>
+                <div {background=#B48F2E; font-size=12px; font-weight=800; clip-path=polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 calc(100% - 12px))}> "طلب جديد في حي تغطيه · الفيصلية · شقة 4 غرف"
+                <div {display=grid; grid-template-columns=1fr 1fr 1fr; font-size=11px}>
+                  <div {background=#F3F1EB}>
+                    <small {color=#5E5A52}> "الميزانية"
+                    <strong> "حتى 450,000"
+                  <div {background=#F3F1EB}>
+                    <small {color=#5E5A52}> "الغرف"
+                    <strong> "4"
+                  <div {background=#F3F1EB}>
+                    <small {color=#5E5A52}> "التوقيت"
+                    <strong> "3 أشهر"
+          <span> "المصدر وسم صغير دائماً: زائر (كريمي)، فريق (أسود)، عضو (إطار). بطاقة العضو لا تحمل اسماً ولا رقماً للمشتري أبداً."
+        <section>
+          <h2> "8 · سجل الإحالة (إيصال)"
+          <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <div>
+              <span>
+                <span {font-size=10px; font-weight=700; color=#8A6C1E}> "سجل إحالة · تحالف مكاتب جدة"
+                <span {font-size=18px; font-weight=800}> "REF-2026-0117"
+              <img src=assets/logo-mark-gold.png alt=>
+            <div>
+              <div>
+                <span> "التاريخ"
+                <span> "2026/10/10 · 14:35"
+              <div>
+                <span> "المكتبان"
+                <span> "SMQ ↔ مكتب ط"
+              <div>
+                <span> "الطلب"
+                <span> "شقة 4 غرف · الفيصلية"
+              <div>
+                <span> "العرض"
+                <span> "165 م² · 440,000"
+              <div>
+                <span> "التقسيم · الحماية"
+                <span {color=#8A6C1E}> "50/50 · 90 يوماً [للتأكيد]"
+            <div>
+              <div>
+                <span> "تعارف"
+                <span> "معاينة"
+                <span> "تفاوض"
+                <span> "إفراغ"
+                <span> "لم تتم"
+            <div {background=#141311; color=#C9C2B3; font-size=9px}>
+              <span> "مرجع العمولة وفترة الحماية"
+              <span {color=#B48F2E; font-weight=800}> "REF-2026-0117"
+          <div>
+            <span {font-size=10px; font-weight=800; border=1.5px solid #B48F2E; color=#8A6C1E}>
+              <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "نزاع · 4 أيام"
+            <span> "علم النزاع: ماسة ذهبية مع الكلمة والمدة. يظهر في الجدول وأعلى السجل."
+          <span> "يقرأ كإيصال: حدّان سميكان 2px يفصلان الرأس والمرحلة، صفوف منقّطة، الرقم بالإنجليزية وبخط عريض، ذيل أسود بالرقم مكرّراً للطباعة."
+        <section>
+          <h2> "9 · عمود اللوحة"
+          <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+            <div>
+              <header>
+                <span> "جديد"
+                <span> "2"
+              <div>
+                <span> "زائر"
+                <b> "REQ-0418"
+                <small> "النهضة · غرفتان"
+              <div>
+                <span> "عضو"
+                <b> "REQ-0417"
+                <small> "الروضة · أرض"
+            <div>
+              <header>
+                <span> "وصلت عروض"
+                <span {background=#B48F2E}> "2"
+              <div>
+                <span> "زائر"
+                <b> "REQ-0412"
+                <small> "الفيصلية · 4 غرف"
+              <div {border=1.5px dashed #141311; background=#F3F1EB; font-size=11px; font-weight=700; color=#5E5A52}> "أفلت هنا"
+            <div>
+              <header>
+                <span> "مغلق"
+                <span> "24"
+              <div {color=#5E5A52}>
+                <span> "زائر"
+                <b {color=#141311}> "REQ-0401"
+                <small> "انتهى"
+              <div {border=1.5px dashed #D4CFC4; font-size=11px; color=#5E5A52}> "عرض 23 أخرى"
+          <span> "رأس العمود بحدّ أسود 2px وعدّاد كريمي؛ العمود الذي يحتاج قراراً حدّه وعدّاده ذهبيان. السحب بين الأعمدة يغيّر المرحلة ويُسجَّل. هدف الإفلات: مستطيل منقّط كريمي. على الجوال الأعمدة تبويبات."

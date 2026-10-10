@@ -1,0 +1,42 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; height=844px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <main>
+        <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+          <svg svg >
+        <h1 {font-size=26px; font-weight=800}> "أُرسل طلبك إلى التحالف"
+        <p {font-size=13px; color=#3A3630}> "شقة 4 غرف في الفيصلية حتى 450,000 ريال. وصل الطلب لمكتب موثّق يغطي الحي. حين يردّ بعرض مطابق نراسلك نحن على واتساب ونعرّفكم ببعض."
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+          <span {font-size=12px; font-weight=700; color=#C9C2B3}> "رقم الطلب"
+          <div>
+            <span {font-size=28px; font-weight=800}> "REQ-2026-0412"
+            <button type=button {font-size=12px; font-weight=800; border=1.5px solid #FFFFFF; background=transparent; color=#FFFFFF}> "نسخ"
+          <span {font-size=11px; color=#C9C2B3}> "رسالة واتساب بنفس الرقم إلى 05X XXX 3390"
+        <div {border=1.5px solid #141311}>
+          <div {font-size=12px}>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+            <span>
+              <strong> "ما أُرسل للمكتب:"
+              "الحي، الميزانية، عدد الغرف، النوع. لا اسمك ولا رقمك."
+          <div {font-size=12px}>
+            <span {background=#141311; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+            <span>
+              <strong> "المدة:"
+              "المكاتب تردّ عادةً خلال يوم عمل. إن لم يردّ أحد خلال 3 أيام نخبرك."
+          <div {font-size=12px}>
+            <span {background=#FFFFFF; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+            <span>
+              <strong> "بلا التزام:"
+              "اكتب «توقف» على واتساب لإلغاء الطلب في أي وقت."
+        <div>
+          <a href=Results-M.html {background=#141311; color=#FFFFFF; font-size=14px; font-weight=800; text-decoration=none; clip-path=polygon(0 0, calc(100% - 11px) 0, 100% 19px, 100% 100%, 0 100%)}> "في الانتظار؟ شقق 4 غرف في كل جدة · 6"
+          <a href=Home-M.html {border=1.5px solid #141311; color=#141311; font-size=14px; font-weight=700; text-decoration=none}> "العودة إلى الرئيسية"

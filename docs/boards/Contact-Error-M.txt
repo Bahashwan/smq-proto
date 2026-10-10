@@ -1,0 +1,65 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#FFFFFF; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+          <a href=https://wa.me/966559997929 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section>
+        <h1 {font-size=26px; font-weight=800}> "اكتب لنا"
+        <p {font-size=13px; color=#5E5A52}> "نرد خلال ساعات العمل. الحقول بالذهبي تحتاج تصحيحاً."
+      <div {border=2px solid #B48F2E; background=#FFFDF6; font-size=13px}>
+        <span {font-weight=800}>
+          <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "لم تُرسل الرسالة. حقلان يحتاجان تصحيحاً:"
+        <a href=#phone {font-weight=700}> "رقم الجوال غير مكتمل"
+        <a href=#consent {font-weight=700}> "الموافقة على التواصل مطلوبة"
+      <form>
+        <label>
+          "الاسم"
+          <input type=text value=خالد باعشن>
+        <label>
+          "رقم الجوال"
+          <input type=tel value=05512>
+          <span> "10 أرقام تبدأ بـ 05. كتبت 5 أرقام فقط."
+        <div>
+          "طريقة الرد"
+          <div {display=grid; grid-template-columns=1fr 1fr 1fr}>
+            <label {border=1.5px solid #141311; background=#141311; color=#FFFFFF; font-size=13px; font-weight=800}>
+              <input type=radio checked=None {position=absolute}> "واتساب"
+            <label {border=1.5px solid #141311; font-size=13px; font-weight=700; color=#141311}>
+              <input type=radio {position=absolute}> "اتصال"
+            <label {border=1.5px solid #141311; font-size=13px; font-weight=700; color=#141311}>
+              <input type=radio {position=absolute}> "بريد"
+        <label>
+          "الموضوع"
+          <select>
+            <option selected=None> "أبحث عن وحدة"
+            <option> "عندي عقار"
+            <option> "تمويل"
+            <option> "تدريب"
+            <option> "شيء آخر"
+        <label>
+          "رسالتك"
+          <textarea> "أبحث عن شقة 3 غرف بميزانية 700 ألف، هل يمكن زيارة يوم السبت؟"
+          <span {font-weight=600}>
+            <span>
+            <span> "62 / 600"
+        <label {font-size=12px; color=#141311; border=2px solid #B48F2E; background=#FFFDF6}>
+          <input type=checkbox> "أوافق على أن تتواصل SMQ معي بخصوص رسالتي."
+          <a href=Privacy-M.html> "سياسة الخصوصية"
+        <span> "علّم الموافقة حتى نستطيع الرد عليك."
+        <div {border=2px solid #B48F2E; background=#FFFDF6; font-size=12px}>
+          <span>
+            <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+            <span>
+              <strong> "تعذّر الإرسال، انقطع الاتصال."
+              "رسالتك محفوظة في هذه الصفحة."
+          <button type=button {border=1.5px solid #141311; background=#FFFFFF; font-size=12px; font-weight=800}> "أعد المحاولة"
+        <button type=submit {font-size=15px; font-weight=800; border=0; background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}> "أرسل الرسالة"
+        <a href=https://wa.me/966559997929?text=%D8%A3%D8%A8%D8%AD%D8%AB%20%D8%B9%D9%86%20%D8%B4%D9%82%D8%A9%203%20%D8%BA%D8%B1%D9%81 {border=1.5px solid #141311; color=#141311; font-size=14px; font-weight=700; text-decoration=none}> "أو أرسلها على واتساب مباشرة"
+      <p {font-size=11px; color=#5E5A52}> "قواعد الخطأ: ذهبي دائماً لا أحمر، الرسالة تحت الحقل بالكلمات لا بالرمز، ملخص أعلى النموذج يأخذ التركيز، والنص المكتوب لا يُفقد أبداً."

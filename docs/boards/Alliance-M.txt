@@ -1,0 +1,272 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {width=390px; background=#F8F7F4; color=#141311}>
+      <div {background=#B48F2E; color=#141311; font-size=11px; font-weight=800}>
+        <span> "مبادرة من SMQ · مفتوحة لكل مكتب مرخّص في جدة"
+        <a href=Hub-M.html {color=#141311; text-decoration=none}> "تعاون معنا ←"
+      <header {background=#141311; color=#FFFFFF}>
+        <a href=Home-M.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none}>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+        <div>
+          <a href=https://wa.me/966559997929?text=%D8%A7%D9%84%D8%AA%D8%AD%D8%A7%D9%84%D9%81 aria-label=تواصل عبر واتساب {background=#B48F2E; color=#141311; text-decoration=none; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+            <svg svg >
+          <button type=button aria-label=القائمة {border=0; background=transparent; color=#FFFFFF}>
+            <svg svg >
+      <section {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, 100% 0, 100% 100%, 52px 100%, 0 calc(100% - 30px))}>
+        <div {position=absolute; opacity=.9}>
+          <div>
+            <span {background=#3A3630}>
+            <span {background=#3A3630}>
+            <span {background=#B48F2E}>
+          <div>
+            <span {background=#3A3630}>
+            <span {background=#3A3630}>
+            <span {background=#3A3630}>
+          <div>
+            <span {background=#B48F2E}>
+            <span {background=#3A3630}>
+            <span {background=#3A3630}>
+          <div>
+            <span {background=#3A3630}>
+            <span {background=#B48F2E}>
+            <span {background=#3A3630}>
+        <span {font-size=12px; font-weight=700; color=#B48F2E}> "خلية واحدة لكل مكتب عضو · 12 مكتباً اليوم"
+        <h1 {font-size=30px; font-weight=800}> "تحالف مكاتب جدة العقارية"
+        <p {font-size=14px; color=#C9C2B3}> "مكاتب مرخّصة تمرّر طلبات المشترين وعروض العقارات بينها، لتقفل الصفقات أسرع، وكل تعارف مسجّل."
+        <a href=AllianceApply-Step1-M.html {background=#B48F2E; color=#141311; text-decoration=none; font-size=14px; font-weight=800; clip-path=polygon(0 0, calc(100% - 10px) 0, 100% 17px, 100% 100%, 0 100%)}> "سجّل مكتبك · 5 دقائق"
+      <section>
+        <h2> "كيف يعمل، في أربع خطوات"
+        <div>
+          <span> "1"
+          <span>
+            <b> "سجّل مكتبك"
+            <span> "نموذج من 3 خطوات: المكتب، التغطية والتخصص، ما عندكم وما تحتاجون."
+        <div>
+          <span> "2"
+          <span>
+            <b> "نوثّق الرخصة"
+            <span> "نتحقق من رخصة فال في موقع الهيئة يدوياً، خلال يومي عمل، ثم تحمل شارة «رخصة فال موثّقة»."
+        <div>
+          <span> "3"
+          <span>
+            <b> "تصلك طلبات في أحيائك"
+            <span> "كل طلب مشترٍ لا نغطيه، أو يطلبه عضو آخر، يُرسل لمن يغطي الحي. رد بـ «عندي عرض مطابق» أو «لا يوجد»."
+        <div>
+          <span> "4"
+          <span>
+            <b> "كل تعارف مسجّل"
+            <span> "سجل إحالة برقم وتاريخ يحفظ حصة كل طرف طوال فترة الحماية. لا أحد يتخطّى أحداً."
+      <section {display=grid; grid-template-columns=1fr}>
+        <div {background=#FFFFFF; border=1.5px solid #141311}>
+          <span {font-size=14px; font-weight=800}> "ماذا يحصل عليه العضو"
+          <ul {font-size=13px; color=#3A3630}>
+            <li> "طلبات مشترين في الأحياء التي يغطيها"
+            <li> "تقرير طلب شهري: ماذا يبحث عنه مشترو جدة بالحي والميزانية والغرف"
+            <li> "مكان في دليل الأعضاء، باختياره"
+            <li> "سجل إحالة يحمي حصته طوال فترة الحماية"
+        <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 14px) 0, 100% 24px, 100% 100%, 0 100%)}>
+          <span {font-size=14px; font-weight=800; color=#B48F2E}> "ماذا يقدّم العضو"
+          <ul {font-size=13px; color=#C9C2B3}>
+            <li> "عروضه، بعقود وساطة موثّقة أو مباشرة من المُلّاك"
+            <li> "طلباته التي لا يغطيها"
+            <li> "رداً سريعاً على ما يصله: الميزان يحسب الوقت"
+      <section>
+        <h2> "ملخّص الميثاق"
+        <div {border=1.5px solid #141311; background=#FFFFFF}>
+          <div {font-size=13px}>
+            <span {color=#5E5A52}> "تقسيم العمولة بين المكتبين"
+            <strong {color=#8A6C1E}> "50 / 50 [للتأكيد]"
+          <div {font-size=13px}>
+            <span {color=#5E5A52}> "حماية الإحالة"
+            <strong {color=#8A6C1E}> "90 يوماً من التعارف [للتأكيد]"
+          <div {font-size=13px}>
+            <span {color=#5E5A52}> "ما يُخرج العضو"
+            <strong {color=#8A6C1E}> "تخطّي سجل إحالة، أو رخصة منتهية، أو بلا رد 30 يوماً [للتأكيد]"
+        <a href=#charter {font-size=12px; font-weight=700; text-decoration=none}> "الميثاق الكامل، نصّ قابل للطباعة ←"
+      <section {background=#FFFFFF}>
+        <div>
+          <h2> "تغطية جدة"
+          <span {font-size=11px; color=#5E5A52}> "12 مكتباً · 5 جهات · الأسود: يغطيه أعضاء"
+        <div>
+          <span {font-size=11px; font-weight=800; color=#8A6C1E}> "شمال جدة · 5 مكاتب"
+          <div>
+            <span>
+              "أبحر الشمالية"
+              <b> "2"
+            <span>
+              "الشاطئ"
+              <b> "1"
+            <span>
+              "ذهبان"
+              <small> "0"
+            <span>
+              "المحمدية"
+              <b> "2"
+            <span>
+              "النهضة"
+              <small> "0"
+          <span {font-size=11px; font-weight=800; color=#8A6C1E}> "وسط جدة · 4 مكاتب"
+          <div>
+            <span>
+              "الروضة"
+              <b> "2"
+            <span>
+              "الصفا"
+              <b> "1"
+            <span>
+              "النعيم"
+              <b> "1"
+            <span>
+              "الزهراء"
+              <small> "0"
+            <span>
+              "السلامة"
+              <small> "0"
+          <span {font-size=11px; font-weight=800; color=#8A6C1E}> "شرق جدة · 1 مكتب"
+          <div>
+            <span>
+              "الحرازات"
+              <small> "0"
+            <span>
+              "السامر"
+              <b> "1"
+            <span>
+              "الرحاب"
+              <small> "0"
+            <span>
+              "الأجاويد"
+              <small> "0"
+            <span>
+              "بريمان"
+              <small> "0"
+          <span {font-size=11px; font-weight=800; color=#8A6C1E}> "غرب جدة · 1 مكتب"
+          <div>
+            <span>
+              "الحمراء"
+              <b> "1"
+            <span>
+              "البلد"
+              <small> "0"
+            <span>
+              "الأندلس"
+              <small> "0"
+            <span>
+              "الرويس"
+              <small> "0"
+            <span>
+              "الشرفية"
+              <small> "0"
+          <span {font-size=11px; font-weight=800; color=#8A6C1E}> "جنوب جدة · 1 مكتب"
+          <div>
+            <span>
+              "الفيصلية"
+              <b> "1"
+            <span>
+              "المنتزهات"
+              <small> "0"
+            <span>
+              "الجامعة"
+              <small> "0"
+            <span>
+              "السنابل"
+              <small> "0"
+            <span>
+              "قويزة"
+              <small> "0"
+        <span {font-size=11px; color=#5E5A52}> "الشبكة تخطيطية لا جغرافية: كل خلية حي، والرقم عدد المكاتب التي تغطيه. الأحياء الفارغة هي حيث نحتاج أعضاء أولاً."
+      <section>
+        <div>
+          <h2> "دليل الأعضاء"
+          <span {font-size=11px; color=#5E5A52}> "12 · يظهر من اختار الظهور"
+        <div>
+          <div>
+            <span> "أ"
+            <span>
+              <b> "مكتب أ"
+              <span> "أبحر الشمالية · فلل، أراضي مطورة"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "ب"
+            <span>
+              <b> "مكتب ب"
+              <span> "الروضة · شقق، عماير سكنية"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "ج"
+            <span>
+              <b> "مكتب ج"
+              <span> "الشاطئ · شقق، مكاتب"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "د"
+            <span>
+              <b> "مكتب د"
+              <span> "المحمدية · فلل، منتجعات وشاليهات"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "هـ"
+            <span>
+              <b> "مكتب هـ"
+              <span> "الصفا · شقق، عماير تجارية"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "و"
+            <span>
+              <b> "مكتب و"
+              <span> "النعيم · عماير سكنية، أراضي خام"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "ز"
+            <span>
+              <b> "مكتب ز"
+              <span> "السامر · شقق، فلل"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "ح"
+            <span>
+              <b> "مكتب ح"
+              <span> "الحمراء · مكاتب، عماير تجارية"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "ط"
+            <span>
+              <b> "مكتب ط"
+              <span> "الفيصلية · شقق، مستودعات"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "ي"
+            <span>
+              <b> "مكتب ي"
+              <span> "الروضة · أراضي مطورة"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "ك"
+            <span>
+              <b> "مكتب ك"
+              <span> "أبحر الشمالية · فلل"
+            <span> "رخصة فال موثّقة"
+          <div>
+            <span> "ل"
+            <span>
+              <b> "مكتب ل"
+              <span> "المحمدية · شقق، صناعية"
+            <span> "رخصة فال موثّقة"
+        <span {font-size=11px; color=#5E5A52}> "الأسماء هنا مواضع لعرض التصميم (مكتب أ، مكتب ب). الدليل الحقيقي يعرض اسم المكتب كما في الرخصة، وبموافقته فقط."
+      <section {background=#B48F2E; color=#141311; clip-path=polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%)}>
+        <span {font-size=20px; font-weight=800}> "مكتبك مرخّص وتغطي حياً نحتاجه؟"
+        <span {font-size=13px; color=#3D3010}> "الطلب 5 دقائق، التوثيق يومان، ولا رسوم عضوية [للتأكيد]."
+        <a href=AllianceApply-Step1-M.html {background=#141311; color=#FFFFFF; text-decoration=none; font-size=15px; font-weight=800}>
+          "سجّل مكتبك"
+          <svg svg >
+        <a href=AllianceApply-Status-M.html {font-size=12px; font-weight=700; color=#141311}> "قدّمت من قبل؟ تابع حالة طلبك"
+      <footer {background=#141311; color=#C9C2B3; font-size=12px}>
+        <img src=assets/lockup-white.png alt=إس إم كيو العقارية>
+        <span {font-size=12px}> "تحالف مكاتب جدة العقارية مبادرة تديرها شركة إس إم كيو للاستثمار والتسويق العقاري. العضوية لا تعني شراكة تجارية ولا تمثيلاً قانونياً."
+        <div>
+          <a href=Hub-M.html {color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+          <a href=Marketer-M.html {color=#FFFFFF; text-decoration=none}> "انضم كمسوّق"
+          <a href=Add-Step1-M.html {color=#FFFFFF; text-decoration=none}> "أضف عقارك"
+          <a href=Privacy-M.html {color=#FFFFFF; text-decoration=none}> "الخصوصية"
+        <span {font-size=11px}>
+          "ترخيص الهيئة العامة للعقار 1200040135 · السجل التجاري 7029797433"
+          <br> "© 2026 إس إم كيو العقارية"

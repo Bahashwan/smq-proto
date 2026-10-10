@@ -1,0 +1,166 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "ن"
+          "نورة · محررة"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <nav aria-label=المسار {font-size=12px; font-weight=700; color=#5E5A52}>
+            <a href=Admin-Content-D.html {text-decoration=none}> "المحتوى والأسئلة"
+            "› عناوين البحث والمعاينة"
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "عناوين البحث والمعاينة"
+              <span {font-size=13px; color=#5E5A52}> "العنوان والوصف اللذان يظهران في قوقل وفي معاينة الرابط على واتساب. صفحات الوحدات والمشاريع تُولَّد من قالب، والباقي يُكتب يدوياً"
+            <div aria-label=اللغة {border=1.5px solid #141311; background=#FFFFFF}>
+              <button type=button {border=0; font-size=13px; font-weight=800; background=#141311; color=#FFFFFF}> "العربية"
+              <button type=button {border=0; font-size=13px; font-weight=700; background=#FFFFFF; color=#141311}> "English"
+          <div {border=1.5px solid #141311}>
+            <div {display=grid; grid-template-columns=200px 1fr 1fr 300px; font-size=11px; font-weight=800; color=#5E5A52; background=#F3F1EB}>
+              <span> "الصفحة"
+              <span> "العنوان (حتى 60 حرفاً)"
+              <span> "الوصف (حتى 155 حرفاً)"
+              <span> "معاينة الرابط · 1200×630"
+            <div>
+              <div>
+                <span {font-size=14px; font-weight=800}> "الرئيسية"
+                <span {font-size=11px; color=#5E5A52}> "smq-re.com/"
+              <label>
+                <input value=شقق وفلل روف بأسعار معلنة في جدة · إس إم كيو العقارية>
+                <span>
+                  <span> "بلا «اتصل للسعر» في العنوان"
+                  <span> "52 / 60"
+              <label>
+                <textarea> "ابدأ من ميزانيتك وشاهد الوحدات المتاحة الآن في جدة بأسعارها الكاملة. حي الروضة من 459,000 ريال. تواصل على واتساب."
+                <span>
+                  <span> "السعر يُحدَّث تلقائياً من أقل وحدة متاحة"
+                  <span> "121 / 155"
+              <div>
+                <div>
+                  <img src=assets/lockup-goldmark-white.png alt=>
+                  <span {font-size=9px; font-weight=800; color=#B48F2E}> "OG-Home"
+                <div>
+                  <span> "smq-re.com"
+                  <span> "شقق وفلل روف بأسعار معلنة في جدة"
+                  <span> "ابدأ من ميزانيتك وشاهد الوحدات المتاحة الآن…"
+            <div>
+              <div>
+                <span {font-size=14px; font-weight=800}> "الوحدة (قالب)"
+                <span {font-size=11px; color=#5E5A52}> "/units/{code}"
+                <span {font-size=11px; font-weight=700; background=#F3F1EB}> "10 صفحات"
+              <label>
+                <input value={type} {beds} غرف · {area} م² · {price} ريال · {project}>
+                <span>
+                  <span> "مثال: شقة 3 غرف · 147 م² · 690,000 ريال · جاردن الروضة"
+                  <span> "≈ 48"
+              <label>
+                <textarea> "{type} في {district}، جدة. {beds} غرف و{baths} حمامات، {area} م²، بسعر {price} ريال {status_phrase}. تفاصيل كاملة ومخطط وتواصل مباشر على واتساب."
+                <span>
+                  <span> "{status_phrase} = «متاحة الآن» أو «محجوزة» أو «مباعة»"
+                  <span> "≈ 140"
+              <div>
+                <div {background=#F8F7F4}>
+                  <span {font-size=16px; font-weight=800; color=#141311}> "690,000"
+                  <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}>
+                <div>
+                  <span> "smq-re.com/units/rz-a"
+                  <span> "شقة 3 غرف · 147 م² · 690,000 ريال"
+                  <span> "شقة في الروضة، جدة. 3 غرف و3 حمامات…"
+            <div>
+              <div>
+                <span {font-size=14px; font-weight=800}> "المشروع (قالب)"
+                <span {font-size=11px; color=#5E5A52}> "/projects/{slug}"
+                <span {font-size=11px; font-weight=700; background=#F3F1EB}> "2 صفحتان"
+              <label>
+                <input value={project} · {district} · من {min_price} ريال>
+                <span>
+                  <span> "مثال: جاردن الروضة · الروضة · من 459,000 ريال"
+                  <span> "≈ 44"
+              <label>
+                <textarea> "{available_count} وحدة متاحة في {project}، {district}. {types_phrase}، أسعار معلنة من {min_price} إلى {max_price} ريال. التسليم {delivery}."
+                <span>
+                  <span> "{delivery} يحمل [للتأكيد] حتى يُؤكَّد"
+                  <span> "≈ 130"
+              <div>
+                <div {background=#141311}>
+                  <span {font-size=13px; font-weight=800; color=#FFFFFF}> "جاردن الروضة"
+                  <span {font-size=10px; font-weight=800; color=#B48F2E}> "8 متاحة"
+                <div>
+                  <span> "smq-re.com/projects/garden-rawdah"
+                  <span> "جاردن الروضة · الروضة · من 459,000 ريال"
+                  <span> "8 وحدات متاحة في جاردن الروضة، الروضة…"
+            <div>
+              <div>
+                <span {font-size=14px; font-weight=800}> "دليل الأسعار"
+                <span {font-size=11px; color=#5E5A52}> "/guide"
+              <label>
+                <input value=دليل أسعار الشقق في الروضة، جدة · محدَّث من الوحدات المتاحة>
+                <span>
+                  <span>
+                  <span> "58 / 60"
+              <label>
+                <textarea> "كم تكلّف شقة غرفتين أو 3 غرف في الروضة؟ نطاقات حقيقية من وحداتنا المتاحة الآن، بسعر المتر، وتتحدّث تلقائياً."
+                <span>
+                  <span>
+                  <span> "112 / 155"
+              <div>
+                <div {background=#F3F1EB}>
+                  <span {font-size=12px; font-weight=800; color=#141311}> "459 إلى 690 ألف"
+                  <span {font-size=9px; font-weight=800; color=#8A6C1E}> "دليل الأسعار"
+                <div>
+                  <span> "smq-re.com/guide"
+                  <span> "دليل أسعار الشقق في الروضة، جدة"
+                  <span> "كم تكلّف شقة غرفتين أو 3 غرف في الروضة؟…"
+            <div>
+              <div>
+                <span {font-size=14px; font-weight=800}> "من نحن"
+                <span {font-size=11px; color=#5E5A52}> "/about"
+              <label>
+                <input value=من نحن · إس إم كيو للاستثمار والتسويق العقاري، جدة>
+                <span>
+                  <span>
+                  <span> "49 / 60"
+              <label>
+                <textarea> "شركة استثمار وتسويق عقاري في جدة تبدأ من الأرقام. تعرّف على قصتنا والمؤسس سعود معيض وشركائنا في التمويل."
+                <span {color=#8A6C1E}>
+                  <span> "غير محفوظ"
+                  <span> "107 / 155"
+              <div>
+                <div>
+                  <img src=assets/lockup-goldmark-white.png alt=>
+                  <span {font-size=9px; font-weight=800; color=#B48F2E}> "OG-Home (مشترك)"
+                <div>
+                  <span> "smq-re.com/about"
+                  <span> "من نحن · إس إم كيو للاستثمار والتسويق العقاري"
+                  <span> "شركة استثمار وتسويق عقاري في جدة تبدأ من الأرقام…"
+          <span {font-size=12px; color=#5E5A52}> "و3 صفحات أخرى (الخدمات، أضف عقارك، تواصل) بنفس الصف. صفحات الإدارة والخصوصية و404 تحمل noindex ولا تظهر هنا. صور المعاينة في لوحة OG (القسم 29 في الكانفاس)."
+          <div aria-label=شريط الحفظ {position=sticky; background=#141311; color=#FFFFFF}>
+            <span {font-size=13px; font-weight=700}>
+              <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}> "تغييرات غير محفوظة في حقل واحد"
+            <div>
+              <button type=button {border=1.5px solid #C9C2B3; background=transparent; color=#FFFFFF; font-size=13px; font-weight=700}> "تجاهل"
+              <button type=button {border=0; background=#B48F2E; color=#141311; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "حفظ ونشر"

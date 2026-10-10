@@ -1,0 +1,272 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "الزوار"
+              <span {font-size=13px; color=#5E5A52}> "30 يوماً · 5,112 زائراً · 7,930 جلسة · الهوية مجهولة حتى يرسل الزائر نموذجاً؛ نقرة واتساب تحمل رمزاً مرجعياً فقط"
+            <div>
+              <div aria-label=الفترة {border=1.5px solid #141311}>
+                <button type=button {font-size=12px; font-weight=700; border=0; background=#FFFFFF}> "اليوم"
+                <button type=button {font-size=12px; font-weight=700; border=0; background=#FFFFFF}> "7 أيام"
+                <button type=button {font-size=12px; font-weight=700; border=0; background=#141311; color=#FFFFFF}> "30 يوماً"
+              <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "تصدير CSV"
+          <section {display=grid; grid-template-columns=repeat(auto-fit, minmax(min(300px, 100%), 1fr))}>
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <h2 {font-size=15px; font-weight=800}> "من أين يأتون"
+              <div {font-size=12px}>
+                <div {display=grid; grid-template-columns=70px 1fr 90px}>
+                  <span {font-weight=800}> "سناب شات"
+                  <div {background=#F3F1EB}>
+                    <span {background=#B48F2E}>
+                  <span {color=#5E5A52}> "34% · 9.1% واتساب"
+                <div {display=grid; grid-template-columns=70px 1fr 90px}>
+                  <span> "تيك توك"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {color=#5E5A52}> "22% · 5.4%"
+                <div {display=grid; grid-template-columns=70px 1fr 90px}>
+                  <span> "واتساب"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {color=#5E5A52}> "16% · 12.3%"
+                <div {display=grid; grid-template-columns=70px 1fr 90px}>
+                  <span> "إنستغرام"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {color=#5E5A52}> "11% · 6.0%"
+                <div {display=grid; grid-template-columns=70px 1fr 90px}>
+                  <span> "قوقل"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {color=#5E5A52}> "10% · 7.7%"
+                <div {display=grid; grid-template-columns=70px 1fr 90px}>
+                  <span> "مباشر"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {color=#5E5A52}> "7% · 4.1%"
+              <span {font-size=11px; color=#5E5A52}> "النسبة الثانية = تحويل المصدر إلى واتساب. واتساب يحوّل أكثر، سناب شات يجلب أكثر."
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <h2 {font-size=15px; font-weight=800}> "الجهاز واللغة"
+              <div>
+                <div {background=#141311; color=#FFFFFF}>
+                  <span {font-size=22px; font-weight=800}> "86%"
+                  <span {font-size=11px; color=#C9C2B3}> "جوال · iOS 61 · Android 25"
+                <div {background=#F3F1EB}>
+                  <span {font-size=22px; font-weight=800}> "14%"
+                  <span {font-size=11px; color=#5E5A52}> "سطح مكتب"
+              <div>
+                <div {border=1.5px solid #141311}>
+                  <span {font-size=18px; font-weight=800}> "93%"
+                  <span {font-size=11px; color=#5E5A52}> "عربي"
+                <div {border=1.5px solid #D4CFC4}>
+                  <span {font-size=18px; font-weight=800}> "7%"
+                  <span {font-size=11px; color=#5E5A52}> "EN"
+              <div {font-size=12px}>
+                <span {color=#5E5A52}> "متوسط الجلسة"
+                <strong> "2:48"
+                <span {color=#5E5A52}> "صفحات لكل جلسة"
+                <strong> "3.4"
+                <span {color=#5E5A52}> "عائدون"
+                <strong> "28%"
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <h2 {font-size=15px; font-weight=800}> "المدن"
+              <div {font-size=12px}>
+                <div {display=grid; grid-template-columns=70px 1fr 40px}>
+                  <span {font-weight=800}> "جدة"
+                  <div {background=#F3F1EB}>
+                    <span {background=#B48F2E}>
+                  <span {color=#5E5A52}> "71%"
+                <div {display=grid; grid-template-columns=70px 1fr 40px}>
+                  <span> "مكة"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {color=#5E5A52}> "9%"
+                <div {display=grid; grid-template-columns=70px 1fr 40px}>
+                  <span> "الرياض"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {color=#5E5A52}> "8%"
+                <div {display=grid; grid-template-columns=70px 1fr 40px}>
+                  <span> "المدينة"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {color=#5E5A52}> "4%"
+                <div {display=grid; grid-template-columns=70px 1fr 40px}>
+                  <span> "خارج السعودية"
+                  <div {background=#F3F1EB}>
+                    <span {background=#141311}>
+                  <span {color=#5E5A52}> "5%"
+              <span {font-size=11px; color=#5E5A52}> "من عنوان الشبكة بتقريب المدينة فقط. لا يُخزَّن عنوان IP كاملاً."
+          <section>
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+              <div>
+                <h2 {font-size=15px; font-weight=800}> "آخر الزوار"
+                <div>
+                  <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#141311; color=#FFFFFF}> "الكل"
+                  <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "ضغطوا واتساب"
+                  <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "بحثوا بلا نتائج"
+                  <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "عائدون"
+              <div>
+                <table {font-size=12px}>
+                  <thead>
+                    <tr {font-size=11px; color=#5E5A52}>
+                      <th {font-weight=700}> "الزائر"
+                      <th {font-weight=700}> "المصدر · الجهاز · المدينة"
+                      <th {font-weight=700}> "آخر بحث"
+                      <th {font-weight=700}> "وحدات مفتوحة"
+                      <th {font-weight=700}> "واتساب"
+                      <th {font-weight=700}> "الوقت"
+                  <tbody>
+                    <tr {background=#F3F1EB}>
+                      <td {font-weight=800}>
+                        "v-8f3a2 ·"
+                        <span {font-weight=400}> "SMQ-8F3A2"
+                      <td> "سناب شات · iPhone · جدة"
+                      <td> "الروضة · 500 ألف · غرفتان"
+                      <td> "D روز، D ياسمين، C روز"
+                      <td>
+                        <span {background=#B48F2E; font-weight=700}> "نعم · D روز"
+                      <td {color=#5E5A52}> "قبل 14 د"
+                    <tr>
+                      <td {font-weight=800}> "v-2c91e"
+                      <td> "تيك توك · Android · مكة"
+                      <td>
+                        "أبحر الشمالية · 700 ألف · 3 غرف"
+                        <span {color=#8A6C1E; font-weight=700}> "· 0 نتائج"
+                      <td {color=#5E5A52}> "لا شيء"
+                      <td {color=#5E5A52}> "لا"
+                      <td {color=#5E5A52}> "قبل 22 د"
+                    <tr>
+                      <td {font-weight=800}>
+                        "v-77b04 ·"
+                        <span {font-weight=400}> "عائد ×3"
+                      <td> "مباشر · سطح مكتب · جدة"
+                      <td> "الروضة · 1.7 مليون · 5 غرف"
+                      <td> "روف روز، روف ياسمين (مقارنة)"
+                      <td {color=#5E5A52}> "لا · فتح الاتصال"
+                      <td {color=#5E5A52}> "قبل ساعة"
+                    <tr>
+                      <td {font-weight=800}> "v-a10f9"
+                      <td> "واتساب · iPhone · جدة"
+                      <td> "دخل مباشرة إلى نموذج B روز"
+                      <td> "B روز"
+                      <td>
+                        <span {background=#B48F2E; font-weight=700}> "نعم · B روز"
+                      <td {color=#5E5A52}> "قبل ساعتين"
+                    <tr>
+                      <td {font-weight=800}> "v-5d2c7"
+                      <td> "قوقل · iPhone · الرياض"
+                      <td> "دليل الأسعار · الروضة"
+                      <td> "A روز"
+                      <td {color=#5E5A52}> "لا"
+                      <td {color=#5E5A52}> "قبل 3 ساعات"
+                    <tr>
+                      <td {font-weight=800}> "v-c3e18"
+                      <td> "إنستغرام · Android · جدة"
+                      <td>
+                        "الفيصلية · 450 ألف"
+                        <span {color=#8A6C1E; font-weight=700}> "· 0 نتائج"
+                        "· أرسل طلباً"
+                      <td {color=#5E5A52}> "لا شيء"
+                      <td>
+                        <span {border=1.5px solid #141311; font-weight=700}> "طلب محفوظ"
+                      <td {color=#5E5A52}> "أمس"
+              <div {font-size=12px; color=#5E5A52}>
+                <span> "1 إلى 6 من 5,112"
+                <div>
+                  <button type=button {font-size=12px; font-weight=700; border=1.5px solid #D4CFC4; background=#FFFFFF; color=#8A8478}> "السابق"
+                  <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "التالي"
+            <aside {background=#FFFFFF; border=1.5px solid #141311}>
+              <div {background=#141311; color=#FFFFFF; clip-path=polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%)}>
+                <span {font-size=11px; color=#C9C2B3}> "الزائر"
+                <span {font-size=18px; font-weight=800}> "v-8f3a2"
+                <span {font-size=12px; color=#C9C2B3}> "ضغط واتساب · الرمز SMQ-8F3A2 داخل الرسالة الجاهزة · لا رقم حتى تصل رسالته"
+              <div {display=grid; grid-template-columns=repeat(2, minmax(0, 1fr)); font-size=12px}>
+                <span>
+                  <span {color=#5E5A52}> "المصدر"
+                  <strong> "سناب شات · إعلان الروضة"
+                <span>
+                  <span {color=#5E5A52}> "الجهاز"
+                  <strong> "iPhone · Safari"
+                <span>
+                  <span {color=#5E5A52}> "المدينة"
+                  <strong> "جدة"
+                <span>
+                  <span {color=#5E5A52}> "اللغة"
+                  <strong> "عربي"
+                <span>
+                  <span {color=#5E5A52}> "الزيارات"
+                  <strong> "2 · أول زيارة أمس"
+                <span>
+                  <span {color=#5E5A52}> "مدة الجلسة"
+                  <strong> "6:12"
+              <div {font-size=12px}>
+                <span {font-weight=800}> "مسار الجلسة"
+                <div>
+                  <span {background=#141311; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                  <span>
+                    <strong> "الرئيسية"
+                    "من رابط سناب شات"
+                    <br>
+                    <span {color=#5E5A52}> "21:40 · 18 ثانية"
+                <div>
+                  <span {background=#141311; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                  <span>
+                    <strong> "بحث"
+                    "· 450 ألف ثم 500 ألف · الروضة · غرفتان"
+                    <br>
+                    <span {color=#5E5A52}> "21:41 · 4 ثم 6 نتائج"
+                <div>
+                  <span {background=#141311; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                  <span>
+                    <strong> "فتح"
+                    "نموذج D روز، D ياسمين، C روز"
+                    <br>
+                    <span {color=#5E5A52}> "21:42 إلى 21:45 · الأطول: D روز، 94 ثانية"
+                <div>
+                  <span {background=#141311; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                  <span>
+                    <strong> "مقارنة"
+                    "D روز مع D ياسمين"
+                    <br>
+                    <span {color=#5E5A52}> "21:45"
+                <div>
+                  <span {background=#B48F2E; clip-path=polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)}>
+                  <span>
+                    <strong> "واتساب"
+                    "من بطاقة D روز · رسالة جاهزة RZ-D"
+                    <br>
+                    <span {color=#5E5A52}> "21:46 · بلا رد بعد · خارج ساعات العمل"
+              <div>
+                <button type=button {font-size=12px; font-weight=800; border=0; background=#B48F2E; color=#141311; clip-path=polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%)}> "انسخ SMQ-8F3A2 للبحث في واتساب"
+                <button type=button {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}> "تحويل إلى عميل"
+              <span {font-size=11px; color=#5E5A52}> "الزوار المجهولون يُحفظون 90 يوماً ثم يُحذفون. الموقع لا يعرف رقم من ضغط واتساب؛ الرسالة الجاهزة تحمل رمزاً مرجعياً يطابق الزائر عندما تصل رسالته. رقم الجوال يُخزَّن فقط عند إرسال نموذج."

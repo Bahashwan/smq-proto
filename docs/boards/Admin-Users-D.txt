@@ -1,0 +1,253 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F8F7F4; color=#141311}>
+      <header {background=#141311; color=#FFFFFF}>
+        <div>
+          <img src=assets/lockup-goldmark-white.png alt=إس إم كيو العقارية>
+          <span {font-size=12px; font-weight=700; background=#B48F2E; color=#141311}> "لوحة الإدارة"
+        <span {font-size=13px; font-weight=700}>
+          <span {background=#B48F2E; color=#141311; font-size=12px; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "س"
+          "سعود · مدير"
+      <div>
+        <nav aria-label=أقسام الإدارة {background=#FFFFFF}>
+          <a href=Admin-Overview-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "نظرة عامة"
+          <a href=Admin-Approvals-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "طلبات الموافقة"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "3"
+          <a href=Admin-Inventory-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الوحدات"
+          <a href=Admin-Projects-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المشاريع"
+          <a href=Admin-Leads-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الطلبات الواردة"
+          <a href=Admin-Analytics-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "تحليلات البحث"
+          <a href=Admin-Visitors-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "الزوار"
+          <span {font-size=11px; font-weight=800; color=#5E5A52}> "تعاون معنا"
+          <a href=Admin-Marketers-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "المسوّقون"
+            <span {border=1.5px solid #141311; font-size=11px; font-weight=800}> "2"
+          <a href=Admin-Alliance-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}>
+            <span> "غرفة التحالف"
+            <span {background=#B48F2E; font-size=11px; font-weight=800}> "5"
+          <a href=Admin-Content-D.html {font-size=14px; font-weight=700; color=#141311; text-decoration=none}> "المحتوى والأسئلة"
+          <a href=Admin-Users-D.html {font-size=14px; font-weight=800; color=#141311; text-decoration=none; background=#F3F1EB}> "الإعدادات والمستخدمون"
+        <main>
+          <div>
+            <div>
+              <h1 {font-size=28px; font-weight=800}> "الإعدادات والمستخدمون"
+              <span {font-size=13px; color=#5E5A52}> "من يدخل اللوحة وماذا يستطيع، وحالة ربط واتساب بزنس. لا حسابات للزوار في أي مكان على الموقع"
+            <button type=button {border=0; background=#141311; color=#FFFFFF; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "+ دعوة مستخدم"
+          <div {display=grid; grid-template-columns=1.3fr 1fr}>
+            <section>
+              <header>
+                <h2>
+                  "المستخدمون"
+                  <span> "3 نشطون · دعوة معلّقة"
+                <span> "آخر دخول بتوقيت جدة"
+              <div>
+                <span> "س"
+                <div>
+                  <span {font-size=14px; font-weight=800}>
+                    "سعود معيض"
+                    <span> "مدير"
+                  <span> "saud@smqre.com · آخر دخول اليوم 09:12"
+                <span> "المالك · لا يُحذف"
+              <div>
+                <span> "ن"
+                <div>
+                  <span {font-size=14px; font-weight=800}>
+                    "نورة الشريف"
+                    <span> "محررة"
+                  <span> "noura@smqre.com · آخر دخول أمس 17:40"
+                <button type=button> "تعديل الدور"
+                <button type=button> "إيقاف"
+              <div>
+                <span> "ف"
+                <div>
+                  <span {font-size=14px; font-weight=800}>
+                    "فيصل الحربي"
+                    <span> "محرر"
+                  <span> "faisal@smqre.com · آخر دخول قبل 6 أيام"
+                <button type=button> "تعديل الدور"
+                <button type=button> "إيقاف"
+              <div {background=#FFFDF6}>
+                <span {background=#FFFFFF; color=#141311}> "؟"
+                <div>
+                  <span {font-size=14px; font-weight=800}>
+                    "دعوة معلّقة"
+                    <span> "محرر"
+                  <span> "m.baeshen@smqre.com · أُرسلت قبل 3 أيام · تنتهي بعد 4"
+                <button type=button> "إعادة الإرسال"
+                <button type=button> "إلغاء"
+              <div {background=#F8F7F4}>
+                <span {font-size=12px; font-weight=800}> "دعوة مستخدم"
+                <div {display=grid; grid-template-columns=1fr 1fr 150px auto}>
+                  <label {font-size=11px; font-weight=700; color=#5E5A52}>
+                    "الاسم"
+                    <input value= placeholder=الاسم الكامل {font-size=13px; border=1.5px solid #141311; background=#FFFFFF}>
+                  <label {font-size=11px; font-weight=700; color=#5E5A52}>
+                    "البريد"
+                    <input value= placeholder=name@smqre.com {font-size=13px; border=1.5px solid #141311; background=#FFFFFF}>
+                  <label {font-size=11px; font-weight=700; color=#5E5A52}>
+                    "الدور"
+                    <select {font-size=13px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                      <option> "محرر"
+                      <option> "مدير"
+                  <button type=button {border=0; background=#141311; color=#FFFFFF; font-size=13px; font-weight=800}> "أرسل الدعوة"
+                <span> "تصل الدعوة بالبريد وتصلح 7 أيام. المستخدم يضع كلمة مروره بنفسه. لا تسجيل ذاتي من صفحة الدخول."
+            <div>
+              <section>
+                <header>
+                  <h2> "واتساب بزنس"
+                  <span {font-size=12px; font-weight=800}>
+                    <span {background=#B48F2E; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "متصل"
+                <div {font-size=13px}>
+                  <div>
+                    <span> "الرقم"
+                    <span {font-weight=700}> "+966 55 999 7929"
+                  <div>
+                    <span> "آخر رسالة تلقائية"
+                    <span {font-weight=700}> "اليوم 10:04 · تأكيد طلب 2026-1042"
+                  <div>
+                    <span> "القوالب المعتمدة"
+                    <span {font-weight=700}> "3 من 3"
+                  <p {background=#F3F1EB; font-size=12px}>
+                    <strong> "الوضع اليدوي"
+                    "يعمل تلقائياً إذا انقطع الاتصال: تظهر أزرار «أرسل على واتساب» بدل الإرسال التلقائي في الموافقات والطلبات الواردة، ويُسجَّل كل إرسال يدوي في السجل."
+                  <div>
+                    <button type=button> "إعادة الربط"
+                    <button type=button> "تحويل إلى الوضع اليدوي"
+              <section>
+                <header {background=#FFFDF6}>
+                  <h2>
+                    "واتساب بزنس"
+                    <span> "الحالة الثانية"
+                  <span {font-size=12px; font-weight=800; color=#8A6C1E}>
+                    <span {background=#FFFFFF; clip-path=polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)}> "غير متصل · وضع يدوي"
+                <div {font-size=13px}>
+                  <span>
+                    "انقطع الاتصال قبل 40 دقيقة. 2 رسالتان بانتظار الإرسال اليدوي في"
+                    <a href=Admin-Approvals-D.html {font-weight=800; text-decoration=none}> "الموافقات"
+                    "."
+                  <button type=button {border=0; background=#B48F2E; color=#141311; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}> "إعادة الربط الآن"
+          <section>
+            <header>
+              <h2> "الأدوار والصلاحيات"
+              <span> "دوران فقط. الصلاحيات ثابتة في النسخة الأولى، تُعرض للتوضيح لا للتعديل"
+            <table>
+              <thead>
+                <tr>
+                  <th> "الإجراء"
+                  <th> "مدير"
+                  <th> "محرر"
+                  <th> "ملاحظة"
+              <tbody>
+                <tr>
+                  <td> "تحرير الوحدات والمشاريع والمحتوى، حفظ كمسودة"
+                  <td>
+                    <span>
+                  <td>
+                    <span>
+                  <td> "كل التحرير متاح للمحرر"
+                <tr>
+                  <td> "نشر صفحة أو وحدة"
+                  <td>
+                    <span>
+                  <td>
+                    <span>
+                  <td> "يُسجَّل باسم الناشر في السجل"
+                <tr>
+                  <td> "إزالة وسم [للتأكيد] أو [مسودة إجابة]"
+                  <td>
+                    <span>
+                  <td>
+                    <span>
+                  <td> "المحرر يطلب التأكيد، والمدير يؤكد"
+                <tr>
+                  <td> "الموافقة على عقار مالك أو رفضه"
+                  <td>
+                    <span>
+                  <td>
+                    <span>
+                  <td> "يمكن للمحرر الكتابة للمالك وطلب نواقص"
+                <tr>
+                  <td> "تغيير حالة وحدة إلى «مباع»"
+                  <td>
+                    <span>
+                  <td>
+                    <span>
+                  <td> "«محجوز» متاح للمحرر مع تاريخ"
+                <tr>
+                  <td> "استيراد Excel"
+                  <td>
+                    <span>
+                  <td>
+                    <span>
+                  <td> "المعاينة إجبارية قبل التطبيق"
+                <tr>
+                  <td> "حذف وحدة أو مشروع أو سؤال"
+                  <td>
+                    <span>
+                  <td>
+                    <span>
+                  <td> "حوار تأكيد يطلب كتابة الرمز"
+                <tr>
+                  <td> "رؤية بيانات الزوار والطلبات الواردة"
+                  <td>
+                    <span>
+                  <td>
+                    <span>
+                  <td> "أرقام الجوال تظهر للدورين"
+                <tr>
+                  <td> "إعدادات الموقع، المستخدمون، واتساب بزنس"
+                  <td>
+                    <span>
+                  <td>
+                    <span>
+                  <td> "هذه الصفحة للمدير فقط"
+          <section>
+            <header>
+              <h2> "سجل الإجراءات"
+              <div>
+                <select {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                  <option> "كل المستخدمين"
+                  <option> "سعود"
+                  <option> "نورة"
+                  <option> "فيصل"
+                <select {font-size=12px; font-weight=700; border=1.5px solid #141311; background=#FFFFFF}>
+                  <option> "آخر 30 يوماً"
+                  <option> "آخر 90 يوماً"
+                <button type=button> "تصدير CSV"
+            <div {font-weight=800; color=#5E5A52; font-size=11px; background=#F8F7F4}>
+              <span> "الوقت"
+              <span> "المستخدم"
+              <span> "الإجراء"
+            <div>
+              <span> "اليوم 10:04"
+              <span> "النظام"
+              <span> "أُرسلت تلقائياً: تأكيد استلام الطلب 2026-1042 (واتساب بزنس متصل)"
+            <div>
+              <span> "اليوم 09:12"
+              <span> "سعود"
+              <span> "دخول من جدة · Chrome · iPhone"
+            <div>
+              <span> "أمس 17:40"
+              <span> "نورة"
+              <span> "حفظت مسودة: الرئيسية › الهيرو › العنوان"
+            <div>
+              <span> "أمس 16:55"
+              <span> "نورة"
+              <span> "علّمت الطلب SMQ-2C91E «تم الرد»"
+            <div>
+              <span> "أمس 11:30"
+              <span> "سعود"
+              <span> "غيّر حالة YS-A إلى «مباع» · تاريخ البيع 2026-09-28"
+            <div>
+              <span> "قبل 3 أيام"
+              <span> "سعود"
+              <span> "أرسل الدعوة إلى m.baeshen@smqre.com بدور «محرر»"
+            <div>
+              <span> "قبل 4 أيام"
+              <span> "فيصل"
+              <span> "استورد ملف Excel: 10 صفوف، تغيّر سعر RZ-C من 510,000 إلى 499,000 ثم تراجع"
+            <div>
+              <span> "قبل 6 أيام"
+              <span> "سعود"
+              <span> "أرسل على واتساب يدوياً: رفض الطلب 2026-1037 (الاتصال كان منقطعاً)"

@@ -1,0 +1,38 @@
+<html lang=ar dir=rtl>
+  <body>
+    <div dir=rtl {background=#F3F1EB; color=#141311; height=320px}>
+      <header {position=sticky; background=#141311; color=#FFFFFF}>
+        <div>
+          <a href=Home-D.html aria-label=SMQ العقارية، الصفحة الرئيسية {text-decoration=none; color=#FFFFFF}>
+            <img src=assets/logo-mark-gold.png alt=إس إم كيو العقارية>
+            <span {font-size=13px; font-weight=800}> "SMQ العقارية"
+          <nav aria-label=الرئيسية>
+            <a href=Results-D.html {font-size=13px; font-weight=600; color=#FFFFFF; text-decoration=none}> "العقارات"
+            <a href=Guide-D.html {font-size=13px; font-weight=700; color=#B48F2E; text-decoration=none}> "دليل الأسعار"
+            <a href=Projects-D.html {font-size=13px; font-weight=600; color=#FFFFFF; text-decoration=none}> "المشاريع"
+            <a href=Services-D.html {font-size=13px; font-weight=600; color=#FFFFFF; text-decoration=none}> "الخدمات"
+            <a href=Hub-D.html {font-size=13px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تعاون معنا"
+            <a href=About-D.html {font-size=13px; font-weight=600; color=#FFFFFF; text-decoration=none}> "من نحن"
+            <a href=Contact-D.html {font-size=13px; font-weight=600; color=#FFFFFF; text-decoration=none}> "تواصل معنا"
+          <div>
+            <a href=EN-Home-M.html aria-label=English {font-size=12px; font-weight=700; text-decoration=none; color=#FFFFFF}> "EN"
+            <a href=tel:+966556607779 aria-label=اتصال 0556607779 {border=1.5px solid #5E5A52; color=#FFFFFF; text-decoration=none}>
+              <svg svg >
+            <a href=https://wa.me/966559997929 {background=#B48F2E; color=#141311; text-decoration=none; font-size=13px; font-weight=800; clip-path=polygon(0 0, calc(100% - 9px) 0, 100% 16px, 100% 100%, 0 100%)}>
+              <svg svg > "واتساب"
+      <div {display=grid; grid-template-columns=1fr 360px; opacity=.9}>
+        <div>
+          <h2 {font-size=22px; font-weight=800}> "شقق الغرفتين · 459 إلى 555 ألف"
+          <div {background=#D4CFC4}>
+          <div {background=#D4CFC4}>
+          <div {display=grid; grid-template-columns=repeat(3, 1fr)}>
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+            <div {background=#FFFFFF; border=1.5px solid #141311}>
+        <div {background=#FFFFFF; border=1.5px solid #141311; font-size=12px}>
+          <span {font-size=12px; font-weight=800}> "قواعد حالة التمرير"
+          <span> "· تبدأ بعد 120px من التمرير، وتعود الكاملة عند أعلى الصفحة."
+          <span> "· الارتفاع 72 ← 56. الشعار الكامل ← العلامة الذهبية مع الاسم. رقم الهاتف ← أيقونة."
+          <span> "· خط ذهبي 2px تحت الهيدر يميّز الحالة الملتصقة، بلا ظل."
+          <span> "· على الجوال يختفي الهيدر مع التمرير للأسفل ويعود عند التمرير للأعلى؛ زر واتساب الملتصق أسفل الصفحة يبقى دائماً."
+          <span> "· الانتقال 160ms بلا حركة سوى تغيّر الارتفاع."
