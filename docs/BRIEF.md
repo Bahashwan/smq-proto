@@ -58,6 +58,8 @@ Add a presenter layer, hidden from normal visitors (opens with a key press and w
 - Link previews: Satori handles Arabic poorly, so render the three OG boards as routes and screenshot them to PNG with Playwright. Favicon and app icons as specified on the Icons board
 - After each section, screenshot your pages at 390 and 1440 next to the matching preview boards and fix the differences before showing me
 
+> Superseded. This Maps section is kept verbatim for the record; the 2026-10-10 amendment at the end of this file replaces it (no map library, no key).
+
 ## Maps (Google Maps, in brand colours)
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY is set. Use @vis.gl/react-google-maps. Load the API with language ar and region SA (en on the English routes). Load a map only when it scrolls into view or its tab is opened.
 

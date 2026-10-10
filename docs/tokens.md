@@ -69,7 +69,7 @@ Root: `font-feature-settings: 'tnum' 1`, Western digits everywhere (`unicode-bid
 | `--smq-border-interactive` | 1.5px solid ink |
 | `--smq-border-line` | 1px solid line |
 | `--smq-border-active` | 3px solid gold (active tab) |
-| `--smq-border-error` | 2px solid gold, background `--smq-cream-focus` |
+| `--smq-border-error` | 2px solid gold, background `--smq-cream-focus`. The Tokens sheet sentence says 1.5px; the Components sheet and the Contact-Error-M board draw 2px + #FFFDF6, and the built state follows those two |
 | `--smq-motion-hover` | 120ms |
 | `--smq-motion-sheet` | 200ms |
 | `--smq-motion-skeleton` | 1400ms pulse |
