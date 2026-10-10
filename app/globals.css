@@ -112,3 +112,6 @@
   h1, h2, h3 { font-weight: 800; line-height: 1.2; }
   ::selection { background: var(--smq-gold); color: var(--smq-ink); }
 }
+
+/* presenter tour highlight */
+[data-tour-highlight] { outline: 3px solid var(--smq-gold); outline-offset: 4px; }
