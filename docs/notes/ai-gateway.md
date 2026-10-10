@@ -1,0 +1,11 @@
+# AI Gateway image generation notes (verified 2026-10-10)
+- Model: bfl/flux-3-image. AI SDK 7 (ai@7.0.137, bundles @ai-sdk/gateway). Node 22+, ESM. Plain string model id works; or gateway.imageModel('bfl/flux-3-image').
+- Key: AI_GATEWAY_API_KEY env var.
+- generateImage({ model, prompt, aspectRatio:'16:9', seed?, n?, providerOptions:{ blackForestLabs:{ resolution:'2k', grounding:false, safetyTolerance:2, pollTimeoutMillis:240000 } } })
+  - aspect ratios: 21:9 2:1 16:9 3:2 7:5 4:3 5:4 1:1 4:5 3:4 5:7 2:3 9:16 1:2 9:21
+  - resolution: '768sq'|'1k'|'1.5k'|'2k'|'4k' (2k ~ 2048 class). seed/width/height NOT accepted as input (dropped).
+- Reference images: prompt: { text, images: [Uint8Array|Buffer|base64, ...] } up to 10, >=256px, <=16MP. If aspectRatio omitted, follows first ref.
+- Result: image.uint8Array/.base64/.mediaType; images[]; providerMetadata.blackForestLabs.images[i].seed, cost, duration (pass-through not documented; log on first run).
+- Pricing (catalog): 1024 $0.024, 1536 $0.035, 2048 $0.050, 4096 $0.3035 per image. Track cost locally.
+- Fallback: generateText({ model:'google/gemini-nano-banana-2.1', prompt, providerOptions:{ google:{ responseModalities:['IMAGE'], imageConfig:{ aspectRatio:'16:9', imageSize:'2K' } } } }) → result.files (image/*). 2K $0.0504.
+- Rate limits: SDK retries 2x; honor 429 retry-after. Moderation: safetyTolerance 0–4.
