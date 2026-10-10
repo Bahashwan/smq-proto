@@ -1,0 +1,43 @@
+{
+  "name": "smq-realestate-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "serve": "serve out -l 3000 -s",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "shots": "tsx scripts/shots/shots.ts",
+    "shots:boards": "tsx scripts/shots/boards.ts",
+    "og": "tsx scripts/shots/og.ts",
+    "icons": "tsx scripts/icons/build.ts",
+    "images": "tsx scripts/images/generate.ts",
+    "images:convert": "tsx scripts/images/convert.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/noto-kufi-arabic": "^5.3.0",
+    "@fontsource-variable/noto-sans": "^5.3.0",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@playwright/test": "~1.56.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "ai": "^7.0.137",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.4.0",
+    "postcss": "^8.5.29",
+    "serve": "^14.2.6",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0"
+  }
+}

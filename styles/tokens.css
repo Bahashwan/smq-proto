@@ -1,0 +1,100 @@
+/* SMQ design tokens · values copied from design/preview/Tokens.html · names from docs/tokens.md */
+
+:root {
+  /* colours */
+  --smq-ink: #141311;
+  --smq-gold: #b48f2e;
+  --smq-gold-text: #8a6c1e;
+  --smq-paper: #ffffff;
+  --smq-cream: #f8f7f4;
+  --smq-sand: #f3f1eb;
+  --smq-slot: #e9e5db;
+  --smq-line: #d4cfc4;
+  --smq-muted: #5e5a52;
+  --smq-ink-2: #3a3630;
+  --smq-on-ink-muted: #c9c2b3;
+  --smq-on-gold-muted: #3d3010;
+  --smq-gold-hover: #9c7a22;
+  --smq-disabled: #8a8478;
+  --smq-cream-focus: #fffdf6;
+
+  /* geometry (60°: dy = dx × 1.732). Interactive cut: top corner at the line start side in RTL (screen right). Large block cut: bottom-left. */
+  --cut-s: polygon(0 0, calc(100% - 8px) 0, 100% 14px, 100% 100%, 0 100%);
+  --cut-m: polygon(0 0, calc(100% - 12px) 0, 100% 21px, 100% 100%, 0 100%);
+  --cut-l: polygon(0 0, calc(100% - 16px) 0, 100% 28px, 100% 100%, 0 100%);
+  --cut-xl: polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px));
+  --cut-img: polygon(0 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 42px));
+  --cut-img-l: polygon(0 0, 100% 0, 100% 100%, 42px 100%, 0 calc(100% - 72px));
+  --cut-tag: polygon(14px 0, 100% 0, 100% 100%, 0 100%);
+  --hex-flat: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  --hex-point: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+  /* type scale (desktop); phone values under 768px */
+  --smq-display-size: 56px;
+  --smq-h1-size: 40px;
+  --smq-h2-size: 28px;
+  --smq-h3-size: 18px;
+  --smq-body-size: 15px;
+  --smq-body-lh: 1.8;
+  --smq-label-size: 13px;
+  --smq-caption-size: 11px;
+  --smq-price-size: 48px;
+  --smq-price-size-s: 36px;
+  --smq-ppm-size: 18px;
+
+  /* layout */
+  --smq-container: 1280px;
+  --smq-gutter: 32px;
+  --smq-section-gap: 96px;
+  --smq-card-gap: 16px;
+  --smq-tap-min: 44px;
+  --smq-tap-primary: 56px;
+  --smq-tap-chip: 36px;
+  --smq-header-h: 72px;
+  --smq-header-h-scrolled: 56px;
+
+  /* borders */
+  --smq-border-interactive: 1.5px solid var(--smq-ink);
+  --smq-border-line: 1px solid var(--smq-line);
+  --smq-border-active: 3px solid var(--smq-gold);
+  --smq-border-error: 2px solid var(--smq-gold);
+
+  /* motion */
+  --smq-motion-hover: 120ms;
+  --smq-motion-sheet: 200ms;
+  --smq-motion-skeleton: 1400ms;
+  --smq-ease: ease-out;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --smq-h1-size: 32px;
+    --smq-h2-size: 20px;
+    --smq-body-size: 14px;
+    --smq-body-lh: 1.7;
+    --smq-price-size: 36px;
+    --smq-price-size-s: 28px;
+    --smq-ppm-size: 14px;
+    --smq-gutter: 16px;
+    --smq-section-gap: 36px;
+  }
+}
+
+/* LTR (/en): every cut mirrors to the other corner */
+[dir="ltr"] {
+  --cut-s: polygon(8px 0, 100% 0, 100% 100%, 0 100%, 0 14px);
+  --cut-m: polygon(12px 0, 100% 0, 100% 100%, 0 100%, 0 21px);
+  --cut-l: polygon(16px 0, 100% 0, 100% 100%, 0 100%, 0 28px);
+  --cut-xl: polygon(0 0, 100% 0, 100% calc(100% - 62px), calc(100% - 36px) 100%, 0 100%);
+  --cut-img: polygon(0 0, 100% 0, 100% calc(100% - 42px), calc(100% - 24px) 100%, 0 100%);
+  --cut-img-l: polygon(0 0, 100% 0, 100% calc(100% - 72px), calc(100% - 42px) 100%, 0 100%);
+  --cut-tag: polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --smq-motion-hover: 0ms;
+    --smq-motion-sheet: 0ms;
+    --smq-motion-skeleton: 0ms;
+  }
+}

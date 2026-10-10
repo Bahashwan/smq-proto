@@ -9,3 +9,7 @@ out/
 scripts/images/out/
 test-results/
 playwright-report/
+.next-*/
+next-env.d.ts
+*.tsbuildinfo
+docs/shots/tmp/
