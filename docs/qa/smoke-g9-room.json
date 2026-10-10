@@ -1,0 +1,74 @@
+[
+  {
+    "board": "Admin-Marketers-D",
+    "route": "/admin/marketers",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-MarketerDetail-D",
+    "route": "/admin/marketers/mk-07",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Alliance-D",
+    "route": "/admin/alliance",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Alliance-M",
+    "route": "/admin/alliance",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceApplications-D",
+    "route": "/admin/alliance/applications?id=ALL-2026-0038",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceMembers-D",
+    "route": "/admin/alliance/members",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceMember-D",
+    "route": "/admin/alliance/members/office-01",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceRadar-D",
+    "route": "/admin/alliance/radar?district=obhur-north",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceRequests-D",
+    "route": "/admin/alliance/requests?req=REQ-2026-0412",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceReferrals-D",
+    "route": "/admin/alliance/referrals",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceReport-D",
+    "route": "/admin/alliance/report",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-AllianceSettings-D",
+    "route": "/admin/alliance/settings",
+    "width": 1440,
+    "issues": []
+  }
+]

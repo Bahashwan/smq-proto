@@ -1,0 +1,62 @@
+[
+  {
+    "board": "Guide-M",
+    "route": "/guide",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Guide-D",
+    "route": "/guide",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Project-M",
+    "route": "/projects/garden-rawdah",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Project-D",
+    "route": "/projects/garden-rawdah",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Contact-M",
+    "route": "/contact",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Contact-D",
+    "route": "/contact",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Projects-M",
+    "route": "/projects",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Projects-D",
+    "route": "/projects",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Contact-Success-M",
+    "route": "/contact/sent",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Contact-Error-M",
+    "route": "/contact?offline=1",
+    "width": 390,
+    "issues": []
+  }
+]

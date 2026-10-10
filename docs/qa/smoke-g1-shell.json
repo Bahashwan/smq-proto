@@ -1,0 +1,92 @@
+[
+  {
+    "board": "Home-M",
+    "route": "/",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Home-D",
+    "route": "/",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Header-Scrolled-D",
+    "route": "/",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "B-Hero",
+    "route": "/",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "HeaderFooter",
+    "route": "/?menu=1",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Services-M",
+    "route": "/services",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Services-D",
+    "route": "/services",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "About-M",
+    "route": "/about",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "About-D",
+    "route": "/about",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "NotFound-M",
+    "route": "/this-page-does-not-exist",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "NotFound-D",
+    "route": "/this-page-does-not-exist",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "About-Proof-D",
+    "route": "/about?proof=1",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Privacy-M",
+    "route": "/privacy",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Privacy-D",
+    "route": "/privacy",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "EN-Home-M",
+    "route": "/en",
+    "width": 390,
+    "issues": []
+  }
+]

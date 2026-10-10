@@ -1,0 +1,95 @@
+[
+  {
+    "board": "Admin-Content-D",
+    "route": "/admin/content",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-PageEditor-D",
+    "route": "/admin/content/pages/home",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-FAQ-D",
+    "route": "/admin/content/faq?edit=faq-05",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Partners-D",
+    "route": "/admin/content/partners",
+    "width": 1440,
+    "issues": [
+      "console: Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronousl",
+      "pageerror: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed "
+    ]
+  },
+  {
+    "board": "Admin-Testimonials-D",
+    "route": "/admin/content/testimonials",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Lists-D",
+    "route": "/admin/content/lists",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-SiteSettings-D",
+    "route": "/admin/content/site-settings",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-SEO-D",
+    "route": "/admin/content/seo",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Media-D",
+    "route": "/admin/content/media",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Users-D",
+    "route": "/admin/users?wa=manual",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Users-D",
+    "route": "/admin/users",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Pieces-D",
+    "route": "/admin/units?empty=1",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Pieces-D",
+    "route": "/admin/leads?empty=1",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Pieces-D",
+    "route": "/admin/units/rz-a",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Pieces-D",
+    "route": "/admin/content/needs-confirmation",
+    "width": 1440,
+    "issues": []
+  }
+]

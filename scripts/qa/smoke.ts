@@ -48,7 +48,8 @@ for (const s of list) {
       });
       let text = "";
       for (let n = walker.nextNode(); n; n = walker.nextNode()) text += n.textContent + " ";
-      if (/\[للتأكيد\]|\[مسودة إجابة\]/.test(text)) out.push("literal [للتأكيد]/[مسودة إجابة] brackets in visible text (use <Mark>)");
+      // admin pages show the tokens as editable content and in permission text (Admin-FAQ-D, Admin-Users-D)
+      if (!location.pathname.startsWith("/admin") && /\[للتأكيد\]|\[مسودة إجابة\]/.test(text)) out.push("literal [للتأكيد]/[مسودة إجابة] brackets in visible text (use <Mark>)");
       if (/[٠-٩]/.test(text)) out.push("Arabic-Indic digits in visible text");
       if (/ر\.س/.test(text)) out.push("«ر.س» printed (use the riyal sign)");
       if (/undefined|NaN/.test(text)) out.push(`"undefined"/"NaN" in visible text`);
