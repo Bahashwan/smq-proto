@@ -17,6 +17,7 @@ const PRICE_2K = 0.05; // catalog: bfl/flux-3-image 2048×2048 class
 const PRICE_FALLBACK = 0.0504;
 const BUDGET = parseFloat(opt("budget") ?? "15");
 const CANDIDATES = parseInt(opt("candidates") ?? "2", 10);
+const PARALLEL = Math.max(1, parseInt(opt("parallel") ?? "1", 10));
 const OUT = path.resolve("public/images/_candidates");
 const LOG = path.resolve("scripts/images/out/log.jsonl");
 const COST_FILE = path.resolve("scripts/images/out/cost.json");
@@ -59,7 +60,7 @@ function refImages(slot: GenSlot): { id: string; bytes: Uint8Array }[] {
   return refs;
 }
 
-for (const slot of slots) {
+async function runSlot(slot: GenSlot) {
   const dir = path.join(OUT, slot.id);
   fs.mkdirSync(dir, { recursive: true });
   const refs = refImages(slot);
@@ -118,5 +119,17 @@ for (const slot of slots) {
     }
   }
 }
+
+// anchors (references) run first and sequentially; the rest in a small pool
+const anchorsFirst = slots.filter((s) => (ANCHORS as readonly string[]).includes(s.id));
+const others = slots.filter((s) => !(ANCHORS as readonly string[]).includes(s.id));
+for (const s of anchorsFirst) await runSlot(s);
+let cursor = 0;
+await Promise.all(Array.from({ length: Math.min(PARALLEL, others.length) }, async () => {
+  while (cursor < others.length) {
+    const s = others[cursor++];
+    await runSlot(s);
+  }
+}));
 saveCost();
 console.log(`Done. Total spent $${spent.toFixed(2)}.`);
