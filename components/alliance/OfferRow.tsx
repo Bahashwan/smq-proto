@@ -31,11 +31,13 @@ export interface OfferRowProps {
   name?: string;
   /** the action beside the row («أنشئ سجل إحالة») */
   action?: ReactNode;
+  /** riyal sign before the price (Admin-AllianceRequests-D prints «440,000 · 165 م²» without it) */
+  sign?: boolean;
   className?: string;
 }
 
 /** One incoming offer: radio, office + reply time, price · area + brokerage chip, the note in quotes, an action. */
-export function OfferRow({ office, replyMinutes, priceSar, areaM2, note, brokered, selected, onSelect, name = "offer", action, className }: OfferRowProps) {
+export function OfferRow({ office, replyMinutes, priceSar, areaM2, note, brokered, selected, onSelect, name = "offer", action, sign = true, className }: OfferRowProps) {
   const inputId = `${name}-${office}`.replace(/\s+/g, "-");
   return (
     <div className={cx("grid grid-cols-[36px_1fr] items-center gap-x-3 gap-y-2 px-4 py-2.5 text-[12px] border-hairline border-t-0 md:grid-cols-[36px_1fr_1fr_1.2fr_150px] md:gap-3", selected && "bg-cream-focus", className)}>
@@ -52,7 +54,7 @@ export function OfferRow({ office, replyMinutes, priceSar, areaM2, note, brokere
         )}
       </label>
       <span className="col-start-2 md:col-start-auto">
-        {priceSar != null && <strong className="font-extrabold"><Price value={priceSar} /></strong>}
+        {priceSar != null && <strong className="font-extrabold"><Price value={priceSar} sign={sign} /></strong>}
         {areaM2 != null && <span className="tnum"> · {fmtArea(areaM2)} م²</span>}
         <br />
         <span className={cx("inline-block px-1.5 text-[10px] font-extrabold", brokered ? "bg-sand" : "border-hairline")}>{brokered ? "عقد وساطة موثّق" : "مباشر من المالك"}</span>

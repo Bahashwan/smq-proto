@@ -254,6 +254,7 @@ function Detail({ r }: { r: AllianceRequest }) {
               <OfferRowsHeader />
               {r.offers.map((o) => (
                 <OfferRow
+                  sign={false}
                   key={o.officeId}
                   office={officeShort(o.officeId)}
                   replyMinutes={o.replyMinutes}
