@@ -27,7 +27,7 @@ export { Mark, MarkedText, MARK_RE } from "./Mark";
 export { Notice } from "./Notice";
 export type { NoticeProps } from "./Notice";
 
-export { ImageSlot, PlaceholderDrawing, SlotImage } from "./ImageSlot";
+export { ImageSlot, PlaceholderDrawing, SlotImage, GeneratedPicture } from "./ImageSlot";
 export type { ImageSlotProps, SlotRatio, SlotCut, SlotUnitInfo } from "./ImageSlot";
 export { GalleryThumbs } from "./GalleryThumbs";
 export type { GalleryThumbsProps, GalleryThumbItem } from "./GalleryThumbs";

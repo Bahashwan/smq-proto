@@ -1,1 +1,42 @@
-{}
+{
+  "IMG-PRJ-ROWDAH-EXT": {
+    "width": 2736,
+    "height": 1536,
+    "widths": [
+      640,
+      1280,
+      2048
+    ],
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAkAA4BaJQBOgBwtlNm1AAD+9P2obnvU4Y+P4KnpkSNG7s3IYPUx2pWr+RqFILitCb1GuuNAbJUDl/SGlfsj4AA="
+  },
+  "IMG-UNIT-APT-3BR-LIVING": {
+    "width": 2736,
+    "height": 1536,
+    "widths": [
+      640,
+      1280,
+      2048
+    ],
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAkAA4BaJYgCdAELleRIcgAA/rXRpRrEzATf5QhS4TcCA5HaSp7PknZxRKBN7svO6SZbbIEynR/ejIPo3d9kOEgAAA=="
+  },
+  "IMG-ED-BALAD-RAWASHEEN": {
+    "width": 2512,
+    "height": 1664,
+    "widths": [
+      640,
+      1280,
+      2048
+    ],
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQAAsAA4BaJQBOgB0iS2OAAAD+9hIzw9315pJFDzmP9a+pEcFWLZIoMPxhlOX7XesqfNFhBhSfl6vRJ81REusVDGMvRQFaHZ0bB2k+BphoXwAA"
+  },
+  "IMG-ED-CORNICHE-DAWN": {
+    "width": 2736,
+    "height": 1536,
+    "widths": [
+      640,
+      1280,
+      2048
+    ],
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAkAA4BaJaACdAEOnInoAAD+6qiXq2zIf1qCbFzQ//QqWMeyMrZbmz2Ip7in0s9O3Gydr38DCAAA"
+  }
+}

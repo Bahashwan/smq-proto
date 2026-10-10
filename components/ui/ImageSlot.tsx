@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 import { cx, fmtArea, bedsLabel, bathsLabel } from "@/lib/format";
 import type { ImageTier } from "@/data/types";
 import { IllustrativeLabel } from "./Status";
+import { slotFiles } from "@/lib/images";
 
 export type SlotRatio = "3:2" | "16:9" | "4:5" | "1:1" | "21:9" | "2:3";
 export type SlotCut = "none" | "img" | "img-l" | "xl";
@@ -57,6 +58,22 @@ const CUT: Record<SlotCut, string> = { none: "", img: "cut-img", "img-l": "cut-i
 export function SlotImage({ src, alt = "", sold, className }: { src: string; alt?: string; sold?: boolean; className?: string }) {
   // eslint-disable-next-line @next/next/no-img-element -- static export, no image optimizer
   return <img src={src} alt={alt} className={cx("absolute inset-0 w-full h-full object-cover", sold && "img-sold", className)} loading="lazy" />;
+}
+
+/** A converted generated image (Phase 8): AVIF + WebP sets with the blur placeholder behind them. */
+export function GeneratedPicture({ slotId, alt = "", sold, sizes = "(min-width: 1024px) 50vw, 100vw" }: { slotId: string; alt?: string; sold?: boolean; sizes?: string }) {
+  const f = slotFiles(slotId);
+  if (!f) return null;
+  const set = (fmt: "avif" | "webp") => f.widths.map((w) => `/images/${slotId}/${slotId}-${w}.${fmt} ${w}w`).join(", ");
+  const fallback = `/images/${slotId}/${slotId}-${f.widths.includes(1280) ? 1280 : f.widths[f.widths.length - 1]}.webp`;
+  return (
+    <picture className="absolute inset-0 block" style={{ backgroundImage: `url(${f.blur})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+      <source type="image/avif" srcSet={set("avif")} sizes={sizes} />
+      <source type="image/webp" srcSet={set("webp")} sizes={sizes} />
+      {/* eslint-disable-next-line @next/next/no-img-element -- static export, files are pre-sized */}
+      <img src={fallback} alt={alt} width={f.width} height={f.height} loading="lazy" decoding="async" className={cx("absolute inset-0 w-full h-full object-cover", sold && "img-sold")} />
+    </picture>
+  );
 }
 
 /** The neutral placeholder drawing (skyline strokes); tone follows the tier */
@@ -129,7 +146,7 @@ export function ImageSlot({ slotId, tier, ratio, src, realSrc, alt = "", unit, l
 
   return (
     <Tag className={cx(base, sold ? "bg-sand" : "bg-slot")} data-slot={slotId} data-tier={tier}>
-      {file ? <SlotImage src={file} alt={alt} sold={sold} /> : <PlaceholderDrawing tone="slot" className={cx(sold && "opacity-35")} />}
+      {file ? <SlotImage src={file} alt={alt} sold={sold} /> : slotFiles(slotId) ? <GeneratedPicture slotId={slotId} alt={alt} sold={sold} /> : <PlaceholderDrawing tone="slot" className={cx(sold && "opacity-35")} />}
       {label && !sold && <IllustrativeLabel lang={lang} size={compact ? "s" : "m"} className={cx("absolute z-[1]", compact ? "bottom-1.5 start-1.5" : "bottom-3 start-3")} />}
       {!sold && idLine}
       {children}
