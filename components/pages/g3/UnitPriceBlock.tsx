@@ -62,16 +62,17 @@ export function UnitPriceBlock({ view, lang = "ar", className }: { view: UnitVie
 
   return (
     <section aria-label={en ? "Price" : "السعر"} className={cx("cut-l", sold ? "bg-sand text-ink border-interactive" : "bg-ink text-paper", className)}>
-      <div className="flex items-end justify-between gap-3 px-4 pt-5 pb-4">
+      <div className="flex items-end justify-between gap-3 px-4 md:px-5 pt-5 pb-4">
         <span className="flex flex-col gap-1.5 min-w-0">
           {sold && <span className="text-caption font-bold text-muted">سعر البيع المعلن</span>}
           {en ? (
             <span className="inline-flex items-baseline gap-1.5" dir="ltr">
-              <span className="text-price leading-none tnum">{fmtNum(unit.priceSar)}</span>
+              <span className="text-price md:text-h1 leading-none tnum">{fmtNum(unit.priceSar)}</span>
               <span className="text-label font-semibold text-on-ink-muted">SAR</span>
             </span>
           ) : (
-            <Price value={unit.priceSar} className="text-price leading-none" signClassName={sold ? "text-ink" : "text-gold"} />
+            /* Unit-D sets the figure at 40px: the h1 size from md, the price size on the phone */
+            <Price value={unit.priceSar} className="text-price md:text-h1 leading-none" signClassName={sold ? "text-ink" : "text-gold"} />
           )}
         </span>
         <span className="flex flex-col items-end gap-0.5 text-end shrink-0">

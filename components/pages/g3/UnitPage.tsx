@@ -72,9 +72,13 @@ export function UnitPage({ slug, realFiles }: { slug: string; realFiles: RealFil
     <>
       {bedsSpec(unit.beds)} · {bathsSpec(unit.baths)} · {fmtArea(unit.areaM2)} م² · الطابق {v.floorWordAr}
       {unit.floor?.tbc && <Mark>للتأكيد</Mark>}
+      {/* Unit-M/D close the line with the facing; the chip stays on the floor as Unit-Tier-*, Unit-Reserved-M and EN-Unit-M place it */}
+      {v.facingAr ? ` · واجهة ${v.facingAr}` : ""}
     </>
   );
-  const meta = `آخر تحديث ${fmtDate(v.updatedAt)} · كود النموذج ${unit.code}${imagesSuffix(v, realFiles)}`;
+  const metaBase = `آخر تحديث ${fmtDate(v.updatedAt)} · كود النموذج ${unit.code}`;
+  // the image count closes the phone line (Unit-Tier-*); Unit-D follows the code with the working hours
+  const meta = `${metaBase}${imagesSuffix(v, realFiles)}`;
 
   // Calls to action per state (the phone's sticky bar and the desktop aside carry the same pair)
   const waSub = status === "available" && !roof ? `رسالة جاهزة: ${project?.nameAr ?? ""} · ${unit.code}` : `رسالة جاهزة: ${unit.code}`;
@@ -106,7 +110,7 @@ export function UnitPage({ slug, realFiles }: { slug: string; realFiles: RealFil
         </GhostLink>
       )
     ) : (
-      <CompareBox slug={unit.slug} label={phone ? "قارن" : "أضف للمقارنة"} className={phone ? "" : "flex-1 min-h-12"} />
+      <CompareBox slug={unit.slug} label={phone ? "قارن" : "أضف للمقارنة"} size={phone ? "s" : "m"} className={phone ? "" : "flex-1 min-h-12"} />
     );
 
   return (
@@ -120,7 +124,7 @@ export function UnitPage({ slug, realFiles }: { slug: string; realFiles: RealFil
             <div role="note" className="mt-3 flex items-start gap-3 px-3.5 py-3 border-interactive bg-cream text-label font-normal leading-relaxed">
               <HexDot tone="ring" flat dims="w-6 h-5" className="mt-0.5" />
               <span>
-                <strong className="font-extrabold">محجوزة حتى {fmtDateLong(v.reservedUntil)}.</strong> عربون مدفوع والسعر مثبّت للحاجز. إن لم يُكمل، تعود للعرض هنا وتصلك رسالة إن سجّلت في قائمة الانتظار.
+                <strong className="font-extrabold">{`محجوزة حتى ${fmtDateLong(v.reservedUntil)}.`}</strong> عربون مدفوع والسعر مثبّت للحاجز. إن لم يُكمل، تعود للعرض هنا وتصلك رسالة إن سجّلت في قائمة الانتظار.
               </span>
             </div>
           )}
@@ -128,12 +132,12 @@ export function UnitPage({ slug, realFiles }: { slug: string; realFiles: RealFil
             <div role="note" className="mt-3 flex items-start gap-3 px-3.5 py-3 bg-ink text-paper text-label font-normal leading-relaxed cut-m">
               <HexDot tone="paper" flat dims="w-6 h-5" className="mt-0.5" />
               <span>
-                <strong className="font-extrabold">بيعت في {fmtDateLong(v.soldOn)}.</strong> نُبقي الصفحة لأن سعرها الحقيقي يفيدك في المقارنة. {unitsWord(v.projectAvailableOthers)} أخرى متاحة في المشروع، منها {similar.length} بنفس الغرف.
+                <strong className="font-extrabold">{`بيعت في ${fmtDateLong(v.soldOn)}.`}</strong> نُبقي الصفحة لأن سعرها الحقيقي يفيدك في المقارنة. {unitsWord(v.projectAvailableOthers)} أخرى متاحة في المشروع، منها {similar.length} بنفس الغرف.
               </span>
             </div>
           )}
 
-          <div className="mt-3 md:mt-5 flex flex-col gap-5 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,25rem)] md:gap-10 lg:gap-14 md:items-start">
+          <div className="mt-3 md:mt-5 flex flex-col gap-5 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,23.75rem)] md:gap-10 lg:gap-8 md:items-start">
             <UnitMedia view={v} realFiles={realFiles} thumbs={status === "available"} />
 
             <aside className="flex flex-col gap-4 min-w-0" aria-label="ملخص الوحدة">
@@ -157,7 +161,7 @@ export function UnitPage({ slug, realFiles }: { slug: string; realFiles: RealFil
                   </GhostLink>
                 </div>
                 <p className="m-0 text-caption font-normal leading-relaxed text-muted">
-                  {meta} · ساعات العمل: {HOURS_AR}
+                  {metaBase} · ساعات العمل: {HOURS_AR}
                 </p>
               </div>
             </aside>
@@ -168,8 +172,8 @@ export function UnitPage({ slug, realFiles }: { slug: string; realFiles: RealFil
           <Siblings v={v} similar={similar} similarHref={similarHref} realFiles={realFiles} projectHref={projectHref} />
         </Container>
 
-        <div className="sticky bottom-0 z-30 mt-8 md:hidden border-t border-line bg-paper">
-          <div className="container-smq flex items-stretch gap-2 py-3">
+        <div className="sticky bottom-0 z-30 mt-7 md:hidden border-t-[1.5px] border-ink bg-paper">
+          <div className="container-smq flex items-stretch gap-2 pt-2.5 pb-3.5">
             {primary("flex-1 min-w-0")}
             {secondary(true)}
           </div>

@@ -21,12 +21,13 @@ export function SpecSection({ title, children, className, id }: { title: string;
   );
 }
 
-/** A key/value row: muted label at the start, bold value at the end, hairline under it. */
-export function KV({ label, children, strong, muted, only, className, valueClassName }: { label: ReactNode; children: ReactNode; strong?: boolean; muted?: boolean; /** show the row only on the phone or only from md */ only?: "phone" | "md"; className?: string; valueClassName?: string }) {
+/** A key/value row: muted label at the start, bold value at the end, hairline under it (Unit-D rows are taller). */
+export function KV({ label, children, strong, muted, only, stack, compact, className, valueClassName }: { label: ReactNode; children: ReactNode; strong?: boolean; muted?: boolean; /** show the row only on the phone or only from md */ only?: "phone" | "md"; /** label over the value on the phone (Unit-M «مميزات جوهرية أخرى», «مميزات إضافية») */ stack?: boolean; /** the Latin rows of EN-Unit-M: 10px padding, normal line height */ compact?: boolean; className?: string; valueClassName?: string }) {
+  const display = only === "md" ? "hidden md:flex" : only === "phone" ? "flex md:hidden" : "flex";
   return (
-    <div className={cx(only === "md" ? "hidden md:flex" : only === "phone" ? "flex md:hidden" : "flex", "items-start justify-between gap-4 py-3 border-b border-line text-label", className)}>
+    <div className={cx(display, stack ? "flex-col items-start gap-1 md:flex-row md:justify-between md:gap-4" : "items-start justify-between gap-4", compact ? "py-2.5" : "py-3 md:py-3.5", "border-b border-line text-label", className)}>
       <span className="shrink-0 font-normal text-muted">{label}</span>
-      <span className={cx("min-w-0 text-end leading-relaxed tnum", strong ? "font-extrabold" : "font-bold", muted && "text-muted", valueClassName)}>{children}</span>
+      <span className={cx("min-w-0 tnum", compact ? "leading-normal" : "leading-relaxed", stack ? "text-start md:text-end" : "text-end", strong ? "font-extrabold" : valueClassName?.includes("font-") ? "" : "font-bold", muted && "text-muted", valueClassName)}>{children}</span>
     </div>
   );
 }
@@ -110,14 +111,14 @@ export function WaCta({ text, title, sub, className }: { text: string; title: Re
 }
 
 /** Bordered compare box («قارن» / «أضف للمقارنة»); disabled for reserved and sold units. */
-export function CompareBox({ slug, label, unavailable, className, lang = "ar" }: { slug: string; label: string; unavailable?: boolean; className?: string; lang?: "ar" | "en" }) {
+export function CompareBox({ slug, label, unavailable, size = "m", className, lang = "ar" }: { slug: string; label: string; unavailable?: boolean; /** «s»: the phone's sticky bar (Unit-M: 12px sides, 6px gap) */ size?: "s" | "m"; className?: string; lang?: "ar" | "en" }) {
   const compare = useCompare();
   const checked = compare.has(slug);
   const full = compare.isFull && !checked;
   const off = unavailable || full;
   const aria = unavailable ? (lang === "en" ? "Not available to compare" : "غير متاح للمقارنة") : checked ? (lang === "en" ? "In compare" : "في المقارنة") : lang === "en" ? "Add to compare" : "أضف إلى المقارنة";
   return (
-    <label className={cx("inline-flex items-center justify-center gap-2 min-h-14 px-4 border-interactive text-label font-bold select-none motion-hover transition-colors", off ? "border-line text-muted cursor-not-allowed" : cx("cursor-pointer", checked ? "bg-sand" : "bg-paper hover:bg-sand"), className)}>
+    <label className={cx("inline-flex items-center justify-center min-h-14 border-interactive text-label font-bold select-none motion-hover transition-colors", size === "s" ? "gap-1.5 px-3" : "gap-2 px-4", off ? "border-line text-muted cursor-not-allowed" : cx("cursor-pointer", checked ? "bg-sand" : "bg-paper hover:bg-sand"), className)}>
       <input type="checkbox" className="size-4.5 m-0 accent-ink" checked={checked} disabled={off} aria-label={aria} onChange={() => compare.toggle(slug)} />
       <span>{full ? (lang === "en" ? "Full (3/3)" : "ممتلئة (3/3)") : label}</span>
     </label>

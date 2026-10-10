@@ -6,6 +6,7 @@ import { unitBySlug } from "@/data/units";
 import type { Unit } from "@/data/types";
 import { cx, fmtArea, fmtDate, fmtNum } from "@/lib/format";
 import { Breadcrumb, Container, EnHtmlAttrs, Footer, Header, Mark, useVisitorCode } from "@/components/ui";
+import { useMarks } from "@/lib/presenter";
 import { floorEn, orientationEn, unitWaText, useUnitView, yesNo, type UnitView } from "./view";
 import type { RealFiles } from "./slots";
 import { UnitMedia } from "./UnitMedia";
@@ -37,6 +38,7 @@ export function EnUnitPage({ slug, realFiles }: { slug: string; realFiles: RealF
   const facing = orientationEn(unit.orientation?.value);
   const wa = unitWaText(v, code, "en");
   const f = unit.features;
+  const marks = useMarks();
 
   const spec = (
     <>
@@ -90,47 +92,44 @@ export function EnUnitPage({ slug, realFiles }: { slug: string; realFiles: RealF
                 <Tile value={unit.beds} caption={unit.beds === 1 ? "bedroom" : "bedrooms"} />
                 <Tile value={unit.baths} caption={unit.baths === 1 ? "bathroom" : "bathrooms"} />
               </div>
-              <KV label="Model code">{unit.code}</KV>
-              <KV label="Type">{roof ? "Roof villa" : "Apartment"}</KV>
-              <KV label="Floor">
+              <KV compact label="Model code">{unit.code}</KV>
+              <KV compact label="Type">{roof ? "Roof villa" : "Apartment"}</KV>
+              <KV compact label="Floor">
                 {floor}
                 {unit.floor?.tbc && <Mark>TBC</Mark>}
               </KV>
-              <KV label="Ad licence number">{unit.adLicence ?? <ChipOnly>optional</ChipOnly>}</KV>
-              <KV label="Orientation">
+              <KV compact label="Ad licence number">{unit.adLicence ?? <ChipOnly>optional</ChipOnly>}</KV>
+              <KV compact label="Orientation">
                 {facing}
                 {unit.orientation?.tbc && <Mark>TBC</Mark>}
               </KV>
             </SpecSection>
 
             <SpecSection title="Price" id="en-price">
-              <KV label="Price" strong valueClassName="text-body">
+              <KV compact label="Price" strong valueClassName="text-body">
                 {fmtNum(unit.priceSar)} SAR
               </KV>
-              <KV label="Per m²">{fmtNum(v.ppm)} SAR</KV>
-              <KV label="Real estate transaction tax">
-                included / excluded
-                <Mark>TBC</Mark>
-              </KV>
-              {v.status === "available" && !roof && <KV label="In the district">{inDistrict(v)}</KV>}
+              <KV compact label="Per m²">{fmtNum(v.ppm)} SAR</KV>
+              <KV compact label="Real estate transaction tax">{marks ? <ChipOnly>included / excluded, TBC</ChipOnly> : "included / excluded"}</KV>
+              {v.status === "available" && !roof && <KV compact label="In the district">{inDistrict(v)}</KV>}
             </SpecSection>
 
             <SpecSection title="Features" id="en-features">
               <div className="grid grid-cols-2 gap-x-4">
-                <KV label="Maid's room">
+                <KV compact label="Maid's room">
                   <Yes v={f.maid} />
                 </KV>
-                <KV label="Driver's room">
+                <KV compact label="Driver's room">
                   <Yes v={f.driver} />
                 </KV>
-                <KV label="Balcony">
+                <KV compact label="Balcony">
                   <Yes v={f.balcony} />
                 </KV>
-                <KV label="Smart home">
+                <KV compact label="Smart home">
                   <Yes v={f.smartHome} />
                 </KV>
-                <KV label="Kitchen">{f.kitchen === "tbc" ? <ChipOnly>TBC</ChipOnly> : f.kitchen === "open" ? "Open" : "Closed"}</KV>
-                <KV label="Private parking">
+                <KV compact label="Kitchen">{f.kitchen === "tbc" ? <ChipOnly>TBC</ChipOnly> : f.kitchen === "open" ? "Open" : "Closed"}</KV>
+                <KV compact label="Private parking">
                   <Yes v={f.parking > 0} />
                 </KV>
               </div>
@@ -138,10 +137,10 @@ export function EnUnitPage({ slug, realFiles }: { slug: string; realFiles: RealF
           </div>
         </Container>
 
-        <div className={cx("sticky bottom-0 z-30 mt-8 md:hidden border-t border-line bg-paper")}>
-          <div className="container-smq flex items-stretch gap-2 py-3">
+        <div className={cx("sticky bottom-0 z-30 mt-7 md:hidden border-t-[1.5px] border-ink bg-paper")}>
+          <div className="container-smq flex items-stretch gap-2 pt-2.5 pb-3.5">
             <WaCta text={wa} title={`Ask about ${roof ? "the roof villa" : `model ${unit.model}`}`} sub={`Prefilled: ${unit.code}`} className="flex-1 min-w-0" />
-            <CompareBox slug={unit.slug} label="Compare" lang="en" unavailable={v.status !== "available"} />
+            <CompareBox slug={unit.slug} label="Compare" lang="en" size="s" unavailable={v.status !== "available"} />
           </div>
         </div>
       </main>

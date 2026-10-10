@@ -47,8 +47,8 @@ export function UnitMedia({ view, realFiles, lang = "ar", thumbs: withThumbs = t
             unit={{ model: unit.type === "roof-villa" ? "روف" : unit.model, buildingNameAr: unit.buildingNameAr, areaM2: unit.areaM2, beds: unit.beds, baths: unit.baths, floor: en ? undefined : view.floorWordAr }}
           />
         </Link>
-        <span className="absolute top-3 start-3 z-[2] flex">
-          <StatusBadge status={status} size={52} lang={lang} />
+        <span className="absolute top-3 start-3 md:top-4 md:start-4 z-[2] flex">
+          <StatusBadge status={status} size={54} lang={lang} />
         </span>
         {roof && !en && <span className="absolute top-3 end-0 z-[2] px-3.5 py-1.5 bg-ink text-paper text-caption font-bold cut-tag">فيلا روف · دوران وتراس</span>}
       </div>
@@ -128,7 +128,7 @@ function Thumbs({ view, items, active, onSelect, planHref, planLabel, planLabelD
   }
 
   return (
-    <div className="grid grid-cols-4 md:grid-cols-5 gap-2">
+    <div className="grid grid-cols-4 md:grid-cols-5 gap-2 md:gap-2.5">
       {items.slice(0, 4).map((it, i) => {
         const on = i === active;
         const file = real ? realFiles[it.slotId] : undefined;
@@ -149,7 +149,8 @@ function Thumbs({ view, items, active, onSelect, planHref, planLabel, planLabelD
           >
             {/* eslint-disable-next-line @next/next/no-img-element -- static export, real photos are served as they are */}
             {file && <img src={file} alt="" className="absolute inset-0 size-full object-cover" />}
-            <span className={cx("relative", on && "hidden md:inline")}>{en ? it.en : it.short}</span>
+            {/* the active thumb keeps its word on Unit-D and Unit-Roof-M only */}
+            <span className={cx("relative", on && unit.type !== "roof-villa" && "hidden md:inline")}>{en ? it.en : it.short}</span>
           </button>
         );
       })}

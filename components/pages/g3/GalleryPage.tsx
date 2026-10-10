@@ -11,7 +11,7 @@ import { useQuery, setQuery } from "@/lib/location";
 import { bedsLabel, cx, fmtArea, fmtNum, waLink } from "@/lib/format";
 import { slotFiles } from "@/lib/images";
 import { useStore } from "@/lib/store";
-import { CloseIcon, ImageSlot, Lockup, Mark, WhatsAppIcon, useVisitorCode } from "@/components/ui";
+import { ImageSlot, Lockup, Mark, WhatsAppIcon, useVisitorCode } from "@/components/ui";
 import { galleryItems, type RealFiles } from "./slots";
 import { askObject, useUnitView } from "./view";
 
@@ -128,8 +128,8 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
           <button type="button" aria-label="مشاركة" onClick={share} className={cx(square, "text-paper md:border-[1.5px] md:border-muted hover:bg-ink-2")}>
             <ShareIcon />
           </button>
-          <Link href={unitHref} aria-label="إغلاق" className={cx(square, "border-[1.5px] border-paper text-paper no-underline hover:bg-paper hover:text-ink")}>
-            <CloseIcon size={18} />
+          <Link href={unitHref} aria-label="إغلاق" className={cx(square, "border-[1.5px] border-paper text-paper text-h3 font-extrabold leading-none no-underline hover:bg-paper hover:text-ink")}>
+            ×
           </Link>
         </div>
       </div>
@@ -168,9 +168,9 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
           </button>
 
           {generated && (
-            <div className="absolute inset-x-3 bottom-3 md:inset-x-9 md:bottom-9 z-[1] flex items-end justify-between gap-2 pointer-events-none">
-              <figcaption className="shrink-0 px-2.5 py-1 bg-paper text-ink text-caption md:text-label font-bold leading-snug">صورة تعبيرية · لا تمثّل التشطيب النهائي</figcaption>
-              <span dir="ltr" className="min-w-0 truncate px-2.5 py-1 bg-paper text-ink text-caption font-normal leading-snug">
+            <div className="absolute inset-x-3 bottom-3 md:inset-x-9 md:bottom-9 z-[1] flex items-end justify-between gap-0 md:gap-2 pointer-events-none">
+              <figcaption className="shrink-0 px-2 md:px-2.5 py-1 bg-paper text-ink text-caption md:text-label font-bold leading-snug">صورة تعبيرية · لا تمثّل التشطيب النهائي</figcaption>
+              <span dir="ltr" className="min-w-0 truncate px-2 md:px-2.5 py-1 bg-paper text-ink text-caption font-normal leading-snug">
                 {item.slotId}
                 {dims ? <span className="hidden md:inline">{` · ${dims.width}×${dims.height}`}</span> : null}
               </span>
@@ -181,7 +181,7 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
             <span className="hidden md:inline">الأسهم ← → للتنقل · Esc للإغلاق · انقر للتكبير</span>
           </span>
 
-          <button type="button" aria-label="السابقة" onClick={() => go(idx - 1)} className="absolute top-1/2 start-2 md:start-9 z-[1] -translate-y-1/2 inline-flex items-center justify-center w-11 h-14 md:w-13 md:h-16 bg-ink text-paper hover:bg-ink-2 motion-hover transition-colors cut-s">
+          <button type="button" aria-label="السابقة" onClick={() => go(idx - 1)} className="absolute top-1/2 start-2 md:start-9 z-[1] -translate-y-1/2 inline-flex items-center justify-center w-11 h-14 md:w-13 md:h-16 bg-ink text-paper hover:bg-ink-2 motion-hover transition-colors max-md:cut-s">
             <Chevron dir="right" />
           </button>
           <button type="button" aria-label="التالية" onClick={() => go(idx + 1)} className="absolute top-1/2 end-2 md:end-9 z-[1] -translate-y-1/2 inline-flex items-center justify-center w-11 h-14 md:w-13 md:h-16 bg-ink text-paper hover:bg-ink-2 motion-hover transition-colors">
@@ -231,13 +231,13 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
                   aria-label={it.ar}
                   aria-current={i === idx}
                   onClick={() => go(i)}
-                  className={cx("relative h-20 p-0 bg-slot hover:opacity-90", i === idx ? "border-2 border-gold" : "border border-ink-2")}
+                  className={cx("relative w-28 h-19 p-0 bg-slot hover:opacity-90", i === idx ? "border-2 border-gold" : "border border-muted")}
                 >
-                  <span className={cx("absolute bottom-1.5 start-1.5 px-1.5 py-0.5 bg-paper text-ink text-caption leading-snug", i === idx ? "font-extrabold" : "font-semibold")}>{it.galD}</span>
+                  <span className={cx("absolute bottom-1 start-1 px-1.5 py-0.5 bg-paper text-ink text-caption leading-snug", i === idx ? "font-extrabold" : "font-bold")}>{it.galD}</span>
                 </button>
               ))}
-              <Link href={planHref} aria-label="المخطط" className="relative h-20 border border-gold bg-sand no-underline">
-                <span className="absolute bottom-1.5 start-1.5 px-1.5 py-0.5 bg-paper text-ink text-caption font-semibold leading-snug">المخطط</span>
+              <Link href={planHref} aria-label="المخطط" className="relative w-28 h-19 border border-gold bg-sand no-underline">
+                <span className="absolute bottom-1 start-1 px-1.5 py-0.5 bg-paper text-ink text-caption font-bold leading-snug">المخطط</span>
               </Link>
             </div>
           </div>

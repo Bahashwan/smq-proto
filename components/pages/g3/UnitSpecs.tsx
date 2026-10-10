@@ -6,6 +6,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { cx, fmtArea, fmtDate } from "@/lib/format";
 import { Mark } from "@/components/ui";
+import { useMarks } from "@/lib/presenter";
 import type { Unit } from "@/data/types";
 import { ChipOnly, KV, SpecSection, StatusWord, Tile, Val } from "./parts";
 import { bathsSpec, bedsCaption, bedsSpec, fmt2, parkingWord, riyalWord, yesNo, type UnitView } from "./view";
@@ -18,7 +19,22 @@ function kitchenWord(k: Unit["features"]["kitchen"]): ReactNode {
 function licence(unit: Unit): ReactNode {
   return unit.adLicence ?? <ChipOnly>اختياري</ChipOnly>;
 }
-const tax = <Val text="شامل / غير شامل" tbc />;
+/** «[شامل / غير شامل، للتأكيد]» on the phone boards, «[شامل / غير شامل]» on Unit-D: one chip; plain words when the
+ *  presenter hides the marks. */
+function Tax() {
+  const marks = useMarks();
+  if (!marks) return <>شامل / غير شامل</>;
+  return (
+    <>
+      <span className="md:hidden">
+        <ChipOnly>شامل / غير شامل، للتأكيد</ChipOnly>
+      </span>
+      <span className="hidden md:inline">
+        <ChipOnly>شامل / غير شامل</ChipOnly>
+      </span>
+    </>
+  );
+}
 const isTbc = (unit: Unit, key: string) => !!unit.featuresTbc?.includes(key);
 
 function Location({ v }: { v: UnitView }) {
@@ -122,7 +138,9 @@ function Price({ v }: { v: UnitView }) {
         {riyalWord(u.priceSar)}
       </KV>
       <KV label={roof && !sold ? "سعر المتر (مع التراس)" : "سعر المتر"}>{riyalWord(v.ppm)}</KV>
-      <KV label="ضريبة التصرفات العقارية">{tax}</KV>
+      <KV label="ضريبة التصرفات العقارية">
+        <Tax />
+      </KV>
       {v.status === "available" && !roof && (
         <KV label="قياساً بالحي">
           <span className="md:hidden">{v.compared.bedsPart} في الحي</span>
@@ -176,7 +194,8 @@ function Features({ v }: { v: UnitView }) {
         <KV label="بلكونة">
           <Yes v={f.balcony} />
         </KV>
-        <KV label="سمارت هوم">
+        {/* Unit-D lists the kitchen before smart home; the phone grid keeps Unit-M's order */}
+        <KV label="سمارت هوم" className="md:order-1">
           <Yes v={f.smartHome} />
         </KV>
         <KV label="نوع المطبخ">{kitchenWord(f.kitchen)}</KV>
@@ -184,8 +203,12 @@ function Features({ v }: { v: UnitView }) {
           <Yes v={f.parking > 0} />
         </KV>
       </div>
-      {u.otherFeatures.length > 0 && <KV label="مميزات جوهرية أخرى">{u.otherFeatures.join(" · ")}</KV>}
-      <KV label="مميزات إضافية">
+      {u.otherFeatures.length > 0 && (
+        <KV label="مميزات جوهرية أخرى" stack>
+          {u.otherFeatures.join(" · ")}
+        </KV>
+      )}
+      <KV label="مميزات إضافية" stack>
         <ChipOnly>للتأكيد</ChipOnly>
       </KV>
     </SpecSection>
@@ -274,5 +297,5 @@ export function UnitSpecs({ v, className }: { v: UnitView; className?: string })
   else if (v.status === "sold") sections = [<Status key="s" v={v} />, <Price key="p" v={v} />, <UnitApartment key="u" v={v} rows="sold" />];
   else if (roof) sections = [<UnitRoof key="u" v={v} />, <Price key="p" v={v} />, <Features key="f" v={v} />];
   else sections = [<Location key="l" v={v} />, <UnitApartment key="u" v={v} rows="full" />, <Price key="p" v={v} />, <Features key="f" v={v} />, <Guarantees key="g" v={v} />, <Status key="s" v={v} />];
-  return <div className={cx("grid grid-cols-1 gap-9 md:grid-cols-3 md:gap-x-10 md:gap-y-12", className)}>{sections}</div>;
+  return <div className={cx("grid grid-cols-1 gap-9 md:grid-cols-3 md:gap-x-10 md:gap-y-8", className)}>{sections}</div>;
 }

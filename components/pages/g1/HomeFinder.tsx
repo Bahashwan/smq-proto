@@ -5,7 +5,8 @@ import { AnswerBlock, BottomSheet, BudgetBlock, Button, Chip, SelectButton, What
 import { finderAnswer, type FinderType } from "@/data/selectors";
 import { districts, districtAr, siteDistricts } from "@/data/districts";
 import { useUnitOverrides } from "@/lib/store";
-import { fmtNum, fmtArea, cx } from "@/lib/format";
+import { fmtNum, cx } from "@/lib/format";
+import { CutStart } from "./shell";
 import { unitsUrl } from "@/lib/url";
 
 const PRESETS = [
@@ -44,9 +45,15 @@ export function HomeFinder({ variant = "page" }: { variant?: "page" | "preview" 
 
   const resultsHref = unitsUrl({ district, max: budget, beds, type: [] });
   const line = `حتى ${fmtNum(budget)} في ${district === "all" ? "كل جدة" : `حي ${districtAr(district)}`}`;
-  const ranges = answer.count
-    ? [answer.beds && bedsLine(answer.beds.min, answer.beds.max), answer.area && `${fmtArea(answer.area.min)} إلى ${fmtArea(answer.area.max)} م²`, answer.ppm && `${fmtNum(answer.ppm.min)} إلى ${fmtNum(answer.ppm.max)} للمتر`].filter(Boolean).join(" · ")
-    : "لا وحدات ضمن هذه الميزانية في هذا الحي بعد";
+  // the boards round the areas in this summary line («80 إلى 147 م²»); the per-m² part shows on desktop only (Home-D)
+  const ranges = answer.count ? (
+    <>
+      {[answer.beds && bedsLine(answer.beds.min, answer.beds.max), answer.area && `${fmtNum(Math.round(answer.area.min))} إلى ${fmtNum(Math.round(answer.area.max))} م²`].filter(Boolean).join(" · ")}
+      {answer.ppm && <span className="hidden md:inline"> · {fmtNum(answer.ppm.min)} إلى {fmtNum(answer.ppm.max)} للمتر</span>}
+    </>
+  ) : (
+    "لا وحدات ضمن هذه الميزانية في هذا الحي بعد"
+  );
 
   const pickers = (
     <>
@@ -55,7 +62,7 @@ export function HomeFinder({ variant = "page" }: { variant?: "page" | "preview" 
     </>
   );
   const cta = (
-    <Button variant="secondary" size="l" href={resultsHref} arrow between className="text-body font-bold">
+    <Button variant="secondary" size="l" href={resultsHref} arrow between full className="text-body font-bold md:h-15 md:text-[17px]">
       {ctaLabel(answer.count)}
     </Button>
   );
@@ -80,10 +87,10 @@ export function HomeFinder({ variant = "page" }: { variant?: "page" | "preview" 
 
       {/* desktop: illustrative image with the answer block over its foot */}
       <div className="relative hidden md:flex md:flex-col md:justify-end min-h-[560px]">
-        <div className="absolute inset-0 bg-slot cut-xl">
+        <CutStart className="absolute inset-0 bg-slot cut-xl">
           <ImageSlotLazy />
-        </div>
-        <div className="relative z-10 me-10 ms-0 mb-0">{answerBlock}</div>
+        </CutStart>
+        <div className="relative z-10 mx-6 mb-6">{answerBlock}</div>
       </div>
 
       <BottomSheet open={picker === "district"} onClose={() => setPicker(null)} title="اختر الحي" desktop="dialog">
@@ -108,7 +115,15 @@ export function HomeFinder({ variant = "page" }: { variant?: "page" | "preview" 
   );
 }
 
-import { ImageSlot } from "@/components/ui";
+import { IllustrativeLabel, ImageSlot } from "@/components/ui";
+/** The labels sit at the image top (Home-D), clear of the answer block over its foot */
 function ImageSlotLazy() {
-  return <ImageSlot slotId="IMG-ED-ROWDAH-TREES" tier="generated" ratio="4:5" cut="none" className="h-full w-full" as="div" />;
+  return (
+    <ImageSlot slotId="IMG-ED-ROWDAH-TREES" tier="generated" cut="none" label={false} showId={false} className="h-full w-full" as="div">
+      <IllustrativeLabel className="absolute top-4 start-4 z-[1]" />
+      <span className="absolute top-4 end-4 z-[1] flex">
+        <span dir="ltr" className="px-2 py-1 bg-paper text-caption font-normal text-muted leading-none whitespace-nowrap">IMG-ED-ROWDAH-TREES · 4:5</span>
+      </span>
+    </ImageSlot>
+  );
 }

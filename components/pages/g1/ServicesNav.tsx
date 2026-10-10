@@ -26,15 +26,15 @@ export function ServicesNav({ items, className }: { items: ServicesNavItem[]; cl
     return () => io.disconnect();
   }, [items]);
   return (
-    <nav aria-label="الخدمات" className={cx("sticky top-14 z-20 bg-paper border-b border-line", className)}>
-      <div className="container-smq flex items-center gap-1 overflow-x-auto">
+    <nav aria-label="الخدمات" className={cx("sticky top-14 z-20 bg-paper border-b-[1.5px] border-ink", className)}>
+      <div className="container-smq max-md:px-3 flex items-center overflow-x-auto">
         {items.map((it) => (
           <a
             key={it.id}
             href={`#${it.id}`}
             aria-current={current === it.id ? "location" : undefined}
             onClick={() => setCurrent(it.id)}
-            className={cx("shrink-0 inline-flex items-center h-14 px-2.5 text-label font-bold no-underline whitespace-nowrap tnum motion-hover transition-colors", current === it.id ? "text-ink border-b-[3px] border-gold" : "text-muted hover:text-ink")}
+            className={cx("shrink-0 inline-flex items-center h-12.5 px-2.5 text-label font-bold no-underline whitespace-nowrap tnum motion-hover transition-colors", current === it.id ? "text-ink border-b-[3px] border-gold" : "text-muted hover:text-ink")}
           >
             {it.label}
           </a>

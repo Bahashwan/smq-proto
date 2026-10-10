@@ -22,8 +22,8 @@ export function LiveProjectStat({ projectId, field }: { projectId: string; field
   return <>{s[field]}</>;
 }
 
-/** «تبدأ من 459,000» with the riyal sign */
-export function LiveProjectFrom({ projectId, className }: { projectId: string; className?: string }) {
+/** «تبدأ من 459,000» (the Home boards print the project figure without the riyal sign) */
+export function LiveProjectFrom({ projectId, className, sign = true }: { projectId: string; className?: string; sign?: boolean }) {
   const ov = useUnitOverrides();
-  return <Price value={projectStats(projectId, ov).fromPrice ?? 0} className={className} />;
+  return <Price value={projectStats(projectId, ov).fromPrice ?? 0} className={className} sign={sign} />;
 }

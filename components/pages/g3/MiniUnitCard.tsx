@@ -46,18 +46,19 @@ export function MiniUnitCard({ unit, status, tier = "generated", realSrc, withBu
         realSrc={realSrc}
         cut="img"
         compact
-        className="h-24 md:h-28"
+        className="h-22.5 md:h-27.5"
         showId={false}
         sold={st === "sold"}
         unit={{ model: unit.type === "roof-villa" ? "روف" : unit.model, buildingNameAr: unit.buildingNameAr, areaM2: unit.areaM2, beds: unit.beds, baths: unit.baths, typeAr: UNIT_TYPE_AR[unit.type] }}
       />
-      <span className="flex flex-col gap-0.5 px-3 pt-2.5 pb-2.5">
-        <span className="text-body font-extrabold leading-snug">{title}</span>
+      {/* Unit-M: 10px 12px body and 8px 12px price band; Unit-D: 12px 14px and 10px 14px */}
+      <span className="flex flex-col gap-0.5 px-3 py-2.5 md:px-3.5 md:py-3">
+        <span className="text-body font-extrabold leading-normal">{title}</span>
         <span className="text-caption font-normal text-muted">{meta}</span>
       </span>
-      <span className="mt-auto flex items-center justify-between gap-2 px-3 py-2.5 bg-ink text-paper">
-        <span className="text-body font-extrabold tnum leading-none">{fmtNum(unit.priceSar)}</span>
-        <span className="text-caption font-semibold text-gold tnum leading-none whitespace-nowrap">{fmtNum(unitPpm(unit))} /م²</span>
+      <span className="mt-auto flex items-baseline justify-between gap-2 px-3 py-2 md:px-3.5 md:py-2.5 bg-ink text-paper">
+        <span className="text-body font-extrabold tnum leading-relaxed">{fmtNum(unit.priceSar)}</span>
+        <span className="text-caption font-normal text-gold tnum whitespace-nowrap">{fmtNum(unitPpm(unit))} /م²</span>
       </span>
     </Link>
   );

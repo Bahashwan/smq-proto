@@ -3,7 +3,7 @@
 // `proof=1` (route-map «About proof blocks»). Without it the About-D placeholder note stays in the licence section.
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { ArrowIcon, Eyebrow, LICENCE, Mark, MarkedText, Pill } from "@/components/ui";
+import { Eyebrow, LICENCE, Mark, MarkedText, Pill } from "@/components/ui";
 import { partners, proofNumbers, testimonials, copy } from "@/data/content";
 import { settings } from "@/data/settings";
 import { countsByStatus, listedUnits } from "@/data/selectors";
@@ -62,20 +62,19 @@ export function ProofBlocks() {
   return (
     <div data-proof className="flex flex-col">
       {/* financing */}
-      <section className="container-smq py-10 md:py-16 grid gap-8 md:grid-cols-[380px_minmax(0,1fr)] md:gap-12">
+      <section className="container-smq py-10 md:py-16 grid gap-8 md:grid-cols-[380px_minmax(0,1fr)] md:gap-10">
         <div className="flex flex-col gap-2.5">
           <Eyebrow>التمويل</Eyebrow>
           <h2 className="m-0 text-h2 md:text-[30px] font-extrabold leading-tight">شركاؤنا وجهات التمويل</h2>
           <p className="m-0 text-body md:text-[14px] text-ink-2 leading-relaxed">نعمل مع بنوك مرخّصة وجهات تنظيمية. الموافقة على التمويل بيد البنك، ونحن نجهّز الملف ونتابعه معك حتى الإفراغ.</p>
-          <Link href="/services" className="inline-flex items-center gap-1.5 text-label font-extrabold text-ink no-underline hover:underline">
-            كيف نساعد في التمويل
-            <ArrowIcon size={16} />
+          <Link href="/services" className="mt-1.5 self-start text-label font-extrabold text-gold-text no-underline hover:text-ink hover:underline">
+            كيف نساعد في التمويل ←
           </Link>
         </div>
         <div className="flex flex-col gap-4">
-          <div className="grid grid-cols-3 gap-3">
+          <div className="flex flex-wrap items-center gap-3.5">
             {logos.map((p) => (
-              <span key={p.id} className="flex items-center justify-center text-center min-h-16 px-3 border-hairline text-label font-bold leading-snug">
+              <span key={p.id} className={`flex items-center justify-center text-center h-11 px-4 bg-paper border-hairline text-caption font-extrabold text-muted leading-none ${p.kind === "bank" ? "min-w-[130px]" : "min-w-[170px]"}`}>
                 <span>
                   {p.name}
                   {p.placeholder && <Mark>[للتأكيد]</Mark>}
@@ -86,7 +85,7 @@ export function ProofBlocks() {
           <div className="grid grid-cols-3 gap-3">
             <div className="flex flex-col gap-1 bg-sand p-3.5">
               <span className="text-caption font-normal text-muted">ترخيص فال</span>
-              <span className="text-[16px] font-extrabold tnum" dir="ltr">
+              <span className="text-[16px] font-extrabold tnum text-right" dir="ltr">
                 {LICENCE.rega}
               </span>
             </div>
@@ -106,8 +105,8 @@ export function ProofBlocks() {
       </section>
 
       {/* numbers band */}
-      <section className="bg-ink text-paper cut-xl">
-        <div className="container-smq py-10 md:py-14 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+      <section className="bg-ink text-paper cut-img-l">
+        <div className="container-smq pt-10 pb-16 md:pb-18 grid grid-cols-2 gap-6 md:grid-cols-4">
           {numbers.map((n) => (
             <div key={n.value} className="flex flex-col gap-1.5 border-s-[3px] border-gold ps-4">
               <span className="text-price-s md:text-[40px] font-extrabold leading-none tnum">{n.value}</span>
@@ -118,7 +117,7 @@ export function ProofBlocks() {
       </section>
 
       {/* testimonials */}
-      <section className="container-smq py-10 md:py-16 flex flex-col gap-6">
+      <section className="container-smq py-10 md:pt-16 md:pb-0 flex flex-col gap-6">
         <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between md:gap-6">
           <div className="flex flex-col gap-1">
             <Eyebrow>آراء العملاء</Eyebrow>
@@ -126,11 +125,11 @@ export function ProofBlocks() {
           </div>
           <span className="text-caption font-normal text-muted">نصوص حقيقية بموافقة أصحابها · بلا صور أشخاص · تظهر الكتلة عند 3 آراء منشورة فأكثر</span>
         </div>
-        <div className="grid gap-4 md:grid-cols-3 md:gap-6">
+        <div className="grid gap-4 md:grid-cols-3">
           {testimonials.map((t) => (
-            <blockquote key={t.id} className="m-0 flex flex-col gap-3 p-5 md:p-6 border-interactive">
-              <span aria-hidden className="size-5 hex-flat bg-gold" />
-              <p className="m-0 text-body md:text-[17px] leading-relaxed">
+            <blockquote key={t.id} className="m-0 flex flex-col gap-3.5 px-5 py-5 md:px-6 md:py-5.5 border-interactive">
+              <span aria-hidden className="size-6 hex-flat bg-gold" />
+              <p className="m-0 text-body md:text-[16px] font-semibold leading-[1.8]">
                 <MarkedText text={t.text} />
               </p>
               <footer className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-line text-caption font-normal text-muted">

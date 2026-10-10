@@ -1,16 +1,16 @@
 "use client";
 // /units/[code]/plan · Unit-Plan-M: a schematic plan marked illustrative, never a real floor plan. Rooms are drawn as
 // rectangles from plans.ts (x mirrored so the drawing reads right-to-left like the board); tapping a room shows its
-// computed area and windows; «مع الأبعاد / بلا أبعاد» shows or hides the areas; + / − scale the drawing; roof villas
+// computed area and windows; «مع الأبعاد / بلا أبعاد» shows or hides the areas on the drawing; + / − scale the drawing; roof villas
 // get the «الدور الأول · السطح» tabs. «المخطط PDF» prints the page; «اطلب المخطط المعماري» opens WhatsApp.
 import { useState } from "react";
 import Link from "next/link";
 import { unitBySlug } from "@/data/units";
 import type { Unit } from "@/data/types";
 import { bedsLabel, fmtArea, waLink } from "@/lib/format";
-import { CloseIcon, Mark, Segmented, useVisitorCode } from "@/components/ui";
+import { Mark, Segmented, useVisitorCode } from "@/components/ui";
 import { useMarks } from "@/lib/presenter";
-import { planOf, roomArea, roomDims, windowNote, type PlanFloor, type PlanRoom, type Side } from "./plans";
+import { planOf, roomArea, windowNote, type PlanFloor, type PlanRoom, type Side } from "./plans";
 import { bathsSpec, fmt1 } from "./view";
 
 const PAD = 7;
@@ -158,13 +158,12 @@ export function PlanPage({ slug }: { slug: string }) {
   const name = roof ? "فيلا الروف" : `نموذج ${unit.model}`;
   const room = floor?.rooms.find((r) => r.id === selected);
   const area = room && floor ? roomArea(room, floor, unit.areaM2) : 0;
-  const size = room && floor ? roomDims(room, floor, unit.areaM2) : null;
   const wa = `أريد مخطط ${unit.code} بالأبعاد${code ? ` · ${code}` : ""}`;
 
   return (
     <div className="min-h-dvh bg-paper text-ink" aria-label={`مخطط ${name}`}>
       <div className="mx-auto w-full max-w-3xl flex flex-col">
-        <div className="flex items-start justify-between gap-3 px-4 py-3.5 border-b border-line">
+        <div className="flex items-start justify-between gap-3 px-4 py-3.5 border-b-[1.5px] border-ink">
           <div className="flex flex-col gap-0.5 min-w-0">
             <h1 className="m-0 text-label md:text-h3 font-extrabold leading-snug">
               مخطط {name} · {unit.code}
@@ -174,8 +173,8 @@ export function PlanPage({ slug }: { slug: string }) {
               <Mark>للتأكيد</Mark>
             </p>
           </div>
-          <Link href={unitHref} aria-label="إغلاق" className="inline-flex items-center justify-center size-11 shrink-0 border-interactive bg-paper text-ink no-underline hover:bg-sand motion-hover transition-colors">
-            <CloseIcon size={18} />
+          <Link href={unitHref} aria-label="إغلاق" className="inline-flex items-center justify-center size-11 shrink-0 border-interactive bg-paper text-ink text-h3 font-extrabold leading-none no-underline hover:bg-sand motion-hover transition-colors">
+            ×
           </Link>
         </div>
 
@@ -225,7 +224,6 @@ export function PlanPage({ slug }: { slug: string }) {
                 <strong className="font-extrabold">{room.label}</strong>
                 {" · "}
                 {room.kind === "kitchen" && room.open ? "مفتوح" : `${fmt1(area)} م²`}
-                {dims === "with" && size && room.kind !== "balcony" ? ` · ${fmt1(size.w)} × ${fmt1(size.h)} م` : ""}
                 {windowNote(room.windows) ? ` · ${windowNote(room.windows)}` : ""}
               </span>
               {(room.tbc || (room.kind === "kitchen" && room.open && unit.features.kitchen === "tbc")) && <Mark className="ms-0 shrink-0">للتأكيد</Mark>}
@@ -241,7 +239,9 @@ export function PlanPage({ slug }: { slug: string }) {
               اطلب المخطط المعماري
             </a>
           </div>
-          <p className="m-0 pb-6 text-caption font-normal leading-relaxed text-muted">المساحات تقريبية من مخطط المطوّر، والمساحة الموثّقة في الصك هي المرجع.</p>
+          <p className="m-0 pb-6 text-caption font-normal leading-relaxed text-muted">
+            المساحات تقريبية من مخطط المطوّر، والمساحة الموثّقة في الصك هي المرجع.{roof ? "" : " فيلا الروف تعرض مخططين بتبويب «الدور الأول · السطح»."}
+          </p>
         </div>
       </div>
     </div>

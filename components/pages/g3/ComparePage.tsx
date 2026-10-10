@@ -61,7 +61,7 @@ export function ComparePage() {
 
   return (
     <>
-      <Header />
+      <Header active="/units" />
       <main className="pb-12 md:pb-20">
         {withStatus.length >= 2 ? (
           <CompareTable list={withStatus} onRemove={remove} tier={tier} />
@@ -85,6 +85,8 @@ interface RowDef {
   best?: Set<string>;
   big?: boolean;
   small?: boolean;
+  /** 700 (للمتر, المساحة); the other rows are regular */
+  strong?: boolean;
   cell: (u: Unit) => ReactNode;
   /** «نعم» strong, «لا» muted */
   yes?: (u: Unit) => boolean;
@@ -116,9 +118,10 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
         </>
       ),
       best: bestPpm,
+      strong: true,
       cell: (u) => fmtNum(unitPpm(u)),
     },
-    { key: "area", label: "المساحة", best: bestArea, cell: (u) => `${fmtArea(u.areaM2)} م²` },
+    { key: "area", label: "المساحة", best: bestArea, strong: true, cell: (u) => `${fmtArea(u.areaM2)} م²` },
     { key: "rooms", label: "الغرف · الحمامات", cell: (u) => `${u.beds} · ${u.baths}` },
     { key: "bf", label: "العمارة · الطابق", only: "phone", cell: (u) => `${u.buildingNameAr} · ${floorShort(u)}` },
     { key: "facing", label: "الاتجاه", only: "phone", cell: (u) => u.orientation?.value ?? "·" },
@@ -133,7 +136,8 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
     { key: "updated", label: "آخر تحديث", small: true, cell: (u) => fmtDate(u.updatedAt) },
   ];
   const onlyCls = (o?: "phone" | "md") => (o === "phone" ? "md:hidden" : o === "md" ? "hidden md:table-row" : "");
-  const th = "sticky start-0 z-[1] w-28 md:w-50 px-3 md:px-4 py-3 text-start align-middle whitespace-nowrap text-caption md:text-label font-bold text-muted bg-paper md:bg-cream md:static";
+  // Compare-M: 96px label column from the gutter, 12px rows, 150px unit columns 6px apart; Compare-D: 14px 20px / 14px 16px
+  const th = "sticky start-0 z-[1] w-28 md:w-50 ps-4 pe-2 md:px-5 py-3.5 md:py-4.5 text-start align-middle whitespace-nowrap text-caption md:text-label font-bold text-muted bg-paper md:bg-cream md:static";
 
   return (
     <Container className="pt-5 md:pt-10">
@@ -163,11 +167,11 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
         <table className="w-max min-w-full md:w-full border-collapse text-label">
           <thead>
             <tr className="border-b-[1.5px] border-ink">
-              <th scope="col" className={cx(th, "align-top pt-4")}>
+              <th scope="col" className={cx(th, "align-top pt-0 md:pt-5")}>
                 الوحدة
               </th>
               {list.map((u) => (
-                <th key={u.code} scope="col" className="w-38 md:w-auto p-0 md:px-3 md:py-3 align-top font-normal text-start md:border-s md:border-line">
+                <th key={u.code} scope="col" className="w-40.5 md:w-auto px-1.5 pb-2.5 md:p-4 align-top font-normal text-start md:border-s md:border-line">
                   <UnitHead unit={u} tier={tier} onRemove={() => onRemove(u.slug)} />
                 </th>
               ))}
@@ -175,7 +179,7 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
           </thead>
           <tbody>
             {rows.map((r) => (
-              <tr key={r.key} className={cx("border-b border-line", onlyCls(r.only))}>
+              <tr key={r.key} className={cx(r.key === "updated" ? "border-b-[1.5px] border-ink" : "border-b border-line", onlyCls(r.only))}>
                 <th scope="row" className={th}>
                   {r.label}
                 </th>
@@ -183,7 +187,7 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
                   const best = r.best?.has(u.code) && list.length > 1;
                   const yes = r.yes ? r.yes(u) : undefined;
                   return (
-                    <td key={u.code} className={cx("px-3 md:px-4 py-3 align-middle tnum md:border-s md:border-line", r.big ? "text-body md:text-h3 font-extrabold" : r.small ? "text-caption md:text-label font-normal text-muted" : "font-bold", yes === false && "text-muted font-bold", yes === true && "font-extrabold")}>
+                    <td key={u.code} className={cx("px-1.5 md:px-4 py-3.5 md:py-4.5 align-middle tnum md:border-s md:border-line", r.big ? "text-body md:text-h3 font-extrabold" : r.small ? "text-caption md:text-label font-normal text-muted" : yes === true ? "font-extrabold" : yes === false ? "font-normal text-muted" : r.strong ? "font-bold" : "font-normal")}>
                       <span className="inline-flex items-center gap-1.5">
                         {best && <HexDot tone="gold" dims="size-2.5" />}
                         {r.cell(u)}
@@ -198,8 +202,8 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
                 <span className="sr-only">واتساب</span>
               </th>
               {list.map((u) => (
-                <td key={u.code} className="px-3 md:px-4 py-3 md:py-4 md:border-s md:border-line">
-                  <a href={waLink(`${u.code}${code ? ` · ${code}` : ""}`)} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-11 px-3 bg-gold text-ink text-label font-extrabold no-underline cut-s hover:bg-gold-hover motion-hover transition-colors whitespace-nowrap">
+                <td key={u.code} className="px-1.5 pt-3 pb-0 md:p-4 md:border-s md:border-line">
+                  <a href={waLink(`${u.code}${code ? ` · ${code}` : ""}`)} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center min-h-11 px-2 bg-gold text-ink text-label font-extrabold no-underline cut-s hover:bg-gold-hover motion-hover transition-colors whitespace-nowrap">
                     <span className="md:hidden">واتساب</span>
                     <span className="hidden md:inline">اسأل عن هذه الوحدة</span>
                   </a>
@@ -211,7 +215,7 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
       </div>
 
       <section className="md:hidden mt-6 flex flex-col gap-2 px-4 py-5 bg-sand" aria-label="أرسل المقارنة">
-        <span className="text-body font-extrabold">محتار بين {FEMININE_DEF[n] ?? n}؟</span>
+        <span className="text-body font-extrabold">{`محتار بين ${FEMININE_DEF[n] ?? n}؟`}</span>
         <span className="text-label font-normal leading-relaxed text-muted">أرسل المقارنة كما هي، ونرد عليك برأينا المهني في أيها يناسب ميزانيتك وطريقة سكنك.</span>
         <a href={waLink(waAll)} target="_blank" rel="noopener noreferrer" className="mt-1.5 flex items-center justify-center min-h-12 px-4 bg-ink text-paper text-body font-extrabold no-underline cut-m hover:bg-ink-2 motion-hover transition-colors">
           أرسل المقارنة على واتساب
@@ -227,12 +231,12 @@ function UnitHead({ unit, tier, onRemove }: { unit: Unit; tier: ImageTier; onRem
   return (
     <div className="flex flex-col">
       <div className="relative">
-        <ImageSlot slotId={unit.images[0] ?? `IMG-UNIT-${unit.code}`} tier={tier} compact cut="img" showId={false} sold={unit.status === "sold"} className="h-24 md:h-37" unit={{ model: unit.type === "roof-villa" ? "روف" : unit.model, buildingNameAr: unit.buildingNameAr, areaM2: unit.areaM2, beds: unit.beds, baths: unit.baths }} />
+        <ImageSlot slotId={unit.images[0] ?? `IMG-UNIT-${unit.code}`} tier={tier} compact cut="img" showId={false} sold={unit.status === "sold"} className="h-22.5 md:h-38" unit={{ model: unit.type === "roof-villa" ? "روف" : unit.model, buildingNameAr: unit.buildingNameAr, areaM2: unit.areaM2, beds: unit.beds, baths: unit.baths }} />
         <span className="absolute top-2 start-2 z-[2] flex">
           <StatusBadge status={unit.status} size={40} />
         </span>
       </div>
-      <div className="flex items-start justify-between gap-2 px-3 md:px-0 pt-2.5 pb-3">
+      <div className="flex items-start justify-between gap-1 md:gap-2 pt-2 md:pt-2.5">
         <Link href={`/units/${unit.slug}`} className="flex flex-col min-w-0 text-ink no-underline hover:underline">
           <span className="text-label md:text-h3 font-extrabold leading-snug">
             {nameOf(unit)}
@@ -278,7 +282,7 @@ function CompareOne({ unit, onRemove, onAdd, tier }: { unit: Unit; onRemove: (sl
       <section className="mt-5 grid grid-cols-2 gap-3" aria-label="الوحدات في المقارنة">
         <article className="flex flex-col border-interactive">
           <div className="relative">
-            <ImageSlot slotId={unit.images[0] ?? `IMG-UNIT-${unit.code}`} tier={tier} compact cut="img" showId={false} className="h-24 md:h-32" unit={{ model: unit.type === "roof-villa" ? "روف" : unit.model, buildingNameAr: unit.buildingNameAr, areaM2: unit.areaM2, beds: unit.beds, baths: unit.baths }} />
+            <ImageSlot slotId={unit.images[0] ?? `IMG-UNIT-${unit.code}`} tier={tier} compact cut="img" showId={false} className="h-22.5 md:h-32" unit={{ model: unit.type === "roof-villa" ? "روف" : unit.model, buildingNameAr: unit.buildingNameAr, areaM2: unit.areaM2, beds: unit.beds, baths: unit.baths }} />
             <span className="absolute top-2 start-2 z-[2] flex">
               <StatusBadge status={unit.status} size={40} />
             </span>
@@ -337,7 +341,7 @@ function CompareOne({ unit, onRemove, onAdd, tier }: { unit: Unit; onRemove: (sl
         <h2 id="cmp-numbers" className="m-0 px-3.5 py-3 bg-ink text-paper text-label font-extrabold">
           {nameOf(unit)} بالأرقام
         </h2>
-        <dl className="m-0 grid grid-cols-[minmax(0,9rem)_minmax(0,1fr)] text-label">
+        <dl className="m-0 grid grid-cols-2 text-label">
           {[
             ["السعر", fmtNum(unit.priceSar)],
             ["سعر المتر", fmtNum(unitPpm(unit))],
@@ -390,17 +394,18 @@ function CompareEmpty() {
         لا وحدات بعد. تُحفظ المقارنة على هذا الجوال {days} أيام، بلا حساب.
       </p>
 
-      <div className="mt-24 md:mt-16 flex flex-col items-center gap-4 text-center">
-        <div aria-hidden className="flex gap-1.5">
+      {/* Compare-Empty-M centres this block in the screen under the title: 18px between the pieces */}
+      <div className="mt-35 md:mt-16 flex flex-col items-center gap-4.5 text-center">
+        <div aria-hidden className="flex gap-2">
           {[0, 1, 2].map((i) => (
-            <span key={i} className={cx("relative inline-block w-11 h-10 hex-flat", i === 0 ? "bg-ink" : "bg-line")}>
+            <span key={i} className={cx("relative inline-block size-11 hex-flat", i === 0 ? "bg-ink" : "bg-line")}>
               <span className="absolute inset-[1.5px] hex-flat bg-paper" />
             </span>
           ))}
         </div>
         <h2 className="m-0 text-h2 leading-snug">قارن حتى {COMPARE_MAX} وحدات جنباً إلى جنب</h2>
-        <p className="m-0 max-w-sm text-label font-normal leading-relaxed text-muted">السعر، سعر المتر، المساحة، الغرف، الطابق، التسليم، وضريبة التصرفات. اضغط «قارن» على أي بطاقة في النتائج.</p>
-        <div className="mt-1 w-full max-w-sm flex flex-col gap-2.5">
+        <p className="m-0 max-w-75 text-label font-normal leading-relaxed text-muted">السعر، سعر المتر، المساحة، الغرف، الطابق، التسليم، وضريبة التصرفات. اضغط «قارن» على أي بطاقة في النتائج.</p>
+        <div className="w-full max-w-80 flex flex-col gap-2">
           <Link href="/units" className="flex items-center justify-center min-h-13 px-4 bg-ink text-paper text-body font-extrabold no-underline cut-m hover:bg-ink-2 motion-hover transition-colors tnum">
             اعرض الوحدات المتاحة · {available}
           </Link>
@@ -408,16 +413,16 @@ function CompareEmpty() {
             أو ابدأ من دليل الأسعار
           </Link>
           {(twoBed.length >= 2 || roofs.length >= 2) && (
-            <div className="mt-2 flex flex-col items-start gap-1.5 px-4 py-3.5 bg-sand text-start text-label">
+            <div className="mt-2.5 flex flex-col items-start gap-1.5 px-3.5 py-3 bg-sand text-start text-label">
               <span className="font-extrabold">مقارنة سريعة جاهزة</span>
               {twoBed.length >= 2 && (
                 <Link href={compareUrl(twoBed.slice(0, COMPARE_MAX).map((u) => u.slug))} className="font-bold text-gold-text no-underline hover:underline">
-                  شقق الغرفتين {FEMININE_DEF[twoBed.length] ?? twoBed.length} المتاحة ←
+                  {`شقق الغرفتين ${FEMININE_DEF[twoBed.length] ?? twoBed.length} المتاحة ←`}
                 </Link>
               )}
               {roofs.length >= 2 && (
                 <Link href={compareUrl(roofs.slice(0, 2).map((u) => u.slug))} className="font-bold text-gold-text no-underline hover:underline">
-                  فيلتا الروف: {roofs[0].buildingNameAr} و{roofs[1].buildingNameAr} ←
+                  {`فيلتا الروف: ${roofs[0].buildingNameAr} و${roofs[1].buildingNameAr} ←`}
                 </Link>
               )}
             </div>
