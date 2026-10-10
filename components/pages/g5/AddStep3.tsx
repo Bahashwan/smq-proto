@@ -24,8 +24,8 @@ function RoleExtra({ d, update }: { d: AddDraft; update: (p: Partial<AddDraft>) 
     return <span className="text-caption font-normal leading-relaxed text-muted">المالك: الصك في الخطوة 2. الوكيل: صورة الوكالة. المسوّق: رقم رخصة فال وعقد وساطة موثّق.</span>;
   }
   return (
-    <div className="relative mt-1 flex flex-col gap-3 border-interactive bg-cream p-3 pe-4 md:grid md:grid-cols-2 md:gap-4 md:p-4 md:pe-5">
-      <span aria-hidden className="absolute inset-y-0 end-0 w-1 bg-gold" />
+    <div className="relative mt-1 flex flex-col gap-3 border-interactive bg-cream p-3 ps-4 md:grid md:grid-cols-2 md:gap-4 md:p-4 md:ps-5">
+      <span aria-hidden className="absolute inset-y-0 start-0 w-1 bg-gold" />
       {d.role === "agent" ? (
         <>
           <FileTile id="add-poa" label="صورة الوكالة الشرعية" accept="application/pdf,image/jpeg,image/png" prompt="ارفع PDF أو صورة" file={d.poaFile} onFile={(n) => update({ poaFile: n })} />
@@ -101,7 +101,7 @@ export function AddStep3() {
                 value={draft.role}
                 onChange={(role) => update({ role })}
                 gridClassName="grid grid-cols-4 gap-2"
-                legendClassName="text-label font-bold text-ink md:text-h3"
+                legendClassName="text-label font-bold text-ink md:font-extrabold"
                 hint={<RoleExtra d={draft} update={update} />}
               />
 

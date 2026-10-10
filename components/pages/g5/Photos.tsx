@@ -64,7 +64,7 @@ export function Photos({ photos, onChange }: { photos: Photo[]; onChange: (p: Ph
 
   return (
     <div className="flex min-w-0 flex-col gap-2.5">
-      <label htmlFor="add-photos" className="text-label font-bold text-ink md:text-h3">
+      <label htmlFor="add-photos" className="text-label font-bold text-ink md:font-extrabold">
         صور العقار{" "}
         <span className="text-caption font-medium text-muted md:text-label">
           <span className="md:hidden">(حتى 10، من جوالك يكفي)</span>

@@ -4,12 +4,11 @@
 // presenter's marks off). The typed values stay in the session store; a valid submit opens /marketers/sent.
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
+import { useMemo, useState, type FormEvent } from "react";
 import { DistrictMultiSelect } from "@/components/alliance";
 import { Button, Checkbox, Container, MarkedText, SelectField, TextArea, TextField } from "@/components/ui";
 import { forms } from "@/data/content";
 import { districts } from "@/data/districts";
-import { cx } from "@/lib/format";
 import { useHasHydrated } from "@/lib/location";
 import { useMarks } from "@/lib/presenter";
 import { usePatch, useStore } from "@/lib/store";
@@ -83,12 +82,6 @@ export function MarketerForm() {
   const update = (p: Partial<MarketerDraft>) => patch("marketer-form", "draft", p as Record<string, unknown>);
   const [tried, setTried] = useState(false);
   const errors = tried ? check(draft) : {};
-  const sentAt = useRef<string | null>(null);
-
-  useEffect(() => {
-    sentAt.current = null;
-  }, []);
-
   const submit = (e: FormEvent) => {
     e.preventDefault();
     const found = check(draft);
@@ -181,7 +174,7 @@ export function MarketerForm() {
             <div className="md:order-9 md:col-span-2">
               <Checkbox id={ID.consent} checked={draft.consent} onChange={(e) => update({ consent: e.target.checked })} error={errors[ID.consent]} label={<MarkedText text="أوافق على تواصل SMQ معي، وعلى شروط التسويق والعمولة [للتأكيد] عند قبولي." />} />
             </div>
-            <div className={cx("flex flex-col gap-3 md:order-10 md:col-span-2")}>
+            <div className="flex flex-col gap-3 md:order-10 md:col-span-2">
               <Button variant="secondary" type="submit" className="w-full md:w-auto md:self-start">
                 أرسل الطلب
               </Button>

@@ -93,11 +93,11 @@ function BuildingFields({ d, update, errors }: { d: AddDraft; update: (p: Partia
         value={d.hasIncome}
         onChange={(v) => update({ hasIncome: v })}
         gridClassName="grid grid-cols-2 gap-2 md:max-w-80"
-        legendClassName="text-label font-bold text-ink md:text-h3"
+        legendClassName="text-label font-bold text-ink md:font-extrabold"
         hint={
           d.hasIncome === "yes" ? (
-            <div className="relative mt-1.5 flex flex-col gap-3 border-interactive bg-cream p-3 pe-4 md:grid md:grid-cols-3 md:gap-4 md:p-4 md:pe-5">
-              <span aria-hidden className="absolute inset-y-0 end-0 w-1 bg-gold" />
+            <div className="relative mt-1.5 flex flex-col gap-3 border-interactive bg-cream p-3 ps-4 md:grid md:grid-cols-3 md:gap-4 md:p-4 md:ps-5">
+              <span aria-hidden className="absolute inset-y-0 start-0 w-1 bg-gold" />
               <AmountField id={FIELD.income} label="الدخل السنوي (ريال)" value={d.income} onChange={(v) => update({ income: v })} error={errors[FIELD.income]} />
               <div className="grid grid-cols-2 gap-3 md:contents">
                 <TextField id="add-rented" label="الوحدات المؤجّرة الآن" value={d.rented} onChange={(e) => update({ rented: e.target.value })} />
@@ -189,7 +189,7 @@ function PriceBlock({ d, update, errors }: { d: AddDraft; update: (p: Partial<Ad
   return (
     <div className="flex flex-col gap-5 md:grid md:grid-cols-2 md:items-start md:gap-6">
       <div className="flex flex-col gap-4">
-        <MoneyField id={FIELD.price} label="السعر المطلوب (ريال)" value={d.price} onChange={(v) => update({ price: v })} error={errors[FIELD.price]} labelClassName="text-label font-bold text-ink md:text-h3" />
+        <MoneyField id={FIELD.price} label="السعر المطلوب (ريال)" value={d.price} onChange={(v) => update({ price: v })} error={errors[FIELD.price]} labelClassName="text-label font-bold text-ink md:font-extrabold" />
         <div className="md:hidden">{building ? <BuildingPanel d={d} /> : <ApartmentPanel d={d} />}</div>
         {negotiable}
       </div>

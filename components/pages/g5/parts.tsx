@@ -313,7 +313,7 @@ export function SummaryBar({ strong, rest, price, editHref }: { strong: string; 
           </>
         )}
       </p>
-      <Link href={editHref} className="inline-flex h-11 shrink-0 items-center border-interactive bg-paper px-3 text-caption font-bold text-ink no-underline hover:bg-cream md:h-9 md:text-label">
+      <Link href={editHref} className="relative inline-flex h-8 shrink-0 items-center border-interactive bg-paper px-3 text-caption font-bold text-ink no-underline after:absolute after:-inset-y-1.5 after:inset-x-0 after:content-[''] hover:bg-cream md:text-label">
         تعديل
       </Link>
     </div>
