@@ -20,7 +20,7 @@ Conventions
 | Board | Route | State / how it is reached |
 |---|---|---|
 | Home-M, Home-D | `/` | Default. Finder defaults: 700,000 · الروضة · الكل. The answer block (count, from-price, ranges) recomputes from fixtures as the budget moves |
-| Header-Scrolled-D | `/` (and every public page) | After 120px of scroll: 56px header, mark + name, phone becomes an icon, 2px gold rule |
+| Header-Scrolled-D | `/` (and every public page) | After 120px of scroll: 56px header, the same lockup (the client asked that the logo never change on scroll), phone becomes an icon, 2px gold rule |
 | Results-M, Results-D | `/units?district=rawdah&max=700000&type=apt` | Filters, sort and compare selection live in the URL (`district, min, max, type, beds, amin, amax, pstatus, delivery, feat, sort`; values in `docs/data-model.md`). Sold units shown in the «مباعة، للمرجع فقط» strip |
 | Results-Filters-M | `/units?…&sheet=filters` | Phone bottom sheet; desktop shows the same form in the left column |
 | Guide-M, Guide-D | `/guide` | Only الروضة is live; the other districts are «قريباً» chips. All numbers computed |

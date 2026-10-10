@@ -118,3 +118,15 @@
 
 /* presenter tour highlight */
 [data-tour-highlight] { outline: 3px solid var(--smq-gold); outline-offset: 4px; }
+
+/* Some browser extensions (colour pickers and the like) inject normalize.css outside any cascade layer, and its
+   `a { background-color: transparent }` then beats the layered utilities, hiding every filled link button
+   (header WhatsApp, «قارن الآن», hero CTAs). Re-assert those backgrounds at the same unlayered level. */
+a.bg-gold { background-color: var(--smq-gold); }
+a.bg-ink { background-color: var(--smq-ink); }
+a.bg-paper { background-color: var(--smq-paper); }
+a.bg-sand { background-color: var(--smq-sand); }
+a.bg-ink-2, a.hover\:bg-ink-2:hover { background-color: var(--smq-ink-2); }
+a.bg-gold-hover, a.hover\:bg-gold-hover:hover { background-color: var(--smq-gold-hover); }
+a.hover\:bg-paper:hover { background-color: var(--smq-paper); }
+a.hover\:bg-sand:hover { background-color: var(--smq-sand); }

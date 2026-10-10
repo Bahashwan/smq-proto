@@ -1,6 +1,6 @@
 // Logo lockups from design/brand (usage rules on the HeaderFooter sheet): gold mark + white text in the header,
 // full white in the footer and on dark surfaces, gold mark + ink text on light surfaces, full ink on gold,
-// the mark alone for icons and the scrolled header. Imported as static assets, never re-coloured or rotated.
+// the mark alone for icons and watermarks (the header keeps the lockup when scrolled). Imported as static assets, never re-coloured or rotated.
 import lockupGoldmarkWhite from "@/design/brand/lockup-goldmark-white.png";
 import lockupWhite from "@/design/brand/lockup-white.png";
 import lockupGoldmarkInk from "@/design/brand/lockup-goldmark-ink.png";
@@ -43,7 +43,7 @@ export function Lockup({ tone = "goldmark-white", height = 36, lang = "ar", deco
   return <img src={f.src} width={w} height={h} alt={decorative ? "" : lang === "en" ? BRAND_EN : BRAND_AR} className={cx("block shrink-0 w-auto", hClass, className)} style={hClass ? undefined : { height: h, width: "auto" }} />;
 }
 
-/** The gold mark alone (favicon, scrolled header, watermark) */
+/** The gold mark alone (favicon, watermark) */
 export function LogoMark({ size = 28, decorative = true, className, lang = "ar" }: { size?: number; decorative?: boolean; className?: string; lang?: "ar" | "en" }) {
   const w = Math.round((logoMarkGold.width / logoMarkGold.height) * size);
   // eslint-disable-next-line @next/next/no-img-element -- static export, brand PNGs are served as they are

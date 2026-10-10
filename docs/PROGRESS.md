@@ -94,6 +94,9 @@ Phase 10 · Board review round
 | 2026-10-10 | `District.comingSoon` = the Admin-Lists-D set (أبحر الشمالية، الشاطئ، المحمدية); the Guide's «قريباً» chips are computed as every district without a live guide, so الفيصلية shows قريباً there as on Guide-D | Claude, resolves the board mismatch |
 | 2026-10-10 | Foundation built by five parallel agents (fixtures, public UI, admin UI + shell, alliance UI, maps); their board-vs-build notes live in each library's README «Known differences» and in this file's working notes | Claude |
 | 2026-10-10 | Image prompts for project, unit and brand slots carry an INLAND rule: no sea through windows or behind the buildings (Unit-Tier-Gen-M «لا إطلالات حقيقية مزعومة»); editorial shots may show the sea | Claude, after reviewing the first run |
+| 2026-10-10 | Deployed: the repo now lives at `github.com/Bahashwan/smq-proto` (`main`), git-connected to the Vercel project `smq-proto`; every push to `main` builds `https://smq-proto.vercel.app`. `vercel.json` declares the Next.js preset and `npm ci` / `npm run build` | Client |
+| 2026-10-10 | Header keeps the gold-mark + white lockup when scrolled (the boards' mark + name variant is dropped): one logo in both states | Client, on the deployed site |
+| 2026-10-10 | `app/globals.css` re-asserts the filled link-button backgrounds (`a.bg-gold` etc.) outside the cascade layers: a colour-picker extension in the client's Chrome injects normalize.css unlayered, whose `a { background-color: transparent }` hid every gold link button (header WhatsApp, «قارن الآن») | Claude, found while reviewing the deployed site |
 | 2026-10-10 | Provisional image picks by Claude (`scripts/images/picks.json`, reasons in `scripts/images/rejections.md`); the client confirms or swaps them | Claude |
 | 2026-10-10 | The brand hero composites the real gold mark in the photo's quiet upper-left quarter (the generated facade carries no readable mark) | Shots board rule |
 | 2026-10-10 | Alliance hero: four offices (ج، و، ط، ك) joined this month; launch day marks أبحر الشمالية، المحمدية، الصفا، النعيم «مطلوب» (fixtures follow the boards) | Claude, from Alliance-D and Alliance-Launch-M |
@@ -138,7 +141,7 @@ Phase 10 · Board review round
 
 ## Next action
 
-1. Show the client: run `npm run dev` (or `npm run build && npx serve out`), open `/demo`, run the three tours, and collect feedback. Mark accepted sections `[v]` above. Apply the feedback per page group, then step 4.
+1. Show the client: the site is live at `https://smq-proto.vercel.app` (redeploys on every push to `main` of `Bahashwan/smq-proto`); open `/demo`, run the three tours, and collect feedback. Mark accepted sections `[v]` above. Apply the feedback per page group, then step 4.
 2. Images: once the Vercel AI Gateway is topped up, run `set -a && . ./.env.local && set +a && npm run images -- --parallel=3` (only slots without a pick run, so the five placeholders), pick each slot on `/demo/contact-sheet`, `npm run images:convert`, rebuild and re-shoot (`npm run shots`). To replace one of the cropped re-uses with a fresh image, add `--only=<slot> --force`. Reject anything that shows the sea from a project or unit, people, text, plates or warped architecture.
-3. Deploy when the client wants a link: `npm run build`, then deploy `out/` to Vercel (noindex headers are in `vercel.json`).
+3. Deploy: push to `main` of `Bahashwan/smq-proto`; Vercel builds it (`vercel.json` sets the Next.js preset; noindex headers are there too). `vercel inspect <url> --wait` reports the build.
 4. After any change: `npx tsc --noEmit`, `npm run lint`, `npm run build`, `npm run coverage`, `npm run qa -- --base=http://localhost:3001` against `npx serve out -l 3001`, commit with the shots, update this file, push. A build with `SMQ_DIST_DIR` set writes the export into that folder instead of `out/`: move it to `out/` and run `node scripts/postbuild.mjs`.

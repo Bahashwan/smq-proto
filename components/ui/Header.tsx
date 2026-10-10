@@ -1,6 +1,6 @@
 "use client";
 // Public header (HeaderFooter, Header-Scrolled-D, B-Hero boards): 72px ink bar with the gold-mark + white lockup,
-// the nav, EN, the phone number and the only coloured button (WhatsApp). After 120px of scroll: 56px, mark + name,
+// the nav, EN, the phone number and the only coloured button (WhatsApp). After 120px of scroll: 56px, the same lockup,
 // phone becomes an icon, a 2px gold rule, no shadow. On the phone the bar hides on scroll down and returns on scroll
 // up; the menu button (and ?menu=1) opens the ink sheet from the top (rows at the board's 20px / normal line height,
 // about 67px). The alliance flow boards drop the menu button (`menu={false}`) and prefill WhatsApp (`waText`).
@@ -8,9 +8,9 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { cx, waLink } from "@/lib/format";
 import { setQuery, useClientPath, useQuery } from "@/lib/location";
-import { Lockup, LogoMark } from "./Brand";
+import { Lockup } from "./Brand";
 import { Button, IconButton } from "./Button";
-import { BRAND_SHORT, MENU_AR, NAV_AR, NAV_EN, PHONE_DISPLAY, PHONE_TEL, WA_URL, type NavItem } from "./constants";
+import { MENU_AR, NAV_AR, NAV_EN, PHONE_DISPLAY, PHONE_TEL, WA_URL, type NavItem } from "./constants";
 import { MenuIcon, PhoneIcon, WhatsAppIcon } from "./icons";
 import { useFocusTrap, usePresence, useScrollLock } from "./hooks";
 
@@ -100,14 +100,8 @@ export function Header({ variant = "ar", showEn, transparent, switchHref, active
       >
         <div className={cx("container-smq flex items-center justify-between gap-4 lg:gap-6 motion-reduce:transition-none transition-[height] duration-[160ms]", scrolled ? "h-14" : "h-16 lg:h-18")}>
           <Link href={en ? "/en" : "/"} aria-label={en ? "SMQ Real Estate, home" : "SMQ العقارية، الصفحة الرئيسية"} className="flex items-center gap-2.5 no-underline text-paper shrink-0">
-            {scrolled ? (
-              <>
-                <LogoMark size={28} lang={variant} />
-                <span className="text-label font-extrabold tracking-wide">{en ? "SMQ Real Estate" : BRAND_SHORT}</span>
-              </>
-            ) : (
-              <Lockup tone="goldmark-white" height={26} lang={variant} decorative className="lg:h-7 xl:h-9" />
-            )}
+            {/* the same lockup in both states: the logo never changes on scroll */}
+            <Lockup tone="goldmark-white" height={26} lang={variant} decorative className="lg:h-7 xl:h-9" />
           </Link>
 
           <nav aria-label={en ? "Main" : "الرئيسية"} className="hidden lg:flex items-center gap-0.5">
