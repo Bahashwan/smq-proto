@@ -205,15 +205,15 @@ export function MapPage() {
 
   return (
     <>
-      <Header showEn />
+      <Header showEn switchHref={unitsUrl({ ...r.filters, sheet: null, pin: null }, "/en/units")} />
       <main className="flex h-[calc(100dvh-64px)] min-h-[560px] flex-col md:h-auto md:min-h-0">
         {/* phone bar */}
         <div className={cx("shrink-0 bg-paper px-4 pb-3 pt-2.5 md:hidden", RULE_B)}>
           <div className="flex items-center justify-between gap-2">
-            <span className="text-body font-extrabold">
+            <h1 className="m-0 text-body font-extrabold">
               {unitsWord(total)}
               {budget && <> · {budget}</>}
-            </span>
+            </h1>
             <ViewToggle active="map" gridHref={hrefs.grid} mapHref={hrefs.map} labels="map" size="s" />
           </div>
           <div className="-mx-4 mt-2 flex items-center gap-2 overflow-x-auto px-4">
@@ -226,9 +226,9 @@ export function MapPage() {
         <div className={cx("hidden shrink-0 bg-paper md:block", RULE_B)}>
           <Container className="flex flex-wrap items-center justify-between gap-4 py-3">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="me-2 text-[16px] font-extrabold">
+              <h1 className="m-0 me-2 text-[16px] font-extrabold leading-normal">
                 {unitsWord(total)} في {projectsWord(withMatches)}
-              </span>
+              </h1>
               <MapChips filters={r.filters} size="m" />
               {addChips.map((label) => (
                 <Link key={label} href={hrefs.sheet} scroll={false} className="inline-flex h-9 shrink-0 items-center border-[1.5px] border-dashed border-ink bg-paper px-3 text-[12px] font-bold text-ink no-underline hover:bg-sand motion-hover transition-colors">

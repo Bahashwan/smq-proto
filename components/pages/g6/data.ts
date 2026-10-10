@@ -11,10 +11,13 @@ import {
   districts,
   marketers,
   memberCounts,
+  memberRequestState,
+  NOW,
   offices,
   officeById,
   referrals,
   referralsForOffice,
+  reportSlices,
   requests,
   unitDistrictSlug,
   type AllianceReport,
@@ -25,6 +28,7 @@ import {
   type Office,
   type PctRow,
   type Referral,
+  type RequestStage,
   type Sector,
 } from "@/data";
 import { fmtDateLong } from "@/lib/format";
@@ -154,6 +158,32 @@ export function requestsForOffice(officeId: string): AllianceRequest[] {
   return requests.filter((r) => r.sentTo.some((s) => s.officeId === officeId) || r.memberOfficeId === officeId).sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
 
+export interface SessionAnswer {
+  /** an offer of this office sits in the store for the request */
+  offer?: boolean;
+  /** «لا يوجد حالياً» answered on this device */
+  none?: boolean;
+  /** the store's stage / referral for the request (alliance room actions) */
+  stage?: RequestStage;
+  referralId?: string;
+}
+/**
+ * A member's view of a request (Member-Request-M, the ledger's open list). The member page is opened from the WhatsApp
+ * link and answered on this device, so the office's own reply in the fixtures (the board's prefilled offer of مكتب ط
+ * on REQ-2026-0412) does not close it; the request stays open while it runs, until this session answers it or SMQ
+ * creates the referral from the office's offer. Closed or timed-out requests are expired.
+ */
+export function memberRequestView(base: AllianceRequest, officeId: string, s: SessionAnswer = {}): "open" | "answered" | "expired" {
+  if (s.offer || s.none) return "answered";
+  if (s.referralId && base.offers.some((o) => o.officeId === officeId)) return "answered";
+  const fresh: AllianceRequest = {
+    ...base,
+    offers: base.offers.filter((o) => o.officeId !== officeId),
+    sentTo: base.sentTo.map((x) => (x.officeId === officeId && (x.status === "replied" || x.status === "none") ? { ...x, status: "pending" as const } : x)),
+  };
+  return memberRequestState(fresh, officeId, NOW, s.stage ? { [base.id]: { stage: s.stage } } : undefined);
+}
+
 /** Route params for /member/[token]/requests/[id] and /referrals/[id]. */
 export function memberRequestParams(): { token: string; id: string }[] {
   return offices.flatMap((o) => requestsForOffice(o.id).map((r) => ({ token: o.id, id: r.id })));
@@ -180,7 +210,7 @@ export function referralById(id: string): Referral | undefined {
 
 /** Bars of the monthly report that turn gold («لا عرض يكفي»): a row named in one of the visible opportunities. */
 export function goldRows(rows: PctRow[], report: AllianceReport, kind: "district" | "other"): Set<string> {
-  const labels = report.opportunities.filter((o) => o.sessions >= 20).map((o) => o.labelAr);
+  const labels = reportSlices(report.opportunities).visible.map((o) => o.labelAr);
   const out = new Set<string>();
   for (const r of rows) {
     if (r.key === "other") continue;

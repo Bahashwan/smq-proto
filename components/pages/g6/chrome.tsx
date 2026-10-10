@@ -13,7 +13,7 @@ export function AllianceBand({ text, textD, link }: { text: ReactNode; textD?: R
       <div className="container-smq flex min-h-[33px] items-center justify-between gap-1.5 py-1.5 text-[11px] font-extrabold md:min-h-8 md:gap-3 md:text-[12px]">
         <span className={cx(textD ? "md:hidden" : undefined)}>{text}</span>
         {textD && <span className="hidden md:inline">{textD}</span>}
-        <Link href={link.href} className="shrink-0 whitespace-nowrap py-1 text-ink no-underline hover:underline">
+        <Link href={link.href} className="relative shrink-0 whitespace-nowrap py-1 text-ink no-underline after:absolute after:-inset-x-1 after:-inset-y-2.5 after:content-[''] hover:underline">
           {link.label}
         </Link>
       </div>

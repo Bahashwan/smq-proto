@@ -2,7 +2,7 @@
 // The filters form (Results-Filters-M sheet · Results-D left column). One form, two hosts: the phone sheet keeps a
 // draft and commits on «اعرض N وحدات»; the desktop column writes the URL on every change. Sections are divided by
 // hairlines as on both boards; the sheet adds the two-handle budget slider.
-import { useEffect, useId, useMemo, useState, type ReactNode } from "react";
+import { useId, useMemo, useState, type ReactNode } from "react";
 import { BottomSheet, Button, Chip, CountBadge, FilterChip, Segmented, SelectField, TextField } from "@/components/ui";
 import { fmtNum, cx } from "@/lib/format";
 import { setQuery } from "@/lib/location";
@@ -21,7 +21,12 @@ const SLIDER_STEP = 10_000;
 /** A numeric field that formats with thousands separators and commits on blur / Enter. */
 function NumberField({ label, value, placeholder, onCommit, id, size }: { label: string; value: number | null; placeholder?: string; onCommit: (n: number | null) => void; id?: string; size: "s" | "m" }) {
   const [text, setText] = useState(value == null ? "" : fmtNum(value));
-  useEffect(() => setText(value == null ? "" : fmtNum(value)), [value]);
+  // a new value from outside (URL, chip removed, «مسح الكل») replaces the typed text
+  const [shown, setShown] = useState(value);
+  if (shown !== value) {
+    setShown(value);
+    setText(value == null ? "" : fmtNum(value));
+  }
   const commit = () => {
     const digits = text.replace(/[^\d]/g, "");
     const n = digits ? parseInt(digits, 10) : null;
@@ -243,10 +248,12 @@ const SHEET_RULES = "[&>div:first-child]:[border-block-end:var(--smq-border-inte
 export function FiltersSheet({ filters, overrides }: { filters: UnitFilters; overrides?: UnitOverrides }) {
   const open = filters.sheet === "filters";
   const [draft, setDraft] = useState<UnitFilters>(filters);
-  useEffect(() => {
+  // each opening starts the draft from the URL's filters
+  const [wasOpen, setWasOpen] = useState(open);
+  if (wasOpen !== open) {
+    setWasOpen(open);
     if (open) setDraft(filters);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open]);
+  }
   const count = useMemo(() => filterUnits(draft, overrides).available.length, [draft, overrides]);
   const close = () => setQuery({ sheet: null }, "replace");
   const clear = () => setDraft({ ...DEFAULT_FILTERS, sort: draft.sort, sheet: "filters" });

@@ -48,14 +48,15 @@ export function ChipOnly({ children }: { children: string }) {
 
 export type HexTone = "gold" | "ink" | "paper" | "ring";
 /** Status hexagon: gold = متاح, white with an ink ring = محجوز (on paper), white = محجوز (on ink), ink = مباع. */
-export function HexDot({ tone, className }: { tone: HexTone; className?: string }) {
+export function HexDot({ tone, flat, dims = "size-3", className }: { tone: HexTone; /** flat-topped (the notice icons) */ flat?: boolean; /** size classes */ dims?: string; className?: string }) {
+  const shape = flat ? "hex-flat" : "hex-point";
   if (tone === "ring")
     return (
-      <span aria-hidden className={cx("relative inline-block size-3 shrink-0 hex-point bg-ink", className)}>
-        <span className="absolute inset-[2px] hex-point bg-paper" />
+      <span aria-hidden className={cx("relative inline-block shrink-0 bg-ink", dims, shape, className)}>
+        <span className={cx("absolute inset-[2px] bg-paper", shape)} />
       </span>
     );
-  return <span aria-hidden className={cx("inline-block size-3 shrink-0 hex-point", tone === "gold" ? "bg-gold" : tone === "ink" ? "bg-ink" : "bg-paper", className)} />;
+  return <span aria-hidden className={cx("inline-block shrink-0", dims, shape, tone === "gold" ? "bg-gold" : tone === "ink" ? "bg-ink" : "bg-paper", className)} />;
 }
 
 export const STATUS_WORD: Record<UnitStatus, { ar: string; en: string }> = {

@@ -2,11 +2,11 @@
 // EN-Home-M budget block: slider, budget chips, bedrooms and district selects; the count and the CTA recompute from
 // the fixtures as the budget moves.
 import { useMemo, useState } from "react";
-import { ArrowIcon, Button, Chip, RangeSlider, SelectField, BUDGET_MIN } from "@/components/ui";
+import { Button, Chip, RangeSlider, SelectField, BUDGET_MIN } from "@/components/ui";
 import { availableUnits, unitDistrictSlug } from "@/data/selectors";
 import { siteDistricts } from "@/data/districts";
 import { lists } from "@/data/content";
-import { useStore } from "@/lib/store";
+import { useUnitOverrides } from "@/lib/store";
 import { fmtNum } from "@/lib/format";
 import { unitsUrl } from "@/lib/url";
 
@@ -31,7 +31,7 @@ export function EnFinder({ initialBudget = 700_000 }: { initialBudget?: number }
   const [budget, setBudget] = useState(initialBudget);
   const [beds, setBeds] = useState<BedsOption>("2plus");
   const [district, setDistrict] = useState<string>("all");
-  const overrides = useStore((s) => ({ unitStatus: s.unitStatus, unitHidden: s.unitHidden }));
+  const overrides = useUnitOverrides();
 
   const count = useMemo(
     () =>
@@ -73,9 +73,8 @@ export function EnFinder({ initialBudget = 700_000 }: { initialBudget?: number }
         <SelectField label="Bedrooms" value={beds} onChange={(e) => setBeds(e.target.value as BedsOption)} options={BEDS_OPTIONS} />
         <SelectField label="District" value={district} onChange={(e) => setDistrict(e.target.value)} options={[{ value: "all", label: "All of Jeddah" }, ...siteDistricts().map((d) => ({ value: d.slug, label: d.en }))]} />
       </div>
-      <Button variant="secondary" size="l" href={href} between full>
+      <Button variant="secondary" size="m" href={href} arrow full>
         Show {count} {unitsWord}
-        <ArrowIcon size={22} className="text-gold" />
       </Button>
       <span className="text-caption font-normal text-muted">Full unit price. Real estate transaction tax and registration fees are calculated separately.</span>
     </section>

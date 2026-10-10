@@ -39,21 +39,18 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
   const toast = useStore((s) => s.toast);
   const items = galleryItems(unit);
   const n = items.length;
-  const fromUrl = Math.min(n, Math.max(1, parseInt(q.get("i") ?? "1", 10) || 1)) - 1;
-  const [idx, setIdx] = useState(fromUrl);
-  const [zoom, setZoom] = useState(false);
+  // the picture index lives in the URL (?i=3, 1-based): deep links, back/forward and the arrows all go through it
+  const idx = Math.min(n, Math.max(1, parseInt(q.get("i") ?? "1", 10) || 1)) - 1;
+  const [zoomAt, setZoomAt] = useState<number | null>(null);
+  const zoom = zoomAt === idx;
   const touch = useRef<number | null>(null);
   const unitHref = `/units/${unit.slug}`;
   const planHref = `${unitHref}/plan`;
 
-  // the URL wins when it changes (back/forward, deep links)
-  useEffect(() => setIdx(fromUrl), [fromUrl]);
-
   const go = useCallback(
     (to: number) => {
       const next = (to + n) % n;
-      setIdx(next);
-      setZoom(false);
+      setZoomAt(null);
       setQuery({ i: String(next + 1) }, "replace");
     },
     [n],
@@ -152,7 +149,7 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
           <button
             type="button"
             aria-label={zoom ? "تصغير الصورة" : "تكبير الصورة"}
-            onClick={() => setZoom((z) => !z)}
+            onClick={() => setZoomAt(zoom ? null : idx)}
             className={cx("absolute block p-0 border-0 bg-transparent overflow-hidden", hasPicture ? "inset-x-0 top-1/2 -translate-y-1/2 aspect-[3/2] md:inset-6 md:aspect-auto md:translate-y-0" : "inset-0 md:inset-6", zoom ? "cursor-zoom-out" : "cursor-zoom-in")}
           >
             <span className={cx("absolute inset-0 block motion-hover transition-transform", zoom && "scale-200")}>
@@ -178,7 +175,7 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
               </span>
             </div>
           )}
-          <span className="absolute top-3 start-3 md:top-9 md:start-9 z-[1] px-2.5 py-1 bg-ink text-paper text-caption font-bold leading-snug pointer-events-none">
+          <span className="absolute top-3 end-3 md:top-9 md:end-9 z-[1] px-2.5 py-1 bg-ink text-paper text-caption font-bold leading-snug pointer-events-none">
             <span className="md:hidden">قرّب بإصبعين · اسحب للتالي</span>
             <span className="hidden md:inline">الأسهم ← → للتنقل · Esc للإغلاق · انقر للتكبير</span>
           </span>

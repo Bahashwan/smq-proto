@@ -40,20 +40,25 @@ export function useResults(): ResultsState {
   const filters = useMemo(() => parseFilters(q), [q]);
   const key = filtersKey(filters);
 
-  // skeleton for ~400 ms on every filter change after the first render
+  // skeleton for ~400 ms on every filter change; the query arriving at hydration (server render = defaults) is not one
   const [transient, setTransient] = useState(false);
   const lastKey = useRef<string | null>(null);
   useEffect(() => {
+    if (!hydrated) return;
     if (lastKey.current === null) {
       lastKey.current = key;
       return;
     }
     if (lastKey.current === key) return;
     lastKey.current = key;
-    setTransient(true);
-    const t = setTimeout(() => setTransient(false), FILTER_SKELETON_MS);
-    return () => clearTimeout(t);
-  }, [key]);
+    const on = setTimeout(() => setTransient(true), 0);
+    const off = setTimeout(() => setTransient(false), FILTER_SKELETON_MS);
+    return () => {
+      clearTimeout(on);
+      clearTimeout(off);
+      setTransient(false);
+    };
+  }, [key, hydrated]);
 
   const result = useMemo(() => filterUnits(filters, overrides), [filters, overrides]);
   const groups = useMemo<ProjectGroup[]>(() => {

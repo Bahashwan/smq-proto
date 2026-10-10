@@ -3,11 +3,11 @@
 // rectangles from plans.ts (x mirrored so the drawing reads right-to-left like the board); tapping a room shows its
 // computed area and windows; «مع الأبعاد / بلا أبعاد» shows or hides the areas; + / − scale the drawing; roof villas
 // get the «الدور الأول · السطح» tabs. «المخطط PDF» prints the page; «اطلب المخطط المعماري» opens WhatsApp.
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { unitBySlug } from "@/data/units";
 import type { Unit } from "@/data/types";
-import { bedsLabel, cx, fmtArea, waLink } from "@/lib/format";
+import { bedsLabel, fmtArea, waLink } from "@/lib/format";
 import { CloseIcon, Mark, Segmented, useVisitorCode } from "@/components/ui";
 import { useMarks } from "@/lib/presenter";
 import { planOf, roomArea, roomDims, windowNote, type PlanFloor, type PlanRoom, type Side } from "./plans";
@@ -55,6 +55,12 @@ function PlanDrawing({ floor, unit, selected, onSelect, dims, scale }: { floor: 
   const marks = useMarks();
   return (
     <svg viewBox={`${-PAD} ${-PAD} ${floor.W + PAD * 2} ${floor.H + PAD * 2}`} style={{ width: `${scale * 100}%` }} className="block h-auto max-w-none mx-auto" role="group" aria-label="مخطط توضيحي">
+      <defs>
+        <pattern id={`grid-${floor.id}`} width={4} height={4} patternUnits="userSpaceOnUse">
+          <path d="M4 0H0V4" fill="none" className="stroke-line" strokeWidth={0.15} />
+        </pattern>
+      </defs>
+      <rect x={-PAD} y={-PAD} width={floor.W + PAD * 2} height={floor.H + PAD * 2} fill={`url(#grid-${floor.id})`} />
       {/* rooms (fill first so the walls draw on top) */}
       {floor.rooms.map((r) => {
         const on = r.id === selected;
@@ -65,7 +71,7 @@ function PlanDrawing({ floor, unit, selected, onSelect, dims, scale }: { floor: 
             y={r.y}
             width={r.w}
             height={r.h}
-            className={cx(r.kind === "balcony" ? "fill-on-ink-muted/60" : "fill-paper", on && "fill-gold/25")}
+            className={on ? "fill-gold/25" : r.kind === "balcony" ? "fill-on-ink-muted/60" : "fill-paper"}
           />
         );
       })}
@@ -142,7 +148,7 @@ export function PlanPage({ slug }: { slug: string }) {
   const code = useVisitorCode();
   const [floorIdx, setFloorIdx] = useState(0);
   const floor = plan?.floors[floorIdx] ?? plan?.floors[0];
-  const defaultRoom = useMemo(() => floor?.rooms.find((r) => r.tbc)?.id ?? floor?.rooms[0]?.id ?? "", [floor]);
+  const defaultRoom = floor?.rooms.find((r) => r.tbc)?.id ?? floor?.rooms[0]?.id ?? "";
   const [picked, setPicked] = useState<Record<string, string>>({});
   const selected = floor ? (picked[floor.id] ?? defaultRoom) : "";
   const [dims, setDims] = useState<"with" | "without">("with");

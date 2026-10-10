@@ -16,7 +16,8 @@ import type { AnalyticsPeriod, Approval, Lead, UnitStatus } from "@/data/types";
 import { useStore, useUnitOverrides } from "@/lib/store";
 import { cx, fmtNum, waLink } from "@/lib/format";
 import { G7Shell } from "./shell";
-import { approvalAge, approvalFacts, approvalTitle, leadLines, leadStatusWord, listedInDistrict, peakBand, peakHoursLabel, pctAbove, photosWord, sinceHours, unitShort, unitsWord } from "./util";
+import { BudgetBars } from "./charts";
+import { approvalAge, approvalFacts, approvalTitle, leadLines, leadStatusWord, listedInDistrict, peakHoursLabel, pctAbove, photosWord, sinceHours, unitShort, unitsWord } from "./util";
 
 type PeriodKey = "today" | "7d" | "30d";
 const PERIOD_OPTIONS: { value: PeriodKey; label: string }[] = [
@@ -122,7 +123,7 @@ function ApprovalsPanel({ items }: { items: Approval[] }) {
               {a.submitterName} · <span className="tnum">{a.phoneMasked}</span> · {photosWord(a.photosCount)} · {sinceHours(approvalAge(a))}
             </span>
           </span>
-          <StatusPill status={a.status === "awaiting-photos" ? "بانتظار صور" : "جديد"} />
+          <StatusPill status={a.status === "awaiting-photos" ? "بانتظار صور" : "جديد"} variant={a.status === "awaiting-photos" ? "outline" : "gold"} />
           <AdminLinkButton href={`/admin/approvals/${a.id}`} variant="ink" size="sm">
             مراجعة
           </AdminLinkButton>
@@ -135,10 +136,10 @@ function ApprovalsPanel({ items }: { items: Approval[] }) {
 function LeadStatusCell({ lead, status }: { lead: Lead; status: Lead["status"] }) {
   const setLead = useStore((s) => s.setLead);
   const toast = useStore((s) => s.toast);
-  if (status !== "unanswered") return <StatusPill status={leadStatusWord(lead, status)} />;
+  if (status !== "unanswered") return <StatusPill status={leadStatusWord(lead, status)} variant={status === "closed" ? "ink" : "outline"} />;
   return (
     <span className="flex items-center gap-2">
-      <StatusPill status="بلا رد" />
+      <StatusPill status="بلا رد" variant="gold" />
       <AdminButton
         variant="outline"
         size="xs"
@@ -160,53 +161,21 @@ function LeadsPanel({ items, leadsOv }: { items: Lead[]; leadsOv: Record<string,
       {items.map((l) => {
         const { title, detail } = leadLines(l);
         return (
-          <div key={l.id} className="grid grid-cols-[1.6fr_1fr_0.7fr_auto] items-center gap-3 border-b border-line px-4 py-3.5 text-[13px] last:border-b-0">
+          <div key={l.id} className="grid grid-cols-[minmax(0,1fr)_auto_auto_auto] items-center gap-x-4 gap-y-1 border-b border-line px-4 py-3.5 text-[13px] last:border-b-0">
             <Link href={`/admin/leads?lead=${l.id}`} className="flex min-w-0 flex-col gap-0.5 hover:underline">
               <span className="font-extrabold">{title}</span>
               <span className="text-caption text-muted">{detail}</span>
             </Link>
-            <span className="text-muted">
+            <span className="whitespace-nowrap text-muted">
               {l.source} · {l.device}
             </span>
-            <span className="text-muted">{agoLabel(l.at).replace(" د", " دقيقة")}</span>
+            <span className="whitespace-nowrap text-muted">{agoLabel(l.at).replace(" د", " دقيقة")}</span>
             <LeadStatusCell lead={l} status={effectiveLeadStatus(l, leadsOv)} />
           </div>
         );
       })}
     </Panel>
   );
-}
-
-function BudgetBars({ p, compact }: { p: AnalyticsPeriod; compact?: boolean }) {
-  const peak = peakBand(p);
-  const max = Math.max(...p.budgetBands.map((b) => b.pct));
-  const desc = p.budgetBands.map((b) => `${b.labelAr} ${b.pct}%`).join("، ");
-  return (
-    <div>
-      <div role="img" aria-label={`توزيع الميزانيات المبحوثة: ${desc}`} className={cx("flex items-end gap-0.5 border-b border-line", compact ? "h-20" : "h-[140px]")}>
-        {p.budgetBands.map((b, i) => (
-          <div key={b.labelAr} className="flex h-full flex-1 flex-col items-center justify-end gap-1">
-            {i === peak && !compact && <span className="text-caption font-extrabold tnum">{b.pct}%</span>}
-            <span className={cx("w-full", i === peak ? "bg-gold" : "bg-ink")} style={{ height: `${(b.pct / max) * (compact ? 100 : 82)}%` }} />
-          </div>
-        ))}
-      </div>
-      <div className={cx("mt-2 flex text-caption text-muted", compact && "mt-1")}>
-        {p.budgetBands.map((b, i) => (
-          <span key={b.labelAr} className={cx("flex-1 whitespace-nowrap text-center tnum", i === peak && "font-extrabold text-ink")}>
-            {compact ? shortBandLabel(i, p.budgetBands.length, b.max) : b.labelAr}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-/** Phone axis labels: «<400 · 500 · 600 · 700 · 850 · مليون · +» (the upper bound of each band, in thousands). */
-function shortBandLabel(i: number, n: number, max: number | null): string {
-  if (i === 0) return `<${(max ?? 0) / 1000}`;
-  if (i === n - 1) return "+";
-  if (max === 1_000_000) return "مليون";
-  return String((max ?? 0) / 1000);
 }
 
 function BudgetPanel({ p }: { p: AnalyticsPeriod }) {
@@ -375,7 +344,7 @@ function PhoneApprovalCard({ a }: { a: Approval }) {
       <div className="flex flex-col gap-1.5 px-4 py-3">
         <div className="flex items-center justify-between gap-2">
           <span className="text-[16px] font-extrabold">{approvalTitle(a)}</span>
-          {awaiting ? <StatusPill status="بانتظار صور" /> : <StatusPill status="جديد">{`جديد · ${approvalAge(a)} س`}</StatusPill>}
+          {awaiting ? <StatusPill status="بانتظار صور" variant="outline" /> : <StatusPill status="جديد" variant="gold">{`جديد · ${approvalAge(a)} س`}</StatusPill>}
         </div>
         <span className="text-[13px] font-extrabold tnum">
           <Price value={a.askedPriceSar} sign={false} />

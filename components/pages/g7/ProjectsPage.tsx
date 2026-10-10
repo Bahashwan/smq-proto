@@ -1,7 +1,7 @@
 "use client";
 // /admin/projects (Admin-Projects-D): published project, the automatic «وحدات المُلّاك» group, the draft; display
 // order with drag handles (drag or arrow keys, in memory). Counts come from the selectors and the store.
-import { useMemo, useState, type DragEvent, type KeyboardEvent } from "react";
+import { useState, type DragEvent, type KeyboardEvent } from "react";
 import Link from "next/link";
 import { AdminLinkButton, Dialog, DragHandle } from "@/components/admin";
 import { ImageSlot, Mark } from "@/components/ui";
@@ -33,11 +33,9 @@ export function ProjectsPage() {
   const live = projects.filter((p) => !deleted?.[p.id]);
   const cards = [...live.filter((p) => p.published && !p.autoGroup), ...live.filter((p) => p.autoGroup), ...live.filter((p) => !p.published && !p.autoGroup)];
   const listed = live.filter((p) => !p.autoGroup);
-  const order = useMemo(() => {
-    const base = [...listed].sort((a, b) => (a.order ?? 99) - (b.order ?? 99)).map((p) => p.id);
-    const ids = orderPatch?.ids?.filter((id) => base.includes(id)) ?? [];
-    return [...ids, ...base.filter((id) => !ids.includes(id))];
-  }, [listed, orderPatch]);
+  const base = [...listed].sort((a, b) => (a.order ?? 99) - (b.order ?? 99)).map((p) => p.id);
+  const saved = orderPatch?.ids?.filter((id) => base.includes(id)) ?? [];
+  const order = [...saved, ...base.filter((id) => !saved.includes(id))];
   const openCount = approvals.filter((a) => ["new", "awaiting-photos"].includes(effectiveApprovalStatus(a, approvalsOv))).length;
   const ownerUnits = Object.entries(createdFromApprovals ?? {}).filter(([id, v]) => approvalsOv[id] === "approved" && (v as { projectId?: string }).projectId === "ind").length;
 
@@ -76,7 +74,7 @@ export function ProjectsPage() {
                   <span className="flex h-full items-center justify-center text-[12px] text-muted">لا صور بعد</span>
                 ) : null}
                 {!draft && <span className="absolute end-3 top-3 bg-ink px-2 py-1 text-caption font-bold text-paper">منشور</span>}
-                {p.images.length > 0 && <span className="absolute start-3 top-3 bg-paper px-1.5 py-0.5 text-caption font-bold">{`تعبيرية · ${photosWord(p.images.length)}`}</span>}
+                {p.images.length > 0 && <span className="absolute bottom-4 end-11 bg-paper px-1.5 py-0.5 text-caption font-bold">{`تعبيرية · ${photosWord(p.images.length)}`}</span>}
               </div>
               <div className="flex flex-1 flex-col gap-2 px-5 py-4">
                 <span className="text-[12px] font-bold text-gold-text">
@@ -175,7 +173,7 @@ export function ProjectsPage() {
                 <span className="font-bold">
                   {i + 1} · {p.nameAr}
                 </span>
-                <span className="text-caption text-muted">{p.published ? `منشور${p.featured ? " · يظهر كمشروع مميز في الرئيسية" : ""}` : "مسودة · لا يُعرض"}</span>
+                <span className="ms-auto text-caption text-muted">{p.published ? `منشور${p.featured ? " · يظهر كمشروع مميز في الرئيسية" : ""}` : "مسودة · لا يُعرض"}</span>
               </li>
             );
           })}

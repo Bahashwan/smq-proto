@@ -118,7 +118,7 @@ export function UnitPage({ slug, realFiles }: { slug: string; realFiles: RealFil
 
           {status === "reserved" && v.reservedUntil && (
             <div role="note" className="mt-3 flex items-start gap-3 px-3.5 py-3 border-interactive bg-cream text-label font-normal leading-relaxed">
-              <HexDot tone="ring" className="mt-1 size-5" />
+              <HexDot tone="ring" flat dims="w-6 h-5" className="mt-0.5" />
               <span>
                 <strong className="font-extrabold">محجوزة حتى {fmtDateLong(v.reservedUntil)}.</strong> عربون مدفوع والسعر مثبّت للحاجز. إن لم يُكمل، تعود للعرض هنا وتصلك رسالة إن سجّلت في قائمة الانتظار.
               </span>
@@ -126,7 +126,7 @@ export function UnitPage({ slug, realFiles }: { slug: string; realFiles: RealFil
           )}
           {status === "sold" && v.soldOn && (
             <div role="note" className="mt-3 flex items-start gap-3 px-3.5 py-3 bg-ink text-paper text-label font-normal leading-relaxed cut-m">
-              <HexDot tone="paper" className="mt-1 size-5" />
+              <HexDot tone="paper" flat dims="w-6 h-5" className="mt-0.5" />
               <span>
                 <strong className="font-extrabold">بيعت في {fmtDateLong(v.soldOn)}.</strong> نُبقي الصفحة لأن سعرها الحقيقي يفيدك في المقارنة. {unitsWord(v.projectAvailableOthers)} أخرى متاحة في المشروع، منها {similar.length} بنفس الغرف.
               </span>

@@ -80,7 +80,7 @@ export function ApplyStep2() {
             {district && ` · ${district}`}
             <span className="hidden md:inline"> · {role}</span>
           </span>
-          <Link href="/alliance/apply" className="inline-flex h-9 shrink-0 items-center bg-paper px-3 text-[12px] font-bold text-ink no-underline hover:bg-cream" style={{ border: "1.5px solid var(--smq-ink)" }}>
+          <Link href="/alliance/apply" className="relative inline-flex h-9 shrink-0 items-center bg-paper px-3 text-[12px] font-bold text-ink no-underline after:absolute after:-inset-1 after:content-[''] hover:bg-cream" style={{ border: "1.5px solid var(--smq-ink)" }}>
             تعديل
           </Link>
         </div>

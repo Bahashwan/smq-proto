@@ -7,7 +7,7 @@ import { CompareBar, Container, Footer, Header, LoadMore, Pill, Price, Skeleton,
 import { bedsLabel, cx, fmtArea, fmtDate } from "@/lib/format";
 import { setQuery } from "@/lib/location";
 import { usePresenter, type Tier } from "@/lib/presenter";
-import type { SortParam } from "@/lib/url";
+import { unitsUrl, type SortParam } from "@/lib/url";
 import type { ImageTier, Unit } from "@/data/types";
 import { unitBySlug } from "@/data/units";
 import { projectStats, type UnitOverrides } from "@/data/selectors";
@@ -212,7 +212,7 @@ export function ResultsPage() {
 
   return (
     <>
-      <Header showEn />
+      <Header showEn switchHref={unitsUrl({ ...r.filters, sheet: null, pin: null }, "/en/units")} />
       <main className="pb-10">
         <Container className="pt-5 md:pt-8">
           <div className="flex flex-col gap-1.5 md:flex-row md:items-center md:justify-between md:gap-6">

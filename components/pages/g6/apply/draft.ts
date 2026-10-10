@@ -34,7 +34,9 @@ export interface ApplyDraft {
 }
 
 export const DRAFT_KEY = "smq.allianceApply";
-const TTL = 7 * 24 * 3600 * 1000;
+/** «يُحفظ ما تكتبه على هذا الجوال 7 أيام» */
+export const DRAFT_DAYS = 7;
+const TTL = DRAFT_DAYS * 24 * 3600 * 1000;
 
 /** Step 1 as AllianceApply-Step1-M shows it (name typed, licence half typed, link pasted), steps 2–3 from the application. */
 export function initialDraft(): ApplyDraft {

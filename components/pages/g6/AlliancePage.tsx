@@ -43,8 +43,8 @@ function Hero({ launch, counts }: { launch: boolean; counts: ReturnType<typeof a
       <div className="pointer-events-none absolute top-4 -end-3 opacity-90 md:hidden">
         {launch ? <Honeycomb animate align="start" columns={3} size={40} gap={3} rowGap={3} cells={launchCells} /> : <Honeycomb animate align="start" columns={3} size={40} gap={3} rowGap={3} cells={tones} />}
       </div>
-      <div className="container-smq grid gap-8 pt-7 pb-16 md:grid-cols-[minmax(0,1fr)_520px] md:items-center md:pt-16 md:pb-28">
-        <div className="relative z-10 flex max-w-[245px] flex-col gap-3 md:max-w-none md:gap-4">
+      <div className="container-smq grid gap-8 pt-7 pb-14 md:grid-cols-[minmax(0,1fr)_520px] md:items-center md:pt-16 md:pb-28">
+        <div className="relative z-10 flex max-w-[240px] flex-col gap-3 md:max-w-none md:gap-4">
           <span className="text-[12px] font-bold text-gold md:text-[13px]">
             <span className="whitespace-nowrap md:hidden">{eyebrow}</span>
             <span className="hidden md:inline">{eyebrowD}</span>
@@ -92,7 +92,7 @@ function HowItWorks() {
       <h2 className="text-[18px] font-extrabold md:text-[26px]">كيف يعمل، في أربع خطوات</h2>
       <ol className="mt-5 flex flex-col md:mt-7 md:grid md:grid-cols-4 md:gap-4">
         {STEPS.map((s, i) => (
-          <li key={s.t} className={cx("flex items-start gap-3.5 py-4 md:flex-col md:gap-3 md:bg-paper md:px-5 md:pt-5 md:pb-6 md:border-interactive", i > 0 && "border-t border-line md:border-t-0")}>
+          <li key={s.t} className={cx("flex items-start gap-3.5 py-3.5 md:flex-col md:gap-3 md:bg-paper md:px-5 md:pt-5 md:pb-6 md:border-interactive", i > 0 && "border-t border-line md:border-t-0")}>
             <StepHex n={i + 1} />
             <span className="flex flex-col gap-1">
               <b className="text-[14px] font-extrabold md:text-[16px]">{s.t}</b>

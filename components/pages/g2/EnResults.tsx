@@ -2,6 +2,7 @@
 // /en/units · EN-Card-M: the English results list with the designed LTR card, the same data and URL filters.
 import { CompareBar, Container, EnHtmlAttrs, Footer, Header, UnitCard, useCompare } from "@/components/ui";
 import { fmtDate } from "@/lib/format";
+import { unitsUrl } from "@/lib/url";
 import { usePresenter, type Tier } from "@/lib/presenter";
 import type { ImageTier, Unit } from "@/data/types";
 import { BUILDINGS, unitBySlug } from "@/data/units";
@@ -28,7 +29,7 @@ export function EnResults() {
   return (
     <div dir="ltr" lang="en" className="font-latin">
       <EnHtmlAttrs />
-      <Header variant="en" showEn />
+      <Header variant="en" showEn switchHref={unitsUrl({ ...r.filters, sheet: null, pin: null }, "/units")} />
       <main className="pb-6">
         <Container className="pt-5 md:pt-8">
           <h1 className="m-0 text-[26px] font-extrabold leading-tight md:text-[36px]">Units in Jeddah</h1>

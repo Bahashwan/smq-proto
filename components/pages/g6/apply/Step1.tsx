@@ -1,12 +1,13 @@
 "use client";
 // /alliance/apply · AllianceApply-Step1-M: office, licence, applicant, role, district, Google Maps link or pin.
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { allianceSettings, districts } from "@/data";
 import { Button, ErrorSummary, FieldShell, RadioGroup, SelectField, TextField } from "@/components/ui";
 import { SECTOR_LABELS, SECTOR_ORDER } from "@/components/alliance";
 import { PinPicker } from "@/components/map";
 import { ApplyShell, FormCard } from "./parts";
-import { errorsTitle, step1Errors, updateDraft, useApplyDraft } from "./draft";
+import { DRAFT_DAYS, errorsTitle, step1Errors, updateDraft, useApplyDraft } from "./draft";
 
 const FIELD_LABELS: Record<string, string> = {
   officeName: "اسم المكتب العقاري",
@@ -33,15 +34,15 @@ export function ApplyStep1() {
   return (
     <ApplyShell
       aside={
-        <a href="/alliance/status/ALL-2026-0038" className="hidden text-[12px] font-bold text-gold-text no-underline hover:text-ink hover:underline md:inline">
+        <Link href="/alliance/status/ALL-2026-0038" className="hidden text-[12px] font-bold text-gold-text no-underline hover:text-ink hover:underline md:inline">
           قدّمت من قبل عبر نموذج قوقل؟ تابع حالة طلبك ←
-        </a>
+        </Link>
       }
     >
       <div className="mb-5 flex flex-col gap-2">
         <h1 className="text-[24px] font-extrabold md:text-[30px]">انضمام مكتبك إلى التحالف</h1>
         <p className="text-[12px] leading-relaxed text-muted md:text-[13px]">
-          ثلاث خطوات، 5 دقائق. الحقول بعلامة <span className="font-extrabold text-gold-text">*</span> مطلوبة. يُحفظ ما تكتبه على هذا الجوال 7 أيام.
+          ثلاث خطوات، 5 دقائق. الحقول بعلامة <span className="font-extrabold text-gold-text">*</span> مطلوبة. يُحفظ ما تكتبه على هذا الجوال {DRAFT_DAYS} أيام.
         </p>
       </div>
       <FormCard step={1}>

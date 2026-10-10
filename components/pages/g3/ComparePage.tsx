@@ -4,8 +4,8 @@
 // (nothing selected). The selection lives in the URL and in the store (mirrored to the device for 7 days).
 import { useEffect, useMemo, type ReactNode } from "react";
 import Link from "next/link";
-import type { Unit } from "@/data/types";
-import { unitBySlug, units as allUnits } from "@/data/units";
+import type { ImageTier, Unit } from "@/data/types";
+import { floorLabel, unitBySlug, units as allUnits } from "@/data/units";
 import { availableUnits, countsByStatus, effectiveUnitStatus, unitPpm } from "@/data/selectors";
 import { projectById } from "@/data/projects";
 import { districtBySlug } from "@/data/districts";
@@ -96,7 +96,7 @@ function bestOf(list: Unit[], value: (u: Unit) => number, dir: "min" | "max"): S
   return new Set(list.filter((u) => value(u) === target).map((u) => u.code));
 }
 
-function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug: string) => void; tier: ReturnType<typeof TIER_OF extends Record<string, infer T> ? () => T : never> }) {
+function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug: string) => void; tier: ImageTier }) {
   const code = useVisitorCode();
   const n = list.length;
   const codes = list.map((u) => u.code);
@@ -133,7 +133,7 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
     { key: "updated", label: "آخر تحديث", small: true, cell: (u) => fmtDate(u.updatedAt) },
   ];
   const onlyCls = (o?: "phone" | "md") => (o === "phone" ? "md:hidden" : o === "md" ? "hidden md:table-row" : "");
-  const th = "sticky start-0 z-[1] w-24 md:w-50 px-3 md:px-4 py-3 text-start align-middle text-caption md:text-label md:font-bold font-bold text-muted bg-paper md:bg-cream md:static";
+  const th = "sticky start-0 z-[1] w-28 md:w-50 px-3 md:px-4 py-3 text-start align-middle whitespace-nowrap text-caption md:text-label font-bold text-muted bg-paper md:bg-cream md:static";
 
   return (
     <Container className="pt-5 md:pt-10">
@@ -185,7 +185,7 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
                   return (
                     <td key={u.code} className={cx("px-3 md:px-4 py-3 align-middle tnum md:border-s md:border-line", r.big ? "text-body md:text-h3 font-extrabold" : r.small ? "text-caption md:text-label font-normal text-muted" : "font-bold", yes === false && "text-muted font-bold", yes === true && "font-extrabold")}>
                       <span className="inline-flex items-center gap-1.5">
-                        {best && <HexDot tone="gold" className="size-2.5" />}
+                        {best && <HexDot tone="gold" dims="size-2.5" />}
                         {r.cell(u)}
                       </span>
                     </td>
@@ -221,7 +221,7 @@ function CompareTable({ list, onRemove, tier }: { list: Unit[]; onRemove: (slug:
   );
 }
 
-function UnitHead({ unit, tier, onRemove }: { unit: Unit; tier: "generated" | "real" | "typographic"; onRemove: () => void }) {
+function UnitHead({ unit, tier, onRemove }: { unit: Unit; tier: ImageTier; onRemove: () => void }) {
   const project = projectById(unit.projectId);
   const district = districtBySlug(unitDistrictSlug(unit));
   return (
@@ -264,13 +264,12 @@ function suggestionsFor(unit: Unit, overrides: ReturnType<typeof useUnitOverride
     .slice(0, 2);
 }
 
-function CompareOne({ unit, onRemove, onAdd, tier }: { unit: Unit; onRemove: (slug: string) => void; onAdd: (slug: string) => void; tier: "generated" | "real" | "typographic" }) {
+function CompareOne({ unit, onRemove, onAdd, tier }: { unit: Unit; onRemove: (slug: string) => void; onAdd: (slug: string) => void; tier: ImageTier }) {
   const overrides = useUnitOverrides();
   const code = useVisitorCode();
   const project = projectById(unit.projectId);
   const sugg = suggestionsFor(unit, overrides);
   const wa = `${unit.code}${code ? ` · ${code}` : ""}`;
-  const floorWord = unit.floor ? (unit.floor.value === "4+roof" ? "الرابع والسطح" : undefined) : undefined;
   return (
     <Container className="pt-5 md:pt-10 max-w-2xl">
       <h1 className="m-0 text-h1 leading-tight">المقارنة</h1>
@@ -347,7 +346,7 @@ function CompareOne({ unit, onRemove, onAdd, tier }: { unit: Unit; onRemove: (sl
             [
               "الطابق",
               <>
-                {floorWord ?? FLOOR_WORD(unit)}
+                {floorLabel(unit) ?? "·"}
                 {unit.floor?.tbc && <Mark>للتأكيد</Mark>}
               </>,
             ],
@@ -375,11 +374,6 @@ function CompareOne({ unit, onRemove, onAdd, tier }: { unit: Unit; onRemove: (sl
   );
 }
 
-function FLOOR_WORD(u: Unit): string {
-  const map: Record<string, string> = { "0": "الأرضي", "1": "الأول", "2": "الثاني", "3": "الثالث", "4": "الرابع" };
-  return u.floor ? (map[u.floor.value] ?? u.floor.value) : "·";
-}
-
 /* ------------------------------------------------------------------ empty */
 
 function CompareEmpty() {
@@ -399,7 +393,7 @@ function CompareEmpty() {
       <div className="mt-24 md:mt-16 flex flex-col items-center gap-4 text-center">
         <div aria-hidden className="flex gap-1.5">
           {[0, 1, 2].map((i) => (
-            <span key={i} className={cx("relative inline-block w-11 h-10 hex-flat", i === 2 ? "bg-ink" : "bg-line")}>
+            <span key={i} className={cx("relative inline-block w-11 h-10 hex-flat", i === 0 ? "bg-ink" : "bg-line")}>
               <span className="absolute inset-[1.5px] hex-flat bg-paper" />
             </span>
           ))}
