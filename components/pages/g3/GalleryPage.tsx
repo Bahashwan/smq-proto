@@ -11,7 +11,7 @@ import { useQuery, setQuery } from "@/lib/location";
 import { bedsLabel, cx, fmtArea, fmtNum, waLink } from "@/lib/format";
 import { slotFiles } from "@/lib/images";
 import { useStore } from "@/lib/store";
-import { ImageSlot, Lockup, Mark, WhatsAppIcon, useVisitorCode } from "@/components/ui";
+import { GeneratedPicture, ImageSlot, Lockup, Mark, WhatsAppIcon, useVisitorCode } from "@/components/ui";
 import { galleryItems, type RealFiles } from "./slots";
 import { askObject, useUnitView } from "./view";
 
@@ -204,9 +204,16 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
                 aria-label={it.ar}
                 aria-current={i === idx}
                 onClick={() => go(i)}
-                className={cx("flex items-center justify-center shrink-0 w-16 h-14 px-1 bg-slot text-ink text-caption leading-tight text-center", i === idx ? "border-2 border-gold font-extrabold" : "border border-muted font-normal")}
+                className={cx("relative flex items-center justify-center shrink-0 w-16 h-14 px-1 overflow-hidden bg-slot text-ink text-caption leading-tight text-center", i === idx ? "border-2 border-gold font-extrabold" : "border border-muted font-normal")}
               >
-                {it.gal}
+                {generated && slotFiles(it.slotId) ? (
+                  <>
+                    <GeneratedPicture slotId={it.slotId} sizes="128px" />
+                    <span className="absolute bottom-0.5 start-0.5 px-1 bg-paper leading-snug">{it.gal}</span>
+                  </>
+                ) : (
+                  it.gal
+                )}
               </button>
             ))}
             <Link href={planHref} aria-label="المخطط" className="flex items-center justify-center shrink-0 w-16 h-14 border border-gold bg-sand text-ink text-caption font-extrabold no-underline">
@@ -231,8 +238,9 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
                   aria-label={it.ar}
                   aria-current={i === idx}
                   onClick={() => go(i)}
-                  className={cx("relative w-28 h-19 p-0 bg-slot hover:opacity-90", i === idx ? "border-2 border-gold" : "border border-muted")}
+                  className={cx("relative w-28 h-19 p-0 overflow-hidden bg-slot hover:opacity-90", i === idx ? "border-2 border-gold" : "border border-muted")}
                 >
+                  {generated && <GeneratedPicture slotId={it.slotId} sizes="224px" />}
                   <span className={cx("absolute bottom-1 start-1 px-1.5 py-0.5 bg-paper text-ink text-caption leading-snug", i === idx ? "font-extrabold" : "font-bold")}>{it.galD}</span>
                 </button>
               ))}

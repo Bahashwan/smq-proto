@@ -3,10 +3,13 @@
 // Generated tier: the slot drawing or the converted render with «صورة تعبيرية»; real tier: /public/real file or the
 // neutral ink frame, no label; typographic tier: the numbers tile, and the thumbs turn into number tiles.
 // The cover opens the full-screen gallery on the same picture; thumbs switch the cover; the last tile is the plan.
+// The boards' sand thumbs stand for the generated pictures: a thumb whose slot is converted shows it, with its word
+// in a paper chip as on Unit-Gallery-D (the cover's «صورة تعبيرية» and the line under the row cover the set).
 import { useState } from "react";
 import Link from "next/link";
 import { cx, fmtArea, bathsLabel } from "@/lib/format";
-import { ImageSlot, StatusBadge } from "@/components/ui";
+import { GeneratedPicture, ImageSlot, StatusBadge } from "@/components/ui";
+import { slotFiles } from "@/lib/images";
 import type { UnitView } from "./view";
 import { galleryItems, unitThumbs, type RealFiles } from "./slots";
 import { orientationEn } from "./view";
@@ -138,6 +141,7 @@ function Thumbs({ view, items, active, onSelect, planHref, planLabel, planLabelD
       {items.slice(0, 4).map((it, i) => {
         const on = i === active;
         const file = real ? realFiles[it.slotId] : undefined;
+        const pic = !real && !!slotFiles(it.slotId);
         return (
           <button
             key={`${it.slotId}-${i}`}
@@ -148,15 +152,18 @@ function Thumbs({ view, items, active, onSelect, planHref, planLabel, planLabelD
             className={cx(
               "relative flex items-center justify-center h-16 md:h-22 px-1 overflow-hidden text-caption leading-tight motion-hover transition-colors",
               i === 3 && "hidden md:flex",
-              real ? (on ? "bg-ink-2 text-paper" : "bg-muted text-paper") : "bg-slot text-muted",
+              real ? (on ? "bg-ink-2 text-paper" : "bg-muted text-paper") : pic ? "bg-slot text-ink" : "bg-slot text-muted",
               on ? "border-2 border-ink font-bold text-ink" : "border border-line font-normal hover:border-ink",
               on && real && "text-paper",
             )}
           >
             {/* eslint-disable-next-line @next/next/no-img-element -- static export, real photos are served as they are */}
             {file && <img src={file} alt="" className="absolute inset-0 size-full object-cover" />}
+            {pic && <GeneratedPicture slotId={it.slotId} sizes="200px" />}
             {/* the active thumb keeps its word on Unit-D and Unit-Roof-M only */}
-            <span className={cx("relative", on && unit.type !== "roof-villa" && "hidden md:inline")}>{en ? it.en : it.short}</span>
+            <span className={cx(pic ? "absolute bottom-1 start-1 px-1.5 py-0.5 bg-paper leading-snug" : "relative", on && unit.type !== "roof-villa" && "hidden md:inline")}>
+              {en ? it.en : it.short}
+            </span>
           </button>
         );
       })}
