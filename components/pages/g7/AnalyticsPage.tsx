@@ -117,7 +117,7 @@ export function AnalyticsPage() {
           <p className="mt-4 text-[12px] text-muted">{p.districtNoteAr}</p>
         </Panel>
         <Panel title="الغرف والنوع والمميزات" bodyClassName="p-5">
-          <div className="grid gap-5 sm:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-3">
             <MiniBars title="الغرف" rows={p.rooms} labelWidth="36px" />
             <MiniBars title="نوع الوحدة" rows={p.types} labelWidth="50px" />
             <MiniBars title="مفاتيح المميزات المفعّلة" rows={p.features} labelWidth="64px" />
