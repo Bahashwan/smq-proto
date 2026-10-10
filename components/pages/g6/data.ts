@@ -1,9 +1,9 @@
 // G6 page-level derivations over the fixtures (pure; no React). Pages never type a board number: every count,
 // label and state below is computed from data/* and data/selectors.ts.
+import { launchRequiredDistricts } from "@/data/analytics";
 import {
   allApplications,
   allianceReports,
-  analytics,
   applications,
   availableUnits,
   coverageBySector,
@@ -89,11 +89,7 @@ export function smqDistricts(): Set<string> {
  * district and no available SMQ unit in the district.
  */
 export function launchRequired(): string[] {
-  const s = analytics.districtSessions30d;
-  const vals = districts.map((d) => s[d.slug] ?? 0);
-  const mean = vals.reduce((a, b) => a + b, 0) / (vals.length || 1);
-  const own = smqDistricts();
-  return districts.filter((d) => (s[d.slug] ?? 0) > mean && !own.has(d.slug)).map((d) => d.slug);
+  return launchRequiredDistricts;
 }
 
 /**

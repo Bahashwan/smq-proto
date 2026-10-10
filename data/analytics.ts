@@ -137,6 +137,9 @@ export const districtSessions30d: Record<string, number> = {
   hamra: 52, balad: 14, andalus: 22, ruwais: 8, sharafiyah: 19, baghdadiyah: 5,
   faisaliyah: 141, muntazahat: 16, jamiah: 21, sanabel: 3, quwaizah: 9, kawthar: 13,
 };
+/** Launch day (Alliance-Launch-M): the four districts the manager marks «مطلوب» from the radar before any member joins. */
+export const launchRequiredDistricts: string[] = ["obhur-north", "mohammadiyah", "safa", "naeem"];
+
 export const districtSessions90d: Record<string, number> = Object.fromEntries(Object.entries(districtSessions30d).map(([k, v]) => [k, Math.round(v * 2.7)]));
 
 /** Drawer detail for the districts the radar ranks (Admin-AllianceRadar-D). */
@@ -170,7 +173,7 @@ export const analytics = {
   periodOrder: ["7d", "30d", "90d"] as AnalyticsPeriodKey[],
   today: { visitors: 212, whatsapp: 17, whatsappUnanswered: 5 },
   /** The admin overview's header line */
-  overview: { greetingAr: "صباح الخير، سعود", dateAr: "الجمعة 9 أكتوبر 2026", lastSyncAr: "آخر مزامنة للوحدات قبل 12 دقيقة", visitorsNoteAr: "+18% عن الأسبوع السابق" },
+  overview: { greetingAr: "صباح الخير، سعود", dateAr: "السبت 10 أكتوبر 2026", lastSyncAr: "آخر مزامنة للوحدات قبل 12 دقيقة", visitorsNoteAr: "+18% عن الأسبوع السابق" },
   sourcesAr: ["كل المصادر", "سناب شات", "تيك توك", "واتساب", "إنستغرام", "قوقل", "مباشر"],
   districtSessions30d,
   districtSessions90d,
