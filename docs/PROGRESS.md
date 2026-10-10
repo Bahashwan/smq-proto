@@ -68,14 +68,15 @@ Phase 7 · Presenter and tours
 
 Phase 8 · Images
 - [x] Scripts: manifest (shared look, palette, exclusions, INLAND rule), generate (references, running cost, $15 stop, fallback), pick, convert (AVIF/WebP + blur), postbuild cleanup
-- [~] 12 of 32 slots converted and live: eight editorial shots, the inland project exterior, balcony, smart-home detail, brand hero (real mark composited). **Blocked: the AI Gateway credit ran out at $2.85.** The other 20 slots show the designed placeholder with «صورة تعبيرية» until the account is topped up (commands under Next action)
+- [x] 26 of 32 slots live. The first 12 picks plus 14 slots re-used from first-run candidates without new generation (`scripts/images/crop.ts` + `crops.json`: each cropped to its ratio so no sea shows; the two facades have the thin sea line above the wall retouched to sky; reasons in `scripts/images/rejections.md`). The AI Gateway credit ran out at $2.85, so nothing new is generated.
+- [ ] Placeholders kept: IMG-PRJ-ROWDAH-PARKING and IMG-UNIT-APT-KITCHEN-OPEN (the sea fills every opening), IMG-DET-MATERIALS-FLATLAY, IMG-DET-STAIR-LIGHT, IMG-DET-WINDOW-SHADOW (never generated), IMG-FOUNDER (real photo only, by rule)
 
 Phase 9 · Link previews and icons
 - [x] `/og/home`, `/og/project/[slug]`, `/og/unit/[code]` rendered to `public/og/*.png` and wired (OG-Home is the site default); favicon and app icons per the Icons board
 
-Phase 10 · Board review round (no images)
+Phase 10 · Board review round
 - [x] Shared gaps from the build reports closed: header `waText` + `menu` (alliance flow boards: logo + WhatsApp «التحالف», no menu; marketer pages «مسوّق»), menu rows at the board's 67px, desktop skeleton card with the hexagon badge, the hub's large door with the CTA arrow, inline phone district picker + typed search, admin counters and bell shared by every admin page (`components/admin/live.ts`), PageHeader `inlineActions`, CompareToggle `label`, gold breadcrumb links, live home counts, data (`districtsCount` from the fixture, `reservationDays` in settings, SEO variables as on Admin-SEO-D, marketer `lastVisitAt`)
-- [~] Independent board-vs-page review per group (`scripts/shots/pair.ts` sheets + `npm run qa:copy`), then fixes per group
+- [~] Review and fix per page group with `docs/briefs/board-review.md` (pair sheets, copy check, fixes in the group's files, shared needs to the orchestrator): G1, G2, G3, G6 done and pushed with their shared needs; G4 and G5 running; G7, G8, G9 next
 
 ## Decision log
 
@@ -98,6 +99,9 @@ Phase 10 · Board review round (no images)
 | 2026-10-10 | The owner tour opens the building variant at every step (`?type=building`) and ends on `/admin/approvals/2026-1042` | Claude |
 | 2026-10-10 | Header between 1024 and 1439 px: phone icon instead of the number and a tighter nav so nothing overflows; 1440 matches the boards | Claude, from the G4 report |
 | 2026-10-10 | Presenter switches are one URL parameter each (`members`, `tier`, `ustatus`, `app`, `mreq`, `wa`, `skeleton`, `marks`, `proof`, `offline`, `empty`, `error`, `tour`+`step`); storage keys `smq.presenter`, `smq.compare`, `smq.ref`, `smq.store` | Claude, table in `docs/route-map.md` |
+| 2026-10-10 | Images: the client asked to use the generated images without generating more. First-run candidates rejected for sea views are re-used cropped to their slot ratio (no sea in frame); the two facades keep the building with the sea line above the wall retouched to sky. Parking and the open kitchen stay placeholders | Client, Claude |
+| 2026-10-10 | Board conflicts kept as the fixtures say: RZ-A «مميزات جوهرية أخرى» = «دخول ذكي · موقف خاص» (Unit-D) though Unit-M and Admin-UnitEditor-D write «دخول ذكي للعمارة · أبواب مرتفعة»; apply status time «أمس 11:20» as on Admin-AllianceApplications-D | Claude |
+| 2026-10-10 | About-Proof-D shows testimonial t-03 as published (role «مشترٍ», YS-A, سبتمبر 2026) through the fixture's `proof` variant; the admin still holds it pending | Claude, from the boards |
 
 ## Open questions for the client
 
@@ -133,6 +137,7 @@ Phase 10 · Board review round (no images)
 ## Next action
 
 1. Show the client: run `npm run dev` (or `npm run build && npx serve out`), open `/demo`, run the three tours, and collect feedback. Mark accepted sections `[v]` above.
-2. Images: once the Vercel AI Gateway is topped up, run `set -a && . ./.env.local && set +a && npm run images -- --anchors` (regenerates the interior anchor IMG-UNIT-APT-3BR-LIVING), pick it with `npx tsx scripts/images/pick.ts --slot=IMG-UNIT-APT-3BR-LIVING --candidate=1`, then `npm run images -- --parallel=3`, pick each slot on `/demo/contact-sheet`, `npm run images:convert`, rebuild and re-shoot (`npm run shots`). Reject anything that shows the sea from a project or unit, people, text, plates or warped architecture.
-3. Deploy when the client wants a link: `npm run build`, then deploy `out/` to Vercel (noindex headers are in `vercel.json`).
-4. After any change: `npx tsc --noEmit`, `npm run lint`, `npm run build`, `npm run coverage`, `npm run qa -- --base=http://localhost:3001` against `npx serve out -l 3001`, commit with the shots, update this file, push.
+2. Finish the board review round: G7, G8, G9 with `docs/briefs/board-review.md` (two agents at a time), commit each group, fix the shared needs they report, then step 5.
+3. Images: once the Vercel AI Gateway is topped up, run `set -a && . ./.env.local && set +a && npm run images -- --anchors` (regenerates the interior anchor IMG-UNIT-APT-3BR-LIVING), pick it with `npx tsx scripts/images/pick.ts --slot=IMG-UNIT-APT-3BR-LIVING --candidate=1`, then `npm run images -- --parallel=3`, pick each slot on `/demo/contact-sheet`, `npm run images:convert`, rebuild and re-shoot (`npm run shots`). Reject anything that shows the sea from a project or unit, people, text, plates or warped architecture.
+4. Deploy when the client wants a link: `npm run build`, then deploy `out/` to Vercel (noindex headers are in `vercel.json`).
+5. After any change: `npx tsc --noEmit`, `npm run lint`, `npm run build`, `npm run coverage`, `npm run qa -- --base=http://localhost:3001` against `npx serve out -l 3001`, commit with the shots, update this file, push.
