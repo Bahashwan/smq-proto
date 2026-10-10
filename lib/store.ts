@@ -1,6 +1,7 @@
 "use client";
 // In-memory mutations (status changes, approvals, created referrals, toasts). Persisted to sessionStorage
 // under smq.store so a demo survives a reload; the presenter bar can reset it. Nothing is sent anywhere.
+import { useMemo } from "react";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import type { ApplicationStatus, ApprovalStatus, LeadStatus, MarketerStage, Referral, ReferralStage, RequestOffer, RequestStage, UnitStatus } from "@/data/types";
@@ -104,4 +105,12 @@ export const useStore = create<StoreState>()(
 /** Read a free-form patch for an entity id (undefined when none). */
 export function usePatch<T extends Record<string, unknown>>(entity: string, id: string): Partial<T> | undefined {
   return useStore((s) => s.patches[entity]?.[id]) as Partial<T> | undefined;
+}
+
+/** The unit overrides for the selectors (`effectiveUnitStatus`, `filterUnits` …). Selects the two slices
+ *  separately so the snapshot stays referentially stable (an inline object selector would loop). */
+export function useUnitOverrides(): { unitStatus: Record<string, UnitStatus>; unitHidden: Record<string, boolean> } {
+  const unitStatus = useStore((s) => s.unitStatus);
+  const unitHidden = useStore((s) => s.unitHidden);
+  return useMemo(() => ({ unitStatus, unitHidden }), [unitStatus, unitHidden]);
 }

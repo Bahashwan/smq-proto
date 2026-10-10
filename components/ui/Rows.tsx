@@ -1,3 +1,4 @@
+"use client";
 // Rows, accordion, breadcrumb, eyebrow, headings, numbered hexagons · Components sheet §6 and the page boards.
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
