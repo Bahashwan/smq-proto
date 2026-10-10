@@ -24,7 +24,7 @@ Conventions
 | Results-M, Results-D | `/units?district=rawdah&max=700000&type=apt` | Filters, sort and compare selection live in the URL (`district, min, max, type, beds, amin, amax, status, delivery, feat, sort`). Sold units shown in the «مباعة، للمرجع فقط» strip |
 | Results-Filters-M | `/units?…&sheet=filters` | Phone bottom sheet; desktop shows the same form in the left column |
 | Guide-M, Guide-D | `/guide` | Only الروضة is live; the other districts are «قريباً» chips. All numbers computed |
-| Project-M, Project-D | `/projects/garden-rawdah` | Real map (project pin at the centre of حي الروضة, «الموقع تقريبي [للتأكيد]» beside it) |
+| Project-M, Project-D | `/projects/garden-rawdah` | Location block: keyless Google Maps embed (iframe, `hl=ar`, street level) centred on حي الروضة, «الموقع تقريبي [للتأكيد]» beside it, lazy-loaded with the board's schematic drawing as placeholder and fallback |
 | Unit-M, Unit-D | `/units/rz-a` (any of the ten codes) | Status, price, per-m², "قياساً بالحي" line computed |
 | Compare-M, Compare-D | `/compare?u=rz-d,ys-d,rz-c` | Best-in-row gold marker computed. Selection also kept on the device 7 days |
 | State-Loading-M, Results-Loading-D | `/units?demo=loading` | Presenter switch «loading skeletons»; also shown briefly on filter changes |
@@ -33,7 +33,7 @@ Conventions
 | Services-M, Services-D | `/services` (`#buy #sell #invest #consult`) | Default |
 | Add-M (phone, step 3), Add-D (desktop, step 1) | `/add` (step 1), `/add/contact` (step 3) | See section 23 |
 | About-M, About-D | `/about` | Opens in the About-D state (no financing or testimonial blocks) |
-| Contact-M, Contact-D | `/contact` | Real office map at street level (21.5604526, 39.1811231) |
+| Contact-M, Contact-D | `/contact` | Office map: keyless Google Maps embed (iframe, `hl=ar`) at street level from 21.5604526, 39.1811231, framed in the design's map container (ink border, cut corner, label chip outside the iframe); «افتح الاتجاهات في الخرائط» is a plain Google Maps link. Same embed in the Home contact block |
 | NotFound-M, NotFound-D | Any unknown URL, e.g. `/this-page-does-not-exist` | Budget chips link to `/units?max=…` |
 | HeaderFooter | Components on every public page | Mobile menu: `?menu=1` |
 
@@ -57,7 +57,7 @@ Conventions
 | Admin-Analytics-D | `/admin/analytics` | Illustrative numbers, period toggle |
 | Admin-Visitors-D | `/admin/visitors?v=v-8f3a2` | Row click opens the visitor drawer |
 | Admin-Projects-D | `/admin/projects` | Published, auto-group, draft |
-| Admin-ProjectEditor-D | `/admin/projects/rwd-01` (`/admin/projects/abh-01` draft, `/admin/projects/new`) | Save bar: dirty → saving → just published. Pin field is a real map with drag + «ألصق رابطاً» |
+| Admin-ProjectEditor-D | `/admin/projects/rwd-01` (`/admin/projects/abh-01` draft, `/admin/projects/new`) | Save bar: dirty → saving → just published. Pin field is the schematic SVG picker with a draggable pin and coordinate fields |
 | Admin-UnitEditor-D | `/admin/units/rz-a` (`/admin/units/new`) | Excel vs admin-only field styling, status with dates, hide switch, change history, delete dialog (type the code) |
 | Admin-Leads-D | `/admin/leads?lead=SMQ-8F3A2` | Row opens the drawer; «علّم كمردود» changes status in memory; close asks for a reason |
 | Admin-Leads-M | `/admin/leads` at 390 | Details as a bottom sheet |
@@ -67,7 +67,7 @@ Conventions
 | Admin-Partners-D | `/admin/content/partners` | Visibility toggles drive the About block preview |
 | Admin-Testimonials-D | `/admin/content/testimonials` | 3+ rule meter; "سجّل الموافقة" enables publish |
 | Admin-Lists-D | `/admin/content/lists` | Districts (قريباً flags), cities, unit types, budgets, rejection reasons |
-| Admin-SiteSettings-D | `/admin/content/site-settings` | Office pin is a real map; WhatsApp templates; global switches |
+| Admin-SiteSettings-D | `/admin/content/site-settings` | Office pin is the schematic SVG picker with coordinate fields; WhatsApp templates; global switches |
 | Admin-SEO-D | `/admin/content/seo` | Counters, OG previews |
 | Admin-Media-D | `/admin/content/media` | 32 slots; every generated image listed as تعبيرية; founder slot empty (upload only) |
 | Admin-Users-D | `/admin/users` | WhatsApp Business «متصل» by default; presenter switch → «غير متصل · وضع يدوي» (also changes the approvals/requests send buttons) |
@@ -78,12 +78,12 @@ Conventions
 
 | Board | Route | State / how it is reached |
 |---|---|---|
-| Add-Step1-M, Add-D | `/add` | Step 1: type, purpose, city, district, landmark, real pin picker (drag + «موقعي الحالي»), relation. Phone shows hero + «كيف يسير الأمر» + the form; desktop as Add-D |
+| Add-Step1-M, Add-D | `/add` | Step 1: type, purpose, city, district, landmark, schematic SVG pin picker with a draggable hexagon pin, relation. Phone shows hero + «كيف يسير الأمر» + the form; desktop as Add-D |
 | Add-Step2-M, Add-Step2-D | `/add/details` | Step 2, apartment/villa variant (rooms, baths, area, floor, age, occupancy, features, asked price with computed per-m² and district range bar) |
 | Add-Step2-Building-M (and Add-Step2-D is the same variant at 1440) | `/add/details` when step 1 type is «عمارة سكنية» or «عمارة تجارية» | Land/build area, floors, units, income block, computed per-m² on build and land and gross yield |
 | Add-M (form part), Add-Step3-D | `/add/contact` | Step 3: photos (local previews), role with role-dependent attachment (وكيل → power of attorney), contact details, timing, consent. The designed phone error (incomplete number) appears on invalid submit |
 | Add-Success-M, Add-Success-D | `/add/sent?no=2026-1043` (apartment) · `?no=2026-1044` (building) | Copy to clipboard works; WhatsApp link prefilled with the request number |
-| Results-Map-M, Results-Map-D | `/units/map?…same query` (`&pin=rwd-01` selects) | Google Maps in brand style; hexagon pins (gold with count, white ring for «من مالك» and «قريباً»); tapped pin → bottom sheet (phone) / side card (desktop); square zoom + locate buttons; schematic SVG fallback if the key is missing |
+| Results-Map-M, Results-Map-D | `/units/map?…same query` (`&pin=rwd-01` selects) | Interactive schematic SVG exactly as drawn: district labels, hexagon pins with computed counts (gold = available, white ring = «من مالك» / «قريباً»); tapped pin → bottom sheet (phone) / side card (desktop); square zoom buttons scale the SVG; the board's provider note is removed |
 | Projects-M, Projects-D | `/projects` | «نبّهني» form validates and shows an inline confirmation |
 | Results-Loading-D | `/units?demo=loading` at 1440 | Presenter |
 | Unit-Reserved-M | `/units/ys-d?demo=reserved` | Presenter «unit status» switch (fixtures stay 8 / 2 / 0) |
@@ -114,7 +114,7 @@ Conventions
 | Hub-M, Hub-D | `/collaborate` | Three doors |
 | Alliance-M, Alliance-D | `/alliance` | 12 members. Honeycomb hero fills cell by cell on load; coverage grid and directory computed from the member fixtures |
 | Alliance-Launch-M | `/alliance?members=0` | Presenter «alliance members 12 / 0» (launch day: empty directory, «مطلوب» cells, 37 Google-form note) |
-| AllianceApply-Step1-M | `/alliance/apply` | Office, licence, applicant, role, district, map link / pin (paste a full Google Maps link → coordinates; short link → canned preview) |
+| AllianceApply-Step1-M | `/alliance/apply` | Office, licence, applicant, role, district, map link / pin: schematic SVG with a draggable hexagon pin; «ألصق رابطاً» accepts a Google Maps link and shows the designed preview state |
 | AllianceApply-Step2-M, AllianceApply-Step2-D | `/alliance/apply/coverage` | Sectors, district multi-select (search, grouped), radar preview, specialties, hours |
 | AllianceApply-Step3-M | `/alliance/apply/offers` | Counters, requests elsewhere, text fields, directory consent, charter consent (required) |
 | AllianceApply-Success-M | `/alliance/apply/sent` | ALL-2026-0038 |
@@ -170,7 +170,7 @@ Tour steps
 
 ## Plan
 
-Stack: Next.js 15 App Router, TypeScript, Tailwind v4 with the `--smq-*` tokens as CSS variables, static export to Vercel, `@vis.gl/react-google-maps`, Playwright for screenshots and OG images, AI SDK for the image script. `noindex` header + `robots.txt` on everything.
+Stack: Next.js 15 App Router, TypeScript, Tailwind v4 with the `--smq-*` tokens as CSS variables, static export to Vercel, Playwright for screenshots and OG images, AI SDK for the image script. No map library and no Maps API key: office and project locations are keyless Google Maps embeds (iframe, `hl=ar`, `hl=en` on `/en`), lazy-loaded with the schematic drawing as placeholder and fallback; the results map view and all pin pickers are interactive schematic SVGs. `noindex` header + `robots.txt` on everything.
 
 Data (`/data`, typed fixtures): `units` (the ten real rows), `projects`, `districts` (sector, approximate centre coordinates), `offices` (12 members + 4 applications + the Google import), `requests`, `referrals`, `marketers`, `leads`, `visitors`, `analytics`, `content` (page copy, FAQ, testimonials, partners, lists, settings, SEO), `media` (31 slots). Everything shown as a count, range, price per m², yield or ranking is a selector over these fixtures. REQ-2026-0412 / REF-2026-0117 use مكتب ط throughout. In-memory mutations (status changes, approvals, created referrals, toasts) live in a client store that the presenter can reset.
 
@@ -186,4 +186,4 @@ Build order (as requested): tokens, shell, shared components → public explorer
 4. Public default image tier is "generated with the label" for all ten units, roof villas included; the real tier appears only via the presenter or when files exist in `/public/real`.
 5. The marketer form gets a success screen built on the Add-Success pattern (no board exists).
 6. Add steps at `/add`, `/add/details`, `/add/contact`, `/add/sent`.
-7. Neither `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` nor `AI_GATEWAY_API_KEY` is present in this container. I'll put the gateway key you pasted into `.env.local` (git-ignored). To screenshot the Contact map palette I need the Maps key here too: please add it to the environment, or paste it.
+7. `AI_GATEWAY_API_KEY` is not present in this container; I'll put the key you pasted into `.env.local` (git-ignored). No Maps key is needed any more.
