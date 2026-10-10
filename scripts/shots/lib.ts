@@ -25,6 +25,8 @@ export async function newPage(browser: Browser, width: number, height = 900): Pr
   const ctx = await browser.newContext({ viewport: { width, height }, deviceScaleFactor: 1, locale: "ar-SA", reducedMotion: "reduce" });
   // never fetch Google Fonts over the network: the local files above serve the same families
   await ctx.route(/fonts\.(googleapis|gstatic)\.com/, (r) => r.abort());
+  // tsx/esbuild wraps named functions in __name(); define it in the page so evaluate() callbacks run
+  await ctx.addInitScript({ content: "window.__name = window.__name || ((f) => f);" });
   return ctx.newPage();
 }
 

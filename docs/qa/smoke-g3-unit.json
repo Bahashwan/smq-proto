@@ -1,0 +1,98 @@
+[
+  {
+    "board": "Unit-M",
+    "route": "/units/rz-a",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-D",
+    "route": "/units/rz-a",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Compare-M",
+    "route": "/compare?u=rz-d,ys-d,rz-c",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Compare-D",
+    "route": "/compare?u=rz-d,ys-d,rz-c",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Unit-Reserved-M",
+    "route": "/units/ys-d?ustatus=reserved",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Sold-M",
+    "route": "/units/ys-a",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Roof-M",
+    "route": "/units/rz-rf",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Gallery-M",
+    "route": "/units/rz-a/gallery?i=3",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Gallery-D",
+    "route": "/units/rz-a/gallery?i=3",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Unit-Plan-M",
+    "route": "/units/rz-a/plan",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Tier-Real-M",
+    "route": "/units/rz-a?tier=real",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Tier-Gen-M",
+    "route": "/units/rz-a",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Unit-Tier-Typo-M",
+    "route": "/units/rz-a?tier=typo",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Compare-One-M",
+    "route": "/compare?u=rz-a",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Compare-Empty-M",
+    "route": "/compare",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "EN-Unit-M",
+    "route": "/en/units/rz-a",
+    "width": 390,
+    "issues": []
+  }
+]

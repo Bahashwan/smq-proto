@@ -42,7 +42,12 @@ for (const s of list) {
         out.push(`horizontal overflow ${doc.scrollWidth}px > ${window.innerWidth}px (${offenders.join(", ")})`);
       }
       if (!document.querySelector('meta[name="robots"][content*="noindex"]')) out.push("missing noindex meta");
-      const text = document.body.innerText;
+      // visible text outside form controls (admin selects legitimately list «[للتأكيد]» as an option value)
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode: (n) => (n.parentElement?.closest("select,option,textarea,script,style,[aria-hidden=true],.sr-only") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
+      });
+      let text = "";
+      for (let n = walker.nextNode(); n; n = walker.nextNode()) text += n.textContent + " ";
       if (/\[للتأكيد\]|\[مسودة إجابة\]/.test(text)) out.push("literal [للتأكيد]/[مسودة إجابة] brackets in visible text (use <Mark>)");
       if (/[٠-٩]/.test(text)) out.push("Arabic-Indic digits in visible text");
       if (/ر\.س/.test(text)) out.push("«ر.س» printed (use the riyal sign)");

@@ -1,0 +1,122 @@
+[
+  {
+    "board": "Alliance-M",
+    "route": "/alliance",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Alliance-D",
+    "route": "/alliance",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Alliance-Launch-M",
+    "route": "/alliance?members=0",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Step1-M",
+    "route": "/alliance/apply",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Step2-M",
+    "route": "/alliance/apply/coverage",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Step2-D",
+    "route": "/alliance/apply/coverage",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Step3-M",
+    "route": "/alliance/apply/offers",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Success-M",
+    "route": "/alliance/apply/sent",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Status-M",
+    "route": "/alliance/status/ALL-2026-0038?app=verified",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Status-M",
+    "route": "/alliance/status/ALL-2026-0038?app=rejected",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "AllianceApply-Status-M",
+    "route": "/alliance/status/ALL-2026-0038",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "MarketerPage-M",
+    "route": "/m/mk-07",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Request-M",
+    "route": "/member/office-09/requests/REQ-2026-0412",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Request-States-M",
+    "route": "/member/office-09/requests/REQ-2026-0412?mreq=expired",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Request-States-M",
+    "route": "/member/office-09/requests/REQ-2026-0412?mreq=answered",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Referral-M",
+    "route": "/member/office-09/referrals/REF-2026-0117",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Ledger-M",
+    "route": "/member/office-09",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Ledger-M",
+    "route": "/member/office-01",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Report-M",
+    "route": "/member/office-01/report",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Member-Report-D",
+    "route": "/member/office-01/report",
+    "width": 1440,
+    "issues": []
+  }
+]

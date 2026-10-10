@@ -1,0 +1,80 @@
+[
+  {
+    "board": "B-Card",
+    "route": "/units",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-M",
+    "route": "/units?district=rawdah&max=700000&type=apt&u=rz-d,ys-d",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-D",
+    "route": "/units?district=rawdah&max=700000&type=apt&u=rz-d,ys-d",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Results-Filters-M",
+    "route": "/units?district=rawdah&max=700000&type=apt&sheet=filters",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "State-Loading-M",
+    "route": "/units?skeleton=1",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-Loading-D",
+    "route": "/units?skeleton=1",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "State-Empty-M",
+    "route": "/units?district=faisaliyah&max=450000&beds=4&type=apt&feat=driver",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "State-Empty-D",
+    "route": "/units?district=faisaliyah&max=450000&beds=4&type=apt&feat=driver",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "State-Cards",
+    "route": "/units",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-Map-M",
+    "route": "/units/map?district=rawdah&max=700000&type=apt&pin=rwd-01",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "Results-Map-D",
+    "route": "/units/map?district=rawdah&max=700000&type=apt&pin=rwd-01",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "EN-Card-M",
+    "route": "/en/units",
+    "width": 390,
+    "issues": []
+  },
+  {
+    "board": "State-Empty-Success-M",
+    "route": "/alliance/request/sent?req=REQ-2026-0412",
+    "width": 390,
+    "issues": []
+  }
+]

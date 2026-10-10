@@ -93,6 +93,7 @@ export function GalleryPage({ slug, realFiles }: { slug: string; realFiles: Real
 
   return (
     <div className="flex flex-col h-dvh md:h-dvh bg-ink text-paper" aria-label={`معرض صور ${unit.type === "roof-villa" ? "فيلا الروف" : `نموذج ${unit.model}`}`}>
+      <h1 className="sr-only">{`معرض صور ${unit.type === "roof-villa" ? "فيلا الروف" : `نموذج ${unit.model}`} · ${unit.buildingNameAr}`}</h1>
       {/* header */}
       <div className="flex items-center justify-between gap-3 px-4 py-3 md:px-6 md:py-3.5 border-b border-ink-2 shrink-0">
         <div className="flex items-center gap-4 min-w-0">
