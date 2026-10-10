@@ -1,24 +1,4 @@
 {
-  "IMG-PRJ-ROWDAH-EXT": {
-    "candidate": "c2",
-    "file": "public/images/IMG-PRJ-ROWDAH-EXT/source.png",
-    "model": "bfl/flux-3-image",
-    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: Two adjacent four-storey residential buildings, pale sand plaster with dark vertical cuts, balconies at 60-degree angles, a raised entrance with steps. Three-quarter angle, clean ground. Avoid: any detail that contradicts the real plans once they arrive.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.",
-    "seed": null,
-    "requestId": null,
-    "pickedAt": "2026-10-10T04:27:42.031Z",
-    "note": "inland street, no sea behind the building (الروضة is not on the coast)"
-  },
-  "IMG-UNIT-APT-3BR-LIVING": {
-    "candidate": "c2",
-    "file": "public/images/IMG-UNIT-APT-3BR-LIVING/source.png",
-    "model": "bfl/flux-3-image",
-    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: A wider living room of a three-bedroom apartment: a majlis with two facing sofas, a slatted wooden divider suggesting the entrance, a balcony in the depth of the frame. Pale sand porcelain floor, warm white walls, light oak joinery, matte black frames. Light from the balcony, clear depth. Avoid: an exaggerated traditional floor majlis, velvet fabric.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.",
-    "seed": null,
-    "requestId": null,
-    "pickedAt": "2026-10-10T04:27:42.597Z",
-    "note": "quieter balcony; the sea glimpse is to be regenerated without a sea view"
-  },
   "IMG-ED-BALAD-RAWASHEEN": {
     "candidate": "c1",
     "file": "public/images/IMG-ED-BALAD-RAWASHEEN/source.png",
@@ -38,5 +18,105 @@
     "requestId": null,
     "pickedAt": "2026-10-10T04:27:43.754Z",
     "note": "clean walkway, fountain as a tiny point"
+  },
+  "IMG-ED-BALAD-ALLEY": {
+    "candidate": "c1",
+    "file": "public/images/IMG-ED-BALAD-ALLEY/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: A narrow alley in Al-Balad, coral-stone walls, rawasheen on both sides converging into the depth, a stone floor. Light coming from the end of the alley, shadow in the foreground. Avoid: rubbish, cables, people.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.\n\nMatch the light, palette, material finish and framing of the attached reference image(s) so every image looks like one photo session.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:22:28.143Z",
+    "note": "editorial; reviewed on the contact sheet"
+  },
+  "IMG-ED-BALAD-CORAL-DETAIL": {
+    "candidate": "c1",
+    "file": "public/images/IMG-ED-BALAD-CORAL-DETAIL/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: Close-up detail of raw coral stone next to a turned wooden frame: texture and pores. Soft macro, dim light. Avoid: green algae, ugly cracks.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.\n\nMatch the light, palette, material finish and framing of the attached reference image(s) so every image looks like one photo session.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:22:28.961Z",
+    "note": "editorial; reviewed on the contact sheet"
+  },
+  "IMG-ED-NORTH-STREET": {
+    "candidate": "c1",
+    "file": "public/images/IMG-ED-NORTH-STREET/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: A quiet intersection in a northern residential district of Jeddah, a four-storey building in pale plaster with recessed balconies, two trees. Neutral light, spaciousness. Avoid: towers, shopping malls.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.\n\nMatch the light, palette, material finish and framing of the attached reference image(s) so every image looks like one photo session.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:22:29.684Z",
+    "note": "editorial; reviewed on the contact sheet"
+  },
+  "IMG-ED-NORTH-VILLAS": {
+    "candidate": "c1",
+    "file": "public/images/IMG-ED-NORTH-VILLAS/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: A row of similar modern villas seen from slightly above street level, flat roofs, water tanks hidden. Morning light, geometric shadows. Avoid: domes, excessive ornament.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.\n\nMatch the light, palette, material finish and framing of the attached reference image(s) so every image looks like one photo session.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:22:30.503Z",
+    "note": "editorial; reviewed on the contact sheet"
+  },
+  "IMG-ED-ROWDAH-TREES": {
+    "candidate": "c1",
+    "file": "public/images/IMG-ED-ROWDAH-TREES/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: A street in Al Rawdah district, Jeddah, with shade trees on the pavement and three-storey residential buildings. Light filtered through the leaves. Avoid: any specific, verifiable landmark.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.\n\nMatch the light, palette, material finish and framing of the attached reference image(s) so every image looks like one photo session.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:22:31.233Z",
+    "note": "editorial; reviewed on the contact sheet"
+  },
+  "IMG-ED-SEA-HAZE": {
+    "candidate": "c2",
+    "file": "public/images/IMG-ED-SEA-HAZE/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: Only the Red Sea horizon, morning haze, a single horizon line in the lower third. Almost abstract, very calm. Avoid: boats, beaches, rocks.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.\n\nMatch the light, palette, material finish and framing of the attached reference image(s) so every image looks like one photo session.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:22:32.005Z",
+    "note": "editorial; reviewed on the contact sheet"
+  },
+  "IMG-PRJ-ROWDAH-EXT": {
+    "candidate": "c1",
+    "file": "public/images/IMG-PRJ-ROWDAH-EXT/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: Two adjacent four-storey residential buildings, pale sand plaster with dark vertical cuts, balconies at 60-degree angles, a raised entrance with steps. Three-quarter angle, clean ground. Avoid: any detail that contradicts the real plans once they arrive.\n\nSetting: an inland residential district several kilometres from the coast. No sea, beach, water or waterfront anywhere in the frame; behind the buildings and through every window or balcony door only sky and low-rise neighbouring buildings are visible.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:26:00.497Z",
+    "note": "inland rerun: two buildings, no sea"
+  },
+  "IMG-UNIT-APT-BALCONY": {
+    "candidate": "c2",
+    "file": "public/images/IMG-UNIT-APT-BALCONY/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: A two-metre-wide balcony with a glass railing in a black frame, two chairs and a single plant, looking onto a residential street. Morning, the balcony's shadow on the floor. Avoid: a fake sea view, towers.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.\n\nMatch the light, palette, material finish and framing of the attached reference image(s) so every image looks like one photo session.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:26:01.322Z",
+    "note": "neighbourhood view, no sea, no readable plates"
+  },
+  "IMG-UNIT-SMARTHOME-DETAIL": {
+    "candidate": "c1",
+    "file": "public/images/IMG-UNIT-SMARTHOME-DETAIL/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: A small wall-mounted control panel with its screen off, next to a matte black light switch on a white wall. Macro, soft shadow. Avoid: a screen with a readable interface, logos.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.\n\nMatch the light, palette, material finish and framing of the attached reference image(s) so every image looks like one photo session.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:26:02.112Z",
+    "note": "only candidate; clean"
+  },
+  "IMG-HERO-BRAND": {
+    "candidate": "c1",
+    "file": "public/images/IMG-HERO-BRAND/source.png",
+    "model": "bfl/flux-3-image",
+    "prompt": "Photograph taken in Jeddah, Saudi Arabia, on one calm morning between 7 and 9 am after a thin sea haze has softened the sun: warm soft light from the right, long but open shadows, a pale bluish-white sky (never cobalt). Camera at eye level or slightly lower, 35 to 50 mm lens, medium depth of field, no wide-angle distortion. Quiet, tidy composition; the less detailed half of the frame is left empty so text can sit on it.\n\nSubject: Facade of a modern residential building in north Jeddah in pale sand-coloured plaster, balconies with 60-degree angled cuts that echo the brand's geometry, and the brand's gold hexagonal mark as an architectural element on the facade (a metal plate mounted above the entrance) or as a shape of light on the wall. The upper-left quarter of the frame stays calm and empty so the logo can be composited in code if generation fails. Strong morning side light that brings out the cuts, a pale empty sky. Avoid: any text beside the mark, other logos, cars, palm trees in the foreground.\n\nPalette: sand #E8DCC3, white plaster #F4F1EA, warm coral and wood #C98E6B, blue-green sea #6FA9A3, brand gold #B48F2E used on at most 5% of the frame, warm brown shadow #3A3630. Low saturation, medium contrast, no HDR, no filters, very fine film grain.\n\nStrictly no people, faces or hands; no text, signage, logos or lettering; no car number plates; no Dubai, Riyadh or any skyline that is not Jeddah; no night scenes or neon; no lens flare; no palm trees as foreground decoration; no over-the-top luxury furniture (crystal, gold marble); no maps; nothing presented as a photo of a real listed unit; no warped or impossible architecture.\n\nMatch the light, palette, material finish and framing of the attached reference image(s) so every image looks like one photo session. The attached gold emblem is the brand mark: reproduce it exactly, as a small metal sign above the entrance, with no other text.",
+    "seed": null,
+    "requestId": null,
+    "pickedAt": "2026-10-10T10:26:02.823Z",
+    "note": "brand slot (not a unit): distant sea strip tolerated; the real mark is composited in CSS because the generated facade carries no readable mark"
   }
 }

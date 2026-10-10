@@ -20,8 +20,13 @@ export interface GenSlot extends MediaSlot {
 
 const RATIO: Record<MediaSlot["ratio"], GenSlot["aspectRatio"]> = { "3:2": "3:2", "16:9": "16:9", "4:5": "4:5", "1:1": "1:1", "21:9": "21:9", "2:3": "2:3" };
 
+/** Project and unit images may not claim a view (Unit-Tier-Gen-M: «لا إطلالات حقيقية مزعومة»): Al Rawdah is inland. */
+export const INLAND =
+  "Setting: an inland residential district several kilometres from the coast. No sea, beach, water or waterfront anywhere in the frame; behind the buildings and through every window or balcony door only sky and low-rise neighbouring buildings are visible.";
+
 export function composePrompt(slot: MediaSlot): string {
-  return `${SHARED_LOOK}\n\nSubject: ${slot.promptEn}\n\n${PALETTE}\n\n${EXCLUSIONS}`;
+  const inland = slot.group === "exterior" || slot.group === "interior" || slot.group === "brand" ? `\n\n${INLAND}` : "";
+  return `${SHARED_LOOK}\n\nSubject: ${slot.promptEn}${inland}\n\n${PALETTE}\n\n${EXCLUSIONS}`;
 }
 
 /** The 31 slots the generator owns (IMG-FOUNDER is never generated). */
@@ -40,7 +45,8 @@ export function referencesFor(slot: MediaSlot): string[] {
     case "interior":
       return ["IMG-UNIT-APT-3BR-LIVING"];
     case "editorial":
-      return ["IMG-ED-BALAD-RAWASHEEN", "IMG-ED-CORNICHE-DAWN"];
+      // only the Al-Balad scenes share the anchor's street; other editorial shots stay text-only (references made them copies)
+      return slot.id.startsWith("IMG-ED-BALAD-") ? ["IMG-ED-BALAD-RAWASHEEN"] : [];
     case "brand":
       return ["IMG-PRJ-ROWDAH-EXT"];
     default:

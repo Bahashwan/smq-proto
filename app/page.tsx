@@ -74,7 +74,7 @@ export default function HomePage() {
           </div>
           <figure className="order-1 md:order-2 relative m-0 bg-slot h-[460px] md:h-auto md:aspect-[4/5] md:max-h-[640px] md:cut-xl">
             <ImageSlot slotId="IMG-HERO-BRAND" tier="generated" cut="none" className="absolute inset-0 h-full" as="div" label>
-              <LogoMark size={120} className="absolute inset-0 m-auto opacity-90" />
+              <LogoMark size={96} className="absolute top-6 left-6 md:top-8 md:left-8 z-[1] opacity-95" />
             </ImageSlot>
           </figure>
         </section>
