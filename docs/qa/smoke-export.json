@@ -145,13 +145,13 @@
   },
   {
     "board": "Results-Map-M",
-    "route": "/units/map?district=rawdah&max=700000&type=apt&pin=rwd-01",
+    "route": "/units/map?max=700000&pin=rwd-01",
     "width": 390,
     "issues": []
   },
   {
     "board": "Results-Map-D",
-    "route": "/units/map?district=rawdah&max=700000&type=apt&pin=rwd-01",
+    "route": "/units/map?max=700000&pin=rwd-01",
     "width": 1440,
     "issues": []
   },
@@ -559,6 +559,12 @@
   },
   {
     "board": "Admin-Approvals-D",
+    "route": "/admin/approvals/2026-1042?wa=manual",
+    "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Approvals-D",
     "route": "/admin/approvals/2026-1042",
     "width": 1440,
     "issues": []
@@ -591,6 +597,12 @@
     "board": "Admin-Leads-D",
     "route": "/admin/leads?lead=SMQ-8F3A2",
     "width": 1440,
+    "issues": []
+  },
+  {
+    "board": "Admin-Leads-M",
+    "route": "/admin/leads?lead=SMQ-8F3A2",
+    "width": 390,
     "issues": []
   },
   {
