@@ -79,7 +79,7 @@ export function LicenceCell({ o }: { o: Office }) {
   );
 }
 
-const chipCls = "inline-block border-hairline bg-paper px-1.5 py-0.5 text-[11px] font-bold";
+const chipCls = "inline-block whitespace-nowrap border-hairline bg-paper px-1.5 py-px text-[11px] font-bold";
 
 export function MembersPage() {
   const toast = useStore((s) => s.toast);
@@ -128,7 +128,7 @@ export function MembersPage() {
           <thead>
             <tr className="border-b-[1.5px] border-ink bg-sand text-[11px] font-extrabold text-muted">
               {["المكتب", "الجهة", "الأحياء", "التخصص", "الرخصة", "الميزان · أعطى / استقبل", "متوسط الرد", ""].map((h, i) => (
-                <th key={i} scope="col" className="whitespace-nowrap px-4 py-3.5 text-start font-extrabold">
+                <th key={i} scope="col" className="whitespace-nowrap px-3 py-2.5 text-start font-extrabold">
                   {h}
                 </th>
               ))}
@@ -140,13 +140,13 @@ export function MembersPage() {
               const mins = o.ledger.avgReplyMinutes;
               return (
                 <tr key={o.id} className={cx("border-b border-line last:border-b-0 hover:bg-cream", off && "text-muted")}>
-                  <td className="px-4 py-3.5">
-                    <strong className="block text-[14px] font-extrabold text-ink">{o.nameAr}</strong>
-                    <span className="text-muted">{off ? `موقوف ${o.suspendedOn ? fmtDate(o.suspendedOn) : ""}` : sinceLabel(o.memberSince)}</span>
+                  <td className="px-3 py-2.5">
+                    <strong className="block whitespace-nowrap text-[12px] font-extrabold text-ink">{o.nameAr}</strong>
+                    <span className="whitespace-nowrap text-muted">{off ? `موقوف ${o.suspendedOn ? fmtDate(o.suspendedOn) : ""}` : sinceLabel(o.memberSince)}</span>
                   </td>
-                  <td className="px-4 py-3.5">{sectorShort(o.sector)}</td>
-                  <td className="px-4 py-3.5">
-                    <span className="flex flex-wrap gap-1">
+                  <td className="px-3 py-2.5">{sectorShort(o.sector)}</td>
+                  <td className="px-3 py-2.5">
+                    <span className="flex gap-0.5">
                       {o.districts.map((d) => (
                         <span key={d} className={chipCls}>
                           {districtAr(d)}
@@ -154,8 +154,8 @@ export function MembersPage() {
                       ))}
                     </span>
                   </td>
-                  <td className="px-4 py-3.5">
-                    <span className="flex flex-wrap gap-1">
+                  <td className="px-3 py-2.5">
+                    <span className="flex gap-0.5">
                       {o.specialties.map((s) => (
                         <span key={s} className={chipCls}>
                           {s}
@@ -163,17 +163,17 @@ export function MembersPage() {
                       ))}
                     </span>
                   </td>
-                  <td className="px-4 py-3.5">
+                  <td className="px-3 py-2.5">
                     <LicenceCell o={o} />
                   </td>
-                  <td className="px-4 py-3.5">
+                  <td className="px-3 py-2.5">
                     <LedgerCells o={o} max={max} />
                   </td>
-                  <td className="px-4 py-3.5">
+                  <td className="whitespace-nowrap px-3 py-2.5">
                     <strong className={cx("font-extrabold tnum", mins >= BUSINESS_DAY_MIN ? "text-gold-text" : "text-ink", !mins && "font-bold text-muted")}>{mins ? fmtReply(mins) : "بلا رد"}</strong>
                   </td>
-                  <td className="px-4 py-3.5 text-end">
-                    <Link href={`/admin/alliance/members/${o.id}`} className="inline-flex h-10 items-center border-interactive bg-paper px-4 text-[13px] font-extrabold text-ink no-underline hover:bg-sand">
+                  <td className="px-3 py-2.5 text-end">
+                    <Link href={`/admin/alliance/members/${o.id}`} className="inline-flex h-9 items-center border-interactive bg-paper px-3 text-[12px] font-extrabold text-ink no-underline hover:bg-sand">
                       الملف
                     </Link>
                   </td>

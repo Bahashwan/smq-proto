@@ -28,7 +28,7 @@ const roleShort = (r: string) => r.replace(" العقاري", "");
 
 function Row({ k, children }: { k: string; children: React.ReactNode }) {
   return (
-    <div className="flex items-baseline justify-between gap-4 border-b border-line py-3 text-[13px] last:border-b-0">
+    <div className="flex items-baseline justify-between gap-3 border-b border-line py-2 text-[13px] last:border-b-0">
       <span className="shrink-0 text-muted">{k}</span>
       <span className="text-end font-extrabold">{children}</span>
     </div>
@@ -37,15 +37,15 @@ function Row({ k, children }: { k: string; children: React.ReactNode }) {
 
 function Bars({ title, tone, rows }: { title: string; tone: "gold" | "ink"; rows: { label: string; value: number; display?: string; ratio: number }[] }) {
   return (
-    <div className="flex min-w-0 flex-col gap-3">
+    <div className="flex min-w-0 flex-col gap-2">
       <span className={cx("text-[11px] font-extrabold", tone === "gold" ? "text-gold-text" : "text-ink")}>{title}</span>
       {rows.map((r) => (
-        <div key={r.label} className="flex flex-col gap-1">
+        <div key={r.label} className="flex flex-col gap-[3px]">
           <div className="flex items-baseline justify-between gap-2 text-[12px]">
             <span>{r.label}</span>
             <strong className="font-extrabold tnum">{r.display ?? fmtNum(r.value)}</strong>
           </div>
-          <div className="relative h-3 bg-sand">
+          <div className="relative h-3 bg-slot">
             <span className={cx("absolute inset-y-0 start-0", tone === "gold" ? "bg-gold" : "bg-ink")} style={{ width: `${Math.round(Math.min(1, Math.max(0, r.ratio)) * 100)}%` }} />
           </div>
         </div>

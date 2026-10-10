@@ -37,14 +37,17 @@ function headLine(m: Marketer, stage: Marketer["stage"]): string {
   return [since, m.districts.map(districtAr).join("، "), m.yearsLabel, stage === "active" && last ? `آخر زيارة عبر رابطه ${agoLabel(last)}` : null].filter(Boolean).join(" · ");
 }
 
-function DataRow({ label, children }: { label: string; children: React.ReactNode }) {
+/** Label at the line start, value at the line end (the board's data rows). */
+function DataRow({ label, children, wide }: { label: string; children: React.ReactNode; wide?: boolean }) {
   return (
-    <div className="grid grid-cols-[96px_1fr] items-baseline gap-3 border-b border-line py-3 text-[13px] last:border-b-0">
-      <span className="text-muted">{label}</span>
-      <span className="min-w-0 font-bold leading-relaxed">{children}</span>
+    <div className="flex items-baseline justify-between gap-3 border-b border-line py-[9px] text-[13px] last:border-b-0">
+      <span className="shrink-0 text-muted">{label}</span>
+      <span className={cx("min-w-0 text-end font-bold leading-relaxed", wide && "max-w-[260px]")}>{children}</span>
     </div>
   );
 }
+/** The board's 30-day tiles: 11px label and note, 28px figure. */
+const TILE = "[&>span:first-child]:text-[11px] [&>span:first-child]:font-normal [&>span:nth-child(2)]:md:text-[28px] [&>span:nth-child(3)]:text-[11px]";
 
 export function MarketerDetailPage({ id }: { id: string }) {
   const base = marketerById(id);
@@ -117,16 +120,18 @@ export function MarketerDetailPage({ id }: { id: string }) {
         </div>
       </div>
 
-      <div role="group" aria-label="المرحلة" className="grid grid-cols-5 border-interactive bg-paper">
+      <div role="group" aria-label="المرحلة" className="grid grid-cols-5 border-interactive">
         {MARKETER_STAGES.map((s, i) => {
           const on = s === stage;
+          // the stages already passed are sand, the current one ink (suspension is not a step on the way)
+          const done = stage !== "suspended" && i < MARKETER_STAGES.indexOf(stage);
           return (
             <button
               key={s}
               type="button"
               aria-pressed={on}
               onClick={() => moveTo(s)}
-              className={cx("min-h-11 px-2 text-[13px] font-extrabold motion-hover", on ? "bg-ink text-paper" : "text-ink hover:bg-sand", i > 0 && "border-s border-line")}
+              className={cx("min-h-10 px-2 text-[12px] motion-hover", on ? "bg-ink font-extrabold text-paper" : cx("font-bold text-ink hover:bg-sand", done && "bg-sand"), i > 0 && "border-s-[1.5px] border-ink")}
             >
               {MARKETER_STAGE_LABELS[s]}
             </button>
@@ -158,7 +163,7 @@ export function MarketerDetailPage({ id }: { id: string }) {
               </span>
             </DataRow>
             {m.bio && (
-              <DataRow label="نبذة">
+              <DataRow label="نبذة" wide>
                 <span className="font-semibold">{m.bio}</span>
               </DataRow>
             )}
@@ -186,12 +191,11 @@ export function MarketerDetailPage({ id }: { id: string }) {
                     value={link}
                     aria-label="الرابط المتابَع"
                     dir="ltr"
-                    className={cx("h-11 min-w-0 flex-1 border-interactive bg-cream px-3 text-[13px] font-bold", stage === "suspended" && "text-disabled line-through")}
+                    className={cx("h-10 min-w-0 flex-1 border-interactive bg-cream px-3 text-[13px] font-bold", stage === "suspended" && "text-disabled line-through")}
                   />
                   <AdminButton
                     variant="outline"
-                    size="lg"
-                    className="h-11 px-3.5 text-[13px]"
+                    size="sm"
                     onClick={() => {
                       void navigator.clipboard?.writeText(`https://${link}`).catch(() => undefined);
                       toast(`نُسخ الرابط · ${link}`);
@@ -199,7 +203,7 @@ export function MarketerDetailPage({ id }: { id: string }) {
                   >
                     نسخ
                   </AdminButton>
-                  <Link href={`/m/${m.token}`} className="inline-flex h-11 items-center border-interactive bg-paper px-3.5 text-[13px] font-bold text-ink no-underline hover:bg-sand">
+                  <Link href={`/m/${m.token}`} className="inline-flex h-10 items-center border-interactive bg-paper px-3 text-[12px] font-extrabold text-ink no-underline hover:bg-sand">
                     QR
                   </Link>
                 </div>
@@ -241,15 +245,15 @@ export function MarketerDetailPage({ id }: { id: string }) {
 
         <div className="flex min-w-0 flex-col gap-4 lg:gap-5">
           <div className="grid grid-cols-3 gap-2 md:gap-3">
-            <StatTile label="زيارات · 30 يوماً" value={fmtNum(m.stats.visits30d)} note={m.peakNoteAr} />
-            <StatTile label="ضغطات واتساب" value={fmtNum(m.stats.whatsapp30d)} note={`${conv.pct}% · متوسط المسوّقين ${conv.avgPct}%`} />
-            <StatTile label="طلبات منسوبة" value={fmtNum(m.stats.leads)} note={`${cnt(m.stats.negotiating, "صفقة", "صفقات")} قيد التفاوض`} variant="ink" />
+            <StatTile className={TILE} label="زيارات · 30 يوماً" value={fmtNum(m.stats.visits30d)} note={m.peakNoteAr} />
+            <StatTile className={TILE} label="ضغطات واتساب" value={fmtNum(m.stats.whatsapp30d)} note={`${conv.pct}% · متوسط المسوّقين ${conv.avgPct}%`} />
+            <StatTile className={TILE} label="طلبات منسوبة" value={fmtNum(m.stats.leads)} note={`${cnt(m.stats.negotiating, "صفقة", "صفقات")} قيد التفاوض`} variant="ink" />
           </div>
 
           <Section title="الطلبات المنسوبة إليه" aside="النسبة: أول رابط خلال 30 يوماً">
             <div className="overflow-x-auto">
               <div className="min-w-[560px]">
-                <div className="grid grid-cols-[110px_1fr_1fr_0.7fr_100px] gap-3 border-b border-line px-4 py-3 text-caption font-extrabold text-muted">
+                <div className="grid grid-cols-[110px_1fr_1fr_1fr_100px] gap-3 border-b border-line px-4 py-2.5 text-caption font-extrabold text-muted">
                   <span>الوقت</span>
                   <span>الوحدة · القناة</span>
                   <span>الحالة</span>
@@ -261,7 +265,7 @@ export function MarketerDetailPage({ id }: { id: string }) {
                   const hot = !!m.negotiatingUnit && l.unit === m.negotiatingUnit;
                   const closed = l.status.startsWith("مغلق") || l.status === "بلا رد";
                   return (
-                    <div key={l.code} className={cx("grid grid-cols-[110px_1fr_1fr_0.7fr_100px] items-baseline gap-3 border-b border-line px-4 py-3.5 text-[13px] last:border-b-0", hot && "bg-cream-focus")}>
+                    <div key={l.code} className={cx("grid grid-cols-[110px_1fr_1fr_1fr_100px] items-baseline gap-3 border-b border-line px-4 py-2.5 text-[13px] last:border-b-0", hot && "bg-cream-focus")}>
                       <span>{agoLong(l.when)}</span>
                       <span>{`${l.unit} · ${l.channel}`}</span>
                       <span className={cx(hot ? "font-extrabold text-gold-text" : closed ? "font-bold text-muted" : "font-extrabold")}>{l.status}</span>

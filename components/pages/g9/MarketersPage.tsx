@@ -43,14 +43,14 @@ function MarketerCard({ m, stage, leader, onActivate }: { m: Marketer; stage: Ma
   return (
     <div
       className={cx(
-        "relative flex flex-col gap-1.5 bg-paper px-3.5 py-3 motion-hover hover:bg-cream",
+        "relative flex flex-col gap-1 bg-paper px-3 py-2.5 motion-hover hover:bg-cream",
         leader && active ? "border-2 border-gold" : suspended ? "border-hairline" : "border-interactive",
       )}
     >
       {stage === "new" && <span aria-hidden className="absolute inset-y-0 start-0 w-[4px] bg-gold" />}
       <span className="flex items-center gap-2">
-        <HexAvatar letter={initial(m.name)} tone={suspended ? "muted" : leader && active ? "gold" : "ink"} size={26} />
-        <Link href={marketerHref(m)} className="min-w-0 text-[14px] font-extrabold leading-snug text-ink no-underline after:absolute after:inset-0 hover:underline">
+        <HexAvatar letter={initial(m.name)} tone={suspended ? "muted" : leader && active ? "gold" : "ink"} size={28} />
+        <Link href={marketerHref(m)} className="min-w-0 text-[13px] font-extrabold leading-snug text-ink no-underline after:absolute after:inset-0 hover:underline">
           {m.name}
           {(active || suspended) && <span className="whitespace-nowrap">{` · ${m.id}`}</span>}
         </Link>
@@ -59,16 +59,16 @@ function MarketerCard({ m, stage, leader, onActivate }: { m: Marketer; stage: Ma
         {line}
       </small>
       {active && (
-        <span className="mt-1 grid grid-cols-3 gap-1 text-caption font-bold">
+        <span className="mt-0.5 grid grid-cols-3 gap-1 text-[11px] font-bold">
           {[visitsWord(m.stats.visits30d), `${fmtNum(m.stats.whatsapp30d)} واتساب`, requestsWord(m.stats.leads)].map((s) => {
             const [num, ...word] = s.split(" ");
             return (
-              <span key={s} className="flex flex-col items-start leading-tight">
-                <b className="flex items-center gap-1 font-extrabold tnum">
-                  <span aria-hidden className="hex-point inline-block size-1.5 bg-gold" />
-                  {num}
-                </b>
-                <span>{word.join(" ")}</span>
+              <span key={s} className="flex items-center gap-1">
+                <span aria-hidden className="hex-flat inline-block h-[7px] w-[7px] shrink-0 bg-gold" />
+                <span className="flex flex-col leading-[1.6]">
+                  <b className="font-bold tnum">{num}</b>
+                  <span>{word.join(" ")}</span>
+                </span>
               </span>
             );
           })}

@@ -22,11 +22,13 @@ type Filter = "new" | "missing" | "imported";
 type Check = { checked?: boolean; date?: string; expiry?: string; name?: string };
 
 const roleShort = (r: string) => r.replace(" العقاري", "");
+/** The list line's short form of a rejection reason («رقم الرخصة لا يطابق»); the full text stays in the review. */
+const shortReason = (r: string) => (/رقم رخصة.*لا يطابق/.test(r) ? "رقم الرخصة لا يطابق" : r.split(".")[0]);
 const offersWord = (n: number) => cnt(n, "عرض", "عروض", "عرضاً");
 
 function rowLine(a: Application, st: ApplicationStatus): string {
   if (st === "imported") return "مستورد · لا تاريخ تحقق · لا موافقة ميثاق";
-  if (st === "rejected") return `${a.id} · مرفوض ${a.verification?.date ? fmtDate(a.verification.date) : ""} · ${(a.rejectReason ?? "").split(".")[0]}`;
+  if (st === "rejected") return `${a.id} · مرفوض ${a.verification?.date ? fmtDate(a.verification.date) : ""} · ${shortReason(a.rejectReason ?? "")}`;
   return [a.id, agoLong(a.submittedAt), roleShort(a.applicantRole), cnt(a.districts.length, "حي", "أحياء", "حياً"), offersWord(a.offersDirect + a.offersBrokered)].join(" · ");
 }
 
@@ -60,7 +62,7 @@ function Row({ k, v, strong = true }: { k: string; v: React.ReactNode; strong?: 
   return (
     <div className="flex items-baseline justify-between gap-4 border-b border-line py-2.5 text-[13px] last:border-b-0">
       <span className="shrink-0 text-muted">{k}</span>
-      <span className={cx("max-w-[62%] text-end", strong ? "font-extrabold" : "font-semibold leading-relaxed")}>{v}</span>
+      <span className={cx("text-end", strong ? "font-extrabold" : "max-w-[220px] font-semibold leading-relaxed")}>{v}</span>
     </div>
   );
 }
@@ -158,7 +160,7 @@ export function ApplicationsPage() {
       <div className="grid items-start gap-5 lg:grid-cols-[420px_minmax(0,1fr)]">
         <section className="flex min-w-0 flex-col border-interactive bg-paper" aria-labelledby="apps-list">
           <header className="flex flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-            <h2 id="apps-list" className="text-[16px] font-extrabold">
+            <h2 id="apps-list" className="text-[14px] font-extrabold">
               الطلبات
             </h2>
             <div className="flex flex-wrap gap-1.5">
@@ -178,12 +180,12 @@ export function ApplicationsPage() {
                     type="button"
                     aria-current={on ? "true" : undefined}
                     onClick={() => setQuery({ id: x.id }, "replace")}
-                    className={cx("relative flex w-full items-center gap-3 px-4 py-4 text-start motion-hover", on ? "bg-sand" : "hover:bg-cream")}
+                    className={cx("relative flex w-full items-center gap-3 px-3.5 py-3 text-start motion-hover", on ? "bg-sand" : "hover:bg-cream")}
                   >
-                    {on && <span aria-hidden className="absolute inset-y-0 start-0 w-1 bg-gold" />}
+                    {on && <span aria-hidden className="absolute inset-y-0 end-0 w-1 bg-gold" />}
                     <DistrictHex slug={x.districtSlug} dark={!quiet} />
                     <span className="flex min-w-0 flex-1 flex-col gap-1">
-                      <strong className="text-[14px] font-extrabold text-ink">{x.officeName}</strong>
+                      <strong className="text-[13px] font-extrabold text-ink">{x.officeName}</strong>
                       <small className={cx("line-clamp-2 text-[11px] leading-relaxed", quiet ? "text-muted" : "text-muted")}>{rowLine(x, s)}</small>
                     </span>
                     <StatusTag st={s} list />
@@ -196,10 +198,10 @@ export function ApplicationsPage() {
 
         <section className="flex min-w-0 flex-col border-interactive bg-paper" aria-labelledby="app-review">
           <header className="flex flex-wrap items-center justify-between gap-2 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-            <h2 id="app-review" className="text-[16px] font-extrabold">{`مراجعة ${a.id} · ${a.officeName}`}</h2>
+            <h2 id="app-review" className="text-[14px] font-extrabold">{`مراجعة ${a.id} · ${a.officeName}`}</h2>
             <StatusTag st={status} />
           </header>
-          <div className="grid gap-6 p-4 md:grid-cols-2">
+          <div className="grid gap-5 p-4 md:grid-cols-2">
             <div className="flex min-w-0 flex-col gap-1">
               <span className="text-[12px] font-extrabold">المكتب ومقدم الطلب</span>
               <div className="flex flex-col">
@@ -214,21 +216,21 @@ export function ApplicationsPage() {
             </div>
             <div className="flex min-w-0 flex-col gap-2">
               <span className="text-[12px] font-extrabold">التغطية والتخصص</span>
-              <div className="flex flex-wrap gap-1.5 text-[12px] font-bold">
+              <div className="flex flex-wrap gap-1.5 text-[11px] font-bold">
                 {a.sectors.map((s) => (
-                  <span key={s} className="bg-ink px-2 py-1 text-paper">
+                  <span key={s} className="inline-flex h-[26px] items-center bg-ink px-2 text-paper">
                     {SECTORS[s].ar}
                   </span>
                 ))}
                 {a.districts.map((d) => (
-                  <span key={d} className="bg-sand px-2 py-1">
+                  <span key={d} className="inline-flex h-[26px] items-center bg-sand px-2">
                     {districtAr(d)}
                   </span>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-1.5 text-[12px] font-bold">
+              <div className="flex flex-wrap gap-1.5 text-[11px] font-bold">
                 {a.specialties.map((s) => (
-                  <span key={s} className="bg-sand px-2 py-1">
+                  <span key={s} className="inline-flex h-[26px] items-center bg-sand px-2">
                     {s}
                   </span>
                 ))}
@@ -240,9 +242,9 @@ export function ApplicationsPage() {
                 <Row k="يريدون" v={a.wantSummary ?? a.want} strong={false} />
                 <Row k="سيضيفون" v={a.addSummary ?? a.add} strong={false} />
               </div>
-              <div className="flex flex-wrap gap-2 text-[12px] font-bold">
-                <span className="bg-sand px-2 py-1">{`موافقة الميثاق: ${a.charterConsent ? "نعم" : "لا"}${a.charterVersion ? ` · ${a.charterVersion}` : ""}`}</span>
-                <span className="bg-sand px-2 py-1">{`الظهور في الدليل: ${a.directoryConsent ? "نعم" : "لا"}`}</span>
+              <div className="flex flex-wrap gap-1.5 text-[11px] font-bold">
+                <span className="inline-flex h-[26px] items-center bg-sand px-2">{`موافقة الميثاق: ${a.charterConsent ? "نعم" : "لا"}${a.charterVersion ? ` · ${a.charterVersion}` : ""}`}</span>
+                <span className="inline-flex h-[26px] items-center bg-sand px-2">{`الظهور في الدليل: ${a.directoryConsent ? "نعم" : "لا"}`}</span>
               </div>
             </div>
           </div>
@@ -263,12 +265,12 @@ export function ApplicationsPage() {
 
           <div className="flex flex-col gap-3 border-t-[1.5px] border-ink p-4">
             <div className="flex flex-wrap items-center gap-2.5">
-              <AdminButton variant="gold" size="lg" disabled={!canApprove} onClick={() => approveApplication(a.id)}>
+              <AdminButton variant="gold" size="md" disabled={!canApprove} onClick={() => approveApplication(a.id)}>
                 {status === "verified" ? APPLICATION_STATUS_LABELS.verified : "اعتمد كعضو موثّق"}
               </AdminButton>
               <AdminButton
                 variant="outline"
-                size="lg"
+                size="md"
                 disabled={status === "verified" || status === "rejected"}
                 onClick={() => {
                   if (!needReason()) return;
@@ -280,7 +282,7 @@ export function ApplicationsPage() {
               </AdminButton>
               <AdminButton
                 variant="outline"
-                size="lg"
+                size="md"
                 disabled={status === "verified" || status === "rejected"}
                 onClick={() => {
                   if (!needReason()) return;

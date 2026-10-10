@@ -11,12 +11,12 @@ import { districtAr } from "@/data/districts";
 import { officeById } from "@/data/offices";
 import { requests } from "@/data/requests";
 import { referrals } from "@/data/referrals";
-import { agoLabel, allianceReplyStats, effectiveReferralStage, effectiveRequest, memberCounts, radarRanking, routingOrder } from "@/data/selectors";
+import { agoLabel, allianceReplyStats, effectiveReferralStage, effectiveRequest, memberCounts, routingOrder } from "@/data/selectors";
 import { usePresenter } from "@/lib/presenter";
 import { usePatch, useStore } from "@/lib/store";
 import { cx, fmtNum, plural } from "@/lib/format";
 import { useRoomActions } from "./actions";
-import { allianceEvents, draftReport, feedTime, hiddenSlices, OUTAGE_MINUTES, protectionLeft, radarLines, radarSegment, reqTitle, RESPONSE } from "./room";
+import { allianceEvents, draftReport, feedTime, hiddenSlices, OUTAGE_MINUTES, protectionLeft, radarKind, radarLines, radarSegment, radarTeaser, reqTitle, RESPONSE } from "./room";
 import { AllianceTabs, G9Shell, HexTag, LinkTile, RoomTitle, Section, useAllianceOverview } from "./shell";
 import { cnt, districtsWord, letters, officeShort, sectorsWord } from "./util";
 
@@ -70,11 +70,11 @@ function RejectDialog({ open, onClose, onConfirm, title }: { open: boolean; onCl
 
 function DecisionRow({ tag, title, line, cta }: { tag: ReactNode; title: string; line: ReactNode; cta: ReactNode }) {
   return (
-    <div className="flex items-center gap-3.5 border-b border-line px-4 py-4 last:border-b-0">
+    <div className="flex items-center gap-3 border-b border-line px-4 py-2.5 last:border-b-0">
       {tag}
-      <span className="flex min-w-0 flex-1 flex-col gap-1">
-        <strong className="text-[14px] font-extrabold">{title}</strong>
-        <small className="text-[12px] leading-relaxed text-muted">{line}</small>
+      <span className="flex min-w-0 flex-1 flex-col gap-px">
+        <strong className="text-[13px] font-extrabold leading-[normal]">{title}</strong>
+        <small className="text-[11px] leading-[normal] text-muted">{line}</small>
       </span>
       <span className="shrink-0">{cta}</span>
     </div>
@@ -87,15 +87,8 @@ function Desktop() {
   const { state } = usePresenter();
   const mc = memberCounts();
   const reply = allianceReplyStats();
-  const lines = radarLines(3);
-  const mini = useMemo(() => {
-    const rows = radarRanking("30d");
-    const send = rows.filter((r) => r.action === "send").slice(0, 3);
-    const self = rows.filter((r) => r.action === "self").slice(0, 1);
-    const rest = rows.filter((r) => r.action === "send" && !send.includes(r)).slice(0, 1);
-    return [...send, ...self, ...rest];
-  }, []);
-  const outline = "inline-flex h-10 items-center border-interactive bg-paper px-3.5 text-[13px] font-extrabold text-ink no-underline hover:bg-sand";
+  const { hexes: mini, lines } = useMemo(() => radarTeaser(), []);
+  const outline = "inline-flex h-9 items-center whitespace-nowrap border-interactive bg-paper px-3 text-[12px] font-extrabold text-ink no-underline hover:bg-sand";
 
   return (
     <div className="hidden flex-col gap-6 md:flex">
@@ -190,37 +183,40 @@ function Desktop() {
               الكامل ←
             </Link>
           }
-          bodyClassName="flex flex-col gap-3 p-4"
+          bodyClassName="flex flex-col gap-2.5 px-4 py-3.5"
         >
-          <div className="flex flex-wrap items-center justify-center gap-1.5 py-2" style={{ ["--hex-surface" as string]: "var(--smq-paper)" }}>
-            {mini.map((r) => (
-              <HexCell
-                key={r.district.slug}
-                label={r.district.ar}
-                value={fmtNum(r.sessions)}
-                state={r.action === "self" ? "active" : r === mini[mini.length - 1] && mini.length > 4 ? "muted" : "gap"}
-                size={64}
-                href={`/admin/alliance/radar?district=${r.district.slug}`}
-              />
-            ))}
+          <div className="flex flex-wrap items-center justify-center gap-1" style={{ ["--hex-surface" as string]: "var(--smq-paper)" }}>
+            {mini.map((r) => {
+              const kind = radarKind(r);
+              return (
+                <HexCell
+                  key={r.district.slug}
+                  label={r.district.ar}
+                  value={fmtNum(r.sessions)}
+                  state={kind === "self" ? "active" : kind === "needs" ? "muted" : "gap"}
+                  size={64}
+                  href={`/admin/alliance/radar?district=${r.district.slug}`}
+                />
+              );
+            })}
           </div>
           <div className="flex flex-wrap justify-between gap-2 text-[11px] text-muted">
             <span>ذهبي: طلب بلا وحدات SMQ، يغطيه أعضاء</span>
             <span>أسود: لدينا وحدات</span>
           </div>
-          <div className="flex flex-col border-t border-line pt-1 text-[12px]">
+          <div className="flex flex-col gap-1.5 border-t border-line pt-2.5 text-[12px]">
             {lines.map((r) => (
-              <div key={r.district.slug} className="flex items-center justify-between gap-3 py-2">
+              <div key={r.district.slug} className="flex items-center justify-between gap-3">
                 <span>{radarSegment(r)}</span>
-                {r.members > 0 ? (
-                  <strong className="font-extrabold">
+                {radarKind(r) === "send" ? (
+                  <strong className="shrink-0 font-extrabold">
                     {`${membersLabel(r.members)} · `}
                     <Link href={`/admin/alliance/radar?district=${r.district.slug}`} className="text-gold-text underline hover:text-ink">
                       أرسل
                     </Link>
                   </strong>
                 ) : (
-                  <strong className="font-extrabold text-gold-text">لا أعضاء</strong>
+                  <strong className="shrink-0 font-extrabold text-gold-text">{r.members ? "يحتاج أعضاء" : "لا أعضاء"}</strong>
                 )}
               </div>
             ))}
@@ -229,20 +225,20 @@ function Desktop() {
       </div>
 
       <div className="grid items-start gap-5 lg:grid-cols-3">
-        <Section title="سرعة الرد · 30 يوماً" bodyClassName="flex flex-col px-4 py-2 text-[12px]">
+        <Section title="سرعة الرد · 30 يوماً" bodyClassName="flex flex-col gap-2 px-4 py-3.5 text-[12px]">
           {[
             ["متوسط التحالف", fmtReply(reply.meanMinutes), false],
             [`أسرع عضو · ${reply.fastest?.nameAr ?? ""}`, reply.fastest ? fmtReply(reply.fastest.ledger.avgReplyMinutes) : "", false],
             ["بلا رد خلال المهلة", `${RESPONSE.noReplyWithinDeadline} من ${RESPONSE.sentWithinDeadline}`, true],
             ["«لا يوجد» صريح", fmtNum(RESPONSE.explicitNone), false],
           ].map(([k, v, gold]) => (
-            <div key={String(k)} className="flex items-center justify-between gap-3 border-b border-line py-2.5 last:border-b-0">
+            <div key={String(k)} className="flex items-center justify-between gap-3">
               <span>{k}</span>
               <strong className={cx("font-extrabold tnum", gold && "text-gold-text")}>{v}</strong>
             </div>
           ))}
         </Section>
-        <Section title="قنوات الإرسال" bodyClassName="flex flex-col gap-3 p-4 text-[12px] leading-relaxed">
+        <Section title="قنوات الإرسال" bodyClassName="flex flex-col gap-2 px-4 py-3.5 text-[12px] leading-relaxed">
           <span className="flex items-center gap-2">
             <span aria-hidden className={cx("hex-flat inline-block h-2.5 w-3 shrink-0", state.wa === "manual" ? "bg-ink" : "bg-gold")} />
             {state.wa === "manual" ? "الوضع اليدوي (واتساب بزنس غير متصل)" : `واتساب بزنس متصل · ${cnt(RESPONSE.autoSendsThisMonth, "إرسال", "إرسالات", "إرسالاً")} تلقائياً هذا الشهر`}
@@ -255,10 +251,10 @@ function Desktop() {
           </span>
           <span className="text-muted">كل طلب يحمل رابطاً خاصاً بالمكتب؛ الرد يصل من الرابط لا من الرسالة.</span>
         </Section>
-        <Section title="آخر الأحداث" bodyClassName="flex flex-col px-4 py-2 text-[12px]">
+        <Section title="آخر الأحداث" bodyClassName="flex flex-col px-4 py-2.5 text-[12px]">
           {events.slice(0, 4).map((e, i) => (
-            <div key={i} className="grid grid-cols-[56px_1fr] gap-3 border-b border-line py-2.5 last:border-b-0">
-              <span className="text-muted tnum">{feedTime(e.at)}</span>
+            <div key={i} className="flex gap-2.5 border-b border-line py-1.5 last:border-b-0">
+              <span className="w-[70px] shrink-0 text-muted tnum">{feedTime(e.at)}</span>
               <span>{e.text}</span>
             </div>
           ))}
@@ -272,15 +268,15 @@ function Desktop() {
 
 function PhoneCard({ kicker, tag, title, children, actions, rule }: { kicker: string; tag: ReactNode; title: string; children: ReactNode; actions: ReactNode; rule?: boolean }) {
   return (
-    <article className="relative flex flex-col gap-2.5 border-interactive bg-paper p-4">
+    <article className="relative flex flex-col gap-2 border-interactive bg-paper px-3.5 py-3">
       {rule && <span aria-hidden className="absolute inset-y-0 start-0 w-[5px] bg-gold" />}
       <div className="flex items-center justify-between gap-2">
-        <span className="text-[12px] font-bold text-muted">{kicker}</span>
+        <span className="text-[11px] font-bold text-muted">{kicker}</span>
         {tag}
       </div>
-      <b className="text-[17px] font-extrabold leading-snug">{title}</b>
-      <p className="text-[13px] leading-relaxed text-ink-2">{children}</p>
-      <div className="grid grid-cols-2 gap-2.5">{actions}</div>
+      <b className="text-[15px] font-extrabold leading-normal">{title}</b>
+      <p className="text-[12px] leading-[1.6] text-ink-2">{children}</p>
+      <div className="grid grid-cols-2 gap-2">{actions}</div>
     </article>
   );
 }
@@ -288,7 +284,7 @@ function Tag({ children, tone }: { children: ReactNode; tone: "gold" | "goldOutl
   return (
     <span
       className={cx(
-        "px-2 py-1 text-[11px] font-extrabold",
+        "px-[7px] py-0.5 text-[11px] font-extrabold",
         tone === "gold" ? "bg-gold text-ink" : tone === "ink" ? "bg-ink text-paper" : tone === "goldOutline" ? "border-[1.5px] border-gold text-gold-text" : "border-interactive text-ink",
       )}
     >
@@ -296,9 +292,9 @@ function Tag({ children, tone }: { children: ReactNode; tone: "gold" | "goldOutl
     </span>
   );
 }
-const btnGold = "flex min-h-12 items-center justify-center bg-gold px-3 text-center text-[13px] font-extrabold text-ink cut-s hover:bg-gold-hover";
-const btnInk = "flex min-h-12 items-center justify-center bg-ink px-3 text-center text-[13px] font-extrabold text-paper hover:bg-ink-2";
-const btnOutline = "flex min-h-12 items-center justify-center border-interactive bg-paper px-3 text-center text-[13px] font-extrabold text-ink no-underline hover:bg-sand";
+const btnGold = "flex min-h-11 items-center justify-center bg-gold px-2.5 text-center text-[12px] font-extrabold leading-snug text-ink cut-s hover:bg-gold-hover";
+const btnInk = "flex min-h-11 items-center justify-center bg-ink px-2.5 text-center text-[12px] font-extrabold leading-snug text-paper hover:bg-ink-2";
+const btnOutline = "flex min-h-11 items-center justify-center border-interactive bg-paper px-2.5 text-center text-[12px] font-extrabold leading-snug text-ink no-underline hover:bg-sand";
 
 function Phone() {
   const ov = useAllianceOverview();
@@ -365,7 +361,8 @@ function Phone() {
     const sentTo = manualReq.sentTo.filter((s) => s.mode === "manual").map((s) => s.officeId);
     const target = sentTo[0];
     const unsent = manualReq.unsentOfficeIds ?? [];
-    const others = routingOrder(manualReq.districtSlug, manualReq.type).filter((x) => !sentTo.includes(x.office.id) && !unsent.includes(x.office.id));
+    // another active member that handles the requested type (مكتب أ covers المحمدية but not apartments)
+    const others = routingOrder(manualReq.districtSlug, manualReq.type).filter((x) => x.specialtyMatch && !sentTo.includes(x.office.id) && !unsent.includes(x.office.id));
     const done = target && resent?.[`${manualReq.id}:${target}`];
     cards.push(
       <PhoneCard
@@ -444,45 +441,47 @@ function Phone() {
 
   const memberWord = cnt(mc.members, "عضو", "أعضاء", "عضواً").split(" ").slice(1).join(" ");
   return (
-    <div className="flex flex-col gap-4 md:hidden">
-      <div className="flex items-baseline justify-between gap-3">
-        <h1 className="text-[22px] font-extrabold">التحالف · اليوم</h1>
-        <span className="text-[12px] text-muted">{cnt(cards.length, "إجراء", "إجراءات", "إجراءً")}</span>
+    <div className="flex flex-col gap-3 pt-4 md:hidden">
+      <div className="flex flex-col gap-1.5">
+        <div className="flex items-baseline justify-between gap-3">
+          <h1 className="text-[22px] font-extrabold">التحالف · اليوم</h1>
+          <span className="text-[12px] text-muted">{cnt(cards.length, "إجراء", "إجراءات", "إجراءً")}</span>
+        </div>
+        <div className="grid grid-cols-4 gap-1.5 text-center text-[11px]">
+          <Link href="/admin/alliance/members" className="flex flex-col items-center border-interactive bg-paper px-1 py-2 text-ink no-underline">
+            <b className="text-[18px] font-extrabold tnum">{fmtNum(mc.members)}</b>
+            {memberWord}
+          </Link>
+          <Link href="/admin/alliance/requests" className="flex flex-col items-center border-interactive bg-paper px-1 py-2 text-ink no-underline">
+            <b className="text-[18px] font-extrabold tnum">{fmtNum(ov.openRequests)}</b>
+            مفتوحة
+          </Link>
+          <Link href="/admin/alliance/requests" className="flex flex-col items-center border-[1.5px] border-gold bg-paper px-1 py-2 text-ink no-underline">
+            <b className="text-[18px] font-extrabold tnum text-gold-text">{fmtNum(ov.awaitingDecision)}</b>
+            عروض تنتظر
+          </Link>
+          <Link href="/admin/alliance/referrals" className="flex flex-col items-center bg-ink px-1 py-2 text-paper no-underline">
+            <b className="text-[18px] font-extrabold tnum text-gold">{fmtNum(ov.ongoingReferrals)}</b>
+            إحالات
+          </Link>
+        </div>
+        <p className="mt-1 text-[11px] leading-[1.6] text-muted">كل قرار هنا بضغطة من الجوال. التفاصيل الكاملة على سطح المكتب.</p>
       </div>
-      <div className="grid grid-cols-4 gap-1.5 text-center text-[11px]">
-        <Link href="/admin/alliance/members" className="flex flex-col items-center gap-0.5 border-interactive bg-paper py-2.5 text-ink no-underline">
-          <b className="text-[18px] font-extrabold tnum">{fmtNum(mc.members)}</b>
-          {memberWord}
-        </Link>
-        <Link href="/admin/alliance/requests" className="flex flex-col items-center gap-0.5 border-interactive bg-paper py-2.5 text-ink no-underline">
-          <b className="text-[18px] font-extrabold tnum">{fmtNum(ov.openRequests)}</b>
-          مفتوحة
-        </Link>
-        <Link href="/admin/alliance/requests" className="flex flex-col items-center gap-0.5 border-[1.5px] border-gold bg-paper py-2.5 text-ink no-underline">
-          <b className="text-[18px] font-extrabold tnum text-gold-text">{fmtNum(ov.awaitingDecision)}</b>
-          عروض تنتظر
-        </Link>
-        <Link href="/admin/alliance/referrals" className="flex flex-col items-center gap-0.5 bg-ink py-2.5 text-paper no-underline">
-          <b className="text-[18px] font-extrabold tnum text-gold">{fmtNum(ov.ongoingReferrals)}</b>
-          إحالات
-        </Link>
-      </div>
-      <p className="text-[11px] text-muted">كل قرار هنا بضغطة من الجوال. التفاصيل الكاملة على سطح المكتب.</p>
-      <div className="flex flex-col gap-3">{cards}</div>
-      <section className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2.5">{cards}</div>
+      <section className="flex flex-col gap-2 pt-1.5">
         <span className="text-[13px] font-extrabold">آخر ما حدث</span>
         <div className="border-interactive bg-paper text-[12px]">
           {events.slice(0, 3).map((e, i) => (
-            <div key={i} className="grid grid-cols-[48px_1fr] gap-2.5 border-b border-line px-3.5 py-3 last:border-b-0">
-              <span className="text-muted tnum">{feedTime(e.at)}</span>
-              <span>{e.text}</span>
+            <div key={i} className="flex gap-2.5 border-b border-line px-3 py-[9px] last:border-b-0">
+              <span className="w-14 shrink-0 text-muted tnum">{feedTime(e.at)}</span>
+              <span>{e.detail ? `${e.text} · ${e.detail}` : e.text}</span>
             </div>
           ))}
         </div>
+        <Link href="/admin/alliance" className="self-start text-[12px] font-extrabold text-gold-text no-underline">
+          غرفة التحالف الكاملة على سطح المكتب ←
+        </Link>
       </section>
-      <Link href="/admin/alliance" className="text-[12px] font-extrabold text-gold-text no-underline">
-        غرفة التحالف الكاملة على سطح المكتب ←
-      </Link>
       <RejectDialog
         open={!!rejecting}
         onClose={() => setRejecting(null)}

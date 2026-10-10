@@ -7,7 +7,7 @@ import { applications } from "@/data/applications";
 import { requests, shortRequestId, SOURCE_LABELS } from "@/data/requests";
 import { referrals } from "@/data/referrals";
 import { settings } from "@/data/settings";
-import { agoLabel, effectiveRequest, NOW, protectionDaysLeft, radarRanking, reportSlices, type RadarRow, type RequestOverride } from "@/data/selectors";
+import { agoLabel, effectiveRequest, NOW, protectionDaysLeft, radarRanking, reportSlices, routingOrder, type RadarRow, type RequestOverride } from "@/data/selectors";
 import type { AllianceRequest, ApplicationStatus, Referral } from "@/data/types";
 import { clock, daysAgo, officeShort } from "./util";
 
@@ -46,7 +46,10 @@ export function feedTime(iso: string, now: string = NOW): string {
 export interface FeedEvent {
   at: string;
   text: string;
+  /** What the phone feed adds after the line («· معاينة الخميس» on a referral). */
+  detail?: string;
 }
+const WEEKDAY = /\s·\s(?=(الأحد|الاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت))/;
 /** «آخر الأحداث»: offers received, automatic / manual sends, referrals created, applications received, plus what the
  *  store created in this session. Newest first. */
 export function allianceEvents(opts: { createdReferrals?: Referral[]; createdRequests?: { id: string; summaryAr: string; createdAt: string }[]; requestOverrides?: Record<string, RequestOverride>; applicationOverrides?: Record<string, ApplicationStatus> } = {}): FeedEvent[] {
@@ -69,7 +72,7 @@ export function allianceEvents(opts: { createdReferrals?: Referral[]; createdReq
     seen.add(ref.id);
     if (!ref.createdAt) continue;
     const name = createdByName(ref.createdBy);
-    out.push({ at: ref.createdAt, text: `${name} ${madeVerb(name)} ${ref.id}` });
+    out.push({ at: ref.createdAt, text: `${name} ${madeVerb(name)} ${ref.id}`, detail: ref.stageLabelAr?.replace(WEEKDAY, " ") });
   }
   for (const a of applications) out.push({ at: a.submittedAt, text: `وصل طلب انضمام ${a.id}` });
   for (const c of opts.createdRequests ?? []) out.push({ at: c.createdAt, text: `أُنشئ ${shortRequestId(c.id)} · ${c.summaryAr}` });
@@ -81,16 +84,45 @@ export const latestPublishedReport = allianceReports.find((r) => r.status === "p
 export const draftReport = allianceReports.find((r) => r.status === "draft");
 
 /** «أبحر الشمالية · فلل 1.5 إلى 2.5M» for a radar row: the published report's slice for the district, else the
- *  district's top demand. */
+ *  district's top demand («الشاطئ · شقق 3 غرف»). */
 export function radarSegment(row: Pick<RadarRow, "district" | "detail">): string {
   const slice = latestPublishedReport?.opportunities.find((o) => o.labelAr.startsWith(row.district.ar));
   if (slice) return slice.labelAr;
-  return row.detail?.topDemandAr ? `${row.district.ar} · ${row.detail.topDemandAr}` : row.district.ar;
+  return row.detail?.topDemandAr ? `${row.district.ar} · ${row.detail.topDemandAr.replace(" · ", " ")}` : row.district.ar;
 }
 
-/** Opportunity rows for the overview (districts without SMQ units, by the radar formula). */
+/** The demand's type word for routing («فلل · 5 غرف» → «فلل»). */
+export const demandType = (row: Pick<RadarRow, "detail">) => row.detail?.topDemandAr?.split(" · ")[0] ?? "";
+
+/** «(عماير فقط)» when no covering member handles the demanded type (the radar's «1 · و (عماير فقط)»). */
+export function specialtyGap(row: RadarRow): string | null {
+  if (!row.members) return null;
+  const routed = routingOrder(row.district.slug, demandType(row));
+  if (!demandType(row) || routed.some((r) => r.specialtyMatch)) return null;
+  const words = Array.from(new Set(routed.flatMap((r) => r.office.specialties.map((s) => s.split(" ")[0]))));
+  return `(${words[0]} فقط)`;
+}
+
+/** What the radar does with a district: send it to the members, cover it ourselves, or find members for it (none
+ *  cover it, or none of them handles the demanded type). */
+export function radarKind(row: RadarRow): "send" | "self" | "needs" {
+  if (row.action === "self") return "self";
+  return row.action === "send" && !specialtyGap(row) ? "send" : "needs";
+}
+
+/** Districts to send to the members (no SMQ units, a member handles the demand), by the radar formula. */
 export function radarLines(n = 3): RadarRow[] {
-  return radarRanking("30d").filter((r) => r.action !== "self").slice(0, n);
+  return radarRanking("30d").filter((r) => radarKind(r) === "send").slice(0, n);
+}
+
+/** The overview's radar teaser: the top three districts to send, the busiest one we cover ourselves and the top one
+ *  that needs members (hexagons); the top two to send and the one that needs members (lines). */
+export function radarTeaser(): { hexes: RadarRow[]; lines: RadarRow[] } {
+  const rows = radarRanking("30d");
+  const send = rows.filter((r) => radarKind(r) === "send");
+  const self = rows.filter((r) => radarKind(r) === "self");
+  const needs = rows.filter((r) => radarKind(r) === "needs");
+  return { hexes: [...send.slice(0, 3), ...self.slice(0, 1), ...needs.slice(0, 1)], lines: [...send.slice(0, 2), ...needs.slice(0, 1)] };
 }
 
 /** The minutes of yesterday's WhatsApp Business outage, read from the settings note («انقطع الاتصال قبل 40 دقيقة»). */

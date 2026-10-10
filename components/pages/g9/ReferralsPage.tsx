@@ -31,17 +31,28 @@ function kindOf(r: Referral): string {
   return r.summary
     .split(" · ")
     .filter((p) => p !== district && !p.startsWith("حتى"))
-    .join(" ");
+    .join(" ")
+    .replace(/غرفتان$/, "غرفتين"); // «شقة غرفتين»
+}
+/** Open records first (earlier stage first, a dispute ahead of its stage), then the closed ones, newest close first. */
+function rowOrder(st: (r: Referral) => ReferralStage, dispute: (r: Referral) => boolean) {
+  return (a: Referral, b: Referral) => {
+    const oa = ONGOING.includes(st(a));
+    const ob = ONGOING.includes(st(b));
+    if (oa !== ob) return oa ? -1 : 1;
+    if (oa) return REFERRAL_STAGE_INDEX[st(a)] - REFERRAL_STAGE_INDEX[st(b)] || Number(dispute(b)) - Number(dispute(a)) || (a.introducedOn < b.introducedOn ? -1 : 1);
+    return (a.closedOn ?? a.introducedOn) < (b.closedOn ?? b.introducedOn) ? 1 : -1;
+  };
 }
 /** The member whose page shows the receipt: the requesting office, or the offering one when SMQ asked. */
 const memberView = (r: Referral) => (r.requesterOfficeId !== "SMQ" ? r.requesterOfficeId : r.offerOfficeId);
 
 function Tile({ label, children, rule, ink }: { label: string; children: React.ReactNode; rule?: boolean; ink?: boolean }) {
   return (
-    <div className={cx("relative flex min-w-0 flex-col gap-2 px-5 py-[18px]", ink ? "cut-m bg-ink text-paper" : "border-interactive bg-paper")}>
+    <div className={cx("relative flex min-w-0 flex-col gap-1 px-4 py-3.5", ink ? "bg-ink text-paper" : "border-interactive bg-paper")}>
       {rule && <span aria-hidden className="absolute inset-y-0 start-0 w-[5px] bg-gold" />}
-      <small className={cx("text-[12px] font-bold", ink ? "text-on-ink-muted" : "text-muted")}>{label}</small>
-      <b className={cx("whitespace-nowrap text-[20px] font-extrabold leading-none tnum xl:text-[24px]", ink && "text-gold")}>{children}</b>
+      <small className={cx("text-[11px]", ink ? "text-on-ink-muted" : "text-muted")}>{label}</small>
+      <b className={cx("whitespace-nowrap text-[20px] font-extrabold leading-tight tnum xl:text-[24px]", ink && "text-gold")}>{children}</b>
     </div>
   );
 }
@@ -61,7 +72,7 @@ export function ReferralsPage() {
   const sum = useMemo(() => referralSummary(stages, created), [stages, created]);
   const st = (r: Referral) => effectiveReferralStage(r, stages);
   const openDispute = (r: Referral) => !!r.dispute && ONGOING.includes(st(r)) && !(disputePatch?.[r.id] as { resolved?: string } | undefined)?.resolved;
-  const all = useMemo(() => [...sum.all].sort((a, b) => ((a.createdAt ?? a.introducedOn) < (b.createdAt ?? b.introducedOn) ? 1 : -1)), [sum.all]);
+  const all = useMemo(() => [...sum.all].sort(rowOrder((r) => effectiveReferralStage(r, stages), (r) => !!r.dispute)), [sum.all, stages]);
   const rows = all.filter((r) => (!stageFilter || st(r) === stageFilter) && (!disputesOnly || openDispute(r)));
   const refParam = q.get("ref")?.toUpperCase() ?? null;
   const ongoing = all.filter((r) => ONGOING.includes(st(r)));
@@ -120,11 +131,11 @@ export function ReferralsPage() {
       <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
         <Tile label="سجلات جارية">{fmtNum(sum.ongoing.length)}</Tile>
         <Tile label="قيمة الصفقات الجارية">
-          <Price value={sum.ongoingValue} />
+          <Price value={sum.ongoingValue} sign={false} />
         </Tile>
         <Tile label="أُفرغت منذ الإطلاق">
           <span className="inline-flex items-baseline gap-1.5">
-            {fmtNum(sum.transferred.length)} · <Price value={sum.transferredValue} />
+            {fmtNum(sum.transferred.length)} · <Price value={sum.transferredValue} sign={false} />
           </span>
         </Tile>
         <Tile label="نزاعات مفتوحة" rule={openDisputes > 0}>
@@ -140,7 +151,7 @@ export function ReferralsPage() {
           <thead>
             <tr className="border-b-[1.5px] border-ink bg-sand text-[11px] font-extrabold text-muted">
               {["السجل", "الطلب والعرض", "المكتبان", "المرحلة", "القيمة", "التقسيم", "الحماية المتبقية", "نزاع", ""].map((h, i) => (
-                <th key={i} scope="col" className="whitespace-nowrap px-3 py-3.5 text-start font-extrabold">
+                <th key={i} scope="col" className="whitespace-nowrap px-3 py-2.5 text-start font-extrabold">
                   {h}
                 </th>
               ))}
@@ -158,25 +169,25 @@ export function ReferralsPage() {
               const sel = refParam === r.id;
               return (
                 <tr key={r.id} className={cx("border-b border-line last:border-b-0", disp ? "bg-cream-focus" : "hover:bg-cream", closedRow && "text-muted", sel && "outline-2 -outline-offset-2 outline-gold")}>
-                  <td className="px-3 py-3.5">
+                  <td className="px-3 py-2.5">
                     <strong className="block whitespace-nowrap font-extrabold text-ink" dir="ltr" style={{ textAlign: "right" }}>
                       {r.id}
                     </strong>
                     <span className="text-muted">{fmtDate(r.introducedOn)}</span>
                   </td>
-                  <td className="px-3 py-3.5">
+                  <td className="px-3 py-2.5">
                     <span className={cx(!closedRow && "text-ink")}>{`${districtAr(r.districtSlug)} · ${kindOf(r)}`}</span>
                     <br />
                     <span className="text-muted">{`عرض ${r.offerAreaM2 ?? ""} م² · ${r.brokered ? "موثّق" : "مباشر من المالك"}`}</span>
                   </td>
-                  <td className="whitespace-nowrap px-3 py-3.5">{`${officeShort(r.requesterOfficeId)} ↔ ${officeShort(r.offerOfficeId)}`}</td>
-                  <td className="px-3 py-3.5">
+                  <td className="whitespace-nowrap px-3 py-2.5">{`${officeShort(r.requesterOfficeId)} ↔ ${officeShort(r.offerOfficeId)}`}</td>
+                  <td className="px-3 py-2.5">
                     <StageLine compact current={s === "failed" ? 2 : REFERRAL_STAGE_INDEX[s]} failedAt={s === "failed" ? 2 : undefined} closed={s === "transfer"} word={label} />
                   </td>
-                  <td className="px-3 py-3.5">
-                    <strong className={cx("font-extrabold", s === "failed" ? "font-bold text-muted" : "text-ink")}>{r.noCommission ? fmtNum(value) : <Price value={value} />}</strong>
+                  <td className="px-3 py-2.5">
+                    <strong className={cx("font-extrabold", s === "failed" ? "font-bold text-muted" : "text-ink")}>{r.noCommission ? fmtNum(value) : <Price value={value} sign={false} />}</strong>
                   </td>
-                  <td className="whitespace-nowrap px-3 py-3.5">
+                  <td className="whitespace-nowrap px-3 py-2.5">
                     {r.noCommission ? "لا عمولة" : split}
                     {r.splitTbc && !closedRow && (
                       <>
@@ -185,17 +196,17 @@ export function ReferralsPage() {
                       </>
                     )}
                   </td>
-                  <td className="px-3 py-3.5">
+                  <td className="px-3 py-2.5">
                     <ProtectionMeter daysLeft={protectionDaysLeft(r, undefined, s)} total={r.protectionDays} label={s === "transfer" ? "انتهت بالإفراغ" : s === "failed" ? "أُغلقت" : undefined} />
                   </td>
-                  <td className="px-3 py-3.5">{disp && r.dispute ? <DisputeFlag days={r.dispute.openedDaysAgo} /> : null}</td>
-                  <td className="px-3 py-3.5 text-end">
+                  <td className="px-3 py-2.5">{disp && r.dispute ? <DisputeFlag days={r.dispute.openedDaysAgo} /> : null}</td>
+                  <td className="px-3 py-2.5 text-end">
                     {disp ? (
-                      <a href="#dispute" className="inline-flex h-9 items-center bg-ink px-3.5 text-[12px] font-extrabold text-paper no-underline hover:bg-ink-2">
+                      <a href="#dispute" className="inline-flex h-8 items-center bg-ink px-3 text-[12px] font-extrabold text-paper no-underline hover:bg-ink-2">
                         افصل
                       </a>
                     ) : (
-                      <Link href={`/member/${memberView(r)}/referrals/${r.id}`} className="inline-flex h-9 items-center border-interactive bg-paper px-3.5 text-[12px] font-extrabold text-ink no-underline hover:bg-sand">
+                      <Link href={`/member/${memberView(r)}/referrals/${r.id}`} className="inline-flex h-8 items-center border-interactive bg-paper px-3 text-[12px] font-extrabold text-ink no-underline hover:bg-sand">
                         افتح
                       </Link>
                     )}
@@ -223,7 +234,8 @@ export function ReferralsPage() {
                   <div className="flex flex-wrap gap-2">
                     <AdminButton
                       variant="ink"
-                      size="md"
+                      size="sm"
+                      className="px-2.5!"
                       onClick={() => {
                         patch("referral-dispute", dispute.id, { resolved: "kept" });
                         toast(`أُبقي السجل والتقسيم · ${dispute.id} · أُرسل القرار للمكتبين`);
@@ -231,12 +243,13 @@ export function ReferralsPage() {
                     >
                       أبقِ السجل والتقسيم
                     </AdminButton>
-                    <AdminButton variant="outline" size="md" onClick={() => setSplitEdit((v) => !v)} aria-expanded={splitEdit}>
+                    <AdminButton variant="outline" size="sm" className="px-2.5!" onClick={() => setSplitEdit((v) => !v)} aria-expanded={splitEdit}>
                       عدّل التقسيم
                     </AdminButton>
                     <AdminButton
                       variant="outline"
-                      size="md"
+                      size="sm"
+                      className="px-2.5!"
                       onClick={() => {
                         setReferralStage(dispute.id, "failed", "لم تتم · بقرار SMQ");
                         toast(`حُوّل ${dispute.id} إلى «لم تتم»`);
@@ -246,7 +259,8 @@ export function ReferralsPage() {
                     </AdminButton>
                     <AdminButton
                       variant="outline"
-                      size="md"
+                      size="sm"
+                      className="px-2.5!"
                       onClick={() => toast([dispute.requesterOfficeId, dispute.offerOfficeId].map((id) => `${officeById(id)?.nameAr ?? id} · ${officeById(id)?.phoneMasked ?? ""}`).join(" · "), { kind: "info" })}
                     >
                       راسل الطرفين
@@ -278,7 +292,7 @@ export function ReferralsPage() {
         )}
 
         <section className="flex min-w-0 flex-col border-interactive bg-paper" aria-labelledby="stage-form">
-          <h2 id="stage-form" className="border-b-[1.5px] border-ink bg-sand px-3 py-3.5 text-[14px] font-extrabold">
+          <h2 id="stage-form" className="border-b-[1.5px] border-ink bg-sand px-4 py-3 text-[14px] font-extrabold">
             تحديث مرحلة سجل
           </h2>
           {current ? (

@@ -23,13 +23,16 @@ const BANDS: Record<string, [number, number]> = { b1: [0, 500000], b2: [500000, 
 
 type ReportPatch = { word?: string; sections?: Record<string, boolean>; published?: string; saved?: string };
 
+/** The preview's compact bar rows (90px label · bar · 40px share, 11px, 10px bar) over the shared row. */
+const BAR_ROW = "grid-cols-[90px_1fr_40px]! py-[3px]! text-[11px]! md:grid-cols-[90px_1fr_40px]! md:py-[3px]! md:text-[11px]! [&>div]:h-2.5! [&>div]:md:h-2.5!";
+
 function Bars({ title, rows, gold }: { title: string; rows: PctRow[]; gold: (r: PctRow) => boolean }) {
   const max = Math.max(...rows.map((r) => r.pct), 1);
   return (
-    <div className="flex min-w-0 flex-col gap-1 border-interactive bg-paper p-4">
-      <span className="mb-1 text-[11px] font-extrabold">{title}</span>
+    <div className="flex min-w-0 flex-col gap-1 border-interactive bg-paper p-3">
+      <span className="text-[11px] font-extrabold">{title}</span>
       {rows.map((r) => (
-        <ReportBarRow key={r.key} label={r.labelAr} pct={r.pct} max={max} tone={gold(r) ? "gold" : "ink"} />
+        <ReportBarRow key={r.key} label={r.labelAr} pct={r.pct} max={max} tone={gold(r) ? "gold" : "ink"} className={BAR_ROW} />
       ))}
     </div>
   );
@@ -86,14 +89,14 @@ export function ReportPage() {
               [published ? "جلسات الشهر" : "جلسات حتى الآن", fmtNum(base.sessions), false],
               ["شرائح تحت 20 جلسة", `${slices.hidden.length} · ${published ? "أُخفيت" : "ستُخفى"}`, true],
               base.newDistrictsAr ? ["أحياء جديدة في التقرير", base.newDistrictsAr, false] : null,
-              base.generatesOn && !published ? ["يُولَّد نهائياً", base.generatesOn.split(" · ").reverse().join(" · "), false] : null,
+              base.generatesOn && !published ? ["يُولَّد نهائياً", base.generatesOn, false] : null,
               ["المستلمون", `${base.recipients >= 11 ? `${base.recipients} عضواً موثّقاً` : `${base.recipients} أعضاء موثّقين`}${!published && suspended.length ? ` (${letters(suspended.map((o) => o.id))} موقوف)` : ""}`, false],
             ]
               .filter(Boolean)
               .map((row) => {
                 const [k, v, gold] = row as [string, string, boolean];
                 return (
-                  <div key={k} className="flex items-baseline justify-between gap-3 border-b border-line py-3 text-[12px] last:border-b-0">
+                  <div key={k} className="flex items-baseline justify-between gap-3 border-b border-line py-2 text-[12px] last:border-b-0">
                     <span className="text-muted">{k}</span>
                     <span className={cx("text-end font-extrabold", gold && "text-gold-text")}>{v}</span>
                   </div>
@@ -103,7 +106,7 @@ export function ReportPage() {
 
           <Section title="الأقسام المضمّنة" bodyClassName="flex flex-col gap-1 p-4">
             {base.sections.map((s) => (
-              <div key={s.key} className="flex min-h-11 items-center justify-between gap-3 text-[13px]">
+              <div key={s.key} className="flex min-h-10 items-center justify-between gap-3 text-[13px]">
                 <span id={`sec-${s.key}`}>{s.labelAr}</span>
                 <Switch
                   checked={sectionOn(s.key)}
@@ -128,7 +131,7 @@ export function ReportPage() {
             />
           </Section>
 
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-2">
             <AdminButton
               variant="gold"
               size="lg"
@@ -141,11 +144,10 @@ export function ReportPage() {
             >
               {published ? `نُشر تقرير ${monthWord}` : `انشر وأرسل للأعضاء · ${base.recipients}`}
             </AdminButton>
-            <div className="grid grid-cols-2 gap-2.5">
+            <div className="grid grid-cols-2 gap-2">
               <AdminButton
                 variant="outline"
-                size="lg"
-                className="h-11"
+                size="md"
                 disabled={published}
                 onClick={() => {
                   patch("report", id, { saved: TODAY });
@@ -154,7 +156,7 @@ export function ReportPage() {
               >
                 احفظ المسودة
               </AdminButton>
-              <Link href="/member/office-01/report" className="flex h-11 items-center justify-center border-interactive bg-paper px-3 text-[15px] font-bold text-ink no-underline hover:bg-sand">
+              <Link href="/member/office-01/report" className="flex h-10 items-center justify-center border-interactive bg-paper px-3 text-[13px] font-bold text-ink no-underline hover:bg-sand">
                 افتح كما يراه العضو
               </Link>
             </div>
@@ -168,21 +170,24 @@ export function ReportPage() {
             <span className="text-[24px] font-extrabold leading-snug">ماذا بحث عنه مشترو جدة هذا الشهر</span>
             <span className="text-[12px] text-on-ink-muted">{`${fmtNum(base.sessions)} جلسة ${published ? "هذا الشهر" : "حتى اليوم"} · لا أسماء، لا أرقام · شرائح أقل من 20 جلسة لا تُعرض`}</span>
           </div>
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="grid gap-2.5 md:grid-cols-3">
             {sectionOn("district") && <Bars title="بالحي" rows={base.byDistrict} gold={goldDistrict} />}
             {sectionOn("budget") && <Bars title="بشريحة الميزانية" rows={base.byBudget} gold={goldBand} />}
             {sectionOn("beds") && <Bars title="بعدد الغرف" rows={base.byBeds} gold={goldBeds} />}
           </div>
           {sectionOn("gaps") && (
             <div className="flex flex-col border-interactive bg-paper">
-              <div className="border-b border-line px-4 py-3 text-[12px] font-extrabold">حيث وجد الطلب لا عرض</div>
-              <div className="grid px-4 py-1 text-[12px] md:grid-cols-2 md:gap-x-8">
+              <div className="border-b-[1.5px] border-ink px-3.5 py-2.5 text-[12px] font-extrabold">حيث وجد الطلب لا عرض</div>
+              <div className="grid px-3.5 py-2 text-[12px] md:grid-cols-2 md:gap-x-5">
                 {[...slices.visible, ...slices.hidden].map((s) => {
                   const hidden = s.sessions < 20;
+                  // no member, or one office not enough for the demand: the gold row of the board
+                  const short = !hidden && (s.offices === 0 || !!s.needsMembers);
+                  const who = hidden ? "أقل من 20، يُخفى" : s.offices > 0 && s.needsMembers ? `${s.offices} · يحتاج أعضاء` : membersLabel(s.offices);
                   return (
-                    <div key={s.labelAr} className={cx("flex items-baseline justify-between gap-3 border-b border-line py-2.5", hidden && "text-muted")}>
+                    <div key={s.labelAr} className={cx("flex items-baseline justify-between gap-3 border-b border-line py-1.5", hidden && "text-muted")}>
                       <span>{s.labelAr}</span>
-                      <strong className={cx("shrink-0 font-extrabold tnum", !hidden && s.offices === 0 && "text-gold-text")}>{`${fmtNum(s.sessions)} · ${hidden ? "أقل من 20، يُخفى" : membersLabel(s.offices)}`}</strong>
+                      <strong className={cx("shrink-0 font-extrabold tnum", short && "text-gold-text")}>{`${fmtNum(s.sessions)} · ${who}`}</strong>
                     </div>
                   );
                 })}

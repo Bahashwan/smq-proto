@@ -32,7 +32,8 @@ function cardDetail(r: AllianceRequest, refStages: Record<string, { stage: impor
   const budget = budgetOf(r);
   if (r.stage === "new") {
     const routed = routingOrder(r.districtSlug, r.type);
-    return [budget, agoLabel(r.createdAt), routed.length ? `يغطيه ${letters(routed.map((x) => x.office.id))}` : `لا أعضاء يغطون ${districtAr(r.districtSlug)}`].join(" · ");
+    // who covers it, in abjad order (the routing order shows in the detail's «مرتّبين بالميزان»)
+    return [budget, agoLabel(r.createdAt), routed.length ? `يغطيه ${letters(routed.map((x) => x.office.id).sort())}` : `لا أعضاء يغطون ${districtAr(r.districtSlug)}`].join(" · ");
   }
   if (r.stage === "sent") {
     const manual = r.sentTo.filter((s) => s.mode === "manual");
@@ -67,7 +68,7 @@ function SendMode({ r, wa }: { r: AllianceRequest; wa: "connected" | "manual" })
     link: `smq-re.com/member/${officeId}/requests/${r.id}`,
   });
   return (
-    <div className="flex flex-col gap-2 bg-cream p-3.5 text-[11px] leading-relaxed">
+    <div className="flex flex-col gap-1.5 bg-cream px-3 py-2.5 text-[11px] leading-relaxed">
       <span className="font-extrabold">وضع الإرسال</span>
       {wa === "manual" ? (
         <>
@@ -170,14 +171,14 @@ function Detail({ r }: { r: AllianceRequest }) {
 
   return (
     <section className="relative flex min-w-0 flex-col border-interactive bg-paper" aria-labelledby="req-detail">
-      <span aria-hidden className="absolute inset-y-0 start-0 w-1 bg-gold" />
+      <span aria-hidden className="absolute inset-y-0 start-0 z-10 w-1.5 bg-gold" />
       <header className="flex flex-wrap items-center justify-between gap-3 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-        <span className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-          <h2 id="req-detail" className="text-[16px] font-extrabold">
+        <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <h2 id="req-detail" className="text-[14px] font-extrabold">
             {`${r.id} · ${districtAr(r.districtSlug)} · ${r.typeLabelAr ?? r.type} · ${budgetOf(r)}`}
           </h2>
-          <span className="flex items-center gap-1.5 text-[11px] font-bold text-muted">
-            <span aria-hidden className="hex-flat inline-block h-2 w-2.5 bg-gold" />
+          <span className="flex items-center gap-1 bg-sand px-1.5 py-px text-[11px] font-extrabold text-ink">
+            <span aria-hidden className="hex-flat inline-block h-[7px] w-[7px] bg-gold" />
             {`${SOURCE_LABELS[r.source]}${r.source === "member" && r.memberOfficeId ? ` · ${officeShort(r.memberOfficeId)}` : ""} · ${stamp(r.createdAt).replace(" ", " · ")}`}
           </span>
         </span>
@@ -190,12 +191,12 @@ function Detail({ r }: { r: AllianceRequest }) {
           </AdminButton>
         </span>
       </header>
-      <div className="grid gap-5 p-4 lg:grid-cols-[1fr_1.6fr]">
-        <div className="flex min-w-0 flex-col gap-3 text-[12px]">
+      <div className="grid lg:grid-cols-[1fr_1.6fr]">
+        <div className="flex min-w-0 flex-col gap-2.5 border-line px-4 py-3.5 text-[12px] max-lg:border-b lg:border-e">
           <span className="font-extrabold">الطلب</span>
           <div className="flex flex-wrap gap-1.5">
             {chips.map((c) => (
-              <span key={c} className="bg-sand px-2 py-1 font-bold">
+              <span key={c} className="bg-sand px-[7px] py-0.5 text-[11px] font-extrabold">
                 {c}
               </span>
             ))}
@@ -209,26 +210,26 @@ function Detail({ r }: { r: AllianceRequest }) {
               فقط ولا تُرسل لأي مكتب.
             </span>
           )}
-          <span className="font-extrabold">أُرسل إلى · مرتّبين بالميزان</span>
-          <div className="flex flex-col gap-2">
+          <span className="mt-1 font-extrabold">أُرسل إلى · مرتّبين بالميزان</span>
+          <div className="flex flex-col gap-1.5">
             {routed.map((x) => {
               const s = r.sentTo.find((e) => e.officeId === x.office.id);
               const net = ledgerNet(x.office);
               const offered = r.offers.some((o) => o.officeId === x.office.id);
               const word = offered ? "ردّ بعرض" : s?.status === "none" ? "لا يوجد" : s?.status === "expired" ? "انتهت المهلة" : s ? "بلا رد بعد" : "لم يُرسل";
               return (
-                <div key={x.office.id} className="flex items-center justify-between gap-3 border-interactive px-3 py-2.5">
+                <div key={x.office.id} className="flex items-center justify-between gap-3 border-interactive px-2.5 py-2">
                   <span>
                     <strong className="font-extrabold">{`${x.rank} · ${x.office.nameAr}`}</strong>
                     <br />
                     <span className="text-muted">{`يغطي ${districtAr(r.districtSlug)} · ميزان ${net.gave}/${net.received} · رد ${fmtReply(s?.replyMinutes ?? x.office.ledger.avgReplyMinutes)}`}</span>
                   </span>
-                  <span className={cx("shrink-0 px-2 py-1 text-[11px] font-extrabold", offered ? "bg-gold text-ink" : "border-interactive")}>{word}</span>
+                  <span className={cx("shrink-0 px-[7px] py-0.5 text-[11px] font-extrabold", offered ? "bg-gold text-ink" : "border-interactive")}>{word}</span>
                 </div>
               );
             })}
             {routed.length < 2 && (
-              <div className="flex items-center justify-between gap-3 border-hairline px-3 py-2.5 text-muted">
+              <div className="flex items-center justify-between gap-3 border-hairline px-2.5 py-2 text-muted">
                 <span>
                   <strong className="font-extrabold text-ink">{routed.length ? "لا مكتب ثانٍ" : "لا أعضاء"}</strong>
                   <br />
@@ -243,8 +244,8 @@ function Detail({ r }: { r: AllianceRequest }) {
           <SendMode r={r} wa={state.wa} />
         </div>
 
-        <div className="flex min-w-0 flex-col gap-3">
-          <div className="flex flex-wrap items-center justify-between gap-2 text-[12px] font-extrabold">
+        <div className="flex min-w-0 flex-col">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line px-4 py-2.5 text-[12px] font-extrabold">
             <span>{`العروض الواردة · ${r.offers.length}`}</span>
             {r.offers.length > 0 && !closed && <span className="font-bold text-muted">اختر عرضاً لإنشاء سجل الإحالة</span>}
           </div>
@@ -263,6 +264,7 @@ function Detail({ r }: { r: AllianceRequest }) {
                   selected={selected === o.officeId}
                   onSelect={() => setSelected(o.officeId)}
                   name={`offer-${r.id}`}
+                  className="border-x-0!"
                   action={
                     closed ? undefined : (
                       <AdminButton variant="gold" size="md" disabled={selected !== o.officeId} onClick={() => actions.createReferral(r.id, o.officeId)}>
@@ -274,25 +276,25 @@ function Detail({ r }: { r: AllianceRequest }) {
               ))}
             </div>
           ) : (
-            <p className="border-hairline p-4 text-[12px] text-muted">{r.stage === "new" ? "لم يُرسل بعد" : "لا عروض بعد"}</p>
+            <p className="m-4 border-hairline p-4 text-[12px] text-muted">{r.stage === "new" ? "لم يُرسل بعد" : "لا عروض بعد"}</p>
           )}
           {r.offers.length > 0 && !closed && (
-            <div className="flex flex-col gap-3 text-[12px] leading-relaxed text-muted">
+            <div className="flex flex-col gap-2 px-4 py-3.5 text-[12px] leading-relaxed text-muted">
               <span>
                 <strong className="text-ink">ما يحدث عند «أنشئ سجل إحالة»:</strong> يُنشأ REF برقم وتاريخ ومرحلة «تعارف»، يُرسل للمكتب وللمشتري عبر SMQ، وتبدأ فترة الحماية. المشتري يُعرض عليه العرض أولاً؛ إن رفض يُسجَّل السبب ويبقى الطلب مفتوحاً.
               </span>
               <div className="flex flex-wrap gap-2">
-                <AdminButton variant="outline" size="md" disabled={!selected} onClick={() => selected && actions.showToBuyer(r.id, selected)}>
+                <AdminButton variant="outline" size="sm" disabled={!selected} onClick={() => selected && actions.showToBuyer(r.id, selected)}>
                   اعرض على المشتري أولاً
                 </AdminButton>
-                <AdminButton variant="outline" size="md" disabled={!selected} onClick={() => setRejecting(true)}>
+                <AdminButton variant="outline" size="sm" disabled={!selected} onClick={() => setRejecting(true)}>
                   ارفض العرض مع سبب
                 </AdminButton>
               </div>
             </div>
           )}
           {r.referralId && (
-            <Link href={`/admin/alliance/referrals?ref=${r.referralId}`} className="self-start text-[12px] font-extrabold text-gold-text underline hover:text-ink">
+            <Link href={`/admin/alliance/referrals?ref=${r.referralId}`} className="mx-4 my-3.5 self-start text-[12px] font-extrabold text-gold-text underline hover:text-ink">
               {`${r.referralId} ←`}
             </Link>
           )}
@@ -422,7 +424,7 @@ export function RequestsPage() {
               source="staff"
               district={districtAr(c.districtSlug)}
               summary={c.summaryAr.replace(`${districtAr(c.districtSlug)} · `, "")}
-              detail={[agoLabel(c.createdAt), routingOrder(c.districtSlug).length ? `يغطيه ${letters(routingOrder(c.districtSlug).map((x) => x.office.id))}` : `لا أعضاء يغطون ${districtAr(c.districtSlug)}`].join(" · ")}
+              detail={[agoLabel(c.createdAt), routingOrder(c.districtSlug).length ? `يغطيه ${letters(routingOrder(c.districtSlug).map((x) => x.office.id).sort())}` : `لا أعضاء يغطون ${districtAr(c.districtSlug)}`].join(" · ")}
               needsAction
             />
           ))}
@@ -438,7 +440,7 @@ export function RequestsPage() {
               district={districtAr(r.districtSlug)}
               summary={r.typeLabelAr ?? r.type}
               detail={cardDetail(r, refStages, createdRefs)}
-              extra={extra ? <span className="inline-block border-interactive px-2 py-1 text-[11px] font-bold">{extra}</span> : undefined}
+              extra={extra ? <span className="flex h-7 items-center justify-center whitespace-nowrap border-interactive bg-paper px-2 text-[11px] font-extrabold">{extra}</span> : undefined}
               href={ref ? `/admin/alliance/referrals?ref=${r.referralId}` : undefined}
               onClick={ref ? undefined : () => setQuery({ req: r.id }, "replace")}
               needsAction={stage === "new" || stage === "sent"}

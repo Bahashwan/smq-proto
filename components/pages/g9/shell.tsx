@@ -42,7 +42,7 @@ export function AllianceTabs({ active, className }: { active: RoomTab; className
   ];
   return (
     <nav aria-label="أقسام غرفة التحالف" className={cx("-mx-4 overflow-x-auto px-4 md:mx-0 md:px-0", className)}>
-      <ul className="flex min-w-max items-stretch gap-1 border-b-[1.5px] border-ink">
+      <ul className="flex min-w-max items-stretch border-b-[1.5px] border-ink">
         {tabs.map((t) => {
           const on = t.key === active;
           return (
@@ -51,12 +51,14 @@ export function AllianceTabs({ active, className }: { active: RoomTab; className
                 href={t.href}
                 aria-current={on ? "page" : undefined}
                 className={cx(
-                  "motion-hover -mb-[1.5px] flex min-h-11 items-center gap-2 px-3.5 text-[14px] no-underline",
-                  on ? "border-b-[3px] border-gold font-extrabold text-ink" : "border-b-[3px] border-transparent font-bold text-ink-2 hover:text-ink",
+                  "motion-hover -mb-[1.5px] flex min-h-11 items-center gap-1.5 px-3.5 text-[13px] no-underline",
+                  on ? "border-b-[3px] border-gold font-extrabold text-ink" : "border-b-[3px] border-transparent font-bold text-muted hover:text-ink",
                 )}
               >
                 {t.label}
-                {t.count != null && t.count > 0 && <i className="inline-flex h-5 min-w-5 items-center justify-center bg-sand px-1.5 text-[11px] font-extrabold not-italic tnum text-ink">{fmtNum(t.count)}</i>}
+                {t.count != null && t.count > 0 && (
+                  <i className={cx("inline-flex h-[18px] min-w-[18px] items-center justify-center px-[5px] text-[11px] font-extrabold not-italic tnum text-ink", on ? "bg-gold" : "bg-sand")}>{fmtNum(t.count)}</i>
+                )}
               </Link>
             </li>
           );
@@ -100,8 +102,8 @@ export function HexAvatar({ letter, tone = "ink", size = 28, className }: { lett
 export function Section({ title, aside, children, className, bodyClassName, headerClassName, id, as: Tag = "section" }: { title: ReactNode; aside?: ReactNode; children: ReactNode; className?: string; bodyClassName?: string; headerClassName?: string; id?: string; as?: "section" | "div" }) {
   return (
     <Tag id={id} className={cx("flex min-w-0 flex-col border-interactive bg-paper", className)}>
-      <header className={cx("flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-b-[1.5px] border-ink bg-sand px-4 py-3.5", headerClassName)}>
-        <h2 className="text-[16px] font-extrabold leading-tight">{title}</h2>
+      <header className={cx("flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-b-[1.5px] border-ink bg-sand px-4 py-3", headerClassName)}>
+        <h2 className="text-[14px] font-extrabold leading-[normal]">{title}</h2>
         {aside && <span className="text-caption font-bold text-muted">{aside}</span>}
       </header>
       <div className={cx("min-w-0", bodyClassName)}>{children}</div>
@@ -116,15 +118,15 @@ export function LinkTile({ href, label, value, note, rule, ink, className }: { h
     <Link
       href={href}
       className={cx(
-        "motion-hover relative flex min-w-0 flex-col gap-1 px-4 py-3.5 no-underline md:px-5 md:py-[18px]",
+        "motion-hover relative flex min-w-0 flex-col gap-0.5 px-3.5 py-3 no-underline md:px-4 md:py-3.5",
         ink ? "cut-m bg-ink text-paper hover:bg-ink-2" : "border-interactive bg-paper text-ink hover:bg-sand",
         className,
       )}
     >
       {rule && !ink && <span aria-hidden className="absolute inset-y-0 start-0 w-[5px] bg-gold" />}
-      <small className={cx("text-caption font-bold md:text-[12px]", ink ? "text-on-ink-muted" : "text-muted")}>{label}</small>
-      <b className={cx("text-2xl font-extrabold leading-none tnum md:text-[28px]", ink ? "text-gold" : "text-ink")}>{value}</b>
-      {note && <span className={cx("text-caption md:text-[12px]", ink ? "text-on-ink-muted" : "text-muted")}>{note}</span>}
+      <small className={cx("text-[11px]", ink ? "text-on-ink-muted" : "text-muted")}>{label}</small>
+      <b className={cx("text-2xl font-extrabold leading-[1.1] tnum md:text-[26px]", ink ? "text-gold" : "text-ink")}>{value}</b>
+      {note && <span className={cx("text-[11px]", ink ? "text-on-ink-muted" : "text-muted")}>{note}</span>}
     </Link>
   );
 }

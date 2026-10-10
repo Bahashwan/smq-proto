@@ -7,6 +7,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { AdminField, AdminSelect, AdminTextarea, Switch } from "@/components/admin";
 import { MarkedText } from "@/components/ui";
+import { analytics } from "@/data/analytics";
 import { districts, SECTORS } from "@/data/districts";
 import { allianceSettings } from "@/data/settings";
 import { usePatch, useStore } from "@/lib/store";
@@ -29,6 +30,11 @@ type Form = {
 
 const TBC = "[للتأكيد]";
 const S = allianceSettings;
+/** The list's sample chips: the four most-searched districts (30 days), in the list's order. */
+const SAMPLE_DISTRICTS = [...districts]
+  .sort((a, b) => (analytics.districtSessions30d[b.slug] ?? 0) - (analytics.districtSessions30d[a.slug] ?? 0))
+  .slice(0, 4)
+  .sort((a, b) => districts.indexOf(a) - districts.indexOf(b));
 /** The charter's numbered clauses one per line, as the board shows them in the field. */
 const charterLines = (t: string) => t.replace(/\s(\d)\.\s/g, "\n$1. ");
 const INITIAL: Form = {
@@ -169,14 +175,14 @@ export function SettingsPage() {
               title={`الأحياء · ${districts.length}`}
               aside="مرتبطة بقوائم الموقع، كل حي بجهة"
               items={[
-                ...districts.slice(0, 4).map((d) => (
+                ...SAMPLE_DISTRICTS.map((d) => (
                   <>
                     {d.ar}
                     <span className="text-[11px] text-gold-text">{SECTORS[d.sector].ar.replace(" جدة", "")}</span>
                   </>
                 )),
                 <Link key="more" href="/admin/content/lists" className="text-ink no-underline hover:underline">
-                  {`+ ${districts.length - 4} · تحرير`}
+                  {`+ ${districts.length - SAMPLE_DISTRICTS.length} · تحرير`}
                 </Link>,
               ]}
             />

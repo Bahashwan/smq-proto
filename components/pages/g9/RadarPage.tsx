@@ -13,6 +13,7 @@ import { districts, SECTORS } from "@/data/districts";
 import { officeById } from "@/data/offices";
 import { requests, shortRequestId } from "@/data/requests";
 import { effectiveRequest, radarRanking, routingOrder, type RadarRow } from "@/data/selectors";
+import { demandType, specialtyGap } from "./room";
 import { setQuery, useQuery } from "@/lib/location";
 import { useStore, useUnitOverrides } from "@/lib/store";
 import { cx, fmtNum, plural } from "@/lib/format";
@@ -21,18 +22,6 @@ import { AllianceTabs, G9Shell, RoomTitle } from "./shell";
 import { cnt, letters } from "./util";
 
 type Period = "30d" | "90d";
-
-/** The demand's type word for routing («فلل · 5 غرف» → «فلل»). */
-const demandType = (row: Pick<RadarRow, "detail">) => row.detail?.topDemandAr?.split(" · ")[0] ?? "";
-
-/** «1 · و (عماير فقط)» when no covering member handles the demanded type. */
-function specialtyGap(row: RadarRow): string | null {
-  if (!row.members) return null;
-  const routed = routingOrder(row.district.slug, demandType(row));
-  if (!demandType(row) || routed.some((r) => r.specialtyMatch)) return null;
-  const words = Array.from(new Set(routed.flatMap((r) => r.office.specialties.map((s) => s.split(" ")[0]))));
-  return `(${words[0]} فقط)`;
-}
 
 const reqState = (stage: string, replies: number) => (stage === "offers" ? "وصلت عروض" : stage === "sent" ? (replies ? "أُرسل · ردود" : "أُرسل · بلا رد") : stage === "new" ? "جديد" : stage === "intro" ? "تعارف" : "مغلق");
 
@@ -57,7 +46,7 @@ function DistrictDrawer({ row, onClose, onSend, created }: { row: RadarRow; onCl
     <aside aria-label={row.district.ar} className="relative flex min-w-0 flex-col border-interactive bg-paper">
       <span aria-hidden className="absolute inset-y-0 start-0 w-1 bg-gold" />
       <header className="flex items-center justify-between gap-3 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-        <span className="text-[16px] font-extrabold">{`${row.district.ar} · ${SECTORS[row.district.sector].ar}`}</span>
+        <span className="text-[14px] font-extrabold">{`${row.district.ar} · ${SECTORS[row.district.sector].ar}`}</span>
         <button type="button" aria-label="إغلاق" onClick={onClose} className="flex size-9 items-center justify-center border-interactive bg-paper text-[14px] font-extrabold hover:bg-sand">
           ×
         </button>
@@ -170,7 +159,7 @@ export function RadarPage() {
       <div className={cx("grid items-start gap-5", selected && "lg:grid-cols-[minmax(0,1fr)_380px]")}>
         <section className="flex min-w-0 flex-col border-interactive bg-paper" aria-labelledby="radar-grid">
           <header className="flex flex-wrap items-center justify-between gap-3 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-            <h2 id="radar-grid" className="text-[16px] font-extrabold">
+            <h2 id="radar-grid" className="text-[14px] font-extrabold">
               شبكة الأحياء
             </h2>
             <RadarLegend />
@@ -198,7 +187,7 @@ export function RadarPage() {
 
       <section className="flex min-w-0 flex-col border-interactive bg-paper" aria-labelledby="radar-table">
         <header className="flex flex-wrap items-center justify-between gap-3 border-b-[1.5px] border-ink bg-sand px-4 py-3">
-          <h2 id="radar-table" className="text-[16px] font-extrabold">
+          <h2 id="radar-table" className="text-[14px] font-extrabold">
             الأحياء مرتّبة بالفرصة
           </h2>
           <span className="text-caption font-bold text-muted">الفرصة = جلسات × (1 إن لا وحدات لنا) × (يغطيه أعضاء)</span>
@@ -206,51 +195,53 @@ export function RadarPage() {
         <div className="overflow-x-auto">
           <table className="w-full min-w-[960px] border-collapse text-[12px]">
             <thead>
-              <tr className="border-b border-line text-[11px] font-extrabold text-muted">
+              <tr className="border-b-[1.5px] border-ink bg-sand text-[11px] font-extrabold text-muted">
                 {["#", "الحي", "جلسات", "الميزانية الوسيطة", "الغرف الأكثر", "وحدات SMQ", "أعضاء يغطونه", "طلبات مفتوحة", ""].map((h, i) => (
-                  <th key={i} scope="col" className="whitespace-nowrap px-4 py-3 text-start font-extrabold">
+                  <th key={i} scope="col" className="whitespace-nowrap px-3 py-2.5 text-start font-extrabold">
                     {h}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {table.map((r) => {
+              {table.map((r, i) => {
                 const gap = specialtyGap(r);
                 const send = r.action === "send" && !gap;
-                const hot = send && r.score > 0 && r.rank <= 4;
+                // the four best opportunities get the cream row, the gold button and the gold supply figure
+                const hot = send && r.score > 0 && i < 4;
                 const d = r.detail;
                 const typeWord = demandType(r);
-                const supply = d?.ownerUnits ? d.supplyNoteAr ?? "" : [fmtNum(r.smqUnits), d?.supplyNoteAr].filter(Boolean).join(" · ");
+                // a district to send shows its figure alone (its project note stays in the drawer)
+                const supply = d?.ownerUnits ? d.supplyNoteAr ?? "" : send ? fmtNum(r.smqUnits) : [fmtNum(r.smqUnits), d?.supplyNoteAr].filter(Boolean).join(" · ");
                 return (
-                  <tr key={r.district.slug} className={cx("border-b border-line last:border-b-0", hot ? "bg-cream-focus" : "hover:bg-cream", selected?.district.slug === r.district.slug && "outline-2 -outline-offset-2 outline-gold")}>
-                    <td className="px-4 py-3 tnum">{r.rank}</td>
-                    <td className="px-4 py-3">
-                      <button type="button" onClick={() => setQuery({ district: r.district.slug }, "replace")} className="min-h-9 text-start font-extrabold hover:underline">
+                  <tr key={r.district.slug} className={cx("border-b border-line last:border-b-0", hot ? "bg-cream-focus" : "hover:bg-cream")}>
+                    <td className="px-3 py-2.5 tnum">{i + 1}</td>
+                    <td className="px-3 py-2.5">
+                      <button type="button" onClick={() => setQuery({ district: r.district.slug }, "replace")} className="min-h-8 text-start font-extrabold hover:underline">
                         {r.district.ar}
                       </button>
                     </td>
-                    <td className="px-4 py-3 tnum">{fmtNum(r.sessions)}</td>
-                    <td className="px-4 py-3 tnum">{d?.medianBudget != null ? fmtNum(d.medianBudget) : ""}</td>
-                    <td className="px-4 py-3">{d?.topBeds != null ? `${d.topBeds}${typeWord === "فلل" ? ` (${typeWord})` : ""}` : ""}</td>
-                    <td className={cx("px-4 py-3", r.smqUnits === 0 && r.action === "send" && !d?.supplyNoteAr ? "font-extrabold text-gold-text" : r.smqUnits > 0 ? "font-extrabold" : d?.ownerUnits ? "font-extrabold text-gold-text" : "")}>
+                    <td className="px-3 py-2.5 tnum">{fmtNum(r.sessions)}</td>
+                    <td className="px-3 py-2.5 tnum">{d?.medianBudget != null ? fmtNum(d.medianBudget) : ""}</td>
+                    <td className="px-3 py-2.5">{d?.topBeds != null ? `${d.topBeds}${typeWord === "فلل" ? ` (${typeWord})` : ""}` : ""}</td>
+                    <td className={cx("px-3 py-2.5", hot ? "font-extrabold text-gold-text" : r.smqUnits > 0 && r.action === "self" ? "font-extrabold" : "")}>
                       <MarkedText text={supply} />
                     </td>
-                    <td className={cx("px-4 py-3", (r.members === 0 || gap) && "font-extrabold text-gold-text")}>
+                    <td className={cx("px-3 py-2.5", (r.members === 0 || gap) && "font-extrabold text-gold-text")}>
                       {r.members === 0
                         ? membersLabel(0)
                         : `${r.members} · ${letters(r.memberIds)}${r.suspendedIds.length ? `، (${letters(r.suspendedIds)} موقوف)` : ""}${gap ? ` ${gap}` : ""}`}
                     </td>
-                    <td className="px-4 py-3 tnum">{r.openRequests + createdIn(r.district.slug)}</td>
-                    <td className="px-4 py-3 text-end">
+                    <td className="px-3 py-2.5 tnum">{r.openRequests + createdIn(r.district.slug)}</td>
+                    <td className="px-3 py-2.5 text-end">
                       {r.action === "self" ? (
                         <span className="text-[11px] text-muted">نغطيه بأنفسنا</span>
                       ) : send ? (
-                        <AdminButton variant={hot ? "gold" : "outline"} size="sm" onClick={() => sendRadarRequest(r)}>
+                        <AdminButton variant={hot ? "gold" : "outline"} size="xs" onClick={() => sendRadarRequest(r)}>
                           أرسل للمكاتب
                         </AdminButton>
                       ) : (
-                        <Link href="/admin/alliance/applications" className="inline-flex h-[38px] items-center border-interactive bg-paper px-3.5 text-[12px] font-bold text-ink no-underline hover:bg-sand">
+                        <Link href="/admin/alliance/applications" className="inline-flex h-8 items-center border-interactive bg-paper px-3 text-[12px] font-bold text-ink no-underline hover:bg-sand">
                           يحتاج أعضاء
                         </Link>
                       )}
