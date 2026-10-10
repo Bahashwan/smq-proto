@@ -24,7 +24,7 @@ export function PageHeader({ title, subtitle, actions, note, as: Tag = "h1", cla
       <div className="flex min-w-0 flex-col gap-1">
         <Tag className={cx("font-extrabold leading-tight", size === "page" ? "text-h3 md:text-[28px]" : "text-h3")}>{title}</Tag>
         {(subtitle || noteNode) && (
-          <span className="text-caption text-muted md:text-label">
+          <span className="text-caption font-normal text-muted md:text-label md:font-normal">
             {subtitle}
             {subtitle && noteNode ? " · " : null}
             {noteNode}

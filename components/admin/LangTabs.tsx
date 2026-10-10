@@ -50,7 +50,7 @@ export function LangTabs({ value, onChange, enEmpty, className, label = "لغة 
           >
             <span dir={t.id === "en" ? "ltr" : undefined}>{t.label}</span>
             {t.id === "en" && typeof enEmpty === "number" && enEmpty > 0 && (
-              <span className={cx("border-[1.5px] border-gold px-1.5 py-px text-caption font-extrabold tnum", selected ? "bg-paper text-gold-text" : "text-gold-text")}>{fmtNum(enEmpty)} فارغة</span>
+              <span className={cx("border-[1.5px] border-gold px-1.5 py-px text-caption font-extrabold tnum", selected ? "bg-paper text-gold-text" : "text-gold-text")}>{enEmpty === 1 ? "حقل فارغ" : enEmpty === 2 ? "حقلان فارغان" : `${fmtNum(enEmpty)} حقول فارغة`}</span>
             )}
           </button>
         );

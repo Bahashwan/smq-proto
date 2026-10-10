@@ -136,11 +136,11 @@ export function ReferralsPage() {
       </div>
 
       <div className="overflow-x-auto border-interactive bg-paper">
-        <table className="w-full min-w-[1080px] border-collapse text-[12px]">
+        <table className="w-full min-w-[1000px] border-collapse text-[12px]">
           <thead>
             <tr className="border-b-[1.5px] border-ink bg-sand text-[11px] font-extrabold text-muted">
               {["السجل", "الطلب والعرض", "المكتبان", "المرحلة", "القيمة", "التقسيم", "الحماية المتبقية", "نزاع", ""].map((h, i) => (
-                <th key={i} scope="col" className="whitespace-nowrap px-4 py-3.5 text-start font-extrabold">
+                <th key={i} scope="col" className="whitespace-nowrap px-3 py-3.5 text-start font-extrabold">
                   {h}
                 </th>
               ))}
@@ -158,25 +158,25 @@ export function ReferralsPage() {
               const sel = refParam === r.id;
               return (
                 <tr key={r.id} className={cx("border-b border-line last:border-b-0", disp ? "bg-cream-focus" : "hover:bg-cream", closedRow && "text-muted", sel && "outline-2 -outline-offset-2 outline-gold")}>
-                  <td className="px-4 py-3.5">
+                  <td className="px-3 py-3.5">
                     <strong className="block whitespace-nowrap font-extrabold text-ink" dir="ltr" style={{ textAlign: "right" }}>
                       {r.id}
                     </strong>
                     <span className="text-muted">{fmtDate(r.introducedOn)}</span>
                   </td>
-                  <td className="min-w-[180px] px-4 py-3.5">
+                  <td className="px-3 py-3.5">
                     <span className={cx(!closedRow && "text-ink")}>{`${districtAr(r.districtSlug)} · ${kindOf(r)}`}</span>
                     <br />
                     <span className="text-muted">{`عرض ${r.offerAreaM2 ?? ""} م² · ${r.brokered ? "موثّق" : "مباشر من المالك"}`}</span>
                   </td>
-                  <td className="whitespace-nowrap px-4 py-3.5">{`${officeShort(r.requesterOfficeId)} ↔ ${officeShort(r.offerOfficeId)}`}</td>
-                  <td className="px-4 py-3.5">
+                  <td className="whitespace-nowrap px-3 py-3.5">{`${officeShort(r.requesterOfficeId)} ↔ ${officeShort(r.offerOfficeId)}`}</td>
+                  <td className="px-3 py-3.5">
                     <StageLine compact current={s === "failed" ? 2 : REFERRAL_STAGE_INDEX[s]} failedAt={s === "failed" ? 2 : undefined} closed={s === "transfer"} word={label} />
                   </td>
-                  <td className="px-4 py-3.5">
+                  <td className="px-3 py-3.5">
                     <strong className={cx("font-extrabold", s === "failed" ? "font-bold text-muted" : "text-ink")}>{r.noCommission ? fmtNum(value) : <Price value={value} />}</strong>
                   </td>
-                  <td className="whitespace-nowrap px-4 py-3.5">
+                  <td className="whitespace-nowrap px-3 py-3.5">
                     {r.noCommission ? "لا عمولة" : split}
                     {r.splitTbc && !closedRow && (
                       <>
@@ -185,11 +185,11 @@ export function ReferralsPage() {
                       </>
                     )}
                   </td>
-                  <td className="px-4 py-3.5">
+                  <td className="px-3 py-3.5">
                     <ProtectionMeter daysLeft={protectionDaysLeft(r, undefined, s)} total={r.protectionDays} label={s === "transfer" ? "انتهت بالإفراغ" : s === "failed" ? "أُغلقت" : undefined} />
                   </td>
-                  <td className="px-4 py-3.5">{disp && r.dispute ? <DisputeFlag days={r.dispute.openedDaysAgo} /> : null}</td>
-                  <td className="px-4 py-3.5 text-end">
+                  <td className="px-3 py-3.5">{disp && r.dispute ? <DisputeFlag days={r.dispute.openedDaysAgo} /> : null}</td>
+                  <td className="px-3 py-3.5 text-end">
                     {disp ? (
                       <a href="#dispute" className="inline-flex h-9 items-center bg-ink px-3.5 text-[12px] font-extrabold text-paper no-underline hover:bg-ink-2">
                         افصل
@@ -278,7 +278,7 @@ export function ReferralsPage() {
         )}
 
         <section className="flex min-w-0 flex-col border-interactive bg-paper" aria-labelledby="stage-form">
-          <h2 id="stage-form" className="border-b-[1.5px] border-ink bg-sand px-4 py-3.5 text-[14px] font-extrabold">
+          <h2 id="stage-form" className="border-b-[1.5px] border-ink bg-sand px-3 py-3.5 text-[14px] font-extrabold">
             تحديث مرحلة سجل
           </h2>
           {current ? (

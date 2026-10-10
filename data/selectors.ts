@@ -701,7 +701,7 @@ export function otherRoof(unit: Unit, overrides?: UnitOverrides): Unit | null {
 /** Units per budget chip (Admin-Lists-D «حتى 500 ألف · 3 وحدات»). */
 export function budgetChipCounts(overrides?: UnitOverrides): { key: string; labelAr: string; value: number; visible: boolean; count: number; noteAr?: string }[] {
   const avail = availableUnits(overrides);
-  return lists.budgets.map((b) => ({ key: b.key, labelAr: b.labelAr, value: b.value ?? 0, visible: b.visible ?? true, noteAr: b.noteAr, count: avail.filter((u) => u.priceSar <= (b.value ?? 0)).length }));
+  return lists.budgets.map((b) => ({ key: b.key, labelAr: b.labelAr, value: b.value ?? 0, visible: b.visible ?? true, noteAr: b.noteAr, count: avail.filter((u) => (b.key.startsWith("over") || /أكثر من/.test(b.labelAr) ? u.priceSar > (b.value ?? 0) : u.priceSar <= (b.value ?? 0))).length }));
 }
 /** «+1.8%» for the import preview: percentage change, one decimal. */
 export function importDiffPct(from: number, to: number): number {

@@ -79,7 +79,7 @@ export function NotificationsBell({ items, onMarkAllRead, allHref = "/admin", la
           id={panelId}
           role="dialog"
           aria-label="الإشعارات"
-          className="fixed inset-x-3 top-14 z-40 flex flex-col border-interactive bg-paper md:absolute md:inset-x-auto md:end-0 md:top-full md:mt-2.5 md:w-[380px]"
+          className="fixed inset-x-3 top-14 z-40 flex flex-col border-interactive bg-paper text-ink md:absolute md:inset-x-auto md:end-0 md:top-full md:mt-2.5 md:w-[380px]"
         >
           <span aria-hidden className="absolute -top-2.5 end-3.5 hidden h-2.5 w-[18px] bg-ink [clip-path:polygon(50%_0,100%_100%,0_100%)] md:block" />
           <div className="flex items-center justify-between border-b-[1.5px] border-ink px-3.5 py-3 text-label font-extrabold">

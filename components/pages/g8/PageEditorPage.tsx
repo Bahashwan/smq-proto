@@ -130,7 +130,7 @@ function HomeEditor() {
         actions={<LangSwitch value={lang} onChange={setLang} enEmpty={enEmpty} />}
       />
 
-      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_420px]">
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_393px]">
         <div className="flex min-w-0 flex-col gap-4">
           {SECTIONS.map((s) => {
             const sectionDirty = [...dirtyKeys].some((k) => k.startsWith(`${s.key}.`));
@@ -341,7 +341,7 @@ function OtherPageEditor({ pageKey }: { pageKey: string }) {
   return (
     <G8Shell user={NOURA} mainClassName="pb-0 md:pb-0">
       <ContentHead trail={`الصفحات › ${page.pageAr}`} title={page.pageAr} path={page.path} subtitle="حقول مرتّبة حسب أقسام الصفحة. الأرقام (الأسعار، عدد الوحدات) تُحسب من الوحدات ولا تُكتب هنا" />
-      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_420px]">
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_393px]">
         <div className="flex min-w-0 flex-col gap-4">
           {sections.map((title, i) => (
             <section key={title} aria-label={title} className="border-interactive bg-paper">

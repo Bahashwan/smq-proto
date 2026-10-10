@@ -35,7 +35,7 @@ function PrintIcon() {
 export function MemberReferral({ officeId, referralId }: { officeId: string; referralId: string }) {
   const created = useStore((s) => s.createdReferrals);
   const stageOverride = useStore((s) => s.referralStages[referralId]);
-  const base: Referral | undefined = referrals.find((r) => r.id === referralId) ?? created.find((r) => r.id === referralId);
+  const base: Referral | undefined = created.find((r) => r.id === referralId) ?? referrals.find((r) => r.id === referralId);
   if (!base || !officeById(officeId)) return null;
   const r: Referral = stageOverride ? { ...base, stage: stageOverride.stage, stageNote: stageOverride.note ?? base.stageNote } : base;
   const req = requestById(r.requestId);

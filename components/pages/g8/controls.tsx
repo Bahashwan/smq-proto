@@ -16,8 +16,11 @@ const FRAME: Record<CtlTone, string> = {
 
 /** Control classes: 44px inputs, 1.5px frame, gold focus. */
 export function ctl(tone: CtlTone = "admin", extra?: string) {
+  // a width in `extra` replaces the default full width (utilities of one property must not be stacked)
+  const width = /(^|\s)w-/.test(extra ?? "") ? "" : "w-full";
   return cx(
-    "w-full min-w-0 px-3 text-[14px] font-semibold text-ink placeholder:font-normal placeholder:text-disabled focus:border-gold focus:bg-cream-focus focus-visible:outline-0 disabled:text-disabled",
+    width,
+    "min-w-0 px-3 text-[14px] font-semibold text-ink placeholder:font-normal placeholder:text-disabled focus:border-gold focus:bg-cream-focus focus-visible:outline-0 disabled:text-disabled",
     FRAME[tone],
     extra,
   );
@@ -39,8 +42,7 @@ export function Field({ label, children, note, noteTone, className, as = "label"
 /** Pointer drag on a handle reorders the ids live; ArrowUp / ArrowDown on the focused handle moves one step. */
 export function useDragSort(ids: string[], onChange: (next: string[]) => void) {
   const rows = useRef(new Map<string, HTMLElement>());
-  const latest = useRef(ids);
-  latest.current = ids;
+  // handlers are recreated every render, so `ids` in their closures is always the current order
   const [dragging, setDragging] = useState<string | null>(null);
 
   const rowRef = (id: string) => (el: HTMLElement | null) => {
@@ -49,7 +51,7 @@ export function useDragSort(ids: string[], onChange: (next: string[]) => void) {
   };
 
   const place = (id: string, y: number) => {
-    const order = latest.current;
+    const order = ids;
     const rest = order.filter((x) => x !== id);
     let at = rest.length;
     for (let i = 0; i < rest.length; i++) {
@@ -82,7 +84,7 @@ export function useDragSort(ids: string[], onChange: (next: string[]) => void) {
     onKeyDown: (e: KeyboardEvent<HTMLButtonElement>) => {
       if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
       e.preventDefault();
-      const order = latest.current;
+      const order = ids;
       const i = order.indexOf(id);
       const j = e.key === "ArrowUp" ? i - 1 : i + 1;
       if (j < 0 || j >= order.length) return;

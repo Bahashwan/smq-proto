@@ -62,7 +62,10 @@ function SendMode({ r, wa }: { r: AllianceRequest; wa: "connected" | "manual" })
   const auto = r.sentTo.filter((s) => s.mode === "auto");
   const manual = r.sentTo.filter((s) => s.mode === "manual");
   const targets = routingOrder(r.districtSlug, r.type).map((x) => x.office.id).concat(r.unsentOfficeIds ?? []);
-  const message = (officeId: string) => `${r.id} · ${districtAr(r.districtSlug)} · ${r.typeLabelAr ?? r.type} · ${budgetOf(r)} · ${r.timing}. ردّ من رابطك: smq-re.com/member/${officeId}/requests/${r.id}`;
+  const message = (officeId: string) => ({
+    text: `${r.id} · ${districtAr(r.districtSlug)} · ${r.typeLabelAr ?? r.type} · ${budgetOf(r)} · ${r.timing}. ردّ من رابطك:`,
+    link: `smq-re.com/member/${officeId}/requests/${r.id}`,
+  });
   return (
     <div className="flex flex-col gap-2 bg-cream p-3.5 text-[11px] leading-relaxed">
       <span className="font-extrabold">وضع الإرسال</span>
@@ -95,8 +98,16 @@ function SendMode({ r, wa }: { r: AllianceRequest; wa: "connected" | "manual" })
                 )}
                 {preview === id && !sent && (
                   <div className="flex flex-col gap-2 border-interactive bg-paper p-3">
-                    <span className="text-muted">{`واتساب · ${office?.fullName ?? ""} · ${office?.phoneMasked ?? ""}`}</span>
-                    <p className="bg-sand p-2.5 text-[12px] text-ink">{message(id)}</p>
+                    <span className="text-muted">
+                      {`واتساب · ${office?.fullName ?? ""} · `}
+                      <bdi dir="ltr">{office?.phoneMasked ?? ""}</bdi>
+                    </span>
+                    <p className="flex flex-col gap-1 bg-sand p-2.5 text-[12px] text-ink">
+                      <span>{message(id).text}</span>
+                      <span dir="ltr" className="break-all text-start font-bold">
+                        {message(id).link}
+                      </span>
+                    </p>
                     <span className="text-muted">كل طلب يحمل رابطاً خاصاً بالمكتب؛ الرد يصل من الرابط لا من الرسالة.</span>
                     <AdminButton
                       variant="ink"

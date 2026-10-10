@@ -113,7 +113,7 @@ export function UsersPage() {
                       <option value="manager">مدير</option>
                     </select>
                   ) : (
-                    <span className="ms-1 border-[1.5px] border-ink px-1.5 py-px text-caption font-extrabold">{u.roleAr}</span>
+                    <span className={cx("ms-1 border-[1.5px] border-ink px-1.5 py-px text-caption font-extrabold", u.role === "manager" && !u.pending && "bg-ink text-paper")}>{u.roleAr}</span>
                   )}
                   {u.suspended && <span className="ms-1.5 text-caption font-bold text-muted">موقوف</span>}
                 </span>
@@ -267,13 +267,13 @@ export function UsersPage() {
             سجل الإجراءات
           </h2>
           <div className="flex flex-wrap gap-2">
-            <select value={who} onChange={(e) => setWho(e.target.value)} aria-label="المستخدم" className={ctl("admin", "h-9 w-auto cursor-pointer text-[12px] font-bold")}>
+            <select value={who} onChange={(e) => setWho(e.target.value)} aria-label="المستخدم" className={ctl("admin", "h-9 w-[150px] cursor-pointer text-[12px] font-bold")}>
               <option>كل المستخدمين</option>
               {people.map((p) => (
                 <option key={p}>{p}</option>
               ))}
             </select>
-            <select value={period} onChange={(e) => setPeriod(e.target.value)} aria-label="الفترة" className={ctl("admin", "h-9 w-auto cursor-pointer text-[12px] font-bold")}>
+            <select value={period} onChange={(e) => setPeriod(e.target.value)} aria-label="الفترة" className={ctl("admin", "h-9 w-[150px] cursor-pointer text-[12px] font-bold")}>
               {PERIODS.map((p) => (
                 <option key={p}>{p}</option>
               ))}

@@ -48,7 +48,7 @@ export function LedgerCells({ o, max }: { o: Office; max: number }) {
 /** «موثّقة» · «تنتهي بعد 24 يوماً» · «موقوف»: the short licence chip of the members table (hexagon + word). */
 function LicenceChip({ tone, children }: { tone: "ok" | "soon" | "off"; children: React.ReactNode }) {
   return (
-    <span className={cx("inline-flex items-center gap-1.5 px-1.5 py-0.5 text-[11px] font-extrabold", tone === "soon" ? "border-hairline bg-paper" : "bg-sand", tone === "off" && "text-muted")}>
+    <span className={cx("inline-flex items-center gap-1.5 whitespace-nowrap px-1.5 py-0.5 text-[11px] font-extrabold", tone === "soon" ? "border-hairline bg-paper" : "bg-sand", tone === "off" && "text-muted")}>
       <span aria-hidden className={cx("hex-flat relative inline-block h-2 w-2.5 shrink-0", tone === "ok" ? "bg-gold" : tone === "soon" ? "bg-ink" : "bg-line")}>
         {tone === "soon" && <span className="hex-flat absolute inset-[1.5px] bg-paper" />}
       </span>

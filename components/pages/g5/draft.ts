@@ -87,7 +87,7 @@ export const PURPOSES: { value: Purpose; label: string }[] = [
 export const RELATIONS = F.relations;
 export const ROLES: { value: Role; label: string }[] = (["owner", "agent", "marketer", "other"] as Role[]).map((value, i) => ({ value, label: F.roles[i] }));
 export const OTHER_DISTRICT = "other";
-export const DISTRICT_OPTIONS = [...lists.districts.map((d) => ({ value: d.slug, label: d.labelAr })), { value: OTHER_DISTRICT, label: "حي آخر" }];
+export const DISTRICT_OPTIONS = [...lists.districts.map((d) => ({ value: d.slug ?? d.key, label: d.labelAr })), { value: OTHER_DISTRICT, label: "حي آخر" }];
 export const FLOORS = F.floors;
 export const AGES = F.ages;
 export const OCCUPANCY = F.occupancy;

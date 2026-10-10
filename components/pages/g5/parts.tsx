@@ -168,7 +168,7 @@ export function HowItWorks({ variant }: { variant: "phone" | "desktop" }) {
       </h2>
       <ol className="m-0 flex list-none flex-col p-0">
         {HOW.map((s, i) => (
-          <li key={s.t} className={cx("flex items-start gap-3.5", phone ? "py-3.5" : "px-6 py-4.5", i > 0 && "border-t border-hairline")}>
+          <li key={s.t} className={cx("flex items-start gap-3.5", phone ? "py-3.5" : "px-6 py-4.5", i > 0 && "border-t border-line")}>
             <HexBadge tone={i === 0 ? "ink" : "outline"} className={phone ? "size-10 text-label" : "size-11 text-body"}>
               {i + 1}
             </HexBadge>
@@ -271,7 +271,7 @@ export function StepListAside({ current }: { current: 1 | 2 | 3 }) {
       {STEP_LABELS.map((label, i) => {
         const on = i + 1 === current;
         return (
-          <li key={label} aria-current={on ? "step" : undefined} className={cx("flex items-center gap-3 px-4 py-4", i > 0 && "border-t border-hairline", on ? "bg-ink text-paper" : "text-muted")}>
+          <li key={label} aria-current={on ? "step" : undefined} className={cx("flex items-center gap-3 px-4 py-4", i > 0 && "border-t border-line", on ? "bg-ink text-paper" : "text-muted")}>
             <HexBadge tone={on ? "gold" : "outline-line"} className="size-7 text-caption">
               {i + 1}
             </HexBadge>
@@ -279,7 +279,7 @@ export function StepListAside({ current }: { current: 1 | 2 | 3 }) {
           </li>
         );
       })}
-      <li className="border-t border-interactive px-4 py-4 text-caption font-normal leading-relaxed text-muted">نحفظ تقدمك تلقائياً. تستطيع العودة لاحقاً من نفس الجهاز.</li>
+      <li className="border-t-[1.5px] border-ink px-4 py-4 text-caption font-normal leading-relaxed text-muted">نحفظ تقدمك تلقائياً. تستطيع العودة لاحقاً من نفس الجهاز.</li>
     </ol>
   );
 }
@@ -289,7 +289,7 @@ export function FormCard({ title, step, children, className, id }: { title: Reac
   const hid = useId();
   return (
     <section aria-labelledby={id ?? hid} className={cx("min-w-0 border-interactive bg-paper", className)}>
-      <div className="flex items-center justify-between gap-3 border-b border-interactive px-4 py-4 md:px-6 md:py-5">
+      <div className="flex items-center justify-between gap-3 border-b-[1.5px] border-ink px-4 py-4 md:px-6 md:py-5">
         <h2 id={id ?? hid} className="m-0 text-h3">
           {title}
         </h2>
