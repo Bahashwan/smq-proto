@@ -185,7 +185,7 @@ export const FAQ_PAGES = ["الرئيسية", "الوحدة", "المشروع", 
 export const testimonials: Testimonial[] = [
   { id: "t-01", name: "أحمد ع.", role: "مشترٍ", unitCode: "RZ-C", date: "2026-07", text: "«السعر اللي شفته في الموقع هو اللي دفعته. ما حد قال لي اتصل للسعر.»", consent: true, consentSource: "واتساب 2026-07-14", published: true, sample: true },
   { id: "t-02", name: "م. الحربي", role: "مشترية", unitCode: "YS-C", date: "2026-08", text: "«جهّزوا ملف التمويل كامل، وزرت الشقة مرتين قبل ما أحجز.»", consent: true, consentSource: "بريد 2026-08-02", published: true, sample: true },
-  { id: "t-03", name: "خ. باعشن", role: "مشترٍ محتمل", date: "2026-10", text: "«ردّوا عليّ في نفس اليوم وأعطوني كل الأرقام قبل الزيارة.»", consent: false, published: false, sample: true },
+  { id: "t-03", name: "خ. باعشن", role: "مشترٍ محتمل", date: "2026-10", text: "«ردّوا عليّ في نفس اليوم وأعطوني كل الأرقام قبل الزيارة.»", consent: false, published: false, sample: true, proof: { role: "مشترٍ", unitCode: "YS-A", date: "2026-09" } },
 ];
 /** «3+ rule»: the testimonials block appears only with at least this many published quotes. */
 export const TESTIMONIALS_MIN = 3;

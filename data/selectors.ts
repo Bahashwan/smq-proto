@@ -7,7 +7,7 @@ import type {
   Project, Referral, ReferralStage, ReportSlice, RequestStage, Unit, UnitStatus, AnalyticsPeriodKey,
 } from "./types";
 import type { UnitFilters, UnitTypeParam, SortParam } from "../lib/url";
-import { units, UNIT_TYPE_AR, UNIT_TYPE_PLURAL_AR } from "./units";
+import { units, UNIT_TYPE_AR, UNIT_TYPE_PLURAL_AR, UNIT_TYPE_PLURAL_DEF_AR } from "./units";
 import { projects, projectById, publicProjects } from "./projects";
 import { districts, districtBySlug, districtAr, districtsBySector, SECTORS, SECTOR_ORDER } from "./districts";
 import { offices, activeOffices } from "./offices";
@@ -214,7 +214,7 @@ export function comparedToDistrict(unit: Unit, overrides?: UnitOverrides): Compa
   const rank = sameType.findIndex((u) => u.code === unit.code) + 1;
   const bedsWith = BEDS_WITH[unit.beds] ?? `بـ${unit.beds} غرف`;
   const bedsPart = sameBeds.length === 1 ? `النموذج الوحيد ${bedsWith}` : `واحد من ${sameBeds.length} نماذج ${bedsWith}`;
-  const plural = UNIT_TYPE_PLURAL_AR[unit.type];
+  const plural = UNIT_TYPE_PLURAL_DEF_AR[unit.type];
   const ppmPart = rank <= 1 ? `أقل سعر للمتر بين ${plural}` : `${ORDINAL[rank] ?? `رقم ${rank} في`} أقل سعر للمتر بين ${plural}`;
   return { sameBedsListed: sameBeds.length, bedsPart, ppmRank: rank, typeCount: sameType.length, ppmPart, line: `${bedsPart} · ${ppmPart}` };
 }

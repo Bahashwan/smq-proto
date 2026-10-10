@@ -85,6 +85,9 @@
 @utility cut-xl { clip-path: var(--cut-xl); }
 @utility cut-img { clip-path: var(--cut-img); }
 @utility cut-img-l { clip-path: var(--cut-img-l); }
+@utility cut-xl-start { clip-path: var(--cut-xl-start); }
+@utility cut-img-start { clip-path: var(--cut-img-start); }
+@utility cut-img-l-start { clip-path: var(--cut-img-l-start); }
 @utility cut-tag { clip-path: var(--cut-tag); }
 @utility hex-flat { clip-path: var(--hex-flat); }
 @utility hex-point { clip-path: var(--hex-point); }

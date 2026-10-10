@@ -21,8 +21,10 @@ export interface StepperProps {
   max?: number;
   /** fixed step, or the budget rule when omitted */
   step?: number;
-  /** accessible name of the field */
+  /** accessible name of the field (also inside the ± buttons' names: «أنقص الميزانية 50,000») */
   label?: string;
+  /** the input's own hidden label when it says more than `label` (the finder boards: «الميزانية بالريال») */
+  inputLabel?: string;
   decLabel?: string;
   incLabel?: string;
   /** m = sheet (price-s) · l = hero (price) */
@@ -35,7 +37,7 @@ export interface StepperProps {
   className?: string;
 }
 
-export function Stepper({ value, onChange, min = BUDGET_MIN, max = BUDGET_MAX, step, label = "الميزانية", decLabel, incLabel, size = "m", sign, onGold, id, className }: StepperProps) {
+export function Stepper({ value, onChange, min = BUDGET_MIN, max = BUDGET_MAX, step, label = "الميزانية", inputLabel, decLabel, incLabel, size = "m", sign, onGold, id, className }: StepperProps) {
   const auto = useId();
   const fid = id ?? `stepper-${auto}`;
   // the typed text follows the prop whenever the value changes from outside (chips, slider)
@@ -61,7 +63,7 @@ export function Stepper({ value, onChange, min = BUDGET_MIN, max = BUDGET_MAX, s
       <div className="flex flex-1 min-w-0 items-center justify-center gap-2">
         {sign && <RiyalSign className={cx("flex-none", size === "l" ? "text-h2" : "text-h3", onGold ? "text-ink" : "text-ink")} />}
         <label htmlFor={fid} className="sr-only">
-          {label}
+          {inputLabel ?? label}
         </label>
         <input
           id={fid}

@@ -21,3 +21,8 @@ The first project and unit run copied the sea from the anchors: sea behind both 
 ## 2026-10-10 · AI Gateway credit exhausted at $2.85
 
 Generation stopped with «A positive credit balance is required» after the new IMG-PRJ-ROWDAH-EXT candidates. Picked from what exists without a claimed view: ROWDAH-EXT c1 (inland rerun), APT-BALCONY c2, SMARTHOME-DETAIL c1, HERO-BRAND c1 (brand slot, real mark composited in CSS). Every other project and unit slot keeps the designed placeholder (generated tier without a file, «صورة تعبيرية») until the account is topped up and `npm run images -- --parallel=3` regenerates them with the INLAND clause. The interior anchor IMG-UNIT-APT-3BR-LIVING must be regenerated and picked first (`--anchors`), then the rest.
+
+## 2026-10-10 · cropped re-use (no new generation)
+
+The client asked to use the generated images while no credit is left. `scripts/images/crop.ts` re-uses first-run candidates from `_rejected/` by cropping each one to its slot ratio so no sea shows (`scripts/images/crops.json` holds every box and reason): the balcony and window side is cut away in the interiors, and the two facades keep the building with the thin sea line above the boundary wall retouched to sky. IMG-ED-CORNICHE-WALK c1 is editorial and kept whole. 14 slots were added this way (26 of 32 live). Still placeholders: IMG-PRJ-ROWDAH-PARKING and IMG-UNIT-APT-KITCHEN-OPEN (the sea fills their openings, no crop keeps the subject) and IMG-DET-MATERIALS-FLATLAY / IMG-DET-STAIR-LIGHT (never generated). Regenerating with the INLAND clause later replaces any of these.
+

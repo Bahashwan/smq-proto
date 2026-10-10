@@ -419,6 +419,8 @@ export interface Testimonial {
   unitCode?: string;
   date?: string; // 2026-07
   consentSource?: string; // «واتساب 2026-07-14»
+  /** how the quote reads once published (About-Proof-D shows t-03 after the purchase; the admin still holds it pending) */
+  proof?: { role: string; unitCode?: string; date?: string };
 }
 
 export interface Partner {

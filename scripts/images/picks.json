@@ -118,5 +118,201 @@
     "requestId": null,
     "pickedAt": "2026-10-10T10:26:02.823Z",
     "note": "brand slot (not a unit): distant sea strip tolerated; the real mark is composited in CSS because the generated facade carries no readable mark"
+  },
+  "IMG-ED-CORNICHE-WALK": {
+    "candidate": "c1",
+    "file": "public/images/IMG-ED-CORNICHE-WALK/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 2496,
+      "height": 1664,
+      "of": "2512×1664"
+    },
+    "pickedAt": "2026-10-10T15:52:42.469Z",
+    "note": "editorial (the sea is the subject); first-run candidate kept whole while no credit is left to regenerate"
+  },
+  "IMG-PRJ-BLDG-ROSE-FACADE": {
+    "candidate": "c2",
+    "file": "public/images/IMG-PRJ-BLDG-ROSE-FACADE/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 402,
+      "top": 116,
+      "width": 2110,
+      "height": 1407,
+      "of": "2512×1664"
+    },
+    "pickedAt": "2026-10-10T15:52:42.795Z",
+    "note": "cropped to the building; the thin sea line above the boundary wall is retouched to sky"
+  },
+  "IMG-PRJ-BLDG-YASMIN-FACADE": {
+    "candidate": "c2",
+    "file": "public/images/IMG-PRJ-BLDG-YASMIN-FACADE/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 452,
+      "top": 150,
+      "width": 2060,
+      "height": 1373,
+      "of": "2512×1664"
+    },
+    "pickedAt": "2026-10-10T15:52:43.127Z",
+    "note": "cropped to the building; the sea band and the boat above the boundary wall are retouched to sky"
+  },
+  "IMG-PRJ-ROWDAH-ENTRANCE": {
+    "candidate": "c1",
+    "file": "public/images/IMG-PRJ-ROWDAH-ENTRANCE/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 499,
+      "width": 1557,
+      "height": 1038,
+      "of": "2512×1664"
+    },
+    "pickedAt": "2026-10-10T15:52:43.296Z",
+    "note": "cropped to the wall and the glass door, the big window with the view is out of frame"
+  },
+  "IMG-PRJ-ROWDAH-LOBBY": {
+    "candidate": "c2",
+    "file": "public/images/IMG-PRJ-ROWDAH-LOBBY/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 166,
+      "width": 1959,
+      "height": 1306,
+      "of": "2512×1664"
+    },
+    "pickedAt": "2026-10-10T15:52:43.562Z",
+    "note": "cropped before the window on the right"
+  },
+  "IMG-UNIT-APT-2BR-BEDROOM": {
+    "candidate": "c2",
+    "file": "public/images/IMG-UNIT-APT-2BR-BEDROOM/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 391,
+      "width": 1910,
+      "height": 1273,
+      "of": "2512×1664"
+    },
+    "pickedAt": "2026-10-10T15:52:43.745Z",
+    "note": "cropped before the window on the right"
+  },
+  "IMG-UNIT-APT-2BR-LIVING": {
+    "candidate": "c2",
+    "file": "public/images/IMG-UNIT-APT-2BR-LIVING/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 461,
+      "width": 1833,
+      "height": 1031,
+      "of": "2736×1536"
+    },
+    "pickedAt": "2026-10-10T15:52:43.905Z",
+    "note": "cropped before the balcony door"
+  },
+  "IMG-UNIT-APT-3BR-LIVING": {
+    "candidate": "c1",
+    "file": "public/images/IMG-UNIT-APT-3BR-LIVING/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 461,
+      "width": 1696,
+      "height": 954,
+      "of": "2736×1536"
+    },
+    "pickedAt": "2026-10-10T15:52:44.046Z",
+    "note": "cropped before the balcony door"
+  },
+  "IMG-UNIT-APT-3BR-MASTER": {
+    "candidate": "c2",
+    "file": "public/images/IMG-UNIT-APT-3BR-MASTER/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 499,
+      "width": 1608,
+      "height": 1072,
+      "of": "2512×1664"
+    },
+    "pickedAt": "2026-10-10T15:52:44.198Z",
+    "note": "cropped before the balcony door"
+  },
+  "IMG-UNIT-APT-BATH": {
+    "candidate": "c1",
+    "file": "public/images/IMG-UNIT-APT-BATH/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 572,
+      "width": 1259,
+      "height": 1574,
+      "of": "1824×2288"
+    },
+    "pickedAt": "2026-10-10T15:52:44.373Z",
+    "note": "cropped before the window"
+  },
+  "IMG-UNIT-APT-KITCHEN-CLOSED": {
+    "candidate": "c1",
+    "file": "public/images/IMG-UNIT-APT-KITCHEN-CLOSED/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 449,
+      "width": 1784,
+      "height": 1189,
+      "of": "2512×1664"
+    },
+    "pickedAt": "2026-10-10T15:52:44.589Z",
+    "note": "cropped before the kitchen window"
+  },
+  "IMG-UNIT-MAID-ROOM": {
+    "candidate": "c1",
+    "file": "public/images/IMG-UNIT-MAID-ROOM/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 676,
+      "width": 1270,
+      "height": 1270,
+      "of": "2048×2048"
+    },
+    "pickedAt": "2026-10-10T15:52:44.748Z",
+    "note": "cropped before the window"
+  },
+  "IMG-UNIT-ROOF-LIVING": {
+    "candidate": "c1",
+    "file": "public/images/IMG-UNIT-ROOF-LIVING/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 0,
+      "top": 492,
+      "width": 1696,
+      "height": 954,
+      "of": "2736×1536"
+    },
+    "pickedAt": "2026-10-10T15:52:44.895Z",
+    "note": "cropped before the balcony door"
+  },
+  "IMG-UNIT-ROOF-TERRACE": {
+    "candidate": "c1",
+    "file": "public/images/IMG-UNIT-ROOF-TERRACE/source.png",
+    "model": "bfl/flux-3-image",
+    "crop": {
+      "left": 958,
+      "top": 461,
+      "width": 1778,
+      "height": 1000,
+      "of": "2736×1536"
+    },
+    "pickedAt": "2026-10-10T15:52:45.060Z",
+    "note": "cropped to the pergola side, the far horizon on the left is out of frame"
   }
 }

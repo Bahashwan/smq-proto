@@ -25,6 +25,10 @@
   --cut-xl: polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px));
   --cut-img: polygon(0 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 42px));
   --cut-img-l: polygon(0 0, 100% 0, 100% 100%, 42px 100%, 0 calc(100% - 72px));
+  /* the same block cuts on the bottom line-start corner (screen right in RTL), where a board places them there */
+  --cut-xl-start: polygon(0 0, 100% 0, 100% calc(100% - 62px), calc(100% - 36px) 100%, 0 100%);
+  --cut-img-start: polygon(0 0, 100% 0, 100% calc(100% - 42px), calc(100% - 24px) 100%, 0 100%);
+  --cut-img-l-start: polygon(0 0, 100% 0, 100% calc(100% - 72px), calc(100% - 42px) 100%, 0 100%);
   --cut-tag: polygon(14px 0, 100% 0, 100% 100%, 0 100%);
   --hex-flat: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
   --hex-point: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -88,6 +92,9 @@
   --cut-xl: polygon(0 0, 100% 0, 100% calc(100% - 62px), calc(100% - 36px) 100%, 0 100%);
   --cut-img: polygon(0 0, 100% 0, 100% calc(100% - 42px), calc(100% - 24px) 100%, 0 100%);
   --cut-img-l: polygon(0 0, 100% 0, 100% calc(100% - 72px), calc(100% - 42px) 100%, 0 100%);
+  --cut-xl-start: polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px));
+  --cut-img-start: polygon(0 0, 100% 0, 100% 100%, 24px 100%, 0 calc(100% - 42px));
+  --cut-img-l-start: polygon(0 0, 100% 0, 100% 100%, 42px 100%, 0 calc(100% - 72px));
   --cut-tag: polygon(0 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
 }
 

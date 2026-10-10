@@ -43,12 +43,18 @@ export function UnitMedia({ view, realFiles, lang = "ar", thumbs: withThumbs = t
             cut="img-l"
             className="h-60 md:h-auto md:aspect-[16/10]"
             showId={!en && status !== "sold" && tier === "generated"}
+            idSuffix={
+              <>
+                <span className="md:hidden">· 3:2</span>
+                <span className="hidden md:inline">· 16:10</span>
+              </>
+            }
             lang={lang}
             unit={{ model: unit.type === "roof-villa" ? "روف" : unit.model, buildingNameAr: unit.buildingNameAr, areaM2: unit.areaM2, beds: unit.beds, baths: unit.baths, floor: en ? undefined : view.floorWordAr }}
           />
         </Link>
         <span className="absolute top-3 start-3 md:top-4 md:start-4 z-[2] flex">
-          <StatusBadge status={status} size={54} lang={lang} />
+          <StatusBadge status={status} size={54} mdSize={64} lang={lang} />
         </span>
         {roof && !en && <span className="absolute top-3 end-0 z-[2] px-3.5 py-1.5 bg-ink text-paper text-caption font-bold cut-tag">فيلا روف · دوران وتراس</span>}
       </div>

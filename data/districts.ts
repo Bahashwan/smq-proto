@@ -30,7 +30,7 @@ export const districts: District[] = [
   d("basateen", "البساتين", "Al Basateen", "north", 21.66, 39.15),
   d("sawari", "الصواري", "As Sawari", "north", 21.69, 39.11),
   d("rawdah", "الروضة", "Al Rawdah", "central", 21.572, 39.168, { inSiteList: true }),
-  d("safa", "الصفا", "As Safa", "central", 21.593, 39.202, { inSiteList: true, listNoteAr: "1 من مالك" }),
+  d("safa", "الصفا", "Al Safa", "central", 21.593, 39.202, { inSiteList: true, listNoteAr: "1 من مالك" }),
   d("naeem", "النعيم", "An Naeem", "central", 21.6, 39.17, { inSiteList: true }),
   d("zahra", "الزهراء", "Az Zahra", "central", 21.58, 39.14, { inSiteList: true }),
   d("salamah", "السلامة", "As Salamah", "central", 21.6, 39.14, { inSiteList: true }),

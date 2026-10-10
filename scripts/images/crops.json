@@ -1,0 +1,16 @@
+{
+  "IMG-ED-CORNICHE-WALK": {"candidate": 1, "from": "_rejected", "box": [0, 0, 1], "ratio": "3:2", "note": "editorial (the sea is the subject); first-run candidate kept whole while no credit is left to regenerate"},
+  "IMG-PRJ-BLDG-ROSE-FACADE": {"candidate": 2, "from": "_rejected", "box": [0.16, 0.07, 1], "ratio": "3:2", "note": "cropped to the building; the thin sea line above the boundary wall is retouched to sky", "sky": [0, 760, 1100, 1140]},
+  "IMG-PRJ-BLDG-YASMIN-FACADE": {"candidate": 2, "from": "_rejected", "box": [0.18, 0.09, 1], "ratio": "3:2", "note": "cropped to the building; the sea band and the boat above the boundary wall are retouched to sky", "sky": [0, 770, 1016, 1100]},
+  "IMG-PRJ-ROWDAH-ENTRANCE": {"candidate": 1, "from": "_rejected", "box": [0, 0.3, 0.62], "ratio": "3:2", "note": "cropped to the wall and the glass door, the big window with the view is out of frame"},
+  "IMG-PRJ-ROWDAH-LOBBY": {"candidate": 2, "from": "_rejected", "box": [0, 0.1, 0.78], "ratio": "3:2", "note": "cropped before the window on the right"},
+  "IMG-UNIT-APT-2BR-BEDROOM": {"candidate": 2, "from": "_rejected", "box": [0, 0.235, 0.76], "ratio": "3:2", "note": "cropped before the window on the right"},
+  "IMG-UNIT-APT-2BR-LIVING": {"candidate": 2, "from": "_rejected", "box": [0, 0.3, 0.67], "ratio": "16:9", "note": "cropped before the balcony door"},
+  "IMG-UNIT-APT-3BR-LIVING": {"candidate": 1, "from": "_rejected", "box": [0, 0.3, 0.62], "ratio": "16:9", "note": "cropped before the balcony door"},
+  "IMG-UNIT-APT-3BR-MASTER": {"candidate": 2, "from": "_rejected", "box": [0, 0.3, 0.64], "ratio": "3:2", "note": "cropped before the balcony door"},
+  "IMG-UNIT-APT-BATH": {"candidate": 1, "from": "_rejected", "box": [0, 0.25, 0.69], "ratio": "4:5", "note": "cropped before the window"},
+  "IMG-UNIT-APT-KITCHEN-CLOSED": {"candidate": 1, "from": "_rejected", "box": [0, 0.27, 0.71], "ratio": "3:2", "note": "cropped before the kitchen window"},
+  "IMG-UNIT-MAID-ROOM": {"candidate": 1, "from": "_rejected", "box": [0, 0.33, 0.62], "ratio": "1:1", "note": "cropped before the window"},
+  "IMG-UNIT-ROOF-LIVING": {"candidate": 1, "from": "_rejected", "box": [0, 0.32, 0.62], "ratio": "16:9", "note": "cropped before the balcony door"},
+  "IMG-UNIT-ROOF-TERRACE": {"candidate": 1, "from": "_rejected", "box": [0.35, 0.3, 1], "ratio": "16:9", "note": "cropped to the pergola side, the far horizon on the left is out of frame"}
+}

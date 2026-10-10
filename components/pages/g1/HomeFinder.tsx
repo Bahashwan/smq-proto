@@ -6,7 +6,6 @@ import { finderAnswer, type FinderType } from "@/data/selectors";
 import { districts, districtAr, siteDistricts } from "@/data/districts";
 import { useUnitOverrides } from "@/lib/store";
 import { fmtNum, cx } from "@/lib/format";
-import { CutStart } from "./shell";
 import { unitsUrl } from "@/lib/url";
 
 const PRESETS = [
@@ -87,9 +86,9 @@ export function HomeFinder({ variant = "page" }: { variant?: "page" | "preview" 
 
       {/* desktop: illustrative image with the answer block over its foot */}
       <div className="relative hidden md:flex md:flex-col md:justify-end min-h-[560px]">
-        <CutStart className="absolute inset-0 bg-slot cut-xl">
+        <div className="absolute inset-0 bg-slot cut-xl-start">
           <ImageSlotLazy />
-        </CutStart>
+        </div>
         <div className="relative z-10 mx-6 mb-6">{answerBlock}</div>
       </div>
 

@@ -316,6 +316,8 @@ export function floorLabel(unit: Unit): string | undefined {
 /** Arabic type label: شقة · فيلا روف */
 export const UNIT_TYPE_AR: Record<Unit["type"], string> = { apartment: "شقة", "roof-villa": "فيلا روف" };
 export const UNIT_TYPE_PLURAL_AR: Record<Unit["type"], string> = { apartment: "شقق", "roof-villa": "فلل روف" };
+/** definite plural for ranking lines («ثاني أقل سعر للمتر بين الشقق», Unit-D) */
+export const UNIT_TYPE_PLURAL_DEF_AR: Record<Unit["type"], string> = { apartment: "الشقق", "roof-villa": "فلل الروف" };
 
 /** Change history per unit (Admin-UnitEditor-D «سجل التغييرات»; the other units get the same import/publish trail). */
 export const unitHistory: Record<UnitCode, { by: string; text: string; at: string }[]> = {

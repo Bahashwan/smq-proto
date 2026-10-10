@@ -1,7 +1,7 @@
 // /about · About-M / About-D (default) and About-Proof-D with ?proof=1 (the presenter «About proof blocks» switch).
 import { Button, Eyebrow, Footer, Header, ImageSlot, LICENCE, WA_DISPLAY } from "@/components/ui";
 import { FinancingPlaceholder, ProofBlocks } from "@/components/pages/g1/AboutProof";
-import { CutStart, Resp, shellFooterLinks } from "@/components/pages/g1/shell";
+import { Resp, shellFooterLinks } from "@/components/pages/g1/shell";
 import { proofNumbers } from "@/data/content";
 import { settings } from "@/data/settings";
 import { cx, waLink } from "@/lib/format";
@@ -24,7 +24,7 @@ function HexWord({ word, tone, size = "m" }: { word: string; tone: "gold" | "ink
 
 function FounderTile({ className, long }: { className?: string; long?: boolean }) {
   return (
-    <CutStart className={cx("bg-slot flex items-center justify-center text-center p-4", className)}>
+    <div className={cx("bg-slot flex items-center justify-center text-center p-4", className)}>
       <span className="text-caption md:text-[12px] font-semibold text-muted leading-relaxed">
         صورة المؤسس
         <br />
@@ -33,7 +33,7 @@ function FounderTile({ className, long }: { className?: string; long?: boolean }
         <span dir="ltr">IMG-FOUNDER · 4:5</span>
         {long && <span className="hidden md:inline"> · إضاءة طبيعية، خلفية مكتب هادئة</span>}
       </span>
-    </CutStart>
+    </div>
   );
 }
 
@@ -54,11 +54,11 @@ export default function AboutPage() {
             <p className="m-0 text-body md:text-[16px] text-muted leading-relaxed">SMQ شركة متخصصة في الاستثمار والتسويق العقاري، تأسست على يد المستشار العقاري سعود معيض، لتقديم حلول عقارية احترافية قائمة على فهم عميق للسوق السعودي.</p>
             <p className="m-0 text-body md:text-[16px] text-muted leading-relaxed">نؤمن أن العقار قرار استثماري يتطلب تحليلاً دقيقاً ورؤية واضحة. بالمعرفة السوقية والتخطيط المدروس والتنفيذ المحترف، نمكّن عملاءنا من قرارات واثقة وقيمة مستدامة على المدى الطويل.</p>
           </div>
-          <CutStart className="md:hidden mt-7 -mx-4 h-[240px] cut-xl">
+          <div className="md:hidden mt-7 -mx-4 h-[240px] cut-xl-start">
             <ImageSlot slotId="IMG-ED-BALAD-RAWASHEEN" tier="generated" cut="none" label={false} showId={false} className="h-full">
               <figcaption className="absolute bottom-4 start-4 z-[1] inline-flex items-center px-2 py-1 bg-paper text-caption font-bold text-ink leading-none whitespace-nowrap">صورة تعبيرية · البلد، جدة</figcaption>
             </ImageSlot>
-          </CutStart>
+          </div>
           <ImageSlot slotId="IMG-ED-BALAD-RAWASHEEN" tier="generated" cut="img-l" label={false} showId={false} className="hidden md:block h-full min-h-[420px]">
             <figcaption className="absolute bottom-4 start-4 z-[1] inline-flex items-center px-2.5 py-1.5 bg-paper text-caption font-bold text-ink leading-none whitespace-nowrap">صورة تعبيرية · البلد، جدة</figcaption>
           </ImageSlot>
@@ -70,7 +70,7 @@ export default function AboutPage() {
             <div className="flex flex-col gap-3">
               <Eyebrow>المؤسس</Eyebrow>
               <div className="flex gap-4 md:block">
-                <FounderTile className="shrink-0 w-[150px] h-[188px] cut-img md:hidden" />
+                <FounderTile className="shrink-0 w-[150px] h-[188px] cut-img-start md:hidden" />
                 <div className="flex flex-col gap-1 min-w-0 md:gap-2">
                   <h2 className="m-0 text-[28px] md:text-display font-extrabold leading-tight">سعود معيض</h2>
                   <span className="text-label md:text-[16px] font-normal text-muted">خبير ومستشار عقاري · مؤسس SMQ</span>
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 </Button>
               </div>
             </div>
-            <FounderTile long className="hidden md:flex w-full max-w-[420px] aspect-[4/5] justify-self-center cut-xl" />
+            <FounderTile long className="hidden md:flex w-full max-w-[420px] aspect-[4/5] justify-self-center cut-xl-start" />
           </div>
         </section>
 

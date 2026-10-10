@@ -39,7 +39,7 @@ export function BudgetBlock({ eyebrow, title, description, value, onChange, pres
       {eyebrow && <p className="m-0 text-caption md:text-label font-bold text-on-gold-muted">{eyebrow}</p>}
       <Tag className={cx("m-0 font-extrabold", titleSize === "display" ? "text-h1 md:text-display" : "text-h1")}>{title}</Tag>
       {description && <p className="m-0 text-body text-on-gold-muted">{description}</p>}
-      <Stepper value={value} onChange={onChange} label="الميزانية" sign onGold size={size} className="mt-1" />
+      <Stepper value={value} onChange={onChange} label="الميزانية" inputLabel="الميزانية بالريال" sign onGold size={size} className="mt-1" />
       {presets && presets.length > 0 && (
         <div className="flex flex-wrap gap-2">
           {presets.map((p) => (

@@ -16,8 +16,10 @@ const WORD: Record<BadgeStatus, { ar: string; en: string }> = {
 
 export interface StatusBadgeProps {
   status: BadgeStatus;
-  /** hex size: 40 · 52 (default) · 54 */
-  size?: 40 | 52 | 54;
+  /** hex size: 40 · 52 (default) · 54 · 64 (Unit-D's cover badge) */
+  size?: 40 | 52 | 54 | 64;
+  /** the size from md up when it differs (the unit cover: 54 on the phone, 64 on desktop) */
+  mdSize?: 64;
   lang?: "ar" | "en";
   className?: string;
 }
@@ -26,24 +28,26 @@ const SIZE: Record<NonNullable<StatusBadgeProps["size"]>, { outer: string; ring:
   40: { outer: "size-10", ring: "inset-0", inner: "inset-[1.5px]", text: "text-caption" },
   52: { outer: "size-13", ring: "inset-[3px]", inner: "inset-[5px]", text: "text-caption" },
   54: { outer: "size-13.5", ring: "inset-[3px]", inner: "inset-[5px]", text: "text-caption" },
+  64: { outer: "size-16", ring: "inset-[3px]", inner: "inset-[5px]", text: "text-label" },
 };
+const MD64 = "md:size-16 md:text-label";
 
 /** The status hexagon. The ring of «محجوز» is a nested hexagon (no box-shadow in this system). */
-export function StatusBadge({ status, size = 52, lang = "ar", className }: StatusBadgeProps) {
+export function StatusBadge({ status, size = 52, mdSize, lang = "ar", className }: StatusBadgeProps) {
   const s = SIZE[size];
   const word = WORD[status][lang];
   const positioned = /(^|\s)(absolute|fixed|sticky)(\s|$)/.test(className ?? "");
-  const base = cx(!positioned && "relative", "inline-flex items-center justify-center shrink-0 hex-flat font-extrabold leading-none text-center", s.outer, className);
+  const base = cx(!positioned && "relative", "inline-flex items-center justify-center shrink-0 hex-flat font-extrabold leading-none text-center", s.outer, mdSize === 64 && MD64, className);
   if (status === "available") {
     return (
-      <span className={cx(base, "bg-gold text-ink", size === 40 ? "text-caption" : "text-caption")} data-status={status}>
+      <span className={cx(base, "bg-gold text-ink", s.text, mdSize === 64 && "md:text-label")} data-status={status}>
         {word}
       </span>
     );
   }
   if (status === "sold") {
     return (
-      <span className={cx(base, "bg-ink text-paper", size === 40 ? "text-caption" : "text-caption")} data-status={status}>
+      <span className={cx(base, "bg-ink text-paper", s.text, mdSize === 64 && "md:text-label")} data-status={status}>
         {word}
       </span>
     );

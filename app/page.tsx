@@ -3,7 +3,7 @@ import { Accordion, ArrowIcon, Button, Eyebrow, Footer, Header, HexNumber, Illus
 import { MapEmbed } from "@/components/map";
 import { HomeFinder } from "@/components/pages/g1/HomeFinder";
 import { LiveAvailableCount, LiveProjectFrom, LiveProjectStat } from "@/components/pages/g1/HomeLive";
-import { CutStart, Resp } from "@/components/pages/g1/shell";
+import { Resp } from "@/components/pages/g1/shell";
 import { areaRange, bedsRange, bedsWord, guideTables, listedUnits, unitPpm } from "@/data/selectors";
 import { projectById } from "@/data/projects";
 import { homeFaq, proofNumbers } from "@/data/content";
@@ -105,13 +105,13 @@ export default function HomePage() {
               <span>مرخصون من الهيئة العامة للعقار · <span className="tnum" dir="ltr">{LICENCE.rega}</span></span>
             </div>
           </div>
-          <CutStart className="order-1 md:order-2 relative h-[460px] md:h-auto md:min-h-[600px] md:self-stretch md:cut-img-l">
+          <div className="order-1 md:order-2 relative h-[460px] md:h-auto md:min-h-[600px] md:self-stretch md:cut-img-l-start">
             <ImageSlot slotId="IMG-HERO-BRAND" tier="generated" cut="none" label={false} showId={false} className="h-full w-full">
               <LogoMark size={96} className="absolute top-5 left-5 md:top-7 md:left-7 z-[1] opacity-95" />
               <IllustrativeLabel className="absolute top-4 start-4 z-[1]" />
               <span className="absolute top-11 start-4 z-[1] flex"><span dir="ltr" className="px-2 py-1 bg-paper text-caption font-normal text-muted leading-none whitespace-nowrap">IMG-HERO-BRAND</span></span>
             </ImageSlot>
-          </CutStart>
+          </div>
         </section>
         <div className="md:hidden flex justify-between gap-3 px-4 pt-3.5 text-caption text-muted">
           <span>مرخصون من الهيئة العامة للعقار · <span className="tnum" dir="ltr">{LICENCE.rega}</span></span>
@@ -233,7 +233,7 @@ export default function HomePage() {
         <section className="container-smq mt-9 md:mt-24 grid gap-3.5 md:grid-cols-3 md:gap-10 md:items-start">
           <div className="flex flex-col gap-3.5 md:col-span-2">
             <div className="flex items-start gap-3.5 md:gap-6">
-              <CutStart className="shrink-0 w-28 h-34 md:w-50 md:h-62.5 bg-slot cut-img flex items-center justify-center text-center p-2 md:p-3">
+              <div className="shrink-0 w-28 h-34 md:w-50 md:h-62.5 bg-slot cut-img-start flex items-center justify-center text-center p-2 md:p-3">
                 <span className="text-caption text-muted font-semibold leading-relaxed">
                   صورة المؤسس
                   <br />
@@ -241,7 +241,7 @@ export default function HomePage() {
                   <br />
                   <span dir="ltr">IMG-FOUNDER · 4:5</span>
                 </span>
-              </CutStart>
+              </div>
               <div className="flex flex-col gap-1.5 md:gap-2.5 min-w-0">
                 <Eyebrow>المؤسس</Eyebrow>
                 <span className="text-[22px] md:text-[32px] font-extrabold leading-tight">سعود معيض</span>

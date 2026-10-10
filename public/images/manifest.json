@@ -116,5 +116,134 @@
       2048
     ],
     "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAgCdASoQABAAA4BaJaACdIExGBsCAp3hBMAA/vTbhW0dGAhWXH37aReYE58/heD2YweA4qq2EEg18E6BTRYjY5q/DR5NEBA4osQBzNCR+kKwNKdoAAAA"
+  },
+  "IMG-ED-CORNICHE-WALK": {
+    "width": 2496,
+    "height": 1664,
+    "widths": [
+      640,
+      1280,
+      2048
+    ],
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADwAQCdASoQAAsAA4BaJbACdAEPgknvtIAA/u2cQzKEMcMUjp/SaMJvP9e8rsfQdBQ7wbqPcLm9eDCMOU+drtCcigAAAA=="
+  },
+  "IMG-PRJ-BLDG-ROSE-FACADE": {
+    "width": 2110,
+    "height": 1407,
+    "widths": [
+      640,
+      1280,
+      2048
+    ],
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAsAA4BaJQBOgMXro8oRrLJTOAD+9Ppnaar0R54FRtQl8f94JfOLDSv1gbKJqAaAjm4xAFzCT0+7r29QT3kM3SOL1PbEJbgblSUtdvb2XYhbVqLrI80AAAA="
+  },
+  "IMG-PRJ-BLDG-YASMIN-FACADE": {
+    "width": 2060,
+    "height": 1373,
+    "widths": [
+      640,
+      1280,
+      2048
+    ],
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAsAA4BaJZACdAD1b2GYvdAAAP7035QzlLSVXngU9T0kumlNYQPyZdSp6qRH+ft8cIsGuH41Tib3/1cGzSESiN4pIhIjBe5y8krY4cS5rk02qaaGAAAA"
+  },
+  "IMG-PRJ-ROWDAH-ENTRANCE": {
+    "width": 1557,
+    "height": 1038,
+    "widths": [
+      640,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoQAAsAA4BaJYgCdAEQNdxCQ2iAAP6Zt5Vbz0qbOb42ChX9nn2MQ8cGhKzKzsnU7CTbgXvG6bFqMIYBsKAAAA=="
+  },
+  "IMG-PRJ-ROWDAH-LOBBY": {
+    "width": 1959,
+    "height": 1306,
+    "widths": [
+      640,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAsAA4BaJYgCdACydfzGAADx0smnxqHDpeVqjX/VGGIb33xM2Hx4+7z3q5u97KFqCvoAAAA="
+  },
+  "IMG-UNIT-APT-2BR-BEDROOM": {
+    "width": 1910,
+    "height": 1273,
+    "widths": [
+      640,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAsAA4BaJQBOgCIfUiW12YAA/rTcDe/Ydtn5OmgLZ6k2uuy1X8l4aZKdMvaQv5w4htjucEPmZMLIUemprX71lAMCAAAA"
+  },
+  "IMG-UNIT-APT-2BR-LIVING": {
+    "width": 1833,
+    "height": 1031,
+    "widths": [
+      640,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJQBOgB3zDJyQAAD+yOl9fBKcJGay+aH3dPjXP6/WwD/GzxthTOu1s2kYZIG9X+CXrrJFQJxLjCMUUBFqJJQAAAA="
+  },
+  "IMG-UNIT-APT-3BR-LIVING": {
+    "width": 1696,
+    "height": 954,
+    "widths": [
+      640,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAkAA4BaJYgCdACzrG6NAAD9z5Dmg1cM05U6bjDuDRSnEwtZRNHlFJS5IUxBEcnFZRwBbYrCS2y0VigAAA=="
+  },
+  "IMG-UNIT-APT-3BR-MASTER": {
+    "width": 1608,
+    "height": 1072,
+    "widths": [
+      640,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAsAA4BaJQBOgCGhWnwQrIAA/rXER23pHvtqbbGzPOzKcMJgAoKtmBr+8V7wPi3o0Yd0I3OF2HmT8l9pqGR4D8hyAAAA"
+  },
+  "IMG-UNIT-APT-BATH": {
+    "width": 1259,
+    "height": 1574,
+    "widths": [
+      640,
+      1259
+    ],
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoQABQAPu1iqU2ppaQiMAgBMB2JZQCw7CFbhCQ9ZhRv8mAA/loBbwvynYbOWONaNrBnKOyG/9hEA7Y00U66NJbscAGNbhDQsD1DyKiFUNTwAA=="
+  },
+  "IMG-UNIT-APT-KITCHEN-CLOSED": {
+    "width": 1784,
+    "height": 1189,
+    "widths": [
+      640,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAwAgCdASoQAAsAA4BaJQBOgCFy+SHqlL/mcAD+tM1ge7Cxt+njqfKnM5aDCDGqPRe1flzBU+QsNfwnadhMdutQWiAAAA=="
+  },
+  "IMG-UNIT-MAID-ROOM": {
+    "width": 1270,
+    "height": 1270,
+    "widths": [
+      640,
+      1270
+    ],
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQABAAA4BaJZACdAEP+Apb1OoAAP6vjPaWFhpOJstyksmuJipfucUy6n4NZ9mvpJE3v7MbWVwGjpYAjrSJQTpeETaRrMjbLVNMAAAA"
+  },
+  "IMG-UNIT-ROOF-LIVING": {
+    "width": 1696,
+    "height": 954,
+    "widths": [
+      640,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAkAA4BaJYgCdAEPAutt0wAA/sgH5nIHHBQpjVduo9NTy04njPtdjMP9u5O5vmXljjiMWaWVX9+eAAA="
+  },
+  "IMG-UNIT-ROOF-TERRACE": {
+    "width": 1778,
+    "height": 1000,
+    "widths": [
+      640,
+      1280
+    ],
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJYgCdADw3U7/dgAA/uryFRGTqJAv5dBNj89kb/MDulkcXfqcYsYLyDv6IoTobIc5K9jaJ0ndTle11s80AAAA"
   }
 }

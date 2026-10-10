@@ -126,7 +126,7 @@ export function ProofBlocks() {
           <span className="text-caption font-normal text-muted">نصوص حقيقية بموافقة أصحابها · بلا صور أشخاص · تظهر الكتلة عند 3 آراء منشورة فأكثر</span>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
-          {testimonials.map((t) => (
+          {testimonials.map((q) => ({ ...q, ...(q.proof ?? {}) })).map((t) => (
             <blockquote key={t.id} className="m-0 flex flex-col gap-3.5 px-5 py-5 md:px-6 md:py-5.5 border-interactive">
               <span aria-hidden className="size-6 hex-flat bg-gold" />
               <p className="m-0 text-body md:text-[16px] font-semibold leading-[1.8]">

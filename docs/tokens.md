@@ -35,6 +35,8 @@ Three more colours appear across the component sheets and get names of their own
 | `--cut-m` | 12 × 21 · primary buttons |
 | `--cut-l` | 16 × 28 · answer and price blocks |
 | `--cut-xl` | 36 × 62 · images and hero blocks, bottom-left corner (`polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 62px))`) |
+| `--cut-img` · `--cut-img-l` | 24 × 42 and 42 × 72 · image slots, bottom-left corner |
+| `--cut-xl-start` · `--cut-img-start` · `--cut-img-l-start` | the same block cuts on the bottom line-start corner (bottom-right in RTL), where a board draws them there (Home hero, About images, founder tile); utilities `cut-xl-start`, `cut-img-start`, `cut-img-l-start` |
 | `--hex-flat` | `polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)` · badges, numbered steps, icon buttons 40 to 64px |
 | `--hex-point` | `polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)` · markers, bullets, slider knobs, pins 10 to 32px |
 

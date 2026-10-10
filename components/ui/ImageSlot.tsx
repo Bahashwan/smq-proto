@@ -38,6 +38,8 @@ export interface ImageSlotProps {
   label?: boolean;
   /** the small «IMG-… · 3:2» line */
   showId?: boolean;
+  /** what follows the slot id instead of « · ratio» (UnitMedia: «· 3:2» on the phone, «· 16:10» from md) */
+  idSuffix?: ReactNode;
   /** 60° cut on the bottom line-end corner */
   cut?: SlotCut;
   /** small slot (thumbnails, strips): compact typographic tile and the small label */
@@ -85,14 +87,22 @@ export function PlaceholderDrawing({ tone = "slot", className }: { tone?: "slot"
   );
 }
 
-export function ImageSlot({ slotId, tier, ratio, src, realSrc, alt = "", unit, label = true, showId = true, cut = "none", compact, sold, lang = "ar", children, className, as: Tag = "figure" }: ImageSlotProps) {
+/** The id line sits past the cut on the bottom line-end corner, as the boards place it (Unit-M 56px, Unit-D 72px). */
+const ID_INSET: Record<SlotCut, string> = {
+  none: "end-3 max-w-[calc(100%-8.5rem)]",
+  img: "end-9 max-w-[calc(100%-10.5rem)]",
+  "img-l": "end-14 md:end-18 max-w-[calc(100%-12rem)] md:max-w-[calc(100%-13rem)]",
+  xl: "end-16 max-w-[calc(100%-12.5rem)]",
+};
+
+export function ImageSlot({ slotId, tier, ratio, src, realSrc, alt = "", unit, label = true, showId = true, idSuffix, cut = "none", compact, sold, lang = "ar", children, className, as: Tag = "figure" }: ImageSlotProps) {
   const file = src ?? realSrc;
   const base = cx("relative block overflow-hidden m-0 min-w-0", ratio && RATIO[ratio], CUT[cut], className);
   const idLine = showId && !compact && (
-    <span className="absolute bottom-3 end-3 max-w-[calc(100%-8.5rem)] flex">
+    <span className={cx("absolute bottom-3 flex", ID_INSET[cut], cut !== "none" && "md:bottom-4")}>
       <span className="block truncate px-2 py-1 bg-paper text-caption font-normal text-muted leading-none whitespace-nowrap" dir="ltr">
         {slotId}
-        {ratio ? ` · ${ratio}` : ""}
+        {idSuffix !== undefined ? <> {idSuffix}</> : ratio ? ` · ${ratio}` : ""}
       </span>
     </span>
   );
